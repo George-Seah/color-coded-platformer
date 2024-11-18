@@ -47,7 +47,6 @@ public class PlayerBehaviour : MonoBehaviour
 
         jump.performed += ctx => OnJumpPerformed(ctx);
         jump.canceled += ctx => OnJumpCanceled(ctx);
-        Debug.Log("Jump action enabled"); // Add this to verify the action is enabled
     }
 
     private void OnDisable(){
@@ -63,34 +62,36 @@ public class PlayerBehaviour : MonoBehaviour
     }
 
     private void OnJumpPerformed(InputAction.CallbackContext context) {
+        //isGrounded && !jumpInputPressed && !jumping
         if (isGrounded && !jumping)
         {
             isGrounded = false;
             jumping = true; // Start the jump
-            //jumpTime = 0;   // Reset jump time
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpAmount); // Apply upward force
-            jumpTime += Time.deltaTime;
+            jumpTime = 0;   // Reset jump time
+            //jumpInputPressed = true;
             Debug.Log("Jump performed");
         }
     }
 
     private void OnJumpCanceled(InputAction.CallbackContext context) {
-    //rb.linearVelocity.y > 0
-    if (!isGrounded)
+    //jumpInputPressed = false;
+    if (!isGrounded && rb.linearVelocity.y > 0)
     {
         jumpCancelled = true; // Cancel the jump if it's still going up
+
         Debug.Log("Jump canceled");
     }
     }
-    private void Jump(InputAction.CallbackContext context) {
+    /*private void Jump(InputAction.CallbackContext context) {
         Debug.Log("Jump button pressed!");
-    }
-
+    }*/
+    
     void OnCollisionEnter2D(Collision2D collision) {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Ground")) {
             isGrounded = true;
             jumping = false;
-            
+            jumpCancelled = false;
+
             Debug.Log("You're grounded");
         }
     }
@@ -98,14 +99,18 @@ public class PlayerBehaviour : MonoBehaviour
     void OnCollisionExit2D(Collision2D collision) {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Ground")) {
             isGrounded = false;
+            //jumping = false;
         }
     }
     
     void OnCollisionStay2D(Collision2D collision) {
+        /*
         if (collision.gameObject.layer == LayerMask.NameToLayer("Ground")) {
-            //isGrounded = true; // Ensure grounded state during the collision
+            isGrounded = true; // Ensure grounded state during the collision
             jumpCancelled = false;
+            jumping = false;
         }
+        */
     }
     
     /*
@@ -127,23 +132,43 @@ public class PlayerBehaviour : MonoBehaviour
         //jumpInputPressed = jump.ReadValue<bool>();
 
         rb.linearVelocity = new Vector2(moveDirection.x * moveSpeed, transform.position.y);
+        /*
         if(isGrounded && jumpInputPressed && !jumping){
             Debug.Log($"jumpInputPressed = {jumpInputPressed}");
             jumping = true; // Start the jump
             jumpTime = 0;   // Reset jump time
         }
-        if(jumpCancelled || jumpTime > buttonTime){
-            jumping = false;
-        }
-        if(rb.linearVelocity.y >= 0){
+        */
+        if(jumping && !jumpCancelled && jumpTime < buttonTime){
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce); // Apply upward force
+            jumpTime += Time.deltaTime;
             rb.gravityScale = gravityScale;
         }
-        else if(rb.linearVelocity.y < 0){
+        else{
             rb.gravityScale = fallingGravityScale;
+        }
+        if(isGrounded){
+            jumpTime = 0;
+            rb.gravityScale = gravityScale;
+        }
+        /*
+        if(jumpTime > buttonTime){
+            jumpCancelled = true;
+        }
+        */
+        if(rb.linearVelocity.y > 0){
+            Debug.Log("Jump Gravity Scale activated");
+            rb.gravityScale = gravityScale;
+        }
+        else if(rb.linearVelocity.y <= 0){
+            Debug.Log("Fall Gravity Scale activated");
+            
             //anim.SetBool("isJumping", false);//Testing to see. If not working remove this
         }
-        if(jumpCancelled && jumping && rb.linearVelocity.y > 0){
-            //rb.AddForce(Vector2.down * 100);
+        if(jumping && (jumpCancelled || jumpTime > buttonTime)){
+            Debug.Log("Fall Force activated");
+            rb.AddForce(Vector2.down * 100);
+            rb.gravityScale = fallingGravityScale;
         }
     }
 

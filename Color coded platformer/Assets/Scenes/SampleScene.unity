@@ -567,7 +567,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -586,8 +586,8 @@ Transform:
   m_GameObject: {fileID: 1629749565}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -1.3189795, y: 0.080923885, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: -1.3422, y: -0.37, z: 0}
+  m_LocalScale: {x: 1.0464, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 2068252320}
@@ -607,13 +607,16 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   moveSpeed: 5
   gravityScale: 10
-  fallingGravityScale: 40
-  buttonTime: 0.3
+  fallingGravityScale: 30
+  buttonTime: 0.5
   jumpTime: 0
-  jumping: 0
-  jumpAmount: 1.25
+  jumpInputPressed: 0
+  isGrounded: 0
+  jumpAmount: 3
   jumpForce: 0
   jumpCancelled: 0
+  jumpPressed: 0
+  jumping: 0
   groundCollisionCheck: {fileID: 0}
 --- !u!61 &1629749569
 BoxCollider2D:
