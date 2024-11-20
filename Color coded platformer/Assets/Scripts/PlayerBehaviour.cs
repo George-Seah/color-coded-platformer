@@ -71,6 +71,9 @@ public class PlayerBehaviour : MonoBehaviour
             //jumpInputPressed = true;
             Debug.Log("Jump performed");
         }
+        else if(!jumping && !isGrounded){
+            jumping = true;
+        }
     }
 
     private void OnJumpCanceled(InputAction.CallbackContext context) {
@@ -88,21 +91,24 @@ public class PlayerBehaviour : MonoBehaviour
     
     void OnCollisionEnter2D(Collision2D collision) {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Ground")) {
-            isGrounded = true;
-            jumping = false;
-            jumpCancelled = false;
 
-            Debug.Log("You're grounded");
+
+            //Debug.Log("You're grounded");
         }
     }
-
     void OnCollisionExit2D(Collision2D collision) {
         if (collision.gameObject.layer == LayerMask.NameToLayer("Ground")) {
-            isGrounded = false;
             //jumping = false;
         }
     }
-    
+    public void enteredGround(){
+        isGrounded = true;
+        jumping = false;
+        jumpCancelled = false;
+    }
+    public void exitedGround(){
+        isGrounded = false;
+    }
     void OnCollisionStay2D(Collision2D collision) {
         /*
         if (collision.gameObject.layer == LayerMask.NameToLayer("Ground")) {
@@ -139,34 +145,42 @@ public class PlayerBehaviour : MonoBehaviour
             jumpTime = 0;   // Reset jump time
         }
         */
-        if(jumping && !jumpCancelled && jumpTime < buttonTime){
+
+        //Jumping function
+        if(jumping && !jumpCancelled && jumpTime < buttonTime && jump.IsPressed() && !isGrounded){
+            Debug.Log("Jumping function activated");
+            
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce); // Apply upward force
             jumpTime += Time.deltaTime;
             rb.gravityScale = gravityScale;
         }
-        else{
-            rb.gravityScale = fallingGravityScale;
-        }
-        if(isGrounded){
+        else if(isGrounded){
+            Debug.Log("isGrounded is true");
             jumpTime = 0;
             rb.gravityScale = gravityScale;
         }
+        else if(!jumping && !isGrounded){
+            Debug.Log("You're not jumping or grounded");
+            rb.gravityScale = fallingGravityScale;
+        }
+        
+
         /*
         if(jumpTime > buttonTime){
             jumpCancelled = true;
         }
         */
-        if(rb.linearVelocity.y > 0){
-            Debug.Log("Jump Gravity Scale activated");
+        if(rb.linearVelocity.y > 0 && jumping){
+            //Debug.Log("Jump Gravity Scale activated");
             rb.gravityScale = gravityScale;
         }
         else if(rb.linearVelocity.y <= 0){
-            Debug.Log("Fall Gravity Scale activated");
+            //Debug.Log("Fall Gravity Scale activated");
             
-            //anim.SetBool("isJumping", false);//Testing to see. If not working remove this
+            
         }
         if(jumping && (jumpCancelled || jumpTime > buttonTime)){
-            Debug.Log("Fall Force activated");
+            //Debug.Log("Fall Force activated");
             rb.AddForce(Vector2.down * 100);
             rb.gravityScale = fallingGravityScale;
         }
