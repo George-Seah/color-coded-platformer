@@ -35,7 +35,7 @@ public class PlayerBehaviour : MonoBehaviour
     private void Start(){
         rb = GetComponent<Rigidbody2D>();
         groundCollisionCheck = transform.Find("Player/GroundCollisionCheck");
-        jumpForce = Mathf.Sqrt(jumpAmount * -2 * (Physics2D.gravity.y * rb.gravityScale));
+        jumpForce = Mathf.Sqrt(jumpAmount * -2 * (Physics2D.gravity.y));
     }
     private void OnEnable(){
         playerControls.Player.Enable(); // Enable the Player action map
@@ -81,7 +81,7 @@ public class PlayerBehaviour : MonoBehaviour
     if (!isGrounded && rb.linearVelocity.y > 0)
     {
         jumpCancelled = true; // Cancel the jump if it's still going up
-
+        rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
         Debug.Log("Jump canceled");
     }
     }
@@ -165,11 +165,12 @@ public class PlayerBehaviour : MonoBehaviour
         }
         
 
-        /*
+        
         if(jumpTime > buttonTime){
             jumpCancelled = true;
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
         }
-        */
+        
         if(rb.linearVelocity.y > 0 && jumping){
             //Debug.Log("Jump Gravity Scale activated");
             rb.gravityScale = gravityScale;
@@ -183,6 +184,7 @@ public class PlayerBehaviour : MonoBehaviour
             //Debug.Log("Fall Force activated");
             rb.AddForce(Vector2.down * 100);
             rb.gravityScale = fallingGravityScale;
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
         }
     }
 
