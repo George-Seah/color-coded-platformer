@@ -25,19 +25,25 @@ public class PlayerBehaviour : MonoBehaviour
     [SerializeField] bool jumpPressed;
     [SerializeField] bool jumping = false;
     [SerializeField] private Transform groundCollisionCheck;
-    private void Awake(){
+
+    private void Awake()
+    {
         playerControls = new PlayerInputActions();
-        if (playerControls == null) {
+        if (playerControls == null)
+        {
             Debug.LogError("PlayerInputActions not initialized!");
         }
     }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    private void Start(){
+
+    private void Start()
+    {
         rb = GetComponent<Rigidbody2D>();
         groundCollisionCheck = transform.Find("Player/GroundCollisionCheck");
         jumpForce = Mathf.Sqrt(jumpAmount * -2 * (Physics2D.gravity.y * rb.gravityScale));
     }
-    private void OnEnable(){
+
+    private void OnEnable()
+    {
         playerControls.Player.Enable(); // Enable the Player action map
         move = playerControls.Player.Move;
         jump = playerControls.Player.Jump;
@@ -49,191 +55,91 @@ public class PlayerBehaviour : MonoBehaviour
         jump.canceled += ctx => OnJumpCanceled(ctx);
     }
 
-    private void OnDisable(){
+    private void OnDisable()
+    {
         move.Disable();
         jump.Disable();
 
-        jump.started -= OnJumpStarted;
         jump.performed -= OnJumpPerformed;
         jump.canceled -= OnJumpCanceled;
     }
-    private void OnJumpStarted(InputAction.CallbackContext context) {
-        Debug.Log("Jump started");
-    }
 
-    private void OnJumpPerformed(InputAction.CallbackContext context) {
-        //isGrounded && !jumpInputPressed && !jumping
+    private void OnJumpPerformed(InputAction.CallbackContext context)
+    {
+        // Only allow jumping when grounded and not already jumping
         if (isGrounded && !jumping)
         {
-            isGrounded = false;
-            jumping = true; // Start the jump
-            jumpTime = 0;   // Reset jump time
-            //jumpInputPressed = true;
+            jumping = true;
+            jumpTime = 0; // Reset jump time
             Debug.Log("Jump performed");
         }
-        else if(!jumping && !isGrounded){
+        else if (!jumping && !isGrounded)
+        {
             jumping = true;
         }
     }
 
-    private void OnJumpCanceled(InputAction.CallbackContext context) {
-    //jumpInputPressed = false;
-    if (!isGrounded && rb.linearVelocity.y > 0)
+    private void OnJumpCanceled(InputAction.CallbackContext context)
     {
-        jumpCancelled = true; // Cancel the jump if it's still going up
-
-        Debug.Log("Jump canceled");
-    }
-    }
-    /*private void Jump(InputAction.CallbackContext context) {
-        Debug.Log("Jump button pressed!");
-    }*/
-    
-    void OnCollisionEnter2D(Collision2D collision) {
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Ground")) {
-
-
-            //Debug.Log("You're grounded");
+        if (!isGrounded && rb.linearVelocity.y > 0)
+        {
+            jumpCancelled = true; // Cancel the jump if still going up
+            Debug.Log("Jump canceled");
         }
     }
-    void OnCollisionExit2D(Collision2D collision) {
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Ground")) {
-            //jumping = false;
-        }
-    }
-    public void enteredGround(){
+
+    public void enteredGround()
+    {
         isGrounded = true;
         jumping = false;
         jumpCancelled = false;
     }
-    public void exitedGround(){
+
+    public void exitedGround()
+    {
         isGrounded = false;
     }
-    void OnCollisionStay2D(Collision2D collision) {
-        /*
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Ground")) {
-            isGrounded = true; // Ensure grounded state during the collision
-            jumpCancelled = false;
-            jumping = false;
-        }
-        */
-    }
-    
-    /*
-    private void OnJumpCanceled(InputAction.CallbackContext context)
-    {
-        if (rb.linearVelocity.y > 0) // Cancel upward movement if the button is released while jumping
-        {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f); // Reduce upward velocity
-            jumpCancelled = true;
-        }
-        Debug.Log("Jump button released");
-    }*/
-    // Update is called once per frame
 
-    //void Update(){}
     void FixedUpdate()
     {
         moveDirection = move.ReadValue<Vector2>();
-        //jumpInputPressed = jump.ReadValue<bool>();
 
-        rb.linearVelocity = new Vector2(moveDirection.x * moveSpeed, transform.position.y);
-        /*
-        if(isGrounded && jumpInputPressed && !jumping){
-            Debug.Log($"jumpInputPressed = {jumpInputPressed}");
-            jumping = true; // Start the jump
-            jumpTime = 0;   // Reset jump time
-        }
-        */
+        rb.linearVelocity = new Vector2(moveDirection.x * moveSpeed, rb.linearVelocity.y); // Only modify X velocity
 
-        //Jumping function
-        if(jumping && !jumpCancelled && jumpTime < buttonTime && jump.IsPressed() && !isGrounded){
+        // Jumping logic
+        if (jumping && !jumpCancelled && jumpTime < buttonTime && jump.IsPressed() && !isGrounded)
+        {
             Debug.Log("Jumping function activated");
-            
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce); // Apply upward force
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce); // Apply jump force
             jumpTime += Time.deltaTime;
-            rb.gravityScale = gravityScale;
+            rb.gravityScale = gravityScale; // Ensure normal gravity while jumping
         }
-        else if(isGrounded){
+        else if (isGrounded)
+        {
             Debug.Log("isGrounded is true");
-            jumpTime = 0;
-            rb.gravityScale = gravityScale;
+            jumpTime = 5;
+            rb.gravityScale = gravityScale; // Reset gravity to normal
         }
-        else if(!jumping && !isGrounded){
+        else if (!jumping && !isGrounded)
+        {
             Debug.Log("You're not jumping or grounded");
-            rb.gravityScale = fallingGravityScale;
+            rb.gravityScale = fallingGravityScale; // Apply falling gravity
         }
-        
 
-        /*
-        if(jumpTime > buttonTime){
-            jumpCancelled = true;
-        }
-        */
-        if(rb.linearVelocity.y > 0 && jumping){
-            //Debug.Log("Jump Gravity Scale activated");
+        if (rb.linearVelocity.y > 0 && jumping)
+        {
             rb.gravityScale = gravityScale;
         }
-        else if(rb.linearVelocity.y <= 0){
-            //Debug.Log("Fall Gravity Scale activated");
-            
-            
+        else if (rb.linearVelocity.y <= 0)
+        {
+            rb.gravityScale = fallingGravityScale; // Apply different gravity for falling
         }
-        if(jumping && (jumpCancelled || jumpTime > buttonTime)){
-            //Debug.Log("Fall Force activated");
+
+        if (jumping && (jumpCancelled || jumpTime > buttonTime))
+        {
+            // Apply additional downward force to cancel the jump or fall faster
             rb.AddForce(Vector2.down * 100);
             rb.gravityScale = fallingGravityScale;
         }
     }
-
-    /*private void Jump(InputAction.CallbackContext context){
-        Debug.Log("Jump button pressed");
-        if(isGrounded){
-            jumping = true;
-            jumpTime = 0;
-        }
-
-    }*/
-
 }
-
-
-
-/*
-using UnityEngine.Playables;
-
-// A behaviour that is attached to a playable
-public class PlayerBehaviour : PlayableBehaviour
-{
-    // Called when the owning graph starts playing
-    public override void OnGraphStart(Playable playable)
-    {
-        
-    }
-
-    // Called when the owning graph stops playing
-    public override void OnGraphStop(Playable playable)
-    {
-        
-    }
-
-    // Called when the state of the playable is set to Play
-    public override void OnBehaviourPlay(Playable playable, FrameData info)
-    {
-        
-    }
-
-    // Called when the state of the playable is set to Paused
-    public override void OnBehaviourPause(Playable playable, FrameData info)
-    {
-        
-    }
-
-    // Called each frame while the state is set to Play
-    public override void PrepareFrame(Playable playable, FrameData info)
-    {
-        
-    }
-
-}
-*/
