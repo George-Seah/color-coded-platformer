@@ -103,6 +103,9 @@ public class PlayerBehaviour : MonoBehaviour
         if (isGrounded)
         {
             rb.gravityScale = gravityScale;
+            if(jumpTime != 0){
+                jumpTime = 0;
+            }
         }
         else if (!jumping && !isGrounded)
         {
@@ -119,6 +122,7 @@ public class PlayerBehaviour : MonoBehaviour
         {
             jumpCancelled = true;
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f); // Reduce jump height
+            rb.gravityScale = fallingGravityScale; // Increased gravity while falling
         }
     }
 }
