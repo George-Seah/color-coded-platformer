@@ -444,6 +444,7 @@
 "Assets/Scripts/Ground.cs"
 "Assets/Scripts/GroundCollisionCheck.cs"
 "Assets/Scripts/PlayerBehaviour.cs"
+"Assets/Scripts/StripedGround.cs"
 -langversion:9.0
 /deterministic
 /optimize+

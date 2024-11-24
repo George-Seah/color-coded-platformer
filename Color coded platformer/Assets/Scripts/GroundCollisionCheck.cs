@@ -17,7 +17,14 @@ public class GroundCollisionCheck : MonoBehaviour
             Debug.Log("Player entered ground");
         }
     }
-
+    private void OnTriggerStay2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            playerBehaviour.EnteredGround();
+            //Debug.Log("Player entered ground");
+        }
+    }
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Ground"))

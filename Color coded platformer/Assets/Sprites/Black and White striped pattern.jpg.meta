@@ -1,10 +1,10 @@
 fileFormatVersion: 2
-guid: 24d5f403edddd524da5ba87229622d84
+guid: dd339dc73157aab42bc955aa83da9182
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -1327119111710145601
-    second: Curved stripes_0
+      213: 1374916701518316739
+    second: Black and White striped pattern_0
   externalObjects: {}
   serializedVersion: 13
   mipmaps:
@@ -100,13 +100,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: Curved stripes_0
+      name: Black and White striped pattern_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 231
-        height: 149
+        width: 1280
+        height: 960
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -115,8 +115,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
       bones: []
-      spriteID: fb382e30330259de0800000000000000
-      internalID: -1327119111710145601
+      spriteID: 3c440c5947fa41310800000000000000
+      internalID: 1374916701518316739
       vertices: []
       indices: 
       edges: []

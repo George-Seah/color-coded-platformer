@@ -2,7 +2,6 @@ using UnityEngine;
 
 public class ColorChanger : MonoBehaviour
 {
-    private SpriteRenderer spriteRenderer;
     public enum ColorOptions
     {
         Red,
