@@ -6,7 +6,8 @@ public class ColorChanger : MonoBehaviour
     {
         Red,
         Green,
-        Blue
+        Blue,
+        White
     }
     public ColorOptions selectedColor;
     [SerializeField] Color colorChange;
@@ -28,6 +29,10 @@ public class ColorChanger : MonoBehaviour
             case ColorOptions.Blue:
                 Debug.Log("Blue selected");
                 colorChange = Color.blue;
+                break;
+            case ColorOptions.White:
+                Debug.Log("White selected");
+                colorChange = Color.white;
                 break;
         }
     }

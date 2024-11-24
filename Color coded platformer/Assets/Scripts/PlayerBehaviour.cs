@@ -22,7 +22,9 @@ public class PlayerBehaviour : MonoBehaviour
 
     private bool jumpCancelled;
     private bool jumping = false;
-    private Transform groundCollisionCheck;
+    [SerializeField] private float moveDirectionX;
+
+    [SerializeField] private float moveDirectionY;
 
     private void Awake()
     {
@@ -36,7 +38,7 @@ public class PlayerBehaviour : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        groundCollisionCheck = transform.Find("GroundCollisionCheck"); // Adjusted for simpler structure
+        //groundCollisionCheck = transform.Find("GroundCollisionCheck"); // Adjusted for simpler structure
         jumpForce = Mathf.Sqrt(jumpAmount * -2 * Physics2D.gravity.y);
     }
 
@@ -96,6 +98,40 @@ public class PlayerBehaviour : MonoBehaviour
     {
         isGrounded = false;
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        foreach (ContactPoint2D contact in collision.contacts)
+        {
+            //Debug stuff
+            Debug.DrawLine(contact.point, contact.point + contact.normal, Color.red, 2f); // Draw collision normal
+            Debug.Log($"Normal: {contact.normal}");
+
+            // Get the normal vector of the collision
+            Vector2 collisionNormal = contact.normal;
+
+            // Check the angle of collision
+            float collisionAngle = Vector2.Angle(Vector2.up, collisionNormal); // Angle relative to "up"
+
+            Debug.Log($"Collision Angle: {collisionAngle}°");
+
+            // Example: Detect collisions from below (angle within a range)
+            /*
+            if (collisionAngle > 150 && collisionAngle < 210)
+            {
+                Debug.Log("Collision detected from below!");
+            }
+            */
+            if ((collisionAngle > 60 && collisionAngle < 120) || 
+            (collisionAngle > 240 && collisionAngle < 300))
+            {
+                
+            }
+        }
+        //moveDirection.y != 0 && 
+        if(collision.gameObject.CompareTag("Key")){
+            Debug.Log($"You should pick up key.");
+        }
+    }
 
     public void ColorChanged(Color newColor)
     {
@@ -120,6 +156,14 @@ public class PlayerBehaviour : MonoBehaviour
         }
         else if(newColor == Color.green){
             Debug.Log("Red selected");
+            Physics2D.IgnoreLayerCollision(9, 12, false);
+            Physics2D.IgnoreLayerCollision(6, 12, false);
+        }
+        else if(newColor == Color.white){
+            Physics2D.IgnoreLayerCollision(9, 10, false);//Player
+            Physics2D.IgnoreLayerCollision(6, 10, false);//Ground Check
+            Physics2D.IgnoreLayerCollision(9, 11, false);
+            Physics2D.IgnoreLayerCollision(6, 11, false);
             Physics2D.IgnoreLayerCollision(9, 12, false);
             Physics2D.IgnoreLayerCollision(6, 12, false);
         }
@@ -150,6 +194,8 @@ public class PlayerBehaviour : MonoBehaviour
     {
         moveDirection = move.ReadValue<Vector2>();
         rb.linearVelocity = new Vector2(moveDirection.x * moveSpeed, rb.linearVelocity.y); // Move left/right
+        moveDirectionX = moveDirection.x;
+        moveDirectionY = moveDirection.y;
 
         if (isGrounded)
         {
