@@ -36,7 +36,7 @@ public class PlayerBehaviour : MonoBehaviour
     private void Start()
     {
         rb = GetComponent<Rigidbody2D>();
-        groundCollisionCheck = transform.Find("Player/GroundCollisionCheck");
+        groundCollisionCheck = transform.Find("GroundCollisionCheck"); // Adjusted for simpler structure
         jumpForce = Mathf.Sqrt(jumpAmount * -2 * Physics2D.gravity.y);
     }
 
@@ -82,7 +82,7 @@ public class PlayerBehaviour : MonoBehaviour
         }
     }
 
-    public void enteredGround()
+    public void EnteredGround()
     {
         isGrounded = true;
         jumping = false;
@@ -90,9 +90,49 @@ public class PlayerBehaviour : MonoBehaviour
         rb.gravityScale = gravityScale;
     }
 
-    public void exitedGround()
+    public void ExitedGround()
     {
         isGrounded = false;
+    }
+
+    public void ColorChanged(Color newColor)
+    {
+        Physics2D.IgnoreLayerCollision(9, 10);
+        Physics2D.IgnoreLayerCollision(9, 11);
+        Physics2D.IgnoreLayerCollision(9, 12);
+        if(newColor == Color.red){
+            Debug.Log("Red selected");
+            Physics2D.IgnoreLayerCollision(9, 10, false);
+        }
+        else if(newColor == Color.blue){
+            Debug.Log("Red selected");
+            Physics2D.IgnoreLayerCollision(9, 11, false);
+        }
+        else if(newColor == Color.green){
+            Debug.Log("Red selected");
+            Physics2D.IgnoreLayerCollision(9, 12, false);
+        }
+        /*
+        switch (newColor)
+        {
+            case Color.red:
+                Debug.Log("Red selected");
+                colorChange = Color.red;
+                Physics.IgnoreLayerCollision(9, 10, false);
+                break;
+            case Color.blue:
+                Debug.Log("Blue selected");
+                colorChange = Color.blue;
+                Physics.IgnoreLayerCollision(9, 11, false);
+                break;
+            case Color.green:
+                Debug.Log("Green selected");
+                colorChange = Color.green;
+                Physics.IgnoreLayerCollision(9, 12, false);
+                break;
+        }
+        */
+        GetComponent<SpriteRenderer>().color = newColor;
     }
 
     private void FixedUpdate()
@@ -103,7 +143,8 @@ public class PlayerBehaviour : MonoBehaviour
         if (isGrounded)
         {
             rb.gravityScale = gravityScale;
-            if(jumpTime != 0){
+            if (jumpTime != 0)
+            {
                 jumpTime = 0;
             }
         }

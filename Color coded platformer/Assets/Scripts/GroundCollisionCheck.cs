@@ -2,28 +2,28 @@ using UnityEngine;
 
 public class GroundCollisionCheck : MonoBehaviour
 {
-    private PlayerBehaviour playerBehaviour;
+    [SerializeField] private PlayerBehaviour playerBehaviour;
 
     private void Start()
     {
         playerBehaviour = transform.parent.gameObject.GetComponent<PlayerBehaviour>();
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
+        if (collision.gameObject.CompareTag("Ground"))
         {
-            playerBehaviour.enteredGround();
-            Debug.Log("You're grounded");
+            playerBehaviour.EnteredGround();
+            Debug.Log("Player entered ground");
         }
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
+    private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.layer == LayerMask.NameToLayer("Ground"))
+        if (collision.gameObject.CompareTag("Ground"))
         {
-            playerBehaviour.exitedGround();
-            Debug.Log("You're not grounded");
+            playerBehaviour.ExitedGround();
+            Debug.Log("Player exited ground");
         }
     }
 }

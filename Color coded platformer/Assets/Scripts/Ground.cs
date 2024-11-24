@@ -6,7 +6,7 @@ public class Ground : MonoBehaviour
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("GroundCollisionCheck"))
         {
-            collision.transform.parent.gameObject.GetComponent<PlayerBehaviour>().enteredGround();
+            collision.transform.parent.gameObject.GetComponent<PlayerBehaviour>().EnteredGround();
             Debug.Log("You're grounded");
         }
     }
@@ -15,7 +15,7 @@ public class Ground : MonoBehaviour
     {
         if (collision.gameObject.layer == LayerMask.NameToLayer("GroundCollisionCheck"))
         {
-            collision.transform.parent.gameObject.GetComponent<PlayerBehaviour>().exitedGround();
+            collision.transform.parent.gameObject.GetComponent<PlayerBehaviour>().ExitedGround();
             Debug.Log("You're left the ground");
         }
     }
