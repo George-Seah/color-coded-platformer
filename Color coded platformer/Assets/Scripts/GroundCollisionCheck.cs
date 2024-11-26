@@ -14,7 +14,7 @@ public class GroundCollisionCheck : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             playerBehaviour.EnteredGround();
-            Debug.Log("Player entered ground");
+            //Debug.Log("Player entered ground");
         }
     }
     private void OnTriggerStay2D(Collider2D collision)
@@ -22,7 +22,7 @@ public class GroundCollisionCheck : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             playerBehaviour.EnteredGround();
-            Debug.Log("Player staying on ground");
+            //Debug.Log("Player staying on ground");
         }
     }
     private void OnTriggerExit2D(Collider2D collision)
@@ -30,7 +30,7 @@ public class GroundCollisionCheck : MonoBehaviour
         if (collision.gameObject.CompareTag("Ground"))
         {
             playerBehaviour.ExitedGround();
-            Debug.Log("Player exited ground");
+            //Debug.Log("Player exited ground");
         }
     }
 }

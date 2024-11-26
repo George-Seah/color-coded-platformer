@@ -4,11 +4,12 @@ public class Key : MonoBehaviour
 {
     private Rigidbody2D rb;
     private Collider2D keyCollider;
-    private bool isPickedUp = false;
+    [SerializeField] private bool isPickedUp = false;
+
+    private Transform playerTransform;
 
     void Start()
     {
-        // Cache Rigidbody2D and Collider2D
         rb = GetComponent<Rigidbody2D>();
         keyCollider = GetComponent<Collider2D>();
 
@@ -18,52 +19,47 @@ public class Key : MonoBehaviour
         }
     }
 
-    void OnTriggerEnter2D(Collider2D collision)
+    public void PickUp(Transform player)
     {
-        if (collision.gameObject.CompareTag("Player") && !isPickedUp)
-        {
-            isPickedUp = true;
+        isPickedUp = true;
 
-            Debug.Log("Player picked up the key");
+        Debug.Log("Player picked up the key");
 
-            // Disable Rigidbody physics
-            rb.isKinematic = true;
+        rb.isKinematic = true;
+        rb.linearVelocity = Vector2.zero;
 
-            // Enable the key to be a child of the player
-            transform.SetParent(collision.transform);
+        transform.SetParent(player);
+        transform.localPosition = new Vector3(0f, 1f, 0f);
 
-            // Adjust the key's position relative to the player
-            transform.localPosition = new Vector3(0f, 1f, 0f);
-
-            // Optional: Disable collisions to prevent interaction with other objects
-            keyCollider.isTrigger = true;
-        }
+        keyCollider.isTrigger = true;
     }
 
-    void OnTriggerExit2D(Collider2D collision)
+public void Drop()
+{
+    if (isPickedUp)
     {
-        if (collision.gameObject.CompareTag("Player"))
-        {
-            Debug.Log("Player exited key area");
-        }
+        // Detach from the player
+        transform.SetParent(null);
+
+        // Reset Rigidbody2D properties for physical interaction
+        rb.isKinematic = false; 
+        rb.simulated = true;
+        rb.linearVelocity = Vector2.zero; // Clear any residual velocity
+
+        // Ensure the collider is no longer a trigger for physical collision
+        keyCollider.isTrigger = false;
+
+        // Optional: Add a small impulse to visually separate the dropped key
+        rb.AddForce(Vector2.up * 2f, ForceMode2D.Impulse);
+
+        isPickedUp = false; // Update the state
+        Debug.Log("Key dropped");
     }
+}
 
-    public void DropKey()
+
+    public bool ReadPickedUp()
     {
-        if (isPickedUp)
-        {
-            isPickedUp = false;
-
-            // Detach the key from the player
-            transform.SetParent(null);
-
-            // Re-enable Rigidbody physics
-            rb.isKinematic = false;
-
-            // Re-enable normal collisions
-            keyCollider.isTrigger = false;
-
-            Debug.Log("Key dropped");
-        }
+        return isPickedUp;
     }
 }
