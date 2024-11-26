@@ -134,7 +134,8 @@ TextureImporter:
     secondaryTextures: []
     spriteCustomMetadata:
       entries: []
-    nameFileIdTable: {}
+    nameFileIdTable:
+      Black and White striped pattern_0: 1374916701518316739
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

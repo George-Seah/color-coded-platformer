@@ -173,18 +173,21 @@ public class PlayerBehaviour : MonoBehaviour
             Debug.Log("Red selected");
             Physics2D.IgnoreLayerCollision(9, 10, false);
             Physics2D.IgnoreLayerCollision(6, 10, false);
+            color = "Red";
         }
         else if (newColor == Color.blue)
         {
             Debug.Log("Blue selected");
             Physics2D.IgnoreLayerCollision(9, 11, false);
             Physics2D.IgnoreLayerCollision(6, 11, false);
+            color = "Blue";
         }
         else if (newColor == Color.green)
         {
             Debug.Log("Green selected");
             Physics2D.IgnoreLayerCollision(9, 12, false);
             Physics2D.IgnoreLayerCollision(6, 12, false);
+            color = "Green";
         }
         else if (newColor == Color.white)
         {
@@ -194,14 +197,16 @@ public class PlayerBehaviour : MonoBehaviour
             Physics2D.IgnoreLayerCollision(6, 11, false);
             Physics2D.IgnoreLayerCollision(9, 12, false);
             Physics2D.IgnoreLayerCollision(6, 12, false);
+            color = "White";
         }
 
         GetComponent<SpriteRenderer>().color = newColor;
-        color = $"{newColor}";
+        
         //Drop key if not the same layer.
-        if(currentKey != null && color != $"{currentKey.gameObject.GetComponent<SpriteRenderer>().color}" 
+        if(currentKey != null && color != $"{LayerMask.LayerToName(currentKey.gameObject.layer)}" 
         && currentKey.ReadPickedUp() && currentKey.gameObject.GetComponent<SpriteRenderer>().color != Color.white){
             Debug.Log($"gameObject.layer = {gameObject.layer} and currentKey.gameObject.layer {currentKey.gameObject.layer}.");
+            Debug.Log($"color = {color} and currentKey.gameObject.layer {LayerMask.LayerToName(currentKey.gameObject.layer)}.");
             currentKey.Drop();
             currentKey = null;
             Debug.Log("Key dropped");

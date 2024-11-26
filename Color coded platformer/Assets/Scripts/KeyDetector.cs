@@ -1,0 +1,30 @@
+using UnityEngine;
+
+public class KeyDetector : MonoBehaviour
+{
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
+    {
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Key") && collision.gameObject.layer == gameObject.layer)
+        {
+            Debug.Log("Key entered Door Checker");
+            Destroy(transform.parent.gameObject);
+            Destroy(collision.gameObject);
+        }
+        if(collision.gameObject.CompareTag("Player")
+        && collision.gameObject.GetComponent<PlayerBehaviour>().color == $"{LayerMask.LayerToName(gameObject.layer)}"){
+            // 
+            Debug.Log("Player entered Door Checker");
+        }
+    }
+}

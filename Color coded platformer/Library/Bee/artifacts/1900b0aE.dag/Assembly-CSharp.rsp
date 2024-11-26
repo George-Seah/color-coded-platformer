@@ -439,6 +439,7 @@
 -analyzer:"C:/Unity/6000.0.25f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.Properties.SourceGenerator.dll"
 -analyzer:"C:/Unity/6000.0.25f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.SourceGenerators.dll"
 -analyzer:"C:/Unity/6000.0.25f1/Editor/Data/Tools/Unity.SourceGenerators/Unity.UIToolkit.SourceGenerator.dll"
+"Assets/FastMesh/Scripts/SceneViewText.cs"
 "Assets/Input System/PlayerInputActions.cs"
 "Assets/Scripts/ColorChanger.cs"
 "Assets/Scripts/ColorPicker.cs"
@@ -446,6 +447,7 @@
 "Assets/Scripts/Ground.cs"
 "Assets/Scripts/GroundCollisionCheck.cs"
 "Assets/Scripts/Key.cs"
+"Assets/Scripts/KeyDetector.cs"
 "Assets/Scripts/PlayerBehaviour.cs"
 "Assets/Scripts/StripedGround.cs"
 -langversion:9.0
