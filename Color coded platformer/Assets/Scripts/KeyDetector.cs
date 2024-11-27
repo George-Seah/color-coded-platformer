@@ -15,7 +15,7 @@ public class KeyDetector : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Key") && collision.gameObject.layer == gameObject.layer)
+        if (collision.gameObject.CompareTag("Key") && (collision.gameObject.layer == gameObject.layer || collision.gameObject.layer == LayerMask.NameToLayer("Default")))
         {
             Debug.Log("Key entered Door Checker");
             Destroy(transform.parent.gameObject);

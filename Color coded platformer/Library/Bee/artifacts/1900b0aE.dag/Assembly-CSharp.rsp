@@ -444,10 +444,12 @@
 "Assets/Scripts/ColorChanger.cs"
 "Assets/Scripts/ColorPicker.cs"
 "Assets/Scripts/DeathBarrier.cs"
+"Assets/Scripts/DirectionallySolidPlatform.cs"
 "Assets/Scripts/Ground.cs"
 "Assets/Scripts/GroundCollisionCheck.cs"
 "Assets/Scripts/Key.cs"
 "Assets/Scripts/KeyDetector.cs"
+"Assets/Scripts/Ladder.cs"
 "Assets/Scripts/PlayerBehaviour.cs"
 "Assets/Scripts/StripedGround.cs"
 -langversion:9.0
