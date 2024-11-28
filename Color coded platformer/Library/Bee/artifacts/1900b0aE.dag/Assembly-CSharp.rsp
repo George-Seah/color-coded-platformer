@@ -452,6 +452,7 @@
 "Assets/Scripts/Ladder.cs"
 "Assets/Scripts/PlayerBehaviour.cs"
 "Assets/Scripts/StripedGround.cs"
+"Assets/Scripts/VelocityChecker.cs"
 -langversion:9.0
 /deterministic
 /optimize+

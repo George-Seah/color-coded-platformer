@@ -61,7 +61,7 @@ public class Ladder : MonoBehaviour
         if(collision.gameObject.CompareTag("Player")
         && (collision.gameObject.GetComponent<PlayerBehaviour>().color == $"{LayerMask.LayerToName(gameObject.layer)}" || 
         $"{LayerMask.LayerToName(gameObject.layer)}" == "Default")){
-            Debug.Log("Player entered Ladder Checker.");
+            Debug.Log("Player exited Ladder Checker.");
             playerTransform = null;
             playerOnLadder = false;
             }
