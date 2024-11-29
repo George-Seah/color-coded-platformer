@@ -161,7 +161,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedColor: 3
   changeColor: 1
-  changeLayerMask: 1
+  changeLayerMask: 0
 --- !u!212 &2621354918004798679
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -260,7 +260,7 @@ BoxCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 512
+    m_Bits: 0
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
