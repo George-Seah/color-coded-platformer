@@ -25,7 +25,7 @@ public class PlayerBehaviour : MonoBehaviour
     [SerializeField] private float moveDirectionY;
     [SerializeField] private Key currentKey;
     public string color;
-
+    public bool onLadder;
     private void Awake()
     {
         playerControls = new PlayerInputActions();
@@ -82,6 +82,7 @@ public class PlayerBehaviour : MonoBehaviour
             jumpTime = 0f;
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
             rb.gravityScale = gravityScale;
+            Debug.Log("OnJump function activating gravity.");
         }
     }
 
@@ -114,6 +115,7 @@ public class PlayerBehaviour : MonoBehaviour
             jumping = false;
             jumpCancelled = false;
             rb.gravityScale = gravityScale;
+             Debug.Log("EnteredGround function activating gravity.");
         }
     }
 
@@ -223,14 +225,16 @@ public class PlayerBehaviour : MonoBehaviour
         if (isGrounded)
         {
             rb.gravityScale = gravityScale;
+            Debug.Log("isGrounded bool in FixedUpdate activating gravity.");
             if (jumpTime != 0)
             {
                 jumpTime = 0;
             }
         }
-        else if (!jumping && !isGrounded)
+        else if (!jumping && !isGrounded && !onLadder)
         {
             rb.gravityScale = fallingGravityScale;
+            Debug.Log("!jumping && !isGrounded bools in FixedUpdate activating gravity.");
         }
 
         if (jumping && !jumpCancelled && jumpTime < buttonTime && jump.IsPressed())
@@ -244,6 +248,10 @@ public class PlayerBehaviour : MonoBehaviour
             jumpCancelled = true;
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
             rb.gravityScale = fallingGravityScale;
+            Debug.Log("jumpTime > buttonTime bool in FixedUpdate activating gravity.");
         }
+    }
+    public bool readJumping(){
+        return jumping;
     }
 }
