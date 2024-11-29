@@ -25,7 +25,7 @@ public class PlayerBehaviour : MonoBehaviour
     [SerializeField] private float moveDirectionY;
     [SerializeField] private Key currentKey;
     public string color;
-
+    public bool onLadder;
     private void Awake()
     {
         playerControls = new PlayerInputActions();
@@ -108,6 +108,7 @@ public class PlayerBehaviour : MonoBehaviour
 
     public void EnteredGround()
     {
+        // && !onLadder
         if (!isGrounded)
         {
             isGrounded = true;
@@ -219,7 +220,7 @@ public class PlayerBehaviour : MonoBehaviour
         rb.linearVelocity = new Vector2(moveDirection.x * moveSpeed, rb.linearVelocity.y);
         moveDirectionX = moveDirection.x;
         moveDirectionY = moveDirection.y;
-
+        // && !onLadder
         if (isGrounded)
         {
             rb.gravityScale = gravityScale;
@@ -228,6 +229,7 @@ public class PlayerBehaviour : MonoBehaviour
                 jumpTime = 0;
             }
         }
+        // && !onLadder
         else if (!jumping && !isGrounded)
         {
             rb.gravityScale = fallingGravityScale;
@@ -238,12 +240,47 @@ public class PlayerBehaviour : MonoBehaviour
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
             jumpTime += Time.deltaTime;
         }
-
+        // && !onLadder
         if (jumpTime > buttonTime)
         {
             jumpCancelled = true;
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
             rb.gravityScale = fallingGravityScale;
         }
+        if(rb.gravityScale > 0){
+            //Debug.Log("Gravity applied");
+        }
+        /*
+        if(onLadder){
+            rb.gravityScale = 0;
+        }
+        */
+        /*
+        if (OnLadder)
+        {
+            rb.linearVelocity = new Vector2(0, moveDirection.y * moveSpeed); // Only vertical movement
+        }
+        */
+        else
+        {
+            // Original ground and air movement logic
+            if (isGrounded)
+            {
+                rb.gravityScale = gravityScale;
+                rb.linearVelocity = new Vector2(moveDirection.x * moveSpeed, rb.linearVelocity.y);
+            }
+            else if (!jumping && !isGrounded)
+            {
+                rb.gravityScale = fallingGravityScale;
+            }
+        }
+        if(onLadder){
+            rb.gravityScale = 0;
+        }
     }
+    public bool readJumping(){
+        return jumping;
+    }
+
+
 }
