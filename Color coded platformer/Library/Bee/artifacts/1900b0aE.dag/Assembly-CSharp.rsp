@@ -450,7 +450,9 @@
 "Assets/Scripts/Key.cs"
 "Assets/Scripts/KeyDetector.cs"
 "Assets/Scripts/Ladder.cs"
+"Assets/Scripts/MovingPlatform.cs"
 "Assets/Scripts/PlayerBehaviour.cs"
+"Assets/Scripts/PressurePad.cs"
 "Assets/Scripts/StripedGround.cs"
 "Assets/Scripts/VelocityChecker.cs"
 -langversion:9.0

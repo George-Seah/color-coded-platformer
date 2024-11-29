@@ -52,6 +52,7 @@ public class Ladder : MonoBehaviour
             if (moveDirection.y != 0)
             {
                 Debug.Log("Player is pressing vertical inputs near ladder.");
+                //collision.gameObject.GetComponent<PlayerBehaviour>().EnteredGround();
                 playerTransform = collision.gameObject;
                 playerRB = collision.gameObject.GetComponent<Rigidbody2D>();
                 playerOnLadder = true;

@@ -62,9 +62,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   climbSpeed: 0.25
-  moveDirectionY: 0
+  moveDirection: {x: 0, y: 0}
   playerOnLadder: 0
   playerTransform: {fileID: 0}
+  playerRB: {fileID: 0}
 --- !u!61 &789081130330941661
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -124,9 +125,9 @@ GameObject:
   - component: {fileID: 2621354918004798679}
   - component: {fileID: 8763932690620802825}
   - component: {fileID: 7548668156382707954}
-  m_Layer: 13
+  m_Layer: 0
   m_Name: Ladder
-  m_TagString: Untagged
+  m_TagString: Ladder
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -161,7 +162,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedColor: 3
   changeColor: 1
-  changeLayerMask: 0
+  changeLayerMask: 1
 --- !u!212 &2621354918004798679
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -260,7 +261,7 @@ BoxCollider2D:
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 512
   m_LayerOverridePriority: 0
   m_ForceSendLayers:
     serializedVersion: 2
