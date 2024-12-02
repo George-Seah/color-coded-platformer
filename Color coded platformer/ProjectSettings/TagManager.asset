@@ -20,11 +20,11 @@ TagManager:
   - GroundCollisionCheck
   - 
   - Ground
-  - Player
   - Red
   - Blue
   - Green
   - Ladder
+  - Player
   - 
   - 
   - 

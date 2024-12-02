@@ -105,7 +105,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.33, y: 0.25}
+  m_Size: {x: 0.35, y: 0.27}
   m_EdgeRadius: 0
 --- !u!1001 &8516513416987641813
 PrefabInstance:
@@ -216,7 +216,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3df70b878d90d9478d63dae2e208534, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedColor: 0
+  selectedColor: 3
   changeColor: 1
   changeLayerMask: 0
 --- !u!61 &2610899557612910848

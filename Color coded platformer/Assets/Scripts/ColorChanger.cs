@@ -47,6 +47,7 @@ public class ColorChanger : MonoBehaviour
         if (collision.gameObject.layer == LayerMask.NameToLayer("Player"))
         {
             //collision.gameObject.GetComponent<SpriteRenderer>().color = colorChange;
+            Debug.Log("Player detected inside ColorChanger.");
             collision.gameObject.GetComponent<PlayerBehaviour>().ColorChanged(colorChange);
         }
     }

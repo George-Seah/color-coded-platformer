@@ -163,42 +163,43 @@ public class PlayerBehaviour : MonoBehaviour
 
     public void ColorChanged(Color newColor)
     {
-        Physics2D.IgnoreLayerCollision(9, 10);
-        Physics2D.IgnoreLayerCollision(9, 11);
-        Physics2D.IgnoreLayerCollision(9, 12);
-        Physics2D.IgnoreLayerCollision(6, 10);
-        Physics2D.IgnoreLayerCollision(6, 11);
-        Physics2D.IgnoreLayerCollision(6, 12);
+        
+        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Red"));
+        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Blue"));
+        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Green"));
+        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("GroundCollisionCheck"), LayerMask.NameToLayer("Red"));
+        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("GroundCollisionCheck"), LayerMask.NameToLayer("Blue"));
+        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("GroundCollisionCheck"), LayerMask.NameToLayer("Green"));
 
         if (newColor == Color.red)
         {
             Debug.Log("Red selected");
-            Physics2D.IgnoreLayerCollision(9, 10, false);
-            Physics2D.IgnoreLayerCollision(6, 10, false);
+            Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Red"), false);
+            Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("GroundCollisionCheck"), LayerMask.NameToLayer("Red"), false);
             color = "Red";
         }
         else if (newColor == Color.blue)
         {
             Debug.Log("Blue selected");
-            Physics2D.IgnoreLayerCollision(9, 11, false);
-            Physics2D.IgnoreLayerCollision(6, 11, false);
+            Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Blue"), false);
+            Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("GroundCollisionCheck"), LayerMask.NameToLayer("Blue"), false);
             color = "Blue";
         }
         else if (newColor == Color.green)
         {
             Debug.Log("Green selected");
-            Physics2D.IgnoreLayerCollision(9, 12, false);
-            Physics2D.IgnoreLayerCollision(6, 12, false);
+            Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Green"), false);
+            Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("GroundCollisionCheck"), LayerMask.NameToLayer("Green"), false);
             color = "Green";
         }
         else if (newColor == Color.white)
         {
-            Physics2D.IgnoreLayerCollision(9, 10, false);
-            Physics2D.IgnoreLayerCollision(6, 10, false);
-            Physics2D.IgnoreLayerCollision(9, 11, false);
-            Physics2D.IgnoreLayerCollision(6, 11, false);
-            Physics2D.IgnoreLayerCollision(9, 12, false);
-            Physics2D.IgnoreLayerCollision(6, 12, false);
+            Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Red"), false);
+            Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("GroundCollisionCheck"), LayerMask.NameToLayer("Red"), false);
+            Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Blue"), false);
+            Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("GroundCollisionCheck"), LayerMask.NameToLayer("Blue"), false);
+            Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Green"), false);
+            Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("GroundCollisionCheck"), LayerMask.NameToLayer("Green"), false);
             color = "White";
         }
 
