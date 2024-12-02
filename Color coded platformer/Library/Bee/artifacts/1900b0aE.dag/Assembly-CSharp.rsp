@@ -450,6 +450,7 @@
 "Assets/Scripts/Key.cs"
 "Assets/Scripts/KeyDetector.cs"
 "Assets/Scripts/Ladder.cs"
+"Assets/Scripts/Lever.cs"
 "Assets/Scripts/MovingPlatform.cs"
 "Assets/Scripts/PlayerBehaviour.cs"
 "Assets/Scripts/PressurePad.cs"

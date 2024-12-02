@@ -10,6 +10,7 @@ TagManager:
   - Push Block
   - Pressure Pad
   - Moving Platform
+  - Lever
   layers:
   - Default
   - TransparentFX
