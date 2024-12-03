@@ -11,6 +11,10 @@ TagManager:
   - Pressure Pad
   - Moving Platform
   - Lever
+  - Hittable
+  - Damage
+  - Cannon Ball
+  - Cannon
   layers:
   - Default
   - TransparentFX
