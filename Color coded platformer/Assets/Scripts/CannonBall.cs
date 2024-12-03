@@ -2,15 +2,18 @@ using UnityEngine;
 
 public class CannonBall : MonoBehaviour
 {
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    public float speed = 20f; // Speed of the cannonball
+    public Vector3 direction = Vector3.forward; // Direction of movement
+
+    private Rigidbody rb;
+
+    
     void Start()
     {
+        rb = GetComponent<Rigidbody>();
         
     }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
+    void FixedUpdate(){
+        transform.Translate(direction.normalized * speed * Time.deltaTime);
     }
 }
