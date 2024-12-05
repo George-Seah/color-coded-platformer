@@ -226,7 +226,7 @@ public class PlayerBehaviour : MonoBehaviour
         if (isGrounded)
         {
             rb.gravityScale = gravityScale;
-            Debug.Log("isGrounded bool in FixedUpdate activating gravity.");
+            //Debug.Log("isGrounded bool in FixedUpdate activating gravity.");
             if (jumpTime != 0)
             {
                 jumpTime = 0;
