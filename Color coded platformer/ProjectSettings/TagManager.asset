@@ -15,6 +15,7 @@ TagManager:
   - Damage
   - Cannon Ball
   - Cannon
+  - Waddler
   layers:
   - Default
   - TransparentFX

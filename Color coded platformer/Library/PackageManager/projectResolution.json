@@ -8,6 +8,14 @@
     "C:\\Github\\color-coded-platformer\\Color coded platformer\\Packages\\packages-lock.json"
   ],
   "outputs": {
+    "com.unity.2d.sprite@1.0.0": {
+      "name": "com.unity.2d.sprite",
+      "resolvedPath": "C:\\Github\\color-coded-platformer\\Color coded platformer\\Library\\PackageCache\\com.unity.2d.sprite",
+      "fingerprint": "0e70656ef5df5c7161c8cfc6f24ab0dde0dc637e",
+      "editorCompatibility": "2019.2.0a1",
+      "version": "1.0.0",
+      "source": "builtin"
+    },
     "com.unity.collab-proxy@2.5.2": {
       "name": "com.unity.collab-proxy",
       "resolvedPath": "C:\\Github\\color-coded-platformer\\Color coded platformer\\Library\\PackageCache\\com.unity.collab-proxy",
@@ -37,6 +45,14 @@
       "fingerprint": "8140e851d83e922ca2021b04a89519de94ebe38c",
       "editorCompatibility": "2019.4.25f1",
       "version": "2.0.22",
+      "source": "registry"
+    },
+    "com.unity.ide.vscode@1.2.3": {
+      "name": "com.unity.ide.vscode",
+      "resolvedPath": "C:\\Github\\color-coded-platformer\\Color coded platformer\\Library\\PackageCache\\com.unity.ide.vscode",
+      "fingerprint": "2d531209967f3faf1e5cc4a737631f87ddcefc31",
+      "editorCompatibility": "2019.2.0a12",
+      "version": "1.2.3",
       "source": "registry"
     },
     "com.unity.inputsystem@1.11.2": {
@@ -354,14 +370,6 @@
       "editorCompatibility": "2023.1.0a1",
       "version": "9.0.3",
       "source": "registry"
-    },
-    "com.unity.2d.sprite@1.0.0": {
-      "name": "com.unity.2d.sprite",
-      "resolvedPath": "C:\\Github\\color-coded-platformer\\Color coded platformer\\Library\\PackageCache\\com.unity.2d.sprite",
-      "fingerprint": "0e70656ef5df5c7161c8cfc6f24ab0dde0dc637e",
-      "editorCompatibility": "2019.2.0a1",
-      "version": "1.0.0",
-      "source": "builtin"
     },
     "com.unity.2d.spriteshape@10.0.6": {
       "name": "com.unity.2d.spriteshape",
