@@ -465,6 +465,7 @@
 "Assets/Scripts/PressurePad.cs"
 "Assets/Scripts/StripedGround.cs"
 "Assets/Scripts/VelocityChecker.cs"
+"Assets/Scripts/Waddler.cs"
 "Assets/Simple 2D Platformer BE2/ReadMe/Scripts/ReadmeBE2.cs"
 -langversion:9.0
 /deterministic

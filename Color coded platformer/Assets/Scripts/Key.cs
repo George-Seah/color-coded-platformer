@@ -29,37 +29,47 @@ public class Key : MonoBehaviour
         rb.linearVelocity = Vector2.zero;
 
         transform.SetParent(player);
-        transform.localPosition = new Vector3(0f, 1f, 0f);
+        transform.localPosition = new Vector3(-1f, 0f, 0f);
 
         keyCollider.isTrigger = true;
     }
 
-public void Drop()
-{
-    if (isPickedUp)
+    public void Drop()
     {
-        // Detach from the player
-        transform.SetParent(null);
+        if (isPickedUp)
+        {
+            // Detach from the player
+            transform.SetParent(null);
 
-        // Reset Rigidbody2D properties for physical interaction
-        rb.isKinematic = false; 
-        rb.simulated = true;
-        rb.linearVelocity = Vector2.zero; // Clear any residual velocity
+            // Reset Rigidbody2D properties for physical interaction
+            rb.isKinematic = false; 
+            rb.simulated = true;
+            rb.linearVelocity = Vector2.zero; // Clear any residual velocity
 
-        // Ensure the collider is no longer a trigger for physical collision
-        keyCollider.isTrigger = false;
+            // Ensure the collider is no longer a trigger for physical collision
+            keyCollider.isTrigger = false;
 
-        // Optional: Add a small impulse to visually separate the dropped key
-        rb.AddForce(Vector2.up * 2f, ForceMode2D.Impulse);
+            // Optional: Add a small impulse to visually separate the dropped key
+            rb.AddForce(Vector2.up * 2f, ForceMode2D.Impulse);
 
-        isPickedUp = false; // Update the state
-        Debug.Log("Key dropped");
+            isPickedUp = false; // Update the state
+            Debug.Log("Key dropped");
+        }
     }
-}
 
 
     public bool ReadPickedUp()
     {
         return isPickedUp;
+    }
+    public void SetDirection(bool holderIsLookingRight){
+        if(holderIsLookingRight){
+            transform.localPosition = new Vector3(1f, 0f, 0f);
+            GetComponent<SpriteRenderer>().flipX = true;
+        }
+        else{
+            transform.localPosition = new Vector3(-1f, 0f, 0f);
+            GetComponent<SpriteRenderer>().flipX = false;
+        }
     }
 }

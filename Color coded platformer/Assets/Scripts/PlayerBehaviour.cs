@@ -26,6 +26,7 @@ public class PlayerBehaviour : MonoBehaviour
     [SerializeField] private Key currentKey;
     public string color;
     public bool onLadder;
+    bool lookingRight;
     private void Awake()
     {
         playerControls = new PlayerInputActions();
@@ -222,7 +223,17 @@ public class PlayerBehaviour : MonoBehaviour
         rb.linearVelocity = new Vector2(moveDirection.x * moveSpeed, rb.linearVelocity.y);
         moveDirectionX = moveDirection.x;
         moveDirectionY = moveDirection.y;
-
+        if(moveDirection.x > 0){
+           lookingRight = true;
+        }
+        else if(moveDirection.x < 0){
+           lookingRight = false;
+        }
+        
+        if(currentKey != null && currentKey.ReadPickedUp()){
+            currentKey.SetDirection(lookingRight);
+        }
+        
         if (isGrounded)
         {
             rb.gravityScale = gravityScale;
