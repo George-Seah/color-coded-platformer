@@ -20,16 +20,27 @@ public class Waddler : MonoBehaviour
 
             Vector2 collisionNormal = contact.normal;
             float collisionAngle = Vector2.Angle(Vector2.up, collisionNormal);
-
+            Vector2 leftCollision = new Vector2(1, 0);
+            Vector2 rightCollision = new Vector2(-1, 0);
             Debug.Log($"Collision Angle: {collisionAngle}°");
+            //Debug.Log($"collisionNormal.x: {collisionNormal.x}");
             //
-            //Vector2 leftCollision = Vector2(1, 0);
-            if(collisionNormal.x == 1 && !lookingRight){
-                lookingRight = true;
+            //
+            //collisionNormal.x == 1
+            if(!collision.gameObject.CompareTag("Player") && !collision.gameObject.CompareTag("Key")){
+                if(lookingRight && collisionNormal == rightCollision){
+                    lookingRight = false;
+                    Debug.Log($"Waddler faces right as it walks into wall");
+                }
+                //collisionNormal.x == -1
+                else if(!lookingRight && collisionNormal == leftCollision){
+                    lookingRight = true;
+                    Debug.Log($"Waddler faces left as it walks into wall");
+                }
             }
-            else if(collisionNormal.x == -1 && lookingRight){
-                lookingRight = false;
-            }
+
+
+
 
         }
 
@@ -40,25 +51,37 @@ public class Waddler : MonoBehaviour
             {
                 currentKey = key;
                 currentKey.PickUp(transform);
-                Debug.Log("Key detected. Ready to pick up.");
+                Debug.Log("Key detected by Waddler and picked up.");
             }
         }
     }
+    public void SetKey(Key key){
+        currentKey = key;
+    }
     void FixedUpdate()
     {
+
         if(currentKey != null){
             currentKey.SetDirection(lookingRight);
         }
-            
         //
         if(lookingRight){
             GetComponent<SpriteRenderer>().flipX = true;
             rb.linearVelocity = new Vector2(speed, rb.linearVelocity.y);
-            
+            /*
+            if(currentKey != null){
+                currentKey.SetDirection(true);
+            }
+            */
         }
         else{
             GetComponent<SpriteRenderer>().flipX = false;
             rb.linearVelocity = new Vector2(-speed, rb.linearVelocity.y);
+            /*
+            if(currentKey != null){
+                currentKey.SetDirection(false);
+            }
+            */   
         }
     }
 }

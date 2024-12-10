@@ -76,6 +76,11 @@ public class PlayerBehaviour : MonoBehaviour
             // Attempt to pick up the key
             currentKey.PickUp(transform);
         }
+        /*
+        else if(currentKey != null && !currentKey.ReadPickedUp()){
+            currentKey.PickUp(transform);
+        }
+        */
         else if (isGrounded && !jumping)
         {
             // Normal jump behavior
@@ -141,11 +146,19 @@ public class PlayerBehaviour : MonoBehaviour
         if (collision.gameObject.CompareTag("Key"))
         {
             Key key = collision.gameObject.GetComponent<Key>();
+            Debug.Log("Key detected.");
             if (key != null && !key.ReadPickedUp())
             {
                 currentKey = key;
                 Debug.Log("Key detected. Ready to pick up.");
             }
+            // && key.ReadPickedUp()
+            /*
+            else if(key != null && collision.transform.parent.gameObject.CompareTag("Waddler")){
+                currentKey = key;
+                Debug.Log("Key detected being on Waddler. Ready to pick up?");
+            }
+            */
         }
     }
     private void OnCollisionExit2D(Collision2D collision)
@@ -229,11 +242,14 @@ public class PlayerBehaviour : MonoBehaviour
         else if(moveDirection.x < 0){
            lookingRight = false;
         }
-        
-        if(currentKey != null && currentKey.ReadPickedUp()){
-            currentKey.SetDirection(lookingRight);
+        /*
+        if(currentKey != null && currentKey.ReadPickedUp() && !currentKey.transform.parent.gameObject.CompareTag("Waddler")){
+            //currentKey.SetDirection(lookingRight);///Check this if direction isn;t right or key somehow teleports
         }
-        
+        */
+        if(currentKey != null && currentKey.ReadPickedUp() && currentKey.transform.parent.gameObject.CompareTag("Player")){
+            currentKey.SetDirection(lookingRight);///Check this if direction isn;t right or key somehow teleports
+        }
         if (isGrounded)
         {
             rb.gravityScale = gravityScale;
@@ -265,5 +281,8 @@ public class PlayerBehaviour : MonoBehaviour
     }
     public bool readJumping(){
         return jumping;
+    }
+    public void SetKey(Key key){
+        currentKey = key;
     }
 }
