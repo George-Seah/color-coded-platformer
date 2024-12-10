@@ -283,11 +283,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 348192829937560113, guid: e371c88d5f2e39f449ac7e9020eec3aa, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.74
+      value: -0.43
       objectReference: {fileID: 0}
     - target: {fileID: 348192829937560113, guid: e371c88d5f2e39f449ac7e9020eec3aa, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 10.73
+      value: 2.92
       objectReference: {fileID: 0}
     - target: {fileID: 348192829937560113, guid: e371c88d5f2e39f449ac7e9020eec3aa, type: 3}
       propertyPath: m_LocalPosition.z
@@ -324,6 +324,18 @@ PrefabInstance:
     - target: {fileID: 6621080436044212799, guid: e371c88d5f2e39f449ac7e9020eec3aa, type: 3}
       propertyPath: m_Name
       value: Red Color Changer (1)
+      objectReference: {fileID: 0}
+    - target: {fileID: 8649135939145748386, guid: e371c88d5f2e39f449ac7e9020eec3aa, type: 3}
+      propertyPath: tagsToDetect.Array.size
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8649135939145748386, guid: e371c88d5f2e39f449ac7e9020eec3aa, type: 3}
+      propertyPath: 'tagsToDetect.Array.data[0]'
+      value: Waddler
+      objectReference: {fileID: 0}
+    - target: {fileID: 8649135939145748386, guid: e371c88d5f2e39f449ac7e9020eec3aa, type: 3}
+      propertyPath: 'tagsToDetect.Array.data[1]'
+      value: Key
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1488,18 +1500,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Waddler
       objectReference: {fileID: 0}
-    - target: {fileID: 2699990597186971257, guid: 127e30850769a5c4cadd72010f82ea85, type: 3}
-      propertyPath: speed
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 2699990597186971257, guid: 127e30850769a5c4cadd72010f82ea85, type: 3}
-      propertyPath: lookingRight
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5177973082895228751, guid: 127e30850769a5c4cadd72010f82ea85, type: 3}
-      propertyPath: m_FlipX
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7644442776918290357, guid: 127e30850769a5c4cadd72010f82ea85, type: 3}
       propertyPath: m_LocalPosition.x
       value: 3.49
@@ -1833,7 +1833,7 @@ GameObject:
   - component: {fileID: 2068252324}
   m_Layer: 6
   m_Name: GroundCollisionCheck
-  m_TagString: Untagged
+  m_TagString: GroundCollisionCheck
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

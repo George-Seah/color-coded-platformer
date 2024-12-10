@@ -16,6 +16,7 @@ TagManager:
   - Cannon Ball
   - Cannon
   - Waddler
+  - GroundCollisionCheck
   layers:
   - Default
   - TransparentFX

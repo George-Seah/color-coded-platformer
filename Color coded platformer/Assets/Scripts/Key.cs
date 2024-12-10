@@ -79,21 +79,25 @@ public class Key : MonoBehaviour
     }
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        //Player steals key from Waddler
         if (collision.gameObject.CompareTag("Player") && transform.parent.gameObject.CompareTag("Waddler"))
         {
-            collision.gameObject.GetComponent<PlayerBehaviour>().SetKey(gameObject.GetComponent<Key>());
+
             Debug.Log("Key detects player while being held by Waddler.");
             if(canBeStolen){
+                collision.gameObject.GetComponent<PlayerBehaviour>().SetKey(gameObject.GetComponent<Key>());
                 Debug.Log("Key should be stolen by Player from Waddler.");
                 canBeStolen = false;
                 PickUp(collision.gameObject.transform);
             }
         }
+        //Waddler steals key from Player
         else if (collision.gameObject.CompareTag("Waddler") && transform.parent.gameObject.CompareTag("Player"))
         {
-            collision.gameObject.GetComponent<Waddler>().SetKey(gameObject.GetComponent<Key>());
+
             Debug.Log("Key detects Waddler while being held by Player.");
             if(canBeStolen){
+                collision.gameObject.GetComponent<Waddler>().SetKey(gameObject.GetComponent<Key>());
                 Debug.Log("Key should be stolen by Waddler from Player.");
                 canBeStolen = false;
                 PickUp(collision.gameObject.transform);
