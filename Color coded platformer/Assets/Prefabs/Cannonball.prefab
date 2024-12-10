@@ -13,7 +13,7 @@ GameObject:
   - component: {fileID: 5513484499012424896}
   - component: {fileID: 4032672294030833165}
   - component: {fileID: 7198778519211023197}
-  m_Layer: 10
+  m_Layer: 11
   m_Name: Cannonball
   m_TagString: Cannon Ball
   m_Icon: {fileID: 0}
@@ -94,7 +94,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_Sprite: {fileID: 21300000, guid: 98e36223d41719f4886df57f3836bed9, type: 3}
-  m_Color: {r: 0, g: 0, b: 1, a: 1}
+  m_Color: {r: 0, g: 1, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
