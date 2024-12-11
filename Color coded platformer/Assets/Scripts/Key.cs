@@ -107,6 +107,7 @@ public class Key : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
+        /*
         if (collision.gameObject.CompareTag("Player") && transform.parent.gameObject.CompareTag("Waddler"))
         {
             //collision.gameObject.GetComponent<PlayerBehaviour>().SetKey(null);
@@ -117,6 +118,7 @@ public class Key : MonoBehaviour
             //collision.gameObject.GetComponent<Waddler>().SetKey(null);
             Debug.Log("Waddler has left key hitbox while being held by Player.");
         }
+        */
         if(isPickedUp && !canBeStolen){
             if(transform.parent.gameObject.CompareTag("Player") && collision.gameObject.CompareTag("Waddler")){
                 canBeStolen = true;

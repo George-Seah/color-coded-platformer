@@ -16,6 +16,13 @@ public class GroundCollisionCheck : MonoBehaviour
             playerBehaviour.EnteredGround();
             //Debug.Log("Player entered ground");
         }
+        if(collision.gameObject.CompareTag("Waddler")){
+            playerBehaviour.LandedOnWaddler();
+            if(collision.gameObject.GetComponentInChildren<Key>() != null){
+                collision.gameObject.GetComponentInChildren<Key>().Drop();
+            }
+            Destroy(collision.gameObject);
+        }
     }
     private void OnTriggerStay2D(Collider2D collision)
     {

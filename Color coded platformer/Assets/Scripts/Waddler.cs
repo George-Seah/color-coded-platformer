@@ -74,6 +74,11 @@ public class Waddler : MonoBehaviour
         if (currentKey != null)
         {
             currentKey.SetDirection(lookingRight);
+            if(currentKey.gameObject.layer != LayerMask.NameToLayer("Default") && 
+            currentKey.gameObject.layer != gameObject.layer &&
+            gameObject.layer != LayerMask.NameToLayer("Default")){
+                currentKey.Drop();
+            }
         }
 
         if (lookingRight)

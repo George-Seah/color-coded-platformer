@@ -48,7 +48,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   selectedColor: 1
   colorChange: {r: 0.102731705, g: 1, b: 0, a: 1}
-  tagsToDetect: []
+  tagsToDetect:
+  - Player
 --- !u!212 &7970660192555385718
 SpriteRenderer:
   m_ObjectHideFlags: 0

@@ -20,13 +20,17 @@ public class PlayerBehaviour : MonoBehaviour
     [SerializeField] private float jumpForce;
 
     private bool jumpCancelled;
-    private bool jumping = false;
+    [SerializeField] private bool jumping = false;
     [SerializeField] private float moveDirectionX;
     [SerializeField] private float moveDirectionY;
     [SerializeField] private Key currentKey;
     public string color;
     public bool onLadder;
     bool lookingRight;
+    [SerializeField] private bool landedOnWaddler;
+
+    float waddlerBounceForceButtonHeld = 1.25f;
+    float waddlerBounceForceButtonUnheld = 0.8f;
     private void Awake()
     {
         playerControls = new PlayerInputActions();
@@ -121,7 +125,7 @@ public class PlayerBehaviour : MonoBehaviour
             jumping = false;
             jumpCancelled = false;
             rb.gravityScale = gravityScale;
-             Debug.Log("EnteredGround function activating gravity.");
+            Debug.Log("EnteredGround function activating gravity.");
         }
     }
 
@@ -253,6 +257,7 @@ public class PlayerBehaviour : MonoBehaviour
         if (isGrounded)
         {
             rb.gravityScale = gravityScale;
+            landedOnWaddler = false;
             //Debug.Log("isGrounded bool in FixedUpdate activating gravity.");
             if (jumpTime != 0)
             {
@@ -270,7 +275,19 @@ public class PlayerBehaviour : MonoBehaviour
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
             jumpTime += Time.deltaTime;
         }
-
+        if(jumping && landedOnWaddler && jumpTime < buttonTime){
+            Debug.Log("Player should bounce off Waddler.");
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce * waddlerBounceForceButtonUnheld);
+            jumpTime += Time.deltaTime;
+            rb.gravityScale = gravityScale;
+            if(jump.IsPressed()){
+                rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce * waddlerBounceForceButtonHeld);
+            }
+            // && jumpTime < buttonTime && jump.IsPressed()
+            if(jump.WasReleasedThisFrame()){
+                rb.gravityScale = fallingGravityScale;
+            }
+        }
         if (jumpTime > buttonTime)
         {
             jumpCancelled = true;
@@ -284,5 +301,9 @@ public class PlayerBehaviour : MonoBehaviour
     }
     public void SetKey(Key key){
         currentKey = key;
+    }
+    public void LandedOnWaddler(){
+        landedOnWaddler = true;
+        jumpTime = 0;
     }
 }
