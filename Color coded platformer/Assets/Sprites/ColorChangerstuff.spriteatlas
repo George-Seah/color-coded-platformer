@@ -1,0 +1,68 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!687078895 &4343727234628468602
+SpriteAtlas:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_Name: ColorChangerstuff
+  m_EditorData:
+    serializedVersion: 2
+    textureSettings:
+      serializedVersion: 2
+      anisoLevel: 1
+      compressionQuality: 50
+      maxTextureSize: 2048
+      textureCompression: 0
+      filterMode: 1
+      generateMipMaps: 0
+      readable: 0
+      crunchedCompression: 0
+      sRGB: 1
+    platformSettings: []
+    packingSettings:
+      serializedVersion: 2
+      padding: 4
+      blockOffset: 1
+      allowAlphaSplitting: 0
+      enableRotation: 1
+      enableTightPacking: 0
+      enableAlphaDilation: 0
+    secondaryTextureSettings: {}
+    variantMultiplier: 1
+    packables:
+    - {fileID: -8237362841850687353, guid: 7818ff8b69c3c4b4fa3ea33285f4f6a1, type: 3}
+    - {fileID: 2960308106685272936, guid: 0a25cd5ecbfcc1744b2202b6f892b055, type: 3}
+    - {fileID: -8396187568615977397, guid: 1bd72b325e8706d41b7badad1ebc665d, type: 3}
+    - {fileID: -3562362541407738469, guid: 3725e022abfc4a54a982161479e7777c, type: 3}
+    - {fileID: -7796920827282412667, guid: bdeb93e7902e1f2449b38f9d8398419e, type: 3}
+    - {fileID: -1626603816905824543, guid: b3db133231d17e042a27e13c836ce577, type: 3}
+    bindAsDefault: 1
+    isAtlasV2: 0
+    cachedData: {fileID: 0}
+    packedSpriteRenderDataKeys:
+    - 3725e022abfc4a54a982161479e7777c: -3562362541407738469
+    - b3db133231d17e042a27e13c836ce577: -1626603816905824543
+    - 1bd72b325e8706d41b7badad1ebc665d: -8396187568615977397
+    - bdeb93e7902e1f2449b38f9d8398419e: -7796920827282412667
+    - 7818ff8b69c3c4b4fa3ea33285f4f6a1: -8237362841850687353
+    - 0a25cd5ecbfcc1744b2202b6f892b055: 2960308106685272936
+  m_MasterAtlas: {fileID: 0}
+  m_PackedSprites:
+  - {fileID: -3562362541407738469, guid: 3725e022abfc4a54a982161479e7777c, type: 3}
+  - {fileID: -1626603816905824543, guid: b3db133231d17e042a27e13c836ce577, type: 3}
+  - {fileID: -8396187568615977397, guid: 1bd72b325e8706d41b7badad1ebc665d, type: 3}
+  - {fileID: -7796920827282412667, guid: bdeb93e7902e1f2449b38f9d8398419e, type: 3}
+  - {fileID: -8237362841850687353, guid: 7818ff8b69c3c4b4fa3ea33285f4f6a1, type: 3}
+  - {fileID: 2960308106685272936, guid: 0a25cd5ecbfcc1744b2202b6f892b055, type: 3}
+  m_PackedSpriteNamesToIndex:
+  - WaddlerIdle_0
+  - LadderParticleversion_0
+  - Black and White striped pattern small_0
+  - Idle stick_0
+  - Key small_0
+  - Cannonball_0
+  m_RenderDataMap: {}
+  m_Tag: ColorChangerstuff
+  m_IsVariant: 0

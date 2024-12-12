@@ -330,6 +330,10 @@ PrefabInstance:
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 8649135939145748386, guid: e371c88d5f2e39f449ac7e9020eec3aa, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8649135939145748386, guid: e371c88d5f2e39f449ac7e9020eec3aa, type: 3}
       propertyPath: particleSystem
       value: 
       objectReference: {fileID: 1560490230}
@@ -339,16 +343,20 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: e5c2d921f27176f478322b074fc0e2b3, type: 2}
     - target: {fileID: 8649135939145748386, guid: e371c88d5f2e39f449ac7e9020eec3aa, type: 3}
       propertyPath: sprites.Array.size
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 8649135939145748386, guid: e371c88d5f2e39f449ac7e9020eec3aa, type: 3}
       propertyPath: 'sprites.Array.data[0]'
       value: 
-      objectReference: {fileID: 8596640243658272642, guid: 5d4daff38e3d9174b873918abcf2c1d4, type: 3}
+      objectReference: {fileID: -7796920827282412667, guid: bdeb93e7902e1f2449b38f9d8398419e, type: 3}
     - target: {fileID: 8649135939145748386, guid: e371c88d5f2e39f449ac7e9020eec3aa, type: 3}
       propertyPath: 'sprites.Array.data[1]'
       value: 
-      objectReference: {fileID: 8128082410414974340, guid: 3e3fb1b7d04e51f4588f2c6d8d6ba412, type: 3}
+      objectReference: {fileID: -1626603816905824543, guid: b3db133231d17e042a27e13c836ce577, type: 3}
+    - target: {fileID: 8649135939145748386, guid: e371c88d5f2e39f449ac7e9020eec3aa, type: 3}
+      propertyPath: 'sprites.Array.data[2]'
+      value: 
+      objectReference: {fileID: -3562362541407738469, guid: 3725e022abfc4a54a982161479e7777c, type: 3}
     - target: {fileID: 8649135939145748386, guid: e371c88d5f2e39f449ac7e9020eec3aa, type: 3}
       propertyPath: tagsToDetect.Array.size
       value: 3
@@ -376,6 +384,63 @@ PrefabInstance:
       insertIndex: -1
       addedObject: {fileID: 1560490229}
   m_SourcePrefab: {fileID: 100100000, guid: e371c88d5f2e39f449ac7e9020eec3aa, type: 3}
+--- !u!1001 &315885994
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4253246274819953250, guid: 6a7e2173a9c81ee4b80dbf1d7827d8c2, type: 3}
+      propertyPath: m_Name
+      value: Cannonball
+      objectReference: {fileID: 0}
+    - target: {fileID: 5396522751877294810, guid: 6a7e2173a9c81ee4b80dbf1d7827d8c2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 39.100555
+      objectReference: {fileID: 0}
+    - target: {fileID: 5396522751877294810, guid: 6a7e2173a9c81ee4b80dbf1d7827d8c2, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: -4.25292
+      objectReference: {fileID: 0}
+    - target: {fileID: 5396522751877294810, guid: 6a7e2173a9c81ee4b80dbf1d7827d8c2, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5396522751877294810, guid: 6a7e2173a9c81ee4b80dbf1d7827d8c2, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5396522751877294810, guid: 6a7e2173a9c81ee4b80dbf1d7827d8c2, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5396522751877294810, guid: 6a7e2173a9c81ee4b80dbf1d7827d8c2, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5396522751877294810, guid: 6a7e2173a9c81ee4b80dbf1d7827d8c2, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5396522751877294810, guid: 6a7e2173a9c81ee4b80dbf1d7827d8c2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5396522751877294810, guid: 6a7e2173a9c81ee4b80dbf1d7827d8c2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5396522751877294810, guid: 6a7e2173a9c81ee4b80dbf1d7827d8c2, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 6a7e2173a9c81ee4b80dbf1d7827d8c2, type: 3}
 --- !u!1001 &395032060
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2796,9 +2861,9 @@ ParticleSystem:
     fps: 30
     frameOverTime:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 0.9999
-      minScalar: 0.9999
+      minScalar: 0
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -2806,6 +2871,15 @@ ParticleSystem:
           time: 0
           value: 0
           inSlope: 0
+          outSlope: 0
+          tangentMode: 0
+          weightedMode: 0
+          inWeight: 0.33333334
+          outWeight: 0.33333334
+        - serializedVersion: 3
+          time: 0.47113037
+          value: 1
+          inSlope: 1
           outSlope: 1
           tangentMode: 0
           weightedMode: 0
@@ -2813,13 +2887,13 @@ ParticleSystem:
           outWeight: 0.33333334
         - serializedVersion: 3
           time: 1
-          value: 1
-          inSlope: 1
+          value: 0
+          inSlope: 0
           outSlope: 0
           tangentMode: 0
           weightedMode: 0
-          inWeight: 0.33333334
-          outWeight: 0.33333334
+          inWeight: 0
+          outWeight: 0
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
@@ -2909,7 +2983,9 @@ ParticleSystem:
     uvChannelMask: -1
     rowMode: 1
     sprites:
-    - sprite: {fileID: 8128082410414974340, guid: 3e3fb1b7d04e51f4588f2c6d8d6ba412, type: 3}
+    - sprite: {fileID: -8396187568615977397, guid: 1bd72b325e8706d41b7badad1ebc665d, type: 3}
+    - sprite: {fileID: 2960308106685272936, guid: 0a25cd5ecbfcc1744b2202b6f892b055, type: 3}
+    - sprite: {fileID: -8237362841850687353, guid: 7818ff8b69c3c4b4fa3ea33285f4f6a1, type: 3}
     flipU: 0
     flipV: 0
   VelocityModule:
@@ -7454,3 +7530,4 @@ SceneRoots:
   - {fileID: 517885768799809767}
   - {fileID: 413524846}
   - {fileID: 432584368}
+  - {fileID: 315885994}
