@@ -23,6 +23,7 @@ public class ColorChanger : MonoBehaviour
     public Material shaderMaterial;       // Material using your shader graph
     private void OnTriggerEnter2D(Collider2D collision)
     {
+        
         if (tagsToDetect.Contains(collision.tag))
         {
             if (collision.gameObject.layer == LayerMask.NameToLayer("Player"))
@@ -61,6 +62,8 @@ public class ColorChanger : MonoBehaviour
     
     void Start()
     {
+        //particleSystem = GetComponent<ParticleSystem>();
+        //shaderMaterial = GetComponent<Renderer>().material;
         // Set the color based on the selected option
         switch (selectedColor)
         {

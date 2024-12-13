@@ -68,7 +68,13 @@ public class Waddler : MonoBehaviour
     {
         currentKey = key;
     }
-
+    public void SetSpeed(float newSpeed)
+    {
+        speed = newSpeed;
+    }
+    public void Launch(Vector2 direction, float launchForce){
+        rb.linearVelocity = direction * launchForce;
+    }
     void FixedUpdate()
     {
         if (currentKey != null)
