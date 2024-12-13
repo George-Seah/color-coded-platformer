@@ -1,13 +1,13 @@
 using UnityEngine;
-
+[RequireComponent(typeof(Rigidbody2D))]
 public class Waddler : MonoBehaviour
 {
     [SerializeField] bool lookingRight;
     [SerializeField] float speed;
     private Rigidbody2D rb;
     [SerializeField] private Key currentKey;
-
-    void Start()
+    
+    void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
     }
@@ -40,25 +40,25 @@ public class Waddler : MonoBehaviour
         foreach (ContactPoint2D contact in collision.contacts)
         {
             Debug.DrawLine(contact.point, contact.point + contact.normal, Color.red, 2f);
-            Debug.Log($"Normal: {contact.normal}");
+            //Debug.Log($"Normal: {contact.normal}");
 
             Vector2 collisionNormal = contact.normal;
             float collisionAngle = Vector2.Angle(Vector2.up, collisionNormal);
             Vector2 leftCollision = new Vector2(1, 0);
             Vector2 rightCollision = new Vector2(-1, 0);
-            Debug.Log($"Collision Angle: {collisionAngle}°");
+            //Debug.Log($"Collision Angle: {collisionAngle}°");
 
             if (!collision.gameObject.CompareTag("Player") && !collision.gameObject.CompareTag("Key"))
             {
                 if (lookingRight && collisionNormal == rightCollision)
                 {
                     lookingRight = false;
-                    Debug.Log($"Waddler faces right as it walks into wall");
+                    //Debug.Log($"Waddler faces right as it walks into wall");
                 }
                 else if (!lookingRight && collisionNormal == leftCollision)
                 {
                     lookingRight = true;
-                    Debug.Log($"Waddler faces left as it walks into wall");
+                    //Debug.Log($"Waddler faces left as it walks into wall");
                 }
             }
         }
@@ -72,8 +72,37 @@ public class Waddler : MonoBehaviour
     {
         speed = newSpeed;
     }
-    public void Launch(Vector2 direction, float launchForce){
-        rb.linearVelocity = direction * launchForce;
+    /*
+    public void Launch(float angleInDegrees, float launchForce)
+    {
+        if (rb == null)
+        {
+            Debug.LogError("Rigidbody2D is not set up properly!");
+            return;
+        }
+
+        // Convert angle to radians and calculate direction
+        float angleInRadians = angleInDegrees * Mathf.Deg2Rad;
+        Vector2 direction = new Vector2(Mathf.Cos(angleInRadians), Mathf.Sin(angleInRadians));
+        Debug.DrawRay(transform.position, direction * 2, Color.yellow, 2f);
+        // Apply force to the Rigidbody2D
+        rb.linearVelocity = Vector2.zero; // Reset velocity before applying force
+        rb.AddForce(direction * launchForce, ForceMode2D.Impulse);
+
+        Debug.Log($"Launching Waddler at {angleInDegrees}° with force {launchForce}");
+    }
+    */
+    public void Launch(float angleInDegrees, float launchForce)
+    {
+        // Convert angle to radians and calculate direction
+        float angleInRadians = angleInDegrees * Mathf.Deg2Rad;
+        Vector2 launchDirection = new Vector2(Mathf.Cos(angleInRadians), Mathf.Sin(angleInRadians));
+
+        // Apply the force to the Rigidbody2D
+        rb.linearVelocity = launchDirection * launchForce;
+
+        // Optional debug information
+        Debug.Log($"Waddler launched at angle: {angleInDegrees} degrees with force: {launchForce}");
     }
     void FixedUpdate()
     {

@@ -12,6 +12,8 @@ public class WaddlerCannon : MonoBehaviour
     [SerializeField] float shootTime;
     [Tooltip("Changes the force at which waddlers come out of cannon")]
     [SerializeField] float blastForce;
+    [Tooltip("Changes the angle at which waddlers come out of cannon")]
+    [SerializeField] float launchAngle = 45f;
     // List of colored cannonballs to shoot (set this in the Inspector)
     [Tooltip("List of cannonball colors")]
     public List<string> colorsToShoot = new List<string>();
@@ -27,43 +29,50 @@ public class WaddlerCannon : MonoBehaviour
     void FixedUpdate()
     {
         shootTime += Time.deltaTime;
-        if(shootTime > shootInterval){
-            waddler.gameObject.GetComponent<Waddler>().SetSpeed(waddlerSpeed);
-            if(colorsToShoot[colorIndex] == "Red"){
-                waddlerColor = Color.red;
-                waddler.gameObject.layer = LayerMask.NameToLayer("Red");
-            }
-            else if(colorsToShoot[colorIndex] == "Green"){
-                waddlerColor = Color.green;
-                waddler.gameObject.layer = LayerMask.NameToLayer("Green");
-            }
-            else if(colorsToShoot[colorIndex] == "Blue"){
-                waddlerColor = Color.blue;
-                waddler.gameObject.layer = LayerMask.NameToLayer("Blue");
-            }
-            else{
-                //If the index is anything not red, green or blue, it will be the default settings
-                waddlerColor = Color.white;
-                waddler.gameObject.layer = LayerMask.NameToLayer("Default");
-            }
-            waddler.gameObject.GetComponent<SpriteRenderer>().color = waddlerColor;
-            //waddler.GetComponent<Rigidbody2D>().linearVelocity = new Vector2(waddler.GetComponent<Rigidbody2D>().linearVelocity.x, blastForce);
-            Instantiate(waddler.gameObject, transform.position, transform.rotation);
-            //waddler.gameObject.GetComponent<Waddler>().Launch(transform.rotation, blastForce);
-            if(colorIndex < colorsToShoot.Count - 1){
-                colorIndex ++;
-                
-            }
-            else{
-                colorIndex = 0;
-            }
-            /*
-            else if(colorIndex > colorsToShoot.Count){
-                colorIndex = 0;
-            }
-            */
+        if (shootTime > shootInterval)
+        {
             shootTime = 0;
+            GameObject newWaddler = Instantiate(waddler.gameObject, transform.position, Quaternion.identity);
+            Waddler waddlerScript = newWaddler.GetComponent<Waddler>();
+            waddlerScript.Launch(launchAngle, blastForce);
+
+
+
+            // Set the Waddler properties
+            waddlerScript.SetSpeed(waddlerSpeed);
+
+            // Determine the color and layer
+            if (colorsToShoot[colorIndex] == "Red")
+            {
+                waddlerColor = Color.red;
+                newWaddler.layer = LayerMask.NameToLayer("Red");
+            }
+            else if (colorsToShoot[colorIndex] == "Green")
+            {
+                waddlerColor = Color.green;
+                newWaddler.layer = LayerMask.NameToLayer("Green");
+            }
+            else if (colorsToShoot[colorIndex] == "Blue")
+            {
+                waddlerColor = Color.blue;
+                newWaddler.layer = LayerMask.NameToLayer("Blue");
+            }
+            else
+            {
+                waddlerColor = Color.white;
+                newWaddler.layer = LayerMask.NameToLayer("Default");
+            }
+
+            newWaddler.GetComponent<SpriteRenderer>().color = waddlerColor;
+
+            // Launch the Waddler at a specific angle
+            // Set your desired launch angle here
+
+
+            // Cycle through the colors
+            colorIndex = (colorIndex + 1) % colorsToShoot.Count;
+
         }
-        
     }
+
 }
