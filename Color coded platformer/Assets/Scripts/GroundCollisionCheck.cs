@@ -16,7 +16,7 @@ public class GroundCollisionCheck : MonoBehaviour
             playerBehaviour.EnteredGround();
             //Debug.Log("Player entered ground");
         }
-        if(collision.gameObject.CompareTag("Waddler")){
+        if(collision.gameObject.CompareTag("Waddler") && playerBehaviour.readJumping()){
             playerBehaviour.LandedOnWaddler();
             if(collision.gameObject.GetComponentInChildren<Key>() != null){
                 collision.gameObject.GetComponentInChildren<Key>().Drop();

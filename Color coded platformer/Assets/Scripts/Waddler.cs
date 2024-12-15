@@ -1,4 +1,5 @@
 using UnityEngine;
+using System.Collections;
 
 [RequireComponent(typeof(Rigidbody2D))]
 public class Waddler : MonoBehaviour
@@ -7,15 +8,21 @@ public class Waddler : MonoBehaviour
     [SerializeField] float speed;
     private Rigidbody2D rb;
     [SerializeField] private Key currentKey;
+    //[SerializeField] private Vector2 respawn;
     bool grounded;
+    private Collider2D waddlerCollider;
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
+        waddlerCollider = GetComponent<Collider2D>();
     }
 
     public void Launch(Transform cannonTransform, float launchForce, bool facingRight)
     {
+        // Applies direction to face
         lookingRight = facingRight;
+
         // Calculate the launch direction based on the cannon's rotation
         float angleInRadians = (cannonTransform.eulerAngles.z + 90) * Mathf.Deg2Rad;
         Vector2 launchDirection = new Vector2(Mathf.Cos(angleInRadians), Mathf.Sin(angleInRadians));
@@ -23,19 +30,37 @@ public class Waddler : MonoBehaviour
         // Apply the force to the Rigidbody2D
         rb.linearVelocity = launchDirection * launchForce;
 
-        // Optional debug information
+        // Ignore collision with the cannon temporarily
+        Collider2D cannonCollider = cannonTransform.GetComponent<Collider2D>();
+        if (cannonCollider != null)
+        {
+            Physics2D.IgnoreCollision(waddlerCollider, cannonCollider, true);
+            StartCoroutine(EnableCollisionWithCannon(cannonCollider, 0.5f)); // Adjust delay as needed
+        }
+
         Debug.Log($"Waddler launched at angle: {cannonTransform.eulerAngles.z} degrees with force: {launchForce}");
     }
-    void OnCollisionEnter2D(Collision2D collision){
-        if(collision.gameObject.CompareTag("Ground")){
-            grounded = true;
+
+    private IEnumerator EnableCollisionWithCannon(Collider2D cannonCollider, float delay)
+    {
+        yield return new WaitForSeconds(delay);
+        Physics2D.IgnoreCollision(waddlerCollider, cannonCollider, false);
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        //if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Cannon")){}
+        grounded = true;
+        if(collision.gameObject.CompareTag("Player")){
+            collision.gameObject.GetComponent<PlayerBehaviour>().RespawnPositionAtPosition();
         }
     }
-    void OnCollisionExit2D(Collision2D collision){
-        if(collision.gameObject.CompareTag("Ground")){
-            grounded = false;
-        }
+
+    void OnCollisionExit2D(Collision2D collision)
+    {
+        grounded = false;
     }
+
     void FixedUpdate()
     {
         if (currentKey != null)
@@ -49,7 +74,9 @@ public class Waddler : MonoBehaviour
                 currentKey.Drop();
             }
         }
-        if(grounded){
+
+        if (grounded)
+        {
             if (lookingRight)
             {
                 GetComponent<SpriteRenderer>().flipX = true;
@@ -61,7 +88,6 @@ public class Waddler : MonoBehaviour
                 rb.linearVelocity = new Vector2(-speed, rb.linearVelocity.y);
             }
         }
-
     }
 
     public void SetSpeed(float newSpeed)
@@ -74,6 +100,7 @@ public class Waddler : MonoBehaviour
         currentKey = key;
     }
 }
+
 
 
 /*

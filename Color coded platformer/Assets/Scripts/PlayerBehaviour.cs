@@ -31,6 +31,7 @@ public class PlayerBehaviour : MonoBehaviour
 
     float waddlerBounceForceButtonHeld = 1.25f;
     float waddlerBounceForceButtonUnheld = 0.8f;
+    [SerializeField] Vector2 respawnPosition;
     private void Awake()
     {
         playerControls = new PlayerInputActions();
@@ -305,5 +306,11 @@ public class PlayerBehaviour : MonoBehaviour
     public void LandedOnWaddler(){
         landedOnWaddler = true;
         jumpTime = 0;
+    }
+    public void RespawnPositionAtPosition(){
+        gameObject.transform.position = respawnPosition;
+    }
+    public void SetRespawnPosition(Vector2 newPosition){
+        respawnPosition = newPosition;
     }
 }

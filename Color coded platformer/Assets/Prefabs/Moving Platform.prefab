@@ -50,7 +50,7 @@ MonoBehaviour:
   movementMode: 1
   speed: 1
   autoHighlightPath: 0
-  direction: {x: 0, y: 0}
+  direction: {x: 1, y: 0}
   backAndForthDistance: 0
   multipleDirections: []
   activated: 0
