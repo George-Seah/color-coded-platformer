@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-
+using UnityEngine.SceneManagement;
 public class PlayerBehaviour : MonoBehaviour
 {
     private Rigidbody2D rb;
@@ -308,9 +308,12 @@ public class PlayerBehaviour : MonoBehaviour
         jumpTime = 0;
     }
     public void RespawnPositionAtPosition(){
+        string currentSceneName = SceneManager.GetActiveScene().name;
+        SceneManager.LoadScene(currentSceneName);
         gameObject.transform.position = respawnPosition;
     }
     public void SetRespawnPosition(Vector2 newPosition){
+        //SceneManager.LoadScene($"{SceneManager.GetActiveScene()}", LoadSceneMode.Single);
         respawnPosition = newPosition;
     }
 }

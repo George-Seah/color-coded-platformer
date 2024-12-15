@@ -9,7 +9,7 @@ public class Waddler : MonoBehaviour
     private Rigidbody2D rb;
     [SerializeField] private Key currentKey;
     //[SerializeField] private Vector2 respawn;
-    bool grounded;
+    [SerializeField] bool grounded;
     private Collider2D waddlerCollider;
 
     void Awake()
@@ -50,12 +50,74 @@ public class Waddler : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
         //if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Cannon")){}
-        grounded = true;
-        if(collision.gameObject.CompareTag("Player")){
+        
+        if(collision.gameObject.CompareTag("Player") && !collision.gameObject.CompareTag("GroundCollisionCheck")){
             collision.gameObject.GetComponent<PlayerBehaviour>().RespawnPositionAtPosition();
         }
-    }
+        /*
+        else if(collision.gameObject.CompareTag("Player") && !collision.gameObject.CompareTag("GroundCollisionCheck")){
 
+        }
+        */
+        else{
+            grounded = true;
+        }
+        if (collision.gameObject.CompareTag("Key"))
+        {
+            Key key = collision.gameObject.GetComponent<Key>();
+            if (key != null && !key.ReadPickedUp())
+            {
+                currentKey = key;
+                currentKey.PickUp(transform);
+                Debug.Log("Key detected by Waddler and picked up.");
+            }
+        }
+
+        if (collision.gameObject.CompareTag("Ladder"))
+        {
+            // Ignore collisions with objects tagged as "Ladder"
+            Collider2D ladderCollider = collision.gameObject.GetComponent<Collider2D>();
+            if (ladderCollider != null)
+            {
+                Physics2D.IgnoreCollision(ladderCollider, GetComponent<Collider2D>());
+                Debug.Log("Ignoring collision with ladder.");
+            }
+            return; // Skip further processing for ladder collisions
+        }
+
+        foreach (ContactPoint2D contact in collision.contacts)
+        {
+            Debug.DrawLine(contact.point, contact.point + contact.normal, Color.red, 2f);
+            Debug.Log($"Normal: {contact.normal}");
+
+            Vector2 collisionNormal = contact.normal;
+            float collisionAngle = Vector2.Angle(Vector2.up, collisionNormal);
+            Vector2 leftCollision = new Vector2(1, 0);
+            Vector2 rightCollision = new Vector2(-1, 0);
+            Debug.Log($"Collision Angle: {collisionAngle}°");
+
+            if (!collision.gameObject.CompareTag("Player") && !collision.gameObject.CompareTag("Key"))
+            {
+                if (lookingRight && collisionNormal == rightCollision)
+                {
+                    lookingRight = false;
+                    Debug.Log($"Waddler faces right as it walks into wall");
+                }
+                else if (!lookingRight && collisionNormal == leftCollision)
+                {
+                    lookingRight = true;
+                    Debug.Log($"Waddler faces left as it walks into wall");
+                }
+            }
+        }
+        
+    }
+    void OnCollisionStay2D(Collision2D collision)
+    {
+        if(!collision.gameObject.CompareTag("Player")){
+            grounded = true;
+        }
+    }
     void OnCollisionExit2D(Collision2D collision)
     {
         grounded = false;
