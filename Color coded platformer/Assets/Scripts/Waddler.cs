@@ -1,4 +1,5 @@
 using UnityEngine;
+
 [RequireComponent(typeof(Rigidbody2D))]
 public class Waddler : MonoBehaviour
 {
@@ -6,129 +7,73 @@ public class Waddler : MonoBehaviour
     [SerializeField] float speed;
     private Rigidbody2D rb;
     [SerializeField] private Key currentKey;
-    
+    bool grounded;
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    public void Launch(Transform cannonTransform, float launchForce, bool facingRight)
     {
-        if (collision.gameObject.CompareTag("Key"))
-        {
-            Key key = collision.gameObject.GetComponent<Key>();
-            if (key != null && !key.ReadPickedUp())
-            {
-                currentKey = key;
-                currentKey.PickUp(transform);
-                Debug.Log("Key detected by Waddler and picked up.");
-            }
-        }
-
-        if (collision.gameObject.CompareTag("Ladder"))
-        {
-            // Ignore collisions with objects tagged as "Ladder"
-            Collider2D ladderCollider = collision.gameObject.GetComponent<Collider2D>();
-            if (ladderCollider != null)
-            {
-                Physics2D.IgnoreCollision(ladderCollider, GetComponent<Collider2D>());
-                Debug.Log("Ignoring collision with ladder.");
-            }
-            return; // Skip further processing for ladder collisions
-        }
-
-        foreach (ContactPoint2D contact in collision.contacts)
-        {
-            Debug.DrawLine(contact.point, contact.point + contact.normal, Color.red, 2f);
-            //Debug.Log($"Normal: {contact.normal}");
-
-            Vector2 collisionNormal = contact.normal;
-            float collisionAngle = Vector2.Angle(Vector2.up, collisionNormal);
-            Vector2 leftCollision = new Vector2(1, 0);
-            Vector2 rightCollision = new Vector2(-1, 0);
-            //Debug.Log($"Collision Angle: {collisionAngle}°");
-
-            if (!collision.gameObject.CompareTag("Player") && !collision.gameObject.CompareTag("Key"))
-            {
-                if (lookingRight && collisionNormal == rightCollision)
-                {
-                    lookingRight = false;
-                    //Debug.Log($"Waddler faces right as it walks into wall");
-                }
-                else if (!lookingRight && collisionNormal == leftCollision)
-                {
-                    lookingRight = true;
-                    //Debug.Log($"Waddler faces left as it walks into wall");
-                }
-            }
-        }
-    }
-
-    public void SetKey(Key key)
-    {
-        currentKey = key;
-    }
-    public void SetSpeed(float newSpeed)
-    {
-        speed = newSpeed;
-    }
-    /*
-    public void Launch(float angleInDegrees, float launchForce)
-    {
-        if (rb == null)
-        {
-            Debug.LogError("Rigidbody2D is not set up properly!");
-            return;
-        }
-
-        // Convert angle to radians and calculate direction
-        float angleInRadians = angleInDegrees * Mathf.Deg2Rad;
-        Vector2 direction = new Vector2(Mathf.Cos(angleInRadians), Mathf.Sin(angleInRadians));
-        Debug.DrawRay(transform.position, direction * 2, Color.yellow, 2f);
-        // Apply force to the Rigidbody2D
-        rb.linearVelocity = Vector2.zero; // Reset velocity before applying force
-        rb.AddForce(direction * launchForce, ForceMode2D.Impulse);
-
-        Debug.Log($"Launching Waddler at {angleInDegrees}° with force {launchForce}");
-    }
-    */
-    public void Launch(float angleInDegrees, float launchForce)
-    {
-        // Convert angle to radians and calculate direction
-        float angleInRadians = angleInDegrees * Mathf.Deg2Rad;
+        lookingRight = facingRight;
+        // Calculate the launch direction based on the cannon's rotation
+        float angleInRadians = (cannonTransform.eulerAngles.z + 90) * Mathf.Deg2Rad;
         Vector2 launchDirection = new Vector2(Mathf.Cos(angleInRadians), Mathf.Sin(angleInRadians));
 
         // Apply the force to the Rigidbody2D
         rb.linearVelocity = launchDirection * launchForce;
 
         // Optional debug information
-        Debug.Log($"Waddler launched at angle: {angleInDegrees} degrees with force: {launchForce}");
+        Debug.Log($"Waddler launched at angle: {cannonTransform.eulerAngles.z} degrees with force: {launchForce}");
+    }
+    void OnCollisionEnter2D(Collision2D collision){
+        if(collision.gameObject.CompareTag("Ground")){
+            grounded = true;
+        }
+    }
+    void OnCollisionExit2D(Collision2D collision){
+        if(collision.gameObject.CompareTag("Ground")){
+            grounded = false;
+        }
     }
     void FixedUpdate()
     {
         if (currentKey != null)
         {
             currentKey.SetDirection(lookingRight);
-            if(currentKey.gameObject.layer != LayerMask.NameToLayer("Default") && 
-            currentKey.gameObject.layer != gameObject.layer &&
-            gameObject.layer != LayerMask.NameToLayer("Default")){
+
+            if (currentKey.gameObject.layer != LayerMask.NameToLayer("Default") &&
+                currentKey.gameObject.layer != gameObject.layer &&
+                gameObject.layer != LayerMask.NameToLayer("Default"))
+            {
                 currentKey.Drop();
             }
         }
+        if(grounded){
+            if (lookingRight)
+            {
+                GetComponent<SpriteRenderer>().flipX = true;
+                rb.linearVelocity = new Vector2(speed, rb.linearVelocity.y);
+            }
+            else
+            {
+                GetComponent<SpriteRenderer>().flipX = false;
+                rb.linearVelocity = new Vector2(-speed, rb.linearVelocity.y);
+            }
+        }
 
-        if (lookingRight)
-        {
-            GetComponent<SpriteRenderer>().flipX = true;
-            rb.linearVelocity = new Vector2(speed, rb.linearVelocity.y);
-        }
-        else
-        {
-            GetComponent<SpriteRenderer>().flipX = false;
-            rb.linearVelocity = new Vector2(-speed, rb.linearVelocity.y);
-        }
+    }
+
+    public void SetSpeed(float newSpeed)
+    {
+        speed = newSpeed;
+    }
+
+    public void SetKey(Key key)
+    {
+        currentKey = key;
     }
 }
-
 
 
 /*

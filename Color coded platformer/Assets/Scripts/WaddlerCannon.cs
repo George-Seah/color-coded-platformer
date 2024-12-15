@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.Events;
 using System.Collections.Generic;
+
 public class WaddlerCannon : MonoBehaviour
 {
     [SerializeField] GameObject waddler;
@@ -12,33 +13,30 @@ public class WaddlerCannon : MonoBehaviour
     [SerializeField] float shootTime;
     [Tooltip("Changes the force at which waddlers come out of cannon")]
     [SerializeField] float blastForce;
-    [Tooltip("Changes the angle at which waddlers come out of cannon")]
-    [SerializeField] float launchAngle = 45f;
+    [Tooltip("Changes the direction waddlers when out of cannon")]
+    [SerializeField] bool waddlerFacesRight;
     // List of colored cannonballs to shoot (set this in the Inspector)
     [Tooltip("List of cannonball colors")]
     public List<string> colorsToShoot = new List<string>();
     [SerializeField] private int colorIndex = 0;
     private Color waddlerColor;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
 
-    // Update is called once per frame
     void FixedUpdate()
     {
         shootTime += Time.deltaTime;
+
         if (shootTime > shootInterval)
         {
             shootTime = 0;
-            GameObject newWaddler = Instantiate(waddler.gameObject, transform.position, Quaternion.identity);
+
+            // Instantiate a new Waddler
+            GameObject newWaddler = Instantiate(waddler, transform.position, Quaternion.identity);
             Waddler waddlerScript = newWaddler.GetComponent<Waddler>();
-            waddlerScript.Launch(launchAngle, blastForce);
 
+            // Launch based on cannon's rotation
+            waddlerScript.Launch(transform, blastForce, waddlerFacesRight);
 
-
-            // Set the Waddler properties
+            // Set the Waddler's speed
             waddlerScript.SetSpeed(waddlerSpeed);
 
             // Determine the color and layer
@@ -65,14 +63,8 @@ public class WaddlerCannon : MonoBehaviour
 
             newWaddler.GetComponent<SpriteRenderer>().color = waddlerColor;
 
-            // Launch the Waddler at a specific angle
-            // Set your desired launch angle here
-
-
             // Cycle through the colors
             colorIndex = (colorIndex + 1) % colorsToShoot.Count;
-
         }
     }
-
 }
