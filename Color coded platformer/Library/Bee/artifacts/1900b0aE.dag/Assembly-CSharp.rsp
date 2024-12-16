@@ -454,6 +454,8 @@
 "Assets/Scripts/ColorPicker.cs"
 "Assets/Scripts/DeathBarrier.cs"
 "Assets/Scripts/DirectionallySolidPlatform.cs"
+"Assets/Scripts/Door.cs"
+"Assets/Scripts/GameManager.cs"
 "Assets/Scripts/Ground.cs"
 "Assets/Scripts/GroundCollisionCheck.cs"
 "Assets/Scripts/Key.cs"

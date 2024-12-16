@@ -50,16 +50,18 @@ public class Waddler : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
         //if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Cannon")){}
-        
+        /*
         if(collision.gameObject.CompareTag("Player") && !collision.gameObject.CompareTag("GroundCollisionCheck")){
             collision.gameObject.GetComponent<PlayerBehaviour>().RespawnPositionAtPosition();
         }
+        */
         /*
         else if(collision.gameObject.CompareTag("Player") && !collision.gameObject.CompareTag("GroundCollisionCheck")){
 
         }
         */
-        else{
+        
+        if(!collision.gameObject.CompareTag("Player")){
             grounded = true;
         }
         if (collision.gameObject.CompareTag("Key"))
@@ -108,6 +110,11 @@ public class Waddler : MonoBehaviour
                     lookingRight = true;
                     Debug.Log($"Waddler faces left as it walks into wall");
                 }
+            }
+            if(collision.gameObject.CompareTag("Player") && collisionAngle != 180){
+                //collision.gameObject.GetComponent<PlayerBehaviour>().RespawnPositionAtPosition();
+                GameObject.Find("Game Manager").GetComponent<GameManager>().ReloadScene();
+                Debug.Log("Waddler triggered scene reload.");
             }
         }
         

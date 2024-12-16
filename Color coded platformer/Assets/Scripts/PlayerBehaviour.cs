@@ -31,7 +31,7 @@ public class PlayerBehaviour : MonoBehaviour
 
     float waddlerBounceForceButtonHeld = 1.25f;
     float waddlerBounceForceButtonUnheld = 0.8f;
-    [SerializeField] Vector2 respawnPosition;
+    //[SerializeField] Vector2 respawnPosition;
     private void Awake()
     {
         playerControls = new PlayerInputActions();
@@ -307,13 +307,8 @@ public class PlayerBehaviour : MonoBehaviour
         landedOnWaddler = true;
         jumpTime = 0;
     }
-    public void RespawnPositionAtPosition(){
-        string currentSceneName = SceneManager.GetActiveScene().name;
-        SceneManager.LoadScene(currentSceneName);
-        gameObject.transform.position = respawnPosition;
+    public void RespawnPositionAtPosition(Vector2 respawnPosition){
+        gameObject.transform.position = GameObject.Find("Game Manager").GetComponent<GameManager>().playerSpawnPoint;
     }
-    public void SetRespawnPosition(Vector2 newPosition){
-        //SceneManager.LoadScene($"{SceneManager.GetActiveScene()}", LoadSceneMode.Single);
-        respawnPosition = newPosition;
-    }
+
 }
