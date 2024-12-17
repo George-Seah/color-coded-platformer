@@ -37,4 +37,24 @@ public class DirectionallySolidPlatform : MonoBehaviour
                 break;
         }
     }
+    void OnCollisionEnter2D(Collision2D collision){
+        if (collision.gameObject.CompareTag("Ladder"))
+        {
+            // Ignore collisions with objects tagged as "Ladder"
+            Collider2D ladderCollider = collision.gameObject.GetComponent<Collider2D>();
+            if (ladderCollider != null)
+            {
+                Physics2D.IgnoreCollision(ladderCollider, GetComponent<Collider2D>());
+                Debug.Log("Ignoring collision with ladder.");
+            }
+            return; // Skip further processing for ladder collisions
+        }
+    }
 }
+/*
+    void OnCollisionEnter2D(Collision2D collision){
+        if(collision.gameObject.CompareTag("Player") && collision.gameObject.GetComponent<PlayerBehaviour>.onLadder){
+
+        }
+    }
+*/

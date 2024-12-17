@@ -32,39 +32,43 @@ public class Ladder : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if(collision.gameObject.CompareTag("Player")
-        && (collision.gameObject.GetComponent<PlayerBehaviour>().color == $"{LayerMask.LayerToName(gameObject.layer)}" || 
-        $"{LayerMask.LayerToName(gameObject.layer)}" == "Default")){
-            // 
-            //Debug.Log("Player entered Ladder Checker.");
-            /*
-            if(moveDirection.y == 0){
-                Debug.Log("Player isn't pressing vertical inputs near ladder.");
-                playerTransform = collision.gameObject.transform;
-            }
-            else if(moveDirection.y > 0){
-                Debug.Log("Player is pressing up vertical inputs near ladder.");
-            }
-            else if(moveDirection.y < 0){
-                Debug.Log("Player is pressing down vertical inputs near ladder.");
-            }
-            */
-            if (moveDirection.y != 0)
+        if (collision.gameObject.CompareTag("Player")
+            && (collision.gameObject.GetComponent<PlayerBehaviour>().color == $"{LayerMask.LayerToName(gameObject.layer)}" ||
+                $"{LayerMask.LayerToName(gameObject.layer)}" == "Default"))
+        {
+            moveDirection = move.ReadValue<Vector2>();
+            playerTransform = collision.gameObject;
+            playerRB = collision.gameObject.GetComponent<Rigidbody2D>();
+
+            if (moveDirection.y < 0) // Player pressing down
             {
-                Debug.Log("Player is pressing vertical inputs near ladder.");
-                //collision.gameObject.GetComponent<PlayerBehaviour>().EnteredGround();
-                playerTransform = collision.gameObject;
-                playerRB = collision.gameObject.GetComponent<Rigidbody2D>();
+                // Temporarily disable collision with platforms
+                Physics2D.IgnoreLayerCollision(
+                    LayerMask.NameToLayer("Player"), 
+                    LayerMask.NameToLayer("OneWayPlatform"), 
+                    true);
                 playerOnLadder = true;
                 playerRB.gravityScale = 0;
-                playerRB.linearVelocity = new Vector2(playerRB.linearVelocity.x, 0f); // Stop vertical movement
-                collision.gameObject.GetComponent<PlayerBehaviour>().onLadder = true;
             }
-            else if(moveDirection.y == 0 && playerOnLadder){
-                playerRB.gravityScale = 0;
+            else if (moveDirection.y > 0 || moveDirection.y == 0) // Not pressing down
+            {
+                // Re-enable collision with platforms
+                Physics2D.IgnoreLayerCollision(
+                    LayerMask.NameToLayer("Player"), 
+                    LayerMask.NameToLayer("OneWayPlatform"), 
+                    false);
+                if (moveDirection.y != 0) // Moving up
+                {
+                    playerOnLadder = true;
+                    playerRB.gravityScale = 0;
+                    playerRB.linearVelocity = new Vector2(playerRB.linearVelocity.x, 0f);
+                }
             }
+
+            collision.gameObject.GetComponent<PlayerBehaviour>().onLadder = true;
         }
     }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         if(collision.gameObject.CompareTag("Player")
