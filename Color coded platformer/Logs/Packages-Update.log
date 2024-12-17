@@ -64,3 +64,11 @@ Update Mode: mergeDefaultDependencies
 The following packages were added:
   com.unity.2d.sprite@1.0.0
   com.unity.ide.vscode@1.2.3
+
+=== Tue Dec 17 15:15:06 2024
+
+Packages were changed.
+Update Mode: mergeDefaultDependencies
+
+The following packages were added:
+  com.unity.nuget.newtonsoft-json@3.2.1

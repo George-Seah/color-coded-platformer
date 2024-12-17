@@ -71,6 +71,14 @@
       "version": "1.0.0",
       "source": "builtin"
     },
+    "com.unity.nuget.newtonsoft-json@3.2.1": {
+      "name": "com.unity.nuget.newtonsoft-json",
+      "resolvedPath": "C:\\Github\\color-coded-platformer\\Color coded platformer\\Library\\PackageCache\\com.unity.nuget.newtonsoft-json",
+      "fingerprint": "74deb55db2a0c29ddfda576608bcb86abbd13ee6",
+      "editorCompatibility": "2018.4.0a1",
+      "version": "3.2.1",
+      "source": "registry"
+    },
     "com.unity.render-pipelines.universal@17.0.3": {
       "name": "com.unity.render-pipelines.universal",
       "resolvedPath": "C:\\Github\\color-coded-platformer\\Color coded platformer\\Library\\PackageCache\\com.unity.render-pipelines.universal",

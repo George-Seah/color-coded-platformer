@@ -369,7 +369,9 @@
 -r:"Library/PackageCache/com.unity.collections/Unity.Collections.LowLevel.ILSupport/Unity.Collections.LowLevel.ILSupport.dll"
 -r:"Library/PackageCache/com.unity.ext.nunit/net40/unity-custom/nunit.framework.dll"
 -r:"Library/PackageCache/com.unity.nuget.mono-cecil/Mono.Cecil.dll"
+-r:"Library/PackageCache/com.unity.nuget.newtonsoft-json/Runtime/Newtonsoft.Json.dll"
 -r:"Library/PackageCache/com.unity.visualscripting/Runtime/VisualScripting.Flow/Dependencies/NCalc/Unity.VisualScripting.Antlr3.Runtime.dll"
+-r:"Library/Bee/artifacts/1900b0aE.dag/ESave.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/PPv2URPConverters.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/PsdPlugin.ref.dll"
 -r:"Library/Bee/artifacts/1900b0aE.dag/Unity.2D.Animation.Editor.ref.dll"
@@ -455,6 +457,7 @@
 "Assets/Scripts/DeathBarrier.cs"
 "Assets/Scripts/DirectionallySolidPlatform.cs"
 "Assets/Scripts/Door.cs"
+"Assets/Scripts/ESave.cs"
 "Assets/Scripts/GameManager.cs"
 "Assets/Scripts/Ground.cs"
 "Assets/Scripts/GroundCollisionCheck.cs"
@@ -466,11 +469,14 @@
 "Assets/Scripts/PlayerBehaviour.cs"
 "Assets/Scripts/PressurePad.cs"
 "Assets/Scripts/RespawnField.cs"
+"Assets/Scripts/Star.cs"
 "Assets/Scripts/StripedGround.cs"
 "Assets/Scripts/VelocityChecker.cs"
 "Assets/Scripts/Waddler.cs"
 "Assets/Scripts/WaddlerCannon.cs"
 "Assets/Simple 2D Platformer BE2/ReadMe/Scripts/ReadmeBE2.cs"
+"Assets/StylishEsper/ESave/Examples/Any RP Examples/Scripts/InfiniteSavesExample.cs"
+"Assets/StylishEsper/ESave/Examples/Any RP Examples/Scripts/SaveLoadExample.cs"
 -langversion:9.0
 /deterministic
 /optimize+

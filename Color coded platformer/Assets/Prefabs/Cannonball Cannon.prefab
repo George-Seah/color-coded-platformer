@@ -52,9 +52,6 @@ MonoBehaviour:
   shootInterval: 1
   shootTime: 0
   colorsToShoot:
-  - Red
-  - Green
-  - Blue
   - White
   colorIndex: 0
 --- !u!114 &5431585781130959002
