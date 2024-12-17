@@ -27,4 +27,12 @@ public class ESave : MonoBehaviour
         }
         return saveFile.GetData<bool>(starIndex);
     }
+    public void ResetStar(string starIndex){
+        if(saveFile == null){
+            saveFile = GetComponent<SaveFileSetup>().GetSaveFile();
+        }
+        saveFile.AddOrUpdateData(starIndex, false);
+        saveFile.Save();
+        Debug.Log($"starIndex: {starIndex}, collected: {saveFile.GetData<bool>(starIndex)}");
+    }
 }

@@ -155,7 +155,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db08cfc0209127e40b8470ec86c15fdb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedDirection: 1
+  selectedDirection: 2
 --- !u!212 &892427768073568870
 SpriteRenderer:
   m_ObjectHideFlags: 0

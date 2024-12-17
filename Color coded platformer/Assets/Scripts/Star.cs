@@ -1,4 +1,5 @@
 using UnityEngine;
+using System;
 
 public class Star : MonoBehaviour
 {
@@ -27,5 +28,10 @@ public class Star : MonoBehaviour
             Debug.Log($"Star {index} is collected.");
             GetComponent<SpriteRenderer>().color = Color.black;
         }
+    }
+    
+    [ContextMenu("Reset Star Data")]
+    void ResetStarData(){
+        eSave.ResetStar(index);
     }
 }

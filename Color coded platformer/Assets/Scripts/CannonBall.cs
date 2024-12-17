@@ -19,6 +19,9 @@ public class CannonBall : MonoBehaviour
     void OnCollisionEnter2D(Collision2D collision)
     {
         Debug.Log($"Cannonball collided with {collision.gameObject.name}");
+        if(collision.gameObject.CompareTag("Player")){
+            GameObject.Find("Game Manager").GetComponent<GameManager>().ReloadScene();
+        }
         if (!collision.gameObject.CompareTag("Cannon"))
         {
             //Debug.Log("Cannonball hit the Ground using OnCollisionEnter2D!");
