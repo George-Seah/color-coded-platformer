@@ -10,11 +10,12 @@ GameObject:
   m_Component:
   - component: {fileID: 3084088302691392630}
   - component: {fileID: 3804019976299052862}
+  - component: {fileID: 518944814481582352}
   - component: {fileID: 4667290924290183196}
   - component: {fileID: 7336955505047677731}
   m_Layer: 0
   m_Name: Star
-  m_TagString: Untagged
+  m_TagString: Star
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -48,6 +49,21 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   eSave: {fileID: 0}
   index: 1
+--- !u!114 &518944814481582352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3576847548703814141}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3df70b878d90d9478d63dae2e208534, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedColor: 3
+  changeColor: 1
+  changeLayerMask: 1
 --- !u!212 &4667290924290183196
 SpriteRenderer:
   m_ObjectHideFlags: 0

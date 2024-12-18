@@ -7,6 +7,7 @@ public class Door : MonoBehaviour
     private InputAction move;
     public string scene;
     public Vector2 newPlayerPosition;
+    private bool playerWithinCollider = false;
     private void Awake()
     {
         playerControls = new PlayerInputActions();
@@ -37,9 +38,8 @@ public class Door : MonoBehaviour
     {
         // Get the vertical axis input (Y direction)
         float verticalInput = move.ReadValue<Vector2>().y;
-
         // Check if the vertical input is positive and no other button press is being held
-        if (verticalInput > 0)
+        if (verticalInput > 0 && playerWithinCollider)
         {
             EnterDoor();
         }
@@ -48,7 +48,7 @@ public class Door : MonoBehaviour
     {
         SceneManager.LoadScene(scene, LoadSceneMode.Single);
         GameObject.Find("Game Manager").GetComponent<GameManager>().playerSpawnPoint = newPlayerPosition;
-        GameObject.Find("Game Manager").GetComponent<GameManager>().justReloaded = true;
+        //GameObject.Find("Game Manager").GetComponent<GameManager>().justReloaded = true;
     }
 
     private void OnTriggerEnter2D(Collider2D collision)
@@ -57,7 +57,10 @@ public class Door : MonoBehaviour
         {
             // Enable move action when the player enters the trigger
             move.Enable();
+            Debug.Log("player entered door.");
+            playerWithinCollider = true;
         }
+
     }
 
     private void OnTriggerExit2D(Collider2D collision)
@@ -66,6 +69,8 @@ public class Door : MonoBehaviour
         {
             // Disable move action when the player exits the trigger
             move.Disable();
+            Debug.Log("player exited door.");
+            playerWithinCollider = false;
         }
     }
 }

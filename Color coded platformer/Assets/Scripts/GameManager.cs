@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
 {
     private static GameObject instance;
     public Vector2 playerSpawnPoint;
-    public bool justReloaded = false;
+    //public bool justReloaded = false;
     void Awake(){
         //currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         //LevelCompleteMenu = Resources.FindObjectsOfTypeAll(LevelCompleteMenu);
@@ -82,6 +82,6 @@ public class GameManager : MonoBehaviour
         string currentSceneName = SceneManager.GetActiveScene().name;
         SceneManager.LoadScene(currentSceneName);
         //justReloaded = true;
-        Debug.Log("justReloaded = true");
+        //Debug.Log("justReloaded = true");
     }
 }

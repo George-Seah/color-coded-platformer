@@ -17,6 +17,7 @@ TagManager:
   - Cannon
   - Waddler
   - GroundCollisionCheck
+  - Star
   layers:
   - Default
   - TransparentFX
