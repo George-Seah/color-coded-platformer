@@ -44,41 +44,46 @@ public class WaddlerCannon : MonoBehaviour
 
             // Set the Waddler's speed
             waddlerScript.SetSpeed(waddlerSpeed);
-            /*
+            
             // Determine the color and layer
-            if (colorsToShoot[colorIndex] == "Red")
+            if (colorsToShoot[colorIndex] == "Red" || colorsToShoot[colorIndex] == "red")
             {
                 //newWaddler.GetComponent<ColorPicker>().selectedColor = ColorOptions.Red;
                 waddlerColor = Color.red;
-                newWaddler.layer = LayerMask.NameToLayer("Red");
+                newWaddler.gameObject.layer = LayerMask.NameToLayer("Red");
+                newWaddler.GetComponent<SpriteRenderer>().color = Color.red;
                 Debug.Log($"Waddler Cannon waddler color should be red");
             }
-            else if (colorsToShoot[colorIndex] == "Green")
+            else if (colorsToShoot[colorIndex] == "Green" || colorsToShoot[colorIndex] == "green")
             {
                 //newWaddler.GetComponent<ColorPicker>().selectedColor = ColorOptions.Green;
                 waddlerColor = Color.green;
-                newWaddler.layer = LayerMask.NameToLayer("Green");
+                newWaddler.gameObject.layer = LayerMask.NameToLayer("Green");
+                newWaddler.GetComponent<SpriteRenderer>().color = Color.green;
                 Debug.Log($"Waddler Cannon waddler color should be green");
             }
-            else if (colorsToShoot[colorIndex] == "Blue")
+            else if (colorsToShoot[colorIndex] == "Blue" || colorsToShoot[colorIndex] == "blue")
             {
                 //newWaddler.GetComponent<ColorPicker>().selectedColor = ColorOptions.Blue;
                 waddlerColor = Color.blue;
-                newWaddler.layer = LayerMask.NameToLayer("Blue");
+                newWaddler.gameObject.layer = LayerMask.NameToLayer("Blue");
+                newWaddler.GetComponent<SpriteRenderer>().color = Color.blue;
                 Debug.Log($"Waddler Cannon waddler color should be blue");
             }
             else
             {
                 //newWaddler.GetComponent<ColorPicker>().selectedColor = ColorOptions.White;
                 waddlerColor = Color.white;
-                newWaddler.layer = LayerMask.NameToLayer("Default");
+                newWaddler.GetComponent<SpriteRenderer>().color = Color.white;
+                newWaddler.gameObject.layer = LayerMask.NameToLayer("Default");
                 Debug.Log($"Waddler Cannon waddler color should be white");
             }
 
-            newWaddler.GetComponent<SpriteRenderer>().color = waddlerColor;
-            */
-            newWaddler.GetComponent<ColorPicker>().ChangeObjectColor($"{colorsToShoot[colorIndex]}");
+            //newWaddler.GetComponent<SpriteRenderer>().color = waddlerColor;
+            
+            //newWaddler.GetComponent<ColorPicker>().ChangeObjectColor(colorsToShoot[colorIndex]);
             Debug.Log($"Waddler Cannon waddler color should be {waddlerColor}");
+            //newWaddler.GetComponent<ColorPicker>().ChangeObjectColorToRed();
             // Cycle through the colors
             if(colorIndex < colorsToShoot.Count - 1){
                 colorIndex ++;
