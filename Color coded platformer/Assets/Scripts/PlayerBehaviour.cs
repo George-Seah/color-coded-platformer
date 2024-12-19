@@ -24,6 +24,7 @@ public class PlayerBehaviour : MonoBehaviour
     [SerializeField] private float moveDirectionX;
     [SerializeField] private float moveDirectionY;
     [SerializeField] private Key currentKey;
+    [SerializeField] private bool holdingKey;
     public string color;
     public bool onLadder;
     bool lookingRight;
@@ -76,10 +77,13 @@ public class PlayerBehaviour : MonoBehaviour
 
     private void OnJump(InputAction.CallbackContext context)
     {
-        if (currentKey != null && !currentKey.ReadPickedUp())
+        if (currentKey != null && !currentKey.ReadPickedUp() && !holdingKey)
         {
             // Attempt to pick up the key
             currentKey.PickUp(transform);
+            if(currentKey != null && currentKey.ReadPickedUp()){
+                holdingKey = true;
+            }
         }
         /*
         else if(currentKey != null && !currentKey.ReadPickedUp()){
@@ -114,6 +118,7 @@ public class PlayerBehaviour : MonoBehaviour
         {
             currentKey.Drop();
             currentKey = null;
+            holdingKey = false;
             Debug.Log("Key dropped");
         }
     }
@@ -148,7 +153,7 @@ public class PlayerBehaviour : MonoBehaviour
             Debug.Log($"Collision Angle: {collisionAngle}°");
         }
 
-        if (collision.gameObject.CompareTag("Key"))
+        if (collision.gameObject.CompareTag("Key") && !holdingKey)
         {
             Key key = collision.gameObject.GetComponent<Key>();
             Debug.Log("Key detected.");
@@ -168,7 +173,7 @@ public class PlayerBehaviour : MonoBehaviour
     }
     private void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Key"))
+        if (collision.gameObject.CompareTag("Key") && !holdingKey)
         {
             Key key = collision.gameObject.GetComponent<Key>();
             if(currentKey != null && !key.ReadPickedUp()){
@@ -254,6 +259,9 @@ public class PlayerBehaviour : MonoBehaviour
         */
         if(currentKey != null && currentKey.ReadPickedUp() && currentKey.transform.parent.gameObject.CompareTag("Player")){
             currentKey.SetDirection(lookingRight);///Check this if direction isn;t right or key somehow teleports
+        }
+        if(currentKey == null){
+            holdingKey = false;
         }
         if (isGrounded)
         {

@@ -18,6 +18,7 @@ TagManager:
   - Waddler
   - GroundCollisionCheck
   - Star
+  - OneWayPlatform
   layers:
   - Default
   - TransparentFX

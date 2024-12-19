@@ -11,7 +11,7 @@ public class GroundCollisionCheck : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Push Block"))
+        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Push Block") || collision.gameObject.CompareTag("OneWayPlatform"))
         {
             playerBehaviour.EnteredGround();
             //Debug.Log("Player entered ground");
@@ -27,7 +27,7 @@ public class GroundCollisionCheck : MonoBehaviour
     }
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Push Block"))
+        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Push Block") || collision.gameObject.CompareTag("OneWayPlatform"))
         {
             playerBehaviour.EnteredGround();
             //Debug.Log("Player staying on ground");
@@ -35,7 +35,7 @@ public class GroundCollisionCheck : MonoBehaviour
     }
     private void OnTriggerExit2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Push Block"))
+        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Push Block") || collision.gameObject.CompareTag("OneWayPlatform"))
         {
             playerBehaviour.ExitedGround();
             //Debug.Log("Player exited ground");

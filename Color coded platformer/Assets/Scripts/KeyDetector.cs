@@ -18,6 +18,7 @@ public class KeyDetector : MonoBehaviour
         if (collision.gameObject.CompareTag("Key") && (collision.gameObject.layer == gameObject.layer || collision.gameObject.layer == LayerMask.NameToLayer("Default")))
         {
             Debug.Log("Key entered Door Checker");
+            //collision.gameObject.GetComponent<Key>().Drop();
             Destroy(transform.parent.gameObject);
             Destroy(collision.gameObject);
         }
