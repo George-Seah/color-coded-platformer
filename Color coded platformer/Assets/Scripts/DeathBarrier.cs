@@ -20,5 +20,8 @@ public class DeathBarrier : MonoBehaviour
         {
             collision.gameObject.transform.position = respawnPosition;
         }
+        if(collision.gameObject.CompareTag("Waddler")){
+            Destroy(collision.gameObject);
+        }
     }
 }

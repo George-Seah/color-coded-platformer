@@ -14,29 +14,16 @@ public class MovingPlatform : MonoBehaviour
     [Tooltip("Auto highlight path in Scene View.")]
     public bool autoHighlightPath = false;
 
-    // For OneDirection and BackAndForth
-    [Tooltip("Direction for OneDirection or BackAndForth.")]
-    [SerializeField] private Vector2 direction = Vector2.right;
-
-    [Tooltip("Distance for BackAndForth mode.")]
-    [SerializeField] private float backAndForthDistance = 5f;
-
-    // For MultipleDirections
-    [Tooltip("Directions and distances for the MultipleDirections mode.")]
-    [SerializeField] private List<DirectionData> multipleDirections = new List<DirectionData>();
+    [Tooltip("Target positions for MultipleDirections mode.")]
+    [SerializeField] private List<Vector3> multipleDirections = new List<Vector3>();
 
     [Tooltip("Whether the platform is active or not.")]
     public bool activated = false;
 
-    private Vector3 startPosition;
-    private Vector3 currentTarget;
-    private int currentDirectionIndex = 0;
-    private bool movingForward = true;
+    [SerializeField] private int currentDirectionIndex = 0;
 
     private void Start()
     {
-        startPosition = transform.position;
-
         if (movementMode == MovementMode.MultipleDirections && multipleDirections.Count > 0)
         {
             SetNextTarget();
@@ -49,130 +36,76 @@ public class MovingPlatform : MonoBehaviour
 
         switch (movementMode)
         {
-            case MovementMode.BackAndForth:
-                HandleBackAndForth();
-                break;
-            case MovementMode.OneDirection:
-                HandleOneDirection();
-                break;
             case MovementMode.MultipleDirections:
                 HandleMultipleDirections();
                 break;
+            // Handle other cases (BackAndForth, OneDirection) if necessary
         }
-    }
-
-    private void HandleBackAndForth()
-    {
-        float distanceFromStart = Vector3.Distance(transform.position, startPosition);
-        if (distanceFromStart >= backAndForthDistance)
-            direction = -direction; // Reverse direction
-
-        transform.position += (Vector3)(direction.normalized * speed * Time.deltaTime);
-    }
-
-    private void HandleOneDirection()
-    {
-        transform.position += (Vector3)(direction.normalized * speed * Time.deltaTime);
     }
 
     private void HandleMultipleDirections()
     {
         if (multipleDirections.Count == 0) return;
 
-        Vector3 movement = (currentTarget - transform.position).normalized * speed * Time.deltaTime;
+        Vector3 movement = (multipleDirections[currentDirectionIndex] - transform.position).normalized * speed * Time.deltaTime;
         transform.position += movement;
 
-        if (Vector3.Distance(transform.position, currentTarget) < 0.1f)
+        if (Vector3.Distance(transform.position, multipleDirections[currentDirectionIndex]) < 0.1f)
         {
-            if (movingForward)
+            // Advance or reverse the direction index based on speed's sign
+            if (speed > 0)
             {
-                if (currentDirectionIndex < multipleDirections.Count - 1)
-                    currentDirectionIndex++;
-                else
-                {
-                    movingForward = false;
-                    currentDirectionIndex--;
-                }
+                currentDirectionIndex++;
+                if (currentDirectionIndex >= multipleDirections.Count) currentDirectionIndex = 0; // Loop forward
             }
             else
             {
-                if (currentDirectionIndex > 0)
-                    currentDirectionIndex--;
-                else
-                {
-                    movingForward = true;
-                    currentDirectionIndex++;
-                }
+                currentDirectionIndex--;
+                if (currentDirectionIndex < 0) currentDirectionIndex = multipleDirections.Count - 1; // Loop backward
             }
-
-            SetNextTarget();
         }
     }
 
     private void SetNextTarget()
     {
-        Vector2 nextDirection = multipleDirections[currentDirectionIndex].direction.normalized;
-        float distance = multipleDirections[currentDirectionIndex].distance;
-        currentTarget = transform.position + (Vector3)(nextDirection * distance);
+        // Already handled dynamically in FixedUpdate
     }
 
-    public void Activate()
+    public void Activate(bool activate)
     {
-        activated = !activated;
+        activated = activate;
     }
 
-    private void OnValidate()
+    public void ChangeSpeed(float newSpeed)
     {
-        // Automatically hide irrelevant fields based on movement mode
-        switch (movementMode)
-        {
-            case MovementMode.OneDirection:
-                direction = direction; // Keep direction visible
-                backAndForthDistance = 0f; // Hide BackAndForth settings
-                multipleDirections.Clear(); // Hide MultipleDirections settings
-                break;
+        speed = newSpeed;
+    }
 
-            case MovementMode.BackAndForth:
-                direction = direction; // Keep direction visible
-                backAndForthDistance = Mathf.Max(backAndForthDistance, 1f); // Ensure distance > 0
-                multipleDirections.Clear(); // Hide MultipleDirections settings
-                break;
+    public void NegativeSpeed()
+    {
+        speed = -speed;
+    }
 
-            case MovementMode.MultipleDirections:
-                direction = Vector2.zero; // Hide direction
-                backAndForthDistance = 0f; // Hide BackAndForth settings
-                break;
-        }
+    public void ReverseDirections()
+    {
+        multipleDirections.Reverse();
+        // Adjust the current index to maintain the same target behavior after reversal
+        currentDirectionIndex = multipleDirections.Count - 1 - currentDirectionIndex;
     }
 
     private void OnDrawGizmos()
     {
-        if (!autoHighlightPath) return;
+        if (!autoHighlightPath || multipleDirections == null) return;
 
-        if (movementMode == MovementMode.BackAndForth)
+        Gizmos.color = Color.green;
+        for (int i = 0; i < multipleDirections.Count; i++)
         {
-            Gizmos.color = Color.blue;
-            Gizmos.DrawLine(startPosition, startPosition + (Vector3)(direction.normalized * backAndForthDistance));
-            Gizmos.DrawLine(startPosition, startPosition - (Vector3)(direction.normalized * backAndForthDistance));
-        }
-        else if (movementMode == MovementMode.MultipleDirections && multipleDirections != null)
-        {
-            Gizmos.color = Color.green;
-            Vector3 position = startPosition;
+            Gizmos.DrawSphere(multipleDirections[i], 0.2f);
 
-            foreach (var dirData in multipleDirections)
+            if (i < multipleDirections.Count - 1)
             {
-                Vector3 nextPosition = position + (Vector3)(dirData.direction.normalized * dirData.distance);
-                Gizmos.DrawLine(position, nextPosition);
-                position = nextPosition;
+                Gizmos.DrawLine(multipleDirections[i], multipleDirections[i + 1]);
             }
         }
-    }
-
-    [System.Serializable]
-    public class DirectionData
-    {
-        public Vector2 direction;
-        public float distance = 1f;
     }
 }

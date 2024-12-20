@@ -62,7 +62,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 34052594206052f4886def8d87fd93d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  waddler: {fileID: 1087774184992840758, guid: 127e30850769a5c4cadd72010f82ea85, type: 3}
+  waddler: {fileID: 1087774184992840758, guid: 2cf59196790655541a6c71baac4c0d30, type: 3}
   waddlerSpeed: 2
   shootInterval: 2
   shootTime: 0
@@ -73,6 +73,7 @@ MonoBehaviour:
   - 
   - 
   colorIndex: 0
+  waddlerColor: {r: 0, g: 0, b: 0, a: 0}
 --- !u!212 &4403721915320483024
 SpriteRenderer:
   m_ObjectHideFlags: 0
