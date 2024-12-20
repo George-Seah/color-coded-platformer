@@ -22,6 +22,12 @@ public class CannonBall : MonoBehaviour
         if(collision.gameObject.CompareTag("Player")){
             GameObject.Find("Game Manager").GetComponent<GameManager>().ReloadScene();
         }
+        else if(collision.gameObject.CompareTag("Waddler")){
+            if(collision.gameObject.GetComponentInChildren<Key>() != null){
+                collision.gameObject.GetComponentInChildren<Key>().Drop();
+            }
+            Destroy(collision.gameObject);
+        }
         if (!collision.gameObject.CompareTag("Cannon"))
         {
             //Debug.Log("Cannonball hit the Ground using OnCollisionEnter2D!");

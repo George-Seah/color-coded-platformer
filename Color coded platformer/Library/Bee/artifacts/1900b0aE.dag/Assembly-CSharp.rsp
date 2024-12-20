@@ -466,6 +466,7 @@
 "Assets/Scripts/Ladder.cs"
 "Assets/Scripts/Lever.cs"
 "Assets/Scripts/MovingPlatform.cs"
+"Assets/Scripts/ObjectSpawner.cs"
 "Assets/Scripts/PlayerBehaviour.cs"
 "Assets/Scripts/PressurePad.cs"
 "Assets/Scripts/RespawnField.cs"

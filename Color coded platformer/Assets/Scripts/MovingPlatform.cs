@@ -26,7 +26,7 @@ public class MovingPlatform : MonoBehaviour
     {
         if (movementMode == MovementMode.MultipleDirections && multipleDirections.Count > 0)
         {
-            SetNextTarget();
+            currentDirectionIndex = 0; // Start from the first position
         }
     }
 
@@ -47,28 +47,32 @@ public class MovingPlatform : MonoBehaviour
     {
         if (multipleDirections.Count == 0) return;
 
-        Vector3 movement = (multipleDirections[currentDirectionIndex] - transform.position).normalized * speed * Time.deltaTime;
+        // Move towards the current target
+        Vector3 movement = (multipleDirections[currentDirectionIndex] - transform.position).normalized * Mathf.Abs(speed) * Time.deltaTime;
         transform.position += movement;
 
+        // Check if the platform has reached the current target
         if (Vector3.Distance(transform.position, multipleDirections[currentDirectionIndex]) < 0.1f)
         {
-            // Advance or reverse the direction index based on speed's sign
             if (speed > 0)
             {
+                // Move forward in the list
                 currentDirectionIndex++;
-                if (currentDirectionIndex >= multipleDirections.Count) currentDirectionIndex = 0; // Loop forward
+                if (currentDirectionIndex >= multipleDirections.Count)
+                {
+                    currentDirectionIndex = 0; // Loop forward
+                }
             }
             else
             {
+                // Move backward in the list
                 currentDirectionIndex--;
-                if (currentDirectionIndex < 0) currentDirectionIndex = multipleDirections.Count - 1; // Loop backward
+                if (currentDirectionIndex < 0)
+                {
+                    currentDirectionIndex = multipleDirections.Count - 1; // Loop backward
+                }
             }
         }
-    }
-
-    private void SetNextTarget()
-    {
-        // Already handled dynamically in FixedUpdate
     }
 
     public void Activate(bool activate)
@@ -83,14 +87,14 @@ public class MovingPlatform : MonoBehaviour
 
     public void NegativeSpeed()
     {
-        speed = -speed;
+        speed = -Mathf.Abs(speed); // Ensure speed is negative
     }
 
     public void ReverseDirections()
     {
         multipleDirections.Reverse();
-        // Adjust the current index to maintain the same target behavior after reversal
-        currentDirectionIndex = multipleDirections.Count - 1 - currentDirectionIndex;
+        // Adjust the current index to maintain consistent behavior
+        //currentDirectionIndex = multipleDirections.Count - 1 - currentDirectionIndex;
     }
 
     private void OnDrawGizmos()

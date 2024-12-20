@@ -28,9 +28,6 @@ public class VelocityChecker : MonoBehaviour
         if (colorPicker != null)
         {
             gameObject.layer = LayerMask.NameToLayer($"{colorPicker.selectedColor}");
-            if (gameObject.layer == LayerMask.NameToLayer("White")){
-                gameObject.layer = LayerMask.NameToLayer("Default");
-            }
         }
     }
 

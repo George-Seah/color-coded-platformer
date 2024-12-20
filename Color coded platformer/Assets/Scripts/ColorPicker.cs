@@ -8,7 +8,7 @@ public class ColorPicker : MonoBehaviour
         Red,
         Green,
         Blue,
-        White
+        Default
     }
     public ColorOptions selectedColor;
     [SerializeField] bool changeColor;
@@ -79,7 +79,7 @@ public class ColorPicker : MonoBehaviour
                 if(changeLayerMask)
                     gameObject.layer = LayerMask.NameToLayer("Green");
                 break;
-            case ColorOptions.White:
+            case ColorOptions.Default:
                 Debug.Log("White selected");
                 if(changeColor)
                     sr.color = Color.white;
