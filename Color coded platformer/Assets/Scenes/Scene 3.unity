@@ -339,11 +339,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 563732484823538524, guid: df5f8290f396a4245b77a04749627a88, type: 3}
       propertyPath: scene
-      value: Scene 1
+      value: Scene 2
       objectReference: {fileID: 0}
     - target: {fileID: 563732484823538524, guid: df5f8290f396a4245b77a04749627a88, type: 3}
       propertyPath: newPlayerPosition.x
-      value: 49.61
+      value: 32.35
       objectReference: {fileID: 0}
     - target: {fileID: 563732484823538524, guid: df5f8290f396a4245b77a04749627a88, type: 3}
       propertyPath: newPlayerPosition.y

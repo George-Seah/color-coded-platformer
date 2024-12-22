@@ -19,6 +19,7 @@ TagManager:
   - GroundCollisionCheck
   - Star
   - OneWayPlatform
+  - Cloud
   layers:
   - Default
   - TransparentFX
