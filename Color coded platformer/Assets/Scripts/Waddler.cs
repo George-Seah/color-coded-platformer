@@ -64,7 +64,7 @@ public class Waddler : MonoBehaviour
         if(!collision.gameObject.CompareTag("Player")){
             grounded = true;
         }
-        if (collision.gameObject.CompareTag("Key"))
+        if (collision.gameObject.CompareTag("Key") && currentKey == null)
         {
             Key key = collision.gameObject.GetComponent<Key>();
             if (key != null && !key.ReadPickedUp())
@@ -113,8 +113,8 @@ public class Waddler : MonoBehaviour
             }
             if(collision.gameObject.CompareTag("Player") && collisionAngle != 180){
                 //collision.gameObject.GetComponent<PlayerBehaviour>().RespawnPositionAtPosition();
-                GameObject.Find("Game Manager").GetComponent<GameManager>().ReloadScene();
                 Debug.Log("Waddler triggered scene reload.");
+                GameObject.Find("Game Manager").GetComponent<GameManager>().ReloadScene();
             }
         }
         

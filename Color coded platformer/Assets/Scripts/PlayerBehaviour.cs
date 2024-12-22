@@ -10,7 +10,7 @@ public class PlayerBehaviour : MonoBehaviour
     private InputAction move;
     private InputAction jump;
     private InputAction drop;
-
+    private InputAction interact;
     public float gravityScale = 10f;
     public float fallingGravityScale = 40f;
     public float buttonTime = 0.3f;
@@ -54,14 +54,17 @@ public class PlayerBehaviour : MonoBehaviour
         move = playerControls.Player.Move;
         jump = playerControls.Player.Jump;
         drop = playerControls.Player.Drop;
+        interact = playerControls.Player.Interact;
 
         move.Enable();
         jump.Enable();
         drop.Enable();
+        interact.Enable();
 
         jump.performed += ctx => OnJump(ctx);
-        jump.canceled += ctx => OnJumpCanceled(ctx);
+        //jump.canceled += ctx => OnJumpCanceled(ctx);
         drop.performed += ctx => OnDrop(ctx);
+        interact.performed += ctx => OnInteract(ctx);
     }
 
     private void OnDisable()
@@ -69,13 +72,27 @@ public class PlayerBehaviour : MonoBehaviour
         move.Disable();
         jump.Disable();
         drop.Disable();
+        interact.Disable();
 
         jump.performed -= OnJump;
         jump.canceled -= OnJumpCanceled;
         drop.performed -= OnDrop;
+        interact.canceled -= OnInteract;
     }
 
     private void OnJump(InputAction.CallbackContext context)
+    {
+        if (isGrounded && !jumping)
+        {
+            // Normal jump behavior
+            jumping = true;
+            jumpTime = 0f;
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+            rb.gravityScale = gravityScale;
+            Debug.Log("OnJump function activating gravity.");
+        }
+    }
+    private void OnInteract(InputAction.CallbackContext context)
     {
         if (currentKey != null && !currentKey.ReadPickedUp() && !holdingKey)
         {
@@ -90,17 +107,7 @@ public class PlayerBehaviour : MonoBehaviour
             currentKey.PickUp(transform);
         }
         */
-        else if (isGrounded && !jumping)
-        {
-            // Normal jump behavior
-            jumping = true;
-            jumpTime = 0f;
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
-            rb.gravityScale = gravityScale;
-            Debug.Log("OnJump function activating gravity.");
-        }
     }
-
     private void OnJumpCanceled(InputAction.CallbackContext context)
     {
         if (!isGrounded && rb.linearVelocity.y > 0)

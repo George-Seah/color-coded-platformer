@@ -19,6 +19,7 @@ public class Lever : MonoBehaviour
     public PlayerInputActions playerControls;
     private InputAction move;
     private bool canToggle = true; // Ensures toggling happens only once per press
+    private bool playerWithinLever;
 
     private void Awake()
     {
@@ -46,16 +47,17 @@ public class Lever : MonoBehaviour
     {
         // Get the vertical axis input (Y direction)
         float verticalInput = move.ReadValue<Vector2>().y;
-
-        // Check if the vertical input is positive and no other button press is being held
-        if (verticalInput > 0 && canToggle)
-        {
-            ToggleLever();
-            canToggle = false; // Prevent further toggles until input is released
-        }
-        else if (verticalInput <= 0)
-        {
-            canToggle = true; // Reset toggle when input is released
+        if(move.enabled && playerWithinLever){
+            // Check if the vertical input is positive and no other button press is being held
+            if (verticalInput > 0 && canToggle)
+            {
+                ToggleLever();
+                canToggle = false; // Prevent further toggles until input is released
+            }
+            else if (verticalInput <= 0)
+            {
+                canToggle = true; // Reset toggle when input is released
+            }
         }
     }
 
@@ -83,6 +85,7 @@ public class Lever : MonoBehaviour
         {
             // Enable move action when the player enters the trigger
             move.Enable();
+            playerWithinLever = true;
         }
     }
 
@@ -92,6 +95,7 @@ public class Lever : MonoBehaviour
         {
             // Disable move action when the player exits the trigger
             move.Disable();
+            playerWithinLever = false;
         }
     }
 }
