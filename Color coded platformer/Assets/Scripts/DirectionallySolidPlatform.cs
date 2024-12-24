@@ -94,7 +94,8 @@ public class DirectionallySolidPlatform : MonoBehaviour
             if((selectedDirection == DirectionOptions.Left && objectRB.linearVelocity.x < 0) || 
             (selectedDirection == DirectionOptions.Right && objectRB.linearVelocity.x > 0) || 
             (selectedDirection == DirectionOptions.Up && objectRB.linearVelocity.y > 0) || 
-            (selectedDirection == DirectionOptions.Down && objectRB.linearVelocity.y <= 0)
+            (selectedDirection == DirectionOptions.Down && objectRB.linearVelocity.y < 0) ||
+            (selectedDirection == DirectionOptions.Down && objectRB.linearVelocity.y == 0)
             ){
                 Physics2D.IgnoreCollision(collisionObject, collisionCollider, true);
                 Debug.Log($"OnTriggerEnter2D is Ignoring collision with {collision.gameObject}.");
@@ -127,7 +128,8 @@ public class DirectionallySolidPlatform : MonoBehaviour
             if((selectedDirection == DirectionOptions.Left && objectRB.linearVelocity.x < 0) || 
             (selectedDirection == DirectionOptions.Right && objectRB.linearVelocity.x > 0) || 
             (selectedDirection == DirectionOptions.Up && objectRB.linearVelocity.y > 0) || 
-            (selectedDirection == DirectionOptions.Down && objectRB.linearVelocity.y <= 0)
+            (selectedDirection == DirectionOptions.Down && objectRB.linearVelocity.y < 0) ||
+            (selectedDirection == DirectionOptions.Down && objectRB.linearVelocity.y == 0)
             ){
                 Physics2D.IgnoreCollision(collisionObject, collisionCollider, true);
                 Debug.Log($"OnTriggerEnter2D is Ignoring collision with {collision.gameObject}.");
@@ -150,15 +152,15 @@ public class DirectionallySolidPlatform : MonoBehaviour
             Collider2D ladderCollider = collision.gameObject.GetComponent<Collider2D>();
             if (ladderCollider != null)
             {
-                Physics2D.IgnoreCollision(ladderCollider, GetComponent<Collider2D>());
-                Debug.Log("Ignoring collision with ladder.");
+                //Physics2D.IgnoreCollision(ladderCollider, GetComponent<Collider2D>());
+                //Debug.Log("Ignoring collision with ladder.");
             }
             return; // Skip further processing for ladder collisions
         }
         Collider2D collisionObject = collision.gameObject.GetComponent<Collider2D>();
         Rigidbody2D objectRB = collision.gameObject.GetComponent<Rigidbody2D>();
         if(collision.gameObject.CompareTag("Player") && collision.gameObject.GetComponent<PlayerBehaviour>().onLadder){
-            Physics2D.IgnoreCollision(collisionObject, collisionCollider, true);
+            //Physics2D.IgnoreCollision(collisionObject, collisionCollider, true);
         }
         else if(collision.gameObject.CompareTag("Player") && !collision.gameObject.GetComponent<PlayerBehaviour>().onLadder){
             Physics2D.IgnoreCollision(collisionObject, collisionCollider, false);
@@ -179,10 +181,12 @@ public class DirectionallySolidPlatform : MonoBehaviour
         }
         Collider2D collisionObject = collision.gameObject.GetComponent<Collider2D>();
         Rigidbody2D objectRB = collision.gameObject.GetComponent<Rigidbody2D>();
+        /*
         if(collision.gameObject.CompareTag("Player") && collision.gameObject.GetComponent<PlayerBehaviour>().onLadder){
             Physics2D.IgnoreCollision(collisionObject, collisionCollider, true);
         }
-        else if(collision.gameObject.CompareTag("Player") && !collision.gameObject.GetComponent<PlayerBehaviour>().onLadder){
+        */
+        if(collision.gameObject.CompareTag("Player") && !collision.gameObject.GetComponent<PlayerBehaviour>().onLadder){
             Physics2D.IgnoreCollision(collisionObject, collisionCollider, false);
             Debug.Log("OnCollisionStay dictates player should be touching block.");
         }
