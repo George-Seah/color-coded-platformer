@@ -3,13 +3,15 @@ using UnityEngine.InputSystem;
 
 public class Ladder : MonoBehaviour
 {
-    [SerializeField] private float climbSpeed = 5f;
+    [SerializeField] private float climbSpeed = 0.25f;
     public PlayerInputActions playerControls;
     [SerializeField] private Vector2 moveDirection = Vector2.zero;
     private InputAction move;
     [SerializeField] bool playerOnLadder;
     [SerializeField] private GameObject playerTransform;
     [SerializeField] private Rigidbody2D playerRB;
+    private bool playerIsNear = false;
+    private PlayerBehaviour player;
     private void Awake()
     {
         playerControls = new PlayerInputActions();
@@ -40,15 +42,19 @@ public class Ladder : MonoBehaviour
             playerTransform = collision.gameObject;
             playerRB = collision.gameObject.GetComponent<Rigidbody2D>();
 
-            if (moveDirection.y < 0) // Player pressing down
+            if (moveDirection.y != 0) // Player pressing down
             {
                 // Temporarily disable collision with platforms
+                /*
                 Physics2D.IgnoreLayerCollision(
                     LayerMask.NameToLayer("Player"), 
                     LayerMask.NameToLayer("OneWayPlatform"), 
                     true);
+                */
                 playerOnLadder = true;
+                collision.gameObject.GetComponent<PlayerBehaviour>().onLadder = true;
                 playerRB.gravityScale = 0;
+                
             }
             else if (moveDirection.y > 0 || moveDirection.y == 0) // Not pressing down
             {
@@ -60,12 +66,13 @@ public class Ladder : MonoBehaviour
                 if (moveDirection.y != 0) // Moving up
                 {
                     playerOnLadder = true;
+                    collision.gameObject.GetComponent<PlayerBehaviour>().onLadder = true;
                     playerRB.gravityScale = 0;
                     playerRB.linearVelocity = new Vector2(playerRB.linearVelocity.x, 0f);
                 }
             }
 
-            collision.gameObject.GetComponent<PlayerBehaviour>().onLadder = true;
+            
         }
     }
 
@@ -97,7 +104,7 @@ public class Ladder : MonoBehaviour
         {
             playerRB.gravityScale = 0;
             playerRB.linearVelocity = new Vector2(playerRB.linearVelocity.x, 0f); // Ensure no gravity effect
-
+            
             playerTransform.transform.position = new Vector2(
                 transform.position.x, 
                 playerTransform.transform.position.y + (moveDirection.y * climbSpeed)
@@ -105,14 +112,25 @@ public class Ladder : MonoBehaviour
 
             if (moveDirection.x != 0 || playerTransform.gameObject.GetComponent<PlayerBehaviour>().readJumping())
             {
+                playerRB.gameObject.GetComponent<PlayerBehaviour>().onLadder = false;
                 playerRB.gravityScale = 10;
                 playerOnLadder = false;
+                //This code should be last
                 playerTransform = null;
             }
+            //playerTransform.gameObject.GetComponent<PlayerBehaviour>().onLadder = true;
         }
-
+        /*
+        if(playerTransform.gameObject.GetComponent<PlayerBehaviour>() != null && playerOnLadder){
+            playerTransform.gameObject.GetComponent<PlayerBehaviour>().onLadder = true;
+        }
+        else if(playerTransform.gameObject.GetComponent<PlayerBehaviour>() != null && !playerOnLadder){
+            playerTransform.gameObject.GetComponent<PlayerBehaviour>().onLadder = false;
+        }
+        */
+        
         if(playerRB != null && playerRB.gravityScale > 0){
-            Debug.Log("Player is affected by gravity.");
+            //Debug.Log("Player is affected by gravity.");
         }
 
 

@@ -15,7 +15,8 @@ public class DirectionallySolidPlatform : MonoBehaviour
     [SerializeField] private DirectionOptions selectedDirection; // Expose this as a property
 
     public DirectionOptions SelectedDirection => selectedDirection; // Public getter for VelocityChecker
-
+    [SerializeField] bool ignoreLadder;
+    //[SerializeField] GameObject player;
     private void Start()
     {
         if (collisionCollider != null && !collisionCollider.isTrigger)
@@ -141,9 +142,9 @@ public class DirectionallySolidPlatform : MonoBehaviour
         Physics2D.IgnoreCollision(collisionObject, collisionCollider, false);
         Debug.Log($"{collision.gameObject.name} exited platform. Collision re-enabled.");
     }
-    /*
+    
     void OnCollisionEnter2D(Collision2D collision){
-        if (collision.gameObject.CompareTag("Ladder"))
+        if (collision.gameObject.CompareTag("Ladder") && ignoreLadder)
         {
             // Ignore collisions with objects tagged as "Ladder"
             Collider2D ladderCollider = collision.gameObject.GetComponent<Collider2D>();
@@ -154,14 +155,50 @@ public class DirectionallySolidPlatform : MonoBehaviour
             }
             return; // Skip further processing for ladder collisions
         }
-    }
-    */
-
-}
-/*
-    void OnCollisionEnter2D(Collision2D collision){
-        if(collision.gameObject.CompareTag("Player") && collision.gameObject.GetComponent<PlayerBehaviour>.onLadder){
-
+        Collider2D collisionObject = collision.gameObject.GetComponent<Collider2D>();
+        Rigidbody2D objectRB = collision.gameObject.GetComponent<Rigidbody2D>();
+        if(collision.gameObject.CompareTag("Player") && collision.gameObject.GetComponent<PlayerBehaviour>().onLadder){
+            Physics2D.IgnoreCollision(collisionObject, collisionCollider, true);
+        }
+        else if(collision.gameObject.CompareTag("Player") && !collision.gameObject.GetComponent<PlayerBehaviour>().onLadder){
+            Physics2D.IgnoreCollision(collisionObject, collisionCollider, false);
+            Debug.Log("OnCollisionEnter dictates player should be touching block.");
         }
     }
+    void OnCollisionStay2D(Collision2D collision){
+        if (collision.gameObject.CompareTag("Ladder") && ignoreLadder)
+        {
+            // Ignore collisions with objects tagged as "Ladder"
+            Collider2D ladderCollider = collision.gameObject.GetComponent<Collider2D>();
+            if (ladderCollider != null)
+            {
+                Physics2D.IgnoreCollision(ladderCollider, GetComponent<Collider2D>());
+                Debug.Log("Ignoring collision with ladder.");
+            }
+            return; // Skip further processing for ladder collisions
+        }
+        Collider2D collisionObject = collision.gameObject.GetComponent<Collider2D>();
+        Rigidbody2D objectRB = collision.gameObject.GetComponent<Rigidbody2D>();
+        if(collision.gameObject.CompareTag("Player") && collision.gameObject.GetComponent<PlayerBehaviour>().onLadder){
+            Physics2D.IgnoreCollision(collisionObject, collisionCollider, true);
+        }
+        else if(collision.gameObject.CompareTag("Player") && !collision.gameObject.GetComponent<PlayerBehaviour>().onLadder){
+            Physics2D.IgnoreCollision(collisionObject, collisionCollider, false);
+            Debug.Log("OnCollisionStay dictates player should be touching block.");
+        }
+    }
+    void OnCollisionExit2D(Collision2D collision){
+        Collider2D collisionObject = collision.gameObject.GetComponent<Collider2D>();
+        Rigidbody2D objectRB = collision.gameObject.GetComponent<Rigidbody2D>();
+        if(collision.gameObject.CompareTag("Player") && !collision.gameObject.GetComponent<PlayerBehaviour>().onLadder){
+            Physics2D.IgnoreCollision(collisionObject, collisionCollider, false);
+        }
+    }
+    private void FixedUpdate()
+    {
+        
+    }
+}
+/*
+    
 */
