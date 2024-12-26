@@ -315,6 +315,9 @@ public class PlayerBehaviour : MonoBehaviour
     public bool readJumping(){
         return jumping;
     }
+    public bool readGrounded(){
+        return isGrounded;
+    }
     public void SetKey(Key key){
         currentKey = key;
     }
