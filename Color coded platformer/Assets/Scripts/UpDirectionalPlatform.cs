@@ -103,6 +103,7 @@ public class UpDirectionalPlatform : MonoBehaviour
             objectRB = collision.gameObject.GetComponent<Rigidbody2D>();
         }
         */
+        /*
         if(collision.gameObject.CompareTag("GroundCollisionCheck")
          && collision.gameObject.GetComponentInParent<PlayerBehaviour>().onLadder){
             Physics2D.IgnoreCollision(collision.gameObject.GetComponentInParent<Collider2D>(), collisionCollider, true);//////
@@ -111,16 +112,17 @@ public class UpDirectionalPlatform : MonoBehaviour
          && !collision.gameObject.GetComponentInParent<PlayerBehaviour>().onLadder){
             Physics2D.IgnoreCollision(collision.gameObject.GetComponentInParent<Collider2D>(), collisionCollider, false);
         }
-        /*
+        */
+        
 
         if(collision.gameObject.CompareTag("Player") && collision.gameObject.GetComponent<PlayerBehaviour>().onLadder){
-            Physics2D.IgnoreCollision(collisionObject, collisionCollider, true);//////
+            Physics2D.IgnoreCollision(collision.gameObject.GetComponent<Collider2D>(), collisionCollider, true);//////
         }
         else if(collision.gameObject.CompareTag("Player") && !collision.gameObject.GetComponent<PlayerBehaviour>().onLadder){
-            Physics2D.IgnoreCollision(collisionObject, collisionCollider, false);
+            Physics2D.IgnoreCollision(collision.gameObject.GetComponent<Collider2D>(), collisionCollider, false);
             Debug.Log("OnCollisionEnter dictates player should be touching block.");
         }
-        */
+        
     }
     void OnCollisionStay2D(Collision2D collision){
         //Testing
@@ -130,6 +132,7 @@ public class UpDirectionalPlatform : MonoBehaviour
             objectRB = collision.gameObject.GetComponent<Rigidbody2D>();
         }
         */
+        /*
         if(collision.gameObject.CompareTag("GroundCollisionCheck")
          && collision.gameObject.GetComponentInParent<PlayerBehaviour>().onLadder){
             Physics2D.IgnoreCollision(collision.gameObject.GetComponentInParent<Collider2D>(), collisionCollider, true);//////
@@ -138,16 +141,17 @@ public class UpDirectionalPlatform : MonoBehaviour
          && !collision.gameObject.GetComponentInParent<PlayerBehaviour>().onLadder){
             Physics2D.IgnoreCollision(collision.gameObject.GetComponentInParent<Collider2D>(), collisionCollider, false);
         }
-        /*
+        */
+        
         if(collision.gameObject.CompareTag("Player") && collision.gameObject.GetComponent<PlayerBehaviour>().onLadder){
-            Physics2D.IgnoreCollision(collisionObject, collisionCollider, true);
+            Physics2D.IgnoreCollision(collision.gameObject.GetComponent<Collider2D>(), collisionCollider, true);
         }
         
         if(collision.gameObject.CompareTag("Player") && !collision.gameObject.GetComponent<PlayerBehaviour>().onLadder){
-            Physics2D.IgnoreCollision(collisionObject, collisionCollider, false);
+            Physics2D.IgnoreCollision(collision.gameObject.GetComponent<Collider2D>(), collisionCollider, false);
             Debug.Log("OnCollisionStay dictates player should be touching block.");
         }
-        */
+        
     }
     void OnCollisionExit2D(Collision2D collision){
         //Testing

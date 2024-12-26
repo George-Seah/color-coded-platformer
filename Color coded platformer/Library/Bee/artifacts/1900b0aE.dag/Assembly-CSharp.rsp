@@ -452,6 +452,8 @@
 "Assets/Input System/PlayerInputActions.cs"
 "Assets/Scripts/Cannon.cs"
 "Assets/Scripts/CannonBall.cs"
+"Assets/Scripts/Cloud.cs"
+"Assets/Scripts/CloudCannon.cs"
 "Assets/Scripts/ColorChanger.cs"
 "Assets/Scripts/ColorPicker.cs"
 "Assets/Scripts/DeathBarrier.cs"
