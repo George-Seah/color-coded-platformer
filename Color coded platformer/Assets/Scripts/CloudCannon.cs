@@ -18,7 +18,10 @@ public class CloudCannon : MonoBehaviour
     public List<GameObject> cloudsSpawned = new List<GameObject>();
     [SerializeField] private int colorIndex = 0;
     private Color cloudColor;
-    [SerializeField] bool rotateCloud;
+    [Tooltip("If turned on, clouds can have a custom rotation set")]
+    [SerializeField] bool tiltCloud;
+    [Tooltip("If tiltCloud is true, you can change this to customize the rotations of clouds shot out of the cannon")]
+    [SerializeField] float customTilt;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
@@ -57,6 +60,8 @@ public class CloudCannon : MonoBehaviour
             cloud.gameObject.GetComponent<SpriteRenderer>().color = cloudColor;
             GameObject newCloud = Instantiate(cloud.gameObject, transform.position, transform.rotation);
             cloudsSpawned.Add(newCloud);
+            //transform.eulerAngles.z
+            newCloud.GetComponent<Cloud>().SetDirection(transform, cloudSpeed, tiltCloud, customTilt);
             if(colorIndex < colorsToShoot.Count - 1){
                 colorIndex ++;
                 
