@@ -38,6 +38,7 @@ SpriteAtlas:
     - {fileID: -3562362541407738469, guid: 3725e022abfc4a54a982161479e7777c, type: 3}
     - {fileID: -7796920827282412667, guid: bdeb93e7902e1f2449b38f9d8398419e, type: 3}
     - {fileID: -1626603816905824543, guid: b3db133231d17e042a27e13c836ce577, type: 3}
+    - {fileID: -3002450467948520622, guid: 443ba10fbaab3f9468d64b9eece35812, type: 3}
     bindAsDefault: 1
     isAtlasV2: 0
     cachedData: {fileID: 0}
@@ -48,6 +49,7 @@ SpriteAtlas:
     - bdeb93e7902e1f2449b38f9d8398419e: -7796920827282412667
     - 7818ff8b69c3c4b4fa3ea33285f4f6a1: -8237362841850687353
     - 0a25cd5ecbfcc1744b2202b6f892b055: 2960308106685272936
+    - 443ba10fbaab3f9468d64b9eece35812: -3002450467948520622
   m_MasterAtlas: {fileID: 0}
   m_PackedSprites:
   - {fileID: -3562362541407738469, guid: 3725e022abfc4a54a982161479e7777c, type: 3}
@@ -56,6 +58,7 @@ SpriteAtlas:
   - {fileID: -7796920827282412667, guid: bdeb93e7902e1f2449b38f9d8398419e, type: 3}
   - {fileID: -8237362841850687353, guid: 7818ff8b69c3c4b4fa3ea33285f4f6a1, type: 3}
   - {fileID: 2960308106685272936, guid: 0a25cd5ecbfcc1744b2202b6f892b055, type: 3}
+  - {fileID: -3002450467948520622, guid: 443ba10fbaab3f9468d64b9eece35812, type: 3}
   m_PackedSpriteNamesToIndex:
   - WaddlerIdle_0
   - LadderParticleversion_0
@@ -63,6 +66,7 @@ SpriteAtlas:
   - Idle stick_0
   - Key small_0
   - Cannonball_0
+  - Sprite pack cloud_0
   m_RenderDataMap: {}
   m_Tag: ColorChangerstuff
   m_IsVariant: 0

@@ -45,3 +45,25 @@ public class GroundCollisionCheck : MonoBehaviour
         }
     }
 }
+/*
+        foreach (ContactPoint2D contact in collision.contacts)
+        {
+            Debug.DrawLine(contact.point, contact.point + contact.normal, Color.red, 2f);
+            Debug.Log($"Normal: {contact.normal}");
+
+            Vector2 collisionNormal = contact.normal;
+            float collisionAngle = Vector2.Angle(Vector2.up, collisionNormal);
+            Vector2 leftCollision = new Vector2(1, 0);
+            Vector2 rightCollision = new Vector2(-1, 0);
+            Debug.Log($"Collision Angle: {collisionAngle}°");
+            if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Push Block")
+            || collision.gameObject.CompareTag("OneWayPlatform") || collision.gameObject.CompareTag("Cloud"))
+            {
+                if(collisionAngle == 180){
+                    playerBehaviour.EnteredGround();
+                }
+                
+                //Debug.Log("Player entered ground");
+            }
+        }
+*/

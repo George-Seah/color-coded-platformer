@@ -39,19 +39,24 @@ public class Cloud : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+        if(collision.gameObject.CompareTag("Ground")){
+            Destroy(gameObject);
+        }
         if (!objectsOnCloud.Contains(collision.gameObject))
         {
             objectsOnCloud.Add(collision.gameObject);
         }
 
         Debug.Log($"Cloud collided with {collision.gameObject.name}");
-
+        /*
         if (!collision.gameObject.CompareTag("Cannon") &&
             !collision.gameObject.CompareTag("Waddler") &&
             !collision.gameObject.CompareTag("Player"))
         {
             Destroy(gameObject);
         }
+        */
+
     }
 
     void OnCollisionExit2D(Collision2D collision)

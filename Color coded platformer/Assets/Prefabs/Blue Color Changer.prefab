@@ -60,6 +60,7 @@ MonoBehaviour:
   - {fileID: -8396187568615977397, guid: 1bd72b325e8706d41b7badad1ebc665d, type: 3}
   - {fileID: -7796920827282412667, guid: bdeb93e7902e1f2449b38f9d8398419e, type: 3}
   - {fileID: -8237362841850687353, guid: 7818ff8b69c3c4b4fa3ea33285f4f6a1, type: 3}
+  - {fileID: -3002450467948520622, guid: 443ba10fbaab3f9468d64b9eece35812, type: 3}
   shaderMaterial: {fileID: -876546973899608171, guid: 88a569fac621a094baac2780a9503b80, type: 3}
 --- !u!198 &3180711772883509896
 ParticleSystem:
