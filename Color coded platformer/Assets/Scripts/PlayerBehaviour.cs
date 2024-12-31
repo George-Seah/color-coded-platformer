@@ -19,7 +19,7 @@ public class PlayerBehaviour : MonoBehaviour
     [SerializeField] private float jumpAmount = 1.25f;
     [SerializeField] private float jumpForce;
 
-    private bool jumpCancelled;
+    [SerializeField] private bool jumpCancelled;
     [SerializeField] private bool jumping = false;
     [SerializeField] private float moveDirectionX;
     [SerializeField] private float moveDirectionY;
@@ -56,12 +56,14 @@ public class PlayerBehaviour : MonoBehaviour
         drop = playerControls.Player.Drop;
         interact = playerControls.Player.Interact;
 
+
         move.Enable();
         jump.Enable();
         drop.Enable();
         interact.Enable();
 
         jump.performed += ctx => OnJump(ctx);
+        jump.canceled += ctx => OnJumpCanceled(ctx);
         //jump.canceled += ctx => OnJumpCanceled(ctx);
         drop.performed += ctx => OnDrop(ctx);
         interact.performed += ctx => OnInteract(ctx);
@@ -285,12 +287,12 @@ public class PlayerBehaviour : MonoBehaviour
             rb.gravityScale = fallingGravityScale;
             Debug.Log("!jumping && !isGrounded bools in FixedUpdate activating gravity.");
         }
-
         if (jumping && !jumpCancelled && jumpTime < buttonTime && jump.IsPressed())
         {
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
             jumpTime += Time.deltaTime;
         }
+
         if(jumping && landedOnWaddler && jumpTime < buttonTime){
             Debug.Log("Player should bounce off Waddler.");
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce * waddlerBounceForceButtonUnheld);
@@ -304,7 +306,7 @@ public class PlayerBehaviour : MonoBehaviour
                 rb.gravityScale = fallingGravityScale;
             }
         }
-        if (jumpTime > buttonTime)
+        if (jumpTime > buttonTime || jump.WasReleasedThisFrame())
         {
             jumpCancelled = true;
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
