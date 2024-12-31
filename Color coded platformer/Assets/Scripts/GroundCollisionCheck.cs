@@ -9,32 +9,42 @@ public class GroundCollisionCheck : MonoBehaviour
         playerBehaviour = transform.parent.gameObject.GetComponent<PlayerBehaviour>();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+private void OnTriggerEnter2D(Collider2D collision)
+{
+    if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Push Block") ||
+        collision.gameObject.CompareTag("OneWayPlatform") || collision.gameObject.CompareTag("Cloud"))
     {
-        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Push Block")
-         || collision.gameObject.CompareTag("OneWayPlatform") || collision.gameObject.CompareTag("Cloud"))
+        // Get the bounds of the colliders
+        Bounds groundCollisionBounds = collision.bounds;
+        Bounds groundCheckBounds = GetComponent<Collider2D>().bounds;
+
+        // Check if the bottom of the player (via GroundCollisionCheck) is above the top of the ground object
+        if (groundCheckBounds.min.y >= groundCollisionBounds.max.y)
         {
             playerBehaviour.EnteredGround();
-            //Debug.Log("Player entered ground");
-        }
-        // && playerBehaviour.readJumping()
-        if(collision.gameObject.CompareTag("Waddler")){
-            playerBehaviour.LandedOnWaddler();
-            if(collision.gameObject.GetComponentInChildren<Key>() != null){
-                collision.gameObject.GetComponentInChildren<Key>().Drop();
-            }
-            Destroy(collision.gameObject);
+            Debug.Log("Player landed on ground.");
         }
     }
+}
+
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Push Block")
-         || collision.gameObject.CompareTag("OneWayPlatform") || collision.gameObject.CompareTag("Cloud"))
+    if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Push Block") ||
+        collision.gameObject.CompareTag("OneWayPlatform") || collision.gameObject.CompareTag("Cloud"))
+    {
+        // Get the bounds of the colliders
+        Bounds groundCollisionBounds = collision.bounds;
+        Bounds groundCheckBounds = GetComponent<Collider2D>().bounds;
+
+        // Check if the bottom of the player (via GroundCollisionCheck) is above the top of the ground object
+        if (groundCheckBounds.min.y >= groundCollisionBounds.max.y)
         {
             playerBehaviour.EnteredGround();
-            //Debug.Log("Player staying on ground");
+            Debug.Log("Player landed on ground.");
         }
     }
+    }
+
     private void OnTriggerExit2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Push Block")
@@ -43,6 +53,15 @@ public class GroundCollisionCheck : MonoBehaviour
             playerBehaviour.ExitedGround();
             //Debug.Log("Player exited ground");
         }
+    }
+    private bool IsCollisionFromBelow(Collider2D collision)
+    {
+        // Get the bounds of the collision and player
+        Bounds collisionBounds = collision.bounds;
+        Bounds playerBounds = GetComponent<Collider2D>().bounds;
+
+        // Check if the collision is from below (bottom of the player touching the top of the ground object)
+        return playerBounds.min.y > collisionBounds.center.y;
     }
 }
 /*

@@ -67,7 +67,6 @@ MonoBehaviour:
   collisionCollider: {fileID: 2644044130643412919}
   triggerCollider: {fileID: 5828021248145206813}
   selectedDirection: 2
-  ignoreLadder: 0
 --- !u!212 &892427768073568870
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -182,7 +181,7 @@ BoxCollider2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 0
+    m_Bits: 64
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
@@ -240,5 +239,5 @@ Rigidbody2D:
     m_Bits: 0
   m_Interpolate: 0
   m_SleepingMode: 1
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
   m_Constraints: 0

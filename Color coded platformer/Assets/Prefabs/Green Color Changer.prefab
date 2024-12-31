@@ -54,8 +54,8 @@ MonoBehaviour:
   - Player
   particleSystem: {fileID: 7836121908210517404}
   sprites:
-  - {fileID: -3562362541407738469, guid: 3725e022abfc4a54a982161479e7777c, type: 3}
   - {fileID: -8396187568615977397, guid: 1bd72b325e8706d41b7badad1ebc665d, type: 3}
+  - {fileID: -3562362541407738469, guid: 3725e022abfc4a54a982161479e7777c, type: 3}
   - {fileID: 2960308106685272936, guid: 0a25cd5ecbfcc1744b2202b6f892b055, type: 3}
   - {fileID: -7796920827282412667, guid: bdeb93e7902e1f2449b38f9d8398419e, type: 3}
   - {fileID: -8237362841850687353, guid: 7818ff8b69c3c4b4fa3ea33285f4f6a1, type: 3}
