@@ -10,7 +10,7 @@ public class Ladder : MonoBehaviour
     [SerializeField] bool playerOnLadder;
     [SerializeField] private GameObject playerTransform;
     [SerializeField] private Rigidbody2D playerRB;
-    private bool playerIsNear = false;
+    //private bool playerIsNear = false;
     private PlayerBehaviour player;
     private void Awake()
     {

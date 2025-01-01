@@ -61,7 +61,7 @@ public class Lever : MonoBehaviour
         }
     }
 
-    private void ToggleLever()
+    public void ToggleLever()
     {
         if (!allowMultipleToggles && activated) return;
 

@@ -1,45 +1,58 @@
 using UnityEngine;
 using System.Collections.Generic;
+using UnityEngine.Events;
 
 public class MovingPlatform : MonoBehaviour
 {
-    public enum MovementMode { BackAndForth, OneDirection, MultipleDirections }
-
     [Header("Platform Settings")]
-    public MovementMode movementMode = MovementMode.OneDirection;
-
     [Tooltip("Speed of the platform movement.")]
     public float speed = 2f;
 
     [Tooltip("Auto highlight path in Scene View.")]
     public bool autoHighlightPath = false;
 
-    [Tooltip("Target positions for MultipleDirections mode.")]
+    [Tooltip("Target positions for platform movement.")]
     [SerializeField] private List<Vector3> multipleDirections = new List<Vector3>();
 
     [Tooltip("Whether the platform is active or not.")]
     public bool activated = false;
 
-    [SerializeField] private int currentDirectionIndex = 0;
+    [Tooltip("List of events to trigger at specific targets.")]
+    public List<UnityEvent> targetEvents = new List<UnityEvent>();
+
+    private List<Rigidbody2D> objectsOnPlatform = new List<Rigidbody2D>();
+
+    private int currentDirectionIndex = 0;
+    private Vector3 previousPosition;
+    private Vector3 currentVelocity;
 
     private void Start()
     {
-        if (movementMode == MovementMode.MultipleDirections && multipleDirections.Count > 0)
+        if (multipleDirections.Count > 0)
         {
             currentDirectionIndex = 0; // Start from the first position
         }
+
+        previousPosition = transform.position;
     }
 
     private void FixedUpdate()
     {
         if (!activated) return;
 
-        switch (movementMode)
+        // Calculate platform velocity
+        currentVelocity = (transform.position - previousPosition) / Time.fixedDeltaTime;
+        previousPosition = transform.position;
+
+        HandleMultipleDirections();
+
+        // Apply velocity to objects on platform
+        foreach (var rb in objectsOnPlatform)
         {
-            case MovementMode.MultipleDirections:
-                HandleMultipleDirections();
-                break;
-            // Handle other cases (BackAndForth, OneDirection) if necessary
+            if (rb != null)
+            {
+                rb.linearVelocity += (Vector2)currentVelocity;
+            }
         }
     }
 
@@ -48,29 +61,23 @@ public class MovingPlatform : MonoBehaviour
         if (multipleDirections.Count == 0) return;
 
         // Move towards the current target
-        Vector3 movement = (multipleDirections[currentDirectionIndex] - transform.position).normalized * Mathf.Abs(speed) * Time.deltaTime;
+        Vector3 movement = (multipleDirections[currentDirectionIndex] - transform.position).normalized * Mathf.Abs(speed) * Time.fixedDeltaTime;
         transform.position += movement;
 
         // Check if the platform has reached the current target
         if (Vector3.Distance(transform.position, multipleDirections[currentDirectionIndex]) < 0.1f)
         {
-            if (speed > 0)
+            // Trigger event if available
+            if (currentDirectionIndex < targetEvents.Count && targetEvents[currentDirectionIndex] != null)
             {
-                // Move forward in the list
-                currentDirectionIndex++;
-                if (currentDirectionIndex >= multipleDirections.Count)
-                {
-                    currentDirectionIndex = 0; // Loop forward
-                }
+                targetEvents[currentDirectionIndex].Invoke();
             }
-            else
+
+            // Move to the next target
+            currentDirectionIndex++;
+            if (currentDirectionIndex >= multipleDirections.Count)
             {
-                // Move backward in the list
-                currentDirectionIndex--;
-                if (currentDirectionIndex < 0)
-                {
-                    currentDirectionIndex = multipleDirections.Count - 1; // Loop backward
-                }
+                currentDirectionIndex = 0; // Loop forward
             }
         }
     }
@@ -93,8 +100,6 @@ public class MovingPlatform : MonoBehaviour
     public void ReverseDirections()
     {
         multipleDirections.Reverse();
-        // Adjust the current index to maintain consistent behavior
-        //currentDirectionIndex = multipleDirections.Count - 1 - currentDirectionIndex;
     }
 
     private void OnDrawGizmos()
@@ -110,6 +115,24 @@ public class MovingPlatform : MonoBehaviour
             {
                 Gizmos.DrawLine(multipleDirections[i], multipleDirections[i + 1]);
             }
+        }
+    }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        var rb = collision.collider.attachedRigidbody;
+        if (rb != null && !objectsOnPlatform.Contains(rb))
+        {
+            objectsOnPlatform.Add(rb);
+        }
+    }
+
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+        var rb = collision.collider.attachedRigidbody;
+        if (rb != null && objectsOnPlatform.Contains(rb))
+        {
+            objectsOnPlatform.Remove(rb);
         }
     }
 }
