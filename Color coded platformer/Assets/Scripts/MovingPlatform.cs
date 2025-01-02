@@ -1,6 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
 using UnityEngine.Events;
+using System.Linq;
 
 public class MovingPlatform : MonoBehaviour
 {
@@ -20,11 +21,10 @@ public class MovingPlatform : MonoBehaviour
     [Tooltip("List of events to trigger at specific targets.")]
     public List<UnityEvent> targetEvents = new List<UnityEvent>();
 
-    private List<Rigidbody2D> objectsOnPlatform = new List<Rigidbody2D>();
+    [SerializeField] private List<GameObject> objectsOnPlatform = new List<GameObject>();
 
-    private int currentDirectionIndex = 0;
-    private Vector3 previousPosition;
-    private Vector3 currentVelocity;
+    [SerializeField] private int currentDirectionIndex = 0;
+    private Rigidbody2D rb;
 
     private void Start()
     {
@@ -33,25 +33,38 @@ public class MovingPlatform : MonoBehaviour
             currentDirectionIndex = 0; // Start from the first position
         }
 
-        previousPosition = transform.position;
+        rb = GetComponent<Rigidbody2D>();
+        rb.isKinematic = true; // Ensure the platform doesn't move due to physics
     }
 
     private void FixedUpdate()
     {
         if (!activated) return;
 
-        // Calculate platform velocity
-        currentVelocity = (transform.position - previousPosition) / Time.fixedDeltaTime;
-        previousPosition = transform.position;
-
         HandleMultipleDirections();
 
-        // Apply velocity to objects on platform
-        foreach (var rb in objectsOnPlatform)
+        // Move the platform
+        Vector3 direction = (multipleDirections[currentDirectionIndex] - transform.position).normalized;
+        rb.linearVelocity = direction * speed;
+
+        // Remove objects no longer on the platform
+        objectsOnPlatform = objectsOnPlatform.Where(obj => obj != null && IsOnPlatform(obj)).ToList();
+
+        // Apply platform velocity to objects on the platform
+        foreach (GameObject obj in objectsOnPlatform)
         {
-            if (rb != null)
+            if (obj != null)
             {
-                rb.linearVelocity += (Vector2)currentVelocity;
+                Rigidbody2D objRb = obj.GetComponent<Rigidbody2D>();
+                if (objRb != null && (obj.CompareTag("Player") || obj.CompareTag("Waddler")))
+                {
+                    Vector2 additionalVelocity = rb.linearVelocity;
+                    if (rb.linearVelocity.y >= 0)
+                    {
+                        additionalVelocity = new Vector2(rb.linearVelocity.x, 0);
+                    }
+                    objRb.linearVelocity += additionalVelocity;
+                }
             }
         }
     }
@@ -59,10 +72,6 @@ public class MovingPlatform : MonoBehaviour
     private void HandleMultipleDirections()
     {
         if (multipleDirections.Count == 0) return;
-
-        // Move towards the current target
-        Vector3 movement = (multipleDirections[currentDirectionIndex] - transform.position).normalized * Mathf.Abs(speed) * Time.fixedDeltaTime;
-        transform.position += movement;
 
         // Check if the platform has reached the current target
         if (Vector3.Distance(transform.position, multipleDirections[currentDirectionIndex]) < 0.1f)
@@ -92,11 +101,6 @@ public class MovingPlatform : MonoBehaviour
         speed = newSpeed;
     }
 
-    public void NegativeSpeed()
-    {
-        speed = -Mathf.Abs(speed); // Ensure speed is negative
-    }
-
     public void ReverseDirections()
     {
         multipleDirections.Reverse();
@@ -120,19 +124,30 @@ public class MovingPlatform : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        var rb = collision.collider.attachedRigidbody;
-        if (rb != null && !objectsOnPlatform.Contains(rb))
+        foreach (ContactPoint2D contact in collision.contacts)
         {
-            objectsOnPlatform.Add(rb);
+            Vector2 collisionNormal = contact.normal;
+            float collisionAngle = Vector2.Angle(Vector2.up, collisionNormal);
+            if (collisionAngle == 180 &&
+                !objectsOnPlatform.Contains(collision.gameObject))
+            {
+                objectsOnPlatform.Add(collision.gameObject);
+            }
         }
     }
 
     private void OnCollisionExit2D(Collision2D collision)
     {
-        var rb = collision.collider.attachedRigidbody;
-        if (rb != null && objectsOnPlatform.Contains(rb))
-        {
-            objectsOnPlatform.Remove(rb);
-        }
+        objectsOnPlatform.Remove(collision.gameObject);
+    }
+
+    private bool IsOnPlatform(GameObject obj)
+    {
+        // Check if the object is still physically touching the platform using collision bounds
+        Collider2D objCollider = obj.GetComponent<Collider2D>();
+        Collider2D platformCollider = GetComponent<Collider2D>();
+        if (objCollider == null || platformCollider == null) return false;
+
+        return objCollider.IsTouching(platformCollider);
     }
 }

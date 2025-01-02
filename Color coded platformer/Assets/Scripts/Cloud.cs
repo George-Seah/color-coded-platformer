@@ -30,8 +30,11 @@ public class Cloud : MonoBehaviour
                 Rigidbody2D objRb = obj.GetComponent<Rigidbody2D>();
                 if (objRb != null)
                 {
-                    Vector2 additionalVelocity = direction.normalized * speed;
-                    objRb.linearVelocity += additionalVelocity;
+                    if(objRb.gameObject.CompareTag("Player") || objRb.gameObject.CompareTag("Waddler")){
+                        Vector2 additionalVelocity = direction.normalized * speed;
+                        objRb.linearVelocity += additionalVelocity;
+                    }
+
                 }
             }
         }

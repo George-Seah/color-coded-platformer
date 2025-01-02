@@ -16,11 +16,10 @@ public class PlayerBehaviour : MonoBehaviour
     public float buttonTime = 0.3f;
     [SerializeField] private float jumpTime = 0f;
     [SerializeField] private bool isGrounded;
-    [SerializeField] private float jumpAmount = 1.25f;
-    [SerializeField] private float jumpForce;
-
     [SerializeField] private bool jumpCancelled;
     [SerializeField] private bool jumping = false;
+    [SerializeField] private float jumpAmount = 1.25f;
+    [SerializeField] private float jumpForce;
     [SerializeField] private float moveDirectionX;
     [SerializeField] private float moveDirectionY;
     [SerializeField] private Key currentKey;
@@ -139,6 +138,7 @@ public class PlayerBehaviour : MonoBehaviour
             isGrounded = true;
             jumping = false;
             jumpCancelled = false;
+            //If still jumping up and down on moving platforms, uncomment this
             rb.gravityScale = gravityScale;
             Debug.Log("EnteredGround function activating gravity.");
         }
@@ -160,6 +160,11 @@ public class PlayerBehaviour : MonoBehaviour
             float collisionAngle = Vector2.Angle(Vector2.up, collisionNormal);
 
             Debug.Log($"Collision Angle: {collisionAngle}°");
+            if(collision.gameObject.CompareTag("Moving Platform")){
+                isGrounded = true;
+                jumping = false;
+                jumpCancelled = false;
+            }
         }
 
         if (collision.gameObject.CompareTag("Key") && !holdingKey)
