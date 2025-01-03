@@ -669,8 +669,12 @@ PrefabInstance:
       value: Ladder (1)
       objectReference: {fileID: 0}
     - target: {fileID: 6820383507998502856, guid: e2fcdd017e7a7284994bd89c42d631b2, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6820383507998502856, guid: e2fcdd017e7a7284994bd89c42d631b2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.045
+      value: 0.0365
       objectReference: {fileID: 0}
     - target: {fileID: 7749423792081056640, guid: e2fcdd017e7a7284994bd89c42d631b2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1472,7 +1476,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6820383507998502856, guid: e2fcdd017e7a7284994bd89c42d631b2, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -0.007
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 7749423792081056640, guid: e2fcdd017e7a7284994bd89c42d631b2, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1515,7 +1519,8 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 5878548072375314904, guid: e2fcdd017e7a7284994bd89c42d631b2, type: 3}
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e2fcdd017e7a7284994bd89c42d631b2, type: 3}

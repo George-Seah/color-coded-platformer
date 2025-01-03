@@ -25,7 +25,7 @@ public class MovingPlatform : MonoBehaviour
 
     [SerializeField] private int currentDirectionIndex = 0;
     private Rigidbody2D rb;
-
+    [SerializeField] Vector3 direction;
     private void Start()
     {
         if (multipleDirections.Count > 0)
@@ -34,7 +34,7 @@ public class MovingPlatform : MonoBehaviour
         }
 
         rb = GetComponent<Rigidbody2D>();
-        rb.isKinematic = true; // Ensure the platform doesn't move due to physics
+        //rb.isKinematic = true; // Ensure the platform doesn't move due to physics
     }
 
     private void FixedUpdate()
@@ -44,9 +44,10 @@ public class MovingPlatform : MonoBehaviour
         HandleMultipleDirections();
 
         // Move the platform
-        Vector3 direction = (multipleDirections[currentDirectionIndex] - transform.position).normalized;
+        direction = (multipleDirections[currentDirectionIndex] - transform.position).normalized;
         rb.linearVelocity = direction * speed;
-
+        //rb.linearVelocity = new Vector3(direction.x * speed, direction.y * speed, 0);
+        //rb.linearVelocity = new Vector3(1, 0, 0);
         // Remove objects no longer on the platform
         objectsOnPlatform = objectsOnPlatform.Where(obj => obj != null && IsOnPlatform(obj)).ToList();
 

@@ -23,6 +23,20 @@ public class GroundCollisionCheck : MonoBehaviour
                 Debug.Log("Player landed on ground.");
             }
         }
+        if(collision.gameObject.CompareTag("Waddler")){
+            Bounds groundCollisionBounds = collision.bounds;
+            Bounds groundCheckBounds = GetComponent<Collider2D>().bounds;
+
+            // Ensure the bottom of the player is above the top of the ground object
+            if (groundCheckBounds.min.y >= groundCollisionBounds.max.y)
+            {
+                playerBehaviour.LandedOnWaddler();
+                if(collision.gameObject.GetComponentInChildren<Key>() != null){
+                    collision.gameObject.GetComponentInChildren<Key>().Drop();
+                }
+                Destroy(collision.gameObject);
+            }
+        }
     }
 
     private void OnTriggerStay2D(Collider2D collision)

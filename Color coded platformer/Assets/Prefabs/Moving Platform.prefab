@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 6278275776624602568}
   - component: {fileID: 2954059331385160119}
   - component: {fileID: 6090853754207580162}
+  - component: {fileID: 2582596923658471771}
   m_Layer: 8
   m_Name: Moving Platform
   m_TagString: Ground
@@ -47,13 +48,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cd589ea50d96fc04393b88f8a71b89a6, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  movementMode: 1
   speed: 1
   autoHighlightPath: 0
-  direction: {x: 1, y: 0}
-  backAndForthDistance: 0
   multipleDirections: []
   activated: 0
+  targetEvents: []
+  objectsOnPlatform: []
+  currentDirectionIndex: 0
 --- !u!114 &6278275776624602568
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -170,3 +171,30 @@ BoxCollider2D:
   m_AutoTiling: 0
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!50 &2582596923658471771
+Rigidbody2D:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2865770244112850790}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 1
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDamping: 0
+  m_AngularDamping: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 1
+  m_Constraints: 0
