@@ -160,13 +160,12 @@ public class PlayerBehaviour : MonoBehaviour
             float collisionAngle = Vector2.Angle(Vector2.up, collisionNormal);
 
             Debug.Log($"Collision Angle: {collisionAngle}°");
-            if(collision.gameObject.CompareTag("Moving Platform")){
-                isGrounded = true;
-                jumping = false;
-                jumpCancelled = false;
-            }
         }
-
+        if(collision.gameObject.CompareTag("Moving Platform")){
+            isGrounded = true;
+            jumping = false;
+            jumpCancelled = false;
+        }
         if (collision.gameObject.CompareTag("Key") && !holdingKey)
         {
             Key key = collision.gameObject.GetComponent<Key>();
@@ -185,6 +184,17 @@ public class PlayerBehaviour : MonoBehaviour
             */
         }
     }
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if(collision.gameObject.CompareTag("Moving Platform") && !jump.IsPressed()){
+            isGrounded = true;
+            /*
+            
+            jumping = false;
+            jumpCancelled = false;
+            */
+        }
+    }
     private void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Key") && !holdingKey)
@@ -195,6 +205,9 @@ public class PlayerBehaviour : MonoBehaviour
             }
             
             Debug.Log("Key out of range.");
+        }
+        if(collision.gameObject.CompareTag("Moving Platform")){
+            isGrounded = false;
         }
     }
 
