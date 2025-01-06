@@ -43,11 +43,32 @@ public class MovingPlatform : MonoBehaviour
 
         HandleMultipleDirections();
 
-        // Move the platform
-        direction = (multipleDirections[currentDirectionIndex] - transform.position).normalized;
-        rb.linearVelocity = direction * speed;
-        //rb.linearVelocity = new Vector3(direction.x * speed, direction.y * speed, 0);
-        //rb.linearVelocity = new Vector3(1, 0, 0);
+        if (multipleDirections.Count > 0)
+        {
+            Vector3 targetPosition = multipleDirections[currentDirectionIndex];
+            Vector3 toTarget = targetPosition - transform.position;
+
+            // Stop moving if close enough to the target
+            if (toTarget.magnitude < 0.1f)
+            {
+                rb.linearVelocity = Vector2.zero;
+            }
+            else
+            {
+                // Move the platform toward the target
+                direction = toTarget.normalized;
+                Vector3 velocity = direction * speed;
+
+                // Clamp velocity to avoid overshooting the target
+                if (velocity.magnitude > toTarget.magnitude / Time.fixedDeltaTime)
+                {
+                    velocity = toTarget / Time.fixedDeltaTime;
+                }
+
+                rb.linearVelocity = velocity;
+            }
+        }
+
         // Remove objects no longer on the platform
         objectsOnPlatform = objectsOnPlatform.Where(obj => obj != null && IsOnPlatform(obj)).ToList();
 
@@ -57,7 +78,7 @@ public class MovingPlatform : MonoBehaviour
             if (obj != null)
             {
                 Rigidbody2D objRb = obj.GetComponent<Rigidbody2D>();
-                if (objRb != null && (obj.CompareTag("Player") || obj.CompareTag("Waddler")))
+                if (objRb != null && obj.CompareTag("Player"))
                 {
                     Vector2 additionalVelocity = rb.linearVelocity;
                     if (rb.linearVelocity.y >= 0)
@@ -70,17 +91,27 @@ public class MovingPlatform : MonoBehaviour
         }
     }
 
+
     private void HandleMultipleDirections()
     {
         if (multipleDirections.Count == 0) return;
 
+        float distanceToTarget = Vector3.Distance(transform.position, multipleDirections[currentDirectionIndex]);
+
         // Check if the platform has reached the current target
-        if (Vector3.Distance(transform.position, multipleDirections[currentDirectionIndex]) < 0.1f)
+        if (distanceToTarget < 0.1f)
         {
             // Trigger event if available
             if (currentDirectionIndex < targetEvents.Count && targetEvents[currentDirectionIndex] != null)
             {
                 targetEvents[currentDirectionIndex].Invoke();
+            }
+
+            // Stop the platform if there's only one direction
+            if (multipleDirections.Count == 1)
+            {
+                rb.linearVelocity = Vector2.zero;
+                return;
             }
 
             // Move to the next target

@@ -28,7 +28,14 @@ public class PressurePad : MonoBehaviour
             onActivated.Invoke();
         }
     }
-
+    void OnTriggerStay2D(Collider2D collision){
+        // Check if the object has one of the specified tags
+        if (tagsToDetect.Contains(collision.tag))
+        {
+            // Trigger the event when an object with a matching tag steps on the pad
+            onActivated.Invoke();
+        }
+    }
     // Called when the object exits the trigger area (releases the pressure pad)
     private void OnTriggerExit2D(Collider2D collision)
     {
