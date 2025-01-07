@@ -111,11 +111,15 @@ public class PlayerBehaviour : MonoBehaviour
     }
     private void OnJumpCanceled(InputAction.CallbackContext context)
     {
-        if (!isGrounded && rb.linearVelocity.y > 0)
+        jumpCancelled = true;
+        rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
+        /*
+        if (!isGrounded && rb.linearVelocity.y >= 0)
         {
             jumpCancelled = true;
             rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
         }
+        */
     }
 
     private void OnDrop(InputAction.CallbackContext context)

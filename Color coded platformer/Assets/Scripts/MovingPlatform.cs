@@ -182,4 +182,10 @@ public class MovingPlatform : MonoBehaviour
 
         return objCollider.IsTouching(platformCollider);
     }
+    public void changeToDynamic(){
+        rb.bodyType = RigidbodyType2D.Dynamic;
+    }
+    public void changeToKinematic(){
+        rb.bodyType = RigidbodyType2D.Kinematic;
+    }
 }
