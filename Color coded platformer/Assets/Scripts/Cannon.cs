@@ -63,4 +63,36 @@ public class Cannon : MonoBehaviour
         }
         
     }
+    //, List<string> colorsToShoot
+    public void Fire(float ballSpeed){
+
+        cannonBall.gameObject.GetComponent<CannonBall>().speed = ballSpeed;
+        if(colorsToShoot[colorIndex] == "Red"){
+            ballColor = Color.red;
+            cannonBall.gameObject.layer = LayerMask.NameToLayer("Red");
+        }
+        else if(colorsToShoot[colorIndex] == "Green"){
+            ballColor = Color.green;
+            cannonBall.gameObject.layer = LayerMask.NameToLayer("Green");
+        }
+        else if(colorsToShoot[colorIndex] == "Blue"){
+            ballColor = Color.blue;
+            cannonBall.gameObject.layer = LayerMask.NameToLayer("Blue");
+        }
+        else{
+            //If the index is anything not red, green or blue, it will be the default settings
+            ballColor = Color.white;
+            cannonBall.gameObject.layer = LayerMask.NameToLayer("Default");
+        }
+        cannonBall.gameObject.GetComponent<SpriteRenderer>().color = ballColor;
+        Instantiate(cannonBall.gameObject, transform.position, transform.rotation);
+        
+        if(colorIndex < colorsToShoot.Count - 1){
+            colorIndex ++;
+            
+        }
+        else{
+            colorIndex = 0;
+        }
+    }
 }

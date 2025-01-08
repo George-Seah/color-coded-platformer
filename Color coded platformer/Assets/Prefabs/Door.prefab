@@ -46,8 +46,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 57a456d487b826142b2321b319a9fa8c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  scene: 
-  position: {x: 0, y: 0}
+  scene: Scene 8
+  newPlayerPosition: {x: 0, y: 0}
 --- !u!212 &5082185980324421166
 SpriteRenderer:
   m_ObjectHideFlags: 0

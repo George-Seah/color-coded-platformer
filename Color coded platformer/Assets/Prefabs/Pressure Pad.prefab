@@ -80,6 +80,7 @@ MonoBehaviour:
   tagsToDetect:
   - Player
   - Push Block
+  - Waddler
 --- !u!114 &2504887554356513908
 MonoBehaviour:
   m_ObjectHideFlags: 0

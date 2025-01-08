@@ -17,12 +17,14 @@ public class PressurePad : MonoBehaviour
     // List of tags to detect (set this in the Inspector)
     [Tooltip("List of tags to detect")]
     public List<string> tagsToDetect = new List<string>();
+    [SerializeField] bool triggerEnter = true;
+    [SerializeField] bool triggerStay = true;
 
     // Ensure the collider is set to trigger (no physical collisions)
     private void OnTriggerEnter2D(Collider2D collision)
     {
         // Check if the object has one of the specified tags
-        if (tagsToDetect.Contains(collision.tag))
+        if (tagsToDetect.Contains(collision.tag) && triggerEnter)
         {
             // Trigger the event when an object with a matching tag steps on the pad
             onActivated.Invoke();
@@ -30,7 +32,7 @@ public class PressurePad : MonoBehaviour
     }
     void OnTriggerStay2D(Collider2D collision){
         // Check if the object has one of the specified tags
-        if (tagsToDetect.Contains(collision.tag))
+        if (tagsToDetect.Contains(collision.tag) && triggerStay)
         {
             // Trigger the event when an object with a matching tag steps on the pad
             onActivated.Invoke();
