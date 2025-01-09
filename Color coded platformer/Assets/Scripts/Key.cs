@@ -25,7 +25,7 @@ public class Key : MonoBehaviour
 
         Debug.Log($"{person.gameObject} picked up the key");
 
-        rb.isKinematic = true;
+        rb.bodyType = RigidbodyType2D.Kinematic;
         rb.linearVelocity = Vector2.zero;
 
         transform.SetParent(person);
@@ -42,7 +42,7 @@ public class Key : MonoBehaviour
             transform.SetParent(null);
 
             // Reset Rigidbody2D properties for physical interaction
-            rb.isKinematic = false; 
+            rb.bodyType = RigidbodyType2D.Dynamic; 
             rb.simulated = true;
             rb.linearVelocity = Vector2.zero; // Clear any residual velocity
 
