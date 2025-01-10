@@ -614,12 +614,18 @@ MonoBehaviour:
   - Red
   - Green
   - Blue
+  - Default
+  - Green
+  - Default
+  - Default
+  - Default
   totalWidth: 200
   totalHeight: 25
-  numberOfRegions: 4
   playerBehaviour: {fileID: 501648650}
   startX: 0
+  startY: 0
   regionWidth: 5
+  useXCoordinate: 1
 --- !u!4 &1706636630
 Transform:
   m_ObjectHideFlags: 0
@@ -763,7 +769,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 7885731399976116088, guid: 9d0e3a4609735e743b0757252a1a2063, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.89
+      value: -1.75
       objectReference: {fileID: 0}
     - target: {fileID: 7885731399976116088, guid: 9d0e3a4609735e743b0757252a1a2063, type: 3}
       propertyPath: m_LocalPosition.y
