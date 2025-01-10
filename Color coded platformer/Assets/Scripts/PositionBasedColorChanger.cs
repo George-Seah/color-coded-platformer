@@ -7,8 +7,8 @@ public class DynamicColorBar : MonoBehaviour
     public RectTransform barTransform; // Reference to the RectTransform of the bar
     public RectTransform arrowTransform; // Reference to the arrow indicator
     public List<string> colorTags = new List<string> { "Default", "Red", "Green", "Blue" }; // Color tags
-    public float totalWidth = 500f; // Total width of the bar (in pixels)
-    public float totalHeight = 50f; // Height of the bar
+    public float totalWidth = 250f; // Total width of the bar (in pixels)
+    public float totalHeight = 30f; // Height of the bar
     public int numberOfRegions; // Number of regions
     public PlayerBehaviour playerBehaviour; // Reference to player
     public float startX; // Starting position for regions
@@ -18,6 +18,7 @@ public class DynamicColorBar : MonoBehaviour
 
     void Start()
     {
+        PositionBarInBottomRight();
         GenerateBar();
     }
 
@@ -26,57 +27,95 @@ public class DynamicColorBar : MonoBehaviour
         UpdateArrowPosition();
     }
 
-    private void GenerateBar()
+private void PositionBarInBottomRight()
+{
+    // Set anchors to the bottom-right corner
+    barTransform.anchorMin = new Vector2(1, 0); // Bottom-right
+    barTransform.anchorMax = new Vector2(1, 0); // Bottom-right
+
+    // Set pivot to the bottom-right
+    barTransform.pivot = new Vector2(1, 0); // Bottom-right
+
+    // Set the position relative to the bottom-right corner
+    barTransform.anchoredPosition = new Vector2(0f, 0f); // Adjust margin as needed (e.g., -10px inward on X, 10px upward on Y)
+
+    // Set size to the specified width and height
+    barTransform.sizeDelta = new Vector2(totalWidth, totalHeight);
+}
+
+
+
+private void GenerateBar()
+{
+    // Clear existing segments
+    foreach (Transform child in barTransform)
     {
-        // Clear existing segments
-        foreach (Transform child in barTransform)
-        {
-            Destroy(child.gameObject);
-        }
-
-        // Calculate size of each region
-        float regionSize = totalWidth / numberOfRegions;
-
-        // Generate regions
-        for (int i = 0; i < numberOfRegions; i++)
-        {
-            // Create region segment
-            GameObject segment = new GameObject("Region " + i, typeof(Image));
-            segment.transform.SetParent(barTransform);
-
-            // Configure RectTransform
-            RectTransform segmentTransform = segment.GetComponent<RectTransform>();
-            segmentTransform.anchorMin = new Vector2(0, 0);
-            segmentTransform.anchorMax = new Vector2(0, 1);
-            segmentTransform.pivot = new Vector2(0, 0.5f);
-            segmentTransform.sizeDelta = new Vector2(regionSize, totalHeight);
-            segmentTransform.anchoredPosition = new Vector2(i * regionSize, 0);
-
-            // Set color
-            Image segmentImage = segment.GetComponent<Image>();
-            string colorTag = colorTags[i % colorTags.Count];
-            segmentImage.color = GetColorFromTag(colorTag);
-
-            // Save reference
-            regionSegments.Add(segmentTransform);
-        }
+        Destroy(child.gameObject);
     }
 
-    private void UpdateArrowPosition()
+    // Calculate size of each region
+    float regionSize = totalWidth / numberOfRegions;
+
+    // Generate regions
+    for (int i = 0; i < numberOfRegions; i++)
     {
-        if (!playerBehaviour) return;
+        // Create region segment
+        GameObject segment = new GameObject("Region " + i, typeof(Image));
+        segment.transform.SetParent(barTransform);
 
-        // Determine player's current region
-        float playerPositionX = playerBehaviour.transform.position.x;
-        int regionIndex = Mathf.FloorToInt((playerPositionX - startX) / regionWidth);
+        // Configure RectTransform
+        RectTransform segmentTransform = segment.GetComponent<RectTransform>();
+        segmentTransform.anchorMin = new Vector2(0, 0);
+        segmentTransform.anchorMax = new Vector2(0, 1);
+        segmentTransform.pivot = new Vector2(0, 0.5f);
 
-        // Clamp to valid region index
-        regionIndex = Mathf.Clamp(regionIndex, 0, numberOfRegions - 1);
+        // Apply the totalHeight directly here to ensure the regions match the bar's height
+        segmentTransform.sizeDelta = new Vector2(regionSize, 0); 
 
-        // Update arrow position
-        float arrowX = regionSegments[regionIndex].anchoredPosition.x + regionWidth / 2;
-        arrowTransform.anchoredPosition = new Vector2(arrowX, arrowTransform.anchoredPosition.y);
+        // Position segments from left to right, adjusting their X based on region index
+        segmentTransform.anchoredPosition = new Vector2(i * regionSize, 0);
+
+        // Set color
+        Image segmentImage = segment.GetComponent<Image>();
+        string colorTag = colorTags[i % colorTags.Count];
+        segmentImage.color = GetColorFromTag(colorTag);
+
+        // Save reference
+        regionSegments.Add(segmentTransform);
     }
+}
+
+
+private void UpdateArrowPosition()
+{
+    if (!playerBehaviour) return;
+
+    // Get the player's position
+    float playerPositionX = playerBehaviour.transform.position.x;
+
+    // Calculate the player's position relative to the start of the bar
+    float playerRelativePosition = (playerPositionX - startX) / regionWidth;
+
+    // Clamp the relative position to ensure it stays within [0, 1]
+    playerRelativePosition = Mathf.Clamp01(playerRelativePosition);
+
+    // Map the player's relative position to the bar's total width (from 0 to totalWidth)
+    float arrowX = playerRelativePosition * totalWidth;
+
+    // Subtract the width of the color region bar from the arrow's X position
+    arrowX -= totalWidth;
+
+    // Dynamically adjust the arrow's Y position to be on top of the bar and account for its height
+    float arrowHeight = arrowTransform.rect.height; // Get the height of the arrow
+    //float arrowY = barTransform.position.y + (totalHeight / 2) + (arrowHeight / 2); // Place the arrow above the bar
+    float arrowY = barTransform.position.y + (totalHeight) + (arrowHeight / 2); // Place the arrow above the bar
+    // Set the arrow's anchored position, starting from the leftmost block and aligned to the top of the bar
+    arrowTransform.anchoredPosition = new Vector2(arrowX, arrowY);
+}
+
+
+
+
 
     private Color GetColorFromTag(string tag)
     {
@@ -89,6 +128,8 @@ public class DynamicColorBar : MonoBehaviour
         }
     }
 }
+
+
 /*
 using UnityEngine;
 using System.Collections.Generic;
