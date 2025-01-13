@@ -2,7 +2,7 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
 
-public class DynamicColorBar : MonoBehaviour
+public class PositionBasedColorChanger : MonoBehaviour
 {
     public RectTransform barTransform; // Reference to the RectTransform of the bar
     public RectTransform arrowTransform; // Reference to the arrow indicator
@@ -150,7 +150,7 @@ private void UpdateArrowPosition()
         }
     }
 
-    private Color GetColorFromTag(string tag)
+    public Color GetColorFromTag(string tag)
     {
         switch (tag)
         {

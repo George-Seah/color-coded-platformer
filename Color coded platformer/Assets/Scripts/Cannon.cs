@@ -1,98 +1,94 @@
-using UnityEngine;
-using UnityEngine.Events;
+using System;
 using System.Collections.Generic;
-
+using UnityEngine;
+using UnityEditor;
 public class Cannon : MonoBehaviour
 {
-    [SerializeField] GameObject cannonBall;
+    [SerializeField] private GameObject cannonBall;
     [Tooltip("How fast each cannonball moves")]
-    [SerializeField] float ballSpeed;
+    [SerializeField] private float ballSpeed;
     [Tooltip("Time between each shot")]
-    [SerializeField] float shootInterval;
+    [SerializeField] private float shootInterval;
     [Tooltip("Helps keep track of time between shots. Sets back to 0 after each shot")]
-    [SerializeField] float shootTime;
-    // List of colored cannonballs to shoot (set this in the Inspector)
+    [SerializeField] private float shootTime;
     [Tooltip("List of cannonball colors")]
     public List<string> colorsToShoot = new List<string>();
     [SerializeField] private int colorIndex = 0;
     private Color ballColor;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
-    }
+
+    [Tooltip("List of scripts to add to cannonballs")]
+    public List<MonoScript> scriptsToAdd = new List<MonoScript>();
 
     void FixedUpdate()
     {
         shootTime += Time.deltaTime;
-        if(shootTime > shootInterval){
-            cannonBall.gameObject.GetComponent<CannonBall>().speed = ballSpeed;
-            if(colorsToShoot[colorIndex] == "Red"){
-                ballColor = Color.red;
-                cannonBall.gameObject.layer = LayerMask.NameToLayer("Red");
-            }
-            else if(colorsToShoot[colorIndex] == "Green"){
-                ballColor = Color.green;
-                cannonBall.gameObject.layer = LayerMask.NameToLayer("Green");
-            }
-            else if(colorsToShoot[colorIndex] == "Blue"){
-                ballColor = Color.blue;
-                cannonBall.gameObject.layer = LayerMask.NameToLayer("Blue");
-            }
-            else{
-                //If the index is anything not red, green or blue, it will be the default settings
-                ballColor = Color.white;
-                cannonBall.gameObject.layer = LayerMask.NameToLayer("Default");
-            }
-            cannonBall.gameObject.GetComponent<SpriteRenderer>().color = ballColor;
-            Instantiate(cannonBall.gameObject, transform.position, transform.rotation);
-            
-            if(colorIndex < colorsToShoot.Count - 1){
-                colorIndex ++;
-                
-            }
-            else{
-                colorIndex = 0;
-            }
-            /*
-            else if(colorIndex > colorsToShoot.Count){
-                colorIndex = 0;
-            }
-            */
+        if (shootTime > shootInterval)
+        {
+            Fire(ballSpeed);
             shootTime = 0;
         }
-        
     }
-    //, List<string> colorsToShoot
-    public void Fire(float ballSpeed){
 
-        cannonBall.gameObject.GetComponent<CannonBall>().speed = ballSpeed;
-        if(colorsToShoot[colorIndex] == "Red"){
-            ballColor = Color.red;
-            cannonBall.gameObject.layer = LayerMask.NameToLayer("Red");
+    // Fire function (retained as per your request)
+    public void Fire(float ballSpeed)
+    {
+        // Instantiate the cannonball
+        GameObject instantiatedBall = Instantiate(cannonBall, transform.position, transform.rotation);
+
+        // Set ball speed
+        instantiatedBall.GetComponent<CannonBall>().speed = ballSpeed;
+
+        // Set cannonball color and layer
+        if(colorsToShoot.Count != 0){
+            if (colorsToShoot[colorIndex] == "Red")
+            {
+                ballColor = Color.red;
+                instantiatedBall.layer = LayerMask.NameToLayer("Red");
+                Debug.Log($"instantiatedBall should be red.");
+            }
+            else if (colorsToShoot[colorIndex] == "Green")
+            {
+                ballColor = Color.green;
+                instantiatedBall.layer = LayerMask.NameToLayer("Green");
+            }
+            else if (colorsToShoot[colorIndex] == "Blue")
+            {
+                ballColor = Color.blue;
+                instantiatedBall.layer = LayerMask.NameToLayer("Blue");
+            }
+            else
+            {
+                ballColor = Color.white;
+                instantiatedBall.layer = LayerMask.NameToLayer("Default");
+            }
+            // Apply color to the SpriteRenderer
+            instantiatedBall.GetComponent<SpriteRenderer>().color = ballColor;
         }
-        else if(colorsToShoot[colorIndex] == "Green"){
-            ballColor = Color.green;
-            cannonBall.gameObject.layer = LayerMask.NameToLayer("Green");
+
+
+
+
+        // Add scripts dynamically to the instantiated cannonball
+        foreach (MonoScript script in scriptsToAdd)
+        {
+            if (script != null)
+            {
+                Type scriptType = script.GetClass();
+                if (scriptType != null && scriptType.IsSubclassOf(typeof(MonoBehaviour)))
+                {
+                    instantiatedBall.AddComponent(scriptType);
+                }
+                else
+                {
+                    Debug.LogWarning($"The script '{script.name}' is not a valid MonoBehaviour.");
+                }
+            }
         }
-        else if(colorsToShoot[colorIndex] == "Blue"){
-            ballColor = Color.blue;
-            cannonBall.gameObject.layer = LayerMask.NameToLayer("Blue");
+
+        // Update the color index
+        if(colorsToShoot.Count != 0){
+            colorIndex = (colorIndex + 1) % colorsToShoot.Count;
         }
-        else{
-            //If the index is anything not red, green or blue, it will be the default settings
-            ballColor = Color.white;
-            cannonBall.gameObject.layer = LayerMask.NameToLayer("Default");
-        }
-        cannonBall.gameObject.GetComponent<SpriteRenderer>().color = ballColor;
-        Instantiate(cannonBall.gameObject, transform.position, transform.rotation);
         
-        if(colorIndex < colorsToShoot.Count - 1){
-            colorIndex ++;
-            
-        }
-        else{
-            colorIndex = 0;
-        }
     }
 }
