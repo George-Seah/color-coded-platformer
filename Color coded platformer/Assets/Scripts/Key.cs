@@ -53,6 +53,7 @@ public class Key : MonoBehaviour
             rb.AddForce(Vector2.up * 2f, ForceMode2D.Impulse);
 
             isPickedUp = false; // Update the state
+            canBeStolen = true;
             Debug.Log("Key dropped");
         }
     }
@@ -148,7 +149,8 @@ public class Key : MonoBehaviour
     {
         if (isPickedUp && transform.parent.gameObject.layer != LayerMask.NameToLayer("Player")
         && transform.parent.gameObject.layer != LayerMask.NameToLayer("Default")
-        && transform.parent.gameObject.layer != gameObject.layer)
+        && transform.parent.gameObject.layer != gameObject.layer
+        && gameObject.layer != LayerMask.NameToLayer("Default"))
         {
             Drop();
         }
