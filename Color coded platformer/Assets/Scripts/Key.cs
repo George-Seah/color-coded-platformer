@@ -39,6 +39,12 @@ public class Key : MonoBehaviour
         if (isPickedUp)
         {
             // Detach from the player
+            if(transform.parent.gameObject.CompareTag("Waddler")){
+                transform.parent.gameObject.GetComponent<Waddler>().SetKey(null);
+            }
+            else if(transform.parent.gameObject.CompareTag("Player")){
+                transform.parent.gameObject.GetComponent<PlayerBehaviour>().SetKey(null);
+            }
             transform.SetParent(null);
 
             // Reset Rigidbody2D properties for physical interaction
@@ -147,11 +153,15 @@ public class Key : MonoBehaviour
     }
     void Update()
     {
-        if (isPickedUp && transform.parent.gameObject.layer != LayerMask.NameToLayer("Player")
-        && transform.parent.gameObject.layer != LayerMask.NameToLayer("Default")
-        && transform.parent.gameObject.layer != gameObject.layer
-        && gameObject.layer != LayerMask.NameToLayer("Default"))
-        {
+        if(isPickedUp && transform.parent.gameObject.layer != LayerMask.NameToLayer("Default") &&
+        gameObject.layer != LayerMask.NameToLayer("Default") &&
+        transform.parent.gameObject.layer != LayerMask.NameToLayer("Player") &&
+        transform.parent.gameObject.layer != gameObject.layer){
+            Drop();
+        }
+        else if(isPickedUp && gameObject.layer != LayerMask.NameToLayer("Default") &&
+        transform.parent.gameObject.layer == LayerMask.NameToLayer("Player") &&
+        Physics2D.GetIgnoreLayerCollision(LayerMask.NameToLayer("Player"), gameObject.layer)){
             Drop();
         }
     }
