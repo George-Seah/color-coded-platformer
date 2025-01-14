@@ -4,13 +4,15 @@ using System.Collections.Generic;
 
 public class PositionBasedColorChanger : MonoBehaviour
 {
+    public PlayerBehaviour playerBehaviour; // Reference to player
+    [Header("UI Settings")]
     public RectTransform barTransform; // Reference to the RectTransform of the bar
     public RectTransform arrowTransform; // Reference to the arrow indicator
     public List<string> colorTags = new List<string> { "Default", "Red", "Green", "Blue" }; // Color tags
+    [Header("Bar size")]
     public float totalWidth = 250f; // Total width of the bar (in pixels)
     public float totalHeight = 30f; // Height of the bar
-    private int numberOfRegions; // Number of regions
-    public PlayerBehaviour playerBehaviour; // Reference to player
+    [Header("Level specific changes")]
     public float startX; // Starting position for regions
     public float startY; // Starting position for regions
     public float regionWidth; // Width of each region
@@ -21,7 +23,6 @@ public class PositionBasedColorChanger : MonoBehaviour
 
     void Start()
     {
-        numberOfRegions = colorTags.Count;
         PositionBarInBottomRight();
         GenerateBar();
     }
@@ -57,10 +58,10 @@ public class PositionBasedColorChanger : MonoBehaviour
         }
 
         // Calculate size of each region
-        float regionSize = totalWidth / numberOfRegions;
+        float regionSize = totalWidth / colorTags.Count;
 
         // Generate regions
-        for (int i = 0; i < numberOfRegions; i++)
+        for (int i = 0; i < colorTags.Count; i++)
         {
             // Create region segment
             GameObject segment = new GameObject("Region " + i, typeof(Image));
@@ -97,10 +98,10 @@ private void UpdateArrowPosition()
     float playerRelativePosition = (playerPosition - startX) / regionWidth;
 
     // Normalize the player's relative position to the number of regions
-    playerRelativePosition = Mathf.Repeat(playerRelativePosition, numberOfRegions); // This ensures it loops between 0 and 1
+    playerRelativePosition = Mathf.Repeat(playerRelativePosition, colorTags.Count); // This ensures it loops between 0 and 1
 
     // Map the player's relative position to the bar's total width (from 0 to totalWidth)
-    float arrowX = ((playerRelativePosition * totalWidth) / numberOfRegions) - totalWidth; // No subtraction, just directly scale to total width
+    float arrowX = ((playerRelativePosition * totalWidth) / colorTags.Count) - totalWidth; // No subtraction, just directly scale to total width
 
     // Dynamically adjust the arrow's Y position to be on top of the bar and account for its height
     float arrowHeight = arrowTransform.rect.height; // Get the height of the arrow

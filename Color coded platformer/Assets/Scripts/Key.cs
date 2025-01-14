@@ -144,4 +144,13 @@ public class Key : MonoBehaviour
             return; // Skip further processing for ladder collisions
         }
     }
+    void Update()
+    {
+        if (isPickedUp && transform.parent.gameObject.layer != LayerMask.NameToLayer("Player")
+        && transform.parent.gameObject.layer != LayerMask.NameToLayer("Default")
+        && transform.parent.gameObject.layer != gameObject.layer)
+        {
+            Drop();
+        }
+    }
 }
