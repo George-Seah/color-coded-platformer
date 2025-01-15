@@ -72,12 +72,12 @@
   },
   "15": {
     "$type": "Esper.ESave.SavableObjects.SavableData`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], ESave, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-    "value": true,
+    "value": false,
     "id": "15"
   },
   "16": {
     "$type": "Esper.ESave.SavableObjects.SavableData`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], ESave, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-    "value": true,
+    "value": false,
     "id": "16"
   }
 }
