@@ -39,35 +39,39 @@ public class CloudCannon : MonoBehaviour
         if(shootTime > shootInterval){
             //GameObject newWaddler = Instantiate(waddler, transform.position, Quaternion.identity, gameObject.transform);
             //Waddler waddlerScript = newWaddler.GetComponent<Waddler>();
-            cloud.gameObject.GetComponent<Cloud>().speed = cloudSpeed;
-            if(colorsToShoot[colorIndex] == "Red"){
-                cloudColor = Color.red;
-                cloud.gameObject.layer = LayerMask.NameToLayer("Red");
+            if(colorsToShoot.Count != 0){
+                cloud.gameObject.GetComponent<Cloud>().speed = cloudSpeed;
+                if(colorsToShoot[colorIndex] == "Red"){
+                    cloudColor = Color.red;
+                    cloud.gameObject.layer = LayerMask.NameToLayer("Red");
+                }
+                else if(colorsToShoot[colorIndex] == "Green"){
+                    cloudColor = Color.green;
+                    cloud.gameObject.layer = LayerMask.NameToLayer("Green");
+                }
+                else if(colorsToShoot[colorIndex] == "Blue"){
+                    cloudColor = Color.blue;
+                    cloud.gameObject.layer = LayerMask.NameToLayer("Blue");
+                }
+                else{
+                    //If the index is anything not red, green or blue, it will be the default settings
+                    cloudColor = Color.white;
+                    cloud.gameObject.layer = LayerMask.NameToLayer("Default");
+                }
+                cloud.gameObject.GetComponent<SpriteRenderer>().color = cloudColor;
             }
-            else if(colorsToShoot[colorIndex] == "Green"){
-                cloudColor = Color.green;
-                cloud.gameObject.layer = LayerMask.NameToLayer("Green");
-            }
-            else if(colorsToShoot[colorIndex] == "Blue"){
-                cloudColor = Color.blue;
-                cloud.gameObject.layer = LayerMask.NameToLayer("Blue");
-            }
-            else{
-                //If the index is anything not red, green or blue, it will be the default settings
-                cloudColor = Color.white;
-                cloud.gameObject.layer = LayerMask.NameToLayer("Default");
-            }
-            cloud.gameObject.GetComponent<SpriteRenderer>().color = cloudColor;
             GameObject newCloud = Instantiate(cloud.gameObject, transform.position, transform.rotation);
             cloudsSpawned.Add(newCloud);
             //transform.eulerAngles.z
             newCloud.GetComponent<Cloud>().SetDirection(transform, cloudSpeed, tiltCloud, customTilt);
-            if(colorIndex < colorsToShoot.Count - 1){
-                colorIndex ++;
-                
-            }
-            else{
-                colorIndex = 0;
+            if(colorsToShoot.Count != 0){
+                if(colorIndex < colorsToShoot.Count - 1){
+                    colorIndex ++;
+                    
+                }
+                else{
+                    colorIndex = 0;
+                }
             }
             /*
             else if(colorIndex > colorsToShoot.Count){

@@ -49,7 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c5efb9b45abc61049bf6c6e35bc389ab, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 1
+  speed: 2
   direction: {x: 1, y: 0, z: 0}
   objectsOnCloud: []
 --- !u!114 &8509706754577653002

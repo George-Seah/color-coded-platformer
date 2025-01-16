@@ -52,6 +52,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   direction: {x: 1, y: 0, z: 0}
+  objectsOnCloud: []
 --- !u!114 &86228483013482060
 MonoBehaviour:
   m_ObjectHideFlags: 0
