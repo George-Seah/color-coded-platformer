@@ -70,6 +70,32 @@ public class GroundCollisionCheck : MonoBehaviour
                collision.gameObject.CompareTag("Cloud") ||
                collision.gameObject.CompareTag("Moving Platform");
     }
+
+    void Update(){
+        if(playerBehaviour.gameObject.GetComponent<ColorPositionChange>() != null){
+            if(playerBehaviour.gameObject.layer == LayerMask.NameToLayer("Red")){
+                Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("GroundCollisionCheck"), LayerMask.NameToLayer("Red"), false);
+                Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("GroundCollisionCheck"), LayerMask.NameToLayer("Blue"), true);
+                Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("GroundCollisionCheck"), LayerMask.NameToLayer("Green"), true);
+            }
+            else if(playerBehaviour.gameObject.layer == LayerMask.NameToLayer("Green")){
+                Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("GroundCollisionCheck"), LayerMask.NameToLayer("Green"), false);
+                Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("GroundCollisionCheck"), LayerMask.NameToLayer("Blue"), true);
+                Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("GroundCollisionCheck"), LayerMask.NameToLayer("Red"), true);
+            }
+            else if(playerBehaviour.gameObject.layer == LayerMask.NameToLayer("Blue")){
+                Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("GroundCollisionCheck"), LayerMask.NameToLayer("Blue"), false);
+                Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("GroundCollisionCheck"), LayerMask.NameToLayer("Red"), true);
+                Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("GroundCollisionCheck"), LayerMask.NameToLayer("Green"), true);
+            }
+            else{
+                Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("GroundCollisionCheck"), LayerMask.NameToLayer("Red"), false);
+                Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("GroundCollisionCheck"), LayerMask.NameToLayer("Blue"), false);
+                Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("GroundCollisionCheck"), LayerMask.NameToLayer("Green"), false);
+            }
+        }
+
+    } 
 }
 
 /*
