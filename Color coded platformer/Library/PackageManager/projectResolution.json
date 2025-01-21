@@ -31,6 +31,13 @@
       "version": "2.0.1",
       "source": "builtin"
     },
+    "com.unity.feature.cinematic@1.0.0": {
+      "name": "com.unity.feature.cinematic",
+      "resolvedPath": "C:\\Github\\color-coded-platformer\\Color coded platformer\\Library\\PackageCache\\com.unity.feature.cinematic",
+      "fingerprint": "909b10e8bd14b5f2297e2de1b98da9e83079f177",
+      "version": "1.0.0",
+      "source": "builtin"
+    },
     "com.unity.ide.rider@3.0.31": {
       "name": "com.unity.ide.rider",
       "resolvedPath": "C:\\Github\\color-coded-platformer\\Color coded platformer\\Library\\PackageCache\\com.unity.ide.rider",
@@ -355,6 +362,46 @@
       "version": "17.0.3",
       "source": "builtin"
     },
+    "com.unity.sequences@2.1.3": {
+      "name": "com.unity.sequences",
+      "resolvedPath": "C:\\Github\\color-coded-platformer\\Color coded platformer\\Library\\PackageCache\\com.unity.sequences",
+      "fingerprint": "f969dac3a2cb5363dec197f50b6b8f930dda02c4",
+      "editorCompatibility": "2022.1.0a1",
+      "version": "2.1.3",
+      "source": "registry"
+    },
+    "com.unity.formats.fbx@5.1.1": {
+      "name": "com.unity.formats.fbx",
+      "resolvedPath": "C:\\Github\\color-coded-platformer\\Color coded platformer\\Library\\PackageCache\\com.unity.formats.fbx",
+      "fingerprint": "4ad3eb16b6169d696abf31e81f575752527d445e",
+      "editorCompatibility": "2020.3.0a1",
+      "version": "5.1.1",
+      "source": "registry"
+    },
+    "com.unity.formats.alembic@2.4.0": {
+      "name": "com.unity.formats.alembic",
+      "resolvedPath": "C:\\Github\\color-coded-platformer\\Color coded platformer\\Library\\PackageCache\\com.unity.formats.alembic",
+      "fingerprint": "9d89ad59ac867821b74ba85f6a2a7b7f20e49e1b",
+      "editorCompatibility": "2019.4.0a1",
+      "version": "2.4.0",
+      "source": "registry"
+    },
+    "com.unity.cinemachine@2.10.1": {
+      "name": "com.unity.cinemachine",
+      "resolvedPath": "C:\\Github\\color-coded-platformer\\Color coded platformer\\Library\\PackageCache\\com.unity.cinemachine",
+      "fingerprint": "1a67f3dee6b9ccf2ae0f31d784489d79c8189b07",
+      "editorCompatibility": "2019.4.0a1",
+      "version": "2.10.1",
+      "source": "registry"
+    },
+    "com.unity.recorder@5.1.1": {
+      "name": "com.unity.recorder",
+      "resolvedPath": "C:\\Github\\color-coded-platformer\\Color coded platformer\\Library\\PackageCache\\com.unity.recorder",
+      "fingerprint": "b7e35dfd1c28b88ef57d70dfd9ceb57dadc56c0d",
+      "editorCompatibility": "2023.1.1f1",
+      "version": "5.1.1",
+      "source": "registry"
+    },
     "com.unity.2d.animation@10.1.3": {
       "name": "com.unity.2d.animation",
       "resolvedPath": "C:\\Github\\color-coded-platformer\\Color coded platformer\\Library\\PackageCache\\com.unity.2d.animation",
@@ -450,6 +497,30 @@
       "editorCompatibility": "2023.3.0b1",
       "version": "1.0.1",
       "source": "builtin"
+    },
+    "com.unity.bindings.openimageio@1.0.0": {
+      "name": "com.unity.bindings.openimageio",
+      "resolvedPath": "C:\\Github\\color-coded-platformer\\Color coded platformer\\Library\\PackageCache\\com.unity.bindings.openimageio",
+      "fingerprint": "3229d2aa5c76c70269dc58c79d5864ec84fa4a74",
+      "editorCompatibility": "2023.1.0a1",
+      "version": "1.0.0",
+      "source": "registry"
+    },
+    "com.autodesk.fbx@5.1.1": {
+      "name": "com.autodesk.fbx",
+      "resolvedPath": "C:\\Github\\color-coded-platformer\\Color coded platformer\\Library\\PackageCache\\com.autodesk.fbx",
+      "fingerprint": "5797ff6b31c7c66189bffe1adc9cbf0ad5a9cbbf",
+      "editorCompatibility": "2020.3.0a1",
+      "version": "5.1.1",
+      "source": "registry"
+    },
+    "com.unity.settings-manager@2.0.1": {
+      "name": "com.unity.settings-manager",
+      "resolvedPath": "C:\\Github\\color-coded-platformer\\Color coded platformer\\Library\\PackageCache\\com.unity.settings-manager",
+      "fingerprint": "56a930affa1e4462d3595b5c19a1c2a4bf2015d2",
+      "editorCompatibility": "2018.4.0a1",
+      "version": "2.0.1",
+      "source": "registry"
     },
     "com.unity.2d.common@9.0.6": {
       "name": "com.unity.2d.common",
