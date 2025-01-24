@@ -1081,6 +1081,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e909ef4dcac331e47b1f8963d0c014e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colorOffset: 0
+  particleColor: {r: 1, g: 1, b: 1, a: 1}
   startSize: 0.2
   startSpeed: 1
   particleSystemScale: 0.5
@@ -2730,6 +2732,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e909ef4dcac331e47b1f8963d0c014e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colorOffset: 0
+  particleColor: {r: 1, g: 1, b: 1, a: 1}
   startSize: 0.2
   startSpeed: 1
   particleSystemScale: 0.5
@@ -2844,7 +2848,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2556980997122668365, guid: 7520555fcb34b6d42b9c29b60656eb28, type: 3}
       propertyPath: playerSpawnPoint.x
-      value: 32.6
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2556980997122668365, guid: 7520555fcb34b6d42b9c29b60656eb28, type: 3}
       propertyPath: playerSpawnPoint.y
@@ -3447,10 +3451,14 @@ MonoBehaviour:
   m_GameObject: {fileID: 1351049417}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: db4e66c17b6e3734680e890ff157abc1, type: 3}
+  m_Script: {fileID: 11500000, guid: e909ef4dcac331e47b1f8963d0c014e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   colorOffset: 0
+  particleColor: {r: 1, g: 1, b: 1, a: 1}
+  startSize: 0.2
+  startSpeed: 1
+  particleSystemScale: 0.5
 --- !u!4 &1351049422 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 3647841661996313190, guid: ff8bc5c79479f9b41bbc40bcf7b225af, type: 3}
@@ -3753,6 +3761,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e909ef4dcac331e47b1f8963d0c014e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  colorOffset: 0
+  particleColor: {r: 1, g: 1, b: 1, a: 1}
   startSize: 0.2
   startSpeed: 1
   particleSystemScale: 0.5
