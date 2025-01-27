@@ -25,6 +25,7 @@ public class PositionBasedColorChanger : MonoBehaviour
     {
         PositionBarInBottomRight();
         GenerateBar();
+        playerBehaviour = FindFirstObjectByType<PlayerBehaviour>();
     }
 
     void Update()

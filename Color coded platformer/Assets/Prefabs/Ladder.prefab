@@ -68,7 +68,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedColor: 3
-  changeColor: 1
   changeLayerMask: 1
 --- !u!212 &2621354918004798679
 SpriteRenderer:
@@ -258,6 +257,10 @@ PrefabInstance:
       objectReference: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
     - target: {fileID: 892427768073568870, guid: ae29d790e32d3384eb896308e7d71559, type: 3}
       propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 892427768073568870, guid: ae29d790e32d3384eb896308e7d71559, type: 3}
+      propertyPath: m_SortingOrder
       value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 2613226622487470225, guid: ae29d790e32d3384eb896308e7d71559, type: 3}

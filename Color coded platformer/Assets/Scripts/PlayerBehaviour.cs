@@ -3,6 +3,7 @@ using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
 public class PlayerBehaviour : MonoBehaviour
 {
+    Animator anim;
     private Rigidbody2D rb;
     [SerializeField] private float moveSpeed = 5f;
     public PlayerInputActions playerControls;
@@ -12,7 +13,7 @@ public class PlayerBehaviour : MonoBehaviour
     private InputAction drop;
     private InputAction interact;
     public float gravityScale = 10f;
-    public float fallingGravityScale = 40f;
+    public float fallingGravityScale = 30f;
     public float buttonTime = 0.3f;
     [SerializeField] private float jumpTime = 0f;
     [SerializeField] private bool isGrounded;
@@ -20,13 +21,11 @@ public class PlayerBehaviour : MonoBehaviour
     [SerializeField] private bool jumping = false;
     [SerializeField] private float jumpAmount = 1.25f;
     [SerializeField] private float jumpForce;
-    [SerializeField] private float moveDirectionX;
-    [SerializeField] private float moveDirectionY;
     [SerializeField] private Key currentKey;
     [SerializeField] private bool holdingKey;
     public string color;
     public bool onLadder;
-    bool lookingRight;
+    [SerializeField] bool lookingRight;
     [SerializeField] private bool landedOnWaddler;
 
     float waddlerBounceForceButtonHeld = 1.25f;
@@ -43,6 +42,7 @@ public class PlayerBehaviour : MonoBehaviour
 
     private void Start()
     {
+        anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         jumpForce = Mathf.Sqrt(jumpAmount * -2 * Physics2D.gravity.y);
     }
@@ -275,13 +275,20 @@ public class PlayerBehaviour : MonoBehaviour
     {
         moveDirection = move.ReadValue<Vector2>();
         rb.linearVelocity = new Vector2(moveDirection.x * moveSpeed, rb.linearVelocity.y);
-        moveDirectionX = moveDirection.x;
-        moveDirectionY = moveDirection.y;
+        anim.SetFloat("XMovement", moveDirection.x);
         if(moveDirection.x > 0){
            lookingRight = true;
         }
         else if(moveDirection.x < 0){
            lookingRight = false;
+        }
+        if(lookingRight && transform.eulerAngles.y != 0){
+            transform.rotation = Quaternion.Euler(transform.eulerAngles.x, 0, transform.eulerAngles.z);
+
+        }
+        else if(!lookingRight && transform.eulerAngles.y != 180){
+            transform.rotation = Quaternion.Euler(transform.eulerAngles.x, 180, transform.eulerAngles.z);
+
         }
         /*
         if(currentKey != null && currentKey.ReadPickedUp() && !currentKey.transform.parent.gameObject.CompareTag("Waddler")){
@@ -296,6 +303,7 @@ public class PlayerBehaviour : MonoBehaviour
         }
         if (isGrounded)
         {
+            anim.SetBool("grounded", true);
             rb.gravityScale = gravityScale;
             landedOnWaddler = false;
             //Debug.Log("isGrounded bool in FixedUpdate activating gravity.");
@@ -304,7 +312,10 @@ public class PlayerBehaviour : MonoBehaviour
                 jumpTime = 0;
             }
         }
-        else if (!jumping && !isGrounded && !onLadder)
+        else{
+            anim.SetBool("grounded", false);
+        }
+        if (!jumping && !isGrounded && !onLadder)
         {
             rb.gravityScale = fallingGravityScale;
             Debug.Log("!jumping && !isGrounded bools in FixedUpdate activating gravity.");
