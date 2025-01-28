@@ -25,7 +25,7 @@ public class PlayerBehaviour : MonoBehaviour
     [SerializeField] private bool holdingKey;
     public string color;
     public bool onLadder;
-    [SerializeField] bool lookingRight;
+    public bool lookingRight;
     [SerializeField] private bool landedOnWaddler;
 
     float waddlerBounceForceButtonHeld = 1.25f;
@@ -295,11 +295,15 @@ public class PlayerBehaviour : MonoBehaviour
             //currentKey.SetDirection(lookingRight);///Check this if direction isn;t right or key somehow teleports
         }
         */
-        if(currentKey != null && currentKey.ReadPickedUp() && currentKey.transform.parent.gameObject.CompareTag("Player")){
-            currentKey.SetDirection(lookingRight);///Check this if direction isn;t right or key somehow teleports
+        //currentKey.transform.parent.parent.gameObject.CompareTag("Player")
+        if(currentKey != null && holdingKey && currentKey.transform.parent.gameObject.CompareTag("Player")){
+            //currentKey.SetDirection(lookingRight);///Check this if direction isn't right or key somehow teleports
+        }
+        if(currentKey != null && currentKey.ReadPickedUp() && currentKey.transform.parent.gameObject.CompareTag("Waddler")){
+            currentKey = null;
         }
         if(currentKey == null){
-            holdingKey = false;
+            //holdingKey = false;
         }
         if (isGrounded)
         {

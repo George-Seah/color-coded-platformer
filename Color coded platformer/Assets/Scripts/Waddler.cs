@@ -4,7 +4,7 @@ using System.Collections;
 [RequireComponent(typeof(Rigidbody2D))]
 public class Waddler : MonoBehaviour
 {
-    [SerializeField] bool lookingRight;
+    public bool lookingRight;
     [SerializeField] float speed;
     private Rigidbody2D rb;
     [SerializeField] private Key currentKey;

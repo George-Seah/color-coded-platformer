@@ -3771,7 +3771,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 385859509364471977, guid: 7520555fcb34b6d42b9c29b60656eb28, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8.070114
+      value: 11.07
       objectReference: {fileID: 0}
     - target: {fileID: 385859509364471977, guid: 7520555fcb34b6d42b9c29b60656eb28, type: 3}
       propertyPath: m_LocalPosition.y
@@ -3811,11 +3811,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2556980997122668365, guid: 7520555fcb34b6d42b9c29b60656eb28, type: 3}
       propertyPath: playerSpawnPoint.x
-      value: 0
+      value: 11.07
       objectReference: {fileID: 0}
     - target: {fileID: 2556980997122668365, guid: 7520555fcb34b6d42b9c29b60656eb28, type: 3}
       propertyPath: playerSpawnPoint.y
-      value: 0
+      value: 16.5
       objectReference: {fileID: 0}
     - target: {fileID: 7000228589990126056, guid: 7520555fcb34b6d42b9c29b60656eb28, type: 3}
       propertyPath: m_Name
@@ -4057,12 +4057,12 @@ SceneRoots:
   - {fileID: 434866970}
   - {fileID: 326664923}
   - {fileID: 1242042930}
+  - {fileID: 2017063225}
   - {fileID: 484123762}
   - {fileID: 793245113}
   - {fileID: 938990317}
   - {fileID: 757123132}
   - {fileID: 869855852}
-  - {fileID: 2017063225}
   - {fileID: 1094904057}
   - {fileID: 1032891038}
   - {fileID: 1316534538}

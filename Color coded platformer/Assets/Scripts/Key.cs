@@ -6,8 +6,9 @@ public class Key : MonoBehaviour
     private Collider2D keyCollider;
     [SerializeField] private bool isPickedUp = false;
 
-    private Transform playerTransform;
+    [SerializeField] private Transform playerTransform;
     [SerializeField] bool canBeStolen = true;
+    [SerializeField] bool facingRight = true;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -81,6 +82,7 @@ public class Key : MonoBehaviour
                 GetComponent<SpriteRenderer>().flipX = false;
                 Debug.Log("Key should be facing left.");
             }
+            facingRight = holderIsLookingRight;
         }
 
     }
@@ -164,5 +166,24 @@ public class Key : MonoBehaviour
         Physics2D.GetIgnoreLayerCollision(LayerMask.NameToLayer("Player"), gameObject.layer)){
             Drop();
         }
+
+        if (isPickedUp)
+        {
+            if (transform.parent != null && transform.parent.gameObject.CompareTag("Waddler"))
+            {
+                if(facingRight){
+                    transform.localPosition = new Vector3(1f, 0f, 0f);
+                    GetComponent<SpriteRenderer>().flipX = true;
+                    Debug.Log("Key should be facing right.");
+                }
+                else{
+                    transform.localPosition = new Vector3(-1f, 0f, 0f);
+                    GetComponent<SpriteRenderer>().flipX = false;
+                    Debug.Log("Key should be facing left.");
+                }
+            }
+        }
+
+
     }
 }
