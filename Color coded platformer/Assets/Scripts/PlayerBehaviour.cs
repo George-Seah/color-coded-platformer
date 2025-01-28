@@ -21,7 +21,7 @@ public class PlayerBehaviour : MonoBehaviour
     [SerializeField] private bool jumping = false;
     [SerializeField] private float jumpAmount = 1.25f;
     [SerializeField] private float jumpForce;
-    [SerializeField] private Key currentKey;
+    [SerializeField] public Key currentKey { get; private set; }
     [SerializeField] private bool holdingKey;
     public string color;
     public bool onLadder;
@@ -359,6 +359,12 @@ public class PlayerBehaviour : MonoBehaviour
     }
     public void SetKey(Key key){
         currentKey = key;
+        if(currentKey == null){
+            holdingKey = false;
+        }
+        else{
+            holdingKey = true;
+        }
     }
     public void LandedOnWaddler(){
         landedOnWaddler = true;

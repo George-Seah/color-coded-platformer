@@ -93,8 +93,21 @@ public class Key : MonoBehaviour
         {
 
             Debug.Log("Key detects player while being held by Waddler.");
-            if(canBeStolen){
+            if(canBeStolen && collision.gameObject.GetComponent<PlayerBehaviour>().currentKey == null){
+                transform.parent.gameObject.GetComponent<Waddler>().SetKey(null);
                 collision.gameObject.GetComponent<PlayerBehaviour>().SetKey(gameObject.GetComponent<Key>());
+                SetDirection(collision.gameObject.GetComponent<PlayerBehaviour>().lookingRight);
+                /*
+                if(!collision.gameObject.GetComponent<PlayerBehaviour>().lookingRight){
+                    transform.localPosition = new Vector3(1f, 0f, 0f);
+                    GetComponent<SpriteRenderer>().flipX = true;
+                    Debug.Log("Key should be facing right.");
+                }
+                else{
+                    transform.localPosition = new Vector3(-1f, 0f, 0f);
+                    GetComponent<SpriteRenderer>().flipX = false;
+                    Debug.Log("Key should be facing left.");
+                }*/
                 Debug.Log("Key should be stolen by Player from Waddler.");
                 canBeStolen = false;
                 PickUp(collision.gameObject.transform);
@@ -105,8 +118,22 @@ public class Key : MonoBehaviour
         {
 
             Debug.Log("Key detects Waddler while being held by Player.");
-            if(canBeStolen){
+            if(canBeStolen && collision.gameObject.GetComponent<Waddler>().currentKey == null){
+                transform.parent.gameObject.GetComponent<PlayerBehaviour>().SetKey(null);
                 collision.gameObject.GetComponent<Waddler>().SetKey(gameObject.GetComponent<Key>());
+                SetDirection(collision.gameObject.GetComponent<Waddler>().lookingRight);
+                /*
+                if(!collision.gameObject.GetComponent<Waddler>().lookingRight){
+                    transform.localPosition = new Vector3(1f, 0f, 0f);
+                    GetComponent<SpriteRenderer>().flipX = true;
+                    Debug.Log("Key should be facing right.");
+                }
+                else{
+                    transform.localPosition = new Vector3(-1f, 0f, 0f);
+                    GetComponent<SpriteRenderer>().flipX = false;
+                    Debug.Log("Key should be facing left.");
+                }
+                */
                 Debug.Log("Key should be stolen by Waddler from Player.");
                 canBeStolen = false;
                 PickUp(collision.gameObject.transform);
@@ -169,7 +196,7 @@ public class Key : MonoBehaviour
 
         if (isPickedUp)
         {
-            if (transform.parent != null && transform.parent.gameObject.CompareTag("Waddler"))
+            if (transform.parent != null && (transform.parent.gameObject.CompareTag("Waddler") || transform.parent.gameObject.CompareTag("Player")))
             {
                 if(facingRight){
                     transform.localPosition = new Vector3(1f, 0f, 0f);
@@ -182,6 +209,18 @@ public class Key : MonoBehaviour
                     Debug.Log("Key should be facing left.");
                 }
             }
+            /*
+            if(transform.parent != null && transform.parent.gameObject.CompareTag("Player")){
+                if(transform.parent.gameObject.GetComponent<PlayerBehaviour>().lookingRight){
+                    GetComponent<SpriteRenderer>().flipX = true;
+                    facingRight = true;
+                }
+                else{
+                    GetComponent<SpriteRenderer>().flipX = false;
+                    facingRight = false;
+                }
+            }
+            */
         }
 
 

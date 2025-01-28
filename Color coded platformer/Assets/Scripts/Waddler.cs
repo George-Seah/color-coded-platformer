@@ -7,7 +7,7 @@ public class Waddler : MonoBehaviour
     public bool lookingRight;
     [SerializeField] float speed;
     private Rigidbody2D rb;
-    [SerializeField] private Key currentKey;
+    public Key currentKey { get; private set; }
     //[SerializeField] private Vector2 respawn;
     [SerializeField] bool grounded;
     private Collider2D waddlerCollider;
