@@ -198,14 +198,36 @@ public class Key : MonoBehaviour
         {
             if (transform.parent != null && (transform.parent.gameObject.CompareTag("Waddler") || transform.parent.gameObject.CompareTag("Player")))
             {
+                if(transform.parent.gameObject.CompareTag("Waddler")){
+                    SetDirection(transform.parent.gameObject.GetComponent<Waddler>().lookingRight);
+                }
+                else if(transform.parent.gameObject.CompareTag("Player") && transform.parent.gameObject.GetComponent<PlayerBehaviour>().lookingRight){
+                    facingRight = true;
+                }
+                else if(transform.parent.gameObject.CompareTag("Player") && !transform.parent.gameObject.GetComponent<PlayerBehaviour>().lookingRight){
+                    facingRight = false;
+                }
                 if(facingRight){
-                    transform.localPosition = new Vector3(1f, 0f, 0f);
-                    GetComponent<SpriteRenderer>().flipX = true;
+                    if(transform.parent.gameObject.CompareTag("Waddler")){
+                        transform.localPosition = new Vector3(1f, 0f, 0f);
+                        GetComponent<SpriteRenderer>().flipX = true;
+                    }
+                    if(transform.parent.gameObject.CompareTag("Player")){
+                        transform.localPosition = new Vector3(1f, 0f, 0f);
+                        GetComponent<SpriteRenderer>().flipX = false;
+                    }
+                    
                     Debug.Log("Key should be facing right.");
                 }
                 else{
-                    transform.localPosition = new Vector3(-1f, 0f, 0f);
-                    GetComponent<SpriteRenderer>().flipX = false;
+                    if(transform.parent.gameObject.CompareTag("Waddler")){
+                        transform.localPosition = new Vector3(-1f, 0f, 0f);
+                        GetComponent<SpriteRenderer>().flipX = false;
+                    }
+                    if(transform.parent.gameObject.CompareTag("Player")){
+                        transform.localPosition = new Vector3(1f, 0f, 0f);
+                        GetComponent<SpriteRenderer>().flipX = false;
+                    }
                     Debug.Log("Key should be facing left.");
                 }
             }

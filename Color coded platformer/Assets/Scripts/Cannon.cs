@@ -14,6 +14,8 @@ public class Cannon : MonoBehaviour
     [Tooltip("List of cannonball colors")]
     public List<string> colorsToShoot = new List<string>();
     [SerializeField] private int colorIndex = 0;
+    public List<int> colorPositionOffset = new List<int>();
+    [SerializeField] private int colorPositionOffsetIndex = 0;
     private Color ballColor;
 
     [Tooltip("List of scripts to add to cannonballs")]
@@ -63,9 +65,14 @@ public class Cannon : MonoBehaviour
             }
             // Apply color to the SpriteRenderer
             instantiatedBall.GetComponent<SpriteRenderer>().color = ballColor;
+            // Update the color index
+            colorIndex = (colorIndex + 1) % colorsToShoot.Count;
         }
-
-
+        //Set cannonball color position change offset
+        if(colorPositionOffset.Count != 0){
+            instantiatedBall.GetComponent<ColorPositionChange>().SetOffset(colorPositionOffset[colorPositionOffsetIndex]);
+            colorPositionOffsetIndex = (colorPositionOffsetIndex + 1) % colorPositionOffset.Count;
+        }
 
 
         // Add scripts dynamically to the instantiated cannonball
@@ -83,11 +90,6 @@ public class Cannon : MonoBehaviour
                     Debug.LogWarning($"The script '{script.name}' is not a valid MonoBehaviour.");
                 }
             }
-        }
-
-        // Update the color index
-        if(colorsToShoot.Count != 0){
-            colorIndex = (colorIndex + 1) % colorsToShoot.Count;
         }
         
     }

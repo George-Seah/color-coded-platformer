@@ -15,8 +15,10 @@ public class ObjectSpawner : MonoBehaviour
     // List of colored cannonballs to shoot (set this in the Inspector)
     [Tooltip("List of cannonball colors")]
     public List<string> colorsToShoot = new List<string>();
-    public List<GameObject> objectsSpawned = new List<GameObject>();
     [SerializeField] private int colorIndex = 0;
+    public List<int> colorPositionOffset = new List<int>();
+    [SerializeField] private int colorPositionOffsetIndex = 0;
+    public List<GameObject> objectsSpawned = new List<GameObject>();
     [SerializeField] private Color objectColor;
     void FixedUpdate()
     {
@@ -75,15 +77,13 @@ public class ObjectSpawner : MonoBehaviour
                 Debug.Log($"Object Spawner Cannon object color should be {objectColor}");
                 //newWaddler.GetComponent<ColorPicker>().ChangeObjectColorToRed();
                 // Cycle through the colors
-                if(colorIndex < colorsToShoot.Count - 1){
-                    colorIndex ++;
-                    
-                }
-                else{
-                    colorIndex = 0;
-                }
+                colorIndex = (colorIndex + 1) % colorsToShoot.Count;
             }
-
+            //Set spawned object color position change offset
+            if(colorPositionOffset.Count != 0){
+                newObject.GetComponent<ColorPositionChange>().SetOffset(colorPositionOffset[colorPositionOffsetIndex]);
+                colorPositionOffsetIndex = (colorPositionOffsetIndex + 1) % colorPositionOffset.Count;
+            }
         }
     }
 

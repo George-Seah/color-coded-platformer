@@ -28,7 +28,7 @@ public class CannonBall : MonoBehaviour
             }
             Destroy(collision.gameObject);
         }
-        if (!collision.gameObject.CompareTag("Cannon"))
+        if (!collision.gameObject.CompareTag("Cannon") && !collision.gameObject.CompareTag("Ladder") && !collision.gameObject.CompareTag("Cloud"))
         {
             //Debug.Log("Cannonball hit the Ground using OnCollisionEnter2D!");
             Destroy(gameObject);

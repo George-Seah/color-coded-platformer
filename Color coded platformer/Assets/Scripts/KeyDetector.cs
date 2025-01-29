@@ -19,6 +19,12 @@ public class KeyDetector : MonoBehaviour
         {
             Debug.Log("Key entered Door Checker");
             //collision.gameObject.GetComponent<Key>().Drop();
+            if(collision.transform.parent != null && collision.transform.parent.CompareTag("Player")){
+                collision.transform.parent.GetComponent<PlayerBehaviour>().SetKey(null);
+            }
+            else if(collision.transform.parent != null && collision.transform.parent.gameObject.CompareTag("Waddler")){
+                collision.transform.parent.gameObject.GetComponent<Waddler>().SetKey(null);
+            }
             Destroy(transform.parent.gameObject);
             Destroy(collision.gameObject);
         }

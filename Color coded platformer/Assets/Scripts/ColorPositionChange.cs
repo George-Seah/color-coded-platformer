@@ -17,6 +17,9 @@ public class ColorPositionChange : MonoBehaviour
         if(colorOffset != 0){
             particleColor = Color.black;
         }
+        else{
+            particleColor = Color.white;
+        }
         AddSparkles();
         // Try to find the PositionBasedColorChanger object by name
         PBCC = GameObject.Find("Position Based Color Changer").GetComponent<PositionBasedColorChanger>();
@@ -70,7 +73,16 @@ public class ColorPositionChange : MonoBehaviour
         }
 
     }
-
+    public void SetOffset(int offset){
+        colorOffset = offset;
+        if(colorOffset != 0){
+            particleColor = Color.black;
+        }
+        else{
+            particleColor = Color.white;
+        }
+        particleSystem.GetComponent<ParticleSystemRenderer>().material.color = particleColor;
+    }
     void Update()
     {
         UpdateColor();
