@@ -350,6 +350,9 @@ public class PlayerBehaviour : MonoBehaviour
             rb.gravityScale = fallingGravityScale;
             Debug.Log("jumpTime > buttonTime bool in FixedUpdate activating gravity.");
         }
+        if(onLadder){
+            rb.gravityScale = 0;
+        }
     }
     public bool readJumping(){
         return jumping;

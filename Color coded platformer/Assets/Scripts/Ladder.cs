@@ -11,7 +11,7 @@ public class Ladder : MonoBehaviour
     [SerializeField] private GameObject playerTransform;
     [SerializeField] private Rigidbody2D playerRB;
     //private bool playerIsNear = false;
-    private PlayerBehaviour player;
+    //[SerializeField] private PlayerBehaviour player;
     private void Awake()
     {
         playerControls = new PlayerInputActions();
@@ -65,9 +65,9 @@ public class Ladder : MonoBehaviour
                     false);
                 if (moveDirection.y != 0) // Moving up
                 {
+                    playerRB.gravityScale = 0;
                     playerOnLadder = true;
                     collision.gameObject.GetComponent<PlayerBehaviour>().onLadder = true;
-                    playerRB.gravityScale = 0;
                     playerRB.linearVelocity = new Vector2(playerRB.linearVelocity.x, 0f);
                 }
             }
@@ -103,18 +103,18 @@ public class Ladder : MonoBehaviour
         if (playerOnLadder)
         {
             playerRB.gravityScale = 0;
-            playerRB.linearVelocity = new Vector2(playerRB.linearVelocity.x, 0f); // Ensure no gravity effect
+            playerRB.linearVelocity = new Vector2(playerRB.linearVelocity.x, moveDirection.y * climbSpeed); // Directly set climbing speed
             
             playerTransform.transform.position = new Vector2(
                 transform.position.x, 
                 playerTransform.transform.position.y + (moveDirection.y * climbSpeed)
             );
-
-            if (moveDirection.x != 0 || playerTransform.gameObject.GetComponent<PlayerBehaviour>().readJumping())
+            // || playerTransform.gameObject.GetComponent<PlayerBehaviour>().readJumping()
+            if (moveDirection.x != 0)
             {
                 playerRB.gameObject.GetComponent<PlayerBehaviour>().onLadder = false;
                 playerRB.gravityScale = 10;
-                playerOnLadder = false;
+                playerOnLadder = false;//Uncomment this if issues occur
                 //This code should be last
                 playerTransform = null;
             }

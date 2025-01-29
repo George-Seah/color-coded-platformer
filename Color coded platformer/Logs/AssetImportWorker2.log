@@ -1,0 +1,1849 @@
+Using pre-set license
+Built from '6000.0/release' branch; Version is '6000.0.25f1 (4859ab7b5a49) revision 4741547'; Using compiler version '193933523'; Build Type 'Release'
+OS: 'Windows 11  (10.0.22631) 64bit Core' Language: 'en' Physical Memory: 16233 MB
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1, IsPro: 1
+
+COMMAND LINE ARGUMENTS:
+C:\Unity\6000.0.25f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker2
+-projectPath
+C:/Github/color-coded-platformer/Color coded platformer
+-logFile
+Logs/AssetImportWorker2.log
+-srvPort
+61824
+-job-worker-count
+7
+-background-job-worker-count
+8
+-asset-garbage-collectors
+1
+Successfully changed project path to: C:/Github/color-coded-platformer/Color coded platformer
+C:/Github/color-coded-platformer/Color coded platformer
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [34524]  Target information:
+
+Player connection [34524]  * "[IP] 192.168.1.164 [Port] 0 [Flags] 2 [Guid] 1608147086 [EditorId] 1608147086 [Version] 1048832 [Id] WindowsEditor(7,SuperFamicom) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [34524] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [34524] Host joined alternative multi-casting on [225.0.0.222:34997]...
+JobSystem: Creating JobQueue using job-worker-count value 7
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+Library Redirect Path: Library/
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Refreshing native plugins compatible for Editor in 6.11 ms, found 10 plugins.
+Preloading 1 native plugins for Editor in 0.66 ms.
+Initialize engine version: 6000.0.25f1 (4859ab7b5a49)
+[Subsystems] Discovering subsystems at path C:/Unity/6000.0.25f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Github/color-coded-platformer/Color coded platformer/Assets
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3060 (ID=0x2504)
+    Vendor:   NVIDIA
+    VRAM:     12115 MB
+    Driver:   32.0.15.6614
+Initialize mono
+Mono path[0] = 'C:/Unity/6000.0.25f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Unity/6000.0.25f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Unity/6000.0.25f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56392
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Unity/6000.0.25f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
+Register platform support module: C:/Unity/6000.0.25f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.003184 seconds.
+- Loaded All Assemblies, in  1.808 seconds
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.360 seconds
+Domain Reload Profiling: 2165ms
+	BeginReloadAssembly (337ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (259ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (49ms)
+	LoadAllAssembliesAndSetupDomain (1148ms)
+		LoadAssemblies (334ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (1145ms)
+			TypeCache.Refresh (1144ms)
+				TypeCache.ScanAssembly (882ms)
+			BuildScriptInfoCaches (0ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (360ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (310ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (23ms)
+			SetLoadedEditorAssemblies (4ms)
+			BeforeProcessingInitializeOnLoad (5ms)
+			ProcessInitializeOnLoadAttributes (191ms)
+			ProcessInitializeOnLoadMethodAttributes (83ms)
+			AfterProcessingInitializeOnLoad (3ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Import Worker Mode flag is 0x00
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  3.775 seconds
+Refreshing native plugins compatible for Editor in 4.51 ms, found 10 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+log4net:ERROR Error while loading XML configuration
+System.Xml.XmlException: An error occurred while parsing EntityName. Line 3, position 35.
+  at System.Xml.XmlTextReaderImpl.Throw (System.Exception e) [0x00027] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.Throw (System.String res, System.Int32 lineNo, System.Int32 linePos) [0x00019] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.HandleEntityReference (System.Boolean isInAttributeValue, System.Xml.XmlTextReaderImpl+EntityExpandType expandType, System.Int32& charRefEndPos) [0x000c6] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseAttributeValueSlow (System.Int32 curPos, System.Char quoteChar, System.Xml.XmlTextReaderImpl+NodeData attr) [0x002a5] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseAttributes () [0x0039a] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseElement () [0x001df] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseElementContent () [0x0016f] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.Read () [0x00085] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlLoader.LoadNode (System.Boolean skipOverWhitespace) [0x0025b] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlLoader.LoadDocSequence (System.Xml.XmlDocument parentDoc) [0x0001b] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlLoader.Load (System.Xml.XmlDocument doc, System.Xml.XmlReader reader, System.Boolean preserveWhitespace) [0x000b4] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlDocument.Load (System.Xml.XmlReader reader) [0x0002e] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at log4net.Config.XmlConfigurator.InternalConfigure (log4net.Repository.ILoggerRepository repository, System.IO.Stream configStream) [0x00063] in <e1a77b5dfa0c4a1f8ba616c017f5e0b8>:0 
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.481 seconds
+Domain Reload Profiling: 5250ms
+	BeginReloadAssembly (1636ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (30ms)
+	RebuildCommonClasses (37ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (40ms)
+	LoadAllAssembliesAndSetupDomain (2042ms)
+		LoadAssemblies (1706ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (453ms)
+			TypeCache.Refresh (329ms)
+				TypeCache.ScanAssembly (277ms)
+			BuildScriptInfoCaches (106ms)
+			ResolveRequiredComponents (13ms)
+	FinalizeReload (1481ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (959ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			SetLoadedEditorAssemblies (5ms)
+			BeforeProcessingInitializeOnLoad (93ms)
+			ProcessInitializeOnLoadAttributes (519ms)
+			ProcessInitializeOnLoadMethodAttributes (330ms)
+			AfterProcessingInitializeOnLoad (9ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (5ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.03 seconds
+Refreshing native plugins compatible for Editor in 5.59 ms, found 10 plugins.
+Preloading 1 native plugins for Editor in 0.05 ms.
+Unloading 244 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7329 unused Assets / (6.0 MB). Loaded Objects now: 8124.
+Memory consumption went from 223.5 MB to 217.5 MB.
+Total: 11.484800 ms (FindLiveObjects: 0.985300 ms CreateObjectMapping: 1.474400 ms MarkObjects: 5.370500 ms  DeleteObjects: 3.652900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 1217170.596259 seconds.
+  path: Assets/Prefabs/Key.prefab
+  artifactKey: Guid(9d0e3a4609735e743b0757252a1a2063) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Key.prefab using Guid(9d0e3a4609735e743b0757252a1a2063) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3728a1f0a530fadec68b422ffa47ebbb') in 0.4786039 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 11
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/Prefabs/Player.prefab
+  artifactKey: Guid(dd357eeeac0748d4b85702a096f23b38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Player.prefab using Guid(dd357eeeac0748d4b85702a096f23b38) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '37abf0299603a3f760d39a63d4335f86') in 0.0357694 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 29
+
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.840 seconds
+Refreshing native plugins compatible for Editor in 4.45 ms, found 10 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+log4net:ERROR Error while loading XML configuration
+System.Xml.XmlException: An error occurred while parsing EntityName. Line 3, position 35.
+  at System.Xml.XmlTextReaderImpl.Throw (System.Exception e) [0x00027] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.Throw (System.String res, System.Int32 lineNo, System.Int32 linePos) [0x00019] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.HandleEntityReference (System.Boolean isInAttributeValue, System.Xml.XmlTextReaderImpl+EntityExpandType expandType, System.Int32& charRefEndPos) [0x000c6] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseAttributeValueSlow (System.Int32 curPos, System.Char quoteChar, System.Xml.XmlTextReaderImpl+NodeData attr) [0x002a5] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseAttributes () [0x0039a] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseElement () [0x001df] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseElementContent () [0x0016f] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.Read () [0x00085] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlLoader.LoadNode (System.Boolean skipOverWhitespace) [0x0025b] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlLoader.LoadDocSequence (System.Xml.XmlDocument parentDoc) [0x0001b] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlLoader.Load (System.Xml.XmlDocument doc, System.Xml.XmlReader reader, System.Boolean preserveWhitespace) [0x000b4] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlDocument.Load (System.Xml.XmlReader reader) [0x0002e] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at log4net.Config.XmlConfigurator.InternalConfigure (log4net.Repository.ILoggerRepository repository, System.IO.Stream configStream) [0x00063] in <e1a77b5dfa0c4a1f8ba616c017f5e0b8>:0 
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.993 seconds
+Domain Reload Profiling: 1831ms
+	BeginReloadAssembly (231ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (24ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (72ms)
+	RebuildCommonClasses (33ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (29ms)
+	LoadAllAssembliesAndSetupDomain (533ms)
+		LoadAssemblies (367ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (253ms)
+			TypeCache.Refresh (7ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (230ms)
+			ResolveRequiredComponents (13ms)
+	FinalizeReload (993ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (669ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			SetLoadedEditorAssemblies (6ms)
+			BeforeProcessingInitializeOnLoad (88ms)
+			ProcessInitializeOnLoadAttributes (488ms)
+			ProcessInitializeOnLoadMethodAttributes (74ms)
+			AfterProcessingInitializeOnLoad (9ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (12ms)
+Refreshing native plugins compatible for Editor in 5.37 ms, found 10 plugins.
+Preloading 1 native plugins for Editor in 0.05 ms.
+Unloading 17 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7327 unused Assets / (6.0 MB). Loaded Objects now: 8160.
+Memory consumption went from 187.1 MB to 181.1 MB.
+Total: 13.007700 ms (FindLiveObjects: 0.964000 ms CreateObjectMapping: 1.645700 ms MarkObjects: 6.149800 ms  DeleteObjects: 4.247300 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.821 seconds
+Refreshing native plugins compatible for Editor in 4.39 ms, found 10 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+log4net:ERROR Error while loading XML configuration
+System.Xml.XmlException: An error occurred while parsing EntityName. Line 3, position 35.
+  at System.Xml.XmlTextReaderImpl.Throw (System.Exception e) [0x00027] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.Throw (System.String res, System.Int32 lineNo, System.Int32 linePos) [0x00019] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.HandleEntityReference (System.Boolean isInAttributeValue, System.Xml.XmlTextReaderImpl+EntityExpandType expandType, System.Int32& charRefEndPos) [0x000c6] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseAttributeValueSlow (System.Int32 curPos, System.Char quoteChar, System.Xml.XmlTextReaderImpl+NodeData attr) [0x002a5] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseAttributes () [0x0039a] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseElement () [0x001df] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseElementContent () [0x0016f] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.Read () [0x00085] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlLoader.LoadNode (System.Boolean skipOverWhitespace) [0x0025b] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlLoader.LoadDocSequence (System.Xml.XmlDocument parentDoc) [0x0001b] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlLoader.Load (System.Xml.XmlDocument doc, System.Xml.XmlReader reader, System.Boolean preserveWhitespace) [0x000b4] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlDocument.Load (System.Xml.XmlReader reader) [0x0002e] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at log4net.Config.XmlConfigurator.InternalConfigure (log4net.Repository.ILoggerRepository repository, System.IO.Stream configStream) [0x00063] in <e1a77b5dfa0c4a1f8ba616c017f5e0b8>:0 
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.030 seconds
+Domain Reload Profiling: 1848ms
+	BeginReloadAssembly (214ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (14ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (62ms)
+	RebuildCommonClasses (33ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (29ms)
+	LoadAllAssembliesAndSetupDomain (529ms)
+		LoadAssemblies (348ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (271ms)
+			TypeCache.Refresh (9ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (246ms)
+			ResolveRequiredComponents (12ms)
+	FinalizeReload (1030ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (694ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			SetLoadedEditorAssemblies (6ms)
+			BeforeProcessingInitializeOnLoad (97ms)
+			ProcessInitializeOnLoadAttributes (507ms)
+			ProcessInitializeOnLoadMethodAttributes (68ms)
+			AfterProcessingInitializeOnLoad (12ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (12ms)
+Refreshing native plugins compatible for Editor in 5.20 ms, found 10 plugins.
+Preloading 1 native plugins for Editor in 0.05 ms.
+Unloading 17 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7327 unused Assets / (6.1 MB). Loaded Objects now: 8162.
+Memory consumption went from 187.0 MB to 180.9 MB.
+Total: 12.064100 ms (FindLiveObjects: 0.876400 ms CreateObjectMapping: 1.617000 ms MarkObjects: 5.799700 ms  DeleteObjects: 3.770200 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.794 seconds
+Refreshing native plugins compatible for Editor in 4.43 ms, found 10 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+log4net:ERROR Error while loading XML configuration
+System.Xml.XmlException: An error occurred while parsing EntityName. Line 3, position 35.
+  at System.Xml.XmlTextReaderImpl.Throw (System.Exception e) [0x00027] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.Throw (System.String res, System.Int32 lineNo, System.Int32 linePos) [0x00019] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.HandleEntityReference (System.Boolean isInAttributeValue, System.Xml.XmlTextReaderImpl+EntityExpandType expandType, System.Int32& charRefEndPos) [0x000c6] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseAttributeValueSlow (System.Int32 curPos, System.Char quoteChar, System.Xml.XmlTextReaderImpl+NodeData attr) [0x002a5] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseAttributes () [0x0039a] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseElement () [0x001df] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseElementContent () [0x0016f] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.Read () [0x00085] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlLoader.LoadNode (System.Boolean skipOverWhitespace) [0x0025b] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlLoader.LoadDocSequence (System.Xml.XmlDocument parentDoc) [0x0001b] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlLoader.Load (System.Xml.XmlDocument doc, System.Xml.XmlReader reader, System.Boolean preserveWhitespace) [0x000b4] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlDocument.Load (System.Xml.XmlReader reader) [0x0002e] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at log4net.Config.XmlConfigurator.InternalConfigure (log4net.Repository.ILoggerRepository repository, System.IO.Stream configStream) [0x00063] in <e1a77b5dfa0c4a1f8ba616c017f5e0b8>:0 
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.906 seconds
+Domain Reload Profiling: 1698ms
+	BeginReloadAssembly (204ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (14ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (52ms)
+	RebuildCommonClasses (34ms)
+	RebuildNativeTypeToScriptingClass (14ms)
+	initialDomainReloadingComplete (27ms)
+	LoadAllAssembliesAndSetupDomain (514ms)
+		LoadAssemblies (348ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (255ms)
+			TypeCache.Refresh (10ms)
+				TypeCache.ScanAssembly (1ms)
+			BuildScriptInfoCaches (229ms)
+			ResolveRequiredComponents (12ms)
+	FinalizeReload (906ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (598ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			SetLoadedEditorAssemblies (4ms)
+			BeforeProcessingInitializeOnLoad (84ms)
+			ProcessInitializeOnLoadAttributes (435ms)
+			ProcessInitializeOnLoadMethodAttributes (63ms)
+			AfterProcessingInitializeOnLoad (8ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (10ms)
+Refreshing native plugins compatible for Editor in 4.43 ms, found 10 plugins.
+Preloading 1 native plugins for Editor in 0.05 ms.
+Unloading 17 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7327 unused Assets / (5.9 MB). Loaded Objects now: 8164.
+Memory consumption went from 187.0 MB to 181.1 MB.
+Total: 9.913600 ms (FindLiveObjects: 0.855300 ms CreateObjectMapping: 1.296400 ms MarkObjects: 4.757000 ms  DeleteObjects: 3.003500 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.806 seconds
+Refreshing native plugins compatible for Editor in 4.12 ms, found 10 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+log4net:ERROR Error while loading XML configuration
+System.Xml.XmlException: An error occurred while parsing EntityName. Line 3, position 35.
+  at System.Xml.XmlTextReaderImpl.Throw (System.Exception e) [0x00027] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.Throw (System.String res, System.Int32 lineNo, System.Int32 linePos) [0x00019] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.HandleEntityReference (System.Boolean isInAttributeValue, System.Xml.XmlTextReaderImpl+EntityExpandType expandType, System.Int32& charRefEndPos) [0x000c6] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseAttributeValueSlow (System.Int32 curPos, System.Char quoteChar, System.Xml.XmlTextReaderImpl+NodeData attr) [0x002a5] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseAttributes () [0x0039a] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseElement () [0x001df] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseElementContent () [0x0016f] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.Read () [0x00085] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlLoader.LoadNode (System.Boolean skipOverWhitespace) [0x0025b] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlLoader.LoadDocSequence (System.Xml.XmlDocument parentDoc) [0x0001b] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlLoader.Load (System.Xml.XmlDocument doc, System.Xml.XmlReader reader, System.Boolean preserveWhitespace) [0x000b4] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlDocument.Load (System.Xml.XmlReader reader) [0x0002e] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at log4net.Config.XmlConfigurator.InternalConfigure (log4net.Repository.ILoggerRepository repository, System.IO.Stream configStream) [0x00063] in <e1a77b5dfa0c4a1f8ba616c017f5e0b8>:0 
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.878 seconds
+Domain Reload Profiling: 1682ms
+	BeginReloadAssembly (198ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (13ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (48ms)
+	RebuildCommonClasses (34ms)
+	RebuildNativeTypeToScriptingClass (16ms)
+	initialDomainReloadingComplete (34ms)
+	LoadAllAssembliesAndSetupDomain (521ms)
+		LoadAssemblies (345ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (267ms)
+			TypeCache.Refresh (8ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (243ms)
+			ResolveRequiredComponents (13ms)
+	FinalizeReload (878ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (588ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (4ms)
+			SetLoadedEditorAssemblies (6ms)
+			BeforeProcessingInitializeOnLoad (80ms)
+			ProcessInitializeOnLoadAttributes (421ms)
+			ProcessInitializeOnLoadMethodAttributes (66ms)
+			AfterProcessingInitializeOnLoad (12ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (12ms)
+Refreshing native plugins compatible for Editor in 4.48 ms, found 10 plugins.
+Preloading 1 native plugins for Editor in 0.05 ms.
+Unloading 17 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7327 unused Assets / (6.0 MB). Loaded Objects now: 8166.
+Memory consumption went from 187.0 MB to 180.9 MB.
+Total: 10.746500 ms (FindLiveObjects: 0.916000 ms CreateObjectMapping: 1.263500 ms MarkObjects: 4.934900 ms  DeleteObjects: 3.631300 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 428.155982 seconds.
+  path: Assets/Prefabs/Ladder.prefab
+  artifactKey: Guid(e2fcdd017e7a7284994bd89c42d631b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Ladder.prefab using Guid(e2fcdd017e7a7284994bd89c42d631b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5455215e2ab59cc8e7a134a1af45cd1f') in 0.475534 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 34
+
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  1.050 seconds
+Refreshing native plugins compatible for Editor in 4.44 ms, found 10 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+log4net:ERROR Error while loading XML configuration
+System.Xml.XmlException: An error occurred while parsing EntityName. Line 3, position 35.
+  at System.Xml.XmlTextReaderImpl.Throw (System.Exception e) [0x00027] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.Throw (System.String res, System.Int32 lineNo, System.Int32 linePos) [0x00019] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.HandleEntityReference (System.Boolean isInAttributeValue, System.Xml.XmlTextReaderImpl+EntityExpandType expandType, System.Int32& charRefEndPos) [0x000c6] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseAttributeValueSlow (System.Int32 curPos, System.Char quoteChar, System.Xml.XmlTextReaderImpl+NodeData attr) [0x002a5] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseAttributes () [0x0039a] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseElement () [0x001df] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseElementContent () [0x0016f] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.Read () [0x00085] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlLoader.LoadNode (System.Boolean skipOverWhitespace) [0x0025b] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlLoader.LoadDocSequence (System.Xml.XmlDocument parentDoc) [0x0001b] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlLoader.Load (System.Xml.XmlDocument doc, System.Xml.XmlReader reader, System.Boolean preserveWhitespace) [0x000b4] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlDocument.Load (System.Xml.XmlReader reader) [0x0002e] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at log4net.Config.XmlConfigurator.InternalConfigure (log4net.Repository.ILoggerRepository repository, System.IO.Stream configStream) [0x00063] in <e1a77b5dfa0c4a1f8ba616c017f5e0b8>:0 
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  1.002 seconds
+Domain Reload Profiling: 2051ms
+	BeginReloadAssembly (289ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (27ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (90ms)
+	RebuildCommonClasses (47ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (26ms)
+	LoadAllAssembliesAndSetupDomain (673ms)
+		LoadAssemblies (437ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (352ms)
+			TypeCache.Refresh (14ms)
+				TypeCache.ScanAssembly (1ms)
+			BuildScriptInfoCaches (321ms)
+			ResolveRequiredComponents (13ms)
+	FinalizeReload (1002ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (655ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			SetLoadedEditorAssemblies (5ms)
+			BeforeProcessingInitializeOnLoad (90ms)
+			ProcessInitializeOnLoadAttributes (474ms)
+			ProcessInitializeOnLoadMethodAttributes (73ms)
+			AfterProcessingInitializeOnLoad (10ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (12ms)
+Refreshing native plugins compatible for Editor in 4.66 ms, found 10 plugins.
+Preloading 1 native plugins for Editor in 0.06 ms.
+Unloading 17 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7327 unused Assets / (6.0 MB). Loaded Objects now: 8190.
+Memory consumption went from 188.7 MB to 182.7 MB.
+Total: 13.676800 ms (FindLiveObjects: 1.468200 ms CreateObjectMapping: 2.042400 ms MarkObjects: 6.290600 ms  DeleteObjects: 3.874100 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.841 seconds
+Refreshing native plugins compatible for Editor in 4.81 ms, found 10 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+log4net:ERROR Error while loading XML configuration
+System.Xml.XmlException: An error occurred while parsing EntityName. Line 3, position 35.
+  at System.Xml.XmlTextReaderImpl.Throw (System.Exception e) [0x00027] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.Throw (System.String res, System.Int32 lineNo, System.Int32 linePos) [0x00019] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.HandleEntityReference (System.Boolean isInAttributeValue, System.Xml.XmlTextReaderImpl+EntityExpandType expandType, System.Int32& charRefEndPos) [0x000c6] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseAttributeValueSlow (System.Int32 curPos, System.Char quoteChar, System.Xml.XmlTextReaderImpl+NodeData attr) [0x002a5] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseAttributes () [0x0039a] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseElement () [0x001df] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseElementContent () [0x0016f] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.Read () [0x00085] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlLoader.LoadNode (System.Boolean skipOverWhitespace) [0x0025b] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlLoader.LoadDocSequence (System.Xml.XmlDocument parentDoc) [0x0001b] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlLoader.Load (System.Xml.XmlDocument doc, System.Xml.XmlReader reader, System.Boolean preserveWhitespace) [0x000b4] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlDocument.Load (System.Xml.XmlReader reader) [0x0002e] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at log4net.Config.XmlConfigurator.InternalConfigure (log4net.Repository.ILoggerRepository repository, System.IO.Stream configStream) [0x00063] in <e1a77b5dfa0c4a1f8ba616c017f5e0b8>:0 
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.940 seconds
+Domain Reload Profiling: 1780ms
+	BeginReloadAssembly (202ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (13ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (48ms)
+	RebuildCommonClasses (40ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (27ms)
+	LoadAllAssembliesAndSetupDomain (558ms)
+		LoadAssemblies (357ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (295ms)
+			TypeCache.Refresh (10ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (269ms)
+			ResolveRequiredComponents (13ms)
+	FinalizeReload (941ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (629ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			SetLoadedEditorAssemblies (5ms)
+			BeforeProcessingInitializeOnLoad (85ms)
+			ProcessInitializeOnLoadAttributes (459ms)
+			ProcessInitializeOnLoadMethodAttributes (64ms)
+			AfterProcessingInitializeOnLoad (14ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (13ms)
+Refreshing native plugins compatible for Editor in 5.00 ms, found 10 plugins.
+Preloading 1 native plugins for Editor in 0.05 ms.
+Unloading 17 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7327 unused Assets / (5.9 MB). Loaded Objects now: 8192.
+Memory consumption went from 188.6 MB to 182.6 MB.
+Total: 11.534600 ms (FindLiveObjects: 1.030700 ms CreateObjectMapping: 1.556800 ms MarkObjects: 5.529100 ms  DeleteObjects: 3.417500 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.929 seconds
+Refreshing native plugins compatible for Editor in 4.50 ms, found 10 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+log4net:ERROR Error while loading XML configuration
+System.Xml.XmlException: An error occurred while parsing EntityName. Line 3, position 35.
+  at System.Xml.XmlTextReaderImpl.Throw (System.Exception e) [0x00027] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.Throw (System.String res, System.Int32 lineNo, System.Int32 linePos) [0x00019] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.HandleEntityReference (System.Boolean isInAttributeValue, System.Xml.XmlTextReaderImpl+EntityExpandType expandType, System.Int32& charRefEndPos) [0x000c6] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseAttributeValueSlow (System.Int32 curPos, System.Char quoteChar, System.Xml.XmlTextReaderImpl+NodeData attr) [0x002a5] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseAttributes () [0x0039a] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseElement () [0x001df] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseElementContent () [0x0016f] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.Read () [0x00085] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlLoader.LoadNode (System.Boolean skipOverWhitespace) [0x0025b] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlLoader.LoadDocSequence (System.Xml.XmlDocument parentDoc) [0x0001b] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlLoader.Load (System.Xml.XmlDocument doc, System.Xml.XmlReader reader, System.Boolean preserveWhitespace) [0x000b4] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlDocument.Load (System.Xml.XmlReader reader) [0x0002e] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at log4net.Config.XmlConfigurator.InternalConfigure (log4net.Repository.ILoggerRepository repository, System.IO.Stream configStream) [0x00063] in <e1a77b5dfa0c4a1f8ba616c017f5e0b8>:0 
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.893 seconds
+Domain Reload Profiling: 1820ms
+	BeginReloadAssembly (229ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (13ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (61ms)
+	RebuildCommonClasses (37ms)
+	RebuildNativeTypeToScriptingClass (20ms)
+	initialDomainReloadingComplete (30ms)
+	LoadAllAssembliesAndSetupDomain (612ms)
+		LoadAssemblies (415ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (294ms)
+			TypeCache.Refresh (10ms)
+				TypeCache.ScanAssembly (1ms)
+			BuildScriptInfoCaches (264ms)
+			ResolveRequiredComponents (15ms)
+	FinalizeReload (894ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (581ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			SetLoadedEditorAssemblies (4ms)
+			BeforeProcessingInitializeOnLoad (79ms)
+			ProcessInitializeOnLoadAttributes (423ms)
+			ProcessInitializeOnLoadMethodAttributes (63ms)
+			AfterProcessingInitializeOnLoad (8ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (11ms)
+Refreshing native plugins compatible for Editor in 4.30 ms, found 10 plugins.
+Preloading 1 native plugins for Editor in 0.05 ms.
+Unloading 17 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7327 unused Assets / (6.1 MB). Loaded Objects now: 8194.
+Memory consumption went from 188.6 MB to 182.5 MB.
+Total: 10.386600 ms (FindLiveObjects: 0.840900 ms CreateObjectMapping: 1.349100 ms MarkObjects: 4.850300 ms  DeleteObjects: 3.345400 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.776 seconds
+Refreshing native plugins compatible for Editor in 4.42 ms, found 10 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+log4net:ERROR Error while loading XML configuration
+System.Xml.XmlException: An error occurred while parsing EntityName. Line 3, position 35.
+  at System.Xml.XmlTextReaderImpl.Throw (System.Exception e) [0x00027] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.Throw (System.String res, System.Int32 lineNo, System.Int32 linePos) [0x00019] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.HandleEntityReference (System.Boolean isInAttributeValue, System.Xml.XmlTextReaderImpl+EntityExpandType expandType, System.Int32& charRefEndPos) [0x000c6] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseAttributeValueSlow (System.Int32 curPos, System.Char quoteChar, System.Xml.XmlTextReaderImpl+NodeData attr) [0x002a5] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseAttributes () [0x0039a] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseElement () [0x001df] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseElementContent () [0x0016f] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.Read () [0x00085] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlLoader.LoadNode (System.Boolean skipOverWhitespace) [0x0025b] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlLoader.LoadDocSequence (System.Xml.XmlDocument parentDoc) [0x0001b] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlLoader.Load (System.Xml.XmlDocument doc, System.Xml.XmlReader reader, System.Boolean preserveWhitespace) [0x000b4] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlDocument.Load (System.Xml.XmlReader reader) [0x0002e] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at log4net.Config.XmlConfigurator.InternalConfigure (log4net.Repository.ILoggerRepository repository, System.IO.Stream configStream) [0x00063] in <e1a77b5dfa0c4a1f8ba616c017f5e0b8>:0 
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.892 seconds
+Domain Reload Profiling: 1666ms
+	BeginReloadAssembly (200ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (12ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (51ms)
+	RebuildCommonClasses (32ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (26ms)
+	LoadAllAssembliesAndSetupDomain (503ms)
+		LoadAssemblies (341ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (253ms)
+			TypeCache.Refresh (8ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (229ms)
+			ResolveRequiredComponents (12ms)
+	FinalizeReload (892ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (581ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (4ms)
+			SetLoadedEditorAssemblies (6ms)
+			BeforeProcessingInitializeOnLoad (79ms)
+			ProcessInitializeOnLoadAttributes (417ms)
+			ProcessInitializeOnLoadMethodAttributes (66ms)
+			AfterProcessingInitializeOnLoad (8ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (11ms)
+Refreshing native plugins compatible for Editor in 4.79 ms, found 10 plugins.
+Preloading 1 native plugins for Editor in 0.06 ms.
+Unloading 17 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7327 unused Assets / (5.9 MB). Loaded Objects now: 8196.
+Memory consumption went from 188.6 MB to 182.7 MB.
+Total: 10.872200 ms (FindLiveObjects: 0.918200 ms CreateObjectMapping: 1.431000 ms MarkObjects: 5.037300 ms  DeleteObjects: 3.484800 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.809 seconds
+Refreshing native plugins compatible for Editor in 4.49 ms, found 10 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+log4net:ERROR Error while loading XML configuration
+System.Xml.XmlException: An error occurred while parsing EntityName. Line 3, position 35.
+  at System.Xml.XmlTextReaderImpl.Throw (System.Exception e) [0x00027] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.Throw (System.String res, System.Int32 lineNo, System.Int32 linePos) [0x00019] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.HandleEntityReference (System.Boolean isInAttributeValue, System.Xml.XmlTextReaderImpl+EntityExpandType expandType, System.Int32& charRefEndPos) [0x000c6] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseAttributeValueSlow (System.Int32 curPos, System.Char quoteChar, System.Xml.XmlTextReaderImpl+NodeData attr) [0x002a5] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseAttributes () [0x0039a] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseElement () [0x001df] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseElementContent () [0x0016f] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.Read () [0x00085] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlLoader.LoadNode (System.Boolean skipOverWhitespace) [0x0025b] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlLoader.LoadDocSequence (System.Xml.XmlDocument parentDoc) [0x0001b] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlLoader.Load (System.Xml.XmlDocument doc, System.Xml.XmlReader reader, System.Boolean preserveWhitespace) [0x000b4] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlDocument.Load (System.Xml.XmlReader reader) [0x0002e] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at log4net.Config.XmlConfigurator.InternalConfigure (log4net.Repository.ILoggerRepository repository, System.IO.Stream configStream) [0x00063] in <e1a77b5dfa0c4a1f8ba616c017f5e0b8>:0 
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.906 seconds
+Domain Reload Profiling: 1714ms
+	BeginReloadAssembly (206ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (14ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (51ms)
+	RebuildCommonClasses (33ms)
+	RebuildNativeTypeToScriptingClass (15ms)
+	initialDomainReloadingComplete (30ms)
+	LoadAllAssembliesAndSetupDomain (523ms)
+		LoadAssemblies (349ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (266ms)
+			TypeCache.Refresh (11ms)
+				TypeCache.ScanAssembly (1ms)
+			BuildScriptInfoCaches (234ms)
+			ResolveRequiredComponents (16ms)
+	FinalizeReload (906ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (597ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			SetLoadedEditorAssemblies (5ms)
+			BeforeProcessingInitializeOnLoad (83ms)
+			ProcessInitializeOnLoadAttributes (435ms)
+			ProcessInitializeOnLoadMethodAttributes (63ms)
+			AfterProcessingInitializeOnLoad (9ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (15ms)
+Refreshing native plugins compatible for Editor in 4.33 ms, found 10 plugins.
+Preloading 1 native plugins for Editor in 0.05 ms.
+Unloading 17 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7327 unused Assets / (6.2 MB). Loaded Objects now: 8198.
+Memory consumption went from 188.6 MB to 182.4 MB.
+Total: 10.144400 ms (FindLiveObjects: 0.786900 ms CreateObjectMapping: 1.158100 ms MarkObjects: 4.831000 ms  DeleteObjects: 3.367200 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.786 seconds
+Refreshing native plugins compatible for Editor in 4.49 ms, found 10 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+log4net:ERROR Error while loading XML configuration
+System.Xml.XmlException: An error occurred while parsing EntityName. Line 3, position 35.
+  at System.Xml.XmlTextReaderImpl.Throw (System.Exception e) [0x00027] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.Throw (System.String res, System.Int32 lineNo, System.Int32 linePos) [0x00019] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.HandleEntityReference (System.Boolean isInAttributeValue, System.Xml.XmlTextReaderImpl+EntityExpandType expandType, System.Int32& charRefEndPos) [0x000c6] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseAttributeValueSlow (System.Int32 curPos, System.Char quoteChar, System.Xml.XmlTextReaderImpl+NodeData attr) [0x002a5] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseAttributes () [0x0039a] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseElement () [0x001df] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseElementContent () [0x0016f] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.Read () [0x00085] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlLoader.LoadNode (System.Boolean skipOverWhitespace) [0x0025b] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlLoader.LoadDocSequence (System.Xml.XmlDocument parentDoc) [0x0001b] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlLoader.Load (System.Xml.XmlDocument doc, System.Xml.XmlReader reader, System.Boolean preserveWhitespace) [0x000b4] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlDocument.Load (System.Xml.XmlReader reader) [0x0002e] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at log4net.Config.XmlConfigurator.InternalConfigure (log4net.Repository.ILoggerRepository repository, System.IO.Stream configStream) [0x00063] in <e1a77b5dfa0c4a1f8ba616c017f5e0b8>:0 
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.872 seconds
+Domain Reload Profiling: 1656ms
+	BeginReloadAssembly (198ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (13ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (50ms)
+	RebuildCommonClasses (34ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (27ms)
+	LoadAllAssembliesAndSetupDomain (511ms)
+		LoadAssemblies (335ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (264ms)
+			TypeCache.Refresh (8ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (240ms)
+			ResolveRequiredComponents (12ms)
+	FinalizeReload (873ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (579ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			SetLoadedEditorAssemblies (5ms)
+			BeforeProcessingInitializeOnLoad (81ms)
+			ProcessInitializeOnLoadAttributes (420ms)
+			ProcessInitializeOnLoadMethodAttributes (62ms)
+			AfterProcessingInitializeOnLoad (8ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (11ms)
+Refreshing native plugins compatible for Editor in 4.75 ms, found 10 plugins.
+Preloading 1 native plugins for Editor in 0.05 ms.
+Unloading 17 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7327 unused Assets / (5.9 MB). Loaded Objects now: 8200.
+Memory consumption went from 188.5 MB to 182.7 MB.
+Total: 10.226900 ms (FindLiveObjects: 0.828600 ms CreateObjectMapping: 1.345900 ms MarkObjects: 4.901100 ms  DeleteObjects: 3.150100 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  1.002 seconds
+Refreshing native plugins compatible for Editor in 4.49 ms, found 10 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+log4net:ERROR Error while loading XML configuration
+System.Xml.XmlException: An error occurred while parsing EntityName. Line 3, position 35.
+  at System.Xml.XmlTextReaderImpl.Throw (System.Exception e) [0x00027] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.Throw (System.String res, System.Int32 lineNo, System.Int32 linePos) [0x00019] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.HandleEntityReference (System.Boolean isInAttributeValue, System.Xml.XmlTextReaderImpl+EntityExpandType expandType, System.Int32& charRefEndPos) [0x000c6] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseAttributeValueSlow (System.Int32 curPos, System.Char quoteChar, System.Xml.XmlTextReaderImpl+NodeData attr) [0x002a5] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseAttributes () [0x0039a] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseElement () [0x001df] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseElementContent () [0x0016f] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.Read () [0x00085] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlLoader.LoadNode (System.Boolean skipOverWhitespace) [0x0025b] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlLoader.LoadDocSequence (System.Xml.XmlDocument parentDoc) [0x0001b] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlLoader.Load (System.Xml.XmlDocument doc, System.Xml.XmlReader reader, System.Boolean preserveWhitespace) [0x000b4] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlDocument.Load (System.Xml.XmlReader reader) [0x0002e] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at log4net.Config.XmlConfigurator.InternalConfigure (log4net.Repository.ILoggerRepository repository, System.IO.Stream configStream) [0x00063] in <e1a77b5dfa0c4a1f8ba616c017f5e0b8>:0 
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.896 seconds
+Domain Reload Profiling: 1895ms
+	BeginReloadAssembly (243ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (19ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (53ms)
+	RebuildCommonClasses (41ms)
+	RebuildNativeTypeToScriptingClass (17ms)
+	initialDomainReloadingComplete (36ms)
+	LoadAllAssembliesAndSetupDomain (663ms)
+		LoadAssemblies (435ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (342ms)
+			TypeCache.Refresh (12ms)
+				TypeCache.ScanAssembly (1ms)
+			BuildScriptInfoCaches (312ms)
+			ResolveRequiredComponents (13ms)
+	FinalizeReload (896ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (601ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			SetLoadedEditorAssemblies (5ms)
+			BeforeProcessingInitializeOnLoad (83ms)
+			ProcessInitializeOnLoadAttributes (433ms)
+			ProcessInitializeOnLoadMethodAttributes (65ms)
+			AfterProcessingInitializeOnLoad (12ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (11ms)
+Refreshing native plugins compatible for Editor in 4.39 ms, found 10 plugins.
+Preloading 1 native plugins for Editor in 0.05 ms.
+Unloading 17 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7327 unused Assets / (5.7 MB). Loaded Objects now: 8202.
+Memory consumption went from 188.5 MB to 182.8 MB.
+Total: 9.270000 ms (FindLiveObjects: 0.811100 ms CreateObjectMapping: 1.159800 ms MarkObjects: 4.438100 ms  DeleteObjects: 2.860400 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.807 seconds
+Refreshing native plugins compatible for Editor in 4.44 ms, found 10 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+log4net:ERROR Error while loading XML configuration
+System.Xml.XmlException: An error occurred while parsing EntityName. Line 3, position 35.
+  at System.Xml.XmlTextReaderImpl.Throw (System.Exception e) [0x00027] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.Throw (System.String res, System.Int32 lineNo, System.Int32 linePos) [0x00019] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.HandleEntityReference (System.Boolean isInAttributeValue, System.Xml.XmlTextReaderImpl+EntityExpandType expandType, System.Int32& charRefEndPos) [0x000c6] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseAttributeValueSlow (System.Int32 curPos, System.Char quoteChar, System.Xml.XmlTextReaderImpl+NodeData attr) [0x002a5] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseAttributes () [0x0039a] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseElement () [0x001df] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseElementContent () [0x0016f] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.Read () [0x00085] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlLoader.LoadNode (System.Boolean skipOverWhitespace) [0x0025b] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlLoader.LoadDocSequence (System.Xml.XmlDocument parentDoc) [0x0001b] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlLoader.Load (System.Xml.XmlDocument doc, System.Xml.XmlReader reader, System.Boolean preserveWhitespace) [0x000b4] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlDocument.Load (System.Xml.XmlReader reader) [0x0002e] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at log4net.Config.XmlConfigurator.InternalConfigure (log4net.Repository.ILoggerRepository repository, System.IO.Stream configStream) [0x00063] in <e1a77b5dfa0c4a1f8ba616c017f5e0b8>:0 
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.890 seconds
+Domain Reload Profiling: 1697ms
+	BeginReloadAssembly (206ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (13ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (46ms)
+	RebuildCommonClasses (34ms)
+	RebuildNativeTypeToScriptingClass (15ms)
+	initialDomainReloadingComplete (27ms)
+	LoadAllAssembliesAndSetupDomain (524ms)
+		LoadAssemblies (346ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (267ms)
+			TypeCache.Refresh (7ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (243ms)
+			ResolveRequiredComponents (12ms)
+	FinalizeReload (891ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (587ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			SetLoadedEditorAssemblies (5ms)
+			BeforeProcessingInitializeOnLoad (80ms)
+			ProcessInitializeOnLoadAttributes (427ms)
+			ProcessInitializeOnLoadMethodAttributes (64ms)
+			AfterProcessingInitializeOnLoad (9ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (11ms)
+Refreshing native plugins compatible for Editor in 4.95 ms, found 10 plugins.
+Preloading 1 native plugins for Editor in 0.05 ms.
+Unloading 17 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7327 unused Assets / (6.0 MB). Loaded Objects now: 8204.
+Memory consumption went from 188.6 MB to 182.5 MB.
+Total: 10.923700 ms (FindLiveObjects: 0.791700 ms CreateObjectMapping: 1.430100 ms MarkObjects: 5.073000 ms  DeleteObjects: 3.628100 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.861 seconds
+Refreshing native plugins compatible for Editor in 4.51 ms, found 10 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+log4net:ERROR Error while loading XML configuration
+System.Xml.XmlException: An error occurred while parsing EntityName. Line 3, position 35.
+  at System.Xml.XmlTextReaderImpl.Throw (System.Exception e) [0x00027] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.Throw (System.String res, System.Int32 lineNo, System.Int32 linePos) [0x00019] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.HandleEntityReference (System.Boolean isInAttributeValue, System.Xml.XmlTextReaderImpl+EntityExpandType expandType, System.Int32& charRefEndPos) [0x000c6] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseAttributeValueSlow (System.Int32 curPos, System.Char quoteChar, System.Xml.XmlTextReaderImpl+NodeData attr) [0x002a5] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseAttributes () [0x0039a] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseElement () [0x001df] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseElementContent () [0x0016f] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.Read () [0x00085] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlLoader.LoadNode (System.Boolean skipOverWhitespace) [0x0025b] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlLoader.LoadDocSequence (System.Xml.XmlDocument parentDoc) [0x0001b] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlLoader.Load (System.Xml.XmlDocument doc, System.Xml.XmlReader reader, System.Boolean preserveWhitespace) [0x000b4] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlDocument.Load (System.Xml.XmlReader reader) [0x0002e] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at log4net.Config.XmlConfigurator.InternalConfigure (log4net.Repository.ILoggerRepository repository, System.IO.Stream configStream) [0x00063] in <e1a77b5dfa0c4a1f8ba616c017f5e0b8>:0 
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.976 seconds
+Domain Reload Profiling: 1835ms
+	BeginReloadAssembly (213ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (14ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (54ms)
+	RebuildCommonClasses (37ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (32ms)
+	LoadAllAssembliesAndSetupDomain (563ms)
+		LoadAssemblies (369ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (290ms)
+			TypeCache.Refresh (13ms)
+				TypeCache.ScanAssembly (1ms)
+			BuildScriptInfoCaches (261ms)
+			ResolveRequiredComponents (13ms)
+	FinalizeReload (976ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (651ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (4ms)
+			SetLoadedEditorAssemblies (5ms)
+			BeforeProcessingInitializeOnLoad (91ms)
+			ProcessInitializeOnLoadAttributes (461ms)
+			ProcessInitializeOnLoadMethodAttributes (77ms)
+			AfterProcessingInitializeOnLoad (13ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (13ms)
+Refreshing native plugins compatible for Editor in 4.59 ms, found 10 plugins.
+Preloading 1 native plugins for Editor in 0.06 ms.
+Unloading 17 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7327 unused Assets / (6.6 MB). Loaded Objects now: 8206.
+Memory consumption went from 188.6 MB to 182.0 MB.
+Total: 13.586500 ms (FindLiveObjects: 0.966500 ms CreateObjectMapping: 1.370400 ms MarkObjects: 6.087400 ms  DeleteObjects: 5.160500 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 1446.921435 seconds.
+  path: Assets/Prefabs/Ladder.prefab
+  artifactKey: Guid(e2fcdd017e7a7284994bd89c42d631b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Ladder.prefab using Guid(e2fcdd017e7a7284994bd89c42d631b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '56f0cd70e4ef04d23d80fd838abbbd48') in 0.5254034 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 34
+
+========================================================================
+Received Import Request.
+  Time since last request: 112.062205 seconds.
+  path: Assets/Sprites/man standing G.png
+  artifactKey: Guid(9e03f32e6810dec43801f050b9c120cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/man standing G.png using Guid(9e03f32e6810dec43801f050b9c120cd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'fc6aee5be91edc07b78e6d79faab7aa1') in 0.0415269 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.824 seconds
+Refreshing native plugins compatible for Editor in 4.29 ms, found 10 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+log4net:ERROR Error while loading XML configuration
+System.Xml.XmlException: An error occurred while parsing EntityName. Line 3, position 35.
+  at System.Xml.XmlTextReaderImpl.Throw (System.Exception e) [0x00027] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.Throw (System.String res, System.Int32 lineNo, System.Int32 linePos) [0x00019] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.HandleEntityReference (System.Boolean isInAttributeValue, System.Xml.XmlTextReaderImpl+EntityExpandType expandType, System.Int32& charRefEndPos) [0x000c6] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseAttributeValueSlow (System.Int32 curPos, System.Char quoteChar, System.Xml.XmlTextReaderImpl+NodeData attr) [0x002a5] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseAttributes () [0x0039a] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseElement () [0x001df] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseElementContent () [0x0016f] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.Read () [0x00085] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlLoader.LoadNode (System.Boolean skipOverWhitespace) [0x0025b] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlLoader.LoadDocSequence (System.Xml.XmlDocument parentDoc) [0x0001b] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlLoader.Load (System.Xml.XmlDocument doc, System.Xml.XmlReader reader, System.Boolean preserveWhitespace) [0x000b4] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlDocument.Load (System.Xml.XmlReader reader) [0x0002e] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at log4net.Config.XmlConfigurator.InternalConfigure (log4net.Repository.ILoggerRepository repository, System.IO.Stream configStream) [0x00063] in <e1a77b5dfa0c4a1f8ba616c017f5e0b8>:0 
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.930 seconds
+Domain Reload Profiling: 1752ms
+	BeginReloadAssembly (228ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (25ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (62ms)
+	RebuildCommonClasses (33ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (27ms)
+	LoadAllAssembliesAndSetupDomain (520ms)
+		LoadAssemblies (346ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (268ms)
+			TypeCache.Refresh (7ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (245ms)
+			ResolveRequiredComponents (12ms)
+	FinalizeReload (930ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (610ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			SetLoadedEditorAssemblies (5ms)
+			BeforeProcessingInitializeOnLoad (80ms)
+			ProcessInitializeOnLoadAttributes (447ms)
+			ProcessInitializeOnLoadMethodAttributes (66ms)
+			AfterProcessingInitializeOnLoad (8ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (12ms)
+Refreshing native plugins compatible for Editor in 4.50 ms, found 10 plugins.
+Preloading 1 native plugins for Editor in 0.05 ms.
+Unloading 17 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7327 unused Assets / (5.8 MB). Loaded Objects now: 8234.
+Memory consumption went from 190.3 MB to 184.5 MB.
+Total: 10.296300 ms (FindLiveObjects: 0.809500 ms CreateObjectMapping: 1.243200 ms MarkObjects: 4.946700 ms  DeleteObjects: 3.295800 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 69.708711 seconds.
+  path: Assets/Sprites/man standing.png
+  artifactKey: Guid(02983ba30c5b0e147b21eaed3e5a1661) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/man standing.png using Guid(02983ba30c5b0e147b21eaed3e5a1661) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7bb254525893e968e6ba4ec88ab6dd11') in 0.0694699 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.789 seconds
+Refreshing native plugins compatible for Editor in 4.26 ms, found 10 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+log4net:ERROR Error while loading XML configuration
+System.Xml.XmlException: An error occurred while parsing EntityName. Line 3, position 35.
+  at System.Xml.XmlTextReaderImpl.Throw (System.Exception e) [0x00027] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.Throw (System.String res, System.Int32 lineNo, System.Int32 linePos) [0x00019] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.HandleEntityReference (System.Boolean isInAttributeValue, System.Xml.XmlTextReaderImpl+EntityExpandType expandType, System.Int32& charRefEndPos) [0x000c6] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseAttributeValueSlow (System.Int32 curPos, System.Char quoteChar, System.Xml.XmlTextReaderImpl+NodeData attr) [0x002a5] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseAttributes () [0x0039a] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseElement () [0x001df] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseElementContent () [0x0016f] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.Read () [0x00085] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlLoader.LoadNode (System.Boolean skipOverWhitespace) [0x0025b] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlLoader.LoadDocSequence (System.Xml.XmlDocument parentDoc) [0x0001b] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlLoader.Load (System.Xml.XmlDocument doc, System.Xml.XmlReader reader, System.Boolean preserveWhitespace) [0x000b4] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlDocument.Load (System.Xml.XmlReader reader) [0x0002e] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at log4net.Config.XmlConfigurator.InternalConfigure (log4net.Repository.ILoggerRepository repository, System.IO.Stream configStream) [0x00063] in <e1a77b5dfa0c4a1f8ba616c017f5e0b8>:0 
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.915 seconds
+Domain Reload Profiling: 1702ms
+	BeginReloadAssembly (206ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (14ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (52ms)
+	RebuildCommonClasses (33ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (27ms)
+	LoadAllAssembliesAndSetupDomain (509ms)
+		LoadAssemblies (349ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (252ms)
+			TypeCache.Refresh (7ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (228ms)
+			ResolveRequiredComponents (13ms)
+	FinalizeReload (915ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (605ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (4ms)
+			SetLoadedEditorAssemblies (5ms)
+			BeforeProcessingInitializeOnLoad (81ms)
+			ProcessInitializeOnLoadAttributes (441ms)
+			ProcessInitializeOnLoadMethodAttributes (65ms)
+			AfterProcessingInitializeOnLoad (9ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (12ms)
+Refreshing native plugins compatible for Editor in 4.75 ms, found 10 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
+Unloading 17 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7327 unused Assets / (5.5 MB). Loaded Objects now: 8236.
+Memory consumption went from 190.2 MB to 184.7 MB.
+Total: 11.730400 ms (FindLiveObjects: 0.904100 ms CreateObjectMapping: 1.489600 ms MarkObjects: 5.852200 ms  DeleteObjects: 3.483400 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 41.229739 seconds.
+  path: Assets/Sprites/man run sprite sheet_0.controller
+  artifactKey: Guid(0f0c19da9a7f495459484714563a76dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/man run sprite sheet_0.controller using Guid(0f0c19da9a7f495459484714563a76dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd138552da067518aff6ba407f98c7243') in 0.0217541 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
+
+========================================================================
+Received Import Request.
+  Time since last request: 45.168874 seconds.
+  path: Assets/Sprites/man standing.png
+  artifactKey: Guid(02983ba30c5b0e147b21eaed3e5a1661) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/man standing.png using Guid(02983ba30c5b0e147b21eaed3e5a1661) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4852061c3b406a182276f4904abeab32') in 0.0497772 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.080977 seconds.
+  path: Assets/Sprites/man standing.png
+  artifactKey: Guid(02983ba30c5b0e147b21eaed3e5a1661) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/man standing.png using Guid(02983ba30c5b0e147b21eaed3e5a1661) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '00a173ccf24f26048cd19478171c21a9') in 0.0487602 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.538314 seconds.
+  path: Assets/Sprites/man standing.png
+  artifactKey: Guid(02983ba30c5b0e147b21eaed3e5a1661) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/man standing.png using Guid(02983ba30c5b0e147b21eaed3e5a1661) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'eb41ec7e21aa09aea5f30a15a14baf26') in 0.013193 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 8.085485 seconds.
+  path: Assets/Sprites/man standing.png
+  artifactKey: Guid(02983ba30c5b0e147b21eaed3e5a1661) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/man standing.png using Guid(02983ba30c5b0e147b21eaed3e5a1661) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4daf5681eb8b68f051100b5bb988c182') in 0.0255023 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.303858 seconds.
+  path: Assets/Sprites/man standing.png
+  artifactKey: Guid(02983ba30c5b0e147b21eaed3e5a1661) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/man standing.png using Guid(02983ba30c5b0e147b21eaed3e5a1661) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f96df7d26ee8194429f9c119a1889f54') in 0.008173 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 23.362888 seconds.
+  path: Assets/Sprites/man standing.png
+  artifactKey: Guid(02983ba30c5b0e147b21eaed3e5a1661) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/man standing.png using Guid(02983ba30c5b0e147b21eaed3e5a1661) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5e7f229a3ef046db91ce1adbcb3089d1') in 0.0202263 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.981720 seconds.
+  path: Assets/Sprites/man standing.png
+  artifactKey: Guid(02983ba30c5b0e147b21eaed3e5a1661) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/man standing.png using Guid(02983ba30c5b0e147b21eaed3e5a1661) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd8dc30fba44408a2cfcd260b2caa0daa') in 0.0256037 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 34.263764 seconds.
+  path: Assets/Sprites/man standing.png
+  artifactKey: Guid(02983ba30c5b0e147b21eaed3e5a1661) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/man standing.png using Guid(02983ba30c5b0e147b21eaed3e5a1661) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1e58aa1ae59040144967b5aaec623b37') in 0.0232578 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 12.752260 seconds.
+  path: Assets/Sprites/man standing.png
+  artifactKey: Guid(02983ba30c5b0e147b21eaed3e5a1661) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/man standing.png using Guid(02983ba30c5b0e147b21eaed3e5a1661) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd1e543e7b615aa0636a7addf9cfae12a') in 0.0240184 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.034014 seconds.
+  path: Assets/Sprites/man standing.png
+  artifactKey: Guid(02983ba30c5b0e147b21eaed3e5a1661) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/man standing.png using Guid(02983ba30c5b0e147b21eaed3e5a1661) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '46e3a7ae0ab8a1b8def652dfe56b43ea') in 0.0242812 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 5.262499 seconds.
+  path: Assets/Sprites/man standing.png
+  artifactKey: Guid(02983ba30c5b0e147b21eaed3e5a1661) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/man standing.png using Guid(02983ba30c5b0e147b21eaed3e5a1661) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '34fc7a75dc18a2e7901ddf7d3e49bb88') in 0.03729 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.812 seconds
+Refreshing native plugins compatible for Editor in 4.27 ms, found 10 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+log4net:ERROR Error while loading XML configuration
+System.Xml.XmlException: An error occurred while parsing EntityName. Line 3, position 35.
+  at System.Xml.XmlTextReaderImpl.Throw (System.Exception e) [0x00027] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.Throw (System.String res, System.Int32 lineNo, System.Int32 linePos) [0x00019] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.HandleEntityReference (System.Boolean isInAttributeValue, System.Xml.XmlTextReaderImpl+EntityExpandType expandType, System.Int32& charRefEndPos) [0x000c6] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseAttributeValueSlow (System.Int32 curPos, System.Char quoteChar, System.Xml.XmlTextReaderImpl+NodeData attr) [0x002a5] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseAttributes () [0x0039a] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseElement () [0x001df] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseElementContent () [0x0016f] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.Read () [0x00085] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlLoader.LoadNode (System.Boolean skipOverWhitespace) [0x0025b] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlLoader.LoadDocSequence (System.Xml.XmlDocument parentDoc) [0x0001b] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlLoader.Load (System.Xml.XmlDocument doc, System.Xml.XmlReader reader, System.Boolean preserveWhitespace) [0x000b4] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlDocument.Load (System.Xml.XmlReader reader) [0x0002e] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at log4net.Config.XmlConfigurator.InternalConfigure (log4net.Repository.ILoggerRepository repository, System.IO.Stream configStream) [0x00063] in <e1a77b5dfa0c4a1f8ba616c017f5e0b8>:0 
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.909 seconds
+Domain Reload Profiling: 1720ms
+	BeginReloadAssembly (214ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (18ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (62ms)
+	RebuildCommonClasses (33ms)
+	RebuildNativeTypeToScriptingClass (18ms)
+	initialDomainReloadingComplete (33ms)
+	LoadAllAssembliesAndSetupDomain (513ms)
+		LoadAssemblies (338ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (261ms)
+			TypeCache.Refresh (7ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (235ms)
+			ResolveRequiredComponents (14ms)
+	FinalizeReload (909ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (605ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			SetLoadedEditorAssemblies (5ms)
+			BeforeProcessingInitializeOnLoad (80ms)
+			ProcessInitializeOnLoadAttributes (444ms)
+			ProcessInitializeOnLoadMethodAttributes (65ms)
+			AfterProcessingInitializeOnLoad (8ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (11ms)
+Refreshing native plugins compatible for Editor in 4.32 ms, found 10 plugins.
+Preloading 1 native plugins for Editor in 0.05 ms.
+Unloading 17 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7327 unused Assets / (5.8 MB). Loaded Objects now: 8239.
+Memory consumption went from 190.2 MB to 184.4 MB.
+Total: 11.119700 ms (FindLiveObjects: 0.828000 ms CreateObjectMapping: 1.272200 ms MarkObjects: 5.907000 ms  DeleteObjects: 3.111700 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 24.747496 seconds.
+  path: Assets/Sprites/man standing.png
+  artifactKey: Guid(02983ba30c5b0e147b21eaed3e5a1661) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/man standing.png using Guid(02983ba30c5b0e147b21eaed3e5a1661) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '41a85265102322530135be5ab63c0f5d') in 0.0791991 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.829 seconds
+Refreshing native plugins compatible for Editor in 4.53 ms, found 10 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+log4net:ERROR Error while loading XML configuration
+System.Xml.XmlException: An error occurred while parsing EntityName. Line 3, position 35.
+  at System.Xml.XmlTextReaderImpl.Throw (System.Exception e) [0x00027] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.Throw (System.String res, System.Int32 lineNo, System.Int32 linePos) [0x00019] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.HandleEntityReference (System.Boolean isInAttributeValue, System.Xml.XmlTextReaderImpl+EntityExpandType expandType, System.Int32& charRefEndPos) [0x000c6] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseAttributeValueSlow (System.Int32 curPos, System.Char quoteChar, System.Xml.XmlTextReaderImpl+NodeData attr) [0x002a5] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseAttributes () [0x0039a] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseElement () [0x001df] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseElementContent () [0x0016f] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.Read () [0x00085] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlLoader.LoadNode (System.Boolean skipOverWhitespace) [0x0025b] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlLoader.LoadDocSequence (System.Xml.XmlDocument parentDoc) [0x0001b] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlLoader.Load (System.Xml.XmlDocument doc, System.Xml.XmlReader reader, System.Boolean preserveWhitespace) [0x000b4] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlDocument.Load (System.Xml.XmlReader reader) [0x0002e] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at log4net.Config.XmlConfigurator.InternalConfigure (log4net.Repository.ILoggerRepository repository, System.IO.Stream configStream) [0x00063] in <e1a77b5dfa0c4a1f8ba616c017f5e0b8>:0 
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.949 seconds
+Domain Reload Profiling: 1776ms
+	BeginReloadAssembly (217ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (13ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (62ms)
+	RebuildCommonClasses (34ms)
+	RebuildNativeTypeToScriptingClass (14ms)
+	initialDomainReloadingComplete (27ms)
+	LoadAllAssembliesAndSetupDomain (535ms)
+		LoadAssemblies (361ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (268ms)
+			TypeCache.Refresh (8ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (244ms)
+			ResolveRequiredComponents (13ms)
+	FinalizeReload (949ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (632ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			SetLoadedEditorAssemblies (5ms)
+			BeforeProcessingInitializeOnLoad (81ms)
+			ProcessInitializeOnLoadAttributes (464ms)
+			ProcessInitializeOnLoadMethodAttributes (68ms)
+			AfterProcessingInitializeOnLoad (10ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (13ms)
+Refreshing native plugins compatible for Editor in 4.94 ms, found 10 plugins.
+Preloading 1 native plugins for Editor in 0.05 ms.
+Unloading 17 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7327 unused Assets / (5.9 MB). Loaded Objects now: 8241.
+Memory consumption went from 190.2 MB to 184.3 MB.
+Total: 12.841700 ms (FindLiveObjects: 1.045700 ms CreateObjectMapping: 2.001700 ms MarkObjects: 6.026800 ms  DeleteObjects: 3.766600 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.785 seconds
+Refreshing native plugins compatible for Editor in 4.37 ms, found 10 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+log4net:ERROR Error while loading XML configuration
+System.Xml.XmlException: An error occurred while parsing EntityName. Line 3, position 35.
+  at System.Xml.XmlTextReaderImpl.Throw (System.Exception e) [0x00027] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.Throw (System.String res, System.Int32 lineNo, System.Int32 linePos) [0x00019] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.HandleEntityReference (System.Boolean isInAttributeValue, System.Xml.XmlTextReaderImpl+EntityExpandType expandType, System.Int32& charRefEndPos) [0x000c6] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseAttributeValueSlow (System.Int32 curPos, System.Char quoteChar, System.Xml.XmlTextReaderImpl+NodeData attr) [0x002a5] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseAttributes () [0x0039a] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseElement () [0x001df] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseElementContent () [0x0016f] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.Read () [0x00085] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlLoader.LoadNode (System.Boolean skipOverWhitespace) [0x0025b] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlLoader.LoadDocSequence (System.Xml.XmlDocument parentDoc) [0x0001b] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlLoader.Load (System.Xml.XmlDocument doc, System.Xml.XmlReader reader, System.Boolean preserveWhitespace) [0x000b4] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlDocument.Load (System.Xml.XmlReader reader) [0x0002e] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at log4net.Config.XmlConfigurator.InternalConfigure (log4net.Repository.ILoggerRepository repository, System.IO.Stream configStream) [0x00063] in <e1a77b5dfa0c4a1f8ba616c017f5e0b8>:0 
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.919 seconds
+Domain Reload Profiling: 1703ms
+	BeginReloadAssembly (201ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (18ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (47ms)
+	RebuildCommonClasses (38ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (26ms)
+	LoadAllAssembliesAndSetupDomain (505ms)
+		LoadAssemblies (340ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (251ms)
+			TypeCache.Refresh (7ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (227ms)
+			ResolveRequiredComponents (13ms)
+	FinalizeReload (919ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (614ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			SetLoadedEditorAssemblies (5ms)
+			BeforeProcessingInitializeOnLoad (82ms)
+			ProcessInitializeOnLoadAttributes (450ms)
+			ProcessInitializeOnLoadMethodAttributes (66ms)
+			AfterProcessingInitializeOnLoad (9ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (12ms)
+Refreshing native plugins compatible for Editor in 5.19 ms, found 10 plugins.
+Preloading 1 native plugins for Editor in 0.06 ms.
+Unloading 17 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7327 unused Assets / (5.8 MB). Loaded Objects now: 8243.
+Memory consumption went from 190.2 MB to 184.3 MB.
+Total: 10.813800 ms (FindLiveObjects: 0.868700 ms CreateObjectMapping: 1.435100 ms MarkObjects: 5.119100 ms  DeleteObjects: 3.390300 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.786 seconds
+Refreshing native plugins compatible for Editor in 4.24 ms, found 10 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+log4net:ERROR Error while loading XML configuration
+System.Xml.XmlException: An error occurred while parsing EntityName. Line 3, position 35.
+  at System.Xml.XmlTextReaderImpl.Throw (System.Exception e) [0x00027] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.Throw (System.String res, System.Int32 lineNo, System.Int32 linePos) [0x00019] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.HandleEntityReference (System.Boolean isInAttributeValue, System.Xml.XmlTextReaderImpl+EntityExpandType expandType, System.Int32& charRefEndPos) [0x000c6] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseAttributeValueSlow (System.Int32 curPos, System.Char quoteChar, System.Xml.XmlTextReaderImpl+NodeData attr) [0x002a5] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseAttributes () [0x0039a] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseElement () [0x001df] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseElementContent () [0x0016f] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.Read () [0x00085] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlLoader.LoadNode (System.Boolean skipOverWhitespace) [0x0025b] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlLoader.LoadDocSequence (System.Xml.XmlDocument parentDoc) [0x0001b] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlLoader.Load (System.Xml.XmlDocument doc, System.Xml.XmlReader reader, System.Boolean preserveWhitespace) [0x000b4] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlDocument.Load (System.Xml.XmlReader reader) [0x0002e] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at log4net.Config.XmlConfigurator.InternalConfigure (log4net.Repository.ILoggerRepository repository, System.IO.Stream configStream) [0x00063] in <e1a77b5dfa0c4a1f8ba616c017f5e0b8>:0 
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.884 seconds
+Domain Reload Profiling: 1668ms
+	BeginReloadAssembly (194ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (13ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (45ms)
+	RebuildCommonClasses (33ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (27ms)
+	LoadAllAssembliesAndSetupDomain (516ms)
+		LoadAssemblies (336ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (265ms)
+			TypeCache.Refresh (7ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (239ms)
+			ResolveRequiredComponents (14ms)
+	FinalizeReload (885ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (586ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			SetLoadedEditorAssemblies (5ms)
+			BeforeProcessingInitializeOnLoad (79ms)
+			ProcessInitializeOnLoadAttributes (425ms)
+			ProcessInitializeOnLoadMethodAttributes (66ms)
+			AfterProcessingInitializeOnLoad (8ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (11ms)
+Refreshing native plugins compatible for Editor in 4.40 ms, found 10 plugins.
+Preloading 1 native plugins for Editor in 0.05 ms.
+Unloading 17 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7327 unused Assets / (6.2 MB). Loaded Objects now: 8245.
+Memory consumption went from 190.2 MB to 184.0 MB.
+Total: 10.293500 ms (FindLiveObjects: 0.809400 ms CreateObjectMapping: 1.234400 ms MarkObjects: 4.585800 ms  DeleteObjects: 3.662700 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.842 seconds
+Refreshing native plugins compatible for Editor in 4.18 ms, found 10 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+log4net:ERROR Error while loading XML configuration
+System.Xml.XmlException: An error occurred while parsing EntityName. Line 3, position 35.
+  at System.Xml.XmlTextReaderImpl.Throw (System.Exception e) [0x00027] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.Throw (System.String res, System.Int32 lineNo, System.Int32 linePos) [0x00019] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.HandleEntityReference (System.Boolean isInAttributeValue, System.Xml.XmlTextReaderImpl+EntityExpandType expandType, System.Int32& charRefEndPos) [0x000c6] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseAttributeValueSlow (System.Int32 curPos, System.Char quoteChar, System.Xml.XmlTextReaderImpl+NodeData attr) [0x002a5] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseAttributes () [0x0039a] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseElement () [0x001df] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseElementContent () [0x0016f] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.Read () [0x00085] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlLoader.LoadNode (System.Boolean skipOverWhitespace) [0x0025b] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlLoader.LoadDocSequence (System.Xml.XmlDocument parentDoc) [0x0001b] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlLoader.Load (System.Xml.XmlDocument doc, System.Xml.XmlReader reader, System.Boolean preserveWhitespace) [0x000b4] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlDocument.Load (System.Xml.XmlReader reader) [0x0002e] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at log4net.Config.XmlConfigurator.InternalConfigure (log4net.Repository.ILoggerRepository repository, System.IO.Stream configStream) [0x00063] in <e1a77b5dfa0c4a1f8ba616c017f5e0b8>:0 
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.896 seconds
+Domain Reload Profiling: 1736ms
+	BeginReloadAssembly (204ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (13ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (53ms)
+	RebuildCommonClasses (33ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (32ms)
+	LoadAllAssembliesAndSetupDomain (557ms)
+		LoadAssemblies (385ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (263ms)
+			TypeCache.Refresh (8ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (239ms)
+			ResolveRequiredComponents (12ms)
+	FinalizeReload (897ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (595ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			SetLoadedEditorAssemblies (5ms)
+			BeforeProcessingInitializeOnLoad (86ms)
+			ProcessInitializeOnLoadAttributes (428ms)
+			ProcessInitializeOnLoadMethodAttributes (65ms)
+			AfterProcessingInitializeOnLoad (8ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (12ms)
+Refreshing native plugins compatible for Editor in 4.61 ms, found 10 plugins.
+Preloading 1 native plugins for Editor in 0.05 ms.
+Unloading 17 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7327 unused Assets / (5.9 MB). Loaded Objects now: 8247.
+Memory consumption went from 190.2 MB to 184.3 MB.
+Total: 11.595200 ms (FindLiveObjects: 0.822400 ms CreateObjectMapping: 1.380800 ms MarkObjects: 5.738100 ms  DeleteObjects: 3.653200 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.835 seconds
+Refreshing native plugins compatible for Editor in 4.55 ms, found 10 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+log4net:ERROR Error while loading XML configuration
+System.Xml.XmlException: An error occurred while parsing EntityName. Line 3, position 35.
+  at System.Xml.XmlTextReaderImpl.Throw (System.Exception e) [0x00027] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.Throw (System.String res, System.Int32 lineNo, System.Int32 linePos) [0x00019] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.HandleEntityReference (System.Boolean isInAttributeValue, System.Xml.XmlTextReaderImpl+EntityExpandType expandType, System.Int32& charRefEndPos) [0x000c6] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseAttributeValueSlow (System.Int32 curPos, System.Char quoteChar, System.Xml.XmlTextReaderImpl+NodeData attr) [0x002a5] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseAttributes () [0x0039a] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseElement () [0x001df] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseElementContent () [0x0016f] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.Read () [0x00085] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlLoader.LoadNode (System.Boolean skipOverWhitespace) [0x0025b] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlLoader.LoadDocSequence (System.Xml.XmlDocument parentDoc) [0x0001b] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlLoader.Load (System.Xml.XmlDocument doc, System.Xml.XmlReader reader, System.Boolean preserveWhitespace) [0x000b4] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlDocument.Load (System.Xml.XmlReader reader) [0x0002e] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at log4net.Config.XmlConfigurator.InternalConfigure (log4net.Repository.ILoggerRepository repository, System.IO.Stream configStream) [0x00063] in <e1a77b5dfa0c4a1f8ba616c017f5e0b8>:0 
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.867 seconds
+Domain Reload Profiling: 1700ms
+	BeginReloadAssembly (239ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (20ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (60ms)
+	RebuildCommonClasses (34ms)
+	RebuildNativeTypeToScriptingClass (14ms)
+	initialDomainReloadingComplete (28ms)
+	LoadAllAssembliesAndSetupDomain (516ms)
+		LoadAssemblies (355ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (261ms)
+			TypeCache.Refresh (11ms)
+				TypeCache.ScanAssembly (1ms)
+			BuildScriptInfoCaches (233ms)
+			ResolveRequiredComponents (13ms)
+	FinalizeReload (867ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (575ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			SetLoadedEditorAssemblies (5ms)
+			BeforeProcessingInitializeOnLoad (78ms)
+			ProcessInitializeOnLoadAttributes (409ms)
+			ProcessInitializeOnLoadMethodAttributes (69ms)
+			AfterProcessingInitializeOnLoad (10ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (10ms)
+Refreshing native plugins compatible for Editor in 4.38 ms, found 10 plugins.
+Preloading 1 native plugins for Editor in 0.05 ms.
+Unloading 17 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7327 unused Assets / (6.0 MB). Loaded Objects now: 8249.
+Memory consumption went from 190.2 MB to 184.2 MB.
+Total: 9.942900 ms (FindLiveObjects: 0.812900 ms CreateObjectMapping: 1.337200 ms MarkObjects: 4.622300 ms  DeleteObjects: 3.169700 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.776 seconds
+Refreshing native plugins compatible for Editor in 4.38 ms, found 10 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+log4net:ERROR Error while loading XML configuration
+System.Xml.XmlException: An error occurred while parsing EntityName. Line 3, position 35.
+  at System.Xml.XmlTextReaderImpl.Throw (System.Exception e) [0x00027] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.Throw (System.String res, System.Int32 lineNo, System.Int32 linePos) [0x00019] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.HandleEntityReference (System.Boolean isInAttributeValue, System.Xml.XmlTextReaderImpl+EntityExpandType expandType, System.Int32& charRefEndPos) [0x000c6] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseAttributeValueSlow (System.Int32 curPos, System.Char quoteChar, System.Xml.XmlTextReaderImpl+NodeData attr) [0x002a5] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseAttributes () [0x0039a] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseElement () [0x001df] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseElementContent () [0x0016f] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.Read () [0x00085] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlLoader.LoadNode (System.Boolean skipOverWhitespace) [0x0025b] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlLoader.LoadDocSequence (System.Xml.XmlDocument parentDoc) [0x0001b] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlLoader.Load (System.Xml.XmlDocument doc, System.Xml.XmlReader reader, System.Boolean preserveWhitespace) [0x000b4] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlDocument.Load (System.Xml.XmlReader reader) [0x0002e] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at log4net.Config.XmlConfigurator.InternalConfigure (log4net.Repository.ILoggerRepository repository, System.IO.Stream configStream) [0x00063] in <e1a77b5dfa0c4a1f8ba616c017f5e0b8>:0 
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.887 seconds
+Domain Reload Profiling: 1661ms
+	BeginReloadAssembly (191ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (13ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (45ms)
+	RebuildCommonClasses (33ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (29ms)
+	LoadAllAssembliesAndSetupDomain (508ms)
+		LoadAssemblies (339ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (255ms)
+			TypeCache.Refresh (7ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (231ms)
+			ResolveRequiredComponents (13ms)
+	FinalizeReload (887ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (588ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (4ms)
+			SetLoadedEditorAssemblies (5ms)
+			BeforeProcessingInitializeOnLoad (79ms)
+			ProcessInitializeOnLoadAttributes (426ms)
+			ProcessInitializeOnLoadMethodAttributes (65ms)
+			AfterProcessingInitializeOnLoad (8ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (12ms)
+Refreshing native plugins compatible for Editor in 4.86 ms, found 10 plugins.
+Preloading 1 native plugins for Editor in 0.05 ms.
+Unloading 17 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7327 unused Assets / (6.1 MB). Loaded Objects now: 8251.
+Memory consumption went from 190.2 MB to 184.2 MB.
+Total: 11.301600 ms (FindLiveObjects: 0.924300 ms CreateObjectMapping: 1.385000 ms MarkObjects: 5.544300 ms  DeleteObjects: 3.447500 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.833 seconds
+Refreshing native plugins compatible for Editor in 4.64 ms, found 10 plugins.
+Native extension for WindowsStandalone target not found
+Native extension for WebGL target not found
+log4net:ERROR Error while loading XML configuration
+System.Xml.XmlException: An error occurred while parsing EntityName. Line 3, position 35.
+  at System.Xml.XmlTextReaderImpl.Throw (System.Exception e) [0x00027] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.Throw (System.String res, System.Int32 lineNo, System.Int32 linePos) [0x00019] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.HandleEntityReference (System.Boolean isInAttributeValue, System.Xml.XmlTextReaderImpl+EntityExpandType expandType, System.Int32& charRefEndPos) [0x000c6] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseAttributeValueSlow (System.Int32 curPos, System.Char quoteChar, System.Xml.XmlTextReaderImpl+NodeData attr) [0x002a5] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseAttributes () [0x0039a] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseElement () [0x001df] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.ParseElementContent () [0x0016f] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlTextReaderImpl.Read () [0x00085] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlLoader.LoadNode (System.Boolean skipOverWhitespace) [0x0025b] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlLoader.LoadDocSequence (System.Xml.XmlDocument parentDoc) [0x0001b] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlLoader.Load (System.Xml.XmlDocument doc, System.Xml.XmlReader reader, System.Boolean preserveWhitespace) [0x000b4] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at System.Xml.XmlDocument.Load (System.Xml.XmlReader reader) [0x0002e] in <50afcd3aa38f4201b3322238caf47652>:0 
+  at log4net.Config.XmlConfigurator.InternalConfigure (log4net.Repository.ILoggerRepository repository, System.IO.Stream configStream) [0x00063] in <e1a77b5dfa0c4a1f8ba616c017f5e0b8>:0 
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.949 seconds
+Domain Reload Profiling: 1780ms
+	BeginReloadAssembly (209ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (13ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (52ms)
+	RebuildCommonClasses (34ms)
+	RebuildNativeTypeToScriptingClass (14ms)
+	initialDomainReloadingComplete (30ms)
+	LoadAllAssembliesAndSetupDomain (544ms)
+		LoadAssemblies (367ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (273ms)
+			TypeCache.Refresh (8ms)
+				TypeCache.ScanAssembly (0ms)
+			BuildScriptInfoCaches (248ms)
+			ResolveRequiredComponents (13ms)
+	FinalizeReload (949ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (629ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			SetLoadedEditorAssemblies (5ms)
+			BeforeProcessingInitializeOnLoad (81ms)
+			ProcessInitializeOnLoadAttributes (460ms)
+			ProcessInitializeOnLoadMethodAttributes (71ms)
+			AfterProcessingInitializeOnLoad (9ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (14ms)
+Refreshing native plugins compatible for Editor in 5.20 ms, found 10 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
+Unloading 17 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7327 unused Assets / (5.7 MB). Loaded Objects now: 8253.
+Memory consumption went from 190.2 MB to 184.5 MB.
+Total: 11.420300 ms (FindLiveObjects: 0.889400 ms CreateObjectMapping: 1.826700 ms MarkObjects: 5.272300 ms  DeleteObjects: 3.431200 ms)
+
+Prepare: number of updated asset objects reloaded= 0
