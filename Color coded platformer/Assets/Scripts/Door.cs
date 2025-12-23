@@ -1,76 +1,75 @@
 using UnityEngine;
-using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using UnityEngine.InputSystem;
+
+[RequireComponent(typeof(Collider2D))]
 public class Door : MonoBehaviour
 {
-    private PlayerInputActions playerControls;
-    private InputAction move;
-    public string scene;
-    public Vector2 newPlayerPosition;
-    private bool playerWithinCollider = false;
+    [Header("Scene Transition")]
+    [SerializeField] private string scene;
+    [SerializeField] private Vector2 newPlayerPosition;
+
+    private bool playerInRange;
+    private bool used;
+
+    private PlayerInput playerInput;
+    private InputAction interact;
+
     private void Awake()
     {
-        playerControls = new PlayerInputActions();
-        if (playerControls == null)
-        {
-            Debug.LogError("PlayerInputActions not initialized!");
-        }
-    }
-    private void OnEnable()
-    {
-        playerControls.Player.Enable();
-        move = playerControls.Player.Move;
-        move.Enable();
+        GetComponent<Collider2D>().isTrigger = true;
     }
 
-    private void OnDisable()
+    private void OnTriggerEnter2D(Collider2D other)
     {
-        move.Disable();
-        playerControls.Player.Disable();
-    }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        
+        if (used) return;
+
+        if (!other.TryGetComponent(out PlayerInput input)) return;
+
+        playerInput = input;
+        interact = playerInput.actions["Interact"];
+
+        playerInRange = true;
     }
 
-    private void FixedUpdate()
+    private void OnTriggerExit2D(Collider2D other)
     {
-        // Get the vertical axis input (Y direction)
-        float verticalInput = move.ReadValue<Vector2>().y;
-        // Check if the vertical input is positive and no other button press is being held
-        if (verticalInput > 0 && playerWithinCollider)
+        if (!other.TryGetComponent(out PlayerInput input)) return;
+        if (input != playerInput) return;
+
+        Cleanup();
+    }
+
+    private void Update()
+    {
+        if (!playerInRange || used || interact == null) return;
+
+        // Fires only on a NEW press
+        if (interact.WasPressedThisFrame())
         {
-            EnterDoor();
+            used = true;
+            BeginTransition();
         }
     }
-    private void EnterDoor()
+
+    private void BeginTransition()
     {
+        playerInRange = false;
+        GetComponent<Collider2D>().enabled = false;
+
+        GameManager gm = FindFirstObjectByType<GameManager>();
+        if (gm != null)
+        {
+            gm.playerSpawnPoint = newPlayerPosition;
+        }
+
         SceneManager.LoadScene(scene, LoadSceneMode.Single);
-        GameObject.Find("Game Manager").GetComponent<GameManager>().playerSpawnPoint = newPlayerPosition;
-        //GameObject.Find("Game Manager").GetComponent<GameManager>().justReloaded = true;
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    private void Cleanup()
     {
-        if (collision.CompareTag("Player")) // Hardcoded "Player" tag check
-        {
-            // Enable move action when the player enters the trigger
-            move.Enable();
-            Debug.Log("player entered door.");
-            playerWithinCollider = true;
-        }
-
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player")) // Hardcoded "Player" tag check
-        {
-            // Disable move action when the player exits the trigger
-            move.Disable();
-            Debug.Log("player exited door.");
-            playerWithinCollider = false;
-        }
+        playerInput = null;
+        interact = null;
+        playerInRange = false;
     }
 }

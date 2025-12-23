@@ -28,7 +28,7 @@ public class PositionBasedColorChanger : MonoBehaviour
         playerBehaviour = FindFirstObjectByType<PlayerBehaviour>();
     }
 
-    void Update()
+    void FixedUpdate()
     {
         UpdateArrowPosition();
         UpdatePlayerRegionColor();
@@ -112,33 +112,32 @@ private void UpdateArrowPosition()
     arrowTransform.anchoredPosition = new Vector2(arrowX, arrowY);
 }
 
-
-
-
-
     private void UpdatePlayerRegionColor()
     {
         if (!playerBehaviour) return;
 
-        // Get the player's position (X or Y based on the setting)
         float playerPosition = useXCoordinate ? playerBehaviour.transform.position.x : playerBehaviour.transform.position.y;
-
-        // Calculate the current region index based on the player's position
         float startPosition = useXCoordinate ? startX : startY;
         int currentRegionIndex = Mathf.FloorToInt((playerPosition - startPosition) / regionWidth);
 
-        // If the player enters a new region, update the color
+        Debug.Log($"Player Position: {playerPosition}, Region Index: {currentRegionIndex}");
+
         if (currentRegionIndex != lastRegionIndex)
         {
             ChangeColors(currentRegionIndex);
-            lastRegionIndex = currentRegionIndex; // Update the last region index
+            lastRegionIndex = currentRegionIndex;
         }
     }
 
+
     private void ChangeColors(int regionIndex)
     {
-        // Handle index wrapping for out-of-range regions
-        int colorIndex = Mathf.Abs(regionIndex) % colorTags.Count;
+        if (colorTags == null || colorTags.Count == 0) return; // Prevent accessing an empty list
+
+        // Properly handle negative indices and ensure wrapping
+        int colorIndex = ((regionIndex % colorTags.Count) + colorTags.Count) % colorTags.Count;
+
+        if (colorIndex < 0 || colorIndex >= colorTags.Count) return; // Safety check
 
         // Get the tag and color for the region
         string currentTag = colorTags[colorIndex];
@@ -151,6 +150,8 @@ private void UpdateArrowPosition()
             changer.SetColorAndTag(currentColor, currentTag);
         }
     }
+
+
 
     public Color GetColorFromTag(string tag)
     {

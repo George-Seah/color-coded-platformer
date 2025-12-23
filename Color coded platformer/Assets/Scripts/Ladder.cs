@@ -113,7 +113,16 @@ public class Ladder : MonoBehaviour
             if (moveDirection.x != 0)
             {
                 playerRB.gameObject.GetComponent<PlayerBehaviour>().onLadder = false;
-                playerRB.gravityScale = 10;
+                playerRB.gravityScale = 30;
+                playerOnLadder = false;//Uncomment this if issues occur
+                //This code should be last
+                playerTransform = null;
+            }
+            else if(playerRB != null && playerRB.gameObject.layer != LayerMask.NameToLayer("Default") &&
+            gameObject.layer != LayerMask.NameToLayer("Default") &&
+            gameObject.layer != playerRB.gameObject.layer){
+                playerRB.gameObject.GetComponent<PlayerBehaviour>().onLadder = false;
+                playerRB.gravityScale = 30;
                 playerOnLadder = false;//Uncomment this if issues occur
                 //This code should be last
                 playerTransform = null;

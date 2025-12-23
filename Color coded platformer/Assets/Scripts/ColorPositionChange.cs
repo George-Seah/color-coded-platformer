@@ -38,10 +38,6 @@ public class ColorPositionChange : MonoBehaviour
                 Debug.LogError("No color tags found in PositionBasedColorChanger.");
             }
         }
-        else
-        {
-            Debug.LogError("PositionBasedColorChanger not found!");
-        }
     }
 
     public void UpdateColor()
