@@ -51,10 +51,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   climbSpeed: 0.25
+  normalGravity: 10
+  exitGravity: 30
   moveDirection: {x: 0, y: 0}
   playerOnLadder: 0
-  playerTransform: {fileID: 0}
-  playerRB: {fileID: 0}
+  player: {fileID: 0}
 --- !u!114 &4989494071086336378
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -252,20 +253,8 @@ PrefabInstance:
     m_TransformParent: {fileID: 7749423792081056640}
     m_Modifications:
     - target: {fileID: 892427768073568870, guid: ae29d790e32d3384eb896308e7d71559, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-    - target: {fileID: 892427768073568870, guid: ae29d790e32d3384eb896308e7d71559, type: 3}
       propertyPath: m_Enabled
       value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 892427768073568870, guid: ae29d790e32d3384eb896308e7d71559, type: 3}
-      propertyPath: m_SortingOrder
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2613226622487470225, guid: ae29d790e32d3384eb896308e7d71559, type: 3}
-      propertyPath: selectedColor
-      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 2644044130643412919, guid: ae29d790e32d3384eb896308e7d71559, type: 3}
       propertyPath: m_Size.x
@@ -336,18 +325,6 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8872859347091628769, guid: ae29d790e32d3384eb896308e7d71559, type: 3}
-      propertyPath: m_LocalScale.x
-      value: 0.15
-      objectReference: {fileID: 0}
-    - target: {fileID: 8872859347091628769, guid: ae29d790e32d3384eb896308e7d71559, type: 3}
-      propertyPath: m_LocalScale.y
-      value: 0.01
-      objectReference: {fileID: 0}
-    - target: {fileID: 8872859347091628769, guid: ae29d790e32d3384eb896308e7d71559, type: 3}
-      propertyPath: m_LocalScale.z
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 8872859347091628769, guid: ae29d790e32d3384eb896308e7d71559, type: 3}
       propertyPath: m_LocalPosition.x
       value: 0
       objectReference: {fileID: 0}
@@ -387,53 +364,14 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8872859347091628769, guid: ae29d790e32d3384eb896308e7d71559, type: 3}
-      propertyPath: m_ConstrainProportionsScale
-      value: 0
-      objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 7524807875546102435, guid: ae29d790e32d3384eb896308e7d71559, type: 3}
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 8363369679228806385, guid: ae29d790e32d3384eb896308e7d71559, type: 3}
-      insertIndex: 2
-      addedObject: {fileID: 7130895015464168982}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ae29d790e32d3384eb896308e7d71559, type: 3}
---- !u!61 &87235365261101726 stripped
-BoxCollider2D:
-  m_CorrespondingSourceObject: {fileID: 2644044130643412919, guid: ae29d790e32d3384eb896308e7d71559, type: 3}
-  m_PrefabInstance: {fileID: 2703395880748731689}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &5878548072375314904 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8363369679228806385, guid: ae29d790e32d3384eb896308e7d71559, type: 3}
-  m_PrefabInstance: {fileID: 2703395880748731689}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &7130895015464168982
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5878548072375314904}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: b97ac4d0edfffb64d83a6a497d698a55, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  collisionCollider: {fileID: 87235365261101726}
-  triggerCollider: {fileID: 8459218364413764404}
-  partOfLadder: 1
-  collisionObject: {fileID: 0}
-  objectRB: {fileID: 0}
 --- !u!4 &6820383507998502856 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 8872859347091628769, guid: ae29d790e32d3384eb896308e7d71559, type: 3}
-  m_PrefabInstance: {fileID: 2703395880748731689}
-  m_PrefabAsset: {fileID: 0}
---- !u!61 &8459218364413764404 stripped
-BoxCollider2D:
-  m_CorrespondingSourceObject: {fileID: 5828021248145206813, guid: ae29d790e32d3384eb896308e7d71559, type: 3}
   m_PrefabInstance: {fileID: 2703395880748731689}
   m_PrefabAsset: {fileID: 0}

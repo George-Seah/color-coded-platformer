@@ -379,10 +379,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 2556980997122668365, guid: 7520555fcb34b6d42b9c29b60656eb28, type: 3}
-      propertyPath: playerSpawnPoint.x
-      value: 0
-      objectReference: {fileID: 0}
     - target: {fileID: 7000228589990126056, guid: 7520555fcb34b6d42b9c29b60656eb28, type: 3}
       propertyPath: m_Name
       value: Game Manager
@@ -2172,7 +2168,6 @@ SceneRoots:
   - {fileID: 82814004}
   - {fileID: 2093305445}
   - {fileID: 2073827256}
-  - {fileID: 321666774}
   - {fileID: 426523176}
   - {fileID: 1966742200}
   - {fileID: 1197092140}
@@ -2196,3 +2191,4 @@ SceneRoots:
   - {fileID: 1272974488}
   - {fileID: 540126303}
   - {fileID: 272086201}
+  - {fileID: 321666774}

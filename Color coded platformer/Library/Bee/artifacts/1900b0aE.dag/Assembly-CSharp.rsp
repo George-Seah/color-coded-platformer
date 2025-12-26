@@ -491,7 +491,6 @@
 "Assets/Scripts/RespawnField.cs"
 "Assets/Scripts/Star.cs"
 "Assets/Scripts/StripedGround.cs"
-"Assets/Scripts/UpDirectionalPlatform.cs"
 "Assets/Scripts/VelocityChecker.cs"
 "Assets/Scripts/Waddler.cs"
 "Assets/Scripts/WaddlerCannon.cs"
