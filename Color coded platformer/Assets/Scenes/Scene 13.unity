@@ -1856,7 +1856,6 @@ MonoBehaviour:
   jumping: 0
   jumpAmount: 20
   jumpForce: 0
-  currentKey: {fileID: 0}
   holdingKey: 0
   color: 
   onLadder: 0
