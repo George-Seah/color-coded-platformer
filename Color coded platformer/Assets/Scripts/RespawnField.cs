@@ -21,7 +21,14 @@ public class RespawnField : MonoBehaviour
             //collision.gameObject.GetComponent<PlayerBehaviour>().SetRespawnPosition(new Vector2(respawnPosition));
             //collision.gameObject.GetComponent<PlayerBehaviour>().SetRespawnPosition(respawnPosition);
             //Debug.Log("Player entered ground");
-            FindFirstObjectByType<GameManager>().playerSpawnPoint = respawnPosition;
+            GameManager gameManager = FindFirstObjectByType<GameManager>();
+            
+            if(!gameManager){
+                Debug.LogWarning("GameManager not found in the scene.");
+                return;
+            }
+
+            gameManager.playerSpawnPoint = respawnPosition;
         }
     }
 }

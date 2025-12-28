@@ -74,7 +74,8 @@ public class PlayerBehaviour : MonoBehaviour
         jump.Disable();
         drop.Disable();
         interact.Disable();
-
+        playerControls.Player.Disable();
+        
         jump.performed -= OnJump;
         jump.canceled -= OnJumpCanceled;
         drop.performed -= OnDrop;

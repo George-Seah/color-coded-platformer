@@ -489,6 +489,7 @@
 "Assets/Scripts/PositionBasedColorChanger.cs"
 "Assets/Scripts/PressurePad.cs"
 "Assets/Scripts/RespawnField.cs"
+"Assets/Scripts/SlopeFixer.cs"
 "Assets/Scripts/Star.cs"
 "Assets/Scripts/StripedGround.cs"
 "Assets/Scripts/VelocityChecker.cs"

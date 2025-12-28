@@ -45,6 +45,7 @@ public class Ladder : MonoBehaviour
     private void OnDisable()
     {
         move.Disable();
+        playerControls.Player.Disable();
     }
 
     private void OnTriggerStay2D(Collider2D collision)
