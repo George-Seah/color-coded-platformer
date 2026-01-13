@@ -240,6 +240,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Semi Solid Platform (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 4778257808016571896, guid: b8477eed8618ac94db72e1250d31bb68, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
@@ -1921,10 +1925,6 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1335557056}
     m_Modifications:
-    - target: {fileID: 592201727825535298, guid: e4a38ca2d37bd0d4cbc11cd9df061325, type: 3}
-      propertyPath: selectedColor
-      value: 3
-      objectReference: {fileID: 0}
     - target: {fileID: 3290314203449382061, guid: e4a38ca2d37bd0d4cbc11cd9df061325, type: 3}
       propertyPath: m_Name
       value: Waddler Cannon
@@ -1969,10 +1969,6 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 90
       objectReference: {fileID: 0}
-    - target: {fileID: 5337350850983442846, guid: e4a38ca2d37bd0d4cbc11cd9df061325, type: 3}
-      propertyPath: waddler
-      value: 
-      objectReference: {fileID: 1087774184992840758, guid: 2cf59196790655541a6c71baac4c0d30, type: 3}
     - target: {fileID: 5337350850983442846, guid: e4a38ca2d37bd0d4cbc11cd9df061325, type: 3}
       propertyPath: maxWaddlers
       value: 2

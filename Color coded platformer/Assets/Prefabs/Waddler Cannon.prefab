@@ -47,8 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3df70b878d90d9478d63dae2e208534, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedColor: 3
-  changeColor: 1
+  selectedColor: 0
   changeLayerMask: 1
 --- !u!114 &5337350850983442846
 MonoBehaviour:

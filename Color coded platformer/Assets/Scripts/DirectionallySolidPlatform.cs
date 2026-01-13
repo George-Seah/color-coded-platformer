@@ -1,6 +1,7 @@
 using UnityEngine;
 
 [RequireComponent(typeof(PlatformEffector2D))]
+[RequireComponent(typeof(Collider2D))]
 public class DirectionallySolidPlatform : MonoBehaviour
 {
     public enum DirectionOptions
@@ -11,10 +12,10 @@ public class DirectionallySolidPlatform : MonoBehaviour
         Right
     }
 
-    [SerializeField] private DirectionOptions selectedDirection;
+    [SerializeField] DirectionOptions selectedDirection;
     public DirectionOptions SelectedDirection
     {
-        get { return selectedDirection; }
+        get => selectedDirection;
         set
         {
             selectedDirection = value;
@@ -22,52 +23,59 @@ public class DirectionallySolidPlatform : MonoBehaviour
         }
     }
 
-    private PlatformEffector2D effector;
+    PlatformEffector2D effector;
+    Collider2D col;
 
-    private void Awake()
+    void Awake()
     {
-        effector = GetComponent<PlatformEffector2D>();
+        Initialize();
         ApplyDirection();
     }
 
-    private void OnValidate()
+    void OnValidate()
     {
-        if (effector == null)
+        Initialize();
+        ApplyDirection();
+    }
+
+    void Initialize()
+    {
+        if (!effector)
             effector = GetComponent<PlatformEffector2D>();
 
-        ApplyDirection();
+        if (!col)
+            col = GetComponent<Collider2D>();
+
+        col.usedByEffector = true;
     }
 
-    private void ApplyDirection()
+    void ApplyDirection()
     {
         effector.useOneWay = true;
         effector.surfaceArc = 180f;
 
-        float zRotation = 0f;
+        float rotation = 0f;
 
         switch (selectedDirection)
         {
             case DirectionOptions.Up:
-                zRotation = 0f;
+                rotation = 0f;
                 break;
 
             case DirectionOptions.Down:
-                zRotation = 180f;
+                rotation = 180f;
                 break;
 
             case DirectionOptions.Left:
-                zRotation = 90f;
+                rotation = 90f;
                 break;
 
             case DirectionOptions.Right:
-                zRotation = -90f;
+                rotation = -90f;
                 break;
         }
 
-        // Rotate the collider itself
-        transform.rotation = Quaternion.Euler(0f, 0f, zRotation);
-
-        // rotationalOffset intentionally unused
-        effector.rotationalOffset = 0f;
+        // Physics object must NOT be rotated
+        transform.rotation = Quaternion.Euler(0f, 0f, rotation);
     }
 }

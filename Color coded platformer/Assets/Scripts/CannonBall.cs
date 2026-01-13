@@ -20,7 +20,7 @@ public class CannonBall : MonoBehaviour
     {
         Debug.Log($"Cannonball collided with {collision.gameObject.name}");
         if(collision.gameObject.CompareTag("Player")){
-            GameObject.Find("Game Manager").GetComponent<GameManager>().ReloadScene();
+            GameManager.Instance.ReloadScene();
         }
         else if(collision.gameObject.CompareTag("Waddler")){
             if(collision.gameObject.GetComponentInChildren<Key>() != null){

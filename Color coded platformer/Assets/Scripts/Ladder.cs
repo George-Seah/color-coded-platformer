@@ -4,163 +4,148 @@ using UnityEngine.InputSystem;
 public class Ladder : MonoBehaviour
 {
     [Header("Settings")]
-    [SerializeField] private float climbSpeed = 0.25f;
-    [SerializeField] private float normalGravity = 10f;
-    [SerializeField] private float exitGravity = 30f;
+    [SerializeField] float climbSpeed = 0.25f;
+    [SerializeField] float normalGravity = 10f;
+    [SerializeField] float exitGravity = 30f;
 
     [Header("Debug")]
-    [SerializeField] private Vector2 moveDirection = Vector2.zero;
-    [SerializeField] private bool playerOnLadder;
-    [SerializeField] private GameObject player;
+    [SerializeField] Vector2 moveDirection = Vector2.zero;
 
-    private PlayerInputActions playerControls;
-    private InputAction move;
-    private GameObject groundChecker;
-    private Rigidbody2D playerRB;
-    private GameObject ladderPlatform;
-    private PlayerBehaviour playerBehaviour;
-    private Collider2D playerCollider;
-    private Collider2D groundCheckerCollider;
-    private Collider2D ladderPlatformCollider;
+    PlayerInputActions playerControls;
+    InputAction move;
+    Rigidbody2D playerRB;
+    GameObject ladderPlatform;
+    PlayerBehaviour playerBehaviour;
+    Collider2D playerCollider;
+    Collider2D groundCheckerCollider;
+    Collider2D ladderPlatformCollider;
+    [SerializeField] Collider2D colliderForPlayerIgnoreClimbing;
+    Collider2D physicalCollider;
 
-    private void Awake()
+    void Awake()
     {
         ladderPlatform = GetComponentInChildren<PlatformEffector2D>()?.gameObject;
         ladderPlatformCollider = ladderPlatform?.GetComponent<Collider2D>();
+        
+        physicalCollider = GetComponent<Collider2D>();
+
+        while(GetComponent<Collider2D>().isTrigger)
+            physicalCollider = GetComponent<Collider2D>();
+
+        if(ladderPlatformCollider) 
+            Physics2D.IgnoreCollision(physicalCollider, ladderPlatformCollider, true);
 
         playerControls = new PlayerInputActions();
-        if (playerControls == null)
-        {
-            Debug.LogError("PlayerInputActions not initialized!");
-        }
     }
 
-    private void OnEnable()
+    void OnEnable()
     {
         playerControls.Player.Enable();
         move = playerControls.Player.Move;
         move.Enable();
     }
 
-    private void OnDisable()
+    void OnDisable()
     {
         move.Disable();
         playerControls.Player.Disable();
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        if (!IsValidPlayer(collision)) return;
+        playerBehaviour = collision.GetComponentInParent<PlayerBehaviour>();
+        if (playerBehaviour == null) return;
+
+        playerRB = playerBehaviour.GetComponent<Rigidbody2D>();
+        playerCollider = playerBehaviour.GetComponent<Collider2D>();
+        groundCheckerCollider = collision.GetComponentInChildren<GroundCollisionCheck>()
+            ?.GetComponent<Collider2D>();
+    }
+
+    void OnTriggerStay2D(Collider2D collision)
+    {
+        if (playerBehaviour == null) return;
 
         moveDirection = move.ReadValue<Vector2>();
-        CachePlayerReferences(collision);
 
-        if (moveDirection.y != 0 && !playerOnLadder)
+        if (moveDirection.y != 0 && !playerBehaviour.onLadder)
         {
             EnterLadder();
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    void OnTriggerExit2D(Collider2D collision)
     {
-        if (!IsValidPlayer(collision)) return;
-
-        Debug.Log("Player exited Ladder Checker.");
         ExitLadder();
         ClearPlayerReferences();
     }
 
-    private void FixedUpdate()
+    void FixedUpdate()
     {
+        if (playerBehaviour == null || !playerBehaviour.onLadder || playerRB == null)
+            return;
+
         moveDirection = move.ReadValue<Vector2>();
 
-        if (!playerOnLadder) return;
-
-        // Handle climbing
-        playerRB.gravityScale = 0;
-        playerRB.linearVelocity = new Vector2(playerRB.linearVelocity.x, moveDirection.y * climbSpeed);
-
-        // Lock player X position to ladder
-        player.transform.position = new Vector2(
-            transform.position.x, 
-            player.transform.position.y + (moveDirection.y * climbSpeed)
+        playerRB.gravityScale = 0f;
+        playerRB.linearVelocity = new Vector2(
+            playerRB.linearVelocity.x,
+            moveDirection.y * climbSpeed
         );
 
-        // Only exit if the player intentionally moves horizontally 
-        // while still on the ladder (not due to auto-slide)
+        playerRB.MovePosition(new Vector2(
+            transform.position.x,
+            playerRB.position.y + (moveDirection.y * climbSpeed)
+        ));
+
         if (ShouldExitLadder())
         {
             ExitLadder();
             playerRB.gravityScale = exitGravity;
-            playerOnLadder = false;
-            player = null;
         }
     }
 
-    private bool IsValidPlayer(Collider2D collision)
-    {
-        if (!collision.CompareTag("Player")) return false;
-
-        var pb = collision.GetComponent<PlayerBehaviour>();
-        if (pb == null) return false;
-
-        string ladderLayer = LayerMask.LayerToName(gameObject.layer);
-        return pb.color == ladderLayer || ladderLayer == "Default";
-    }
-
-    private void CachePlayerReferences(Collider2D collision)
-    {
-        player = collision.gameObject;
-        playerRB = collision.GetComponent<Rigidbody2D>();
-        playerBehaviour = collision.GetComponent<PlayerBehaviour>();
-        playerCollider = collision.GetComponent<Collider2D>();
-
-        groundChecker = collision.GetComponentInChildren<GroundCollisionCheck>()?.gameObject;
-        groundCheckerCollider = groundChecker?.GetComponent<Collider2D>();
-    }
-
-    private void ClearPlayerReferences()
-    {
-        player = null;
-        playerRB = null;
-        playerBehaviour = null;
-        playerCollider = null;
-        groundChecker = null;
-        groundCheckerCollider = null;
-    }
-
-    private void EnterLadder()
+    void EnterLadder()
     {
         SetLadderPlatformCollisions(true);
-        playerRB.gravityScale = 0;
+
+        playerRB.gravityScale = 0f;
         playerRB.linearVelocity = new Vector2(playerRB.linearVelocity.x, 0f);
-        playerOnLadder = true;
         playerBehaviour.onLadder = true;
     }
 
-    private void ExitLadder()
+    void ExitLadder()
     {
         SetLadderPlatformCollisions(false);
-        if (playerBehaviour != null) playerBehaviour.onLadder = false;
-        if (playerRB != null) playerRB.gravityScale = normalGravity;
-        playerOnLadder = false;
+
+        if (playerBehaviour != null)
+            playerBehaviour.onLadder = false;
+
+        if (playerRB != null)
+            playerRB.gravityScale = normalGravity;
     }
 
-    private bool ShouldExitLadder()
+    bool ShouldExitLadder()
     {
-        // Exit only if the player intentionally moves horizontally
-        if (Mathf.Abs(moveDirection.x) > 0.01f)
+        return Mathf.Abs(moveDirection.x) > 0.01f;
+    }
+
+    void ClearPlayerReferences()
+    {
+        playerRB = null;
+        playerBehaviour = null;
+        playerCollider = null;
+        groundCheckerCollider = null;
+    }
+
+    void SetLadderPlatformCollisions(bool ignore)
+    {
+        if(playerCollider && colliderForPlayerIgnoreClimbing)
         {
-            // Only exit if the player is still on the ladder trigger
-            // Prevents auto-slide from exiting prematurely
-            return true;
+            Physics2D.IgnoreCollision(playerCollider, colliderForPlayerIgnoreClimbing, ignore);
+            Physics2D.IgnoreCollision(groundCheckerCollider, colliderForPlayerIgnoreClimbing, ignore);
         }
-
-        return false;
-    }
-
-    private void SetLadderPlatformCollisions(bool ignore)
-    {
+        
         if (ladderPlatformCollider == null) return;
 
         if (groundCheckerCollider != null)
@@ -170,7 +155,6 @@ public class Ladder : MonoBehaviour
             Physics2D.IgnoreCollision(playerCollider, ladderPlatformCollider, ignore);
     }
 
-    // Keeping these for potential external use
     void DisactivateLadderPlatformCollisions() => SetLadderPlatformCollisions(true);
     void ActivateLadderPlatformCollisions() => SetLadderPlatformCollisions(false);
 }

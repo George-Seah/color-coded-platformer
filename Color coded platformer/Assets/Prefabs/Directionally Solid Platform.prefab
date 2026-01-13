@@ -10,8 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 8872859347091628769}
   - component: {fileID: 4207902124633886481}
-  - component: {fileID: 113873931382699432}
   - component: {fileID: 2613226622487470225}
+  - component: {fileID: 113873931382699432}
   - component: {fileID: 892427768073568870}
   - component: {fileID: 2644044130643412919}
   - component: {fileID: 5898937986209542135}
@@ -50,25 +50,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedDirection: 0
---- !u!251 &113873931382699432
-PlatformEffector2D:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8363369679228806385}
-  m_Enabled: 1
-  m_UseColliderMask: 1
-  m_ColliderMask:
-    serializedVersion: 2
-    m_Bits: 32597
-  m_RotationalOffset: 0
-  m_UseOneWay: 1
-  m_UseOneWayGrouping: 0
-  m_SurfaceArc: 180
-  m_UseSideFriction: 0
-  m_UseSideBounce: 0
-  m_SideArc: 1
 --- !u!114 &2613226622487470225
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -81,8 +62,27 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3df70b878d90d9478d63dae2e208534, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedColor: 3
-  changeLayerMask: 0
+  selectedColor: 0
+  changeLayerMask: 1
+--- !u!251 &113873931382699432
+PlatformEffector2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8363369679228806385}
+  m_Enabled: 1
+  m_UseColliderMask: 0
+  m_ColliderMask:
+    serializedVersion: 2
+    m_Bits: 32597
+  m_RotationalOffset: 0
+  m_UseOneWay: 1
+  m_UseOneWayGrouping: 0
+  m_SurfaceArc: 180
+  m_UseSideFriction: 0
+  m_UseSideBounce: 0
+  m_SideArc: 1
 --- !u!212 &892427768073568870
 SpriteRenderer:
   m_ObjectHideFlags: 0

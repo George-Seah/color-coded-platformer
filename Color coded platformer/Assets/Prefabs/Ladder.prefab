@@ -54,8 +54,7 @@ MonoBehaviour:
   normalGravity: 10
   exitGravity: 30
   moveDirection: {x: 0, y: 0}
-  playerOnLadder: 0
-  player: {fileID: 0}
+  colliderForPlayerIgnoreClimbing: {fileID: 0}
 --- !u!114 &4989494071086336378
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -68,7 +67,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3df70b878d90d9478d63dae2e208534, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedColor: 3
+  selectedColor: 0
   changeLayerMask: 1
 --- !u!212 &2621354918004798679
 SpriteRenderer:
@@ -311,8 +310,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3df70b878d90d9478d63dae2e208534, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedColor: 3
-  changeLayerMask: 0
+  selectedColor: 0
+  changeLayerMask: 1
 --- !u!212 &3019362736295382863
 SpriteRenderer:
   m_ObjectHideFlags: 0

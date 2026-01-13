@@ -2,230 +2,184 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
 
+//! Things change color based on PLAYER position
 public class PositionBasedColorChanger : MonoBehaviour
 {
-    public PlayerBehaviour playerBehaviour; // Reference to player
-    [Header("UI Settings")]
-    public RectTransform barTransform; // Reference to the RectTransform of the bar
-    public RectTransform arrowTransform; // Reference to the arrow indicator
-    public List<string> colorTags = new List<string> { "Default", "Red", "Green", "Blue" }; // Color tags
-    [Header("Bar size")]
-    public float totalWidth = 250f; // Total width of the bar (in pixels)
-    public float totalHeight = 30f; // Height of the bar
-    [Header("Level specific changes")]
-    public float startX; // Starting position for regions
-    public float startY; // Starting position for regions
-    public float regionWidth; // Width of each region
-    public bool useXCoordinate = true; // Toggle between using X or Y coordinates
+    public static PositionBasedColorChanger Instance;
 
-    private List<RectTransform> regionSegments = new List<RectTransform>();
-    private int lastRegionIndex = -1; // Tracks the last region the player was in
+    [Header("Player")]
+    public PlayerBehaviour playerBehaviour;
 
-    void Start()
+    [Header("Region Colors (Order Matters)")]
+    public List<GameColor> regionColors =
+        new List<GameColor> { GameColor.Default, GameColor.Red, GameColor.Green, GameColor.Blue };
+
+    [Header("Region Settings")]
+    public float startX;
+    public float startY;
+    public float regionWidth = 5f;
+    public bool useXCoordinate = true;
+
+    [Header("UI Bar")]
+    public RectTransform barTransform;
+    public RectTransform arrowTransform;
+    public float totalWidth = 250f;
+    public float totalHeight = 30f;
+
+    [Header("UI Shadow")]
+    [SerializeField] private Vector2 shadowDistance = new Vector2(2f, -2f);
+    [SerializeField] private Color shadowColor = new Color(0f, 0f, 0f, 0.75f);
+
+    private readonly List<RectTransform> regionSegments = new();
+
+    void Awake()
+    {
+        if (!playerBehaviour)
+            playerBehaviour = FindFirstObjectByType<PlayerBehaviour>();
+
+        if (Instance == null)
+            Instance = this;
+        else
+            Destroy(gameObject);
+    }
+
+void Start()
+{
+    if (barTransform)
     {
         PositionBarInBottomRight();
         GenerateBar();
-        playerBehaviour = FindFirstObjectByType<PlayerBehaviour>();
     }
+
+    if (arrowTransform)
+    {
+        ApplyShadow(arrowTransform.gameObject);
+    }
+}
+
 
     void FixedUpdate()
     {
         UpdateArrowPosition();
-        UpdatePlayerRegionColor();
     }
+
+    // ============================
+    // PUBLIC API
+    // ============================
+
+    public GameColor GetCurrentRegionColor()
+    {
+        if (!playerBehaviour || regionColors.Count == 0)
+            return GameColor.Default;
+
+        float position = useXCoordinate
+            ? playerBehaviour.transform.position.x
+            : playerBehaviour.transform.position.y;
+
+        float start = useXCoordinate ? startX : startY;
+
+        int regionIndex = Mathf.FloorToInt((position - start) / regionWidth);
+
+        int wrappedIndex =
+            ((regionIndex % regionColors.Count) + regionColors.Count) % regionColors.Count;
+
+        return regionColors[wrappedIndex];
+    }
+
+    // ============================
+    // UI BAR
+    // ============================
 
     private void PositionBarInBottomRight()
     {
-        // Set anchors to the bottom-right corner
-        barTransform.anchorMin = new Vector2(1, 0); // Bottom-right
-        barTransform.anchorMax = new Vector2(1, 0); // Bottom-right
-
-        // Set pivot to the bottom-right
-        barTransform.pivot = new Vector2(1, 0); // Bottom-right
-
-        // Set the position relative to the bottom-right corner
-        barTransform.anchoredPosition = new Vector2(0f, 0f); // Adjust margin as needed (e.g., -10px inward on X, 10px upward on Y)
-
-        // Set size to the specified width and height
+        barTransform.anchorMin = new Vector2(1, 0);
+        barTransform.anchorMax = new Vector2(1, 0);
+        barTransform.pivot = new Vector2(1, 0);
+        barTransform.anchoredPosition = Vector2.zero;
         barTransform.sizeDelta = new Vector2(totalWidth, totalHeight);
     }
 
     private void GenerateBar()
     {
-        // Clear existing segments
         foreach (Transform child in barTransform)
-        {
             Destroy(child.gameObject);
-        }
 
-        // Calculate size of each region
-        float regionSize = totalWidth / colorTags.Count;
+        regionSegments.Clear();
 
-        // Generate regions
-        for (int i = 0; i < colorTags.Count; i++)
+        float regionSize = totalWidth / regionColors.Count;
+
+        for (int i = 0; i < regionColors.Count; i++)
         {
-            // Create region segment
-            GameObject segment = new GameObject("Region " + i, typeof(Image));
-            segment.transform.SetParent(barTransform);
+            GameObject segment = new GameObject($"Region {i}", typeof(Image));
+            segment.transform.SetParent(barTransform, false);
 
-            // Configure RectTransform
-            RectTransform segmentTransform = segment.GetComponent<RectTransform>();
-            segmentTransform.anchorMin = new Vector2(0, 0); // Anchor to the bottom
-            segmentTransform.anchorMax = new Vector2(0, 1); // Anchor to the top
-            segmentTransform.pivot = new Vector2(0, 0.5f); // Center vertically on the Y-axis
-            segmentTransform.sizeDelta = new Vector2(regionSize, totalHeight); // Set the size to match the bar
+            RectTransform rt = segment.GetComponent<RectTransform>();
+            rt.anchorMin = new Vector2(0, 0);
+            rt.anchorMax = new Vector2(0, 1);
+            rt.pivot = new Vector2(0, 0.5f);
+            rt.sizeDelta = new Vector2(regionSize, totalHeight);
+            rt.anchoredPosition = new Vector2(i * regionSize, 0);
 
-            // Position segments from left to right, adjusting their X based on region index
-            segmentTransform.anchoredPosition = new Vector2(i * regionSize, 0);
+            Image img = segment.GetComponent<Image>();
+            img.color = GetUIColor(regionColors[i]);
 
-            // Set color
-            Image segmentImage = segment.GetComponent<Image>();
-            string colorTag = colorTags[i % colorTags.Count];
-            segmentImage.color = GetColorFromTag(colorTag);
+            ApplyShadow(segment);
 
-            // Save reference
-            regionSegments.Add(segmentTransform);
+            regionSegments.Add(rt);
         }
     }
 
-private void UpdateArrowPosition()
-{
-    if (!playerBehaviour) return;
-
-    // Get the player's position (X or Y based on the setting)
-    float playerPosition = useXCoordinate ? playerBehaviour.transform.position.x : playerBehaviour.transform.position.y;
-
-    // Calculate the player's position relative to the start of the bar
-    float playerRelativePosition = (playerPosition - startX) / regionWidth;
-
-    // Normalize the player's relative position to the number of regions
-    playerRelativePosition = Mathf.Repeat(playerRelativePosition, colorTags.Count); // This ensures it loops between 0 and 1
-
-    // Map the player's relative position to the bar's total width (from 0 to totalWidth)
-    float arrowX = ((playerRelativePosition * totalWidth) / colorTags.Count) - totalWidth; // No subtraction, just directly scale to total width
-
-    // Dynamically adjust the arrow's Y position to be on top of the bar and account for its height
-    float arrowHeight = arrowTransform.rect.height; // Get the height of the arrow
-    float arrowY = barTransform.position.y + (totalHeight / 2) + (arrowHeight); // Place the arrow above the bar
-
-    // Set the arrow's anchored position
-    arrowTransform.anchoredPosition = new Vector2(arrowX, arrowY);
-}
-
-    private void UpdatePlayerRegionColor()
+    private void UpdateArrowPosition()
     {
-        if (!playerBehaviour) return;
+        if (!playerBehaviour || !arrowTransform || regionColors.Count == 0)
+            return;
 
-        float playerPosition = useXCoordinate ? playerBehaviour.transform.position.x : playerBehaviour.transform.position.y;
-        float startPosition = useXCoordinate ? startX : startY;
-        int currentRegionIndex = Mathf.FloorToInt((playerPosition - startPosition) / regionWidth);
+        float position = useXCoordinate
+            ? playerBehaviour.transform.position.x
+            : playerBehaviour.transform.position.y;
 
-        Debug.Log($"Player Position: {playerPosition}, Region Index: {currentRegionIndex}");
+        float relative =
+            (position - (useXCoordinate ? startX : startY)) / regionWidth;
 
-        if (currentRegionIndex != lastRegionIndex)
-        {
-            ChangeColors(currentRegionIndex);
-            lastRegionIndex = currentRegionIndex;
-        }
+        relative = Mathf.Repeat(relative, regionColors.Count);
+
+        float arrowX = (relative / regionColors.Count) * totalWidth - totalWidth;
+
+        float arrowHeight = arrowTransform.rect.height;
+        float arrowY = barTransform.position.y + (totalHeight / 2f) + arrowHeight;
+
+        arrowTransform.anchoredPosition = new Vector2(arrowX, arrowY);
+    }
+
+    // ============================
+    // UI UTILITIES
+    // ============================
+
+    void ApplyShadow(GameObject target)
+    {
+        // Remove thin Shadow if present
+        Shadow oldShadow = target.GetComponent<Shadow>();
+        if (oldShadow)
+            Destroy(oldShadow);
+
+        Outline outline = target.GetComponent<Outline>();
+        if (!outline)
+            outline = target.AddComponent<Outline>();
+
+        outline.effectColor = new Color(0f, 0f, 0f, 0.9f);
+        outline.effectDistance = new Vector2(3f, -3f);
+        outline.useGraphicAlpha = true;
     }
 
 
-    private void ChangeColors(int regionIndex)
+    private Color GetUIColor(GameColor color)
     {
-        if (colorTags == null || colorTags.Count == 0) return; // Prevent accessing an empty list
-
-        // Properly handle negative indices and ensure wrapping
-        int colorIndex = ((regionIndex % colorTags.Count) + colorTags.Count) % colorTags.Count;
-
-        if (colorIndex < 0 || colorIndex >= colorTags.Count) return; // Safety check
-
-        // Get the tag and color for the region
-        string currentTag = colorTags[colorIndex];
-        Color currentColor = GetColorFromTag(currentTag);
-
-        // Apply the current color to all objects with the ColorPositionChange script
-        ColorPositionChange[] colorChangers = FindObjectsOfType<ColorPositionChange>();
-        foreach (var changer in colorChangers)
+        return color switch
         {
-            changer.SetColorAndTag(currentColor, currentTag);
-        }
-    }
-
-
-
-    public Color GetColorFromTag(string tag)
-    {
-        switch (tag)
-        {
-            case "Red": return Color.red;
-            case "Green": return Color.green;
-            case "Blue": return Color.blue;
-            default: return Color.white; // Default
-        }
+            GameColor.Red => Color.red,
+            GameColor.Green => Color.green,
+            GameColor.Blue => Color.blue,
+            _ => Color.white
+        };
     }
 }
-
-
-/*
-using UnityEngine;
-using System.Collections.Generic;
-
-public class PositionBasedColorChanger : MonoBehaviour
-{
-    public PlayerBehaviour playerBehaviour; // Reference to the PlayerBehaviour script
-    public List<string> colorTags = new List<string> { "Default", "Red", "Green", "Blue" }; // Color tags that match layers
-    public float startX; // Starting x value for color changes
-    public float startY; // Starting y value for color changes
-    public float regionWidth; // Width of each region for color changes
-    public bool useXCoordinate = true; // Toggle between using X or Y coordinates
-
-    private int lastRegionIndex = -1; // Tracks the last region the player was in
-
-    void Update()
-    {
-        // Get the player's current position
-        float playerPosition = useXCoordinate ? playerBehaviour.transform.position.x : playerBehaviour.transform.position.y;
-
-        // Calculate the current region index based on the player's position
-        float startPosition = useXCoordinate ? startX : startY;
-        int currentRegionIndex = Mathf.FloorToInt((playerPosition - startPosition) / regionWidth);
-
-        // If the player enters a new region, update the color
-        if (currentRegionIndex != lastRegionIndex)
-        {
-            ChangeColors(currentRegionIndex);
-            lastRegionIndex = currentRegionIndex; // Update the last region index
-        }
-    }
-
-    private void ChangeColors(int regionIndex)
-    {
-        // Handle index wrapping for out-of-range regions
-        int colorIndex = Mathf.Abs(regionIndex) % colorTags.Count;
-
-        // Get the tag and color for the region
-        string currentTag = colorTags[colorIndex];
-        Color currentColor = GetColorFromTag(currentTag);
-
-        // Apply the current color to all objects with the ColorPositionChange script
-        ColorPositionChange[] colorChangers = FindObjectsOfType<ColorPositionChange>();
-        foreach (var changer in colorChangers)
-        {
-            changer.SetColorAndTag(currentColor, currentTag);
-        }
-    }
-
-    private Color GetColorFromTag(string tag)
-    {
-        switch (tag)
-        {
-            case "Red": return Color.red;
-            case "Green": return Color.green;
-            case "Blue": return Color.blue;
-            default: return Color.white; // Default
-        }
-    }
-}
-
-
-*/

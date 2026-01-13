@@ -1,0 +1,688 @@
+[Licensing::Module] Trying to connect to existing licensing client channel...
+Built from '6000.0/staging' branch; Version is '6000.0.62f1 (f99f05b3e950) revision 16359173'; Using compiler version '193933523'; Build Type 'Release'
+OS: 'Windows 11  (10.0.22631) 64bit Core' Language: 'en' Physical Memory: 16233 MB
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Nathan & Co" at "2026-01-13T10:15:37.9507362Z"
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
+Date: 2026-01-13T10:15:37Z
+
+COMMAND LINE ARGUMENTS:
+C:\Unity\6000.0.62f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker2
+-projectPath
+C:/Github/color-coded-platformer/Color coded platformer
+-logFile
+Logs/AssetImportWorker2.log
+-srvPort
+50409
+-licensingIpc
+LicenseClient-Nathan & Co
+-job-worker-count
+7
+-background-job-worker-count
+8
+-gc-helper-count
+1
+-name
+AssetImport
+Successfully changed project path to: C:/Github/color-coded-platformer/Color coded platformer
+C:/Github/color-coded-platformer/Color coded platformer
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [2884]  Target information:
+
+Player connection [2884]  * "[IP] 192.168.0.233 [Port] 0 [Flags] 2 [Guid] 2815526837 [EditorId] 2815526837 [Version] 1048832 [Id] WindowsEditor(7,SuperFamicom) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [2884] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [2884] Host joined alternative multi-casting on [225.0.0.222:34997]...
+JobSystem: Creating JobQueue using job-worker-count value 7
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 21608, path: "C:/Unity/Unity Hub/UnityLicensingClient_V1/Unity.Licensing.Client.exe")
+[Licensing::Module] LicensingClient has failed validation; ignoring
+[Licensing::Client] Error: HandshakeResponse reported an error:
+	ResponseCode: 505
+	ResponseStatus: Unsupported protocol version '1.17.2'.
+[Licensing::Module] Error: Failed to handshake to channel: "LicenseClient-Nathan & Co"
+[Licensing::IpcConnector] LicenseClient-Nathan & Co channel disconnected successfully.
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Nathan & Co-6000.0.62" at "2026-01-13T10:15:37.9878042Z"
+[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 21532, path: "C:/Unity/6000.0.62f1/Editor/Data/Resources/Licensing/Client/Unity.Licensing.Client.exe")
+[Licensing::Module] LicensingClient has failed validation; ignoring
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.17.2+ff71f16
+  Session Id:              4aa8fb7ec1da4a15ae10147d20f3dc7f
+  Correlation Id:          8f5f57f6d2f7e3cdf1505b45cc2a0c8f
+  External correlation Id: 2450375654337237481
+  Machine Id:              qtyx5DMTmV6sfEVnrxz9aoLU/bw=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-Nathan & Co-6000.0.62" (connect: 0.00s, validation: 0.00s, handshake: 0.01s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Nathan & Co-6000.0.62-notifications" at "2026-01-13T10:15:38.0050358Z"
+[Licensing::Module] Licensing Background thread has ended after 0.05s
+Library Redirect Path: Library/
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Refreshing native plugins compatible for Editor in 7.44 ms, found 10 plugins.
+Preloading 1 native plugins for Editor in 0.74 ms.
+Initialize engine version: 6000.0.62f1 (f99f05b3e950)
+[Subsystems] Discovering subsystems at path C:/Unity/6000.0.62f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Github/color-coded-platformer/Color coded platformer/Assets
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3060 (ID=0x2504)
+    Vendor:   NVIDIA
+    VRAM:     12115 MB
+    Driver:   32.0.15.8180
+Initialize mono
+Mono path[0] = 'C:/Unity/6000.0.62f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Unity/6000.0.62f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Unity/6000.0.62f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56592
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Unity/6000.0.62f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.003223 seconds.
+- Loaded All Assemblies, in  0.387 seconds
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.339 seconds
+Domain Reload Profiling: 724ms
+	BeginReloadAssembly (136ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (35ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (48ms)
+	LoadAllAssembliesAndSetupDomain (154ms)
+		LoadAssemblies (133ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (152ms)
+			TypeCache.Refresh (150ms)
+				TypeCache.ScanAssembly (137ms)
+			BuildScriptInfoCaches (0ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (340ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (292ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (23ms)
+			SetLoadedEditorAssemblies (4ms)
+			BeforeProcessingInitializeOnLoad (62ms)
+			ProcessInitializeOnLoadAttributes (152ms)
+			ProcessInitializeOnLoadMethodAttributes (51ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Import Worker Mode flag is 0x00
+Begin MonoManager ReloadAssembly
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: 18967569848297-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.945 seconds
+Refreshing native plugins compatible for Editor in 4.90 ms, found 10 plugins.
+Native extension for WindowsStandalone target not found
+Package Manager log level set to [2]
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.885 seconds
+Domain Reload Profiling: 1824ms
+	BeginReloadAssembly (188ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (9ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (27ms)
+	RebuildCommonClasses (41ms)
+	RebuildNativeTypeToScriptingClass (17ms)
+	initialDomainReloadingComplete (43ms)
+	LoadAllAssembliesAndSetupDomain (649ms)
+		LoadAssemblies (410ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (344ms)
+			TypeCache.Refresh (249ms)
+				TypeCache.ScanAssembly (226ms)
+			BuildScriptInfoCaches (78ms)
+			ResolveRequiredComponents (13ms)
+	FinalizeReload (885ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (682ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (2ms)
+			SetLoadedEditorAssemblies (4ms)
+			BeforeProcessingInitializeOnLoad (164ms)
+			ProcessInitializeOnLoadAttributes (436ms)
+			ProcessInitializeOnLoadMethodAttributes (71ms)
+			AfterProcessingInitializeOnLoad (6ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (5ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
+Refreshing native plugins compatible for Editor in 6.41 ms, found 10 plugins.
+Preloading 1 native plugins for Editor in 0.06 ms.
+Unloading 18 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7525 unused Assets / (7.2 MB). Loaded Objects now: 8241.
+Memory consumption went from 159.2 MB to 152.0 MB.
+Total: 13.222700 ms (FindLiveObjects: 1.178800 ms CreateObjectMapping: 1.762400 ms MarkObjects: 5.216600 ms  DeleteObjects: 5.064000 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 347014.059327 seconds.
+  path: Assets/Prefabs/Push Block.prefab
+  artifactKey: Guid(0ec0ca746f93c1f41a44a608bfcec40b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Push Block.prefab using Guid(0ec0ca746f93c1f41a44a608bfcec40b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1db703c95cae087faecd1f6e1ee0e4a4') in 0.4858006 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000057 seconds.
+  path: Assets/Prefabs/Moving Platform.prefab
+  artifactKey: Guid(67c262498576d2e47ab3e409bc070286) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Moving Platform.prefab using Guid(67c262498576d2e47ab3e409bc070286) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3bdc2e9883d99da7c85f998d6ba9d4ef') in 0.0169794 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 11
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000044 seconds.
+  path: Assets/Prefabs/Blue Color Changer.prefab
+  artifactKey: Guid(d92f0d3a8ac4e2246b56592b96e28d2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Blue Color Changer.prefab using Guid(d92f0d3a8ac4e2246b56592b96e28d2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '16d6edcc88865a2a7848cffc7f87fdee') in 0.0203144 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 28
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Prefabs/Cannon Waddler.prefab
+  artifactKey: Guid(2cf59196790655541a6c71baac4c0d30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Cannon Waddler.prefab using Guid(2cf59196790655541a6c71baac4c0d30) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'cbf8b5e46128889484fa80f97b9d03e2') in 0.017022 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 19
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Prefabs/Pressure Pad.prefab
+  artifactKey: Guid(71fe8e8d11a55084da1422fb8fd9c6e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Pressure Pad.prefab using Guid(71fe8e8d11a55084da1422fb8fd9c6e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8909bfeca8afa57b86b27c876518764f') in 0.0178063 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Prefabs/Cannonball Cannon.prefab
+  artifactKey: Guid(ff8bc5c79479f9b41bbc40bcf7b225af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Cannonball Cannon.prefab using Guid(ff8bc5c79479f9b41bbc40bcf7b225af) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '05551214f131c8aefc012c68e50894fe') in 0.0166741 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 20
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Prefabs/Color Position Change Waddler.prefab
+  artifactKey: Guid(6bf539e44a08a534daacf4b8cf55c6d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Color Position Change Waddler.prefab using Guid(6bf539e44a08a534daacf4b8cf55c6d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'fff7cb05079bef0519601b26aed3540c') in 0.0074192 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 20
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Prefabs/Color Position Change Cloud Variant.prefab
+  artifactKey: Guid(cd5ce2a557cf52d41a621d96f4342315) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Color Position Change Cloud Variant.prefab using Guid(cd5ce2a557cf52d41a621d96f4342315) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd6815d9a4c41ed305221a4fc2071d29e') in 0.0143796 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 22
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Prefabs/Lever.prefab
+  artifactKey: Guid(07415dfbf207f9d41b07dac1993b9793) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Lever.prefab using Guid(07415dfbf207f9d41b07dac1993b9793) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '09f0d1fd259397237c8eb48d20dd21b5') in 0.015389 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Prefabs/Player.prefab
+  artifactKey: Guid(dd357eeeac0748d4b85702a096f23b38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Player.prefab using Guid(dd357eeeac0748d4b85702a096f23b38) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '468e513742a90da783b57d661e2369b8') in 0.0209098 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 32
+
+========================================================================
+Received Import Request.
+  Time since last request: 7.089172 seconds.
+  path: Assets/2D Destructible Objects/Assets/Clown/Sprites/Atlas_Background_0001.png
+  artifactKey: Guid(7efa3b9e76c35af42888f51f54e0b8f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Destructible Objects/Assets/Clown/Sprites/Atlas_Background_0001.png using Guid(7efa3b9e76c35af42888f51f54e0b8f8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '9a8b024cb0e95da5ad8ab62fe9588cc1') in 0.0549865 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 11
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Free Pixel Space Platform Pack/Astronaut/AstroWalk.png
+  artifactKey: Guid(dfc7090c56f3626418196653e1eb610d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Space Platform Pack/Astronaut/AstroWalk.png using Guid(dfc7090c56f3626418196653e1eb610d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '48551b2fc22b2e2f1ee5ca20383c0ea6') in 0.0334228 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/2D Destructible Objects/Assets/Clown/Sprites/Single Sprites/ATTACK_L_Clown_0110.png
+  artifactKey: Guid(795275f469d66bc4bb1e731566d0f4e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Destructible Objects/Assets/Clown/Sprites/Single Sprites/ATTACK_L_Clown_0110.png using Guid(795275f469d66bc4bb1e731566d0f4e6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e1ed22e06de6c46c04a4a4190d193f0d') in 0.0155377 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/2D Destructible Objects/Assets/Clown/Sprites/Single Sprites/ATTACK_L_Clown_0060.png
+  artifactKey: Guid(70c4a4583529de24d8a4415b4b3cc8d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Destructible Objects/Assets/Clown/Sprites/Single Sprites/ATTACK_L_Clown_0060.png using Guid(70c4a4583529de24d8a4415b4b3cc8d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6c507789c8959b2750d54831171c1b12') in 0.0186381 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/2D Destructible Objects/Assets/Clown/Sprites/Single Sprites/ATTACK_L_Clown_0150.png
+  artifactKey: Guid(9761cd41414a1be4f876b8bf6f0384dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Destructible Objects/Assets/Clown/Sprites/Single Sprites/ATTACK_L_Clown_0150.png using Guid(9761cd41414a1be4f876b8bf6f0384dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b4914404b95005e1317d2e806aa28e0d') in 0.0179441 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/2D Destructible Objects/Assets/Clown/Sprites/Single Sprites/ATTACK_L_Clown_0050.png
+  artifactKey: Guid(a68865ceaf383e84eb9429cf068ebc6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Destructible Objects/Assets/Clown/Sprites/Single Sprites/ATTACK_L_Clown_0050.png using Guid(a68865ceaf383e84eb9429cf068ebc6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3bd0b8d921a0b8f872428a47411867b9') in 0.0272145 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/2D Destructible Objects/Assets/Clown/Sprites/Single Sprites/ATTACK_L_Clown_0070.png
+  artifactKey: Guid(d20987bb2289c26469cc1061c59b6f58) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Destructible Objects/Assets/Clown/Sprites/Single Sprites/ATTACK_L_Clown_0070.png using Guid(d20987bb2289c26469cc1061c59b6f58) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4838ff0a3d1cbcaef36e2f7145f6eb0d') in 0.028829 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.477521 seconds.
+  path: Assets/Sprites/Key small.png
+  artifactKey: Guid(7818ff8b69c3c4b4fa3ea33285f4f6a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Key small.png using Guid(7818ff8b69c3c4b4fa3ea33285f4f6a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'aa13eef4af70837e7048bb4b1cd45b6a') in 0.0160876 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 16
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.035482 seconds.
+  path: Assets/Prefabs/Key.prefab
+  artifactKey: Guid(9d0e3a4609735e743b0757252a1a2063) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Key.prefab using Guid(9d0e3a4609735e743b0757252a1a2063) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a98d725cf5a9b6411715292b1187ae45') in 0.0205247 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 24
+
+========================================================================
+Received Import Request.
+  Time since last request: 40.570594 seconds.
+  path: Assets/2D Destructible Objects/Assets/Clown/Sprites/Single Sprites/IDLE_Clown_0180.png
+  artifactKey: Guid(eb0260cb2359b6948a4e4b5734f9f6fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Destructible Objects/Assets/Clown/Sprites/Single Sprites/IDLE_Clown_0180.png using Guid(eb0260cb2359b6948a4e4b5734f9f6fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b57c58395ad9e0cf6e4d06da2e601d08') in 0.0157849 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/2D Destructible Objects/Assets/Clown/Sprites/Single Sprites/IDLE_Clown_0220.png
+  artifactKey: Guid(947c01b9d4c28bc44979077abebd69d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Destructible Objects/Assets/Clown/Sprites/Single Sprites/IDLE_Clown_0220.png using Guid(947c01b9d4c28bc44979077abebd69d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b9e97f592ad13591be8d8af95c4f982f') in 0.0159952 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Free Pixel Space Platform Pack/Lever/LeverDown.png
+  artifactKey: Guid(53fe5536596828e4d825b293ed6fa148) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Space Platform Pack/Lever/LeverDown.png using Guid(53fe5536596828e4d825b293ed6fa148) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0505ac6bf76a2405f1d2413f16f42481') in 0.0176775 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Cave Platformer Tileset/Individual PNG files/Tileset/cave_tileset/main_tiles_16x16_2.png
+  artifactKey: Guid(e432170b0ade75a44821eaa1051fdde3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cave Platformer Tileset/Individual PNG files/Tileset/cave_tileset/main_tiles_16x16_2.png using Guid(e432170b0ade75a44821eaa1051fdde3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '04807affbbd54b29e713f0a43f58ea2b') in 0.0145199 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Cave Platformer Tileset/Individual PNG files/Tileset/cave_tileset/main_tiles_16x16_10.png
+  artifactKey: Guid(b26459de7837eab4c9e8354024703c8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cave Platformer Tileset/Individual PNG files/Tileset/cave_tileset/main_tiles_16x16_10.png using Guid(b26459de7837eab4c9e8354024703c8f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '37f4a94cd0f1f16c01aa6c3ba1679ca4') in 0.0281327 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/Cave Platformer Tileset/Individual PNG files/Tileset/cave_tileset/main_tiles_16x16_11.png
+  artifactKey: Guid(acb583e8366d6ae4ca8cf8947ea15815) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cave Platformer Tileset/Individual PNG files/Tileset/cave_tileset/main_tiles_16x16_11.png using Guid(acb583e8366d6ae4ca8cf8947ea15815) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '202860920453c2f5e5ead6bc464b6f43') in 0.0133099 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/Cave Platformer Tileset/Individual PNG files/Tileset/cave_tileset/main_tiles_16x16_7.png
+  artifactKey: Guid(81b33423a4336af43a6122306e1a0fd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cave Platformer Tileset/Individual PNG files/Tileset/cave_tileset/main_tiles_16x16_7.png using Guid(81b33423a4336af43a6122306e1a0fd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '47a0bda2e194ea594be27d2d36f277d9') in 0.0127241 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/Cave Platformer Tileset/Individual PNG files/Tileset/cave_tileset/main_tiles_16x16_15.png
+  artifactKey: Guid(ff7ad79c4bd38204d80bd13bc7fa34c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cave Platformer Tileset/Individual PNG files/Tileset/cave_tileset/main_tiles_16x16_15.png using Guid(ff7ad79c4bd38204d80bd13bc7fa34c2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5edda73e1d0dd23d8708fd9a73a5b9a0') in 0.0138041 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Free Pixel Space Platform Pack/Tiles/LeftSteps.png
+  artifactKey: Guid(2e95defa14adf5e41b37eebf7a7db3ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Space Platform Pack/Tiles/LeftSteps.png using Guid(2e95defa14adf5e41b37eebf7a7db3ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'cfd323a1be522a0ef51521c5a80ba861') in 0.0154444 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.405027 seconds.
+  path: Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Small Square Padlock/GOLD/Small Square Padlock - GOLD - Spritesheet.png
+  artifactKey: Guid(c0f852fe53d7d904897afd1f0196cfe7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Small Square Padlock/GOLD/Small Square Padlock - GOLD - Spritesheet.png using Guid(c0f852fe53d7d904897afd1f0196cfe7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd875622edf3ca6364dce02a7adb9f590') in 0.0136505 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Small Square Padlock/GREY/Sprites/Small Square Padlock - GREY - 0003.png
+  artifactKey: Guid(3343556c36bca8d4c9c0f566c5216eb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Small Square Padlock/GREY/Sprites/Small Square Padlock - GREY - 0003.png using Guid(3343556c36bca8d4c9c0f566c5216eb6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '97d861832fed2a299a8fd2aad3347936') in 0.0139617 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Small Square Padlock/GREY/Sprites/Small Square Padlock - GREY - 0009.png
+  artifactKey: Guid(47bdc761a22163144a94b03acae426ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Small Square Padlock/GREY/Sprites/Small Square Padlock - GREY - 0009.png using Guid(47bdc761a22163144a94b03acae426ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3ccdc3e48dfe7e8ccd7ebbacfc567ecf') in 0.0134266 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Small Sturdy Padlock/BLACK/Sprites/Small Sturdy Padlock - BLACK - 0003.png
+  artifactKey: Guid(c5af972b52fa7af479db82a557d8d34c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Small Sturdy Padlock/BLACK/Sprites/Small Sturdy Padlock - BLACK - 0003.png using Guid(c5af972b52fa7af479db82a557d8d34c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c0f8dffdf1a81e61fc092b150716bc74') in 0.0142522 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Small Sturdy Padlock/BRONZE/Sprites/Small Sturdy Padlock - BRONZE - 0002.png
+  artifactKey: Guid(88bb3dbafdd00424487855f4d2ed5d2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Small Sturdy Padlock/BRONZE/Sprites/Small Sturdy Padlock - BRONZE - 0002.png using Guid(88bb3dbafdd00424487855f4d2ed5d2c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'aeb2624a0b22928c2982b23e7f19ad54') in 0.0134636 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Small Sturdy Padlock/BRONZE/Sprites/Small Sturdy Padlock - BRONZE - 0009.png
+  artifactKey: Guid(27e045978ed83d84681f5e089eb4a44e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Small Sturdy Padlock/BRONZE/Sprites/Small Sturdy Padlock - BRONZE - 0009.png using Guid(27e045978ed83d84681f5e089eb4a44e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '21eb9d8d70ff0c49d6b7f17afef50b9f') in 0.0069422 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Small Sturdy Padlock/GOLD/Sprites/Small Sturdy Padlock - GOLD - 0006.png
+  artifactKey: Guid(6d8f52056a78d96419a69dc20319069a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Small Sturdy Padlock/GOLD/Sprites/Small Sturdy Padlock - GOLD - 0006.png using Guid(6d8f52056a78d96419a69dc20319069a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '950d778edfba70a3841cbc16b037c4c5') in 0.0156513 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Small Sturdy Padlock/GOLD/Sprites/Small Sturdy Padlock - GOLD - 0000.png
+  artifactKey: Guid(b8e34e85de64ca042aff96e6e096076d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Small Sturdy Padlock/GOLD/Sprites/Small Sturdy Padlock - GOLD - 0000.png using Guid(b8e34e85de64ca042aff96e6e096076d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '43eaa56ab1e40cdb6da3b50188bffa3d') in 0.0149271 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Small Sturdy Padlock/BLACK/Sprites/Small Sturdy Padlock - BLACK - 0001.png
+  artifactKey: Guid(e118ad983aa76394db0cd5e225ad19dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Small Sturdy Padlock/BLACK/Sprites/Small Sturdy Padlock - BLACK - 0001.png using Guid(e118ad983aa76394db0cd5e225ad19dd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd724a92bec9699df2e73e663d372501e') in 0.0082014 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Small Sturdy Padlock/BRONZE/Sprites/Small Sturdy Padlock - BRONZE - 0001.png
+  artifactKey: Guid(9ea464c4bb6041a488629d4153500a68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Small Sturdy Padlock/BRONZE/Sprites/Small Sturdy Padlock - BRONZE - 0001.png using Guid(9ea464c4bb6041a488629d4153500a68) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '19f28edb31e087ec352600175247e1be') in 0.0073961 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Small Square Padlock/GREY/Small Square Padlock - GREY - Spritesheet.png
+  artifactKey: Guid(f3b80caac4b8f9b4cae959a4257b4b24) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Small Square Padlock/GREY/Small Square Padlock - GREY - Spritesheet.png using Guid(f3b80caac4b8f9b4cae959a4257b4b24) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3eb1eadfd985da433582efb456c191cb') in 0.0135077 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 158.606903 seconds.
+  path: Assets/Materials/BlueColorChanger.mat
+  artifactKey: Guid(1bd73b31d6c33da4cb8b1aa486437ae2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Materials/BlueColorChanger.mat using Guid(1bd73b31d6c33da4cb8b1aa486437ae2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ffb0648dfcb1192289cd02da8c51a9cb') in 0.0319524 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.106745 seconds.
+  path: Assets/Cave Platformer Tileset/Individual PNG files/Tileset/bg_objects/bg_objects_21.png
+  artifactKey: Guid(f13bbd11459be754c818329937388448) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cave Platformer Tileset/Individual PNG files/Tileset/bg_objects/bg_objects_21.png using Guid(f13bbd11459be754c818329937388448) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '15d2b48671db96e083237a940eb83cbe') in 0.0141749 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Cave Platformer Tileset/Individual PNG files/Tileset/bg_objects/bg_objects_23.png
+  artifactKey: Guid(12cf08caa009f8f4a9e548f336490cac) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cave Platformer Tileset/Individual PNG files/Tileset/bg_objects/bg_objects_23.png using Guid(12cf08caa009f8f4a9e548f336490cac) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '2f4b58913cd527d051f5ab3d9aed6c21') in 0.0160828 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/2D Destructible Objects/Assets/Objects/Wood/Atlas_Wood.png
+  artifactKey: Guid(83f20a3caf2c81841acda3122c131fde) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Destructible Objects/Assets/Objects/Wood/Atlas_Wood.png using Guid(83f20a3caf2c81841acda3122c131fde) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b9b8e59d83632909c828c6bb36a62b07') in 0.0387208 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Extending Padlock/BRONZE/Sprites/Extending Padlock - BRONZE - 0001.png
+  artifactKey: Guid(a2419906109b17a4ea72ac87e19f2e76) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Extending Padlock/BRONZE/Sprites/Extending Padlock - BRONZE - 0001.png using Guid(a2419906109b17a4ea72ac87e19f2e76) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a1a877e65ac9a0d20572d6b7e82ef3cf') in 0.0138219 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Extending Padlock/BRONZE/Sprites/Extending Padlock - BRONZE - 0008.png
+  artifactKey: Guid(b2736c0c1effd48489c04ca1f9088ea0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Extending Padlock/BRONZE/Sprites/Extending Padlock - BRONZE - 0008.png using Guid(b2736c0c1effd48489c04ca1f9088ea0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '9a06e53853b37f41a4b8c135fec93320') in 0.0206544 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Extending Padlock/BRONZE/Sprites/Extending Padlock - BRONZE - 0007.png
+  artifactKey: Guid(b190cea648947ec4c845b8a14e131aba) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Extending Padlock/BRONZE/Sprites/Extending Padlock - BRONZE - 0007.png using Guid(b190cea648947ec4c845b8a14e131aba) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '27d7b6744b495cce0d3870750031ff08') in 0.032043 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Extending Padlock/BRONZE/Sprites/Extending Padlock - BRONZE - 0012.png
+  artifactKey: Guid(f7b8c8fd78aa0574abf1a89c0dac3f9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Extending Padlock/BRONZE/Sprites/Extending Padlock - BRONZE - 0012.png using Guid(f7b8c8fd78aa0574abf1a89c0dac3f9c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e21f6b8800273aa9925563d16e080e61') in 0.0069803 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Simple 2D Platformer BE2/Sprites/Platforms.png
+  artifactKey: Guid(e85c6e02fda4a004b84664f435ad4d73) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple 2D Platformer BE2/Sprites/Platforms.png using Guid(e85c6e02fda4a004b84664f435ad4d73) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8b394703d75d53d1dc006ac8061f4a60') in 0.0364637 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 18
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/Free Pixel Space Platform Pack/Crystals/Crystal_02.png
+  artifactKey: Guid(7a4e2a16a00a6d645b159d4890bfc3a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Space Platform Pack/Crystals/Crystal_02.png using Guid(7a4e2a16a00a6d645b159d4890bfc3a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'aebfcecfd0d081894bc6ac1a82eb610b') in 0.0153828 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/Simple 2D Platformer BE2/Sprites/Coins.png
+  artifactKey: Guid(274d64617113287499ed1c4165d1d8f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple 2D Platformer BE2/Sprites/Coins.png using Guid(274d64617113287499ed1c4165d1d8f3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '2c0a8cfd456b034930ddce10baf6e41c') in 0.0283338 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 14
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Cave Platformer Tileset/Individual PNG files/Tileset/bg_objects/bg_objects_27.png
+  artifactKey: Guid(52e10c3e5cb1d854493ed6c498f90ad0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cave Platformer Tileset/Individual PNG files/Tileset/bg_objects/bg_objects_27.png using Guid(52e10c3e5cb1d854493ed6c498f90ad0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6f6011f133f9216207dae386579939f4') in 0.0152418 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Extending Padlock/BRONZE/Sprites/Extending Padlock - BRONZE - 0002.png
+  artifactKey: Guid(9cecfe8887fb64e45911df78572125de) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Extending Padlock/BRONZE/Sprites/Extending Padlock - BRONZE - 0002.png using Guid(9cecfe8887fb64e45911df78572125de) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e5d2896f7e603ffe87b4ea0bbb698d02') in 0.0062095 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/2D Destructible Objects/Assets/Objects/Wood/Single Sprites/Box_0001.png
+  artifactKey: Guid(9dabba9b87e6e6b45a3a05eefc5e782c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/2D Destructible Objects/Assets/Objects/Wood/Single Sprites/Box_0001.png using Guid(9dabba9b87e6e6b45a3a05eefc5e782c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '6a41624c61b133d29b7d4c3f98e0341f') in 0.0140297 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/Free Pixel Space Platform Pack/Boxes/Box_01.png
+  artifactKey: Guid(1470a8da87de4eb44966e953ef10b55e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Space Platform Pack/Boxes/Box_01.png using Guid(1470a8da87de4eb44966e953ef10b55e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b0acdb6b7fc22fb057f9b4ba8592ac78') in 0.0141753 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Sprites/Black and White striped pattern.jpg
+  artifactKey: Guid(dd339dc73157aab42bc955aa83da9182) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Sprites/Black and White striped pattern.jpg using Guid(dd339dc73157aab42bc955aa83da9182) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5e0d0c44fe138232b8b093e49a335391') in 0.0154852 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/Free Pixel Space Platform Pack/Crystals/Crystal_03.png
+  artifactKey: Guid(06443816dcf9c55449f8c2107d2c0507) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Free Pixel Space Platform Pack/Crystals/Crystal_03.png using Guid(06443816dcf9c55449f8c2107d2c0507) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e4568753acb9029ceebe386cd37062fe') in 0.0161969 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Extending Padlock/BRONZE/Sprites/Extending Padlock - BRONZE - 0010.png
+  artifactKey: Guid(85c428bc76c0b884d9f993725cba877f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Extending Padlock/BRONZE/Sprites/Extending Padlock - BRONZE - 0010.png using Guid(85c428bc76c0b884d9f993725cba877f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '2ffec2c18f4dbe9bcf437c23ae0fdfb2') in 0.0137339 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Extending Padlock/BRONZE/Sprites/Extending Padlock - BRONZE - 0003.png
+  artifactKey: Guid(1a8ee1b6a0ee82346b06d4c1947e8ce2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Extending Padlock/BRONZE/Sprites/Extending Padlock - BRONZE - 0003.png using Guid(1a8ee1b6a0ee82346b06d4c1947e8ce2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7e312b6a3a56155b43eb4d65435fa434') in 0.0144493 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

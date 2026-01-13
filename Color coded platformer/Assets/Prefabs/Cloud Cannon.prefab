@@ -47,15 +47,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: fce45a861d5566541971d9ca1aeb8da1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  cloud: {fileID: 5954575713577436771, guid: b619a6881c15ede40bd437a18c850fc3, type: 3}
+  cloudPrefab: {fileID: 5954575713577436771, guid: b619a6881c15ede40bd437a18c850fc3, type: 3}
   cloudSpeed: 2
   shootInterval: 2
-  shootTime: 0
   maxClouds: 50
-  colorsToShoot:
-  - White
+  colorsToShoot: 00000000
   cloudsSpawned: []
-  colorIndex: 0
   tiltCloud: 0
   customTilt: 5
 --- !u!114 &7282907473461989103
@@ -70,8 +67,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3df70b878d90d9478d63dae2e208534, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedColor: 3
-  changeColor: 1
+  selectedColor: 0
   changeLayerMask: 1
 --- !u!212 &3207103216734027822
 SpriteRenderer:

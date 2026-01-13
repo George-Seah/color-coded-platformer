@@ -129,11 +129,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2106337957089459908, guid: dd357eeeac0748d4b85702a096f23b38, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 59.87
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2106337957089459908, guid: dd357eeeac0748d4b85702a096f23b38, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -4.49
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2106337957089459908, guid: dd357eeeac0748d4b85702a096f23b38, type: 3}
       propertyPath: m_LocalPosition.z
@@ -549,7 +549,7 @@ Transform:
   m_GameObject: {fileID: 443405789}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 60.73, y: -4.49, z: -10}
+  m_LocalPosition: {x: 0.86, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -586,18 +586,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerBehaviour: {fileID: 46459408}
-  barTransform: {fileID: 872105641}
-  arrowTransform: {fileID: 816498941}
-  colorTags:
-  - Red
-  - Green
-  - Blue
-  totalWidth: 200
-  totalHeight: 25
+  regionColors: 010000000200000003000000
   startX: -7
   startY: 0
   regionWidth: 2
   useXCoordinate: 1
+  barTransform: {fileID: 872105641}
+  arrowTransform: {fileID: 816498941}
+  totalWidth: 200
+  totalHeight: 25
+  shadowDistance: {x: 2, y: -2}
+  shadowColor: {r: 0, g: 0, b: 0, a: 0.75}
 --- !u!4 &512953890
 Transform:
   m_ObjectHideFlags: 0
@@ -2230,7 +2229,7 @@ Transform:
   m_GameObject: {fileID: 1660429357}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 60.73, y: -4.49, z: -10}
+  m_LocalPosition: {x: 0.86, y: 0, z: -10}
   m_LocalScale: {x: 0.95565754, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -2452,12 +2451,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e909ef4dcac331e47b1f8963d0c014e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colorOffset: 0
   changeLayer: 1
   particleColor: {r: 1, g: 1, b: 1, a: 1}
   startSize: 0.2
   startSpeed: 1
   particleSystemScale: 0.5
+  colorOffset: 0
 --- !u!1001 &1800127464
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2643,12 +2642,16 @@ PrefabInstance:
       value: 90
       objectReference: {fileID: 0}
     - target: {fileID: 6132835792535108313, guid: ff8bc5c79479f9b41bbc40bcf7b225af, type: 3}
+      propertyPath: ballSpeed
+      value: 4
+      objectReference: {fileID: 0}
+    - target: {fileID: 6132835792535108313, guid: ff8bc5c79479f9b41bbc40bcf7b225af, type: 3}
       propertyPath: cannonBall
       value: 
       objectReference: {fileID: 4253246274819953250, guid: 56ddf6bf738c66a43aaac40daa31ca1f, type: 3}
     - target: {fileID: 6132835792535108313, guid: ff8bc5c79479f9b41bbc40bcf7b225af, type: 3}
       propertyPath: shootInterval
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6132835792535108313, guid: ff8bc5c79479f9b41bbc40bcf7b225af, type: 3}
       propertyPath: scriptsToAdd.Array.size
@@ -2688,12 +2691,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e909ef4dcac331e47b1f8963d0c014e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colorOffset: 0
   changeLayer: 1
   particleColor: {r: 1, g: 1, b: 1, a: 1}
   startSize: 0.2
   startSpeed: 1
   particleSystemScale: 0.5
+  colorOffset: 0
 --- !u!1001 &2006133629
 PrefabInstance:
   m_ObjectHideFlags: 0

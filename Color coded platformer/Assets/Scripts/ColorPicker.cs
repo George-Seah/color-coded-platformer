@@ -2,64 +2,56 @@ using UnityEngine;
 
 public class ColorPicker : MonoBehaviour
 {
-    private SpriteRenderer sr;
-    public enum ColorOptions
+    protected SpriteRenderer sr;
+
+    [SerializeField] protected GameColor selectedColor = GameColor.Default;
+    public GameColor SelectedColor
     {
-        Red,
-        Green,
-        Blue,
-        Default
-    }
-    public ColorOptions selectedColor;
-    //[SerializeField] bool changeColor;
-    [SerializeField] bool changeLayerMask = true;
-    public void ChangeObjectColor(string newColor){
-        sr = GetComponent<SpriteRenderer>();
-
-        //Debug.Log($"Before changing: Color - {sr.color}, Layer - {gameObject.layer}");
-
-
-        if(newColor == "red" || newColor == "Red"){
-            Debug.Log("Red selected in ChangeObjectColor");
-            if(sr != null)
-                sr.color = Color.red;
-            if(changeLayerMask)
-                gameObject.layer = LayerMask.NameToLayer("Red");
+        get => selectedColor;
+        set
+        {
+            selectedColor = value;
+            ChangeObjectColor(selectedColor);
         }
-        else if(newColor == "blue" || newColor == "Blue"){
-            Debug.Log("Blue selected in ChangeObjectColor");
-            if(sr != null)
-                sr.color = Color.blue;
-            if(changeLayerMask)
-                gameObject.layer = LayerMask.NameToLayer("Blue");
-        }
-        else if(newColor == "green" || newColor == "Green"){
-            Debug.Log("Green selected in ChangeObjectColor");
-            if(sr != null)
-                sr.color = Color.green;
-            if(changeLayerMask)
-                gameObject.layer = LayerMask.NameToLayer("Green");
-        }
-        else{
-            Debug.Log("White selected in ChangeObjectColor");
-            if(sr != null)
-                sr.color = Color.white;
-            if(changeLayerMask)
-                gameObject.layer = LayerMask.NameToLayer("Default");
-        }
-        
-        //Debug.Log($"After changing: Color - {sr.color}, Layer - {gameObject.layer}");
-    }
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
-    {
-        ChangeObjectColor($"{selectedColor}");
-        //Debug.Log($"{gameObject} color is {sr.color}");
     }
 
-    // Update is called once per frame
-    void Update()
+    [SerializeField] protected bool changeLayerMask = true;
+
+    public virtual void ChangeObjectColor(GameColor color)
     {
-        
+        if (sr == null)
+            sr = GetComponent<SpriteRenderer>();
+
+        switch (color)
+        {
+            case GameColor.Red:
+                if (sr) this.sr.color = Color.red;
+                if(changeLayerMask) gameObject.layer = LayerMask.NameToLayer("Red");
+                break;
+            case GameColor.Green:
+                if (sr) this.sr.color = Color.green;
+                if(changeLayerMask) gameObject.layer = LayerMask.NameToLayer("Green");
+                break;
+            case GameColor.Blue:
+                if (sr) this.sr.color = Color.blue;
+                if(changeLayerMask) gameObject.layer = LayerMask.NameToLayer("Blue");
+                break;
+            default:
+                if (sr) this.sr.color = Color.white;
+                if(changeLayerMask) gameObject.layer = LayerMask.NameToLayer("Default");
+                break;
+        }
+    }
+
+    // Called in editor when inspector changes are made
+    void OnValidate()
+    {
+        ChangeObjectColor(this.selectedColor);
+    }
+
+    protected virtual void Awake()
+    {
+        // Optional runtime guarantee
+        ChangeObjectColor(this.selectedColor);
     }
 }

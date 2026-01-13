@@ -2,17 +2,14 @@ using UnityEngine;
 
 public class KeyDetector : MonoBehaviour
 {
+    LockedDoor doorColorPicker;
+    //ColorPicker keyColorPicker;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Awake()
     {
-        
+        doorColorPicker = GetComponentInParent<LockedDoor>();
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.gameObject.CompareTag("Key") && (collision.gameObject.layer == gameObject.layer || collision.gameObject.layer == LayerMask.NameToLayer("Default")))

@@ -27,7 +27,7 @@ public class VelocityChecker : MonoBehaviour
         // Set game object layer based on color
         if (colorPicker != null)
         {
-            gameObject.layer = LayerMask.NameToLayer($"{colorPicker.selectedColor}");
+            gameObject.layer = LayerMask.NameToLayer($"{colorPicker.SelectedColor}");
         }
     }
 

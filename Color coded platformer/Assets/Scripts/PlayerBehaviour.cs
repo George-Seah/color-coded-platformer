@@ -275,7 +275,11 @@ public class PlayerBehaviour : MonoBehaviour
     private void FixedUpdate()
     {
         moveDirection = move.ReadValue<Vector2>();
-        rb.linearVelocity = new Vector2(moveDirection.x * moveSpeed, rb.linearVelocity.y);
+        // NEW:
+        if (!onLadder) // Only apply this movement if NOT on a ladder
+        {
+            rb.linearVelocity = new Vector2(moveDirection.x * moveSpeed, rb.linearVelocity.y);
+        }
         anim.SetFloat("XMovement", moveDirection.x);
         if(moveDirection.x > 0){
            lookingRight = true;

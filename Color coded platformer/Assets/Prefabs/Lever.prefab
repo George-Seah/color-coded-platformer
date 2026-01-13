@@ -92,8 +92,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   selectedColor: 0
-  changeColor: 0
-  changeLayerMask: 0
+  changeLayerMask: 1
 --- !u!212 &5737817652792475126
 SpriteRenderer:
   m_ObjectHideFlags: 0

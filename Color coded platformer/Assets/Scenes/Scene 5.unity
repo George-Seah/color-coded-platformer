@@ -969,7 +969,7 @@ Transform:
   m_GameObject: {fileID: 594977276}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 24.310001, y: 1.13, z: -10}
+  m_LocalPosition: {x: 0.86, y: 0, z: -10}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 1
   m_Children:
@@ -1547,27 +1547,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4072490386717871385, guid: f46f2a3b406facd46adb7b4567bb21f2, type: 3}
       propertyPath: 'colorsToShoot.Array.data[0]'
-      value: Blue
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4072490386717871385, guid: f46f2a3b406facd46adb7b4567bb21f2, type: 3}
       propertyPath: 'colorsToShoot.Array.data[1]'
-      value: Blue
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 4072490386717871385, guid: f46f2a3b406facd46adb7b4567bb21f2, type: 3}
       propertyPath: 'colorsToShoot.Array.data[2]'
-      value: Red
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4072490386717871385, guid: f46f2a3b406facd46adb7b4567bb21f2, type: 3}
       propertyPath: 'colorsToShoot.Array.data[3]'
-      value: Red
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4072490386717871385, guid: f46f2a3b406facd46adb7b4567bb21f2, type: 3}
       propertyPath: 'colorsToShoot.Array.data[4]'
-      value: Green
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 4072490386717871385, guid: f46f2a3b406facd46adb7b4567bb21f2, type: 3}
       propertyPath: 'colorsToShoot.Array.data[5]'
-      value: Green
+      value: 2
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1677,11 +1677,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2106337957089459908, guid: dd357eeeac0748d4b85702a096f23b38, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 23.45
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2106337957089459908, guid: dd357eeeac0748d4b85702a096f23b38, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.13
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 2106337957089459908, guid: dd357eeeac0748d4b85702a096f23b38, type: 3}
       propertyPath: m_LocalPosition.z
@@ -2369,7 +2369,7 @@ Transform:
   m_GameObject: {fileID: 1347884364}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 24.310001, y: 1.13, z: -10}
+  m_LocalPosition: {x: 0.86, y: 0, z: -10}
   m_LocalScale: {x: 0.95565754, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -3591,7 +3591,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4072490386717871385, guid: f46f2a3b406facd46adb7b4567bb21f2, type: 3}
       propertyPath: shootInterval
-      value: 2
+      value: 2.04
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

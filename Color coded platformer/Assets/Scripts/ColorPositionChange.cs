@@ -2,122 +2,140 @@ using UnityEngine;
 
 public class ColorPositionChange : MonoBehaviour
 {
-    private SpriteRenderer spriteRenderer;
-    private PositionBasedColorChanger PBCC;
-    [SerializeField] private int colorOffset = 0; // Offset value for color selection
-    [SerializeField] private bool changeLayer = true; // Scale of the ParticleSystem itself (to adjust the overall size of the particles)
-    private ParticleSystem particleSystem;
-    [SerializeField] private Color particleColor = Color.white; // Scale of the ParticleSystem itself (to adjust the overall size of the particles)
-    [SerializeField] private float startSize = 0.2f; // Size of individual particles
-    [SerializeField] private float startSpeed = 1f; // Speed of individual particles
-    [SerializeField] private float particleSystemScale = 0.5f; // Scale of the ParticleSystem itself (to adjust the overall size of the particles)
+    SpriteRenderer spriteRenderer;
+
+    [Header("Layer Control")]
+    [SerializeField] bool changeLayer = true;
+
+    [Header("Particle Settings")]
+    ParticleSystem particleSystem;
+    [SerializeField] Color particleColor = Color.white;
+    [SerializeField] float startSize = 0.2f;
+    [SerializeField] float startSpeed = 1f;
+    [SerializeField] float particleSystemScale = 0.5f;
+
+    [Header("Offset Settings")]
+    [SerializeField] int colorOffset = 0;
+
+    int lastRegionIndex = int.MinValue;
+
     void Awake()
     {
         spriteRenderer = GetComponent<SpriteRenderer>();
-        if(colorOffset != 0){
-            particleColor = Color.black;
-        }
-        else{
-            particleColor = Color.white;
-        }
+    }
+
+    void Start()
+    {
+        if (PositionBasedColorChanger.Instance == null) Debug.LogError("No PositionBasedColorChanger found in scene.");
+
+        colorOffset %= PositionBasedColorChanger.Instance.regionColors.Count;
+        // Set initial particle color based on offset
+        particleColor = colorOffset != 0 ? Color.black : Color.white;
+
         AddSparkles();
-        // Try to find the PositionBasedColorChanger object by name
-        PBCC = GameObject.Find("Position Based Color Changer").GetComponent<PositionBasedColorChanger>();
-
-        // Check if PBCC is found
-        if (PBCC != null)
-        {
-            Debug.Log("PositionBasedColorChanger found! Number of tags: " + PBCC.colorTags.Count);
-
-            if (PBCC.colorTags.Count > 0)
-            {
-                UpdateColor();
-            }
-            else
-            {
-                Debug.LogError("No color tags found in PositionBasedColorChanger.");
-            }
-        }
-    }
-
-    public void UpdateColor()
-    {
-        if (PBCC == null) return;
-
-        float playerPosition = PBCC.useXCoordinate ? PBCC.playerBehaviour.transform.position.x : PBCC.playerBehaviour.transform.position.y;
-        int currentRegionIndex = Mathf.FloorToInt((playerPosition - PBCC.startX) / PBCC.regionWidth);
-
-        // Apply the offset while ensuring wrapping within bounds
-        int adjustedIndex = (currentRegionIndex + colorOffset + PBCC.colorTags.Count) % PBCC.colorTags.Count;
-
-        string currentTag = PBCC.colorTags[adjustedIndex];
-        Color currentColor = PBCC.GetColorFromTag(currentTag);
-
-        SetColorAndTag(currentColor, currentTag);
-    }
-
-    public void SetColorAndTag(Color color, string tag)
-    {
-        Debug.Log("Setting color: " + color + " and tag: " + tag);
-
-        if (spriteRenderer != null)
-        {
-            spriteRenderer.color = color;
-        }
-        if(changeLayer){
-            gameObject.layer = LayerMask.NameToLayer(tag);
-        }
-
-    }
-    public void SetOffset(int offset){
-        colorOffset = offset;
-        if(colorOffset != 0){
-            particleColor = Color.black;
-        }
-        else{
-            particleColor = Color.white;
-        }
-        particleSystem.GetComponent<ParticleSystemRenderer>().material.color = particleColor;
     }
     void Update()
     {
         UpdateColor();
     }
+
+    /// <summary>
+    /// REQUIRED BY Cannon.cs — RESTORED.
+    /// </summary>
+    public void SetOffset(int offset)
+    {
+        colorOffset = offset;
+        particleColor = colorOffset != 0 ? Color.black : Color.white;
+
+        if (particleSystem != null)
+        {
+            var renderer = particleSystem.GetComponent<ParticleSystemRenderer>();
+            renderer.material.color = particleColor;
+
+            var main = particleSystem.main;
+            main.startColor = particleColor;
+        }
+    }
+
+    void UpdateColor()
+    {
+        if (PositionBasedColorChanger.Instance == null) return;
+
+        // Determine player's current region
+        float position = PositionBasedColorChanger.Instance.useXCoordinate
+            ? PositionBasedColorChanger.Instance.playerBehaviour.transform.position.x
+            : PositionBasedColorChanger.Instance.playerBehaviour.transform.position.y;
+
+        float start = PositionBasedColorChanger.Instance.useXCoordinate
+            ? PositionBasedColorChanger.Instance.startX
+            : PositionBasedColorChanger.Instance.startY;
+
+        int regionIndex = Mathf.FloorToInt((position - start) / PositionBasedColorChanger.Instance.regionWidth);
+        regionIndex += colorOffset;
+
+        if (regionIndex == lastRegionIndex) return;
+        lastRegionIndex = regionIndex;
+
+        int wrappedIndex = ((regionIndex % PositionBasedColorChanger.Instance.regionColors.Count)
+            + PositionBasedColorChanger.Instance.regionColors.Count)
+            % PositionBasedColorChanger.Instance.regionColors.Count;
+
+        var currentColor = PositionBasedColorChanger.Instance.regionColors[wrappedIndex];
+
+        SetColorAndLayer(currentColor);
+    }
+
+    void SetColorAndLayer(GameColor gameColor)
+    {
+        Color unityColor = gameColor switch
+        {
+            GameColor.Red => Color.red,
+            GameColor.Green => Color.green,
+            GameColor.Blue => Color.blue,
+            _ => Color.white
+        };
+
+        if (spriteRenderer != null)
+            spriteRenderer.color = unityColor;
+
+        if (changeLayer)
+        {
+            string layerName = gameColor.ToString();
+            gameObject.layer = LayerMask.NameToLayer(layerName);
+        }
+    }
+
+    // ===============================
+    // ORIGINAL PARTICLE EFFECT SYSTEM
+    // ===============================
     void AddSparkles()
     {
-        // Check if the GameObject already has a ParticleSystem component
         particleSystem = GetComponentInChildren<ParticleSystem>();
 
         if (particleSystem == null)
         {
-            // Add a ParticleSystem if it doesn't already exist
             particleSystem = new GameObject("Sparkles").AddComponent<ParticleSystem>();
-            particleSystem.transform.SetParent(transform);  // Make the particle system a child of the original GameObject
-            particleSystem.transform.localPosition = Vector3.zero; // Center the particle system on the GameObject
+            particleSystem.transform.SetParent(transform);
+            particleSystem.transform.localPosition = Vector3.zero;
         }
 
-        // Adjust the scale of the ParticleSystem (do NOT scale the GameObject itself)
-        particleSystem.transform.localScale = new Vector3(particleSystemScale, particleSystemScale, particleSystemScale); 
+        particleSystem.transform.localScale =
+            new Vector3(particleSystemScale, particleSystemScale, particleSystemScale);
 
-        // Configure the ParticleSystem
         ParticleSystem.MainModule main = particleSystem.main;
         ParticleSystem.EmissionModule emission = particleSystem.emission;
         ParticleSystem.ShapeModule shape = particleSystem.shape;
 
-        // Adjust the particle size using the startSize (to control individual particles)
         main.startSize = startSize;
-
-        // Set particle system properties
         main.startLifetime = 1.0f;
         main.startSpeed = startSpeed;
         main.startColor = particleColor;
         main.simulationSpace = ParticleSystemSimulationSpace.World;
 
         emission.rateOverTime = 10f;
-        shape.shapeType = ParticleSystemShapeType.Circle;
 
-        // Adjust the radius of the emission area (this controls how far apart particles are spread)
-        shape.radius = 0.2f; // Make it smaller to avoid spread being too wide
+        shape.shapeType = ParticleSystemShapeType.Circle;
+        shape.radius = 0.2f;
 
         ParticleSystemRenderer renderer = particleSystem.GetComponent<ParticleSystemRenderer>();
         renderer.material = new Material(Shader.Find("Sprites/Default"));

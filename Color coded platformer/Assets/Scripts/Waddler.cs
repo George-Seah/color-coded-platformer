@@ -8,7 +8,6 @@ public class Waddler : MonoBehaviour
     [SerializeField] float speed;
     private Rigidbody2D rb;
     public Key currentKey { get; private set; }
-    //[SerializeField] private Vector2 respawn;
     [SerializeField] bool grounded;
     private Collider2D waddlerCollider;
 
@@ -20,50 +19,63 @@ public class Waddler : MonoBehaviour
 
     public void Launch(Transform cannonTransform, float launchForce, bool facingRight)
     {
-        // Applies direction to face
         lookingRight = facingRight;
 
-        // Calculate the launch direction based on the cannon's rotation
         float angleInRadians = (cannonTransform.eulerAngles.z + 90) * Mathf.Deg2Rad;
         Vector2 launchDirection = new Vector2(Mathf.Cos(angleInRadians), Mathf.Sin(angleInRadians));
 
-        // Apply the force to the Rigidbody2D
         rb.linearVelocity = launchDirection * launchForce;
 
-        // Ignore collision with the cannon temporarily
         Collider2D cannonCollider = cannonTransform.GetComponent<Collider2D>();
         if (cannonCollider != null)
         {
             Physics2D.IgnoreCollision(waddlerCollider, cannonCollider, true);
-            StartCoroutine(EnableCollisionWithCannon(cannonCollider, 0.5f)); // Adjust delay as needed
+            StartCoroutine(ReenableCollision(cannonCollider, 0.5f));
         }
 
         Debug.Log($"Waddler launched at angle: {cannonTransform.eulerAngles.z} degrees with force: {launchForce}");
     }
 
-    private IEnumerator EnableCollisionWithCannon(Collider2D cannonCollider, float delay)
+    private IEnumerator ReenableCollision(Collider2D otherCollider, float delay)
     {
         yield return new WaitForSeconds(delay);
-        Physics2D.IgnoreCollision(waddlerCollider, cannonCollider, false);
+        if (otherCollider != null && waddlerCollider != null)
+        {
+            Physics2D.IgnoreCollision(waddlerCollider, otherCollider, false);
+        }
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        //if (collision.gameObject.CompareTag("Ground") || collision.gameObject.CompareTag("Cannon")){}
-        /*
-        if(collision.gameObject.CompareTag("Player") && !collision.gameObject.CompareTag("GroundCollisionCheck")){
-            collision.gameObject.GetComponent<PlayerBehaviour>().RespawnPositionAtPosition();
+        // Handle directional platforms first
+        if (collision.gameObject.TryGetComponent(out DirectionallySolidPlatform platform))
+        {
+            if (ShouldPassThrough(platform))
+            {
+                IgnoreAndPassThrough(collision);
+                return; // Skip further processing for this collision
+            }
         }
-        */
-        /*
-        else if(collision.gameObject.CompareTag("Player") && !collision.gameObject.CompareTag("GroundCollisionCheck")){
 
+        // Handle ladder collisions
+        if (collision.gameObject.CompareTag("Ladder"))
+        {
+            Collider2D ladderCollider = collision.gameObject.GetComponent<Collider2D>();
+            if (ladderCollider != null)
+            {
+                Physics2D.IgnoreCollision(ladderCollider, waddlerCollider);
+                Debug.Log("Ignoring collision with ladder.");
+            }
+            return;
         }
-        */
-        
-        if(!collision.gameObject.CompareTag("Player")){
+
+        // Set grounded state
+        if (!collision.gameObject.CompareTag("Player"))
+        {
             grounded = true;
         }
+
+        // Handle key pickup
         if (collision.gameObject.CompareTag("Key") && currentKey == null)
         {
             Key key = collision.gameObject.GetComponent<Key>();
@@ -75,56 +87,96 @@ public class Waddler : MonoBehaviour
             }
         }
 
-        if (collision.gameObject.CompareTag("Ladder"))
-        {
-            // Ignore collisions with objects tagged as "Ladder"
-            Collider2D ladderCollider = collision.gameObject.GetComponent<Collider2D>();
-            if (ladderCollider != null)
-            {
-                Physics2D.IgnoreCollision(ladderCollider, GetComponent<Collider2D>());
-                Debug.Log("Ignoring collision with ladder.");
-            }
-            return; // Skip further processing for ladder collisions
-        }
-
+        // Handle wall collisions and player contact
         foreach (ContactPoint2D contact in collision.contacts)
         {
             Debug.DrawLine(contact.point, contact.point + contact.normal, Color.red, 2f);
-            Debug.Log($"Normal: {contact.normal}");
 
             Vector2 collisionNormal = contact.normal;
             float collisionAngle = Vector2.Angle(Vector2.up, collisionNormal);
             Vector2 leftCollision = new Vector2(1, 0);
             Vector2 rightCollision = new Vector2(-1, 0);
-            Debug.Log($"Collision Angle: {collisionAngle}°");
 
             if (!collision.gameObject.CompareTag("Player") && !collision.gameObject.CompareTag("Key"))
             {
                 if (lookingRight && collisionNormal == rightCollision)
                 {
                     lookingRight = false;
-                    Debug.Log($"Waddler faces right as it walks into wall");
+                    Debug.Log("Waddler faces right as it walks into wall");
                 }
                 else if (!lookingRight && collisionNormal == leftCollision)
                 {
                     lookingRight = true;
-                    Debug.Log($"Waddler faces left as it walks into wall");
+                    Debug.Log("Waddler faces left as it walks into wall");
                 }
             }
-            if(collision.gameObject.CompareTag("Player") && collisionAngle != 180){
-                //collision.gameObject.GetComponent<PlayerBehaviour>().RespawnPositionAtPosition();
+
+            if (collision.gameObject.CompareTag("Player") && collisionAngle != 180)
+            {
                 Debug.Log("Waddler triggered scene reload.");
                 GameObject.Find("Game Manager").GetComponent<GameManager>().ReloadScene();
             }
         }
-        
     }
+
+    private bool ShouldPassThrough(DirectionallySolidPlatform platform)
+    {
+        Vector2 velocity = rb.linearVelocity;
+        float threshold = 0.1f;
+
+        switch (platform.SelectedDirection)
+        {
+            case DirectionallySolidPlatform.DirectionOptions.Up:
+                return velocity.y > threshold;
+
+            case DirectionallySolidPlatform.DirectionOptions.Down:
+                return velocity.y < -threshold;
+
+            case DirectionallySolidPlatform.DirectionOptions.Left:
+                return velocity.x < -threshold;
+
+            case DirectionallySolidPlatform.DirectionOptions.Right:
+                return velocity.x > threshold;
+
+            default:
+                return false;
+        }
+    }
+
+    private void IgnoreAndPassThrough(Collision2D collision)
+    {
+        // Store velocity before collision response kills it
+        Vector2 savedVelocity = rb.linearVelocity;
+
+        // If velocity is too low, use walking direction instead
+        if (savedVelocity.magnitude < 0.1f)
+        {
+            savedVelocity = (lookingRight ? Vector2.right : Vector2.left) * speed;
+        }
+
+        // Ignore the collision
+        Physics2D.IgnoreCollision(collision.collider, waddlerCollider, true);
+
+        // Restore velocity that was lost during collision
+        rb.linearVelocity = savedVelocity;
+
+        // Nudge position slightly to escape any overlap
+        rb.position += savedVelocity.normalized * 0.1f;
+
+        // Re-enable collision after passing through
+        StartCoroutine(ReenableCollision(collision.collider, 0.4f));
+
+        Debug.Log("Waddler passing through directional platform");
+    }
+
     void OnCollisionStay2D(Collision2D collision)
     {
-        if(!collision.gameObject.CompareTag("Player")){
+        if (!collision.gameObject.CompareTag("Player"))
+        {
             grounded = true;
         }
     }
+
     void OnCollisionExit2D(Collision2D collision)
     {
         grounded = false;
@@ -146,14 +198,16 @@ public class Waddler : MonoBehaviour
 
         if (grounded)
         {
+            SpriteRenderer spriteRenderer = GetComponent<SpriteRenderer>();
+            
             if (lookingRight)
             {
-                GetComponent<SpriteRenderer>().flipX = true;
+                spriteRenderer.flipX = true;
                 rb.linearVelocity = new Vector2(speed, rb.linearVelocity.y);
             }
             else
             {
-                GetComponent<SpriteRenderer>().flipX = false;
+                spriteRenderer.flipX = false;
                 rb.linearVelocity = new Vector2(-speed, rb.linearVelocity.y);
             }
         }
@@ -169,8 +223,6 @@ public class Waddler : MonoBehaviour
         currentKey = key;
     }
 }
-
-
 
 /*
 using UnityEngine;

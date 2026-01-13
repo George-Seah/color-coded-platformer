@@ -6,10 +6,16 @@ using TMPro;
 
 public class GameManager : MonoBehaviour
 {
-    private static GameObject instance;
+    public static GameManager Instance;
     public Vector2 playerSpawnPoint;
     //public bool justReloaded = false;
     void Awake(){
+    DontDestroyOnLoad(gameObject);
+
+    if (Instance == null)
+        Instance = this;
+    else
+        Destroy(gameObject);
         //currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
         //LevelCompleteMenu = Resources.FindObjectsOfTypeAll(LevelCompleteMenu);
         /*
@@ -28,12 +34,7 @@ public class GameManager : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start() 
     {
-        DontDestroyOnLoad(gameObject);
 
-        if (instance == null)
-            instance = gameObject;
-        else
-            Destroy(gameObject);
     }
 
     // Update is called once per frame

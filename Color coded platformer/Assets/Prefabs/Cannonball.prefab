@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 5396522751877294810}
   - component: {fileID: 4682400969792276000}
+  - component: {fileID: 1166872928055006379}
   - component: {fileID: 5513484499012424896}
   - component: {fileID: 4032672294030833165}
   - component: {fileID: 7198778519211023197}
@@ -49,6 +50,20 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 5
   direction: {x: 0, y: 1, z: 0}
+--- !u!114 &1166872928055006379
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4253246274819953250}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f3df70b878d90d9478d63dae2e208534, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  selectedColor: 0
+  changeLayerMask: 1
 --- !u!212 &5513484499012424896
 SpriteRenderer:
   m_ObjectHideFlags: 0

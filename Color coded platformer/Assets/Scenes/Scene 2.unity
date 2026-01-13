@@ -1492,6 +1492,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Push Block
       objectReference: {fileID: 0}
+    - target: {fileID: 517733711558722667, guid: 0ec0ca746f93c1f41a44a608bfcec40b, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5051600020183654194, guid: 0ec0ca746f93c1f41a44a608bfcec40b, type: 3}
       propertyPath: m_LocalPosition.x
       value: 7.028187
@@ -2268,8 +2272,20 @@ PrefabInstance:
       propertyPath: m_Name
       value: Star
       objectReference: {fileID: 0}
+    - target: {fileID: 3576847548703814141, guid: b043621e5ae8c8741aff80759ac2e8a1, type: 3}
+      propertyPath: m_Layer
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3804019976299052862, guid: b043621e5ae8c8741aff80759ac2e8a1, type: 3}
       propertyPath: index
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4667290924290183196, guid: b043621e5ae8c8741aff80759ac2e8a1, type: 3}
+      propertyPath: m_Color.g
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4667290924290183196, guid: b043621e5ae8c8741aff80759ac2e8a1, type: 3}
+      propertyPath: m_Color.r
       value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents: []

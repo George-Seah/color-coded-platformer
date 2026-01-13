@@ -49,8 +49,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3df70b878d90d9478d63dae2e208534, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedColor: 3
-  changeColor: 1
+  selectedColor: 0
   changeLayerMask: 1
 --- !u!114 &2699990597186971257
 MonoBehaviour:
@@ -66,7 +65,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   lookingRight: 1
   speed: 2
-  currentKey: {fileID: 0}
   grounded: 0
 --- !u!212 &5177973082895228751
 SpriteRenderer:

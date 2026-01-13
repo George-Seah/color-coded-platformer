@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 2954059331385160119}
   - component: {fileID: 6090853754207580162}
   - component: {fileID: 2582596923658471771}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: Moving Platform
   m_TagString: Ground
   m_Icon: {fileID: 0}
@@ -68,8 +68,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f3df70b878d90d9478d63dae2e208534, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedColor: 3
-  changeColor: 1
+  selectedColor: 0
   changeLayerMask: 1
 --- !u!212 &2954059331385160119
 SpriteRenderer:
