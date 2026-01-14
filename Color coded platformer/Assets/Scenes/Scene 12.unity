@@ -239,6 +239,14 @@ PrefabInstance:
       propertyPath: m_Name
       value: Cannonball Cannon
       objectReference: {fileID: 0}
+    - target: {fileID: 3489924005035627797, guid: ff8bc5c79479f9b41bbc40bcf7b225af, type: 3}
+      propertyPath: m_Color.b
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3489924005035627797, guid: ff8bc5c79479f9b41bbc40bcf7b225af, type: 3}
+      propertyPath: m_Color.g
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3647841661996313190, guid: ff8bc5c79479f9b41bbc40bcf7b225af, type: 3}
       propertyPath: m_LocalPosition.x
       value: 48
@@ -566,12 +574,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e909ef4dcac331e47b1f8963d0c014e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colorOffset: 0
   changeLayer: 1
   particleColor: {r: 1, g: 1, b: 1, a: 1}
   startSize: 0.2
   startSpeed: 1
   particleSystemScale: 0.5
+  colorOffset: 0
 --- !u!1001 &239331922
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2590,20 +2598,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerBehaviour: {fileID: 1710131268}
-  barTransform: {fileID: 67417274}
-  arrowTransform: {fileID: 1619119144}
-  colorTags:
-  - Red
-  - Green
-  - Blue
-  - Green
-  - Red
-  totalWidth: 200
-  totalHeight: 25
+  regionColors: 00000000010000000200000003000000
   startX: -5.49
   startY: 0
-  regionWidth: 1.5
+  regionWidth: 2
   useXCoordinate: 1
+  barTransform: {fileID: 67417274}
+  arrowTransform: {fileID: 1619119144}
+  totalWidth: 200
+  totalHeight: 25
+  shadowDistance: {x: 2, y: -2}
+  shadowColor: {r: 0, g: 0, b: 0, a: 0.75}
 --- !u!4 &1972519497
 Transform:
   m_ObjectHideFlags: 0
@@ -2675,6 +2680,10 @@ PrefabInstance:
       propertyPath: cloud
       value: 
       objectReference: {fileID: 5954575713577436771, guid: 3d282f439cdadbd42a75c6d5bc83ee09, type: 3}
+    - target: {fileID: 4072490386717871385, guid: f46f2a3b406facd46adb7b4567bb21f2, type: 3}
+      propertyPath: cloudPrefab
+      value: 
+      objectReference: {fileID: 4772105990548472314, guid: cd5ce2a557cf52d41a621d96f4342315, type: 3}
     - target: {fileID: 4072490386717871385, guid: f46f2a3b406facd46adb7b4567bb21f2, type: 3}
       propertyPath: shootInterval
       value: 2
@@ -2748,6 +2757,10 @@ PrefabInstance:
       propertyPath: cloudSpeed
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 4072490386717871385, guid: f46f2a3b406facd46adb7b4567bb21f2, type: 3}
+      propertyPath: cloudPrefab
+      value: 
+      objectReference: {fileID: 4772105990548472314, guid: cd5ce2a557cf52d41a621d96f4342315, type: 3}
     - target: {fileID: 4072490386717871385, guid: f46f2a3b406facd46adb7b4567bb21f2, type: 3}
       propertyPath: shootInterval
       value: 2

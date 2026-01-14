@@ -4,50 +4,52 @@ using UnityEngine.SceneManagement;
 public class PlayerBehaviour : MonoBehaviour
 {
     Animator anim;
-    private Rigidbody2D rb;
-    [SerializeField] private float moveSpeed = 5f;
+    Rigidbody2D rb;
+    [SerializeField] float moveSpeed = 5f;
     public PlayerInputActions playerControls;
-    private Vector2 moveDirection = Vector2.zero;
-    private InputAction move;
-    private InputAction jump;
-    private InputAction drop;
-    private InputAction interact;
+    Vector2 moveDirection = Vector2.zero;
+    InputAction move;
+    InputAction jump;
+    InputAction drop;
+    InputAction interact;
     public float gravityScale = 10f;
     public float fallingGravityScale = 30f;
     public float buttonTime = 0.3f;
-    [SerializeField] private float jumpTime = 0f;
-    [SerializeField] private bool isGrounded;
-    [SerializeField] private bool jumpCancelled;
-    [SerializeField] private bool jumping = false;
-    [SerializeField] private float jumpAmount = 1.25f;
-    [SerializeField] private float jumpForce;
-    [SerializeField] public Key currentKey { get; private set; }
-    [SerializeField] private bool holdingKey;
+    [SerializeField] float jumpTime = 0f;
+    [SerializeField] bool isGrounded;
+    [SerializeField] bool jumpCancelled;
+    [SerializeField] bool jumping = false;
+    [SerializeField] float jumpAmount = 1.25f;
+    [SerializeField] float jumpForce;
+    [SerializeField] public Key currentKey { get; set; }
+    [SerializeField] bool holdingKey;
     public string color;
     public bool onLadder;
     public bool lookingRight;
-    [SerializeField] private bool landedOnWaddler;
+    [SerializeField] bool landedOnWaddler;
 
     float waddlerBounceForceButtonHeld = 1.25f;
     float waddlerBounceForceButtonUnheld = 0.8f;
+    Collider2D[] playerColliders;
+
     //[SerializeField] Vector2 respawnPosition;
-    private void Awake()
+    void Awake()
     {
         playerControls = new PlayerInputActions();
         if (playerControls == null)
         {
             Debug.LogError("PlayerInputActions not initialized!");
         }
-    }
 
-    private void Start()
-    {
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         jumpForce = Mathf.Sqrt(jumpAmount * -2 * Physics2D.gravity.y);
+
+        // Cache all colliders on the player
+        playerColliders = GetComponentsInChildren<Collider2D>();
     }
 
-    private void OnEnable()
+    void OnEnable()
     {
         playerControls.Player.Enable();
         move = playerControls.Player.Move;
@@ -68,7 +70,7 @@ public class PlayerBehaviour : MonoBehaviour
         interact.performed += ctx => OnInteract(ctx);
     }
 
-    private void OnDisable()
+    void OnDisable()
     {
         move.Disable();
         jump.Disable();
@@ -82,7 +84,7 @@ public class PlayerBehaviour : MonoBehaviour
         interact.canceled -= OnInteract;
     }
 
-    private void OnJump(InputAction.CallbackContext context)
+    void OnJump(InputAction.CallbackContext context)
     {
         if (isGrounded && !jumping)
         {
@@ -94,7 +96,7 @@ public class PlayerBehaviour : MonoBehaviour
             Debug.Log("OnJump function activating gravity.");
         }
     }
-    private void OnInteract(InputAction.CallbackContext context)
+    void OnInteract(InputAction.CallbackContext context)
     {
         if (currentKey != null && !currentKey.ReadPickedUp() && !holdingKey)
         {
@@ -110,7 +112,7 @@ public class PlayerBehaviour : MonoBehaviour
         }
         */
     }
-    private void OnJumpCanceled(InputAction.CallbackContext context)
+    void OnJumpCanceled(InputAction.CallbackContext context)
     {
         jumpCancelled = true;
         rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
@@ -123,7 +125,7 @@ public class PlayerBehaviour : MonoBehaviour
         */
     }
 
-    private void OnDrop(InputAction.CallbackContext context)
+    void OnDrop(InputAction.CallbackContext context)
     {
         Debug.Log("Drop button pressed.");
         // && currentKey.ReadPickedUp()
@@ -154,7 +156,7 @@ public class PlayerBehaviour : MonoBehaviour
         isGrounded = false;
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
         foreach (ContactPoint2D contact in collision.contacts)
         {
@@ -189,7 +191,7 @@ public class PlayerBehaviour : MonoBehaviour
             */
         }
     }
-    private void OnCollisionStay2D(Collision2D collision)
+    void OnCollisionStay2D(Collision2D collision)
     {
         if(collision.gameObject.CompareTag("Moving Platform") && !jump.IsPressed()){
             isGrounded = true;
@@ -200,7 +202,7 @@ public class PlayerBehaviour : MonoBehaviour
             */
         }
     }
-    private void OnCollisionExit2D(Collision2D collision)
+    void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Key") && !holdingKey)
         {
@@ -272,7 +274,7 @@ public class PlayerBehaviour : MonoBehaviour
         }
     }
 
-    private void FixedUpdate()
+    void FixedUpdate()
     {
         moveDirection = move.ReadValue<Vector2>();
         // NEW:
@@ -359,6 +361,28 @@ public class PlayerBehaviour : MonoBehaviour
             rb.gravityScale = 0;
         }
     }
+    public void SetIgnoreMovementCollisions(bool ignore)
+    {
+        // ignore with OneWayPlatform
+        GameObject[] oneWays = GameObject.FindGameObjectsWithTag("OneWayPlatform");
+        foreach (var o in oneWays)
+            SetCloudOrOneWayCollision(o, ignore);
+
+        // ignore with Clouds
+        GameObject[] clouds = GameObject.FindGameObjectsWithTag("Cloud");
+        foreach (var c in clouds)
+            SetCloudOrOneWayCollision(c, ignore);
+    }
+
+    void SetCloudOrOneWayCollision(GameObject obj, bool ignore)
+    {
+        Collider2D col = obj.GetComponent<Collider2D>();
+        if (col == null) return;
+
+        foreach (var pc in playerColliders)
+            Physics2D.IgnoreCollision(pc, col, ignore);
+    }
+
     public bool readJumping(){
         return jumping;
     }

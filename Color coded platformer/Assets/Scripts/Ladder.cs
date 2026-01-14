@@ -20,7 +20,7 @@ public class Ladder : MonoBehaviour
     Collider2D groundCheckerCollider;
     Collider2D ladderPlatformCollider;
     [SerializeField] Collider2D colliderForPlayerIgnoreClimbing;
-    Collider2D physicalCollider;
+    Collider2D physicalCollider;//The collider that is not a trigger on the ladder object
 
     void Awake()
     {
@@ -36,6 +36,7 @@ public class Ladder : MonoBehaviour
             Physics2D.IgnoreCollision(physicalCollider, ladderPlatformCollider, true);
 
         playerControls = new PlayerInputActions();
+        LadderWaddlerCollisionRegistry.RegisterLadder(physicalCollider);
     }
 
     void OnEnable()
@@ -51,8 +52,24 @@ public class Ladder : MonoBehaviour
         playerControls.Player.Disable();
     }
 
+    void OnDestroy()
+    {
+        LadderWaddlerCollisionRegistry.UnregisterLadder(physicalCollider);
+    }
+
     void OnTriggerEnter2D(Collider2D collision)
     {
+        Waddler waddler = collision.GetComponentInParent<Waddler>();
+        if (waddler != null)
+        {
+            Collider2D waddlerCollider = waddler.GetComponent<Collider2D>();
+            if (waddlerCollider != null)
+            {
+                Physics2D.IgnoreCollision(waddlerCollider, physicalCollider, true);
+            }
+            return;
+        }
+
         playerBehaviour = collision.GetComponentInParent<PlayerBehaviour>();
         if (playerBehaviour == null) return;
 
@@ -109,9 +126,14 @@ public class Ladder : MonoBehaviour
     {
         SetLadderPlatformCollisions(true);
 
+        if (playerBehaviour != null)
+        {
+            playerBehaviour.onLadder = true;
+            playerBehaviour.SetIgnoreMovementCollisions(true);
+        }
+
         playerRB.gravityScale = 0f;
         playerRB.linearVelocity = new Vector2(playerRB.linearVelocity.x, 0f);
-        playerBehaviour.onLadder = true;
     }
 
     void ExitLadder()
@@ -119,7 +141,10 @@ public class Ladder : MonoBehaviour
         SetLadderPlatformCollisions(false);
 
         if (playerBehaviour != null)
+        {
             playerBehaviour.onLadder = false;
+            playerBehaviour.SetIgnoreMovementCollisions(false);
+        }
 
         if (playerRB != null)
             playerRB.gravityScale = normalGravity;

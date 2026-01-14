@@ -481,6 +481,7 @@
 "Assets/Scripts/DirectionallySolidPlatform.cs"
 "Assets/Scripts/Door.cs"
 "Assets/Scripts/ESave.cs"
+"Assets/Scripts/Game Managerment/LadderWaddlerCollisionRegistry.cs"
 "Assets/Scripts/GameColor.cs"
 "Assets/Scripts/GameManager.cs"
 "Assets/Scripts/GroundCollisionCheck.cs"

@@ -16,6 +16,22 @@ public class Waddler : MonoBehaviour
         rb = GetComponent<Rigidbody2D>();
         waddlerCollider = GetComponent<Collider2D>();
     }
+    
+    void OnEnable()
+    {
+        foreach (var col in GetComponentsInChildren<Collider2D>())
+        {
+            LadderWaddlerCollisionRegistry.RegisterWaddler(col);
+        }
+    }
+
+    void OnDisable()
+    {
+        foreach (var col in GetComponentsInChildren<Collider2D>())
+        {
+            LadderWaddlerCollisionRegistry.UnregisterWaddler(col);
+        }
+    }
 
     public void Launch(Transform cannonTransform, float launchForce, bool facingRight)
     {
