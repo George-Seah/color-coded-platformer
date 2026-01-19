@@ -45,6 +45,8 @@ void ShootCloud()
     GameObject newCloudObj = Instantiate(cloudPrefab, transform.position, transform.rotation);
     Cloud cloud = newCloudObj.GetComponent<Cloud>();
 
+    Physics2D.IgnoreCollision(newCloudObj.GetComponent<Collider2D>(), GetComponent<Collider2D>());
+
     if (!cloud)
     {
         Debug.LogError("Cloud prefab is missing Cloud component.");

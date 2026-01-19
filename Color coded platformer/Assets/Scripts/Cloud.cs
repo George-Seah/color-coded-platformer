@@ -1,8 +1,7 @@
 using UnityEngine;
 using System.Collections.Generic;
-using System.Linq;
 
-[RequireComponent(typeof(Rigidbody2D))]
+[RequireComponent(typeof(Rigidbody2D), typeof(Collider2D))]
 public class Cloud : MonoBehaviour
 {
     public float speed = 5f;
@@ -10,13 +9,13 @@ public class Cloud : MonoBehaviour
 
     Rigidbody2D rb;
 
-    [SerializeField] List<GameObject> objectsOnCloud = new List<GameObject>();
+    // Objects physically riding this cloud
+    List<Rigidbody2D> riders = new List<Rigidbody2D>();
 
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
 
-        // Ensure stable kinematic movement
         rb.bodyType = RigidbodyType2D.Kinematic;
         rb.interpolation = RigidbodyInterpolation2D.Interpolate;
     }
@@ -25,56 +24,101 @@ public class Cloud : MonoBehaviour
     {
         rb.linearVelocity = direction.normalized * speed;
 
-        objectsOnCloud = objectsOnCloud
-            .Where(obj => obj != null && IsOnCloud(obj))
-            .ToList();
-
-        foreach (var obj in objectsOnCloud)
+        // Apply movement ONLY to valid riders
+        for (int i = riders.Count - 1; i >= 0; i--)
         {
-            if (obj == null) continue;
-            if (!obj.CompareTag("Player") && !obj.CompareTag("Waddler")) continue;
 
-            Rigidbody2D objRb = obj.GetComponent<Rigidbody2D>();
-            if (objRb == null) continue;
+            PlayerBehaviour player = riders[i].GetComponent<PlayerBehaviour>();
+            if (player != null && player.onLadder)
+            {
+                riders.RemoveAt(i);
+                continue;
+            }
 
-            objRb.linearVelocity += (Vector2)direction.normalized * speed;
+            if (riders[i] == null)
+            {
+                riders.RemoveAt(i);
+                continue;
+            }
+
+            // Stop pushing if collision is ignored mid-ride
+            if (Physics2D.GetIgnoreCollision(
+                riders[i].GetComponent<Collider2D>(),
+                GetComponent<Collider2D>()))
+            {
+                riders.RemoveAt(i);
+                continue;
+            }
+
+            riders[i].linearVelocity += (Vector2)direction.normalized * speed;
         }
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
+        Rigidbody2D objRb = collision.rigidbody;
+
+        if(collision.gameObject.CompareTag("Ladder") ||
+        collision.gameObject.CompareTag("Cloud") ||
+        collision.gameObject.GetComponent<GroundCollisionCheck>()) 
+            return;
+
+        PlayerBehaviour player = collision.collider.GetComponentInParent<PlayerBehaviour>();
+        if (player != null && player.onLadder)
+            return;
+
         if(collision.gameObject.CompareTag("Ground")) 
             Destroy(gameObject);
-        if (!objectsOnCloud.Contains(collision.gameObject))
-            objectsOnCloud.Add(collision.gameObject);
+
+        if (objRb == null) return;
+
+        // DO NOT add if collision is being ignored
+        if (Physics2D.GetIgnoreCollision(
+            collision.collider,
+            GetComponent<Collider2D>()))
+            return;
+
+        if (!riders.Contains(objRb))
+            riders.Add(objRb);
     }
+
 
     void OnCollisionExit2D(Collision2D collision)
     {
-        objectsOnCloud.Remove(collision.gameObject);
+        Rigidbody2D objRb = collision.rigidbody;
+        if (objRb == null) return;
+
+        riders.Remove(objRb);
     }
 
-    bool IsOnCloud(GameObject obj)
+    void OnDisable()
     {
-        Collider2D objCollider = obj.GetComponent<Collider2D>();
-        Collider2D cloudCollider = GetComponent<Collider2D>();
-        if (!objCollider || !cloudCollider) return false;
-        return objCollider.IsTouching(cloudCollider);
+        riders.Clear();
     }
 
-    public void SetDirection(Transform cannonTransform, float speedToSet, bool tiltCloud, float customRotation)
+    void OnDestroy()
+    {
+        riders.Clear();
+    }
+
+    public void SetDirection(
+        Transform cannonTransform,
+        float speedToSet,
+        bool tiltCloud,
+        float customRotation
+    )
     {
         speed = speedToSet;
 
-        float eulerAngle = cannonTransform.eulerAngles.z;
+        float angle = cannonTransform.eulerAngles.z + 90f;
         direction = new Vector3(
-            Mathf.Cos((eulerAngle + 90) * Mathf.Deg2Rad),
-            Mathf.Sin((eulerAngle + 90) * Mathf.Deg2Rad),
+            Mathf.Cos(angle * Mathf.Deg2Rad),
+            Mathf.Sin(angle * Mathf.Deg2Rad),
             0f
         );
 
         transform.rotation = tiltCloud
-            ? Quaternion.Euler(0, 0, customRotation)
+            ? Quaternion.Euler(0f, 0f, customRotation)
             : Quaternion.identity;
     }
 }

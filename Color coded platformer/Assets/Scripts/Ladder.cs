@@ -21,6 +21,7 @@ public class Ladder : MonoBehaviour
     Collider2D ladderPlatformCollider;
     [SerializeField] Collider2D colliderForPlayerIgnoreClimbing;
     Collider2D physicalCollider;//The collider that is not a trigger on the ladder object
+    bool playerInsideTrigger;
 
     void Awake()
     {
@@ -73,6 +74,7 @@ public class Ladder : MonoBehaviour
         playerBehaviour = collision.GetComponentInParent<PlayerBehaviour>();
         if (playerBehaviour == null) return;
 
+        playerInsideTrigger = true;
         playerRB = playerBehaviour.GetComponent<Rigidbody2D>();
         playerCollider = playerBehaviour.GetComponent<Collider2D>();
         groundCheckerCollider = collision.GetComponentInChildren<GroundCollisionCheck>()
@@ -81,7 +83,24 @@ public class Ladder : MonoBehaviour
 
     void OnTriggerStay2D(Collider2D collision)
     {
-        if (playerBehaviour == null) return;
+        if (playerBehaviour != null && playerBehaviour.onLadder && !playerInsideTrigger)
+        {
+            ExitLadder();
+            ClearPlayerReferences();
+            return;
+        }
+
+        if (playerBehaviour == null)
+        {
+            playerBehaviour = collision.GetComponentInParent<PlayerBehaviour>();
+            if (playerBehaviour == null) return;
+
+            playerInsideTrigger = true;
+            playerRB = playerBehaviour.GetComponent<Rigidbody2D>();
+            playerCollider = playerBehaviour.GetComponent<Collider2D>();
+            groundCheckerCollider = collision.GetComponentInChildren<GroundCollisionCheck>()
+                ?.GetComponent<Collider2D>();
+        }
 
         moveDirection = move.ReadValue<Vector2>();
 
@@ -93,9 +112,17 @@ public class Ladder : MonoBehaviour
 
     void OnTriggerExit2D(Collider2D collision)
     {
-        ExitLadder();
-        ClearPlayerReferences();
+        if(collision.GetComponentInParent<PlayerBehaviour>() == null)
+            return;
+
+        playerInsideTrigger = false;
+
+        if (playerBehaviour != null && playerBehaviour.onLadder) {
+            ExitLadder();
+            ClearPlayerReferences();
+        }
     }
+
 
     void FixedUpdate()
     {
@@ -110,10 +137,13 @@ public class Ladder : MonoBehaviour
             moveDirection.y * climbSpeed
         );
 
+        
         playerRB.MovePosition(new Vector2(
             transform.position.x,
             playerRB.position.y + (moveDirection.y * climbSpeed)
         ));
+
+        //playerRB.position = new Vector2(transform.position.x, playerRB.position.y);
 
         if (ShouldExitLadder())
         {
@@ -130,6 +160,7 @@ public class Ladder : MonoBehaviour
         {
             playerBehaviour.onLadder = true;
             playerBehaviour.SetIgnoreMovementCollisions(true);
+            playerBehaviour.SetIgnoreOneWayPlatforms(true);
         }
 
         playerRB.gravityScale = 0f;
@@ -144,6 +175,7 @@ public class Ladder : MonoBehaviour
         {
             playerBehaviour.onLadder = false;
             playerBehaviour.SetIgnoreMovementCollisions(false);
+            playerBehaviour.SetIgnoreOneWayPlatforms(false);
         }
 
         if (playerRB != null)

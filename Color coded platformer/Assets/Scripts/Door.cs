@@ -6,21 +6,21 @@ using UnityEngine.InputSystem;
 public class Door : MonoBehaviour
 {
     [Header("Scene Transition")]
-    [SerializeField] private string scene;
-    [SerializeField] private Vector2 newPlayerPosition;
+    [SerializeField] string scene;
+    [SerializeField] Vector2 newPlayerPosition;
 
-    private bool playerInRange;
-    private bool used;
+    bool playerInRange;
+    bool used;
 
-    private PlayerInput playerInput;
-    private InputAction interact;
+    PlayerInput playerInput;
+    InputAction interact;
 
-    private void Awake()
+    void Awake()
     {
         GetComponent<Collider2D>().isTrigger = true;
     }
 
-    private void OnTriggerEnter2D(Collider2D other)
+    void OnTriggerEnter2D(Collider2D other)
     {
         if (used) return;
 
@@ -32,7 +32,7 @@ public class Door : MonoBehaviour
         playerInRange = true;
     }
 
-    private void OnTriggerExit2D(Collider2D other)
+    void OnTriggerExit2D(Collider2D other)
     {
         if (!other.TryGetComponent(out PlayerInput input)) return;
         if (input != playerInput) return;
@@ -40,7 +40,7 @@ public class Door : MonoBehaviour
         Cleanup();
     }
 
-    private void Update()
+    void Update()
     {
         if (!playerInRange || used || interact == null) return;
 
@@ -52,7 +52,7 @@ public class Door : MonoBehaviour
         }
     }
 
-    private void BeginTransition()
+    void BeginTransition()
     {
         playerInRange = false;
         GetComponent<Collider2D>().enabled = false;
@@ -66,7 +66,7 @@ public class Door : MonoBehaviour
         SceneManager.LoadScene(scene, LoadSceneMode.Single);
     }
 
-    private void Cleanup()
+    void Cleanup()
     {
         playerInput = null;
         interact = null;

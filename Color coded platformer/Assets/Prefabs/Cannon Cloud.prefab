@@ -65,7 +65,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   speed: 2
   direction: {x: 1, y: 0, z: 0}
-  objectsOnCloud: []
 --- !u!212 &1007269201507042218
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -177,7 +176,7 @@ Rigidbody2D:
   m_GameObject: {fileID: 5954575713577436771}
   m_BodyType: 1
   m_Simulated: 1
-  m_UseFullKinematicContacts: 0
+  m_UseFullKinematicContacts: 1
   m_UseAutoMass: 0
   m_Mass: 1
   m_LinearDamping: 0
@@ -186,7 +185,7 @@ Rigidbody2D:
   m_Material: {fileID: 0}
   m_IncludeLayers:
     serializedVersion: 2
-    m_Bits: 256
+    m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0

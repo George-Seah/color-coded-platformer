@@ -1,6 +1,8 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
 using UnityEngine.SceneManagement;
+using System.Collections.Generic;
+
 public class PlayerBehaviour : MonoBehaviour
 {
     Animator anim;
@@ -31,6 +33,7 @@ public class PlayerBehaviour : MonoBehaviour
     float waddlerBounceForceButtonHeld = 1.25f;
     float waddlerBounceForceButtonUnheld = 0.8f;
     Collider2D[] playerColliders;
+    static List<Collider2D> ignoredOneWays = new List<Collider2D>();
 
     //[SerializeField] Vector2 respawnPosition;
     void Awake()
@@ -381,6 +384,22 @@ public class PlayerBehaviour : MonoBehaviour
 
         foreach (var pc in playerColliders)
             Physics2D.IgnoreCollision(pc, col, ignore);
+    }
+
+    public void SetIgnoreOneWayPlatforms(bool ignore)
+    {
+        GameObject[] oneWays = GameObject.FindGameObjectsWithTag("OneWayPlatform");
+
+        foreach (GameObject obj in oneWays)
+        {
+            Collider2D col = obj.GetComponent<Collider2D>();
+            if (col == null) continue;
+
+            foreach (Collider2D pc in playerColliders)
+            {
+                Physics2D.IgnoreCollision(pc, col, ignore);
+            }
+        }
     }
 
     public bool readJumping(){
