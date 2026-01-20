@@ -2,6 +2,10 @@ using UnityEngine;
 using UnityEngine.UI;
 using System.Collections.Generic;
 
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
+
 //! Things change color based on PLAYER position
 public class PositionBasedColorChanger : MonoBehaviour
 {
@@ -27,10 +31,34 @@ public class PositionBasedColorChanger : MonoBehaviour
     public float totalHeight = 30f;
 
     [Header("UI Shadow")]
-    [SerializeField] private Vector2 shadowDistance = new Vector2(2f, -2f);
-    [SerializeField] private Color shadowColor = new Color(0f, 0f, 0f, 0.75f);
+    [SerializeField] Vector2 shadowDistance = new Vector2(3f, -3f);
+    [SerializeField] Color shadowColor = new Color(0f, 0f, 0f, 0.9f);
 
-    private readonly List<RectTransform> regionSegments = new();
+    readonly List<RectTransform> regionSegments = new();
+
+    // ============================
+    // EDITOR SAFETY
+    // ============================
+
+#if UNITY_EDITOR
+    void OnValidate()
+    {
+        if (!barTransform)
+            return;
+
+        EditorApplication.delayCall += () =>
+        {
+            if (this == null || barTransform == null)
+                return;
+
+            RebuildBarEditorSafe();
+        };
+    }
+#endif
+
+    // ============================
+    // LIFECYCLE
+    // ============================
 
     void Awake()
     {
@@ -43,20 +71,11 @@ public class PositionBasedColorChanger : MonoBehaviour
             Destroy(gameObject);
     }
 
-void Start()
-{
-    if (barTransform)
+    void Start()
     {
-        PositionBarInBottomRight();
-        GenerateBar();
+        if (barTransform)
+            RebuildBarRuntime();
     }
-
-    if (arrowTransform)
-    {
-        ApplyShadow(arrowTransform.gameObject);
-    }
-}
-
 
     void FixedUpdate()
     {
@@ -87,10 +106,48 @@ void Start()
     }
 
     // ============================
-    // UI BAR
+    // BAR REBUILDING
     // ============================
 
-    private void PositionBarInBottomRight()
+    void RebuildBarRuntime()
+    {
+        ClearBar();
+        PositionBarInBottomRight();
+        GenerateBarInternal();
+    }
+
+#if UNITY_EDITOR
+    void RebuildBarEditorSafe()
+    {
+        if (Application.isPlaying)
+            return;
+
+        ClearBar();
+        PositionBarInBottomRight();
+        GenerateBarInternal();
+    }
+#endif
+
+    void ClearBar()
+    {
+        for (int i = barTransform.childCount - 1; i >= 0; i--)
+        {
+            GameObject child = barTransform.GetChild(i).gameObject;
+
+            if (Application.isPlaying)
+                Destroy(child);
+            else
+                DestroyImmediate(child);
+        }
+
+        regionSegments.Clear();
+    }
+
+    // ============================
+    // BAR GENERATION
+    // ============================
+
+    void PositionBarInBottomRight()
     {
         barTransform.anchorMin = new Vector2(1, 0);
         barTransform.anchorMax = new Vector2(1, 0);
@@ -99,12 +156,10 @@ void Start()
         barTransform.sizeDelta = new Vector2(totalWidth, totalHeight);
     }
 
-    private void GenerateBar()
+    void GenerateBarInternal()
     {
-        foreach (Transform child in barTransform)
-            Destroy(child.gameObject);
-
-        regionSegments.Clear();
+        if (regionColors.Count == 0)
+            return;
 
         float regionSize = totalWidth / regionColors.Count;
 
@@ -123,13 +178,17 @@ void Start()
             Image img = segment.GetComponent<Image>();
             img.color = GetUIColor(regionColors[i]);
 
-            ApplyShadow(segment);
+            ApplyOutlineShadow(segment);
 
             regionSegments.Add(rt);
         }
     }
 
-    private void UpdateArrowPosition()
+    // ============================
+    // ARROW
+    // ============================
+
+    void UpdateArrowPosition()
     {
         if (!playerBehaviour || !arrowTransform || regionColors.Count == 0)
             return;
@@ -146,7 +205,7 @@ void Start()
         float arrowX = (relative / regionColors.Count) * totalWidth - totalWidth;
 
         float arrowHeight = arrowTransform.rect.height;
-        float arrowY = barTransform.position.y + (totalHeight / 2f) + arrowHeight;
+        float arrowY = barTransform.anchoredPosition.y + totalHeight + arrowHeight;
 
         arrowTransform.anchoredPosition = new Vector2(arrowX, arrowY);
     }
@@ -155,24 +214,27 @@ void Start()
     // UI UTILITIES
     // ============================
 
-    void ApplyShadow(GameObject target)
+    void ApplyOutlineShadow(GameObject target)
     {
-        // Remove thin Shadow if present
-        Shadow oldShadow = target.GetComponent<Shadow>();
-        if (oldShadow)
-            Destroy(oldShadow);
+        Shadow shadow = target.GetComponent<Shadow>();
+        if (shadow)
+        {
+            if (Application.isPlaying)
+                Destroy(shadow);
+            else
+                DestroyImmediate(shadow);
+        }
 
         Outline outline = target.GetComponent<Outline>();
         if (!outline)
             outline = target.AddComponent<Outline>();
 
-        outline.effectColor = new Color(0f, 0f, 0f, 0.9f);
-        outline.effectDistance = new Vector2(3f, -3f);
+        outline.effectColor = shadowColor;
+        outline.effectDistance = shadowDistance;
         outline.useGraphicAlpha = true;
     }
 
-
-    private Color GetUIColor(GameColor color)
+    Color GetUIColor(GameColor color)
     {
         return color switch
         {

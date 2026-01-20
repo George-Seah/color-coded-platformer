@@ -15,11 +15,12 @@ public class ObjectSpawner : MonoBehaviour
     // List of colored cannonballs to shoot (set this in the Inspector)
     [Tooltip("List of cannonball colors")]
     public List<string> colorsToShoot = new List<string>();
-    [SerializeField] private int colorIndex = 0;
+    [SerializeField] int colorIndex = 0;
     public List<int> colorPositionOffset = new List<int>();
-    [SerializeField] private int colorPositionOffsetIndex = 0;
+    [SerializeField] int colorPositionOffsetIndex = 0;
     public List<GameObject> objectsSpawned = new List<GameObject>();
-    [SerializeField] private Color objectColor;
+    [SerializeField] Color objectColor;
+    
     void FixedUpdate()
     {
         shootTime += Time.deltaTime;
@@ -87,9 +88,19 @@ public class ObjectSpawner : MonoBehaviour
         }
     }
 
+    public void DestroySpawnedObjects(){
+        if(objectsSpawned.Count == 0) return;
+        
+        foreach(GameObject obj in objectsSpawned){
+            if(obj != null){
+                Destroy(obj);
+            }
+        }
+        objectsSpawned.Clear();
+    }
     // Get all child objects with the "Waddler" tag
     /*
-    private int GetChildObjectsCount()
+    int GetChildObjectsCount()
     {
         int count = 0;
         foreach (Transform child in transform)
