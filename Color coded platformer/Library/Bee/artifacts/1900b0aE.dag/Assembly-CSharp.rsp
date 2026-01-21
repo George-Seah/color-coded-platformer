@@ -472,6 +472,7 @@
 "Assets/Scripts/CameraChangeSection.cs"
 "Assets/Scripts/Cannon.cs"
 "Assets/Scripts/CannonBall.cs"
+"Assets/Scripts/CanvasScript.cs"
 "Assets/Scripts/Cloud.cs"
 "Assets/Scripts/CloudCannon.cs"
 "Assets/Scripts/ColorChanger.cs"

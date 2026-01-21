@@ -45,3 +45,4 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerSpawnPoint: {x: 0, y: 0}
+  canvasPrefab: {fileID: 8820602733911171913, guid: 996650ffe5602d242a38a413270abb9f, type: 3}

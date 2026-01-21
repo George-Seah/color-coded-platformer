@@ -8,7 +8,8 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     public Vector2 playerSpawnPoint;
-    //public bool justReloaded = false;
+    public GameObject CanvasPrefab => canvasPrefab;
+    [SerializeField] GameObject canvasPrefab;
     void Awake(){
     DontDestroyOnLoad(gameObject);
 
@@ -16,51 +17,19 @@ public class GameManager : MonoBehaviour
         Instance = this;
     else
         Destroy(gameObject);
-        //currentSceneIndex = SceneManager.GetActiveScene().buildIndex;
-        //LevelCompleteMenu = Resources.FindObjectsOfTypeAll(LevelCompleteMenu);
-        /*
-        if((GameObject)FindObjectOfType(GameObject) == "Level Complete Menu"){
-            LevelCompleteMenu = FindObjectOfType(GameObject);
-        }
-        */
-    }
-    /*
-    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
-    {
-        Debug.Log("OnSceneLoaded: " + scene.name);
-        Debug.Log(mode);
-    }
-    */
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start() 
-    {
-
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        /*
-        if(justReloaded){
-            GameObject.Find("Player").GetComponent<PlayerBehaviour>().RespawnPositionAtPosition(playerSpawnPoint);
-            if(GameObject.Find("Player").transform.position.x == playerSpawnPoint.x && GameObject.Find("Player").transform.position.y == playerSpawnPoint.y){
-                justReloaded = false;
-                Debug.Log("justReloaded = false");
-                Debug.Log($"Player.transform.position = {GameObject.Find("Player").transform.position}");
-            }
-        }
-        */
-    }
-    private void OnEnable()
+
+    void OnEnable()
     {
         SceneManager.sceneLoaded += OnSceneLoaded;
     }
 
-    private void OnDisable()
+    void OnDisable()
     {
         SceneManager.sceneLoaded -= OnSceneLoaded;
     }
-    private void OnSceneLoaded(Scene scene, LoadSceneMode mode)
+    void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         Debug.Log($"Scene {scene.name} has fully loaded.");
         GameObject.Find("Player").GetComponent<PlayerBehaviour>().RespawnPositionAtPosition(playerSpawnPoint);
@@ -71,6 +40,8 @@ public class GameManager : MonoBehaviour
         Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Green"), false);
         Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("GroundCollisionCheck"), LayerMask.NameToLayer("Green"), false);
 
+            //Instantiate(Resources.Load("Assets/Prefabs/Canvas.prefab"));
+            
             /*
             if(GameObject.Find("Player").transform.position.x == playerSpawnPoint.x && GameObject.Find("Player").transform.position.y == playerSpawnPoint.y){
                 justReloaded = false;

@@ -14,6 +14,7 @@ public class PlayerBehaviour : MonoBehaviour
     InputAction jump;
     InputAction drop;
     InputAction interact;
+    InputAction pause;
     public float gravityScale = 10f;
     public float fallingGravityScale = 30f;
     public float buttonTime = 0.3f;
@@ -59,12 +60,17 @@ public class PlayerBehaviour : MonoBehaviour
         jump = playerControls.Player.Jump;
         drop = playerControls.Player.Drop;
         interact = playerControls.Player.Interact;
-
+        pause = playerControls.Player.Pause;
 
         move.Enable();
         jump.Enable();
         drop.Enable();
         interact.Enable();
+        pause.Enable();
+
+        if (CanvasScript.Instance == null) Instantiate(GameManager.Instance.CanvasPrefab);
+
+        pause.performed += ctx => CanvasScript.Instance.PauseGame();
 
         jump.performed += ctx => OnJump(ctx);
         jump.canceled += ctx => OnJumpCanceled(ctx);
@@ -79,8 +85,9 @@ public class PlayerBehaviour : MonoBehaviour
         jump.Disable();
         drop.Disable();
         interact.Disable();
+        pause.Disable();
         playerControls.Player.Disable();
-        
+        pause.performed -= ctx =>CanvasScript.Instance.PauseGame();
         jump.performed -= OnJump;
         jump.canceled -= OnJumpCanceled;
         drop.performed -= OnDrop;
