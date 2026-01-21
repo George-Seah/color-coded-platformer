@@ -1,53 +1,77 @@
 using UnityEngine;
-using System;
 
 public class Star : MonoBehaviour
 {
-    [SerializeField] private ESave eSave;
-    [SerializeField] string index;
-    private ColorPositionChange CPC;
-    private ParticleSystem particleSystem;
-    // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    [SerializeField] private ESave saveManager;
+    [SerializeField] private string index;
+
+    private bool hadCPC;
+    private bool hadParticles;
+
+    private ColorPositionChange cpc;
+    private ParticleSystem ps;
+    private SpriteRenderer sprite;
+
+    public string Index => index;
+
+    void Awake()
     {
-        CPC = GetComponent<ColorPositionChange>();
-        particleSystem = GetComponentInChildren<ParticleSystem>();
-        eSave = (ESave)FindFirstObjectByType(typeof(ESave));
-        if(eSave.LoadStarData(index)){
-            //Destroy(gameObject);
-            GetComponent<SpriteRenderer>().color = Color.black;
-            Debug.Log($"Star {index} was already collected.");
-            if(CPC != null){
-                Destroy(CPC);
-                if(particleSystem != null){
-                    Destroy(particleSystem);
-                }
-            }
-        }
-        //eSave = GameObject.Find("SaveFile").GetComponent<ESave>;
+        sprite = GetComponent<SpriteRenderer>();
+        cpc = GetComponent<ColorPositionChange>();
+        ps = GetComponentInChildren<ParticleSystem>();
+
+        hadCPC = (cpc != null);
+        hadParticles = (ps != null);
     }
 
-    // Update is called once per frame
-    void Update()
+    void Start()
     {
-        
+        if (saveManager == null)
+            saveManager = FindObjectOfType<ESave>();
+
+        if (saveManager != null && saveManager.LoadStar(index))
+            ApplyCollectedVisuals();
     }
-    void OnTriggerEnter2D(Collider2D collision){
-        if(collision.gameObject.CompareTag("Player")){
-            eSave.SaveStar(index, true);
-            Debug.Log($"Star {index} is collected.");
-            GetComponent<SpriteRenderer>().color = Color.black;
-            if(CPC != null){
-                Destroy(CPC);
-                if(particleSystem != null){
-                    Destroy(particleSystem);
-                }
-            }
+
+    void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.CompareTag("Player") && saveManager != null)
+        {
+            saveManager.SaveStar(index, true);
+            ApplyCollectedVisuals();
         }
     }
-    
-    [ContextMenu("Reset Star Data")]
-    void ResetStarData(){
-        eSave.ResetStar(index);
+
+    private void ApplyCollectedVisuals()
+    {
+        if (sprite != null)
+            sprite.color = Color.black;
+
+        if (cpc != null)
+            Destroy(cpc);
+
+        if (ps != null)
+            Destroy(ps);
+    }
+
+    public void ResetStarVisuals()
+    {
+        if (sprite != null)
+            sprite.color = Color.white;
+
+        if (hadCPC && GetComponent<ColorPositionChange>() == null)
+            gameObject.AddComponent<ColorPositionChange>();
+
+        // Particles: you can add prefab respawn if needed
+    }
+
+    [ContextMenu("Reset This Star Data")]
+    private void ResetThisStar()
+    {
+        if (saveManager != null)
+        {
+            saveManager.ResetStar(index);
+            ResetStarVisuals();
+        }
     }
 }
