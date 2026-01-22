@@ -2,14 +2,16 @@ using UnityEngine;
 
 public class GroundCollisionCheck : MonoBehaviour
 {
-    [SerializeField] private PlayerBehaviour playerBehaviour;
+    [SerializeField] PlayerBehaviour playerBehaviour;
+    Rigidbody2D playerRB;
 
-    private void Start()
+    void Start()
     {
         playerBehaviour = transform.parent.gameObject.GetComponent<PlayerBehaviour>();
+        playerRB = playerBehaviour.GetComponent<Rigidbody2D>();
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
         if (IsValidGround(collision))
         {
@@ -17,7 +19,7 @@ public class GroundCollisionCheck : MonoBehaviour
             Bounds groundCheckBounds = GetComponent<Collider2D>().bounds;
 
             // Ensure the bottom of the player is above the top of the ground object
-            if (groundCheckBounds.min.y >= groundCollisionBounds.max.y)
+            if (groundCheckBounds.min.y >= groundCollisionBounds.max.y && playerRB.linearVelocity.y <= 0)
             {
                 playerBehaviour.EnteredGround();
                 Debug.Log("Player landed on ground.");
@@ -39,7 +41,8 @@ public class GroundCollisionCheck : MonoBehaviour
         }
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    /*
+    void OnTriggerStay2D(Collider2D collision)
     {
         if (IsValidGround(collision))
         {
@@ -52,8 +55,9 @@ public class GroundCollisionCheck : MonoBehaviour
             }
         }
     }
+    */
 
-    private void OnTriggerExit2D(Collider2D collision)
+    void OnTriggerExit2D(Collider2D collision)
     {
         if (IsValidGround(collision))
         {
@@ -62,7 +66,7 @@ public class GroundCollisionCheck : MonoBehaviour
         }
     }
 
-    private bool IsValidGround(Collider2D collision)
+    bool IsValidGround(Collider2D collision)
     {
         return collision.gameObject.CompareTag("Ground") ||
                collision.gameObject.CompareTag("Push Block") ||

@@ -126,7 +126,7 @@ public class Ladder : MonoBehaviour
 
     void FixedUpdate()
     {
-        if (playerBehaviour == null || !playerBehaviour.onLadder || playerRB == null)
+        if (playerBehaviour == null || !playerBehaviour.onLadder || playerRB == null || !playerInsideTrigger)
             return;
 
         moveDirection = move.ReadValue<Vector2>();

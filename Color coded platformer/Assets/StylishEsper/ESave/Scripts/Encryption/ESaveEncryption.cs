@@ -1,7 +1,5 @@
 //***************************************************************************************
 // Writer: Stylish Esper
-// Last Updated: April 2024
-// Description: Encrypt/decrypts data.
 //***************************************************************************************
 
 using System;
@@ -11,53 +9,120 @@ using System.Text;
 
 namespace Esper.ESave.Encryption
 {
+    /// <summary>
+    /// Encrypt/decrypts data.
+    /// </summary>
     public static class ESaveEncryption
     {
-        /// <summary>
-        /// Converts a string to bytes using ASCII encoding.
-        /// </summary>
-        /// <param name="s">The string.</param>
-        /// <returns>Byte array.</returns>
-        public static byte[] ToBytes(this string s)
-        {
-            return Encoding.ASCII.GetBytes(s);
-        }
-
         /// <summary>
         /// Converts a byte array to a string using ASCII encoding.
         /// </summary>
         /// <param name="bytes">The bytes.</param>
         /// <returns>A string.</returns>
-        public static string ToString(this byte[] bytes)
+        public static string ToASCIIString(this byte[] bytes)
         {
             return Encoding.ASCII.GetString(bytes);
         }
 
         /// <summary>
-        /// Generates a random string.
+        /// Converts a string to bytes using ASCII encoding.
         /// </summary>
-        /// <param name="maxTokenLength">The max token length. Default: -1 (no max)</param>
-        /// <returns>A randomly generated string.</returns>
-        public static string GenerateRandomToken(int maxTokenLength = -1)
+        /// <param name="s">The string.</param>
+        /// <returns>Byte array.</returns>
+        public static byte[] ToASCIIBytes(this string s)
         {
-            Guid guid = Guid.NewGuid();
-            string guidString = Convert.ToBase64String(guid.ToByteArray());
-            guidString = guidString.Replace("=", "");
-            guidString = guidString.Replace("+", "");
-            guidString = guidString.Replace("/", "");
+            return Encoding.ASCII.GetBytes(s);
+        }
 
-            string token;
+        /// <summary>
+        /// Converts to a base 64 string.
+        /// </summary>
+        /// <param name="bytes">The byte array.</param>
+        /// <returns>The byte array as a base 64 string.</returns>
+        public static string ToBase64String(this byte[] bytes)
+        {
+            return Convert.ToBase64String(bytes);
+        }
 
-            if (maxTokenLength != -1 && guidString.Length > maxTokenLength)
+        /// <summary>
+        /// Converts to a byte array.
+        /// </summary>
+        /// <param name="s">The string.</param>
+        /// <returns>The string as a byte array.</returns>
+        public static byte[] ToBase64Bytes(this string s)
+        {
+            return Convert.FromBase64String(s);
+        }
+
+        /// <summary>
+        /// Converts a byte array to an AES string if possible.
+        /// </summary>
+        /// <param name="bytes">The bytes.</param>
+        /// <returns>The bytes as an AES string.</returns>
+        public static string ToAesString(this byte[] bytes)
+        {
+            try
             {
-                token = guidString.Substring(0, maxTokenLength);
+                return ToBase64String(bytes);
             }
-            else
+            catch
             {
-                token = guidString;
+                return ToASCIIString(bytes);
+            }
+        }
+
+        /// <summary>
+        /// Converts a string to an AES byte array if possible.
+        /// </summary>
+        /// <param name="s">The string.</param>
+        /// <returns>The string as an AES byte array.</returns>
+        public static byte[] ToAesBytes(this string s)
+        {
+            byte[] bytes = null;
+            bool useFallback = false;
+
+            try
+            {
+                bytes = ToBase64Bytes(s);
+
+                if (bytes.Length != 16 && bytes.Length != 24 && bytes.Length != 32)
+                {
+                    useFallback = true;
+                }
+            }
+            catch
+            {
+                useFallback = true;
             }
 
-            return token;
+            if (useFallback)
+            {
+                bytes = ToASCIIBytes(s);
+            }
+
+            return bytes;
+        }
+
+        /// <summary>
+        /// Generates an AES key.
+        /// </summary>
+        /// <returns>A randomly generated AES key.</returns>
+        public static byte[] GenerateKey()
+        {
+            var aes = Aes.Create();
+            aes.GenerateKey();
+            return aes.Key;
+        }
+
+        /// <summary>
+        /// Generates an AES IV.
+        /// </summary>
+        /// <returns>A randomly generated AES IV.</returns>
+        public static byte[] GenerateIV()
+        {
+            var aes = Aes.Create();
+            aes.GenerateIV();
+            return aes.IV;
         }
 
         /// <summary>
