@@ -171,20 +171,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  gravityScale: 10
-  fallingGravityScale: 30
-  buttonTime: 0.2
+  initialJumpForce: 6.5
+  initialJumpTime: 0.1
   jumpTime: 0
   isGrounded: 0
-  jumpCancelled: 0
-  jumping: 0
-  jumpAmount: 20
-  jumpForce: 0
   holdingKey: 0
+  landedOnWaddler: 0
+  gravityScale: 7
+  fallingGravityScale: 9
   color: 
   onLadder: 0
   lookingRight: 0
-  landedOnWaddler: 0
 --- !u!50 &3352672164541022857
 Rigidbody2D:
   serializedVersion: 5

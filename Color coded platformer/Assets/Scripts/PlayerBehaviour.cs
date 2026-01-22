@@ -1,55 +1,40 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.SceneManagement;
 using System.Collections.Generic;
 
 public class PlayerBehaviour : MonoBehaviour
 {
     Animator anim;
     Rigidbody2D rb;
+    
     [SerializeField] float moveSpeed = 5f;
-    public PlayerInputActions playerControls;
-    Vector2 moveDirection = Vector2.zero;
-    InputAction move;
-    InputAction jump;
-    InputAction drop;
-    InputAction interact;
-    InputAction pause;
-    public float gravityScale = 10f;
-    public float fallingGravityScale = 30f;
-    public float buttonTime = 0.3f;
-    [SerializeField] float jumpTime = 0f;
-    [SerializeField] bool isGrounded;
-    [SerializeField] bool jumpCancelled;
-    [SerializeField] bool jumping = false;
-    [SerializeField] float jumpAmount = 1.25f;
-    [SerializeField] float jumpForce;
+    [SerializeField] float initialJumpForce = 5f;
+    [SerializeField] float initialJumpTime = 0.3f;
+    [SerializeField] float jumpTime;
+    float jumpForce;
+    
+    [SerializeField] bool isGrounded, holdingKey, landedOnWaddler;
+    public bool jumpPressed { get; private set; }
+    bool jumpConsumed;
     [SerializeField] public Key currentKey { get; set; }
-    [SerializeField] bool holdingKey;
+    
+    public PlayerInputActions playerControls;
+    public float gravityScale = 10f, fallingGravityScale = 30f;
     public string color;
-    public bool onLadder;
-    public bool lookingRight;
-    [SerializeField] bool landedOnWaddler;
-
-    float waddlerBounceForceButtonHeld = 1.25f;
-    float waddlerBounceForceButtonUnheld = 0.8f;
+    public bool onLadder, lookingRight;
+    
+    Vector2 moveDirection;
+    InputAction move, jump, drop, interact, pause;
     Collider2D[] playerColliders;
-    static List<Collider2D> ignoredOneWays = new List<Collider2D>();
+    
+    readonly float waddlerBounceHeld = 1.25f, waddlerBounceUnheld = 0.8f;
+    static readonly string[] colorLayers = { "Red", "Blue", "Green" };
 
-    //[SerializeField] Vector2 respawnPosition;
     void Awake()
     {
         playerControls = new PlayerInputActions();
-        if (playerControls == null)
-        {
-            Debug.LogError("PlayerInputActions not initialized!");
-        }
-
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
-        jumpForce = Mathf.Sqrt(jumpAmount * -2 * Physics2D.gravity.y);
-
-        // Cache all colliders on the player
         playerColliders = GetComponentsInChildren<Collider2D>();
     }
 
@@ -62,374 +47,238 @@ public class PlayerBehaviour : MonoBehaviour
         interact = playerControls.Player.Interact;
         pause = playerControls.Player.Pause;
 
-        move.Enable();
-        jump.Enable();
-        drop.Enable();
-        interact.Enable();
-        pause.Enable();
+        move.Enable(); jump.Enable(); drop.Enable(); interact.Enable(); pause.Enable();
 
         if (CanvasScript.Instance == null) Instantiate(GameManager.Instance.CanvasPrefab);
 
         pause.performed += ctx => CanvasScript.Instance.PauseGame();
-
-        jump.performed += ctx => OnJump(ctx);
-        jump.canceled += ctx => OnJumpCanceled(ctx);
-        //jump.canceled += ctx => OnJumpCanceled(ctx);
-        drop.performed += ctx => OnDrop(ctx);
-        interact.performed += ctx => OnInteract(ctx);
+        jump.performed += OnJump;
+        jump.canceled += OnJumpCanceled;
+        drop.performed += OnDrop;
+        interact.performed += OnInteract;
     }
 
     void OnDisable()
     {
-        move.Disable();
-        jump.Disable();
-        drop.Disable();
-        interact.Disable();
-        pause.Disable();
+        move.Disable(); jump.Disable(); drop.Disable(); interact.Disable(); pause.Disable();
         playerControls.Player.Disable();
-        pause.performed -= ctx =>CanvasScript.Instance.PauseGame();
+        
+        pause.performed -= ctx => CanvasScript.Instance.PauseGame();
         jump.performed -= OnJump;
         jump.canceled -= OnJumpCanceled;
         drop.performed -= OnDrop;
-        interact.canceled -= OnInteract;
+        interact.performed -= OnInteract;
     }
 
-    void OnJump(InputAction.CallbackContext context)
+    void OnJump(InputAction.CallbackContext ctx) => jumpPressed = true;
+
+    void OnJumpCanceled(InputAction.CallbackContext ctx)
     {
-        if (isGrounded && !jumping)
+        jumpPressed = false;
+        jumpConsumed = false;
+        jumpForce = 0;
+        jumpTime = 0;
+        
+        // Only apply fall physics if actually in the air
+        if (!isGrounded)
         {
-            // Normal jump behavior
-            jumping = true;
-            jumpTime = 0f;
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
-            rb.gravityScale = gravityScale;
-            Debug.Log("OnJump function activating gravity.");
+            rb.gravityScale = fallingGravityScale;
+            if (rb.linearVelocityY > 0) rb.linearVelocityY = 0;
         }
     }
-    void OnInteract(InputAction.CallbackContext context)
+
+    void OnInteract(InputAction.CallbackContext ctx)
     {
         if (currentKey != null && !currentKey.ReadPickedUp() && !holdingKey)
         {
-            // Attempt to pick up the key
             currentKey.PickUp(transform);
-            if(currentKey != null && currentKey.ReadPickedUp()){
-                holdingKey = true;
-            }
+            holdingKey = currentKey != null && currentKey.ReadPickedUp();
         }
-        /*
-        else if(currentKey != null && !currentKey.ReadPickedUp()){
-            currentKey.PickUp(transform);
-        }
-        */
-    }
-    void OnJumpCanceled(InputAction.CallbackContext context)
-    {
-        jumpCancelled = true;
-        rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
-        /*
-        if (!isGrounded && rb.linearVelocity.y >= 0)
-        {
-            jumpCancelled = true;
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
-        }
-        */
     }
 
-    void OnDrop(InputAction.CallbackContext context)
+    void OnDrop(InputAction.CallbackContext ctx)
     {
-        Debug.Log("Drop button pressed.");
-        // && currentKey.ReadPickedUp()
-        if (currentKey != null)
-        {
-            currentKey.Drop();
-            currentKey = null;
-            holdingKey = false;
-            Debug.Log("Key dropped");
-        }
+        if (currentKey == null) return;
+        currentKey.Drop();
+        currentKey = null;
+        holdingKey = false;
     }
 
     public void EnteredGround()
     {
-        if (!isGrounded)
-        {
-            isGrounded = true;
-            jumping = false;
-            jumpCancelled = false;
-            //If still jumping up and down on moving platforms, uncomment this
-            rb.gravityScale = gravityScale;
-            Debug.Log("EnteredGround function activating gravity.");
-        }
+        if (isGrounded) return;
+        isGrounded = true;
+        rb.gravityScale = gravityScale;
+        // Removed: jumpTime = initialJumpTime;
     }
 
-    public void ExitedGround()
+    public void StayingOnGround()
     {
-        isGrounded = false;
+        if (isGrounded) return;
+        isGrounded = true;
+        rb.gravityScale = gravityScale;
+        // Removed: jumpTime = initialJumpTime;
     }
+
+    public void ExitedGround() => isGrounded = false;
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        foreach (ContactPoint2D contact in collision.contacts)
+        if (collision.gameObject.CompareTag("Moving Platform"))
         {
-            Debug.DrawLine(contact.point, contact.point + contact.normal, Color.red, 2f);
-            Debug.Log($"Normal: {contact.normal}");
-
-            Vector2 collisionNormal = contact.normal;
-            float collisionAngle = Vector2.Angle(Vector2.up, collisionNormal);
-
-            Debug.Log($"Collision Angle: {collisionAngle}°");
-        }
-        if(collision.gameObject.CompareTag("Moving Platform")){
             isGrounded = true;
-            jumping = false;
-            jumpCancelled = false;
+            // Removed: jumpTime = initialJumpTime;
         }
+        
         if (collision.gameObject.CompareTag("Key") && !holdingKey)
         {
-            Key key = collision.gameObject.GetComponent<Key>();
-            Debug.Log("Key detected.");
-            if (key != null && !key.ReadPickedUp())
-            {
-                currentKey = key;
-                Debug.Log("Key detected. Ready to pick up.");
-            }
-            // && key.ReadPickedUp()
-            /*
-            else if(key != null && collision.transform.parent.gameObject.CompareTag("Waddler")){
-                currentKey = key;
-                Debug.Log("Key detected being on Waddler. Ready to pick up?");
-            }
-            */
+            var key = collision.gameObject.GetComponent<Key>();
+            if (key != null && !key.ReadPickedUp()) currentKey = key;
         }
     }
+
     void OnCollisionStay2D(Collision2D collision)
     {
-        if(collision.gameObject.CompareTag("Moving Platform") && !jump.IsPressed()){
+        if (collision.gameObject.CompareTag("Moving Platform") && !jumpPressed)
             isGrounded = true;
-            /*
-            
-            jumping = false;
-            jumpCancelled = false;
-            */
-        }
     }
+
     void OnCollisionExit2D(Collision2D collision)
     {
         if (collision.gameObject.CompareTag("Key") && !holdingKey)
         {
-            Key key = collision.gameObject.GetComponent<Key>();
-            if(currentKey != null && !key.ReadPickedUp()){
-                currentKey = null;
-            }
-            
-            Debug.Log("Key out of range.");
+            var key = collision.gameObject.GetComponent<Key>();
+            if (currentKey != null && !key.ReadPickedUp()) currentKey = null;
         }
-        if(collision.gameObject.CompareTag("Moving Platform")){
-            isGrounded = false;
-        }
+        if (collision.gameObject.CompareTag("Moving Platform")) isGrounded = false;
     }
-
 
     public void ColorChanged(Color newColor)
     {
-        
-        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Red"));
-        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Blue"));
-        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Green"));
-        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("GroundCollisionCheck"), LayerMask.NameToLayer("Red"));
-        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("GroundCollisionCheck"), LayerMask.NameToLayer("Blue"));
-        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("GroundCollisionCheck"), LayerMask.NameToLayer("Green"));
+        foreach (var layer in colorLayers)
+        {
+            Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer(layer), true);
+            Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("GroundCollisionCheck"), LayerMask.NameToLayer(layer), true);
+        }
 
-        if (newColor == Color.red)
+        string targetLayer = newColor == Color.red ? "Red" : newColor == Color.blue ? "Blue" : 
+                             newColor == Color.green ? "Green" : null;
+
+        if (targetLayer != null)
         {
-            Debug.Log("Red selected");
-            Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Red"), false);
-            Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("GroundCollisionCheck"), LayerMask.NameToLayer("Red"), false);
-            color = "Red";
-        }
-        else if (newColor == Color.blue)
-        {
-            Debug.Log("Blue selected");
-            Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Blue"), false);
-            Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("GroundCollisionCheck"), LayerMask.NameToLayer("Blue"), false);
-            color = "Blue";
-        }
-        else if (newColor == Color.green)
-        {
-            Debug.Log("Green selected");
-            Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Green"), false);
-            Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("GroundCollisionCheck"), LayerMask.NameToLayer("Green"), false);
-            color = "Green";
+            Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer(targetLayer), false);
+            Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("GroundCollisionCheck"), LayerMask.NameToLayer(targetLayer), false);
+            color = targetLayer;
         }
         else if (newColor == Color.white)
         {
-            Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Red"), false);
-            Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("GroundCollisionCheck"), LayerMask.NameToLayer("Red"), false);
-            Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Blue"), false);
-            Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("GroundCollisionCheck"), LayerMask.NameToLayer("Blue"), false);
-            Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Green"), false);
-            Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("GroundCollisionCheck"), LayerMask.NameToLayer("Green"), false);
+            foreach (var layer in colorLayers)
+            {
+                Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer(layer), false);
+                Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("GroundCollisionCheck"), LayerMask.NameToLayer(layer), false);
+            }
             color = "White";
         }
 
         GetComponent<SpriteRenderer>().color = newColor;
-        
-        //Drop key if not the same layer.
-        if(currentKey != null && color != $"{LayerMask.LayerToName(currentKey.gameObject.layer)}" 
-        && currentKey.ReadPickedUp() && currentKey.gameObject.GetComponent<SpriteRenderer>().color != Color.white){
-            Debug.Log($"gameObject.layer = {gameObject.layer} and currentKey.gameObject.layer {currentKey.gameObject.layer}.");
-            Debug.Log($"color = {color} and currentKey.gameObject.layer {LayerMask.LayerToName(currentKey.gameObject.layer)}.");
+
+        if (currentKey != null && color != LayerMask.LayerToName(currentKey.gameObject.layer) 
+            && currentKey.ReadPickedUp() && currentKey.GetComponent<SpriteRenderer>().color != Color.white)
+        {
             currentKey.Drop();
             currentKey = null;
-            Debug.Log("Key dropped");
         }
     }
 
     void FixedUpdate()
     {
+        // Movement
         moveDirection = move.ReadValue<Vector2>();
-        // NEW:
-        if (!onLadder) // Only apply this movement if NOT on a ladder
-        {
-            rb.linearVelocity = new Vector2(moveDirection.x * moveSpeed, rb.linearVelocity.y);
-        }
+        if (!onLadder) rb.linearVelocityX = moveDirection.x * moveSpeed;
+        
+        // Animation & Facing
         anim.SetFloat("XMovement", moveDirection.x);
-        if(moveDirection.x > 0){
-           lookingRight = true;
-        }
-        else if(moveDirection.x < 0){
-           lookingRight = false;
-        }
-        if(lookingRight && transform.eulerAngles.y != 0){
-            transform.rotation = Quaternion.Euler(transform.eulerAngles.x, 0, transform.eulerAngles.z);
+        if (moveDirection.x != 0) lookingRight = moveDirection.x > 0;
+        transform.rotation = Quaternion.Euler(0, lookingRight ? 0 : 180, 0);
 
-        }
-        else if(!lookingRight && transform.eulerAngles.y != 180){
-            transform.rotation = Quaternion.Euler(transform.eulerAngles.x, 180, transform.eulerAngles.z);
-
-        }
-        /*
-        if(currentKey != null && currentKey.ReadPickedUp() && !currentKey.transform.parent.gameObject.CompareTag("Waddler")){
-            //currentKey.SetDirection(lookingRight);///Check this if direction isn;t right or key somehow teleports
-        }
-        */
-        //currentKey.transform.parent.parent.gameObject.CompareTag("Player")
-        if(currentKey != null && holdingKey && currentKey.transform.parent.gameObject.CompareTag("Player")){
-            //currentKey.SetDirection(lookingRight);///Check this if direction isn't right or key somehow teleports
-        }
-        if(currentKey != null && currentKey.ReadPickedUp() && currentKey.transform.parent.gameObject.CompareTag("Waddler")){
+        // Key management
+        if (currentKey != null && currentKey.ReadPickedUp() && currentKey.transform.parent.CompareTag("Waddler"))
             currentKey = null;
-        }
-        if(currentKey == null){
-            //holdingKey = false;
-        }
-        if (isGrounded)
+
+        // Grounded state
+        anim.SetBool("grounded", isGrounded);
+        if (isGrounded) landedOnWaddler = false;
+
+        // Jump initiation
+        if (jumpPressed && isGrounded && !jumpConsumed)
         {
-            anim.SetBool("grounded", true);
-            rb.gravityScale = gravityScale;
-            landedOnWaddler = false;
-            //Debug.Log("isGrounded bool in FixedUpdate activating gravity.");
-            if (jumpTime != 0)
-            {
-                jumpTime = 0;
-            }
-        }
-        else{
-            anim.SetBool("grounded", false);
-        }
-        if (!jumping && !isGrounded && !onLadder)
-        {
-            rb.gravityScale = fallingGravityScale;
-            Debug.Log("!jumping && !isGrounded bools in FixedUpdate activating gravity.");
-        }
-        if (jumping && !jumpCancelled && jumpTime < buttonTime && jump.IsPressed())
-        {
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
-            jumpTime += Time.deltaTime;
+            jumpForce = initialJumpForce;
+            jumpTime = initialJumpTime; // Set jumpTime HERE when initiating
+            jumpConsumed = true;
         }
 
-        if(jumping && landedOnWaddler && jumpTime < buttonTime){
-            Debug.Log("Player should bounce off Waddler.");
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce * waddlerBounceForceButtonUnheld);
-            jumpTime += Time.deltaTime;
-            rb.gravityScale = gravityScale;
-            if(jump.IsPressed()){
-                rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce * waddlerBounceForceButtonHeld);
-            }
-            // && jumpTime < buttonTime && jump.IsPressed()
-            if(jump.WasReleasedThisFrame()){
-                rb.gravityScale = fallingGravityScale;
-            }
-        }
-        if (jumpTime > buttonTime || jump.WasReleasedThisFrame())
+        // Waddler bounce initiation
+        if (jumpPressed && landedOnWaddler && !jumpConsumed)
         {
-            jumpCancelled = true;
-            rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
+            float multiplier = jump.IsPressed() ? waddlerBounceHeld : waddlerBounceUnheld;
+            jumpForce = initialJumpForce * multiplier;
+            jumpTime = initialJumpTime;
+            landedOnWaddler = false;
+            jumpConsumed = true;
+        }
+
+        // Sustained jump (decaying force)
+        if (jumpPressed && jumpTime > 0)
+        {
+            jumpTime -= Time.fixedDeltaTime;
+            jumpForce *= 0.9f;
+            rb.linearVelocityY += jumpForce;
+        }
+        else if (!isGrounded && (jumpTime <= 0 || rb.linearVelocityY <= 0))
+        {
             rb.gravityScale = fallingGravityScale;
-            Debug.Log("jumpTime > buttonTime bool in FixedUpdate activating gravity.");
         }
-        if(onLadder){
-            rb.gravityScale = 0;
-        }
+
+        // Ladder override
+        if (onLadder) rb.gravityScale = 0;
     }
+
     public void SetIgnoreMovementCollisions(bool ignore)
     {
-        // ignore with OneWayPlatform
-        GameObject[] oneWays = GameObject.FindGameObjectsWithTag("OneWayPlatform");
-        foreach (var o in oneWays)
-            SetCloudOrOneWayCollision(o, ignore);
-
-        // ignore with Clouds
-        GameObject[] clouds = GameObject.FindGameObjectsWithTag("Cloud");
-        foreach (var c in clouds)
-            SetCloudOrOneWayCollision(c, ignore);
-    }
-
-    void SetCloudOrOneWayCollision(GameObject obj, bool ignore)
-    {
-        Collider2D col = obj.GetComponent<Collider2D>();
-        if (col == null) return;
-
-        foreach (var pc in playerColliders)
-            Physics2D.IgnoreCollision(pc, col, ignore);
+        foreach (var tag in new[] { "OneWayPlatform", "Cloud" })
+            foreach (var obj in GameObject.FindGameObjectsWithTag(tag))
+                SetCollision(obj, ignore);
     }
 
     public void SetIgnoreOneWayPlatforms(bool ignore)
     {
-        GameObject[] oneWays = GameObject.FindGameObjectsWithTag("OneWayPlatform");
-
-        foreach (GameObject obj in oneWays)
-        {
-            Collider2D col = obj.GetComponent<Collider2D>();
-            if (col == null) continue;
-
-            foreach (Collider2D pc in playerColliders)
-            {
-                Physics2D.IgnoreCollision(pc, col, ignore);
-            }
-        }
+        foreach (var obj in GameObject.FindGameObjectsWithTag("OneWayPlatform"))
+            SetCollision(obj, ignore);
     }
 
-    public bool readJumping(){
-        return jumping;
+    void SetCollision(GameObject obj, bool ignore)
+    {
+        var col = obj.GetComponent<Collider2D>();
+        if (col == null) return;
+        foreach (var pc in playerColliders)
+            Physics2D.IgnoreCollision(pc, col, ignore);
     }
-    public bool readGrounded(){
-        return isGrounded;
-    }
-    public void SetKey(Key key){
+
+    public bool readJumping() => jumpPressed && jumpTime > 0;
+    public bool readGrounded() => isGrounded;
+    
+    public void SetKey(Key key)
+    {
         currentKey = key;
-        if(currentKey == null){
-            holdingKey = false;
-        }
-        else{
-            holdingKey = true;
-        }
-    }
-    public void LandedOnWaddler(){
-        landedOnWaddler = true;
-        jumpTime = 0;
-    }
-    public void RespawnPositionAtPosition(Vector2 respawnPosition){
-        gameObject.transform.position = GameObject.Find("Game Manager").GetComponent<GameManager>().playerSpawnPoint;
+        holdingKey = key != null;
     }
 
+    public void LandedOnWaddler()
+    {
+        landedOnWaddler = true;
+        jumpTime = initialJumpTime;
+    }
+
+    public void RespawnPositionAtPosition(Vector2 respawnPosition) => 
+        transform.position = GameObject.Find("Game Manager").GetComponent<GameManager>().playerSpawnPoint;
 }

@@ -41,21 +41,18 @@ public class GroundCollisionCheck : MonoBehaviour
         }
     }
 
-    /*
+    
     void OnTriggerStay2D(Collider2D collision)
     {
         if (IsValidGround(collision))
         {
-            Bounds groundCollisionBounds = collision.bounds;
-            Bounds groundCheckBounds = GetComponent<Collider2D>().bounds;
-
-            if (groundCheckBounds.min.y >= groundCollisionBounds.max.y)
-            {
-                playerBehaviour.EnteredGround();
+            if(playerBehaviour.readJumping() && playerBehaviour.readGrounded()){
+                playerBehaviour.StayingOnGround();
+                Debug.Log("Player staying on ground.");
             }
         }
     }
-    */
+    
 
     void OnTriggerExit2D(Collider2D collision)
     {
