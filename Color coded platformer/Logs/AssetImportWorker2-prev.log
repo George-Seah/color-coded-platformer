@@ -1,0 +1,288 @@
+[Licensing::Module] Trying to connect to existing licensing client channel...
+Built from '6000.0/staging' branch; Version is '6000.0.62f1 (f99f05b3e950) revision 16359173'; Using compiler version '193933523'; Build Type 'Release'
+OS: 'Windows 11  (10.0.22631) 64bit Core' Language: 'en' Physical Memory: 16233 MB
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Nathan & Co" at "2026-01-21T17:37:25.9688835Z"
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
+Date: 2026-01-21T17:37:25Z
+
+COMMAND LINE ARGUMENTS:
+C:\Unity\6000.0.62f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker2
+-projectPath
+C:/Github/color-coded-platformer/Color coded platformer
+-logFile
+Logs/AssetImportWorker2.log
+-srvPort
+59925
+-licensingIpc
+LicenseClient-Nathan & Co
+-job-worker-count
+7
+-background-job-worker-count
+8
+-gc-helper-count
+1
+-name
+AssetImport
+Successfully changed project path to: C:/Github/color-coded-platformer/Color coded platformer
+C:/Github/color-coded-platformer/Color coded platformer
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [5856]  Target information:
+
+Player connection [5856]  * "[IP] 192.168.0.233 [Port] 0 [Flags] 2 [Guid] 4250380460 [EditorId] 4250380460 [Version] 1048832 [Id] WindowsEditor(7,SuperFamicom) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [5856] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [5856] Host joined alternative multi-casting on [225.0.0.222:34997]...
+JobSystem: Creating JobQueue using job-worker-count value 7
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 27364, path: "C:/Program Files/Unity Hub/UnityLicensingClient_V1/Unity.Licensing.Client.exe")
+[Licensing::Module] LicensingClient has failed validation; ignoring
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.17.4+4293ba1
+  Session Id:              ef67fd3e0c3c44a4bf4dadeaf692f494
+  Correlation Id:          c82ad06f9437800cae34afae2c4546cb
+  External correlation Id: 5072615576398986597
+  Machine Id:              qtyx5DMTmV6sfEVnrxz9aoLU/bw=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-Nathan & Co" (connect: 0.00s, validation: 0.00s, handshake: 0.03s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Nathan & Co-notifications" at "2026-01-21T17:37:26.0059523Z"
+[Licensing::Module] Licensing Background thread has ended after 0.03s
+Library Redirect Path: Library/
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Refreshing native plugins compatible for Editor in 5.88 ms, found 10 plugins.
+Preloading 1 native plugins for Editor in 0.61 ms.
+Initialize engine version: 6000.0.62f1 (f99f05b3e950)
+[Subsystems] Discovering subsystems at path C:/Unity/6000.0.62f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Github/color-coded-platformer/Color coded platformer/Assets
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3060 (ID=0x2504)
+    Vendor:   NVIDIA
+    VRAM:     12115 MB
+    Driver:   32.0.15.8180
+Initialize mono
+Mono path[0] = 'C:/Unity/6000.0.62f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Unity/6000.0.62f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Unity/6000.0.62f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56928
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Unity/6000.0.62f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.002517 seconds.
+- Loaded All Assemblies, in  0.386 seconds
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.363 seconds
+Domain Reload Profiling: 747ms
+	BeginReloadAssembly (119ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (35ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (47ms)
+	LoadAllAssembliesAndSetupDomain (169ms)
+		LoadAssemblies (116ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (167ms)
+			TypeCache.Refresh (165ms)
+				TypeCache.ScanAssembly (148ms)
+			BuildScriptInfoCaches (0ms)
+			ResolveRequiredComponents (0ms)
+	FinalizeReload (364ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (318ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (22ms)
+			SetLoadedEditorAssemblies (4ms)
+			BeforeProcessingInitializeOnLoad (69ms)
+			ProcessInitializeOnLoadAttributes (171ms)
+			ProcessInitializeOnLoadMethodAttributes (52ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+========================================================================
+Worker process is ready to serve import requests
+Import Worker Mode flag is 0x00
+Begin MonoManager ReloadAssembly
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: 18967569848297-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.927 seconds
+Refreshing native plugins compatible for Editor in 4.17 ms, found 10 plugins.
+Native extension for WindowsStandalone target not found
+Package Manager log level set to [2]
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.891 seconds
+Domain Reload Profiling: 1813ms
+	BeginReloadAssembly (190ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (8ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (28ms)
+	RebuildCommonClasses (41ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (43ms)
+	LoadAllAssembliesAndSetupDomain (635ms)
+		LoadAssemblies (398ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (341ms)
+			TypeCache.Refresh (243ms)
+				TypeCache.ScanAssembly (218ms)
+			BuildScriptInfoCaches (81ms)
+			ResolveRequiredComponents (14ms)
+	FinalizeReload (891ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (677ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (2ms)
+			SetLoadedEditorAssemblies (4ms)
+			BeforeProcessingInitializeOnLoad (158ms)
+			ProcessInitializeOnLoadAttributes (431ms)
+			ProcessInitializeOnLoadMethodAttributes (76ms)
+			AfterProcessingInitializeOnLoad (6ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (6ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
+Refreshing native plugins compatible for Editor in 5.02 ms, found 10 plugins.
+Preloading 1 native plugins for Editor in 0.05 ms.
+Unloading 18 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7527 unused Assets / (6.7 MB). Loaded Objects now: 8245.
+Memory consumption went from 158.4 MB to 151.7 MB.
+Total: 11.993500 ms (FindLiveObjects: 0.835900 ms CreateObjectMapping: 1.986800 ms MarkObjects: 5.096700 ms  DeleteObjects: 4.072900 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 486599.599285 seconds.
+  path: Assets/Cave Platformer Tileset/Individual PNG files/Tileset/bg_cave_blueish_16x32/bg_cave_blueish_16x32_tile_22.png
+  artifactKey: Guid(e0ebd221968db6349a6103b568631a1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cave Platformer Tileset/Individual PNG files/Tileset/bg_cave_blueish_16x32/bg_cave_blueish_16x32_tile_22.png using Guid(e0ebd221968db6349a6103b568631a1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '24f148bf543696737177dff64aea73b7') in 0.1064773 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/Cave Platformer Tileset/Example stage layers/bg_09_objects.png
+  artifactKey: Guid(f3ce6fe827e8db04d987d6159319c3e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cave Platformer Tileset/Example stage layers/bg_09_objects.png using Guid(f3ce6fe827e8db04d987d6159319c3e7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '66db89a1d90ccdabb015eb0e89b10bc4') in 0.0197474 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/Cave Platformer Tileset/Individual PNG files/Tileset/bg_cave_blueish_32x16/bg_cave_blueish_32x16_tile_05.png
+  artifactKey: Guid(e2b5cc3f7fb160e448444df1022191a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cave Platformer Tileset/Individual PNG files/Tileset/bg_cave_blueish_32x16/bg_cave_blueish_32x16_tile_05.png using Guid(e2b5cc3f7fb160e448444df1022191a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8e87588131482762e1f85578a5ec3fdc') in 0.0182201 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Cave Platformer Tileset/Individual PNG files/Tileset/bg_cave_blueish_16x16/bg_cave_blueish_16x16_tile_05.png
+  artifactKey: Guid(bf947619c8ed8374aa4dd48eb1d3d9eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cave Platformer Tileset/Individual PNG files/Tileset/bg_cave_blueish_16x16/bg_cave_blueish_16x16_tile_05.png using Guid(bf947619c8ed8374aa4dd48eb1d3d9eb) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3f52287744c6642488fc6d89e9d9b0cf') in 0.0160979 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Cave Platformer Tileset/Individual PNG files/Tileset/bg_cave_blueish_16x16/bg_cave_blueish_16x16_tile_16.png
+  artifactKey: Guid(2fd226faf6eec8f41addc7cfb3953648) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cave Platformer Tileset/Individual PNG files/Tileset/bg_cave_blueish_16x16/bg_cave_blueish_16x16_tile_16.png using Guid(2fd226faf6eec8f41addc7cfb3953648) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '214486f407f38825b5761f2a868ec00f') in 0.0233172 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Cave Platformer Tileset/Individual PNG files/Tileset/bg_cave_blueish_32x16/bg_cave_blueish_32x16_tile_15.png
+  artifactKey: Guid(8d8343d2d3898c44c8134d7d1f01ba1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cave Platformer Tileset/Individual PNG files/Tileset/bg_cave_blueish_32x16/bg_cave_blueish_32x16_tile_15.png using Guid(8d8343d2d3898c44c8134d7d1f01ba1d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7181082ceb6211225ddb8f78ed1b5f8a') in 0.016152 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/Cave Platformer Tileset/Individual PNG files/Tileset/bg_cave_blueish_16x16/bg_cave_blueish_16x16_tile_08.png
+  artifactKey: Guid(5dc2519b7e4f8cd488e61ba792f1d9a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cave Platformer Tileset/Individual PNG files/Tileset/bg_cave_blueish_16x16/bg_cave_blueish_16x16_tile_08.png using Guid(5dc2519b7e4f8cd488e61ba792f1d9a2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f1d38401a806ba8f0fb3f8029ed9c5ec') in 0.0149246 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/Cave Platformer Tileset/Individual PNG files/Tileset/bg_cave_blueish_16x32/bg_cave_blueish_16x32_tile_04.png
+  artifactKey: Guid(9b71ecedd1fe08b4880369a00256fbb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cave Platformer Tileset/Individual PNG files/Tileset/bg_cave_blueish_16x32/bg_cave_blueish_16x32_tile_04.png using Guid(9b71ecedd1fe08b4880369a00256fbb8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1abc670e68cfb75a27fc6e04a8b8bb6c') in 0.0087484 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/Cave Platformer Tileset/Individual PNG files/Tileset/bg_cave_blueish_16x32/bg_cave_blueish_16x32_tile_13.png
+  artifactKey: Guid(f6aca7ba9128ecc489a139f63740d0f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Cave Platformer Tileset/Individual PNG files/Tileset/bg_cave_blueish_16x32/bg_cave_blueish_16x32_tile_13.png using Guid(f6aca7ba9128ecc489a139f63740d0f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd08d9c829314cc15a1328cfbe4d070d2') in 0.0166523 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

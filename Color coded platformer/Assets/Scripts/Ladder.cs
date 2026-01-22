@@ -117,7 +117,7 @@ public class Ladder : MonoBehaviour
 
         playerInsideTrigger = false;
 
-        if (playerBehaviour != null && playerBehaviour.onLadder) {
+        if ((playerBehaviour != null && playerBehaviour.onLadder) || !playerInsideTrigger) {
             ExitLadder();
             ClearPlayerReferences();
         }

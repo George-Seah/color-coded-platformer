@@ -42,12 +42,12 @@
   },
   "9": {
     "$type": "Esper.ESave.SavableObjects.SavableData`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], ESave, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-    "value": false,
+    "value": true,
     "id": "9"
   },
   "10": {
     "$type": "Esper.ESave.SavableObjects.SavableData`1[[System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089]], ESave, Version=0.0.0.0, Culture=neutral, PublicKeyToken=null",
-    "value": false,
+    "value": true,
     "id": "10"
   },
   "11": {
@@ -5008,7 +5008,9 @@
         "1",
         "2",
         "3",
-        "4"
+        "4",
+        "9",
+        "10"
       ]
     },
     "id": "__StarKeysList"
