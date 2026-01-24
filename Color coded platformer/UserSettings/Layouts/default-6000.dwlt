@@ -19,7 +19,7 @@ MonoBehaviour:
     width: 1920
     height: 989
   m_ShowMode: 4
-  m_Title: Project
+  m_Title: Hierarchy
   m_RootView: {fileID: 2}
   m_MinSize: {x: 875, y: 300}
   m_MaxSize: {x: 10000, y: 10000}
@@ -120,7 +120,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 154
+  controlID: 51
   draggingID: 0
 --- !u!114 &6
 MonoBehaviour:
@@ -249,8 +249,8 @@ MonoBehaviour:
     y: 0
     width: 453
     height: 604
-  m_MinSize: {x: 200, y: 200}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 202, y: 226}
+  m_MaxSize: {x: 4002, y: 4026}
   m_ActualView: {fileID: 22}
   m_Panes:
   - {fileID: 22}
@@ -306,7 +306,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 155
+  controlID: 164
   draggingID: 0
 --- !u!114 &13
 MonoBehaviour:
@@ -355,8 +355,8 @@ MonoBehaviour:
     y: 511
     width: 719
     height: 422
-  m_MinSize: {x: 50, y: 50}
-  m_MaxSize: {x: 4000, y: 4000}
+  m_MinSize: {x: 51, y: 76}
+  m_MaxSize: {x: 4001, y: 4026}
   m_ActualView: {fileID: 26}
   m_Panes:
   - {fileID: 26}
@@ -1094,9 +1094,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 4.53862, y: 2.4607322, z: 1.9682472}
+    m_Target: {x: 1424.2877, y: 1160.8083, z: -15.68651}
     speed: 2
-    m_Value: {x: 4.53862, y: 2.4607322, z: 1.9682472}
+    m_Value: {x: 960, y: 540, z: 0}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1146,9 +1146,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 2.6648834
+    m_Target: 1569.3665
     speed: 2
-    m_Value: 2.6648834
+    m_Value: 1101.4536
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -2669,10 +2669,10 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 0}
-      m_SelectedIDs: 06d10000
+      scrollPos: {x: 0, y: 339}
+      m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: d66cffff3c7affffa09dffffcaa6ffff14b5ffffe2dcfffff4e2ffffbee5ffff4ee9ffff1ef0ffffe4faffff
+      m_ExpandedIDs: aa89ffff5097ffff4aa0ffff4ca0ffff1ea5ffff2aa5ffff90a5ffffd4afffff04c0ffffb0d9ffffc0f0ffff08fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -2744,7 +2744,7 @@ MonoBehaviour:
     m_SkipHidden: 1
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Prefabs
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -2754,16 +2754,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Prefabs
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Github\color-coded-platformer\Color coded platformer
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 85}
-    m_SelectedIDs: 54c80000
-    m_LastClickedID: 51284
-    m_ExpandedIDs: 00000000aec7000000ca9a3b
+    m_SelectedIDs: 44c80000
+    m_LastClickedID: 51268
+    m_ExpandedIDs: 0000000094c7000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2792,7 +2792,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000aec70000
+    m_ExpandedIDs: 0000000094c70000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -2846,7 +2846,7 @@ MonoBehaviour:
       m_Icon: {fileID: 0}
       m_ResourceFile: 
     m_NewAssetIndexInList: -1
-    m_ScrollPosition: {x: 0, y: 0}
+    m_ScrollPosition: {x: 0, y: 89}
     m_GridSize: 64
   m_SkipHiddenPackages: 1
   m_DirectoriesAreaWidth: 141.2
@@ -2937,7 +2937,7 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_LockTracker:
     m_IsLocked: 0
-  m_LastSelectedObjectID: -9056
+  m_LastSelectedObjectID: -28726
 --- !u!114 &26
 MonoBehaviour:
   m_ObjectHideFlags: 52

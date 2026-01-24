@@ -105,7 +105,43 @@ MonoBehaviour:
   - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__unity-list-move.m_SingletonActionBindings__UnityEngine.UIElements.ListView
   - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__unity-list-move.m_SingletonActionBindings__unity-vertical-collection-scroll-view__UnityEngine.UIElements.ScrollView
   - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__unity-list-move.m_SingletonActionBindings__unity-vertical-collection-scroll-view__Slider__UnityEngine.UIElements.Scroller+ScrollerSlider
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__unity-list-m_fontSharedMaterials__UnityEngine.UIElements.ListView
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__unity-list-m_fontSharedMaterials__unity-vertical-collection-scroll-view__UnityEngine.UIElements.ScrollView
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__unity-list-m_fontSharedMaterials__unity-vertical-collection-scroll-view__Slider__UnityEngine.UIElements.Scroller+ScrollerSlider
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__unity-list-m_fontMaterials__UnityEngine.UIElements.ListView
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__unity-list-m_fontMaterials__unity-vertical-collection-scroll-view__UnityEngine.UIElements.ScrollView
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__unity-list-m_fontMaterials__unity-vertical-collection-scroll-view__Slider__UnityEngine.UIElements.Scroller+ScrollerSlider
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__unity-list-m_textContainerLocalCorners__UnityEngine.UIElements.ListView
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__unity-list-m_textContainerLocalCorners__unity-vertical-collection-scroll-view__UnityEngine.UIElements.ScrollView
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__unity-list-m_textContainerLocalCorners__unity-vertical-collection-scroll-view__Slider__UnityEngine.UIElements.Scroller+ScrollerSlider
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__unity-list-m_ActiveFontFeatures__UnityEngine.UIElements.ListView
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__unity-list-m_ActiveFontFeatures__unity-vertical-collection-scroll-view__UnityEngine.UIElements.ScrollView
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__unity-list-m_ActiveFontFeatures__unity-vertical-collection-scroll-view__Slider__UnityEngine.UIElements.Scroller+ScrollerSlider
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__unity-list-m_subTextObjects__UnityEngine.UIElements.ListView
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__unity-list-m_subTextObjects__unity-vertical-collection-scroll-view__UnityEngine.UIElements.ScrollView
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__unity-list-m_subTextObjects__unity-vertical-collection-scroll-view__Slider__UnityEngine.UIElements.Scroller+ScrollerSlider
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__unity-list-m_RectTransformCorners__UnityEngine.UIElements.ListView
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__unity-list-m_RectTransformCorners__unity-vertical-collection-scroll-view__UnityEngine.UIElements.ScrollView
+  - __PanelContainer__rootVisualContainer__inspector-window-main-scroll-view__unity-list-m_RectTransformCorners__unity-vertical-collection-scroll-view__Slider__UnityEngine.UIElements.Scroller+ScrollerSlider
   m_Values:
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
+  - '{}'
   - '{}'
   - '{}'
   - '{}'

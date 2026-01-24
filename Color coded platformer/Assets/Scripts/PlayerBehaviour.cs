@@ -109,7 +109,6 @@ public class PlayerBehaviour : MonoBehaviour
         if (isGrounded) return;
         isGrounded = true;
         rb.gravityScale = gravityScale;
-        // Removed: jumpTime = initialJumpTime;
     }
 
     public void StayingOnGround()
@@ -117,7 +116,6 @@ public class PlayerBehaviour : MonoBehaviour
         if (isGrounded) return;
         isGrounded = true;
         rb.gravityScale = gravityScale;
-        // Removed: jumpTime = initialJumpTime;
     }
 
     public void ExitedGround() => isGrounded = false;
@@ -127,7 +125,6 @@ public class PlayerBehaviour : MonoBehaviour
         if (collision.gameObject.CompareTag("Moving Platform"))
         {
             isGrounded = true;
-            // Removed: jumpTime = initialJumpTime;
         }
         
         if (collision.gameObject.CompareTag("Key") && !holdingKey)
@@ -213,7 +210,7 @@ public class PlayerBehaviour : MonoBehaviour
         if (jumpPressed && isGrounded && !jumpConsumed)
         {
             jumpForce = initialJumpForce;
-            jumpTime = initialJumpTime; // Set jumpTime HERE when initiating
+            jumpTime = initialJumpTime;
             jumpConsumed = true;
         }
 

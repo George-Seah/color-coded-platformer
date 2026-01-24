@@ -491,6 +491,7 @@
 "Assets/Scripts/Key.cs"
 "Assets/Scripts/KeyDetector.cs"
 "Assets/Scripts/Ladder.cs"
+"Assets/Scripts/LevelButton.cs"
 "Assets/Scripts/Lever.cs"
 "Assets/Scripts/LockedDoor.cs"
 "Assets/Scripts/MovingPlatform.cs"

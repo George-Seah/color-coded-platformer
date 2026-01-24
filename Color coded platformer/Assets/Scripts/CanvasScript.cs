@@ -10,6 +10,7 @@ public class CanvasScript : MonoBehaviour
 
     public GameObject pauseMenu;
     public Button continueButton;  // Assign this in the Inspector
+    EventSystem eventSystem;
 
     void Awake()
     {
@@ -37,6 +38,13 @@ public class CanvasScript : MonoBehaviour
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         EnsureEventSystemExists();
+    }
+
+    public void SelectUIComponent(GameObject target)
+    {
+        if(eventSystem == null) EnsureEventSystemExists();
+
+        eventSystem.SetSelectedGameObject(target);
     }
 
     public void PauseGame()
@@ -74,17 +82,39 @@ public class CanvasScript : MonoBehaviour
         Application.Quit();
     }
 
+    public void LoadScene(Object scene)
+    {
+        Time.timeScale = 1f;
+        // In Editor: Get the scene path and convert to build index
+        string scenePath = UnityEditor.AssetDatabase.GetAssetPath(scene);
+        int buildIndex = UnityEngine.SceneManagement.SceneUtility.GetBuildIndexByScenePath(scenePath);
+        
+        if (buildIndex >= 0)
+        {
+            SceneManager.LoadScene(buildIndex);
+        }
+        else
+        {
+            Debug.LogError($"Scene {scene.name} is not in build settings!");
+            // Fallback to name
+            SceneManager.LoadScene(scene.name);
+        }
+        // At runtime: SceneAsset becomes null, so use name instead
+        SceneManager.LoadScene(scene.name);
+        
+
+    }
+
     void EnsureEventSystemExists()
     {
         if (FindObjectOfType<EventSystem>() != null) return;
 
         GameObject es = new GameObject("EventSystem");
 
+        eventSystem = es.AddComponent<EventSystem>();
 #if ENABLE_INPUT_SYSTEM && !ENABLE_LEGACY_INPUT_MANAGER
-        es.AddComponent<EventSystem>();
         es.AddComponent<UnityEngine.InputSystem.UI.InputSystemUIInputModule>();
 #else
-        es.AddComponent<EventSystem>();
         es.AddComponent<StandaloneInputModule>();
 #endif
 

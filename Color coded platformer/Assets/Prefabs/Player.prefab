@@ -93,6 +93,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerBehaviour: {fileID: 0}
+  groundTolerance: 0.2
 --- !u!50 &5984384911673659191
 Rigidbody2D:
   serializedVersion: 5
@@ -171,7 +172,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  initialJumpForce: 6.5
+  initialJumpForce: 6.75
   initialJumpTime: 0.1
   jumpTime: 0
   isGrounded: 0
