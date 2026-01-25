@@ -3,14 +3,23 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
 
 public class CanvasScript : MonoBehaviour
 {
     public static CanvasScript Instance;
 
-    public GameObject pauseMenu;
-    public Button continueButton;  // Assign this in the Inspector
+    [SerializeField] GameObject pauseMenu;
+    [SerializeField] Button continueButton;  // Assign this in the Inspector
     EventSystem eventSystem;
+    Button[] sceneButtons;
+    GridLayoutGroup gridLayoutGroup;
+    [SerializeField] Object[] scenesToLoad;
+    [SerializeField] GameObject levelButtonPrefab;
+    [SerializeField] Vector2 buttonSize = new Vector2(150, 150);
+    [SerializeField] float fontSize = 60f;
 
     void Awake()
     {
@@ -23,6 +32,25 @@ public class CanvasScript : MonoBehaviour
             pauseMenu.SetActive(false);
 
         EnsureEventSystemExists();
+
+        gridLayoutGroup = GetComponentInChildren<GridLayoutGroup>(true);
+        gridLayoutGroup.cellSize = buttonSize;
+
+        if (gridLayoutGroup != null && levelButtonPrefab != null)
+        {
+            for (int i = 0; i < scenesToLoad.Length; i++)
+            {
+                Object currentScene = scenesToLoad[i];
+                GameObject buttonObj = Instantiate(levelButtonPrefab, gridLayoutGroup.transform);
+                Button levelButton = buttonObj.GetComponent<Button>();
+                
+                levelButton.GetComponentInChildren<TextMeshProUGUI>().fontSize = fontSize;
+                levelButton.GetComponentInChildren<TextMeshProUGUI>().text = $"{i + 1}";
+                levelButton.onClick.AddListener(CreateSceneLoader(currentScene));
+                // Additional setup for levelButton if needed
+            }
+        }
+
     }
 
     void OnEnable()
@@ -85,6 +113,8 @@ public class CanvasScript : MonoBehaviour
     public void LoadScene(Object scene)
     {
         Time.timeScale = 1f;
+        
+    #if UNITY_EDITOR
         // In Editor: Get the scene path and convert to build index
         string scenePath = UnityEditor.AssetDatabase.GetAssetPath(scene);
         int buildIndex = UnityEngine.SceneManagement.SceneUtility.GetBuildIndexByScenePath(scenePath);
@@ -99,10 +129,18 @@ public class CanvasScript : MonoBehaviour
             // Fallback to name
             SceneManager.LoadScene(scene.name);
         }
-        // At runtime: SceneAsset becomes null, so use name instead
+    #else
+        // In build: Use scene name
         SceneManager.LoadScene(scene.name);
-        
+    #endif
+    }
 
+    UnityEngine.Events.UnityAction CreateSceneLoader(Object scene)
+    {
+        return () => {
+            Debug.Log($"Loading scene: {scene.name}");
+            LoadScene(scene);
+        };
     }
 
     void EnsureEventSystemExists()
