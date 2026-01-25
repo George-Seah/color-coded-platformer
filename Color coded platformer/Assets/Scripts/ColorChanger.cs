@@ -12,15 +12,15 @@ public class ColorChanger : MonoBehaviour
         White
     }
 
-    public ColorOptions selectedColor;
-    [SerializeField] private Color colorChange;
+    [SerializeField] ColorOptions selectedColor;
+    [SerializeField] Color colorChange;
 
     [Tooltip("List of tags to detect")]
-    public List<string> tagsToDetect = new List<string>();
+    [SerializeField] List<string> tagsToDetect = new List<string>();
 
-    public ParticleSystem particleSystem;  // Reference to the particle system
-    public Sprite[] sprites;              // Array of sprites to add to the particle system
-    public Material shaderMaterial;       // Material using your shader graph
+    [SerializeField] ParticleSystem particleSystem;  // Reference to the particle system
+    [SerializeField] Sprite[] sprites;              // Array of sprites to add to the particle system
+    [SerializeField] Material shaderMaterial;       // Material using your shader graph
     private void OnTriggerEnter2D(Collider2D collision)
     {
         

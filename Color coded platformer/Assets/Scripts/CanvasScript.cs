@@ -46,7 +46,7 @@ public class CanvasScript : MonoBehaviour
                 
                 levelButton.GetComponentInChildren<TextMeshProUGUI>().fontSize = fontSize;
                 levelButton.GetComponentInChildren<TextMeshProUGUI>().text = $"{i + 1}";
-                levelButton.onClick.AddListener(CreateSceneLoader(currentScene));
+                levelButton.onClick.AddListener(() => LoadScene(currentScene));
                 // Additional setup for levelButton if needed
             }
         }
@@ -77,12 +77,15 @@ public class CanvasScript : MonoBehaviour
 
     public void PauseGame()
     {
-        if (pauseMenu == null) return;
+        if (!pauseMenu) return;
 
         if (pauseMenu.activeSelf)
         {
             Time.timeScale = 1f;
             pauseMenu.SetActive(false);
+
+            foreach (Transform child in transform)
+                child.gameObject.SetActive(false);
         }
         else
         {
@@ -114,7 +117,6 @@ public class CanvasScript : MonoBehaviour
     {
         Time.timeScale = 1f;
         
-    #if UNITY_EDITOR
         // In Editor: Get the scene path and convert to build index
         string scenePath = UnityEditor.AssetDatabase.GetAssetPath(scene);
         int buildIndex = UnityEngine.SceneManagement.SceneUtility.GetBuildIndexByScenePath(scenePath);
@@ -129,18 +131,8 @@ public class CanvasScript : MonoBehaviour
             // Fallback to name
             SceneManager.LoadScene(scene.name);
         }
-    #else
         // In build: Use scene name
         SceneManager.LoadScene(scene.name);
-    #endif
-    }
-
-    UnityEngine.Events.UnityAction CreateSceneLoader(Object scene)
-    {
-        return () => {
-            Debug.Log($"Loading scene: {scene.name}");
-            LoadScene(scene);
-        };
     }
 
     void EnsureEventSystemExists()
