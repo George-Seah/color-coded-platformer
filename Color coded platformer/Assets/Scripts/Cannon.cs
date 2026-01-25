@@ -4,22 +4,19 @@ using UnityEngine;
 using UnityEditor;
 public class Cannon : MonoBehaviour
 {
-    [SerializeField] private GameObject cannonBall;
+    [SerializeField] GameObject cannonBall;
     [Tooltip("How fast each cannonball moves")]
-    [SerializeField] private float ballSpeed;
+    [SerializeField] float ballSpeed;
     [Tooltip("Time between each shot")]
-    [SerializeField] private float shootInterval;
+    [SerializeField] float shootInterval;
     [Tooltip("Helps keep track of time between shots. Sets back to 0 after each shot")]
-    [SerializeField] private float shootTime;
+    [SerializeField] float shootTime;
     [Tooltip("List of cannonball colors")]
     public List<string> colorsToShoot = new List<string>();
-    [SerializeField] private int colorIndex = 0;
+    [SerializeField] int colorIndex = 0;
     public List<int> colorPositionOffset = new List<int>();
-    [SerializeField] private int colorPositionOffsetIndex = 0;
-    private Color ballColor;
-
-    [Tooltip("List of scripts to add to cannonballs")]
-    public List<MonoScript> scriptsToAdd = new List<MonoScript>();
+    [SerializeField] int colorPositionOffsetIndex = 0;
+    Color ballColor;
 
     void FixedUpdate()
     {
@@ -73,24 +70,5 @@ public class Cannon : MonoBehaviour
             instantiatedBall.GetComponent<ColorPositionChange>().SetOffset(colorPositionOffset[colorPositionOffsetIndex]);
             colorPositionOffsetIndex = (colorPositionOffsetIndex + 1) % colorPositionOffset.Count;
         }
-
-
-        // Add scripts dynamically to the instantiated cannonball
-        foreach (MonoScript script in scriptsToAdd)
-        {
-            if (script != null)
-            {
-                Type scriptType = script.GetClass();
-                if (scriptType != null && scriptType.IsSubclassOf(typeof(MonoBehaviour)))
-                {
-                    instantiatedBall.AddComponent(scriptType);
-                }
-                else
-                {
-                    Debug.LogWarning($"The script '{script.name}' is not a valid MonoBehaviour.");
-                }
-            }
-        }
-        
     }
 }

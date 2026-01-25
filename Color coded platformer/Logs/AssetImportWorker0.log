@@ -1,9 +1,9 @@
 [Licensing::Module] Trying to connect to existing licensing client channel...
 Built from '6000.0/staging' branch; Version is '6000.0.62f1 (f99f05b3e950) revision 16359173'; Using compiler version '193933523'; Build Type 'Release'
 OS: 'Windows 11  (10.0.22631) 64bit Core' Language: 'en' Physical Memory: 16233 MB
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Nathan & Co" at "2026-01-25T07:42:16.4633547Z"
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Nathan & Co" at "2026-01-25T08:17:48.1286961Z"
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
-Date: 2026-01-25T07:42:16Z
+Date: 2026-01-25T08:17:48Z
 
 COMMAND LINE ARGUMENTS:
 C:\Unity\6000.0.62f1\Editor\Unity.exe
@@ -17,7 +17,7 @@ C:/Github/color-coded-platformer/Color coded platformer
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-58514
+54865
 -licensingIpc
 LicenseClient-Nathan & Co
 -job-worker-count
@@ -65,12 +65,12 @@ C:/Github/color-coded-platformer/Color coded platformer
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [6084]  Target information:
+Player connection [8948]  Target information:
 
-Player connection [6084]  * "[IP] 192.168.0.233 [Port] 0 [Flags] 2 [Guid] 2061878744 [EditorId] 2061878744 [Version] 1048832 [Id] WindowsEditor(7,SuperFamicom) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [8948]  * "[IP] 192.168.0.233 [Port] 0 [Flags] 2 [Guid] 4133882950 [EditorId] 4133882950 [Version] 1048832 [Id] WindowsEditor(7,SuperFamicom) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [6084] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [6084] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [8948] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [8948] Host joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 7
 Input System module state changed to: Initialized.
 [Physics::Module] Initialized fallback backend.
@@ -79,12 +79,12 @@ Input System module state changed to: Initialized.
 [Licensing::Module] LicensingClient has failed validation; ignoring
 [Licensing::Client] Handshaking with LicensingClient:
   Version:                 1.17.4+4293ba1
-  Session Id:              bcca1c9503014a7a97977ebddf621de5
+  Session Id:              a62fe7f7d9bd460c8474d3d9f03c038c
   Correlation Id:          31e34094d018adb6a714e19bc99204a6
-  External correlation Id: 1380191812882918119
+  External correlation Id: 1362032184981177347
   Machine Id:              qtyx5DMTmV6sfEVnrxz9aoLU/bw=
 [Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-Nathan & Co" (connect: 0.00s, validation: 0.00s, handshake: 0.03s)
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Nathan & Co-notifications" at "2026-01-25T07:42:16.4948068Z"
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Nathan & Co-notifications" at "2026-01-25T08:17:48.1617822Z"
 [Licensing::Module] Licensing Background thread has ended after 0.03s
 Library Redirect Path: Library/
 [Physics::Module] Selected backend.
@@ -93,8 +93,8 @@ Library Redirect Path: Library/
 [Physics::Module] SDK Version: 4.1.2
 [Physics::Module] Integration Version: 1.0.0
 [Physics::Module] Threading Mode: Multi-Threaded
-Refreshing native plugins compatible for Editor in 6.09 ms, found 10 plugins.
-Preloading 1 native plugins for Editor in 0.70 ms.
+Refreshing native plugins compatible for Editor in 6.30 ms, found 10 plugins.
+Preloading 1 native plugins for Editor in 0.68 ms.
 Initialize engine version: 6000.0.62f1 (f99f05b3e950)
 [Subsystems] Discovering subsystems at path C:/Unity/6000.0.62f1/Editor/Data/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path C:/Github/color-coded-platformer/Color coded platformer/Assets
@@ -109,43 +109,43 @@ Initialize mono
 Mono path[0] = 'C:/Unity/6000.0.62f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Unity/6000.0.62f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Unity/6000.0.62f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56224
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56744
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Unity/6000.0.62f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002432 seconds.
-- Loaded All Assemblies, in  0.350 seconds
+Registered in 0.002585 seconds.
+- Loaded All Assemblies, in  0.425 seconds
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.297 seconds
-Domain Reload Profiling: 645ms
-	BeginReloadAssembly (119ms)
+- Finished resetting the current domain, in  0.306 seconds
+Domain Reload Profiling: 729ms
+	BeginReloadAssembly (156ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (33ms)
-	RebuildNativeTypeToScriptingClass (13ms)
-	initialDomainReloadingComplete (45ms)
-	LoadAllAssembliesAndSetupDomain (138ms)
-		LoadAssemblies (116ms)
+	RebuildCommonClasses (39ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (46ms)
+	LoadAllAssembliesAndSetupDomain (170ms)
+		LoadAssemblies (154ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (136ms)
-			TypeCache.Refresh (134ms)
-				TypeCache.ScanAssembly (122ms)
+		AnalyzeDomain (167ms)
+			TypeCache.Refresh (165ms)
+				TypeCache.ScanAssembly (149ms)
 			BuildScriptInfoCaches (0ms)
 			ResolveRequiredComponents (0ms)
-	FinalizeReload (298ms)
+	FinalizeReload (306ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (254ms)
+		SetupLoadedEditorAssemblies (261ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (22ms)
+			InitializePlatformSupportModulesInManaged (23ms)
 			SetLoadedEditorAssemblies (4ms)
-			BeforeProcessingInitializeOnLoad (55ms)
-			ProcessInitializeOnLoadAttributes (127ms)
-			ProcessInitializeOnLoadMethodAttributes (46ms)
+			BeforeProcessingInitializeOnLoad (52ms)
+			ProcessInitializeOnLoadAttributes (134ms)
+			ProcessInitializeOnLoadMethodAttributes (48ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -164,11 +164,11 @@ Begin MonoManager ReloadAssembly
   Type: Assigned
   Expiration: Unlimited
 Symbol file LoadedFromMemory is not a mono symbol file
-- Loaded All Assemblies, in  0.829 seconds
+- Loaded All Assemblies, in  0.891 seconds
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
 'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Refreshing native plugins compatible for Editor in 4.38 ms, found 10 plugins.
+Refreshing native plugins compatible for Editor in 4.21 ms, found 10 plugins.
 Native extension for WindowsStandalone target not found
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 Package Manager log level set to [2]
@@ -179,482 +179,536 @@ Package Manager log level set to [2]
 [Package Manager] Unable to send message (not connected to server process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.780 seconds
-Domain Reload Profiling: 1604ms
-	BeginReloadAssembly (164ms)
+- Finished resetting the current domain, in  0.768 seconds
+Domain Reload Profiling: 1654ms
+	BeginReloadAssembly (165ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (6ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (26ms)
-	RebuildCommonClasses (39ms)
-	RebuildNativeTypeToScriptingClass (13ms)
-	initialDomainReloadingComplete (37ms)
-	LoadAllAssembliesAndSetupDomain (569ms)
-		LoadAssemblies (361ms)
+		CreateAndSetChildDomain (25ms)
+	RebuildCommonClasses (34ms)
+	RebuildNativeTypeToScriptingClass (12ms)
+	initialDomainReloadingComplete (36ms)
+	LoadAllAssembliesAndSetupDomain (638ms)
+		LoadAssemblies (416ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (298ms)
-			TypeCache.Refresh (206ms)
-				TypeCache.ScanAssembly (188ms)
-			BuildScriptInfoCaches (76ms)
+		AnalyzeDomain (313ms)
+			TypeCache.Refresh (219ms)
+				TypeCache.ScanAssembly (202ms)
+			BuildScriptInfoCaches (78ms)
 			ResolveRequiredComponents (13ms)
-	FinalizeReload (781ms)
+	FinalizeReload (768ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (595ms)
+		SetupLoadedEditorAssemblies (578ms)
 			LogAssemblyErrors (0ms)
 			InitializePlatformSupportModulesInManaged (2ms)
-			SetLoadedEditorAssemblies (4ms)
-			BeforeProcessingInitializeOnLoad (135ms)
-			ProcessInitializeOnLoadAttributes (387ms)
-			ProcessInitializeOnLoadMethodAttributes (62ms)
+			SetLoadedEditorAssemblies (3ms)
+			BeforeProcessingInitializeOnLoad (127ms)
+			ProcessInitializeOnLoadAttributes (378ms)
+			ProcessInitializeOnLoadMethodAttributes (63ms)
 			AfterProcessingInitializeOnLoad (5ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
 		AwakeInstancesAfterBackupRestoration (5ms)
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
-Refreshing native plugins compatible for Editor in 4.31 ms, found 10 plugins.
+Refreshing native plugins compatible for Editor in 4.24 ms, found 10 plugins.
 Preloading 1 native plugins for Editor in 0.05 ms.
 Unloading 18 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 7742 unused Assets / (7.0 MB). Loaded Objects now: 8460.
-Memory consumption went from 160.9 MB to 153.9 MB.
-Total: 10.005300 ms (FindLiveObjects: 0.820400 ms CreateObjectMapping: 1.366100 ms MarkObjects: 4.242400 ms  DeleteObjects: 3.575700 ms)
+Memory consumption went from 161.1 MB to 154.1 MB.
+Total: 10.432800 ms (FindLiveObjects: 0.812500 ms CreateObjectMapping: 1.534600 ms MarkObjects: 4.396000 ms  DeleteObjects: 3.688800 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 175678.293008 seconds.
-  path: Assets/Prefabs/Canvas.prefab
-  artifactKey: Guid(996650ffe5602d242a38a413270abb9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Canvas.prefab using Guid(996650ffe5602d242a38a413270abb9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1becfe3ed0f44bbe3eb9ecbdf2e6c353') in 0.0636951 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 96
+  Time since last request: 177810.083098 seconds.
+  path: Assets/FastMesh/Scripts
+  artifactKey: Guid(1a64f18ec01b30041a4158ea29f07a40) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastMesh/Scripts using Guid(1a64f18ec01b30041a4158ea29f07a40) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3503c9665a63ec40fe6c53ce1015e912') in 0.0047143 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.828392 seconds.
-  path: Assets/Prefabs/Canvas.prefab
-  artifactKey: Guid(996650ffe5602d242a38a413270abb9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Canvas.prefab using Guid(996650ffe5602d242a38a413270abb9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '9cb47aad3702d7bb0ec2213018ce5cb3') in 0.0171065 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 96
+  Time since last request: 2.069905 seconds.
+  path: Assets/DefaultVolumeProfile.asset
+  artifactKey: Guid(3f9215ea0144899419cfbc0957140d3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/DefaultVolumeProfile.asset using Guid(3f9215ea0144899419cfbc0957140d3f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f473d2e4e6edb41c1090fa6d94202484') in 0.0160519 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
 
 ========================================================================
 Received Import Request.
-  Time since last request: 2.154501 seconds.
-  path: Assets/Prefabs/Canvas.prefab
-  artifactKey: Guid(996650ffe5602d242a38a413270abb9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Canvas.prefab using Guid(996650ffe5602d242a38a413270abb9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'bb28baab51c9348ee099c0cd6f855559') in 0.0181137 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 96
+  Time since last request: 43.166128 seconds.
+  path: Assets/Shaders
+  artifactKey: Guid(c3b2d63a87e3407408d37a6e87b6e96b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Shaders using Guid(c3b2d63a87e3407408d37a6e87b6e96b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd8e9b0af0150205ecfb3d81e0f2c4001') in 0.0005058 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
 
 ========================================================================
 Received Import Request.
-  Time since last request: 1.158595 seconds.
-  path: Assets/Prefabs/Canvas.prefab
-  artifactKey: Guid(996650ffe5602d242a38a413270abb9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Canvas.prefab using Guid(996650ffe5602d242a38a413270abb9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a272fa3d64c73f8eeafda416e37294c4') in 0.0174552 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 96
+  Time since last request: 11.160387 seconds.
+  path: Assets/FastMesh
+  artifactKey: Guid(a5d3edf5ddd9e714982c732561560418) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastMesh using Guid(a5d3edf5ddd9e714982c732561560418) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '279c1348968e11ff38d4efe911accde7') in 0.0005083 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
 
 ========================================================================
 Received Import Request.
-  Time since last request: 4.499191 seconds.
-  path: Assets/Prefabs/Canvas.prefab
-  artifactKey: Guid(996650ffe5602d242a38a413270abb9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Canvas.prefab using Guid(996650ffe5602d242a38a413270abb9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '42f5c341fe8b1ba57abad61ece67144b') in 0.0165404 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 96
+  Time since last request: 1.288751 seconds.
+  path: Assets/FastMesh/Meshs
+  artifactKey: Guid(a1f36ca89a36eb94ea158ecddf09e826) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastMesh/Meshs using Guid(a1f36ca89a36eb94ea158ecddf09e826) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '17f8692d424a0cfad675c008e936fa4e') in 0.0019066 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
 
 ========================================================================
 Received Import Request.
-  Time since last request: 17.736192 seconds.
-  path: Assets/Prefabs/Canvas.prefab
-  artifactKey: Guid(996650ffe5602d242a38a413270abb9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Canvas.prefab using Guid(996650ffe5602d242a38a413270abb9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '839d1341ea0719515d57cabd7c08f57d') in 0.0179501 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 96
+  Time since last request: 0.829380 seconds.
+  path: Assets/FastMesh/Meshs/Icon
+  artifactKey: Guid(d56bbab781334e940b94dc65508c300b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastMesh/Meshs/Icon using Guid(d56bbab781334e940b94dc65508c300b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'cc0cf15654be5d6e13b993252e503a3a') in 0.001951 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
 
 ========================================================================
 Received Import Request.
-  Time since last request: 2.557539 seconds.
-  path: Assets/Prefabs/Canvas.prefab
-  artifactKey: Guid(996650ffe5602d242a38a413270abb9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Prefabs/Canvas.prefab using Guid(996650ffe5602d242a38a413270abb9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a2cece2197ec4e32d9cd1f4aafc74696') in 0.0167809 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 96
+  Time since last request: 0.116091 seconds.
+  path: Assets/FastMesh/Meshs/Icon/Icon-admin.fbx
+  artifactKey: Guid(12641b3c585f6ff4583b8caaea86d8f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastMesh/Meshs/Icon/Icon-admin.fbx using Guid(12641b3c585f6ff4583b8caaea86d8f7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '918ce9c20a724f5a2e8719454c40b48e') in 0.4736169 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
 
 ========================================================================
-Received Prepare
-'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Refreshing native plugins compatible for Editor in 6.54 ms, found 10 plugins.
-Preloading 1 native plugins for Editor in 0.08 ms.
-Unloading 18 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7713 unused Assets / (7.1 MB). Loaded Objects now: 8463.
-Memory consumption went from 158.9 MB to 151.8 MB.
-Total: 15.337600 ms (FindLiveObjects: 1.054400 ms CreateObjectMapping: 1.618200 ms MarkObjects: 7.652300 ms  DeleteObjects: 5.011400 ms)
+Received Import Request.
+  Time since last request: 0.691858 seconds.
+  path: Assets/FastMesh/Meshs/Icon/Icon-anchor.fbx
+  artifactKey: Guid(3403ce6f3ad7b0b428afb95793b04881) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastMesh/Meshs/Icon/Icon-anchor.fbx using Guid(3403ce6f3ad7b0b428afb95793b04881) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e836dff837dc2caae3afd04cead640bb') in 0.0169923 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
 
-Prepare: number of updated asset objects reloaded= 0
 ========================================================================
-Received Prepare
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-Begin MonoManager ReloadAssembly
-[Licensing::Client] Successfully resolved entitlement details
-Symbol file LoadedFromMemory is not a mono symbol file
-- Loaded All Assemblies, in  0.987 seconds
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Refreshing native plugins compatible for Editor in 4.06 ms, found 10 plugins.
-Native extension for WindowsStandalone target not found
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.732 seconds
-Domain Reload Profiling: 1717ms
-	BeginReloadAssembly (274ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (15ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (69ms)
-	RebuildCommonClasses (35ms)
-	RebuildNativeTypeToScriptingClass (13ms)
-	initialDomainReloadingComplete (31ms)
-	LoadAllAssembliesAndSetupDomain (631ms)
-		LoadAssemblies (436ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (303ms)
-			TypeCache.Refresh (14ms)
-				TypeCache.ScanAssembly (1ms)
-			BuildScriptInfoCaches (271ms)
-			ResolveRequiredComponents (13ms)
-	FinalizeReload (733ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (572ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (2ms)
-			SetLoadedEditorAssemblies (3ms)
-			BeforeProcessingInitializeOnLoad (134ms)
-			ProcessInitializeOnLoadAttributes (367ms)
-			ProcessInitializeOnLoadMethodAttributes (59ms)
-			AfterProcessingInitializeOnLoad (6ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (13ms)
-Refreshing native plugins compatible for Editor in 4.22 ms, found 10 plugins.
-Preloading 1 native plugins for Editor in 0.05 ms.
-Unloading 18 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7740 unused Assets / (6.7 MB). Loaded Objects now: 8467.
-Memory consumption went from 162.2 MB to 155.5 MB.
-Total: 9.247600 ms (FindLiveObjects: 0.850800 ms CreateObjectMapping: 1.297400 ms MarkObjects: 3.912000 ms  DeleteObjects: 3.186700 ms)
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/FastMesh/Meshs/Icon/Icon-anticlockwise.fbx
+  artifactKey: Guid(f26f0b952e1594e42a41dda093e6eb5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastMesh/Meshs/Icon/Icon-anticlockwise.fbx using Guid(f26f0b952e1594e42a41dda093e6eb5a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f97b3e9ea2d53e7f22e90a369cc4be9a') in 0.0149195 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
 
-Prepare: number of updated asset objects reloaded= 0
 ========================================================================
-Received Prepare
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory is not a mono symbol file
-- Loaded All Assemblies, in  1.012 seconds
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Refreshing native plugins compatible for Editor in 4.25 ms, found 10 plugins.
-Native extension for WindowsStandalone target not found
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.699 seconds
-Domain Reload Profiling: 1709ms
-	BeginReloadAssembly (243ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (13ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (62ms)
-	RebuildCommonClasses (47ms)
-	RebuildNativeTypeToScriptingClass (16ms)
-	initialDomainReloadingComplete (36ms)
-	LoadAllAssembliesAndSetupDomain (666ms)
-		LoadAssemblies (434ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (330ms)
-			TypeCache.Refresh (16ms)
-				TypeCache.ScanAssembly (1ms)
-			BuildScriptInfoCaches (284ms)
-			ResolveRequiredComponents (25ms)
-	FinalizeReload (700ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (553ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (2ms)
-			SetLoadedEditorAssemblies (3ms)
-			BeforeProcessingInitializeOnLoad (131ms)
-			ProcessInitializeOnLoadAttributes (351ms)
-			ProcessInitializeOnLoadMethodAttributes (59ms)
-			AfterProcessingInitializeOnLoad (6ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (13ms)
-Refreshing native plugins compatible for Editor in 4.29 ms, found 10 plugins.
-Preloading 1 native plugins for Editor in 0.05 ms.
-Unloading 18 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7740 unused Assets / (7.0 MB). Loaded Objects now: 8470.
-Memory consumption went from 162.2 MB to 155.3 MB.
-Total: 10.122800 ms (FindLiveObjects: 0.837600 ms CreateObjectMapping: 1.194100 ms MarkObjects: 4.374900 ms  DeleteObjects: 3.715400 ms)
+Received Import Request.
+  Time since last request: 0.199100 seconds.
+  path: Assets/FastMesh/Meshs/Icon/Icon-anticlockwise-2.fbx
+  artifactKey: Guid(fb0fa0c1687c2d542920372daa8bc24d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastMesh/Meshs/Icon/Icon-anticlockwise-2.fbx using Guid(fb0fa0c1687c2d542920372daa8bc24d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f74fc0449657eb8bd968a5dd42d51635') in 0.018167 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
 
-Prepare: number of updated asset objects reloaded= 0
 ========================================================================
-Received Prepare
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-Begin MonoManager ReloadAssembly
-[Licensing::Client] Successfully resolved entitlement details
-Symbol file LoadedFromMemory is not a mono symbol file
-- Loaded All Assemblies, in  0.953 seconds
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Refreshing native plugins compatible for Editor in 6.03 ms, found 10 plugins.
-Native extension for WindowsStandalone target not found
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.759 seconds
-Domain Reload Profiling: 1710ms
-	BeginReloadAssembly (236ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (14ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (46ms)
-	RebuildCommonClasses (38ms)
-	RebuildNativeTypeToScriptingClass (15ms)
-	initialDomainReloadingComplete (30ms)
-	LoadAllAssembliesAndSetupDomain (631ms)
-		LoadAssemblies (428ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (300ms)
-			TypeCache.Refresh (15ms)
-				TypeCache.ScanAssembly (1ms)
-			BuildScriptInfoCaches (268ms)
-			ResolveRequiredComponents (14ms)
-	FinalizeReload (760ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (586ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (2ms)
-			SetLoadedEditorAssemblies (4ms)
-			BeforeProcessingInitializeOnLoad (140ms)
-			ProcessInitializeOnLoadAttributes (360ms)
-			ProcessInitializeOnLoadMethodAttributes (74ms)
-			AfterProcessingInitializeOnLoad (6ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (14ms)
-Refreshing native plugins compatible for Editor in 4.92 ms, found 10 plugins.
-Preloading 1 native plugins for Editor in 0.05 ms.
-Unloading 18 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7740 unused Assets / (7.0 MB). Loaded Objects now: 8473.
-Memory consumption went from 162.3 MB to 155.3 MB.
-Total: 9.909500 ms (FindLiveObjects: 0.858700 ms CreateObjectMapping: 1.218100 ms MarkObjects: 4.091600 ms  DeleteObjects: 3.740600 ms)
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/FastMesh/Meshs/Icon/Icon-apps-2.fbx
+  artifactKey: Guid(55a2d4f0ecedeec42aeaffaa1ab34200) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastMesh/Meshs/Icon/Icon-apps-2.fbx using Guid(55a2d4f0ecedeec42aeaffaa1ab34200) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'cbd008f81c30ea4e38ed3aef98bee3cf') in 0.0152568 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
 
-Prepare: number of updated asset objects reloaded= 0
 ========================================================================
-Received Prepare
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-Begin MonoManager ReloadAssembly
-[Licensing::Client] Successfully resolved entitlement details
-Symbol file LoadedFromMemory is not a mono symbol file
-- Loaded All Assemblies, in  0.957 seconds
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Refreshing native plugins compatible for Editor in 4.23 ms, found 10 plugins.
-Native extension for WindowsStandalone target not found
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.712 seconds
-Domain Reload Profiling: 1668ms
-	BeginReloadAssembly (236ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (21ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (49ms)
-	RebuildCommonClasses (51ms)
-	RebuildNativeTypeToScriptingClass (22ms)
-	initialDomainReloadingComplete (33ms)
-	LoadAllAssembliesAndSetupDomain (614ms)
-		LoadAssemblies (411ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (295ms)
-			TypeCache.Refresh (15ms)
-				TypeCache.ScanAssembly (1ms)
-			BuildScriptInfoCaches (259ms)
-			ResolveRequiredComponents (16ms)
-	FinalizeReload (712ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (562ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (2ms)
-			SetLoadedEditorAssemblies (3ms)
-			BeforeProcessingInitializeOnLoad (131ms)
-			ProcessInitializeOnLoadAttributes (356ms)
-			ProcessInitializeOnLoadMethodAttributes (64ms)
-			AfterProcessingInitializeOnLoad (6ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (14ms)
-Refreshing native plugins compatible for Editor in 4.27 ms, found 10 plugins.
-Preloading 1 native plugins for Editor in 0.05 ms.
-Unloading 18 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7740 unused Assets / (7.0 MB). Loaded Objects now: 8476.
-Memory consumption went from 162.3 MB to 155.3 MB.
-Total: 11.100600 ms (FindLiveObjects: 0.851500 ms CreateObjectMapping: 1.396100 ms MarkObjects: 4.665500 ms  DeleteObjects: 4.186700 ms)
+Received Import Request.
+  Time since last request: 0.153802 seconds.
+  path: Assets/FastMesh/Meshs/Icon/Icon-archive.fbx
+  artifactKey: Guid(70f13070d7e7ffe448a3ceac5b61a9a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastMesh/Meshs/Icon/Icon-archive.fbx using Guid(70f13070d7e7ffe448a3ceac5b61a9a5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '64202e73a1f3222c6bc0c0f5f8162ce8') in 0.0162888 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
 
-Prepare: number of updated asset objects reloaded= 0
 ========================================================================
-Received Prepare
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-Begin MonoManager ReloadAssembly
-Symbol file LoadedFromMemory is not a mono symbol file
-- Loaded All Assemblies, in  0.978 seconds
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Refreshing native plugins compatible for Editor in 4.35 ms, found 10 plugins.
-Native extension for WindowsStandalone target not found
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.703 seconds
-Domain Reload Profiling: 1676ms
-	BeginReloadAssembly (255ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (20ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (60ms)
-	RebuildCommonClasses (48ms)
-	RebuildNativeTypeToScriptingClass (21ms)
-	initialDomainReloadingComplete (38ms)
-	LoadAllAssembliesAndSetupDomain (611ms)
-		LoadAssemblies (423ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (293ms)
-			TypeCache.Refresh (12ms)
-				TypeCache.ScanAssembly (1ms)
-			BuildScriptInfoCaches (264ms)
-			ResolveRequiredComponents (13ms)
-	FinalizeReload (703ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (550ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (2ms)
-			SetLoadedEditorAssemblies (4ms)
-			BeforeProcessingInitializeOnLoad (130ms)
-			ProcessInitializeOnLoadAttributes (352ms)
-			ProcessInitializeOnLoadMethodAttributes (57ms)
-			AfterProcessingInitializeOnLoad (5ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (13ms)
-Refreshing native plugins compatible for Editor in 4.33 ms, found 10 plugins.
-Preloading 1 native plugins for Editor in 0.05 ms.
-Unloading 18 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7740 unused Assets / (7.1 MB). Loaded Objects now: 8479.
-Memory consumption went from 162.3 MB to 155.2 MB.
-Total: 10.370400 ms (FindLiveObjects: 0.844800 ms CreateObjectMapping: 1.300100 ms MarkObjects: 4.276500 ms  DeleteObjects: 3.948100 ms)
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/FastMesh/Meshs/Icon/Icon-arrow-down.fbx
+  artifactKey: Guid(23ab9f37239dc584cb11a1b921cf8d8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastMesh/Meshs/Icon/Icon-arrow-down.fbx using Guid(23ab9f37239dc584cb11a1b921cf8d8b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '20d394e3de7a9f065454f7436967f3d9') in 0.0164014 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
 
-Prepare: number of updated asset objects reloaded= 0
 ========================================================================
-Received Prepare
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-Begin MonoManager ReloadAssembly
-[Licensing::Client] Successfully resolved entitlement details
-Symbol file LoadedFromMemory is not a mono symbol file
-- Loaded All Assemblies, in  1.042 seconds
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Refreshing native plugins compatible for Editor in 4.33 ms, found 10 plugins.
-Native extension for WindowsStandalone target not found
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
-[Package Manager] Unable to send message (not connected to server process).
-[Package Manager] Cannot connect to Unity Package Manager local server
-Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.729 seconds
-Domain Reload Profiling: 1770ms
-	BeginReloadAssembly (265ms)
-		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (19ms)
-		BackupInstance (0ms)
-		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (61ms)
-	RebuildCommonClasses (41ms)
-	RebuildNativeTypeToScriptingClass (21ms)
-	initialDomainReloadingComplete (40ms)
-	LoadAllAssembliesAndSetupDomain (675ms)
-		LoadAssemblies (446ms)
-		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (331ms)
-			TypeCache.Refresh (13ms)
-				TypeCache.ScanAssembly (1ms)
-			BuildScriptInfoCaches (292ms)
-			ResolveRequiredComponents (19ms)
-	FinalizeReload (729ms)
-		ReleaseScriptCaches (0ms)
-		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (566ms)
-			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (2ms)
-			SetLoadedEditorAssemblies (4ms)
-			BeforeProcessingInitializeOnLoad (130ms)
-			ProcessInitializeOnLoadAttributes (365ms)
-			ProcessInitializeOnLoadMethodAttributes (59ms)
-			AfterProcessingInitializeOnLoad (6ms)
-			EditorAssembliesLoaded (0ms)
-		ExecutionOrderSort2 (0ms)
-		AwakeInstancesAfterBackupRestoration (17ms)
-Refreshing native plugins compatible for Editor in 4.27 ms, found 10 plugins.
-Preloading 1 native plugins for Editor in 0.05 ms.
-Unloading 18 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7740 unused Assets / (7.0 MB). Loaded Objects now: 8482.
-Memory consumption went from 162.4 MB to 155.4 MB.
-Total: 10.032200 ms (FindLiveObjects: 0.887200 ms CreateObjectMapping: 1.347900 ms MarkObjects: 4.060900 ms  DeleteObjects: 3.735700 ms)
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/FastMesh/Meshs/Icon/Icon-arrow-drop-down.fbx
+  artifactKey: Guid(c5041f01e521a8c43b64d23494f9ac16) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastMesh/Meshs/Icon/Icon-arrow-drop-down.fbx using Guid(c5041f01e521a8c43b64d23494f9ac16) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e6bb29c174f676ad60d1ba79812a524c') in 0.0170549 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
 
-Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/FastMesh/Meshs/Icon/Icon-arrow-go-back.fbx
+  artifactKey: Guid(5daf7ded2eed11a47aca57c029373ccf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastMesh/Meshs/Icon/Icon-arrow-go-back.fbx using Guid(5daf7ded2eed11a47aca57c029373ccf) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '9c07bb30503b26b70c98c4b63e0d4a48') in 0.0166927 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/FastMesh/Meshs/Icon/Icon-arrow-drop-left.fbx
+  artifactKey: Guid(28bba0eb8732c00489d40876402c7732) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastMesh/Meshs/Icon/Icon-arrow-drop-left.fbx using Guid(28bba0eb8732c00489d40876402c7732) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e222aee590cc81a3a2e1855617b5d9a1') in 0.0170537 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/FastMesh/Meshs/Icon/Icon-arrow-left.fbx
+  artifactKey: Guid(9b2e602d4afdcc6488668ad94061b96b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastMesh/Meshs/Icon/Icon-arrow-left.fbx using Guid(9b2e602d4afdcc6488668ad94061b96b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '9859ba0b76ee10f9dcc8590f801b1c02') in 0.0161956 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.007433 seconds.
+  path: Assets/FastMesh/Meshs/Icon/Icon-arrow-left-circle.fbx
+  artifactKey: Guid(fd824bb062a5da24c9396537ad9ab54d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastMesh/Meshs/Icon/Icon-arrow-left-circle.fbx using Guid(fd824bb062a5da24c9396537ad9ab54d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0c46d6068739a09f86c19ac15cb6d475') in 0.0180507 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/FastMesh/Meshs/Icon/Icon-arrow-left-right.fbx
+  artifactKey: Guid(9fee5360bfd9cca408d281fb86ceda7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastMesh/Meshs/Icon/Icon-arrow-left-right.fbx using Guid(9fee5360bfd9cca408d281fb86ceda7c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e79436419e37b9848cbc3d1396811672') in 0.0161722 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.418336 seconds.
+  path: Assets/FastMesh/Meshs/Icon/Icon-arrow-left-s.fbx
+  artifactKey: Guid(90396404c41f81f4e9c8062e3e84d033) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastMesh/Meshs/Icon/Icon-arrow-left-s.fbx using Guid(90396404c41f81f4e9c8062e3e84d033) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a5ee4f495e3efcb23547d3a5e5ffd19e') in 0.0165564 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/FastMesh/Meshs/Icon/Icon-arrow-right.fbx
+  artifactKey: Guid(881f8961f805ceb4b975cd0f54c2db42) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastMesh/Meshs/Icon/Icon-arrow-right.fbx using Guid(881f8961f805ceb4b975cd0f54c2db42) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '43f552c1842ca45ff13fbce2ca748ad0') in 0.015845 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/FastMesh/Meshs/Icon/Icon-arrow-up.fbx
+  artifactKey: Guid(e8793a63aae49c346bdff876f7327b41) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastMesh/Meshs/Icon/Icon-arrow-up.fbx using Guid(e8793a63aae49c346bdff876f7327b41) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'cde16d72ade5f88422fe447a23945042') in 0.0177956 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000036 seconds.
+  path: Assets/FastMesh/Meshs/Icon/Icon-arrow-right-down.fbx
+  artifactKey: Guid(eb539bee96835e049978a1b15d941253) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastMesh/Meshs/Icon/Icon-arrow-right-down.fbx using Guid(eb539bee96835e049978a1b15d941253) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '392c72a575be2a182fb88c488f42766d') in 0.0173601 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/FastMesh/Meshs/Icon/Icon-arrow-up-circle.fbx
+  artifactKey: Guid(61e0bc6c435a21b4faf878eac9f4dcb2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastMesh/Meshs/Icon/Icon-arrow-up-circle.fbx using Guid(61e0bc6c435a21b4faf878eac9f4dcb2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '2636f925cf1440c37a7dd876cc630ffc') in 0.0165748 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.021791 seconds.
+  path: Assets/FastMesh/Meshs/Icon/Icon-arrow-up-down.fbx
+  artifactKey: Guid(494271492c487a84c8e5a85e48489f6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastMesh/Meshs/Icon/Icon-arrow-up-down.fbx using Guid(494271492c487a84c8e5a85e48489f6a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4899c6f0438d18a06f3469b4fc3e7cbf') in 0.0148557 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/FastMesh/Meshs/Icon/Icon-artboard.fbx
+  artifactKey: Guid(3fdb5179d8d617f4aa1373c8aab90fe1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastMesh/Meshs/Icon/Icon-artboard.fbx using Guid(3fdb5179d8d617f4aa1373c8aab90fe1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'bf51eedd3832191c40c9dcc6c7b02812') in 0.0156219 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/FastMesh/Meshs/Icon/Icon-at.fbx
+  artifactKey: Guid(9d0a57f51b415894a8343cc33bbb62fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastMesh/Meshs/Icon/Icon-at.fbx using Guid(9d0a57f51b415894a8343cc33bbb62fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0a3dae0787691ce8a06bd302a92971e3') in 0.0156344 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/FastMesh/Meshs/Icon/Icon-bank.fbx
+  artifactKey: Guid(6fd84c9770b5d724a92cd6190022e7c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastMesh/Meshs/Icon/Icon-bank.fbx using Guid(6fd84c9770b5d724a92cd6190022e7c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'edc844eb3699f6d0296482ab44a24bc2') in 0.0162494 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/FastMesh/Meshs/Icon/Icon-award.fbx
+  artifactKey: Guid(5adfe14375e26a14d8a5d43d5974bf0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastMesh/Meshs/Icon/Icon-award.fbx using Guid(5adfe14375e26a14d8a5d43d5974bf0f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b860ecbeb9227618f91eb95713efaaa1') in 0.0162404 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/FastMesh/Meshs/Icon/Icon-article.fbx
+  artifactKey: Guid(6d58036cee4f56e4dafb3b7c24ec7f51) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastMesh/Meshs/Icon/Icon-article.fbx using Guid(6d58036cee4f56e4dafb3b7c24ec7f51) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '903b94e61ccb87b493126675a326bf52') in 0.0168397 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/FastMesh/Meshs/Icon/Icon-bank-card-2.fbx
+  artifactKey: Guid(39c44b061ea9d9e48a2266b182719d03) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastMesh/Meshs/Icon/Icon-bank-card-2.fbx using Guid(39c44b061ea9d9e48a2266b182719d03) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f7440f6b0d256d43ca4588d3e114692a') in 0.0144545 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/FastMesh/Meshs/Icon/Icon-bar-chart-2.fbx
+  artifactKey: Guid(a91da0af17f4a7e4a84318fe954c3cd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastMesh/Meshs/Icon/Icon-bar-chart-2.fbx using Guid(a91da0af17f4a7e4a84318fe954c3cd8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '21dfe65a767dae2de94fd7982112249a') in 0.0153309 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/FastMesh/Meshs/Icon/Icon-barricade.fbx
+  artifactKey: Guid(97375cf8f1510f148acc06f67277a9db) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastMesh/Meshs/Icon/Icon-barricade.fbx using Guid(97375cf8f1510f148acc06f67277a9db) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3709148043ef8e67a78211b0694135e5') in 0.0155433 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/FastMesh/Meshs/Icon/Icon-bar-chart-box.fbx
+  artifactKey: Guid(0e1aa15a60f30e5459626df50de4e6ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastMesh/Meshs/Icon/Icon-bar-chart-box.fbx using Guid(0e1aa15a60f30e5459626df50de4e6ab) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'b3b7e030b52415135429bacbb25e745c') in 0.0150922 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/FastMesh/Meshs/Icon/Icon-barcode.fbx
+  artifactKey: Guid(93e31055421e7b3429d029d1c2885a87) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastMesh/Meshs/Icon/Icon-barcode.fbx using Guid(93e31055421e7b3429d029d1c2885a87) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7b0e10091554ffa2f6f5f6a7b6ed2fb3') in 0.0150766 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.151242 seconds.
+  path: Assets/FastMesh/Meshs/Icon/Icon-base-station.fbx
+  artifactKey: Guid(089e861e98f544b4cad8df80edcba36d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastMesh/Meshs/Icon/Icon-base-station.fbx using Guid(089e861e98f544b4cad8df80edcba36d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'a3ee98a40800cf51edeba2b8fc2903a0') in 0.015326 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/FastMesh/Meshs/Icon/Icon-battery.fbx
+  artifactKey: Guid(9a7fe60f9d4b9914f87edc5428a80f43) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastMesh/Meshs/Icon/Icon-battery.fbx using Guid(9a7fe60f9d4b9914f87edc5428a80f43) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '395ba9377ee58a5a2dd80c2b6c610b66') in 0.0167388 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/FastMesh/Meshs/Icon/Icon-battery-charge.fbx
+  artifactKey: Guid(ad6b8853a91ddfe448c3ec532836e6ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastMesh/Meshs/Icon/Icon-battery-charge.fbx using Guid(ad6b8853a91ddfe448c3ec532836e6ff) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '307f9320d4c99a40cd49ea3f162287ce') in 0.0190944 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000042 seconds.
+  path: Assets/FastMesh/Meshs/Icon/Icon-bell.fbx
+  artifactKey: Guid(fed28efaba90b8c478477668e275f7e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastMesh/Meshs/Icon/Icon-bell.fbx using Guid(fed28efaba90b8c478477668e275f7e0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd1efac6223539ec03433517d8272284c') in 0.0180657 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/FastMesh/Meshs/Icon/Icon-behance.fbx
+  artifactKey: Guid(55bcf8043d579914fa33d386773d3aa6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastMesh/Meshs/Icon/Icon-behance.fbx using Guid(55bcf8043d579914fa33d386773d3aa6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4ad0c28859c624515a2577ea77acc2fb') in 0.0171521 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/FastMesh/Meshs/Icon/Icon-bear-smile.fbx
+  artifactKey: Guid(c50a5b4592143bb468ca5ed4d5f72582) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastMesh/Meshs/Icon/Icon-bear-smile.fbx using Guid(c50a5b4592143bb468ca5ed4d5f72582) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3303106dd1ff6ab7a154d07a691c9251') in 0.0179072 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/FastMesh/Meshs/Icon/Icon-billiards.fbx
+  artifactKey: Guid(4ed5de77adc02904686b17359e603a68) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastMesh/Meshs/Icon/Icon-billiards.fbx using Guid(4ed5de77adc02904686b17359e603a68) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0bcef886883fd39462ad01c09c7da1e8') in 0.0159681 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/FastMesh/Meshs/Icon/Icon-bill.fbx
+  artifactKey: Guid(0c006d44d275cde4ab5d47bbc535f7ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastMesh/Meshs/Icon/Icon-bill.fbx using Guid(0c006d44d275cde4ab5d47bbc535f7ca) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '97528d4248ac2307b16d3482ce4e0666') in 0.0153657 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/FastMesh/Meshs/Icon/Icon-bilibili.fbx
+  artifactKey: Guid(bbc312bc736669b4498647bb8d7c6e46) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastMesh/Meshs/Icon/Icon-bilibili.fbx using Guid(bbc312bc736669b4498647bb8d7c6e46) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0b53bb0a8896f82eac6661650c355333') in 0.0158011 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/FastMesh/Meshs/Icon/Icon-body-scan.fbx
+  artifactKey: Guid(ec858487d09b17c4cabc8952e47964f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastMesh/Meshs/Icon/Icon-body-scan.fbx using Guid(ec858487d09b17c4cabc8952e47964f5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '272635300109c0d8484ab12a539ba5a2') in 0.0167975 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/FastMesh/Meshs/Icon/Icon-bookmark-3.fbx
+  artifactKey: Guid(7076ef7c946e7ed4c9a9da3f7e9d8cc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastMesh/Meshs/Icon/Icon-bookmark-3.fbx using Guid(7076ef7c946e7ed4c9a9da3f7e9d8cc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '91d392cc3a468ce132cf30c69f8dc2f6') in 0.0166193 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/FastMesh/Meshs/Icon/Icon-boxing.fbx
+  artifactKey: Guid(008f05676d1213740b6a34580fc34241) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastMesh/Meshs/Icon/Icon-boxing.fbx using Guid(008f05676d1213740b6a34580fc34241) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0ff0f51450bd96f111e46dc6326ad640') in 0.0213398 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/FastMesh/Meshs/Icon/Icon-brush-2.fbx
+  artifactKey: Guid(a55c28aceadc0e342afda8ed3fd6114c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastMesh/Meshs/Icon/Icon-brush-2.fbx using Guid(a55c28aceadc0e342afda8ed3fd6114c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd348d6b4d023515e4526a336a76d54e0') in 0.0181365 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/FastMesh/Meshs/Icon/Icon-broadcast.fbx
+  artifactKey: Guid(bb8fb91432c108044b84d710c46e17a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastMesh/Meshs/Icon/Icon-broadcast.fbx using Guid(bb8fb91432c108044b84d710c46e17a7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'bb35edd420740fbdc53417e1558b147d') in 0.017246 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/FastMesh/Meshs/Icon/Icon-briefcase-4.fbx
+  artifactKey: Guid(940d4f306f0fa1f43b091bbbc1940c21) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastMesh/Meshs/Icon/Icon-briefcase-4.fbx using Guid(940d4f306f0fa1f43b091bbbc1940c21) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'bc42f9a33018192b29fb1f83a1c1945e') in 0.0160329 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/FastMesh/Meshs/Icon/Icon-bookmark-2.fbx
+  artifactKey: Guid(82162c3398e6ee6488cd207764e79fa4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastMesh/Meshs/Icon/Icon-bookmark-2.fbx using Guid(82162c3398e6ee6488cd207764e79fa4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7c8ec1d144da06947a650ad6ef45c0a6') in 0.0164761 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/FastMesh/Meshs/Icon/Icon-battery-saver.fbx
+  artifactKey: Guid(a0dfbdd6910c3d3469fb35e41be19308) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastMesh/Meshs/Icon/Icon-battery-saver.fbx using Guid(a0dfbdd6910c3d3469fb35e41be19308) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5cff83c2b3de6af1cd703267a8a7560b') in 0.0184846 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/FastMesh/Meshs/Icon/Icon-book-read.fbx
+  artifactKey: Guid(939f6ef95ae749647918a6a1cdaacac9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastMesh/Meshs/Icon/Icon-book-read.fbx using Guid(939f6ef95ae749647918a6a1cdaacac9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '2729dcefb6c0948d638d77eef6d4098b') in 0.0161595 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/FastMesh/Meshs/Icon/Icon-book-3.fbx
+  artifactKey: Guid(eebcfb9de927e6d44a2a60e3fe513e80) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastMesh/Meshs/Icon/Icon-book-3.fbx using Guid(eebcfb9de927e6d44a2a60e3fe513e80) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '272bb90508fdfa91c522059cf78bae71') in 0.0176218 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000029 seconds.
+  path: Assets/FastMesh/Meshs/Icon/Icon-book-mark.fbx
+  artifactKey: Guid(e16102e88325a86448dd0530f3002704) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastMesh/Meshs/Icon/Icon-book-mark.fbx using Guid(e16102e88325a86448dd0530f3002704) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '2100f0dc22eefec4d06803f1f81f8b68') in 0.0185222 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 4.870561 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-advertisement.prefab
+  artifactKey: Guid(1999dd0a49054f549ab4aca7d9686e86) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-advertisement.prefab using Guid(1999dd0a49054f549ab4aca7d9686e86) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '341ac833ae7d0336b4ca54755346522d') in 0.0235456 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.884130 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-ancient-gate.prefab
+  artifactKey: Guid(f02872c3728beea42a6bb782030937c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-ancient-gate.prefab using Guid(f02872c3728beea42a6bb782030937c8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5c46338e31b41873db8a398a0ab6d8a7') in 0.0128354 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-anticlockwise-2.prefab
+  artifactKey: Guid(ffdce9e0456bbf84ea662bd77da0097c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-anticlockwise-2.prefab using Guid(ffdce9e0456bbf84ea662bd77da0097c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '606b318861371dd46894ddb547997a23') in 0.0146192 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-arrow-down.prefab
+  artifactKey: Guid(1ae6d55d3e7b1684aadad4ea8dc85663) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-arrow-down.prefab using Guid(1ae6d55d3e7b1684aadad4ea8dc85663) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'ab897cace6777f23c799bfb8ce2d40bc') in 0.0319412 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.128625 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-arrow-down-s.prefab
+  artifactKey: Guid(a20abfec6e19c484c988e19bb1494172) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-arrow-down-s.prefab using Guid(a20abfec6e19c484c988e19bb1494172) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '36481cdc6849dc8ba9c83590f2001b86') in 0.0140375 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-arrow-drop-right.prefab
+  artifactKey: Guid(f4f83a47d135283459a6688ae321ae07) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-arrow-drop-right.prefab using Guid(f4f83a47d135283459a6688ae321ae07) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c4ceb846d845a67fc2d2768e73ba1692') in 0.0169077 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
+AssetImportWorker is now disconnected from the server
+Process exiting
+Exiting without the bug reporter. Application will terminate with return code 0

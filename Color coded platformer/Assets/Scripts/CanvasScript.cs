@@ -115,23 +115,14 @@ public class CanvasScript : MonoBehaviour
 
     public void LoadScene(Object scene)
     {
+        if (scene == null)
+        {
+            Debug.LogError("Scene object is null!");
+            return;
+        }
+
         Time.timeScale = 1f;
-        
-        // In Editor: Get the scene path and convert to build index
-        string scenePath = UnityEditor.AssetDatabase.GetAssetPath(scene);
-        int buildIndex = UnityEngine.SceneManagement.SceneUtility.GetBuildIndexByScenePath(scenePath);
-        
-        if (buildIndex >= 0)
-        {
-            SceneManager.LoadScene(buildIndex);
-        }
-        else
-        {
-            Debug.LogError($"Scene {scene.name} is not in build settings!");
-            // Fallback to name
-            SceneManager.LoadScene(scene.name);
-        }
-        // In build: Use scene name
+        Debug.Log($"Loading scene: {scene.name}");
         SceneManager.LoadScene(scene.name);
     }
 
