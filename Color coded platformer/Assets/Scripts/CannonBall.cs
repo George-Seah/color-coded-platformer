@@ -4,9 +4,9 @@ public class CannonBall : MonoBehaviour
 {
     public float speed = 20f; // Speed of the cannonball
     public Vector3 direction = Vector3.forward; // Direction of movement
-    private Rigidbody2D rb;
+    Rigidbody2D rb;
 
-    void Start()
+    void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         //rb.useGravity = false; // Ensure gravity is off
@@ -36,7 +36,7 @@ public class CannonBall : MonoBehaviour
         
     }
     /*
-    private void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
         if(collision.gameObject.CompareTag("Ground")){
             Debug.Log($"Cannonball detected {collision.gameObject} using OnTriggerEnter2D");

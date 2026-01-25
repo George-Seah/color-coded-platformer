@@ -36,6 +36,7 @@ public class PlayerBehaviour : MonoBehaviour
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         playerColliders = GetComponentsInChildren<Collider2D>();
+        Instantiate(GameManager.Instance.canvasPrefab);
     }
 
     void OnEnable()
@@ -48,8 +49,6 @@ public class PlayerBehaviour : MonoBehaviour
         pause = playerControls.Player.Pause;
 
         move.Enable(); jump.Enable(); drop.Enable(); interact.Enable(); pause.Enable();
-
-        if (CanvasScript.Instance == null) Instantiate(GameManager.Instance.CanvasPrefab);
 
         pause.performed += ctx => CanvasScript.Instance.PauseGame();
         jump.performed += OnJump;

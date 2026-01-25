@@ -12,10 +12,7 @@ public class LockedDoor : ColorPicker
         changeLayerMask = false;
 
         gameObject.layer = LayerMask.NameToLayer("Default"); 
-    }
 
-    void Start()
-    {
         ChangeObjectColor(this.SelectedColor);
     }
 

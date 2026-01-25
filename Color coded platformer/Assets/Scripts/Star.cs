@@ -2,15 +2,15 @@ using UnityEngine;
 
 public class Star : MonoBehaviour
 {
-    [SerializeField] private ESave saveManager;
-    [SerializeField] private string index;
+    [SerializeField] ESave saveManager;
+    [SerializeField] string index;
 
-    private bool hadCPC;
-    private bool hadParticles;
+    bool hadCPC;
+    bool hadParticles;
 
-    private ColorPositionChange cpc;
-    private ParticleSystem ps;
-    private SpriteRenderer sprite;
+    ColorPositionChange cpc;
+    ParticleSystem ps;
+    SpriteRenderer sprite;
 
     public string Index => index;
 
@@ -42,7 +42,7 @@ public class Star : MonoBehaviour
         }
     }
 
-    private void ApplyCollectedVisuals()
+    void ApplyCollectedVisuals()
     {
         if (sprite != null)
             sprite.color = Color.black;
@@ -66,7 +66,7 @@ public class Star : MonoBehaviour
     }
 
     [ContextMenu("Reset This Star Data")]
-    private void ResetThisStar()
+    void ResetThisStar()
     {
         if (saveManager != null)
         {

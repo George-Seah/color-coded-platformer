@@ -1,0 +1,2501 @@
+[Licensing::Module] Trying to connect to existing licensing client channel...
+Built from '6000.0/staging' branch; Version is '6000.0.62f1 (f99f05b3e950) revision 16359173'; Using compiler version '193933523'; Build Type 'Release'
+OS: 'Windows 11  (10.0.22631) 64bit Core' Language: 'en' Physical Memory: 16233 MB
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Nathan & Co" at "2026-01-25T09:05:19.2465915Z"
+BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
+Date: 2026-01-25T09:05:19Z
+
+COMMAND LINE ARGUMENTS:
+C:\Unity\6000.0.62f1\Editor\Unity.exe
+-adb2
+-batchMode
+-noUpm
+-name
+AssetImportWorker4
+-projectPath
+C:/Github/color-coded-platformer/Color coded platformer
+-logFile
+Logs/AssetImportWorker4.log
+-srvPort
+62390
+-licensingIpc
+LicenseClient-Nathan & Co
+-job-worker-count
+7
+-background-job-worker-count
+8
+-gc-helper-count
+1
+-name
+AssetImport
+Successfully changed project path to: C:/Github/color-coded-platformer/Color coded platformer
+C:/Github/color-coded-platformer/Color coded platformer
+[UnityMemory] Configuration Parameters - Can be set up in boot.config
+    "memorysetup-bucket-allocator-granularity=16"
+    "memorysetup-bucket-allocator-bucket-count=8"
+    "memorysetup-bucket-allocator-block-size=33554432"
+    "memorysetup-bucket-allocator-block-count=8"
+    "memorysetup-main-allocator-block-size=16777216"
+    "memorysetup-thread-allocator-block-size=16777216"
+    "memorysetup-gfx-main-allocator-block-size=16777216"
+    "memorysetup-gfx-thread-allocator-block-size=16777216"
+    "memorysetup-cache-allocator-block-size=4194304"
+    "memorysetup-typetree-allocator-block-size=2097152"
+    "memorysetup-profiler-bucket-allocator-granularity=16"
+    "memorysetup-profiler-bucket-allocator-bucket-count=8"
+    "memorysetup-profiler-bucket-allocator-block-size=33554432"
+    "memorysetup-profiler-bucket-allocator-block-count=8"
+    "memorysetup-profiler-allocator-block-size=16777216"
+    "memorysetup-profiler-editor-allocator-block-size=1048576"
+    "memorysetup-temp-allocator-size-main=16777216"
+    "memorysetup-job-temp-allocator-block-size=2097152"
+    "memorysetup-job-temp-allocator-block-size-background=1048576"
+    "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
+    "memorysetup-allocator-temp-initial-block-size-main=262144"
+    "memorysetup-allocator-temp-initial-block-size-worker=262144"
+    "memorysetup-temp-allocator-size-background-worker=32768"
+    "memorysetup-temp-allocator-size-job-worker=262144"
+    "memorysetup-temp-allocator-size-preload-manager=33554432"
+    "memorysetup-temp-allocator-size-nav-mesh-worker=65536"
+    "memorysetup-temp-allocator-size-audio-worker=65536"
+    "memorysetup-temp-allocator-size-cloud-worker=32768"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gi-baking-worker=262144"
+    "memorysetup-temp-allocator-size-gfx=262144"
+Player connection [29660]  Target information:
+
+Player connection [29660]  * "[IP] 192.168.0.233 [Port] 0 [Flags] 2 [Guid] 3901479070 [EditorId] 3901479070 [Version] 1048832 [Id] WindowsEditor(7,SuperFamicom) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+
+Player connection [29660] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [29660] Host joined alternative multi-casting on [225.0.0.222:34997]...
+JobSystem: Creating JobQueue using job-worker-count value 7
+Input System module state changed to: Initialized.
+[Physics::Module] Initialized fallback backend.
+[Physics::Module] Id: 0xdecafbad
+[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 1100, path: "C:/Program Files/Unity Hub/UnityLicensingClient_V1/Unity.Licensing.Client.exe")
+[Licensing::Module] LicensingClient has failed validation; ignoring
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.17.4+4293ba1
+  Session Id:              645e6841961b406da7d1df6e1d14a210
+  Correlation Id:          31e34094d018adb6a714e19bc99204a6
+  External correlation Id: 4639812248381731908
+  Machine Id:              qtyx5DMTmV6sfEVnrxz9aoLU/bw=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-Nathan & Co" (connect: 0.00s, validation: 0.00s, handshake: 0.04s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Nathan & Co-notifications" at "2026-01-25T09:05:19.2900691Z"
+[Licensing::Module] Licensing Background thread has ended after 0.04s
+Library Redirect Path: Library/
+[Physics::Module] Selected backend.
+[Physics::Module] Name: PhysX
+[Physics::Module] Id: 0xf2b8ea05
+[Physics::Module] SDK Version: 4.1.2
+[Physics::Module] Integration Version: 1.0.0
+[Physics::Module] Threading Mode: Multi-Threaded
+Refreshing native plugins compatible for Editor in 7.95 ms, found 10 plugins.
+Preloading 1 native plugins for Editor in 0.83 ms.
+Initialize engine version: 6000.0.62f1 (f99f05b3e950)
+[Subsystems] Discovering subsystems at path C:/Unity/6000.0.62f1/Editor/Data/Resources/UnitySubsystems
+[Subsystems] Discovering subsystems at path C:/Github/color-coded-platformer/Color coded platformer/Assets
+GfxDevice: creating device client; kGfxThreadingModeNonThreaded
+Direct3D:
+    Version:  Direct3D 11.0 [level 11.1]
+    Renderer: NVIDIA GeForce RTX 3060 (ID=0x2504)
+    Vendor:   NVIDIA
+    VRAM:     12115 MB
+    Driver:   32.0.15.8180
+Initialize mono
+Mono path[0] = 'C:/Unity/6000.0.62f1/Editor/Data/Managed'
+Mono path[1] = 'C:/Unity/6000.0.62f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
+Mono config path = 'C:/Unity/6000.0.62f1/Editor/Data/MonoBleedingEdge/etc'
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56376
+Begin MonoManager ReloadAssembly
+Registering precompiled unity dll's ...
+Register platform support module: C:/Unity/6000.0.62f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
+Registered in 0.004088 seconds.
+- Loaded All Assemblies, in  0.429 seconds
+Native extension for WindowsStandalone target not found
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.352 seconds
+Domain Reload Profiling: 778ms
+	BeginReloadAssembly (137ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (0ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (1ms)
+	RebuildCommonClasses (39ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (55ms)
+	LoadAllAssembliesAndSetupDomain (183ms)
+		LoadAssemblies (134ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (180ms)
+			TypeCache.Refresh (178ms)
+				TypeCache.ScanAssembly (164ms)
+			BuildScriptInfoCaches (0ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (352ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (299ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (25ms)
+			SetLoadedEditorAssemblies (6ms)
+			BeforeProcessingInitializeOnLoad (57ms)
+			ProcessInitializeOnLoadAttributes (154ms)
+			ProcessInitializeOnLoadMethodAttributes (58ms)
+			AfterProcessingInitializeOnLoad (0ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (0ms)
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+========================================================================
+Worker process is ready to serve import requests
+Import Worker Mode flag is 0x00
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Begin MonoManager ReloadAssembly
+[Licensing::Client] Successfully resolved entitlement details
+[Licensing::Module] License group:
+  Id: 18967569848297-UnityPersXXXX
+  Product: Unity Personal
+  Type: Assigned
+  Expiration: Unlimited
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.961 seconds
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Refreshing native plugins compatible for Editor in 4.25 ms, found 10 plugins.
+Native extension for WindowsStandalone target not found
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Package Manager log level set to [2]
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.888 seconds
+Domain Reload Profiling: 1844ms
+	BeginReloadAssembly (208ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (6ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (40ms)
+	RebuildCommonClasses (42ms)
+	RebuildNativeTypeToScriptingClass (17ms)
+	initialDomainReloadingComplete (44ms)
+	LoadAllAssembliesAndSetupDomain (644ms)
+		LoadAssemblies (393ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (352ms)
+			TypeCache.Refresh (236ms)
+				TypeCache.ScanAssembly (214ms)
+			BuildScriptInfoCaches (96ms)
+			ResolveRequiredComponents (15ms)
+	FinalizeReload (888ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (682ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (2ms)
+			SetLoadedEditorAssemblies (4ms)
+			BeforeProcessingInitializeOnLoad (149ms)
+			ProcessInitializeOnLoadAttributes (444ms)
+			ProcessInitializeOnLoadMethodAttributes (76ms)
+			AfterProcessingInitializeOnLoad (6ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (5ms)
+Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
+Refreshing native plugins compatible for Editor in 5.65 ms, found 10 plugins.
+Preloading 1 native plugins for Editor in 0.07 ms.
+Unloading 18 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7741 unused Assets / (7.3 MB). Loaded Objects now: 8459.
+Memory consumption went from 160.9 MB to 153.6 MB.
+Total: 12.904400 ms (FindLiveObjects: 0.912300 ms CreateObjectMapping: 1.661400 ms MarkObjects: 5.769300 ms  DeleteObjects: 4.560000 ms)
+
+========================================================================
+Received Import Request.
+  Time since last request: 180661.670261 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-google-play.prefab
+  artifactKey: Guid(fa187088586e13145a590bd8b056819c) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-google-play.prefab using Guid(fa187088586e13145a590bd8b056819c) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '8e8afe3a8db0c8a8de1cff2b8627a90b') in 0.2416802 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-movie-2.prefab
+  artifactKey: Guid(03dd2c10031a4ca4a963040342ac23d7) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-movie-2.prefab using Guid(03dd2c10031a4ca4a963040342ac23d7) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '0e0c9b76cea32d7a8ed7e9ad691a68e2') in 0.0185842 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-navigation.prefab
+  artifactKey: Guid(311317329f38ce4449f69b845a4b1634) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-navigation.prefab using Guid(311317329f38ce4449f69b845a4b1634) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'eb7535164860edbe1922b9dfe5084572') in 0.0144136 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000011 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-camera-off.prefab
+  artifactKey: Guid(5023e40c0704ace4aaabce3a101719cc) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-camera-off.prefab using Guid(5023e40c0704ace4aaabce3a101719cc) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '785556729a3505fe58b63899a717ede6') in 0.0179409 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-picture-in-picture-2.prefab
+  artifactKey: Guid(4e72f86bc4e676f43bb9a206190b9c73) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-picture-in-picture-2.prefab using Guid(4e72f86bc4e676f43bb9a206190b9c73) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '91ed29e101a5f279847eec5a77ac4ae4') in 0.0141531 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-layout-bottom.prefab
+  artifactKey: Guid(c060fb9f4fac8ff45a49c78a97b9d113) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-layout-bottom.prefab using Guid(c060fb9f4fac8ff45a49c78a97b9d113) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '0ad340058bf4d697483e97791f257f94') in 0.0139895 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-drizzle.prefab
+  artifactKey: Guid(161744de379f16e488a148395cc00f67) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-drizzle.prefab using Guid(161744de379f16e488a148395cc00f67) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '2b25bf4b9d44e616f294cd0d2bbd4cc2') in 0.014447 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-focus-3.prefab
+  artifactKey: Guid(8338f2e9eb97e7b49bd85f3474a21631) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-focus-3.prefab using Guid(8338f2e9eb97e7b49bd85f3474a21631) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'd7b4d303732c9164e17b2e553df7e9b3') in 0.0131546 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-question-answer.prefab
+  artifactKey: Guid(12c9cd6e229120a4abce1a63e8aad218) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-question-answer.prefab using Guid(12c9cd6e229120a4abce1a63e8aad218) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '23abe0d11b215ab8b3f068d926e207ba') in 0.0142206 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-arrow-left-right.prefab
+  artifactKey: Guid(bf01a84060810644ca5274dc8646c083) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-arrow-left-right.prefab using Guid(bf01a84060810644ca5274dc8646c083) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '50511b72c27d728ffd93d4e7b71e79e4') in 0.0151537 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-government.prefab
+  artifactKey: Guid(849acf103ae4c5946a161a998f6c889c) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-government.prefab using Guid(849acf103ae4c5946a161a998f6c889c) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '7380873045edb0e745af1e3fddabbf79') in 0.0183411 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-exchange-dollar.prefab
+  artifactKey: Guid(e01505c513385444a96800782370a69c) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-exchange-dollar.prefab using Guid(e01505c513385444a96800782370a69c) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '77463dfb3f2e15db89a2caa0fb21ec93') in 0.0129767 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-rocket-2.prefab
+  artifactKey: Guid(d5187798f4bc1164d82ed4e4ef317049) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-rocket-2.prefab using Guid(d5187798f4bc1164d82ed4e4ef317049) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'a637d73a145cab9d7e2b7de28b462533') in 0.0162647 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/Prefabs/Canvas.prefab
+  artifactKey: Guid(996650ffe5602d242a38a413270abb9f) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Prefabs/Canvas.prefab using Guid(996650ffe5602d242a38a413270abb9f) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '65f89cf4b73878d6b3fd07cd8a5839c8') in 0.094518 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 96
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/FastMesh/Materials/Floor 1.mat
+  artifactKey: Guid(5a399a37821645240901d0b2234ce276) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Materials/Floor 1.mat using Guid(5a399a37821645240901d0b2234ce276) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '2256bb41c3dfb66ebfee6ca8d3051223') in 0.0361626 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-git-repository.prefab
+  artifactKey: Guid(b332f38db46dd0d4d95b503e2e1f6d62) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-git-repository.prefab using Guid(b332f38db46dd0d4d95b503e2e1f6d62) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '7f7bdd237653984b29e4d3027a4addb6') in 0.0194319 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/UniversalRenderPipelineGlobalSettings.asset
+  artifactKey: Guid(93b439a37f63240aca3dd4e01d978a9f) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/UniversalRenderPipelineGlobalSettings.asset using Guid(93b439a37f63240aca3dd4e01d978a9f) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '3b54c9fb0689eb009af882f02904f3dd') in 0.1005705 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-bilibili.prefab
+  artifactKey: Guid(b23556d9bc21b0743a31785016dc8b80) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-bilibili.prefab using Guid(b23556d9bc21b0743a31785016dc8b80) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'b4bc69824e17305bb75019c9e4771376') in 0.0153398 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-lungs.prefab
+  artifactKey: Guid(3f1a52749a63663468fb452129ec7f60) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-lungs.prefab using Guid(3f1a52749a63663468fb452129ec7f60) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'ad79e0921f876110f846fabf90d548e7') in 0.015197 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-alipay.prefab
+  artifactKey: Guid(47f817b33f433af4f8e0cde4a9d239f3) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-alipay.prefab using Guid(47f817b33f433af4f8e0cde4a9d239f3) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'f91ac607fe8b76587924991d07c25440') in 0.0150249 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-emotion.prefab
+  artifactKey: Guid(17fafa622ae0635409c2733e41085e44) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-emotion.prefab using Guid(17fafa622ae0635409c2733e41085e44) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '36e9587d61d4fc932e770190e3bf8c09') in 0.0148223 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-slideshow-2.prefab
+  artifactKey: Guid(ad8efa8c86c254e409711f0d9f5316a3) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-slideshow-2.prefab using Guid(ad8efa8c86c254e409711f0d9f5316a3) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'c15019e4ef30cc1dd544771f23083831') in 0.0166933 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-play-list.prefab
+  artifactKey: Guid(08198af3485b6844fb364130ea294d1c) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-play-list.prefab using Guid(08198af3485b6844fb364130ea294d1c) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'd987c04de7df9208c7071d9c0cf306fc') in 0.0147568 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-layout-column.prefab
+  artifactKey: Guid(45f0f07231d610c478d710c626dee25b) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-layout-column.prefab using Guid(45f0f07231d610c478d710c626dee25b) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'bc0d6aaa6e9f06bfafdac490e0030871') in 0.0149414 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-calendar-check.prefab
+  artifactKey: Guid(f106b98a3e3b4a04fbcaa9d37d184aa0) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-calendar-check.prefab using Guid(f106b98a3e3b4a04fbcaa9d37d184aa0) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '9a3c37b14af1ac9d0c3df91d7584279f') in 0.0165959 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-file-word.prefab
+  artifactKey: Guid(a33b28ae2ade17540aea6ef6d698b154) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-file-word.prefab using Guid(a33b28ae2ade17540aea6ef6d698b154) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '391425923afa1b2625eb51b77dd0b87e') in 0.0141817 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-file-search.prefab
+  artifactKey: Guid(36afdf491da69eb409436937e045fdad) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-file-search.prefab using Guid(36afdf491da69eb409436937e045fdad) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '6ac6f31df18d347eb0db514a6116f9a8') in 0.0162703 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-smartphone.prefab
+  artifactKey: Guid(9ca6e006bd618794cac8872df885af17) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-smartphone.prefab using Guid(9ca6e006bd618794cac8872df885af17) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'a77d9ed83ce7bc2b95aa4018333a9ae7') in 0.0211505 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-phone-lock.prefab
+  artifactKey: Guid(cbad0c30e9dc68741afc514b8bfb54c6) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-phone-lock.prefab using Guid(cbad0c30e9dc68741afc514b8bfb54c6) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '59c60dbbe5355eb8c8b0d1853be36721') in 0.0167581 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-gatsby.prefab
+  artifactKey: Guid(38347a2cbb9b5b34ebba6cc7b6689922) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-gatsby.prefab using Guid(38347a2cbb9b5b34ebba6cc7b6689922) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'f8acee6f9d34529ac454145e1ed505ff') in 0.0161665 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-slice.prefab
+  artifactKey: Guid(a699037a88ca5c54cba8a5870e901376) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-slice.prefab using Guid(a699037a88ca5c54cba8a5870e901376) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '87b84dab924e5553e03e6c2cea789620') in 0.0161119 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-layout-left-2.prefab
+  artifactKey: Guid(1a0b26d5ce041884b9602d88bec5f743) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-layout-left-2.prefab using Guid(1a0b26d5ce041884b9602d88bec5f743) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '55673a55d1be957fa2778f14439cc40c') in 0.0163906 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-calendar-event.prefab
+  artifactKey: Guid(abd6a33cc65e43944adfb24859ff328f) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-calendar-event.prefab using Guid(abd6a33cc65e43944adfb24859ff328f) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'd6cf8729ece3f4f13e2b8a61e558d3bd') in 0.0155413 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-share-forward-box.prefab
+  artifactKey: Guid(145ac96933a1d2e4399c4a28908bd7ec) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-share-forward-box.prefab using Guid(145ac96933a1d2e4399c4a28908bd7ec) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'e5bf4f435b19f50d39d35a9c829d32f1') in 0.0169937 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-markdown.prefab
+  artifactKey: Guid(cba81a44f94d7df479d4f3e31e35b1b7) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-markdown.prefab using Guid(cba81a44f94d7df479d4f3e31e35b1b7) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '19ece74977cea76701e85e0f99e8ea03') in 0.0147568 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-folder-zip.prefab
+  artifactKey: Guid(61afd2ace0fd929428d2f8ae8422eacb) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-folder-zip.prefab using Guid(61afd2ace0fd929428d2f8ae8422eacb) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '8d55c8334b03172d4d6943715869f619') in 0.0163258 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-thermometer.prefab
+  artifactKey: Guid(71f1d231d6125b644bf9d5427645af2a) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-thermometer.prefab using Guid(71f1d231d6125b644bf9d5427645af2a) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'fddb2db2dd0d721e42e96da6b3622ecb') in 0.0164263 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-wheelchair.prefab
+  artifactKey: Guid(40d7b3a14f1b8ab498e88cf31e0c7124) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-wheelchair.prefab using Guid(40d7b3a14f1b8ab498e88cf31e0c7124) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '04432fc153a24bb04de7480463f99071') in 0.0139925 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-sensor.prefab
+  artifactKey: Guid(24fdb96828ccb6d49b83d6a970d520d7) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-sensor.prefab using Guid(24fdb96828ccb6d49b83d6a970d520d7) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '99642b354c8100787dc257ed961b1ea1') in 0.0155538 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-volume-mute.prefab
+  artifactKey: Guid(11b34cec81c39e44dadcf1b71797f273) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-volume-mute.prefab using Guid(11b34cec81c39e44dadcf1b71797f273) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'dcc40bae633358c7f3a302d842b46a02') in 0.0161356 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-git-branch.prefab
+  artifactKey: Guid(5eb66580d2d761e4d8af0df863008e5a) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-git-branch.prefab using Guid(5eb66580d2d761e4d8af0df863008e5a) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '8c601daa191fd7f6328beccfc75ff6ae') in 0.0138612 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-microsoft.prefab
+  artifactKey: Guid(6e5f21e9684035d46aa70c64c73d24db) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-microsoft.prefab using Guid(6e5f21e9684035d46aa70c64c73d24db) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '3168a94649463cd375144a124a226273') in 0.0151733 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-article.prefab
+  artifactKey: Guid(305dee914e6d37347ab4c6a35db5d097) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-article.prefab using Guid(305dee914e6d37347ab4c6a35db5d097) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'b7b919f1fdcdb0afe0fa218b59553018') in 0.0139118 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-cpu.prefab
+  artifactKey: Guid(6f765db4925fa4542a4d8db278e8ee17) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-cpu.prefab using Guid(6f765db4925fa4542a4d8db278e8ee17) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '1f28d892d111f0f5b42a426325dd0dd3') in 0.0183676 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-history.prefab
+  artifactKey: Guid(0449a84418f1b3b4d88cceffdaa155de) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-history.prefab using Guid(0449a84418f1b3b4d88cceffdaa155de) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'c9e80353570e71c27bbbd1a728aadb09') in 0.0154076 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-gallery.prefab
+  artifactKey: Guid(88e2356bd4c98124b9312ad7675bd46b) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-gallery.prefab using Guid(88e2356bd4c98124b9312ad7675bd46b) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '2bfa600a2ac0747fdfe7fea41ace4181') in 0.0152732 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-gift-2.prefab
+  artifactKey: Guid(16a6ad14df7d8c44289604c04d64a742) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-gift-2.prefab using Guid(16a6ad14df7d8c44289604c04d64a742) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'e06ef39e89a2fdcad711408eab228d80') in 0.0165715 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-file-ppt.prefab
+  artifactKey: Guid(66781a1ad614e2744ae9f815790daac1) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-file-ppt.prefab using Guid(66781a1ad614e2744ae9f815790daac1) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'f60bb0d16efbea8fe9cdb68eb71fc692') in 0.0142237 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-folder-reduce.prefab
+  artifactKey: Guid(f9b7a1302a2e4a1488890cd04dd1cf1b) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-folder-reduce.prefab using Guid(f9b7a1302a2e4a1488890cd04dd1cf1b) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '7b2c6d694b911a69ec5d140e6c3d992a') in 0.0152968 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-error-warning.prefab
+  artifactKey: Guid(4e104f5ffb33b1f4b8504c7d0c19fae7) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-error-warning.prefab using Guid(4e104f5ffb33b1f4b8504c7d0c19fae7) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '00240423511d662105af7b99af631367') in 0.0138317 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-bill.prefab
+  artifactKey: Guid(63260824cebb3cb4cab98299be3c4fda) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-bill.prefab using Guid(63260824cebb3cb4cab98299be3c4fda) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '3dd0b001ad110f83af4e26a9122a665b') in 0.0154084 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-customer-service-2.prefab
+  artifactKey: Guid(6a55cd7c80621ec488afd2dfe408d932) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-customer-service-2.prefab using Guid(6a55cd7c80621ec488afd2dfe408d932) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'a48c1205e9944858b5ca008260d2e708') in 0.0140633 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-printer-cloud.prefab
+  artifactKey: Guid(68df53ad96226c1489c88e8064e1e1aa) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-printer-cloud.prefab using Guid(68df53ad96226c1489c88e8064e1e1aa) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '75b3f57da9c8f6d360ae7f53e3131163') in 0.0175592 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-remote-control-2.prefab
+  artifactKey: Guid(011d310df0ea9dd41affb9feea68f4a0) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-remote-control-2.prefab using Guid(011d310df0ea9dd41affb9feea68f4a0) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '85eeb3aea575e627d6eae796ddca8c8a') in 0.014608 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-medium.prefab
+  artifactKey: Guid(0782cc4700464b84ea5634a0ab9e16c2) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-medium.prefab using Guid(0782cc4700464b84ea5634a0ab9e16c2) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '6e9cfe6813a35b9c1090b7623dff07d8') in 0.0153294 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-pencil-ruler-2.prefab
+  artifactKey: Guid(935583b578d49114695cc517d42dcae2) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-pencil-ruler-2.prefab using Guid(935583b578d49114695cc517d42dcae2) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'b676637a35c43dbe723ae006e88d8d0e') in 0.0159116 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-camera-lens.prefab
+  artifactKey: Guid(f26c2654f09f54b46b4b054418268d30) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-camera-lens.prefab using Guid(f26c2654f09f54b46b4b054418268d30) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '03b06052ef24fd5a3363b89c8b0f08b4') in 0.0141047 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-emotion-happy.prefab
+  artifactKey: Guid(d5a02a36a2a7756479a409daf468b43c) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-emotion-happy.prefab using Guid(d5a02a36a2a7756479a409daf468b43c) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '3af2a039e8604aa176d024167eb00fad') in 0.0154242 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-arrow-right-s.prefab
+  artifactKey: Guid(d248479bc7477d7438af0a6891abe0b1) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-arrow-right-s.prefab using Guid(d248479bc7477d7438af0a6891abe0b1) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '87a26452a563604a875d1ac255b781ac') in 0.0166229 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-wechat.prefab
+  artifactKey: Guid(c65a63cfb4d60b34c883f5215fa1095d) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-wechat.prefab using Guid(c65a63cfb4d60b34c883f5215fa1095d) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'a249f5cb6b776e42a58e7ab29bf44a1b') in 0.0158906 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-spotify.prefab
+  artifactKey: Guid(024c02ef2c11b61458e25cac04d1fd8a) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-spotify.prefab using Guid(024c02ef2c11b61458e25cac04d1fd8a) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '9efee0891616eae3a1689020bade3962') in 0.0151989 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000012 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-alarm.prefab
+  artifactKey: Guid(eebd6e76c9216d244ae830d98236263e) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-alarm.prefab using Guid(eebd6e76c9216d244ae830d98236263e) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'e022e2b18f70a53bd49822d4655deb38') in 0.01881 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-zhihu.prefab
+  artifactKey: Guid(ce55b5811ef59e940a245b69a0168c3c) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-zhihu.prefab using Guid(ce55b5811ef59e940a245b69a0168c3c) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '7262d8e4b4f3083fe644cbb988a208a7') in 0.0148883 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-product-hunt.prefab
+  artifactKey: Guid(23a257487fb068e40af2eae3336250d6) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-product-hunt.prefab using Guid(23a257487fb068e40af2eae3336250d6) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'f55daae329d23222019f44d698c88698') in 0.0146126 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-e-bike-2.prefab
+  artifactKey: Guid(ad13fcfdebf336643a7727e040fa7b99) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-e-bike-2.prefab using Guid(ad13fcfdebf336643a7727e040fa7b99) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '1d109024a825aa5a2d514e55183f0cf1') in 0.01531 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-slideshow.prefab
+  artifactKey: Guid(16ff957797220474785fe620fb942e7a) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-slideshow.prefab using Guid(16ff957797220474785fe620fb942e7a) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'de7cffa26b652b74b7199194806b6e23') in 0.0156103 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-device.prefab
+  artifactKey: Guid(d2f6e2453665e484dabf9598d16dd77f) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-device.prefab using Guid(d2f6e2453665e484dabf9598d16dd77f) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '1530724a29c940cbbb8d8e1b57615c3f') in 0.0155787 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-pen-nib.prefab
+  artifactKey: Guid(65d8b153c0b7cfb458e9a7d8ce062bd1) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-pen-nib.prefab using Guid(65d8b153c0b7cfb458e9a7d8ce062bd1) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '7b7b309ee3b090091afea20ff944c326') in 0.0155674 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/Resources
+  artifactKey: Guid(1fac143b1a1b4594f9483ec1fabfec99) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Resources using Guid(1fac143b1a1b4594f9483ec1fabfec99) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '35891bffedb8f6ff76125f15876afbac') in 0.0107231 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-qq.prefab
+  artifactKey: Guid(41e02e6bf6ba615429e51cdeafe9b58b) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-qq.prefab using Guid(41e02e6bf6ba615429e51cdeafe9b58b) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'b80e48b662f17a90cf3b4c0dd0bb2b9c') in 0.0156832 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000012 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-arrow-left-s.prefab
+  artifactKey: Guid(0519cfb5963316c489ac2e6b129c4253) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-arrow-left-s.prefab using Guid(0519cfb5963316c489ac2e6b129c4253) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '3287a246f2e8a70bb7d7829f43d3c31e') in 0.0127909 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-thunderstorms.prefab
+  artifactKey: Guid(ecdfff21155565f4f8d9463c188c03e2) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-thunderstorms.prefab using Guid(ecdfff21155565f4f8d9463c188c03e2) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'dfc4fdc699f453f4212d52380bab305a') in 0.0155029 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-cup.prefab
+  artifactKey: Guid(65a3f118506962a42a1f9ed8a38d2f93) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-cup.prefab using Guid(65a3f118506962a42a1f9ed8a38d2f93) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'b00f479e8f0302fb017df5fbe2b9c40d') in 0.016432 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-pie-chart-2.prefab
+  artifactKey: Guid(c43eb8287fc7765448776add90bed2a0) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-pie-chart-2.prefab using Guid(c43eb8287fc7765448776add90bed2a0) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '47c79f0cb053499eb08b13f3e2b1cc25') in 0.0141039 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-layout-6.prefab
+  artifactKey: Guid(6aa7fb989126f484bafebddcfe3e48f9) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-layout-6.prefab using Guid(6aa7fb989126f484bafebddcfe3e48f9) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '460605af88e183b509a95b8e83fe4ae9') in 0.0160822 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-guide.prefab
+  artifactKey: Guid(745e79c0327121c47b1bef888295d97d) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-guide.prefab using Guid(745e79c0327121c47b1bef888295d97d) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'fbe78a9526df51b55786190adcb306ac') in 0.0133577 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-battery-share.prefab
+  artifactKey: Guid(336bb48e690d6324884530a913668b66) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-battery-share.prefab using Guid(336bb48e690d6324884530a913668b66) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'e3464d59ed38363bee6fca3fcaad6b47') in 0.0159667 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-home-smile-2.prefab
+  artifactKey: Guid(b377c13616e736a4c8f34f46d29a2331) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-home-smile-2.prefab using Guid(b377c13616e736a4c8f34f46d29a2331) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'f856561ebfaddf070143cc4b1735ac8b') in 0.013287 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-mental-health.prefab
+  artifactKey: Guid(c26071a64f2d3e346a1b05ce93785fcd) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-mental-health.prefab using Guid(c26071a64f2d3e346a1b05ce93785fcd) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'b597c405e8bddd2b76a42546aabdcf51') in 0.0166878 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-radio-2.prefab
+  artifactKey: Guid(d38b3c8d4c9a0f448bdd3727e244ee41) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-radio-2.prefab using Guid(d38b3c8d4c9a0f448bdd3727e244ee41) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'c17c424c65c7679f120aacde13e8e5f7') in 0.0150051 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-sun.prefab
+  artifactKey: Guid(c38e3f185f8c7c845b1c1ed773ad5233) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-sun.prefab using Guid(c38e3f185f8c7c845b1c1ed773ad5233) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '579551edb35552d892528f7aa367fb57') in 0.0148554 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000012 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-settings-5.prefab
+  artifactKey: Guid(f8c4d53099b150a4fbc1e9ef9f840674) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-settings-5.prefab using Guid(f8c4d53099b150a4fbc1e9ef9f840674) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '61afe0767ebfe885f786a551cf1ec81f') in 0.0178163 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-footprint.prefab
+  artifactKey: Guid(e0308e128ca4ca04791ecd59029d0e14) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-footprint.prefab using Guid(e0308e128ca4ca04791ecd59029d0e14) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '1b7203e140d108af059509fbb2750fa0') in 0.015659 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-subway-wifi.prefab
+  artifactKey: Guid(d8f29717501da4246b1750cb8dbe3d61) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-subway-wifi.prefab using Guid(d8f29717501da4246b1750cb8dbe3d61) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'fb6eed7de59a084af0f6e8ca37decec6') in 0.0154346 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-shield-star.prefab
+  artifactKey: Guid(e5774e0c50b43ee4394e21d98901c8d1) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-shield-star.prefab using Guid(e5774e0c50b43ee4394e21d98901c8d1) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '9d3bb8a4083ba2c772103824e6200c30') in 0.0156715 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-hammer.prefab
+  artifactKey: Guid(3cfbba5d64a1d0c4cbfa214ba319ca2e) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-hammer.prefab using Guid(3cfbba5d64a1d0c4cbfa214ba319ca2e) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'a02b8f21b09ae931a8eaa999705c4f3b') in 0.0153345 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-t-shirt-air.prefab
+  artifactKey: Guid(0f4acbcfc4c59884e8d1c83b0816771b) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-t-shirt-air.prefab using Guid(0f4acbcfc4c59884e8d1c83b0816771b) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '75fde2171efb494b2524843a451c3598') in 0.0134903 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-settings.prefab
+  artifactKey: Guid(2efdb94693b91144eb8d0fe37cc68f33) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-settings.prefab using Guid(2efdb94693b91144eb8d0fe37cc68f33) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'cfaec9019697a4934dd5e2041174b352') in 0.014977 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-server.prefab
+  artifactKey: Guid(d37a7f78431cc8145b348ce9bb967a85) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-server.prefab using Guid(d37a7f78431cc8145b348ce9bb967a85) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'fe55f8af80793d6c35eb962821e07c8c') in 0.015513 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-home-wifi.prefab
+  artifactKey: Guid(433fd28f91003414a8211dfd136a5ef2) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-home-wifi.prefab using Guid(433fd28f91003414a8211dfd136a5ef2) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'cf4a6c2b3e4efca071c20422f7633437') in 0.016245 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-eraser.prefab
+  artifactKey: Guid(45331645ad369674dbbec463060972e2) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-eraser.prefab using Guid(45331645ad369674dbbec463060972e2) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '4ccd53bc7fe1bae8c4ec3d5115fddd81') in 0.0143699 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-collage.prefab
+  artifactKey: Guid(53257923a5fc6b84ca6ba7ef64974c9e) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-collage.prefab using Guid(53257923a5fc6b84ca6ba7ef64974c9e) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '32933c2e17d6280a1415b57655be6d0c') in 0.0178652 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-map-pin-4.prefab
+  artifactKey: Guid(2ebe015db0ec35f42aacdf907c94be3b) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-map-pin-4.prefab using Guid(2ebe015db0ec35f42aacdf907c94be3b) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '7872d6109757b0d4ea17ef43aade9c29') in 0.0174707 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-apps.prefab
+  artifactKey: Guid(14793bf42fe41f0428e173cc78df3d88) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-apps.prefab using Guid(14793bf42fe41f0428e173cc78df3d88) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '54f1f504cea137d796162124d6db5589') in 0.0148318 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-list-settings.prefab
+  artifactKey: Guid(3ca32f83fbe1ffb4680bcfddc5d5c078) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-list-settings.prefab using Guid(3ca32f83fbe1ffb4680bcfddc5d5c078) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '75ce2a3d8fceec7eb0425031d784dcfb') in 0.0168566 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-building.prefab
+  artifactKey: Guid(29a9e0c88eeea1f4a9e9bb871235d2a7) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-building.prefab using Guid(29a9e0c88eeea1f4a9e9bb871235d2a7) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'e36da7ef85b9ac17da322e5802def34a') in 0.0147398 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-signal-wifi-error.prefab
+  artifactKey: Guid(c69337bd7558fae4dba4c661b80c134e) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-signal-wifi-error.prefab using Guid(c69337bd7558fae4dba4c661b80c134e) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'd98a5d9bf8b8719ec6e2d19d6a892200') in 0.0155365 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-cake-3.prefab
+  artifactKey: Guid(67336655d88d0c84592e0c7c0ad554fc) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-cake-3.prefab using Guid(67336655d88d0c84592e0c7c0ad554fc) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '80cdb72a013546a1d4e4c880593d3539') in 0.0155253 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-fingerprint-2.prefab
+  artifactKey: Guid(4f2a709c5a743dc4bb7157a233563c37) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-fingerprint-2.prefab using Guid(4f2a709c5a743dc4bb7157a233563c37) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '1c74e98896ee5dfbfcfd4aee11a3678e') in 0.0158896 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-lock-password.prefab
+  artifactKey: Guid(9dedba7ce7a327c43b9e95d0e2deebd5) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-lock-password.prefab using Guid(9dedba7ce7a327c43b9e95d0e2deebd5) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'ea7994b962f0070421b30e55518e07e4') in 0.014067 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-windows.prefab
+  artifactKey: Guid(13e530546bd0fd248a3433ad95567652) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-windows.prefab using Guid(13e530546bd0fd248a3433ad95567652) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '10fa37f55ecb98f5079644b777230a92') in 0.0172042 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-star.prefab
+  artifactKey: Guid(bc71f3a3568d51f42aef5f992b88cecf) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-star.prefab using Guid(bc71f3a3568d51f42aef5f992b88cecf) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '400ab8c9492ce5eea8927ff80f932100') in 0.0151309 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-install.prefab
+  artifactKey: Guid(211f2dbac2e55a246b1c88b53f3c4737) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-install.prefab using Guid(211f2dbac2e55a246b1c88b53f3c4737) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'e1d8a050ad934eea076f0b04b2566427') in 0.0152144 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-login-box.prefab
+  artifactKey: Guid(c85c7a1d66ed3c64a9bd903d586ec7e1) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-login-box.prefab using Guid(c85c7a1d66ed3c64a9bd903d586ec7e1) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'd7a8611c52bd957ad7afad8964fe0bc0') in 0.0144632 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000012 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-closed-captioning.prefab
+  artifactKey: Guid(0da48ba17587d324ca36d475570172a7) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-closed-captioning.prefab using Guid(0da48ba17587d324ca36d475570172a7) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '659fd4c07fbfe7ac2c87733054cbcd95') in 0.0161347 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-run.prefab
+  artifactKey: Guid(bcf7de3ec29a4854daa0efd07ad1ebe2) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-run.prefab using Guid(bcf7de3ec29a4854daa0efd07ad1ebe2) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'bee4581025cd174872bae2f442ed7ea0') in 0.0161347 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-chat-forward.prefab
+  artifactKey: Guid(1fadff5c6a7d12248bdf8af176427551) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-chat-forward.prefab using Guid(1fadff5c6a7d12248bdf8af176427551) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '7837714175edf271bf566c28335bf07e') in 0.0194325 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-focus-2.prefab
+  artifactKey: Guid(2b785b7eb456df449ad803d59e8eb4ae) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-focus-2.prefab using Guid(2b785b7eb456df449ad803d59e8eb4ae) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'c3cf4b951e00220f8fe657c341617425') in 0.0156123 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-booklet.prefab
+  artifactKey: Guid(f6adb530f1747b5458e35b8bbb1ad1b9) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-booklet.prefab using Guid(f6adb530f1747b5458e35b8bbb1ad1b9) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '85701728607a23ca197eb4a443fd6027') in 0.0149043 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-artboard.prefab
+  artifactKey: Guid(4152037bdcfebed45a4a386ccde02ab0) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-artboard.prefab using Guid(4152037bdcfebed45a4a386ccde02ab0) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '22685d38b4e34859b3af2ba3c69497b6') in 0.0151589 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/Settings/Ultra_PipelineAsset.asset
+  artifactKey: Guid(0d4f79168f3739b49893a73746dd3795) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Settings/Ultra_PipelineAsset.asset using Guid(0d4f79168f3739b49893a73746dd3795) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'ee479a8aab4f7e1ead56c200d3bf3c0c') in 0.0651817 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-reply.prefab
+  artifactKey: Guid(470e8e4c89f53e2459f6391b782bb53e) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-reply.prefab using Guid(470e8e4c89f53e2459f6391b782bb53e) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '9f5c2a3956b139445ee3727d54a985c5') in 0.017283 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000023 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-sticky-note.prefab
+  artifactKey: Guid(55cfafb59c77a4b458ef68db85a3f20b) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-sticky-note.prefab using Guid(55cfafb59c77a4b458ef68db85a3f20b) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '60a3e180ee53e3cff0ac1e000e26e0e2') in 0.0215558 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-drive.prefab
+  artifactKey: Guid(3ce53e64130e8e741bcdde7f7f465ae7) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-drive.prefab using Guid(3ce53e64130e8e741bcdde7f7f465ae7) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '261f9791252161d82760a537149227b9') in 0.0198421 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-boxing.prefab
+  artifactKey: Guid(270475e5350db3c439f944bb10cf50ed) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-boxing.prefab using Guid(270475e5350db3c439f944bb10cf50ed) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '49790ed50ac9ad29e2d1a5b1205741ac') in 0.0188373 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-mv.prefab
+  artifactKey: Guid(669876afb9e7f654e807912d7764ba84) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-mv.prefab using Guid(669876afb9e7f654e807912d7764ba84) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '49a58b3a1ff0a850b839ed988d1a9f9d') in 0.017927 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-upload-cloud-2.prefab
+  artifactKey: Guid(6c7fbb86c616f7149945df4bf87c6d74) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-upload-cloud-2.prefab using Guid(6c7fbb86c616f7149945df4bf87c6d74) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '9cc852c999ef5bfc78ea9319d38a9ed4') in 0.0183441 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-apps-2.prefab
+  artifactKey: Guid(5892f8c2e9b0a634ebcc009ba1423581) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-apps-2.prefab using Guid(5892f8c2e9b0a634ebcc009ba1423581) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '1a60eb5abd9a918d6dbdcad1a9dec302') in 0.0154097 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-rss.prefab
+  artifactKey: Guid(996e6e80dffdde747ae218d556333195) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-rss.prefab using Guid(996e6e80dffdde747ae218d556333195) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '68b6ffbd3272fff0093f66c8109c2949') in 0.0151279 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-bear-smile.prefab
+  artifactKey: Guid(11b54b9f11e39004eb51369baddeba8a) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-bear-smile.prefab using Guid(11b54b9f11e39004eb51369baddeba8a) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'bf32e0da0a0610cee248a54dbe27a052') in 0.015176 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-menu-unfold.prefab
+  artifactKey: Guid(4cf8e42b7fdb1924ea0bc20c2b86c5c1) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-menu-unfold.prefab using Guid(4cf8e42b7fdb1924ea0bc20c2b86c5c1) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '02282bc11f83807535bae131a04dbfc5') in 0.0158607 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-24-hours.prefab
+  artifactKey: Guid(abf20051f9a0f554190a6f6919bcfc5f) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-24-hours.prefab using Guid(abf20051f9a0f554190a6f6919bcfc5f) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '14fa8459d7f9046bc861792de038537c') in 0.0147868 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-rainy.prefab
+  artifactKey: Guid(11641069fdbe242429cef8ecbd88000b) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-rainy.prefab using Guid(11641069fdbe242429cef8ecbd88000b) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '807a17db2b3b18fd571a18df0b5f1ad1') in 0.0150563 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000012 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-flashlight.prefab
+  artifactKey: Guid(1cd7b0e3721dc1c468a6b5284b7f8784) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-flashlight.prefab using Guid(1cd7b0e3721dc1c468a6b5284b7f8784) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '78ca72422f46d96411f5228d3c2cac7e') in 0.0151057 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-share-box.prefab
+  artifactKey: Guid(fc18a8cd88fc89f4c9604a3fcda50f30) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-share-box.prefab using Guid(fc18a8cd88fc89f4c9604a3fcda50f30) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '40d7dfc761c21d1062687eed730b85bd') in 0.0150546 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-patreon.prefab
+  artifactKey: Guid(b55d849485d9c744f98ab0d7690217d1) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-patreon.prefab using Guid(b55d849485d9c744f98ab0d7690217d1) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '4aea9378d3f27c49260f06925bc4b3d8') in 0.0193125 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-shape-2.prefab
+  artifactKey: Guid(d4cfec61ee4657c439715533bd50c61a) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-shape-2.prefab using Guid(d4cfec61ee4657c439715533bd50c61a) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '8b8e10ba3d536f0a279d52fb108df4d1') in 0.015147 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-drag-drop.prefab
+  artifactKey: Guid(205b1eadebf0ba6488c385b247588aa5) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-drag-drop.prefab using Guid(205b1eadebf0ba6488c385b247588aa5) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'efbe5b5449df0963a2c0d9e5e9a9d9d6') in 0.0145266 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000012 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-chat-4.prefab
+  artifactKey: Guid(d4ef99c6c3e4fee4f8d955018895704e) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-chat-4.prefab using Guid(d4ef99c6c3e4fee4f8d955018895704e) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'fb2cd341437e27134e64e7e578b6c258') in 0.0152643 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-behance.prefab
+  artifactKey: Guid(d0eebc0da58a0e540a6b38cd53781a4d) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-behance.prefab using Guid(d0eebc0da58a0e540a6b38cd53781a4d) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '688a2d7128100d4102047b85fb6161bb') in 0.0166772 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-external-link.prefab
+  artifactKey: Guid(24e98077ee8cfef458511318079d9f7f) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-external-link.prefab using Guid(24e98077ee8cfef458511318079d9f7f) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'ad28455614f948f237c0e5ed878d2dba') in 0.0169078 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-file-shred.prefab
+  artifactKey: Guid(2ef035b3861bc3649894a47f60b2fb4f) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-file-shred.prefab using Guid(2ef035b3861bc3649894a47f60b2fb4f) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'c8c3c385624a56bd351d73a44a6968df') in 0.0149181 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-parking.prefab
+  artifactKey: Guid(a738bb020b82db24496615d51a9b7733) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-parking.prefab using Guid(a738bb020b82db24496615d51a9b7733) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'c8fc87a77dfa9058cbd3f80c3de982c9') in 0.0141739 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-battery.prefab
+  artifactKey: Guid(0a05078b0e0bb3b49b2e2211817192bb) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-battery.prefab using Guid(0a05078b0e0bb3b49b2e2211817192bb) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '3031787a837762a008adf45a91dae2b9') in 0.0155995 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-voice-recognition.prefab
+  artifactKey: Guid(d4aeea2f880ecce4bacf7e546751b967) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-voice-recognition.prefab using Guid(d4aeea2f880ecce4bacf7e546751b967) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '2ca4bf06db40fab67ade19e0f5cf42ff') in 0.016588 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-disqus.prefab
+  artifactKey: Guid(f2026794ee3066f46ad9f7f1553028d8) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-disqus.prefab using Guid(f2026794ee3066f46ad9f7f1553028d8) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'ceaf2e88e4e49619e7393999ff81e6c4') in 0.0170321 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-cloud-off.prefab
+  artifactKey: Guid(81ce48469be196b4181819a3932ce127) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-cloud-off.prefab using Guid(81ce48469be196b4181819a3932ce127) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'd473d5442e3fcb81afc783df9fdc893f') in 0.0142244 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-plug.prefab
+  artifactKey: Guid(072dcd95841ebb447906f6c8593eb9ee) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-plug.prefab using Guid(072dcd95841ebb447906f6c8593eb9ee) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '7493004380ab5b0774cd32982d686f1e') in 0.0462048 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-folder-history.prefab
+  artifactKey: Guid(e80db8b3b718b714b94f816225cd8537) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-folder-history.prefab using Guid(e80db8b3b718b714b94f816225cd8537) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '2fb72f407e2eb30c56f0ab61501f4c25') in 0.0153488 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000012 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-bike.prefab
+  artifactKey: Guid(1d51f2b65f852614891af82f3071e230) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-bike.prefab using Guid(1d51f2b65f852614891af82f3071e230) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'bbb022715cdee28a0b79be696801e418') in 0.0152335 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-save-3.prefab
+  artifactKey: Guid(52db7997143d29d46af2e4d6139abc21) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-save-3.prefab using Guid(52db7997143d29d46af2e4d6139abc21) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '47cefe50d4feb1cbe59b5dfeadb643e9') in 0.0162687 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-radar.prefab
+  artifactKey: Guid(69d8bd0e664787f428308e21e1fefbc8) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-radar.prefab using Guid(69d8bd0e664787f428308e21e1fefbc8) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'fc809090dbaa2aa6b3bdb2637f7b4b29') in 0.015678 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-chat-settings.prefab
+  artifactKey: Guid(3dc22209da64df941b2af3d720d8e45f) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-chat-settings.prefab using Guid(3dc22209da64df941b2af3d720d8e45f) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'f4884e421faeb85a1b6f55e59b6d7d1f') in 0.0159527 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-settings-2.prefab
+  artifactKey: Guid(779a8fc0d1dda014fa8f9bae22d0c119) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-settings-2.prefab using Guid(779a8fc0d1dda014fa8f9bae22d0c119) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '8f2efc8b43091f6b76cbfc24390b0053') in 0.0172574 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-video.prefab
+  artifactKey: Guid(50fff0e1377d7f949a935303533afc6e) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-video.prefab using Guid(50fff0e1377d7f949a935303533afc6e) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '117b07012b2158b1a6837d0369db3d5d') in 0.0176135 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-steering-2.prefab
+  artifactKey: Guid(5b619d9a9bcabed41bb3876192fb5309) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-steering-2.prefab using Guid(5b619d9a9bcabed41bb3876192fb5309) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '605d3fbdf6055b021cf9392d741c4526') in 0.0160598 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-mark-pen.prefab
+  artifactKey: Guid(6cd39bff64e5e1b45bee72f81526723f) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-mark-pen.prefab using Guid(6cd39bff64e5e1b45bee72f81526723f) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '7dc6eab8781aae87d04397f2f8a980b5') in 0.0139352 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-close-circle.prefab
+  artifactKey: Guid(017a1c72dcdfa784e99509d7e31fea21) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-close-circle.prefab using Guid(017a1c72dcdfa784e99509d7e31fea21) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '3e2a4e3600d0f1037e2558f47c5ab903') in 0.0147668 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000012 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-money-cny-circle.prefab
+  artifactKey: Guid(14c011cef8748c442b39308d2f65aa69) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-money-cny-circle.prefab using Guid(14c011cef8748c442b39308d2f65aa69) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'e128e93c923942d217473d73b58479bd') in 0.0153467 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-search.prefab
+  artifactKey: Guid(5dc47e39eaec0204fb8fdce22923cca2) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-search.prefab using Guid(5dc47e39eaec0204fb8fdce22923cca2) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'd8a63c2575949f06ff27b459a2bc59f4') in 0.0155613 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-paint-brush.prefab
+  artifactKey: Guid(96689e176581f1949a778cca50eef7b4) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-paint-brush.prefab using Guid(96689e176581f1949a778cca50eef7b4) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '8e1116552db9b0cd5a2f6b04b33d10ec') in 0.015475 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-lock-2.prefab
+  artifactKey: Guid(3d26d058e66f0464592622f4e95463d0) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-lock-2.prefab using Guid(3d26d058e66f0464592622f4e95463d0) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'eafa4099f21a2547dd410b243a2d3f8b') in 0.0155278 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-chat-upload.prefab
+  artifactKey: Guid(14dc0cb357614f747a50bec2f9ca478e) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-chat-upload.prefab using Guid(14dc0cb357614f747a50bec2f9ca478e) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '740f23b60c3fff46af359ddd70c33016') in 0.015471 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-home-5.prefab
+  artifactKey: Guid(4e020f460575e734a9a391d429dbfc46) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-home-5.prefab using Guid(4e020f460575e734a9a391d429dbfc46) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'af1f039e246fa4825467672e2be13c02') in 0.020667 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-mail-send.prefab
+  artifactKey: Guid(727884c48a9a8ce419d585113769f745) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-mail-send.prefab using Guid(727884c48a9a8ce419d585113769f745) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '7b416b4f8b767dfc6f05b08f0ef790d9') in 0.0170374 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-folder-user.prefab
+  artifactKey: Guid(0878e284543bf4942b15c514949deaac) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-folder-user.prefab using Guid(0878e284543bf4942b15c514949deaac) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '451c09a1f813460b265a389ad65dfa3a') in 0.0161464 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000031 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-file-paper.prefab
+  artifactKey: Guid(c3c9b1a54869a9e43a19065e1f490fb9) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-file-paper.prefab using Guid(c3c9b1a54869a9e43a19065e1f490fb9) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '1b3e3907aab8bd82d7bee302d41ffdf5') in 0.0169928 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-contrast.prefab
+  artifactKey: Guid(45ac92703642ac2498955a6f1a74e51c) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-contrast.prefab using Guid(45ac92703642ac2498955a6f1a74e51c) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '714861a67e9969d246c76aa81693b318') in 0.0167678 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-signal-wifi-1.prefab
+  artifactKey: Guid(b5cbb008d3d005f41b2d832ad8f078c5) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-signal-wifi-1.prefab using Guid(b5cbb008d3d005f41b2d832ad8f078c5) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'a0c5b730a949b59ebfdabada4fbef17f') in 0.0158706 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000012 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-drag-move-2.prefab
+  artifactKey: Guid(0fdaecd9eb0b3d44eb614f0d10791d63) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-drag-move-2.prefab using Guid(0fdaecd9eb0b3d44eb614f0d10791d63) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '163e7eb23122290e6c6ff0012f7e0e04') in 0.0169167 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-zcool.prefab
+  artifactKey: Guid(20e58baa17a7c3b4a8e5f801b86774a4) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-zcool.prefab using Guid(20e58baa17a7c3b4a8e5f801b86774a4) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'c241679d6f622e190e152dec00bed84c') in 0.0162806 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000028 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-search-eye.prefab
+  artifactKey: Guid(a8ff059b6bf18ca4d8eb042e93824c56) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-search-eye.prefab using Guid(a8ff059b6bf18ca4d8eb042e93824c56) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '0139dd6dd68b5116984b2332e73e673e') in 0.0167038 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-hand-sanitizer.prefab
+  artifactKey: Guid(d575c0dc3155dac428532772a178af25) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-hand-sanitizer.prefab using Guid(d575c0dc3155dac428532772a178af25) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '9aff38e4208a064b1688bd496ad85766') in 0.0196589 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-lock-unlock.prefab
+  artifactKey: Guid(6129a6b458a06364a91bb961a51d3984) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-lock-unlock.prefab using Guid(6129a6b458a06364a91bb961a51d3984) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '9fb23344d5aec6ea5828edc188029727') in 0.0173805 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-bell.prefab
+  artifactKey: Guid(3a47452d436ace747a9d1596218e0d1b) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-bell.prefab using Guid(3a47452d436ace747a9d1596218e0d1b) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '1a92eab0f4dda5c9ada28fd9490c1f85') in 0.0163668 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-npmjs.prefab
+  artifactKey: Guid(5609ac2f68ee28343a88a4eb29922b21) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-npmjs.prefab using Guid(5609ac2f68ee28343a88a4eb29922b21) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'd8725ccd176c81f8077f6b09aa9ec031') in 0.0149011 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000030 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-team.prefab
+  artifactKey: Guid(cbc1c3519681e5b4b92e1287a561b6fe) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-team.prefab using Guid(cbc1c3519681e5b4b92e1287a561b6fe) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'd95a517beb69842d963e92147097ac0f') in 0.019041 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-roadster.prefab
+  artifactKey: Guid(2f243f0ef9a99454c86c63a3db5bfed4) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-roadster.prefab using Guid(2f243f0ef9a99454c86c63a3db5bfed4) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'bd71d7095ba1220e250dfcbaba266f8e') in 0.0165308 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000012 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-umbrella.prefab
+  artifactKey: Guid(0ec717fd18a0ca640aee87c1bf6335ac) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-umbrella.prefab using Guid(0ec717fd18a0ca640aee87c1bf6335ac) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'e54313939d823d5490a8f568a0f05870') in 0.0181763 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-book.prefab
+  artifactKey: Guid(588f2cee40671764aa99f6b119366e10) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-book.prefab using Guid(588f2cee40671764aa99f6b119366e10) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '40ddb6c89131b5410493504b104eef07') in 0.0169275 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-database-2.prefab
+  artifactKey: Guid(cf106bf432d0cff4eae1eb1e8ed9a1cb) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-database-2.prefab using Guid(cf106bf432d0cff4eae1eb1e8ed9a1cb) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '6ef327983034f28b1c6fce3747d3386e') in 0.0176032 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-advertisement.prefab
+  artifactKey: Guid(1999dd0a49054f549ab4aca7d9686e86) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-advertisement.prefab using Guid(1999dd0a49054f549ab4aca7d9686e86) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '38cbd3273ca20bc90b7116000951e227') in 0.0173037 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-t-box.prefab
+  artifactKey: Guid(6a309b9c9c3ff544d9e1d7fbf58d5128) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-t-box.prefab using Guid(6a309b9c9c3ff544d9e1d7fbf58d5128) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '721c2091694460b1ec5cd4fb00827173') in 0.0182074 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-emotion-laugh.prefab
+  artifactKey: Guid(8a652f6df9bdc3d4087203a72cb1277b) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-emotion-laugh.prefab using Guid(8a652f6df9bdc3d4087203a72cb1277b) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '50e47ed4844ea6bee996790f32615078') in 0.0165846 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-scissors.prefab
+  artifactKey: Guid(c50116075ef53234ba9cba233e13d326) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-scissors.prefab using Guid(c50116075ef53234ba9cba233e13d326) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '52ce7b2364469f4487319bf620e951a5') in 0.017617 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-currency.prefab
+  artifactKey: Guid(749c33d548682dc4eb3c0a464bc88308) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-currency.prefab using Guid(749c33d548682dc4eb3c0a464bc88308) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '44158f7e859b8eaddf62fad9926b1119') in 0.0146266 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-copyright.prefab
+  artifactKey: Guid(80d284dbcb44d7349af4c463bf136dac) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-copyright.prefab using Guid(80d284dbcb44d7349af4c463bf136dac) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '085db1746eb30a485a3d6117865df708') in 0.0160979 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-upload-cloud.prefab
+  artifactKey: Guid(720a608670a48764faab2eff71497952) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-upload-cloud.prefab using Guid(720a608670a48764faab2eff71497952) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '2438896620c6e19239bd21084c7bc57c') in 0.015956 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-codepen.prefab
+  artifactKey: Guid(f73174da0c80e2d4bbb1a09b12e2deaf) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-codepen.prefab using Guid(f73174da0c80e2d4bbb1a09b12e2deaf) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'a05177745b1c0352ace7ad41c6722074') in 0.017391 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-fridge.prefab
+  artifactKey: Guid(a075703ed1d8aaf48ad56ff3d8ba8b39) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-fridge.prefab using Guid(a075703ed1d8aaf48ad56ff3d8ba8b39) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'b01f6a17bf7718c77c79e94df6eabf2a') in 0.0148522 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-phone-find.prefab
+  artifactKey: Guid(fd28988c17506714ea754c1cd02d3a40) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-phone-find.prefab using Guid(fd28988c17506714ea754c1cd02d3a40) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '7885aaa9716fd65d35989f244de4be41') in 0.0196339 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000012 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-wallet-3.prefab
+  artifactKey: Guid(c38374aa622301a43bd4c197eff60e68) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-wallet-3.prefab using Guid(c38374aa622301a43bd4c197eff60e68) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '25c275d0a727b5d66c5101cb9800533e') in 0.0156715 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-arrow-go-forward.prefab
+  artifactKey: Guid(860177bcb8d3c6b4ea9278424db62f97) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-arrow-go-forward.prefab using Guid(860177bcb8d3c6b4ea9278424db62f97) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '5244c3cc1bac7509299bad46f7f558e5') in 0.0149274 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000018 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-vuejs.prefab
+  artifactKey: Guid(6847d7a34c8a9124d8a292d3490e0844) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-vuejs.prefab using Guid(6847d7a34c8a9124d8a292d3490e0844) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'e5ff833ecada1889048d8adcc9206e26') in 0.0144998 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-discuss.prefab
+  artifactKey: Guid(3eafc6ca2006d8148b23482617f89ace) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-discuss.prefab using Guid(3eafc6ca2006d8148b23482617f89ace) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '02f51529112f42f5e3850ef9187b71f9') in 0.0157004 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-knife-blood.prefab
+  artifactKey: Guid(31bbbf9e869fc1a41b7f0691548763b1) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-knife-blood.prefab using Guid(31bbbf9e869fc1a41b7f0691548763b1) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '2c649dd574127654d25d8e2587156996') in 0.0150807 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-file-list-2.prefab
+  artifactKey: Guid(f1982a3722d3da24683e44c8f74f91e1) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-file-list-2.prefab using Guid(f1982a3722d3da24683e44c8f74f91e1) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'cde719afddf0d6b1be79ba7d1ea76b88') in 0.015611 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-paypal.prefab
+  artifactKey: Guid(7167e0d3c29ba8d40a20edad4ef12a3d) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-paypal.prefab using Guid(7167e0d3c29ba8d40a20edad4ef12a3d) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'e1b7bfe83965c676f658a757edd87f23') in 0.0147527 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-layout-3.prefab
+  artifactKey: Guid(2dd774495fd7eab4f924babd83373821) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-layout-3.prefab using Guid(2dd774495fd7eab4f924babd83373821) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '03a62f2ede1e5554710a4400bc4d4605') in 0.0137557 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-delete-back-2.prefab
+  artifactKey: Guid(357f927baa640514e844e3ff28c3df96) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-delete-back-2.prefab using Guid(357f927baa640514e844e3ff28c3df96) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '9a3f85efeb0ae4b2a2bb4c19177a7a31') in 0.0143943 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-file-gif.prefab
+  artifactKey: Guid(ab35d819c8c84554c9336afea3fa2d12) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-file-gif.prefab using Guid(ab35d819c8c84554c9336afea3fa2d12) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '43492bd81d50a77641ac3fca85f2a983') in 0.0185014 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-video-chat.prefab
+  artifactKey: Guid(4f397defd1e2a9c4692c4254be462bda) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-video-chat.prefab using Guid(4f397defd1e2a9c4692c4254be462bda) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '672a45b892d980947fce69bf38ebd5f6') in 0.0160929 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/Prefabs/Cannonball Cannon.prefab
+  artifactKey: Guid(ff8bc5c79479f9b41bbc40bcf7b225af) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/Prefabs/Cannonball Cannon.prefab using Guid(ff8bc5c79479f9b41bbc40bcf7b225af) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '658170da42280a2b3af9953ae2d02c23') in 0.0336301 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 20
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-mail.prefab
+  artifactKey: Guid(d73dda60709ac3f489675679f291f4fa) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-mail.prefab using Guid(d73dda60709ac3f489675679f291f4fa) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '93afaf3ee13e2859d15c7538fbecd25a') in 0.0159312 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-mail-add.prefab
+  artifactKey: Guid(b76333294f7dc7a438fe441909b676ce) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-mail-add.prefab using Guid(b76333294f7dc7a438fe441909b676ce) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'd929d048f4d2ccebf8c7f262c51b8c9f') in 0.0158915 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-chat-heart.prefab
+  artifactKey: Guid(b57cd85cb924b9d4aa46bfc91be039c3) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-chat-heart.prefab using Guid(b57cd85cb924b9d4aa46bfc91be039c3) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'b0138e741d28dd7345087d50855f50b0') in 0.0156214 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-camera-3.prefab
+  artifactKey: Guid(e2fc0b28103f5e44e98c60ceded0c3e4) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-camera-3.prefab using Guid(e2fc0b28103f5e44e98c60ceded0c3e4) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '427cab29363dfe0f1048b3d49b1e6019') in 0.0159129 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-money-dollar-box.prefab
+  artifactKey: Guid(2231dd659adf4004e91666959308cdf0) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-money-dollar-box.prefab using Guid(2231dd659adf4004e91666959308cdf0) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '2b067de98a9a55f5e52370f24296d8e9') in 0.022348 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000020 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-foggy.prefab
+  artifactKey: Guid(e39373271a5e090419c421e1ae370ccb) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-foggy.prefab using Guid(e39373271a5e090419c421e1ae370ccb) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '3b53b5f33339c2c563eba8a5e34b87e4') in 0.0241356 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-surround-sound.prefab
+  artifactKey: Guid(dc941cf4c0b329a46b9097c59a205b22) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-surround-sound.prefab using Guid(dc941cf4c0b329a46b9097c59a205b22) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '27de574c2d8543ceea4ffea468510173') in 0.0157715 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-home-4.prefab
+  artifactKey: Guid(28987e5d75aac4f4798c40b7b60fd4ae) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-home-4.prefab using Guid(28987e5d75aac4f4798c40b7b60fd4ae) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '2974233892f4b18dc4341a776f8d66d0') in 0.0162863 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000013 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-virus.prefab
+  artifactKey: Guid(7cd80cce225e2d240b7cc1813de6a025) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-virus.prefab using Guid(7cd80cce225e2d240b7cc1813de6a025) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '457d603067dcbfa27e77060efe2dc4d1') in 0.0170807 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-repeat-one.prefab
+  artifactKey: Guid(1170e3e2ee33054438fafeb8455c238a) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-repeat-one.prefab using Guid(1170e3e2ee33054438fafeb8455c238a) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'c5a00309eb288cbf683706722dffab67') in 0.0152375 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-contacts.prefab
+  artifactKey: Guid(c21e38ba610caa14597ca46aff66c065) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-contacts.prefab using Guid(c21e38ba610caa14597ca46aff66c065) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'ee946b6c33f20bf100cc5452034997bc') in 0.0172013 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-user-received.prefab
+  artifactKey: Guid(a4847aa95ba8b5a4183e0b51532b3c2a) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-user-received.prefab using Guid(a4847aa95ba8b5a4183e0b51532b3c2a) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '55b5602d260e759385bc274c5ce66ecc') in 0.0163297 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000019 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-folder-music.prefab
+  artifactKey: Guid(b56bc792b92dc734091f2f157e13cbb7) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-folder-music.prefab using Guid(b56bc792b92dc734091f2f157e13cbb7) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '2778e186b62e9c9c131c8b28b86817c8') in 0.0178869 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-sticky-note-2.prefab
+  artifactKey: Guid(dfcd67dbab4a6dc41bb0483d2b407f9b) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-sticky-note-2.prefab using Guid(dfcd67dbab4a6dc41bb0483d2b407f9b) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'b4997064c75563ac1b06c9b854619310') in 0.0141858 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-coins.prefab
+  artifactKey: Guid(a1c1b65ba7e338745a7ef1a77a3e6ca5) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-coins.prefab using Guid(a1c1b65ba7e338745a7ef1a77a3e6ca5) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '89850bb56bb7a82c5aa1e48ff5840c7e') in 0.0176293 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-subway.prefab
+  artifactKey: Guid(2cc4bef2f7a319748918354bd3eb2732) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-subway.prefab using Guid(2cc4bef2f7a319748918354bd3eb2732) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '8ce81b6c6f14eb74d4ae3570c92eec1a') in 0.0161675 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-contacts-book-upload.prefab
+  artifactKey: Guid(8573d4fd1b8c0f04294ceab7316fb2e6) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-contacts-book-upload.prefab using Guid(8573d4fd1b8c0f04294ceab7316fb2e6) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'd347311cadf4bc51164b1f3901f59f04') in 0.0174966 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-flutter.prefab
+  artifactKey: Guid(c763c6fb1b6d7104694bc0b3f84a5861) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-flutter.prefab using Guid(c763c6fb1b6d7104694bc0b3f84a5861) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '1be3a91555aeb7736bb0bda8f18da56e') in 0.0153826 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-chat-2.prefab
+  artifactKey: Guid(555630cd4c155d5459bbc89e9bd61479) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-chat-2.prefab using Guid(555630cd4c155d5459bbc89e9bd61479) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '2231e32329caca24affe85ddf647c23f') in 0.016508 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000016 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-arrow-left-circle.prefab
+  artifactKey: Guid(5850e43a5fd2bdd4bb81b9e65d5e6163) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-arrow-left-circle.prefab using Guid(5850e43a5fd2bdd4bb81b9e65d5e6163) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '60b96d057c7a9348f3f73fb62930b3d8') in 0.0166847 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000014 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-building-4.prefab
+  artifactKey: Guid(210346c5b1d464047aef9403ecd17c9b) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-building-4.prefab using Guid(210346c5b1d464047aef9403ecd17c9b) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'b9db7582f6d71ab4e595eb0caa933328') in 0.0161279 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000025 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-finder.prefab
+  artifactKey: Guid(7e790a6625caec3408c1b03f23f2b694) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-finder.prefab using Guid(7e790a6625caec3408c1b03f23f2b694) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '2205ab640f5e23cad738033af98561ae') in 0.0171337 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000017 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-file-mark.prefab
+  artifactKey: Guid(1c80249723e776c428ce158a4751177f) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-file-mark.prefab using Guid(1c80249723e776c428ce158a4751177f) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '5994a166a3cc6bbd4beec40cb13c363d') in 0.0166707 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-dv.prefab
+  artifactKey: Guid(932984fe065aa034188161e8e8b22159) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-dv.prefab using Guid(932984fe065aa034188161e8e8b22159) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: 'c7aca36cf98dfdf6ceade34221f2755a') in 0.0153337 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000015 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-signal-wifi-2.prefab
+  artifactKey: Guid(7199eece0b09338498fda987809084db) Importer(2089858483,192608db42251d675da83286b1cce702)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-signal-wifi-2.prefab using Guid(7199eece0b09338498fda987809084db) Importer(2089858483,192608db42251d675da83286b1cce702) (ScriptedImporter) -> (artifact id: '0bf9dde6b701c0326fa9c978a99ebb5e') in 0.0169225 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Prepare
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Begin MonoManager ReloadAssembly
+[Licensing::Client] Successfully resolved entitlement details
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  1.861 seconds
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Refreshing native plugins compatible for Editor in 4.30 ms, found 10 plugins.
+Native extension for WindowsStandalone target not found
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.722 seconds
+Domain Reload Profiling: 2581ms
+	BeginReloadAssembly (242ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (17ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (69ms)
+	RebuildCommonClasses (34ms)
+	RebuildNativeTypeToScriptingClass (14ms)
+	initialDomainReloadingComplete (28ms)
+	LoadAllAssembliesAndSetupDomain (1541ms)
+		LoadAssemblies (1394ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (239ms)
+			TypeCache.Refresh (11ms)
+				TypeCache.ScanAssembly (1ms)
+			BuildScriptInfoCaches (210ms)
+			ResolveRequiredComponents (13ms)
+	FinalizeReload (722ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (565ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (2ms)
+			SetLoadedEditorAssemblies (3ms)
+			BeforeProcessingInitializeOnLoad (139ms)
+			ProcessInitializeOnLoadAttributes (354ms)
+			ProcessInitializeOnLoadMethodAttributes (60ms)
+			AfterProcessingInitializeOnLoad (6ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (13ms)
+Refreshing native plugins compatible for Editor in 4.62 ms, found 10 plugins.
+Preloading 1 native plugins for Editor in 0.05 ms.
+Unloading 18 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7743 unused Assets / (6.8 MB). Loaded Objects now: 8465.
+Memory consumption went from 162.6 MB to 155.8 MB.
+Total: 10.195100 ms (FindLiveObjects: 0.833700 ms CreateObjectMapping: 1.225700 ms MarkObjects: 4.106300 ms  DeleteObjects: 4.028500 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Begin MonoManager ReloadAssembly
+[Licensing::Client] Successfully resolved entitlement details
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.919 seconds
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Refreshing native plugins compatible for Editor in 4.82 ms, found 10 plugins.
+Native extension for WindowsStandalone target not found
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.712 seconds
+Domain Reload Profiling: 1628ms
+	BeginReloadAssembly (251ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (15ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (58ms)
+	RebuildCommonClasses (48ms)
+	RebuildNativeTypeToScriptingClass (21ms)
+	initialDomainReloadingComplete (37ms)
+	LoadAllAssembliesAndSetupDomain (560ms)
+		LoadAssemblies (404ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (252ms)
+			TypeCache.Refresh (10ms)
+				TypeCache.ScanAssembly (1ms)
+			BuildScriptInfoCaches (224ms)
+			ResolveRequiredComponents (14ms)
+	FinalizeReload (712ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (561ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (2ms)
+			SetLoadedEditorAssemblies (4ms)
+			BeforeProcessingInitializeOnLoad (137ms)
+			ProcessInitializeOnLoadAttributes (355ms)
+			ProcessInitializeOnLoadMethodAttributes (58ms)
+			AfterProcessingInitializeOnLoad (5ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (13ms)
+Refreshing native plugins compatible for Editor in 4.76 ms, found 10 plugins.
+Preloading 1 native plugins for Editor in 0.05 ms.
+Unloading 18 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7739 unused Assets / (7.0 MB). Loaded Objects now: 8468.
+Memory consumption went from 162.6 MB to 155.7 MB.
+Total: 10.668800 ms (FindLiveObjects: 0.859400 ms CreateObjectMapping: 1.539500 ms MarkObjects: 4.361600 ms  DeleteObjects: 3.907600 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 1090.844636 seconds.
+  path: Assets/Prefabs/Blue Color Changer.prefab
+  artifactKey: Guid(d92f0d3a8ac4e2246b56592b96e28d2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Blue Color Changer.prefab using Guid(d92f0d3a8ac4e2246b56592b96e28d2b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '1f926abfcc5b6593f11234da775cdb87') in 0.5533862 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 28
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/Prefabs/Color Position Change Cannonball.prefab
+  artifactKey: Guid(56ddf6bf738c66a43aaac40daa31ca1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Color Position Change Cannonball.prefab using Guid(56ddf6bf738c66a43aaac40daa31ca1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '61c7c63c2877cdc9b8114bbdf4038f9f') in 0.0071455 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 11
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/Prefabs/DeathBarrier.prefab
+  artifactKey: Guid(0697371d7ff443248ad351aa3545cd7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/DeathBarrier.prefab using Guid(0697371d7ff443248ad351aa3545cd7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '165929a749d0d5be2bd26d3d7d224613') in 0.0124766 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.017150 seconds.
+  path: Assets/Prefabs/Green Color Changer.prefab
+  artifactKey: Guid(46ecbfb529f0d254f9ffc44a0027c283) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Green Color Changer.prefab using Guid(46ecbfb529f0d254f9ffc44a0027c283) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'f23ba23e4db8ae6090955bfc0649e9e7') in 0.0235779 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 27
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.663668 seconds.
+  path: Assets/Prefabs/Locked Door.prefab
+  artifactKey: Guid(704aa90d2873f994cb81d63cf148c3b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Locked Door.prefab using Guid(704aa90d2873f994cb81d63cf148c3b1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5fc50461f6cb0b6df06d735aac613c97') in 0.0248431 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 20
+
+========================================================================
+Received Prepare
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Begin MonoManager ReloadAssembly
+[Licensing::Client] Successfully resolved entitlement details
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.834 seconds
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Refreshing native plugins compatible for Editor in 4.18 ms, found 10 plugins.
+Native extension for WindowsStandalone target not found
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.747 seconds
+Domain Reload Profiling: 1580ms
+	BeginReloadAssembly (240ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (30ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (61ms)
+	RebuildCommonClasses (39ms)
+	RebuildNativeTypeToScriptingClass (14ms)
+	initialDomainReloadingComplete (28ms)
+	LoadAllAssembliesAndSetupDomain (512ms)
+		LoadAssemblies (360ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (239ms)
+			TypeCache.Refresh (11ms)
+				TypeCache.ScanAssembly (1ms)
+			BuildScriptInfoCaches (211ms)
+			ResolveRequiredComponents (14ms)
+	FinalizeReload (748ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (585ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (2ms)
+			SetLoadedEditorAssemblies (4ms)
+			BeforeProcessingInitializeOnLoad (140ms)
+			ProcessInitializeOnLoadAttributes (372ms)
+			ProcessInitializeOnLoadMethodAttributes (61ms)
+			AfterProcessingInitializeOnLoad (6ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (14ms)
+Refreshing native plugins compatible for Editor in 4.48 ms, found 10 plugins.
+Preloading 1 native plugins for Editor in 0.05 ms.
+Unloading 18 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7741 unused Assets / (6.9 MB). Loaded Objects now: 8501.
+Memory consumption went from 168.9 MB to 162.0 MB.
+Total: 10.696700 ms (FindLiveObjects: 0.831900 ms CreateObjectMapping: 1.189200 ms MarkObjects: 4.781900 ms  DeleteObjects: 3.892900 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 363.900980 seconds.
+  path: Assets/Prefabs/Color Position Change Waddler.prefab
+  artifactKey: Guid(6bf539e44a08a534daacf4b8cf55c6d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Color Position Change Waddler.prefab using Guid(6bf539e44a08a534daacf4b8cf55c6d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '92db131c12f5a4fd2c6dd6c9b834833d') in 0.4355425 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 20
+
+========================================================================
+Received Prepare
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Begin MonoManager ReloadAssembly
+[Licensing::Client] Successfully resolved entitlement details
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  1.104 seconds
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Refreshing native plugins compatible for Editor in 5.87 ms, found 10 plugins.
+Native extension for WindowsStandalone target not found
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.977 seconds
+Domain Reload Profiling: 2080ms
+	BeginReloadAssembly (280ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (37ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (65ms)
+	RebuildCommonClasses (45ms)
+	RebuildNativeTypeToScriptingClass (21ms)
+	initialDomainReloadingComplete (41ms)
+	LoadAllAssembliesAndSetupDomain (715ms)
+		LoadAssemblies (448ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (376ms)
+			TypeCache.Refresh (15ms)
+				TypeCache.ScanAssembly (1ms)
+			BuildScriptInfoCaches (336ms)
+			ResolveRequiredComponents (20ms)
+	FinalizeReload (977ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (762ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			SetLoadedEditorAssemblies (5ms)
+			BeforeProcessingInitializeOnLoad (192ms)
+			ProcessInitializeOnLoadAttributes (469ms)
+			ProcessInitializeOnLoadMethodAttributes (85ms)
+			AfterProcessingInitializeOnLoad (8ms)
+			EditorAssembliesLoaded (1ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (20ms)
+Refreshing native plugins compatible for Editor in 5.39 ms, found 10 plugins.
+Preloading 1 native plugins for Editor in 0.06 ms.
+Unloading 18 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7739 unused Assets / (6.2 MB). Loaded Objects now: 8524.
+Memory consumption went from 168.8 MB to 162.6 MB.
+Total: 12.272000 ms (FindLiveObjects: 0.810400 ms CreateObjectMapping: 1.415600 ms MarkObjects: 6.050800 ms  DeleteObjects: 3.994700 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Refreshing native plugins compatible for Editor in 4.47 ms, found 10 plugins.
+Preloading 1 native plugins for Editor in 0.04 ms.
+Unloading 18 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7710 unused Assets / (6.8 MB). Loaded Objects now: 8524.
+Memory consumption went from 168.7 MB to 161.9 MB.
+Total: 10.598800 ms (FindLiveObjects: 0.857600 ms CreateObjectMapping: 1.532800 ms MarkObjects: 4.021000 ms  DeleteObjects: 4.186900 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Begin MonoManager ReloadAssembly
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.779 seconds
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Refreshing native plugins compatible for Editor in 4.56 ms, found 10 plugins.
+Native extension for WindowsStandalone target not found
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.723 seconds
+Domain Reload Profiling: 1501ms
+	BeginReloadAssembly (213ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (14ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (45ms)
+	RebuildCommonClasses (33ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (27ms)
+	LoadAllAssembliesAndSetupDomain (492ms)
+		LoadAssemblies (355ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (229ms)
+			TypeCache.Refresh (11ms)
+				TypeCache.ScanAssembly (1ms)
+			BuildScriptInfoCaches (202ms)
+			ResolveRequiredComponents (13ms)
+	FinalizeReload (723ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (569ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (2ms)
+			SetLoadedEditorAssemblies (3ms)
+			BeforeProcessingInitializeOnLoad (144ms)
+			ProcessInitializeOnLoadAttributes (354ms)
+			ProcessInitializeOnLoadMethodAttributes (60ms)
+			AfterProcessingInitializeOnLoad (6ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (15ms)
+Refreshing native plugins compatible for Editor in 4.40 ms, found 10 plugins.
+Preloading 1 native plugins for Editor in 0.05 ms.
+Unloading 18 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7739 unused Assets / (7.0 MB). Loaded Objects now: 8527.
+Memory consumption went from 168.7 MB to 161.7 MB.
+Total: 10.532500 ms (FindLiveObjects: 0.812400 ms CreateObjectMapping: 1.352700 ms MarkObjects: 4.475600 ms  DeleteObjects: 3.891000 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Prepare
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+Begin MonoManager ReloadAssembly
+[Licensing::Client] Successfully resolved entitlement details
+Symbol file LoadedFromMemory is not a mono symbol file
+- Loaded All Assemblies, in  0.914 seconds
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
+Refreshing native plugins compatible for Editor in 4.30 ms, found 10 plugins.
+Native extension for WindowsStandalone target not found
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+[Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
+[Package Manager] Unable to send message (not connected to server process).
+[Package Manager] Cannot connect to Unity Package Manager local server
+Mono: successfully reloaded assembly
+- Finished resetting the current domain, in  0.734 seconds
+Domain Reload Profiling: 1645ms
+	BeginReloadAssembly (230ms)
+		ExecutionOrderSort (0ms)
+		DisableScriptedObjects (13ms)
+		BackupInstance (0ms)
+		ReleaseScriptingObjects (0ms)
+		CreateAndSetChildDomain (55ms)
+	RebuildCommonClasses (49ms)
+	RebuildNativeTypeToScriptingClass (15ms)
+	initialDomainReloadingComplete (37ms)
+	LoadAllAssembliesAndSetupDomain (580ms)
+		LoadAssemblies (377ms)
+		RebuildTransferFunctionScriptingTraits (0ms)
+		AnalyzeDomain (290ms)
+			TypeCache.Refresh (11ms)
+				TypeCache.ScanAssembly (1ms)
+			BuildScriptInfoCaches (255ms)
+			ResolveRequiredComponents (19ms)
+	FinalizeReload (734ms)
+		ReleaseScriptCaches (0ms)
+		RebuildScriptCaches (0ms)
+		SetupLoadedEditorAssemblies (565ms)
+			LogAssemblyErrors (0ms)
+			InitializePlatformSupportModulesInManaged (3ms)
+			SetLoadedEditorAssemblies (4ms)
+			BeforeProcessingInitializeOnLoad (139ms)
+			ProcessInitializeOnLoadAttributes (353ms)
+			ProcessInitializeOnLoadMethodAttributes (60ms)
+			AfterProcessingInitializeOnLoad (6ms)
+			EditorAssembliesLoaded (0ms)
+		ExecutionOrderSort2 (0ms)
+		AwakeInstancesAfterBackupRestoration (14ms)
+Refreshing native plugins compatible for Editor in 4.38 ms, found 10 plugins.
+Preloading 1 native plugins for Editor in 0.05 ms.
+Unloading 18 Unused Serialized files (Serialized files now loaded: 0)
+Unloading 7739 unused Assets / (6.9 MB). Loaded Objects now: 8530.
+Memory consumption went from 168.7 MB to 161.8 MB.
+Total: 10.267400 ms (FindLiveObjects: 0.834900 ms CreateObjectMapping: 1.434500 ms MarkObjects: 4.246700 ms  DeleteObjects: 3.750700 ms)
+
+Prepare: number of updated asset objects reloaded= 0
+========================================================================
+Received Import Request.
+  Time since last request: 366.108828 seconds.
+  path: Assets/Prefabs/Cannon Waddler.prefab
+  artifactKey: Guid(2cf59196790655541a6c71baac4c0d30) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Cannon Waddler.prefab using Guid(2cf59196790655541a6c71baac4c0d30) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'be6f7e1b85e607980c9d16fa57d4856e') in 0.3999578 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 19
+
+========================================================================
+Received Import Request.
+  Time since last request: 1.327158 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-4k.prefab
+  artifactKey: Guid(57de92ca2ccfc5e46abf13ec1b435519) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-4k.prefab using Guid(57de92ca2ccfc5e46abf13ec1b435519) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '9df730a4a95946465df76cee182d24f6') in 0.0654367 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000037 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-account-circle.prefab
+  artifactKey: Guid(0b273b31e6f523541b3bc4cb00b2514f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-account-circle.prefab using Guid(0b273b31e6f523541b3bc4cb00b2514f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3de41b68778828db799f39707cc7f50d') in 0.0155135 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/FastMesh/Meshs/Icon/Icon-account-circle.fbx
+  artifactKey: Guid(6874a7bd0f8da124d85ce88bf0338fab) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastMesh/Meshs/Icon/Icon-account-circle.fbx using Guid(6874a7bd0f8da124d85ce88bf0338fab) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'c2796f383d87ee05a6d55e0faccd66db') in 0.0685266 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000032 seconds.
+  path: Assets/FastMesh/Meshs/Icon/Icon-add-box.fbx
+  artifactKey: Guid(957773f6f3c49b441b6d66ab5555c5cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastMesh/Meshs/Icon/Icon-add-box.fbx using Guid(957773f6f3c49b441b6d66ab5555c5cf) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '71a6a79f91f67220f507287ce22c31f5') in 0.0164424 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/FastMesh/Meshs/Icon/Icon-add-circle.fbx
+  artifactKey: Guid(1536bf1c060b7f844b8680bde6c0d515) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastMesh/Meshs/Icon/Icon-add-circle.fbx using Guid(1536bf1c060b7f844b8680bde6c0d515) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5f47bb2f90251fe7f762823565f63194') in 0.0261412 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000024 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-account-pin-circle.prefab
+  artifactKey: Guid(6fb572f22ca22e542b0667f012788bd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-account-pin-circle.prefab using Guid(6fb572f22ca22e542b0667f012788bd5) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'd4610da9def694333ee420c36b165ed1') in 0.0159826 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000021 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-account-box.prefab
+  artifactKey: Guid(91647b8a1e175bc4589ea7ddd04ad8f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-account-box.prefab using Guid(91647b8a1e175bc4589ea7ddd04ad8f6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '8d1601bdedc2a231fa2a191087ff78d0') in 0.0139076 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000022 seconds.
+  path: Assets/FastMesh/Meshs/Icon/Icon-24-hours.fbx
+  artifactKey: Guid(6710a240f74cc7b4b82a1f5d108cc446) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastMesh/Meshs/Icon/Icon-24-hours.fbx using Guid(6710a240f74cc7b4b82a1f5d108cc446) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'dd49f8a7cc41351d6a7652d2e83f781b') in 0.0166798 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000034 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-account-pin-box.prefab
+  artifactKey: Guid(b1c40d86a67aa894ab32c3dd424329a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-account-pin-box.prefab using Guid(b1c40d86a67aa894ab32c3dd424329a3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5011a26bf7b723441f4498527344cc76') in 0.0181747 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000026 seconds.
+  path: Assets/FastMesh/Prefabs/Icon/Icon-add-box.prefab
+  artifactKey: Guid(35f1642486e61874c9e081e969f16517) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastMesh/Prefabs/Icon/Icon-add-box.prefab using Guid(35f1642486e61874c9e081e969f16517) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: 'e6452e169e240114e318e12ff8a99c23') in 0.01631 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.000027 seconds.
+  path: Assets/FastMesh/Meshs/Icon/Icon-account-pin-box.fbx
+  artifactKey: Guid(05928bf0be7c8f5458d334a2edd60f13) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/FastMesh/Meshs/Icon/Icon-account-pin-box.fbx using Guid(05928bf0be7c8f5458d334a2edd60f13) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '5cb2f6e9b8d31ffb21a2549ad7f01e70') in 0.0167807 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 7
+
+========================================================================
+Received Import Request.
+  Time since last request: 3.186871 seconds.
+  path: Assets/Prefabs/Cannonball Cannon.prefab
+  artifactKey: Guid(ff8bc5c79479f9b41bbc40bcf7b225af) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Cannonball Cannon.prefab using Guid(ff8bc5c79479f9b41bbc40bcf7b225af) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '4036a4dd53e05a097993bcb08073ac46') in 0.0122048 seconds
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 20
+

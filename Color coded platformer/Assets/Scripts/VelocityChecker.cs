@@ -2,11 +2,11 @@ using UnityEngine;
 
 public class VelocityChecker : MonoBehaviour
 {
-    private Collider2D platformCollider;
-    private DirectionallySolidPlatform.DirectionOptions selectedDirection;
-    private ColorPicker colorPicker;
+    Collider2D platformCollider;
+    DirectionallySolidPlatform.DirectionOptions selectedDirection;
+    ColorPicker colorPicker;
 
-    private void Start()
+    void Awake()
     {
         // Find and set up references
         DirectionallySolidPlatform parentPlatform = GetComponentInParent<DirectionallySolidPlatform>();
@@ -31,17 +31,17 @@ public class VelocityChecker : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
         HandleCollision(collision);
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    void OnTriggerStay2D(Collider2D collision)
     {
         HandleCollision(collision);
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    void OnTriggerExit2D(Collider2D collision)
     {
         // Re-enable collisions when the player exits the platform
         if (collision.CompareTag("Player"))
@@ -51,7 +51,7 @@ public class VelocityChecker : MonoBehaviour
         }
     }
 
-    private void HandleCollision(Collider2D collision)
+    void HandleCollision(Collider2D collision)
     {
         if (platformCollider == null)
         {
@@ -111,14 +111,14 @@ public class VelocityChecker : MonoBehaviour
     }
 
 
-    private bool IsPlayerOnLadder(GameObject player)
+    bool IsPlayerOnLadder(GameObject player)
     {
         // Check for a custom PlayerBehaviour script and if the player is flagged as "onLadder"
         PlayerBehaviour playerBehaviour = player.GetComponent<PlayerBehaviour>();
         return playerBehaviour != null && playerBehaviour.onLadder;
     }
 
-    private void IgnoreCollision(Collider2D collision, string direction)
+    void IgnoreCollision(Collider2D collision, string direction)
     {
         Physics2D.IgnoreCollision(platformCollider, collision, true);
         Debug.Log($"{collision.gameObject.name} is moving {direction}. Collision ignored.");
@@ -130,10 +130,10 @@ public class VelocityChecker : MonoBehaviour
 
 public class VelocityChecker : MonoBehaviour
 {
-    private Collider2D platformCollider;
-    private DirectionallySolidPlatform.DirectionOptions selectedDirection;
-    private ColorPicker colorPicker;
-    private void Start()
+    Collider2D platformCollider;
+    DirectionallySolidPlatform.DirectionOptions selectedDirection;
+    ColorPicker colorPicker;
+    void Start()
     {
         // Find and read the DirectionallySolidPlatform's direction
         DirectionallySolidPlatform parentPlatform = GetComponentInParent<DirectionallySolidPlatform>();
@@ -155,17 +155,17 @@ public class VelocityChecker : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
         HandleCollision(collision);
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    void OnTriggerStay2D(Collider2D collision)
     {
         HandleCollision(collision);
     }
 
-    private void HandleCollision(Collider2D collision)
+    void HandleCollision(Collider2D collision)
     {
         Rigidbody2D rb = collision.attachedRigidbody;
         if (rb == null) return;
@@ -206,7 +206,7 @@ public class VelocityChecker : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    void OnTriggerExit2D(Collider2D collision)
     {
         Physics2D.IgnoreCollision(platformCollider, collision.gameObject.GetComponent<Collider2D>(), false);
         Debug.Log($"{collision.gameObject} exited platform. Collision re-enabled.");
@@ -218,11 +218,11 @@ using UnityEngine;
 
 public class VelocityChecker : MonoBehaviour
 {
-    private Collider2D platformCollider;
-    private DirectionallySolidPlatform.DirectionOptions selectedDirection;
-    private ColorPicker colorPicker;
+    Collider2D platformCollider;
+    DirectionallySolidPlatform.DirectionOptions selectedDirection;
+    ColorPicker colorPicker;
     //[SerializeField] bool playerOnLadder;
-    private void Start()
+    void Start()
     {
         // Find and read the DirectionallySolidPlatform's direction
         DirectionallySolidPlatform parentPlatform = GetComponentInParent<DirectionallySolidPlatform>();
@@ -244,17 +244,17 @@ public class VelocityChecker : MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
         HandleCollision(collision);
     }
 
-    private void OnTriggerStay2D(Collider2D collision)
+    void OnTriggerStay2D(Collider2D collision)
     {
         HandleCollision(collision);
     }
 
-    private void HandleCollision(Collider2D collision)
+    void HandleCollision(Collider2D collision)
     {
         Rigidbody2D rb = collision.attachedRigidbody;
         if (rb == null) return;
@@ -302,7 +302,7 @@ public class VelocityChecker : MonoBehaviour
         }
     }
 
-    private void OnTriggerExit2D(Collider2D collision)
+    void OnTriggerExit2D(Collider2D collision)
     {
         Physics2D.IgnoreCollision(platformCollider, collision.gameObject.GetComponent<Collider2D>(), false);
         Debug.Log($"{collision.gameObject} exited platform. Collision re-enabled.");

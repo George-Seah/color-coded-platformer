@@ -31,16 +31,8 @@ public class Door : MonoBehaviour
 
         playerInRange = true;
     }
-
-    void OnTriggerExit2D(Collider2D other)
-    {
-        if (!other.TryGetComponent(out PlayerInput input)) return;
-        if (input != playerInput) return;
-
-        Cleanup();
-    }
-
-    void Update()
+    
+    void OnTriggerStay2D(Collider2D other)
     {
         if (!playerInRange || used || interact == null) return;
 
@@ -52,16 +44,20 @@ public class Door : MonoBehaviour
         }
     }
 
+    void OnTriggerExit2D(Collider2D other)
+    {
+        if (!other.TryGetComponent(out PlayerInput input)) return;
+        if (input != playerInput) return;
+
+        Cleanup();
+    }
+
     void BeginTransition()
     {
         playerInRange = false;
         GetComponent<Collider2D>().enabled = false;
-
-        GameManager gm = FindFirstObjectByType<GameManager>();
-        if (gm != null)
-        {
-            gm.playerSpawnPoint = newPlayerPosition;
-        }
+        
+        GameManager.Instance.playerSpawnPoint = newPlayerPosition;
 
         SceneManager.LoadScene(scene, LoadSceneMode.Single);
     }

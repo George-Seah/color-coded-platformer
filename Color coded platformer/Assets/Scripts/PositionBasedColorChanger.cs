@@ -62,6 +62,18 @@ public class PositionBasedColorChanger : MonoBehaviour
 
     void Awake()
     {
+        if (!barTransform)
+            return;
+
+        EditorApplication.delayCall += () =>
+        {
+            if (this == null || barTransform == null)
+                return;
+
+            RebuildBarEditorSafe();
+        };
+
+
         if (!playerBehaviour)
             playerBehaviour = FindFirstObjectByType<PlayerBehaviour>();
 

@@ -13,7 +13,7 @@ public class MovingPlatform : MonoBehaviour
     public bool autoHighlightPath = false;
 
     [Tooltip("Target positions for platform movement.")]
-    [SerializeField] private List<Vector3> multipleDirections = new List<Vector3>();
+    [SerializeField] List<Vector3> multipleDirections = new List<Vector3>();
 
     [Tooltip("Whether the platform is active or not.")]
     public bool activated = false;
@@ -21,12 +21,12 @@ public class MovingPlatform : MonoBehaviour
     [Tooltip("List of events to trigger at specific targets.")]
     public List<UnityEvent> targetEvents = new List<UnityEvent>();
 
-    [SerializeField] private List<GameObject> objectsOnPlatform = new List<GameObject>();
+    [SerializeField] List<GameObject> objectsOnPlatform = new List<GameObject>();
 
-    [SerializeField] private int currentDirectionIndex = 0;
-    private Rigidbody2D rb;
+    [SerializeField] int currentDirectionIndex = 0;
+    Rigidbody2D rb;
     [SerializeField] Vector3 direction;
-    private void Start()
+    void Start()
     {
         if (multipleDirections.Count > 0)
         {
@@ -37,7 +37,7 @@ public class MovingPlatform : MonoBehaviour
         //rb.isKinematic = true; // Ensure the platform doesn't move due to physics
     }
 
-    private void FixedUpdate()
+    void FixedUpdate()
     {
         if (!activated) return;
 
@@ -92,7 +92,7 @@ public class MovingPlatform : MonoBehaviour
     }
 
 
-    private void HandleMultipleDirections()
+    void HandleMultipleDirections()
     {
         if (multipleDirections.Count == 0) return;
 
@@ -138,7 +138,7 @@ public class MovingPlatform : MonoBehaviour
         multipleDirections.Reverse();
     }
 
-    private void OnDrawGizmos()
+    void OnDrawGizmos()
     {
         if (!autoHighlightPath || multipleDirections == null) return;
 
@@ -154,7 +154,7 @@ public class MovingPlatform : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    void OnCollisionEnter2D(Collision2D collision)
     {
         foreach (ContactPoint2D contact in collision.contacts)
         {
@@ -168,12 +168,12 @@ public class MovingPlatform : MonoBehaviour
         }
     }
 
-    private void OnCollisionExit2D(Collision2D collision)
+    void OnCollisionExit2D(Collision2D collision)
     {
         objectsOnPlatform.Remove(collision.gameObject);
     }
 
-    private bool IsOnPlatform(GameObject obj)
+    bool IsOnPlatform(GameObject obj)
     {
         // Check if the object is still physically touching the platform using collision bounds
         Collider2D objCollider = obj.GetComponent<Collider2D>();

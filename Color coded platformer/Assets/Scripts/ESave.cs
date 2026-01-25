@@ -4,10 +4,10 @@ using System.Collections.Generic;
 
 public class ESave : MonoBehaviour
 {
-    private SaveFile saveFile;
+    SaveFile saveFile;
 
     // Key under which the tracked star list is saved
-    private const string STAR_KEYS_SAVE_KEY = "__StarKeysList";
+    const string STAR_KEYS_SAVE_KEY = "__StarKeysList";
 
     void Awake()
     {
@@ -63,7 +63,7 @@ public class ESave : MonoBehaviour
         Debug.Log($"ESave: Reset star '{starIndex}' to false.");
     }
 
-    private void TrackStarKey(string starIndex)
+    void TrackStarKey(string starIndex)
     {
         if (saveFile == null) return;
 
@@ -83,7 +83,7 @@ public class ESave : MonoBehaviour
     /// If no tracked star list exists yet, returns an empty list.
     /// This safely catches the exception ESave throws when a key doesn’t exist. :contentReference[oaicite:1]{index=1}
     /// </summary>
-    private List<string> GetSafeTrackedKeys()
+    List<string> GetSafeTrackedKeys()
     {
         if (saveFile == null) return new List<string>();
 

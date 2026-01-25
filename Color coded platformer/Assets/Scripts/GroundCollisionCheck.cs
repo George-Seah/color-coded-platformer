@@ -8,7 +8,7 @@ public class GroundCollisionCheck : MonoBehaviour
     
     [SerializeField] float groundTolerance = 0.2f; // Tolerance for physics penetration
 
-    void Start()
+    void Awake()
     {
         playerBehaviour = transform.parent.gameObject.GetComponent<PlayerBehaviour>();
         playerRB = playerBehaviour.GetComponent<Rigidbody2D>();

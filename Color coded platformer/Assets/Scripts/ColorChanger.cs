@@ -21,7 +21,7 @@ public class ColorChanger : MonoBehaviour
     [SerializeField] ParticleSystem particleSystem;  // Reference to the particle system
     [SerializeField] Sprite[] sprites;              // Array of sprites to add to the particle system
     [SerializeField] Material shaderMaterial;       // Material using your shader graph
-    private void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
         
         if (tagsToDetect.Contains(collision.tag))
@@ -60,7 +60,7 @@ public class ColorChanger : MonoBehaviour
         }
     }
     
-    void Start()
+    void Awake()
     {
         //particleSystem = GetComponent<ParticleSystem>();
         //shaderMaterial = GetComponent<Renderer>().material;

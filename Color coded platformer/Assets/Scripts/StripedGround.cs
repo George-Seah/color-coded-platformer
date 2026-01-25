@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class StripedGround : MonoBehaviour
 {
-    private SpriteRenderer spriteRenderer;
+    SpriteRenderer spriteRenderer;
     public enum ColorOptions
     {
         Red,
@@ -12,7 +12,7 @@ public class StripedGround : MonoBehaviour
     }
     public ColorOptions selectedColor;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
-    void Start()
+    void Awake()
     {
         switch (selectedColor)
         {
@@ -37,11 +37,5 @@ public class StripedGround : MonoBehaviour
                 gameObject.layer = LayerMask.NameToLayer("Ground");
                 break;
         }
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
     }
 }

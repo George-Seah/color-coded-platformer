@@ -6,10 +6,10 @@ public class Waddler : MonoBehaviour
 {
     public bool lookingRight;
     [SerializeField] float speed;
-    private Rigidbody2D rb;
-    public Key currentKey { get; private set; }
+    Rigidbody2D rb;
+    public Key currentKey { get; set; }
     [SerializeField] bool grounded;
-    private Collider2D waddlerCollider;
+    Collider2D waddlerCollider;
 
     void Awake()
     {
@@ -52,7 +52,7 @@ public class Waddler : MonoBehaviour
         Debug.Log($"Waddler launched at angle: {cannonTransform.eulerAngles.z} degrees with force: {launchForce}");
     }
 
-    private IEnumerator ReenableCollision(Collider2D otherCollider, float delay)
+    IEnumerator ReenableCollision(Collider2D otherCollider, float delay)
     {
         yield return new WaitForSeconds(delay);
         if (otherCollider != null && waddlerCollider != null)
@@ -135,7 +135,7 @@ public class Waddler : MonoBehaviour
         }
     }
 
-    private bool ShouldPassThrough(DirectionallySolidPlatform platform)
+    bool ShouldPassThrough(DirectionallySolidPlatform platform)
     {
         Vector2 velocity = rb.linearVelocity;
         float threshold = 0.1f;
@@ -159,7 +159,7 @@ public class Waddler : MonoBehaviour
         }
     }
 
-    private void IgnoreAndPassThrough(Collision2D collision)
+    void IgnoreAndPassThrough(Collision2D collision)
     {
         // Store velocity before collision response kills it
         Vector2 savedVelocity = rb.linearVelocity;
@@ -280,7 +280,7 @@ public class BoxCastIgnoreTag : MonoBehaviour
     }
 
     // Helper method to visualize the BoxCast in the Scene view
-    private void DebugDrawBoxCast(Vector2 origin, Vector2 size, float angle, Vector2 direction, float distance, Color color)
+    void DebugDrawBoxCast(Vector2 origin, Vector2 size, float angle, Vector2 direction, float distance, Color color)
     {
         Quaternion rotation = Quaternion.Euler(0, 0, angle);
         Vector2 extents = size * 0.5f;

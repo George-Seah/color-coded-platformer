@@ -2,14 +2,14 @@ using UnityEngine;
 
 public class Key : MonoBehaviour
 {
-    private Rigidbody2D rb;
-    private Collider2D keyCollider;
-    [SerializeField] private bool isPickedUp = false;
+    Rigidbody2D rb;
+    Collider2D keyCollider;
+    [SerializeField] bool isPickedUp = false;
 
-    [SerializeField] private Transform playerTransform;
+    [SerializeField] Transform playerTransform;
     [SerializeField] bool canBeStolen = true;
     [SerializeField] bool facingRight = true;
-    void Start()
+    void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
         keyCollider = GetComponent<Collider2D>();
@@ -86,7 +86,7 @@ public class Key : MonoBehaviour
         }
 
     }
-    private void OnTriggerEnter2D(Collider2D collision)
+    void OnTriggerEnter2D(Collider2D collision)
     {
         //Player steals key from Waddler
         if (collision.gameObject.CompareTag("Player") && transform.parent.gameObject.CompareTag("Waddler"))
@@ -141,7 +141,7 @@ public class Key : MonoBehaviour
             }
         }
     }
-    private void OnTriggerExit2D(Collider2D collision)
+    void OnTriggerExit2D(Collider2D collision)
     {
         /*
         if (collision.gameObject.CompareTag("Player") && transform.parent.gameObject.CompareTag("Waddler"))

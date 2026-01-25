@@ -20,8 +20,8 @@ public class WaddlerCannon : MonoBehaviour
     // List of colored cannonballs to shoot (set this in the Inspector)
     [Tooltip("List of cannonball colors")]
     public List<string> colorsToShoot = new List<string>();
-    [SerializeField] private int colorIndex = 0;
-    [SerializeField] private Color waddlerColor;
+    [SerializeField] int colorIndex = 0;
+    [SerializeField] Color waddlerColor;
 
     void FixedUpdate()
     {
@@ -98,7 +98,7 @@ public class WaddlerCannon : MonoBehaviour
     }
 
     // Get all child objects with the "Waddler" tag
-    private int GetChildWaddlersCount()
+    int GetChildWaddlersCount()
     {
         int count = 0;
         foreach (Transform child in transform)
