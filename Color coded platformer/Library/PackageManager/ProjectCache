@@ -440,11 +440,13 @@ m_ResolvedPackages:
     - 2.10.1
     - 2.10.2
     - 2.11.2
+    - 2.11.3
     compatible:
     - 2.10.0
     - 2.10.1
     - 2.10.2
     - 2.11.2
+    - 2.11.3
     recommended: 2.10.2
     deprecated: []
   dependencies: []

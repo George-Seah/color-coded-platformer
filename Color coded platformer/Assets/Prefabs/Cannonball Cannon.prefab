@@ -56,7 +56,6 @@ MonoBehaviour:
   colorIndex: 0
   colorPositionOffset: 
   colorPositionOffsetIndex: 0
-  scriptsToAdd: []
 --- !u!114 &5431585781130959002
 MonoBehaviour:
   m_ObjectHideFlags: 0

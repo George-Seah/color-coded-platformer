@@ -10,7 +10,7 @@ public class GroundCollisionCheck : MonoBehaviour
 
     void Awake()
     {
-        playerBehaviour = transform.parent.gameObject.GetComponent<PlayerBehaviour>();
+        playerBehaviour = GetComponentInParent<PlayerBehaviour>();
         playerRB = playerBehaviour.GetComponent<Rigidbody2D>();
         groundCheckCollider = GetComponent<Collider2D>();
     }

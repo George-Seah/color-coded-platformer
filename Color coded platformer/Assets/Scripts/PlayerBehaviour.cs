@@ -17,6 +17,7 @@ public class PlayerBehaviour : MonoBehaviour
     public bool jumpPressed { get; private set; }
     bool jumpConsumed;
     [SerializeField] public Key currentKey { get; set; }
+    [SerializeField] GameObject canvasPrefab;
     
     public PlayerInputActions playerControls;
     public float gravityScale = 10f, fallingGravityScale = 30f;
@@ -36,7 +37,7 @@ public class PlayerBehaviour : MonoBehaviour
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         playerColliders = GetComponentsInChildren<Collider2D>();
-        Instantiate(GameManager.Instance.canvasPrefab);
+        if (CanvasScript.Instance == null) Instantiate(canvasPrefab);
     }
 
     void OnEnable()

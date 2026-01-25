@@ -19,7 +19,6 @@ public class Cannon : MonoBehaviour
     private Color ballColor;
 
     [Tooltip("List of scripts to add to cannonballs")]
-    public List<MonoScript> scriptsToAdd = new List<MonoScript>();
 
     void FixedUpdate()
     {
@@ -73,24 +72,5 @@ public class Cannon : MonoBehaviour
             instantiatedBall.GetComponent<ColorPositionChange>().SetOffset(colorPositionOffset[colorPositionOffsetIndex]);
             colorPositionOffsetIndex = (colorPositionOffsetIndex + 1) % colorPositionOffset.Count;
         }
-
-
-        // Add scripts dynamically to the instantiated cannonball
-        foreach (MonoScript script in scriptsToAdd)
-        {
-            if (script != null)
-            {
-                Type scriptType = script.GetClass();
-                if (scriptType != null && scriptType.IsSubclassOf(typeof(MonoBehaviour)))
-                {
-                    instantiatedBall.AddComponent(scriptType);
-                }
-                else
-                {
-                    Debug.LogWarning($"The script '{script.name}' is not a valid MonoBehaviour.");
-                }
-            }
-        }
-        
     }
 }

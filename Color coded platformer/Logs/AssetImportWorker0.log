@@ -1,9 +1,9 @@
 [Licensing::Module] Trying to connect to existing licensing client channel...
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Nathan & Co" at "2026-01-25T10:06:09.1997958Z"
 Built from '6000.0/staging' branch; Version is '6000.0.62f1 (f99f05b3e950) revision 16359173'; Using compiler version '193933523'; Build Type 'Release'
 OS: 'Windows 11  (10.0.22631) 64bit Core' Language: 'en' Physical Memory: 16233 MB
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Nathan & Co" at "2026-01-25T08:52:25.7778219Z"
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
-Date: 2026-01-25T08:52:25Z
+Date: 2026-01-25T10:06:09Z
 
 COMMAND LINE ARGUMENTS:
 C:\Unity\6000.0.62f1\Editor\Unity.exe
@@ -17,7 +17,7 @@ C:/Github/color-coded-platformer/Color coded platformer
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-62390
+51765
 -licensingIpc
 LicenseClient-Nathan & Co
 -job-worker-count
@@ -65,12 +65,12 @@ C:/Github/color-coded-platformer/Color coded platformer
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gi-baking-worker=262144"
     "memorysetup-temp-allocator-size-gfx=262144"
-Player connection [23416]  Target information:
+Player connection [27852]  Target information:
 
-Player connection [23416]  * "[IP] 192.168.0.233 [Port] 0 [Flags] 2 [Guid] 3388032498 [EditorId] 3388032498 [Version] 1048832 [Id] WindowsEditor(7,SuperFamicom) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [27852]  * "[IP] 192.168.0.233 [Port] 0 [Flags] 2 [Guid] 302853980 [EditorId] 302853980 [Version] 1048832 [Id] WindowsEditor(7,SuperFamicom) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [23416] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [23416] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [27852] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [27852] Host joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 7
 Input System module state changed to: Initialized.
 [Physics::Module] Initialized fallback backend.
@@ -79,13 +79,13 @@ Input System module state changed to: Initialized.
 [Licensing::Module] LicensingClient has failed validation; ignoring
 [Licensing::Client] Handshaking with LicensingClient:
   Version:                 1.17.4+4293ba1
-  Session Id:              1b5041874fee4643b2f658bebf80950a
+  Session Id:              dd9218e4bbf9402eb40c533a72f4a5db
   Correlation Id:          31e34094d018adb6a714e19bc99204a6
-  External correlation Id: 8332126840226883103
+  External correlation Id: 170609231198933588
   Machine Id:              qtyx5DMTmV6sfEVnrxz9aoLU/bw=
-[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-Nathan & Co" (connect: 0.00s, validation: 0.00s, handshake: 0.03s)
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Nathan & Co-notifications" at "2026-01-25T08:52:25.8102719Z"
-[Licensing::Module] Licensing Background thread has ended after 0.03s
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-Nathan & Co" (connect: 0.00s, validation: 0.00s, handshake: 0.04s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Nathan & Co-notifications" at "2026-01-25T10:06:09.2399774Z"
+[Licensing::Module] Licensing Background thread has ended after 0.04s
 Library Redirect Path: Library/
 [Physics::Module] Selected backend.
 [Physics::Module] Name: PhysX
@@ -93,8 +93,8 @@ Library Redirect Path: Library/
 [Physics::Module] SDK Version: 4.1.2
 [Physics::Module] Integration Version: 1.0.0
 [Physics::Module] Threading Mode: Multi-Threaded
-Refreshing native plugins compatible for Editor in 7.43 ms, found 10 plugins.
-Preloading 1 native plugins for Editor in 0.70 ms.
+Refreshing native plugins compatible for Editor in 6.04 ms, found 10 plugins.
+Preloading 1 native plugins for Editor in 0.62 ms.
 Initialize engine version: 6000.0.62f1 (f99f05b3e950)
 [Subsystems] Discovering subsystems at path C:/Unity/6000.0.62f1/Editor/Data/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path C:/Github/color-coded-platformer/Color coded platformer/Assets
@@ -109,43 +109,43 @@ Initialize mono
 Mono path[0] = 'C:/Unity/6000.0.62f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Unity/6000.0.62f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Unity/6000.0.62f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56792
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56524
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Unity/6000.0.62f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002491 seconds.
-- Loaded All Assemblies, in  0.370 seconds
+Registered in 0.002495 seconds.
+- Loaded All Assemblies, in  0.390 seconds
 Native extension for WindowsStandalone target not found
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.301 seconds
-Domain Reload Profiling: 669ms
-	BeginReloadAssembly (130ms)
+- Finished resetting the current domain, in  0.343 seconds
+Domain Reload Profiling: 732ms
+	BeginReloadAssembly (126ms)
 		ExecutionOrderSort (0ms)
 		DisableScriptedObjects (0ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
 		CreateAndSetChildDomain (1ms)
-	RebuildCommonClasses (34ms)
-	RebuildNativeTypeToScriptingClass (12ms)
-	initialDomainReloadingComplete (49ms)
-	LoadAllAssembliesAndSetupDomain (142ms)
-		LoadAssemblies (127ms)
+	RebuildCommonClasses (35ms)
+	RebuildNativeTypeToScriptingClass (13ms)
+	initialDomainReloadingComplete (54ms)
+	LoadAllAssembliesAndSetupDomain (159ms)
+		LoadAssemblies (123ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (140ms)
-			TypeCache.Refresh (138ms)
-				TypeCache.ScanAssembly (126ms)
+		AnalyzeDomain (157ms)
+			TypeCache.Refresh (155ms)
+				TypeCache.ScanAssembly (137ms)
 			BuildScriptInfoCaches (0ms)
-			ResolveRequiredComponents (0ms)
-	FinalizeReload (301ms)
+			ResolveRequiredComponents (1ms)
+	FinalizeReload (344ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (257ms)
+		SetupLoadedEditorAssemblies (293ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (21ms)
+			InitializePlatformSupportModulesInManaged (22ms)
 			SetLoadedEditorAssemblies (4ms)
-			BeforeProcessingInitializeOnLoad (53ms)
-			ProcessInitializeOnLoadAttributes (131ms)
-			ProcessInitializeOnLoadMethodAttributes (48ms)
+			BeforeProcessingInitializeOnLoad (56ms)
+			ProcessInitializeOnLoadAttributes (163ms)
+			ProcessInitializeOnLoadMethodAttributes (49ms)
 			AfterProcessingInitializeOnLoad (0ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
@@ -163,16 +163,12 @@ Begin MonoManager ReloadAssembly
   Product: Unity Personal
   Type: Assigned
   Expiration: Unlimited
-Symbol file data-0000015D284DBA20 doesn't match image C:\Github\color-coded-platformer\Color coded platformer\Library\ScriptAssemblies\Assembly-CSharp-Editor.dll
 Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file data-0000015D2B0D5E40 doesn't match image C:\Github\color-coded-platformer\Color coded platformer\Library\ScriptAssemblies\Assembly-CSharp.dll
-Symbol file LoadedFromMemory is not a mono symbol file
-Symbol file LoadedFromMemory is not a mono symbol file
-- Loaded All Assemblies, in  1.139 seconds
+- Loaded All Assemblies, in  0.969 seconds
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
 'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Refreshing native plugins compatible for Editor in 6.91 ms, found 10 plugins.
+Refreshing native plugins compatible for Editor in 4.53 ms, found 10 plugins.
 Native extension for WindowsStandalone target not found
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 Package Manager log level set to [2]
@@ -183,128 +179,52 @@ Package Manager log level set to [2]
 [Package Manager] Unable to send message (not connected to server process).
 [Package Manager] Cannot connect to Unity Package Manager local server
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  1.018 seconds
-Domain Reload Profiling: 2152ms
-	BeginReloadAssembly (228ms)
+- Finished resetting the current domain, in  0.908 seconds
+Domain Reload Profiling: 1870ms
+	BeginReloadAssembly (203ms)
 		ExecutionOrderSort (0ms)
-		DisableScriptedObjects (10ms)
+		DisableScriptedObjects (7ms)
 		BackupInstance (0ms)
 		ReleaseScriptingObjects (0ms)
-		CreateAndSetChildDomain (31ms)
-	RebuildCommonClasses (52ms)
-	RebuildNativeTypeToScriptingClass (12ms)
-	initialDomainReloadingComplete (42ms)
-	LoadAllAssembliesAndSetupDomain (799ms)
-		LoadAssemblies (472ms)
+		CreateAndSetChildDomain (30ms)
+	RebuildCommonClasses (47ms)
+	RebuildNativeTypeToScriptingClass (14ms)
+	initialDomainReloadingComplete (43ms)
+	LoadAllAssembliesAndSetupDomain (655ms)
+		LoadAssemblies (427ms)
 		RebuildTransferFunctionScriptingTraits (0ms)
-		AnalyzeDomain (461ms)
-			TypeCache.Refresh (263ms)
-				TypeCache.ScanAssembly (234ms)
-			BuildScriptInfoCaches (171ms)
-			ResolveRequiredComponents (20ms)
-	FinalizeReload (1019ms)
+		AnalyzeDomain (338ms)
+			TypeCache.Refresh (238ms)
+				TypeCache.ScanAssembly (216ms)
+			BuildScriptInfoCaches (82ms)
+			ResolveRequiredComponents (14ms)
+	FinalizeReload (909ms)
 		ReleaseScriptCaches (0ms)
 		RebuildScriptCaches (0ms)
-		SetupLoadedEditorAssemblies (735ms)
+		SetupLoadedEditorAssemblies (693ms)
 			LogAssemblyErrors (0ms)
-			InitializePlatformSupportModulesInManaged (4ms)
-			SetLoadedEditorAssemblies (5ms)
-			BeforeProcessingInitializeOnLoad (160ms)
-			ProcessInitializeOnLoadAttributes (485ms)
-			ProcessInitializeOnLoadMethodAttributes (74ms)
+			InitializePlatformSupportModulesInManaged (2ms)
+			SetLoadedEditorAssemblies (4ms)
+			BeforeProcessingInitializeOnLoad (164ms)
+			ProcessInitializeOnLoadAttributes (428ms)
+			ProcessInitializeOnLoadMethodAttributes (89ms)
 			AfterProcessingInitializeOnLoad (6ms)
 			EditorAssembliesLoaded (0ms)
 		ExecutionOrderSort2 (0ms)
 		AwakeInstancesAfterBackupRestoration (5ms)
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
-Refreshing native plugins compatible for Editor in 14.48 ms, found 10 plugins.
-Preloading 1 native plugins for Editor in 0.68 ms.
+Refreshing native plugins compatible for Editor in 5.90 ms, found 10 plugins.
+Preloading 1 native plugins for Editor in 0.08 ms.
 Unloading 18 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 7742 unused Assets / (7.3 MB). Loaded Objects now: 8460.
-Memory consumption went from 159.0 MB to 151.7 MB.
-Total: 20.103500 ms (FindLiveObjects: 1.288000 ms CreateObjectMapping: 2.242100 ms MarkObjects: 11.696100 ms  DeleteObjects: 4.875500 ms)
+Unloading 7741 unused Assets / (7.2 MB). Loaded Objects now: 8455.
+Memory consumption went from 158.2 MB to 151.0 MB.
+Total: 13.546600 ms (FindLiveObjects: 0.939800 ms CreateObjectMapping: 1.664200 ms MarkObjects: 5.811600 ms  DeleteObjects: 5.130100 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 179888.448985 seconds.
-  path: Assets/Scripts/Game Managerment
-  artifactKey: Guid(5e344ca083ae0ac4fbd07b29a27ebee8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/Game Managerment using Guid(5e344ca083ae0ac4fbd07b29a27ebee8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '2d9ceeeee64ee21b7286f5af497e1181') in 0.0046592 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.660561 seconds.
-  path: Assets/Scripts/CameraChangeSection.cs
-  artifactKey: Guid(4ce14fdd508de2646b03fd2deeb3d820) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scripts/CameraChangeSection.cs using Guid(4ce14fdd508de2646b03fd2deeb3d820) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '3e4124d51781d4c581ae17c26ecc99e5') in 0.0021522 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 7.324603 seconds.
-  path: Assets/Scenes/Scene 3.unity
-  artifactKey: Guid(3f579fd8137625a458a8a01442331148) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Scene 3.unity using Guid(3f579fd8137625a458a8a01442331148) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0a9939caec83101c9c8122395b4977c0') in 0.0005918 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.377350 seconds.
-  path: Assets/Scenes/Scene 5.unity
-  artifactKey: Guid(4f0754dbc89e8ca4ab9f8635ec4c216d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Scenes/Scene 5.unity using Guid(4f0754dbc89e8ca4ab9f8635ec4c216d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '0bfc34fa2e3fc539930a8133e018731a') in 0.0005157 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
-
-========================================================================
-Received Import Request.
-  Time since last request: 27.594060 seconds.
-  path: Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Extending Padlock/GREY/Sprites/Extending Padlock - GREY - 0000.png
-  artifactKey: Guid(c70f40f23c2be3944bc4ed786c603767) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Extending Padlock/GREY/Sprites/Extending Padlock - GREY - 0000.png using Guid(c70f40f23c2be3944bc4ed786c603767) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '466c42a7924da7d1d942a3ce41241b8e') in 0.1154509 seconds
+  Time since last request: 184311.536492 seconds.
+  path: Assets/Simple 2D Platformer BE2/App Icon.png
+  artifactKey: Guid(c0ced59eb0176454886bbc0407e71090) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Simple 2D Platformer BE2/App Icon.png using Guid(c0ced59eb0176454886bbc0407e71090) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '563c533acea5e00a1702f78925607332') in 0.1037619 seconds
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Extending Padlock/GREY/Sprites/Extending Padlock - GREY - 0005.png
-  artifactKey: Guid(0bfbdf5d5313c4e48b449867eb81b7cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Extending Padlock/GREY/Sprites/Extending Padlock - GREY - 0005.png using Guid(0bfbdf5d5313c4e48b449867eb81b7cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '924fe65ec71d538493f34e3723a1171a') in 0.0322434 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000018 seconds.
-  path: Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Extending Padlock/GREY/Sprites/Extending Padlock - GREY - 0007.png
-  artifactKey: Guid(62a9f0f8400e4dc409c7f84f0b5734cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Extending Padlock/GREY/Sprites/Extending Padlock - GREY - 0007.png using Guid(62a9f0f8400e4dc409c7f84f0b5734cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7760fbe4a696cd7b64cabc17d4031ca6') in 0.0266896 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Extending Padlock/GREY/Sprites/Extending Padlock - GREY - 0004.png
-  artifactKey: Guid(bbb4171ff550d4e4da179f0d5106aeef) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Extending Padlock/GREY/Sprites/Extending Padlock - GREY - 0004.png using Guid(bbb4171ff550d4e4da179f0d5106aeef) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '19722047e0901b66fe235e1b175bbfa7') in 0.0171759 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Extending Padlock/GREY/Sprites/Extending Padlock - GREY - 0002.png
-  artifactKey: Guid(4f87a192f55533041b17685dbdf3bdff) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Extending Padlock/GREY/Sprites/Extending Padlock - GREY - 0002.png using Guid(4f87a192f55533041b17685dbdf3bdff) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '7b5359ec9fbc82008ce5a77a7d8799ee') in 0.0074845 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Extending Padlock/GREY/Sprites/Extending Padlock - GREY - 0003.png
-  artifactKey: Guid(f1c00e532955df947923dbdc7adcd7ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Extending Padlock/GREY/Sprites/Extending Padlock - GREY - 0003.png using Guid(f1c00e532955df947923dbdc7adcd7ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (artifact id: '88f1f0ef0bb0da233f8c77adaea28b06') in 0.0069555 seconds
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
-AssetImportWorker is now disconnected from the server
-Process exiting
-Exiting without the bug reporter. Application will terminate with return code 0
