@@ -60,7 +60,7 @@ public class ColorChanger : MonoBehaviour
         }
     }
     
-    void Awake()
+    void Start()
     {
         //particleSystem = GetComponent<ParticleSystem>();
         //shaderMaterial = GetComponent<Renderer>().material;

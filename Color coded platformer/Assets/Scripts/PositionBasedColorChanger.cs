@@ -69,17 +69,6 @@ public class PositionBasedColorChanger : MonoBehaviour
             Instance = this;
         else
             Destroy(gameObject);
-
-        if (!barTransform)
-        return;
-
-        EditorApplication.delayCall += () =>
-        {
-            if (this == null || barTransform == null)
-                return;
-
-            RebuildBarEditorSafe();
-        };
     }
 
     void Start()
