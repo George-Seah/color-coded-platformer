@@ -329,13 +329,6 @@
             "usedInScenes": []
         },
         {
-            "managedAssemblyName": "Assembly-CSharp.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "ReadmeBE2",
-            "moduleName": "",
-            "usedInScenes": []
-        },
-        {
             "managedAssemblyName": "",
             "nativeClass": "ResourceManager",
             "fullManagedTypeName": "",
@@ -1888,13 +1881,6 @@
                 "Assets/Scenes/Scene 8.unity",
                 "Assets/Scenes/Scene 9.unity"
             ]
-        },
-        {
-            "managedAssemblyName": "Unity.2D.Animation.Runtime.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "UnityEngine.U2D.Animation.BufferManager",
-            "moduleName": "",
-            "usedInScenes": []
         },
         {
             "managedAssemblyName": "Unity.2D.Animation.Runtime.dll",

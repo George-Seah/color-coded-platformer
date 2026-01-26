@@ -767,7 +767,7 @@ GameObject:
   - component: {fileID: 2790946663982159922}
   - component: {fileID: 3516472139480850462}
   m_Layer: 5
-  m_Name: Level Select
+  m_Name: Level Select Button
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1653,6 +1653,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   pauseMenu: {fileID: 5075060919273736571}
+  levelSelectMenu: {fileID: 4819704322232761372}
   continueButton: {fileID: 8595450937807289087}
   scenesToLoad:
   - {fileID: 102900000, guid: 8c9cfa26abfee488c85f1582747f6a02, type: 3}

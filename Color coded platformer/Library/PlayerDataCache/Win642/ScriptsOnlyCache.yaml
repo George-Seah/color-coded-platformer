@@ -1,7 +1,5 @@
 ScriptsOnlyBuild:
   usedScripts:
-    Assembly-CSharp-Editor.dll:
-    - ReadmeEditorBE2
     Assembly-CSharp.dll:
     - Cannon
     - CannonBall
@@ -27,7 +25,6 @@ ScriptsOnlyBuild:
     - PlayerBehaviour
     - PositionBasedColorChanger
     - PressurePad
-    - ReadmeBE2
     - RespawnField
     - Star
     - StripedGround
@@ -38,7 +35,6 @@ ScriptsOnlyBuild:
     Unity.2D.Animation.Editor.dll:
     - UnityEditor.U2D.Animation.BoneGizmo
     Unity.2D.Animation.Runtime.dll:
-    - UnityEngine.U2D.Animation.BufferManager
     - UnityEngine.U2D.Animation.DeformationManager
     - UnityEngine.U2D.Animation.DeformationManagerUpdater
     Unity.2D.IK.Editor.dll:
@@ -146,6 +142,9 @@ ScriptsOnlyBuild:
     - TMPro.TMP_StyleSheet
     Unity.TextMeshPro.dll:
     - TMPro.TMP_FontAsset
+    - TMPro.TMP_Settings
+    - TMPro.TMP_SpriteAsset
+    - TMPro.TMP_StyleSheet
     - TMPro.TextMeshProUGUI
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
@@ -507,27 +506,6 @@ ScriptsOnlyBuild:
     methodName: Activate
   - assembly: Assembly-CSharp
     fullTypeName: MovingPlatform
-    methodName: Activate
-  - assembly: Assembly-CSharp
-    fullTypeName: MovingPlatform
-    methodName: changeToKinematic
-  - assembly: Assembly-CSharp
-    fullTypeName: MovingPlatform
-    methodName: ChangeSpeed
-  - assembly: Assembly-CSharp
-    fullTypeName: MovingPlatform
-    methodName: changeToDynamic
-  - assembly: Assembly-CSharp
-    fullTypeName: MovingPlatform
-    methodName: ChangeSpeed
-  - assembly: UnityEngine.Physics2DModule
-    fullTypeName: UnityEngine.Rigidbody2D
-    methodName: set_gravityScale
-  - assembly: Assembly-CSharp
-    fullTypeName: MovingPlatform
-    methodName: Activate
-  - assembly: Assembly-CSharp
-    fullTypeName: MovingPlatform
     methodName: changeToKinematic
   - assembly: Assembly-CSharp
     fullTypeName: MovingPlatform
@@ -564,6 +542,24 @@ ScriptsOnlyBuild:
     methodName: Activate
   - assembly: Assembly-CSharp
     fullTypeName: MovingPlatform
+    methodName: changeToKinematic
+  - assembly: Assembly-CSharp
+    fullTypeName: MovingPlatform
+    methodName: ChangeSpeed
+  - assembly: Assembly-CSharp
+    fullTypeName: MovingPlatform
+    methodName: changeToDynamic
+  - assembly: Assembly-CSharp
+    fullTypeName: MovingPlatform
+    methodName: ChangeSpeed
+  - assembly: UnityEngine.Physics2DModule
+    fullTypeName: UnityEngine.Rigidbody2D
+    methodName: set_gravityScale
+  - assembly: Assembly-CSharp
+    fullTypeName: MovingPlatform
+    methodName: Activate
+  - assembly: Assembly-CSharp
+    fullTypeName: MovingPlatform
     methodName: ChangeSpeed
   - assembly: Assembly-CSharp
     fullTypeName: MovingPlatform
@@ -586,6 +582,9 @@ ScriptsOnlyBuild:
   - assembly: UnityEngine.Physics2DModule
     fullTypeName: UnityEngine.Rigidbody2D
     methodName: set_gravityScale
+  - assembly: Assembly-CSharp
+    fullTypeName: MovingPlatform
+    methodName: Activate
   - assembly: Assembly-CSharp
     fullTypeName: CanvasScript
     methodName: PauseGame
@@ -630,13 +629,13 @@ ScriptsOnlyBuild:
     methodName: Activate
   - assembly: Assembly-CSharp
     fullTypeName: MovingPlatform
-    methodName: ChangeSpeed
-  - assembly: Assembly-CSharp
-    fullTypeName: MovingPlatform
-    methodName: ChangeSpeed
-  - assembly: Assembly-CSharp
-    fullTypeName: MovingPlatform
     methodName: Activate
+  - assembly: Assembly-CSharp
+    fullTypeName: MovingPlatform
+    methodName: ChangeSpeed
+  - assembly: Assembly-CSharp
+    fullTypeName: MovingPlatform
+    methodName: ChangeSpeed
   - assembly: Assembly-CSharp
     fullTypeName: MovingPlatform
     methodName: Activate
@@ -675,36 +674,6 @@ ScriptsOnlyBuild:
     methodName: Activate
   - assembly: Assembly-CSharp
     fullTypeName: MovingPlatform
-    methodName: Activate
-  - assembly: Assembly-CSharp
-    fullTypeName: MovingPlatform
-    methodName: ChangeSpeed
-  - assembly: Assembly-CSharp
-    fullTypeName: MovingPlatform
-    methodName: ChangeSpeed
-  - assembly: Assembly-CSharp
-    fullTypeName: MovingPlatform
-    methodName: Activate
-  - assembly: Assembly-CSharp
-    fullTypeName: MovingPlatform
-    methodName: ChangeSpeed
-  - assembly: Assembly-CSharp
-    fullTypeName: MovingPlatform
-    methodName: ChangeSpeed
-  - assembly: Assembly-CSharp
-    fullTypeName: MovingPlatform
-    methodName: Activate
-  - assembly: Assembly-CSharp
-    fullTypeName: MovingPlatform
-    methodName: ChangeSpeed
-  - assembly: Assembly-CSharp
-    fullTypeName: MovingPlatform
-    methodName: ChangeSpeed
-  - assembly: Assembly-CSharp
-    fullTypeName: MovingPlatform
-    methodName: Activate
-  - assembly: Assembly-CSharp
-    fullTypeName: MovingPlatform
     methodName: ChangeSpeed
   - assembly: Assembly-CSharp
     fullTypeName: MovingPlatform
@@ -716,8 +685,38 @@ ScriptsOnlyBuild:
     fullTypeName: Cannon
     methodName: Fire
   - assembly: Assembly-CSharp
+    fullTypeName: MovingPlatform
+    methodName: Activate
+  - assembly: Assembly-CSharp
     fullTypeName: Cannon
     methodName: Fire
+  - assembly: Assembly-CSharp
+    fullTypeName: MovingPlatform
+    methodName: Activate
+  - assembly: Assembly-CSharp
+    fullTypeName: MovingPlatform
+    methodName: ChangeSpeed
+  - assembly: Assembly-CSharp
+    fullTypeName: MovingPlatform
+    methodName: ChangeSpeed
+  - assembly: Assembly-CSharp
+    fullTypeName: MovingPlatform
+    methodName: Activate
+  - assembly: Assembly-CSharp
+    fullTypeName: MovingPlatform
+    methodName: ChangeSpeed
+  - assembly: Assembly-CSharp
+    fullTypeName: MovingPlatform
+    methodName: ChangeSpeed
+  - assembly: Assembly-CSharp
+    fullTypeName: MovingPlatform
+    methodName: Activate
+  - assembly: Assembly-CSharp
+    fullTypeName: MovingPlatform
+    methodName: ChangeSpeed
+  - assembly: Assembly-CSharp
+    fullTypeName: MovingPlatform
+    methodName: ChangeSpeed
   - assembly: Assembly-CSharp
     fullTypeName: MovingPlatform
     methodName: Activate
@@ -822,10 +821,10 @@ ScriptsOnlyBuild:
     methodName: Activate
   - assembly: Assembly-CSharp
     fullTypeName: MovingPlatform
-    methodName: Activate
+    methodName: ChangeSpeed
   - assembly: Assembly-CSharp
     fullTypeName: MovingPlatform
-    methodName: ChangeSpeed
+    methodName: Activate
   - assembly: Assembly-CSharp
     fullTypeName: CanvasScript
     methodName: PauseGame

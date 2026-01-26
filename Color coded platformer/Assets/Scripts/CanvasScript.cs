@@ -12,6 +12,7 @@ public class CanvasScript : MonoBehaviour
     public static CanvasScript Instance;
 
     [SerializeField] GameObject pauseMenu;
+    [SerializeField] GameObject levelSelectMenu;
     [SerializeField] Button continueButton;  // Assign this in the Inspector
     EventSystem eventSystem;
     Button[] sceneButtons;
@@ -35,6 +36,8 @@ public class CanvasScript : MonoBehaviour
 
         gridLayoutGroup = GetComponentInChildren<GridLayoutGroup>(true);
         gridLayoutGroup.cellSize = buttonSize;
+
+        if(!levelSelectMenu) levelSelectMenu = gridLayoutGroup.transform.parent.gameObject;
 
         if (gridLayoutGroup != null && levelButtonPrefab != null)
         {
@@ -79,7 +82,7 @@ public class CanvasScript : MonoBehaviour
     {
         if (!pauseMenu) return;
 
-        if (pauseMenu.activeSelf)
+        if (pauseMenu.activeSelf || (!pauseMenu.activeSelf && levelSelectMenu.activeSelf))
         {
             Time.timeScale = 1f;
             pauseMenu.SetActive(false);
