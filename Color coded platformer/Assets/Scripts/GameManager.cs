@@ -8,7 +8,7 @@ public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
     public Vector2 playerSpawnPoint;
-    public GameObject canvasPrefab;
+
     void Awake(){
     DontDestroyOnLoad(gameObject);
 

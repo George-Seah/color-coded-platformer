@@ -1861,6 +1861,13 @@
             ]
         },
         {
+            "managedAssemblyName": "Unity.Timeline.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "UnityEngine.Timeline.TimelineAsset",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
             "managedAssemblyName": "UnityEngine.dll",
             "nativeClass": "Transform",
             "fullManagedTypeName": "UnityEngine.Transform",
@@ -1881,6 +1888,13 @@
                 "Assets/Scenes/Scene 8.unity",
                 "Assets/Scenes/Scene 9.unity"
             ]
+        },
+        {
+            "managedAssemblyName": "Unity.2D.Animation.Runtime.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "UnityEngine.U2D.Animation.BufferManager",
+            "moduleName": "",
+            "usedInScenes": []
         },
         {
             "managedAssemblyName": "Unity.2D.Animation.Runtime.dll",

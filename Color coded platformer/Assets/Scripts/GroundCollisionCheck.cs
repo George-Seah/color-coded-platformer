@@ -73,7 +73,8 @@ public class GroundCollisionCheck : MonoBehaviour
                collision.gameObject.CompareTag("Push Block") ||
                collision.gameObject.CompareTag("OneWayPlatform") ||
                collision.gameObject.CompareTag("Cloud") ||
-               collision.gameObject.CompareTag("Moving Platform");
+               collision.gameObject.CompareTag("Moving Platform") ||
+               collision.gameObject.CompareTag("Cannon");
     }
 
     void Update()

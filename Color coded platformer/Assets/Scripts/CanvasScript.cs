@@ -3,6 +3,7 @@ using UnityEngine.UI;
 using TMPro;
 using UnityEngine.EventSystems;
 using UnityEngine.SceneManagement;
+
 #if UNITY_EDITOR
 using UnityEditor;
 #endif
@@ -11,49 +12,41 @@ public class CanvasScript : MonoBehaviour
 {
     public static CanvasScript Instance;
 
+    [Header("Menus")]
     [SerializeField] GameObject pauseMenu;
     [SerializeField] GameObject levelSelectMenu;
-    [SerializeField] Button continueButton;  // Assign this in the Inspector
-    EventSystem eventSystem;
-    Button[] sceneButtons;
-    GridLayoutGroup gridLayoutGroup;
-    [SerializeField] Object[] scenesToLoad;
+    [SerializeField] Button continueButton;
+
+    [Header("Level Select")]
+#if UNITY_EDITOR
+    [SerializeField] SceneAsset[] sceneAssets; // Editor-only convenience
+#endif
+    [SerializeField] string[] sceneNames;      // Runtime-safe
     [SerializeField] GameObject levelButtonPrefab;
     [SerializeField] Vector2 buttonSize = new Vector2(150, 150);
     [SerializeField] float fontSize = 60f;
 
+    EventSystem eventSystem;
+    GridLayoutGroup gridLayoutGroup;
+
     void Awake()
     {
-        if (Instance == null)
-            Instance = this;
-        else
-            Destroy(gameObject);
+        if (Instance == null) Instance = this;
+        else { Destroy(gameObject); return; }
 
-        if (pauseMenu != null)
-            pauseMenu.SetActive(false);
+        if (pauseMenu) pauseMenu.SetActive(false);
 
         EnsureEventSystemExists();
 
         gridLayoutGroup = GetComponentInChildren<GridLayoutGroup>(true);
-        gridLayoutGroup.cellSize = buttonSize;
-
-        if(!levelSelectMenu) levelSelectMenu = gridLayoutGroup.transform.parent.gameObject;
-
-        if (gridLayoutGroup != null && levelButtonPrefab != null)
+        if (gridLayoutGroup)
         {
-            for (int i = 0; i < scenesToLoad.Length; i++)
-            {
-                Object currentScene = scenesToLoad[i];
-                GameObject buttonObj = Instantiate(levelButtonPrefab, gridLayoutGroup.transform);
-                Button levelButton = buttonObj.GetComponent<Button>();
-                
-                levelButton.GetComponentInChildren<TextMeshProUGUI>().fontSize = fontSize;
-                levelButton.GetComponentInChildren<TextMeshProUGUI>().text = $"{i + 1}";
-                levelButton.onClick.AddListener(() => LoadScene(currentScene));
-                // Additional setup for levelButton if needed
-            }
+            gridLayoutGroup.cellSize = buttonSize;
+            if (!levelSelectMenu)
+                levelSelectMenu = gridLayoutGroup.transform.parent.gameObject;
         }
 
+        GenerateLevelButtons();
     }
 
     void OnEnable()
@@ -71,10 +64,34 @@ public class CanvasScript : MonoBehaviour
         EnsureEventSystemExists();
     }
 
+    void GenerateLevelButtons()
+    {
+        if (!gridLayoutGroup || !levelButtonPrefab) return;
+
+        foreach (Transform child in gridLayoutGroup.transform)
+            Destroy(child.gameObject);
+
+        for (int i = 0; i < sceneNames.Length; i++)
+        {
+            string sceneName = sceneNames[i];
+
+            GameObject buttonObj = Instantiate(levelButtonPrefab, gridLayoutGroup.transform);
+            Button button = buttonObj.GetComponent<Button>();
+
+            TextMeshProUGUI text = button.GetComponentInChildren<TextMeshProUGUI>();
+            if (text)
+            {
+                text.fontSize = fontSize;
+                text.text = (i + 1).ToString();
+            }
+
+            button.onClick.AddListener(() => LoadSceneByName(sceneName));
+        }
+    }
+
     public void SelectUIComponent(GameObject target)
     {
-        if(eventSystem == null) EnsureEventSystemExists();
-
+        if (!eventSystem) EnsureEventSystemExists();
         eventSystem.SetSelectedGameObject(target);
     }
 
@@ -82,7 +99,9 @@ public class CanvasScript : MonoBehaviour
     {
         if (!pauseMenu) return;
 
-        if (pauseMenu.activeSelf || (!pauseMenu.activeSelf && levelSelectMenu.activeSelf))
+        bool closing = pauseMenu.activeSelf || (!pauseMenu.activeSelf && levelSelectMenu && levelSelectMenu.activeSelf);
+
+        if (closing)
         {
             Time.timeScale = 1f;
             pauseMenu.SetActive(false);
@@ -95,12 +114,8 @@ public class CanvasScript : MonoBehaviour
             Time.timeScale = 0f;
             pauseMenu.SetActive(true);
 
-            // Clear any current selection
             EventSystem.current.SetSelectedGameObject(null);
-
-            // Auto-select the Continue button
-            if (continueButton != null)
-                continueButton.Select();
+            if (continueButton) continueButton.Select();
         }
     }
 
@@ -112,30 +127,28 @@ public class CanvasScript : MonoBehaviour
 
     public void QuitGame()
     {
-        Debug.Log("Quit Game");
         Application.Quit();
     }
 
-    public void LoadScene(Object scene)
+    public void LoadSceneByName(string sceneName)
     {
-        if (scene == null)
+        if (!Application.CanStreamedLevelBeLoaded(sceneName))
         {
-            Debug.LogError("Scene object is null!");
+            Debug.LogError($"Scene '{sceneName}' is not in Build Settings.");
             return;
         }
 
         Time.timeScale = 1f;
-        Debug.Log($"Loading scene: {scene.name}");
-        SceneManager.LoadScene(scene.name);
+        SceneManager.LoadScene(sceneName);
     }
 
     void EnsureEventSystemExists()
     {
-        if (FindObjectOfType<EventSystem>() != null) return;
+        if (FindObjectOfType<EventSystem>()) return;
 
         GameObject es = new GameObject("EventSystem");
-
         eventSystem = es.AddComponent<EventSystem>();
+
 #if ENABLE_INPUT_SYSTEM && !ENABLE_LEGACY_INPUT_MANAGER
         es.AddComponent<UnityEngine.InputSystem.UI.InputSystemUIInputModule>();
 #else
@@ -144,4 +157,17 @@ public class CanvasScript : MonoBehaviour
 
         DontDestroyOnLoad(es);
     }
+
+#if UNITY_EDITOR
+    void OnValidate()
+    {
+        if (sceneAssets == null) return;
+
+        sceneNames = new string[sceneAssets.Length];
+        for (int i = 0; i < sceneAssets.Length; i++)
+        {
+            sceneNames[i] = sceneAssets[i] ? sceneAssets[i].name : string.Empty;
+        }
+    }
+#endif
 }

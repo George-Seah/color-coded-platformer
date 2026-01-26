@@ -32,7 +32,7 @@ public class Door : MonoBehaviour
         playerInRange = true;
     }
     
-    void OnTriggerStay2D(Collider2D other)
+    void Update()
     {
         if (!playerInRange || used || interact == null) return;
 

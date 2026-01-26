@@ -1655,7 +1655,7 @@ MonoBehaviour:
   pauseMenu: {fileID: 5075060919273736571}
   levelSelectMenu: {fileID: 4819704322232761372}
   continueButton: {fileID: 8595450937807289087}
-  scenesToLoad:
+  sceneAssets:
   - {fileID: 102900000, guid: 8c9cfa26abfee488c85f1582747f6a02, type: 3}
   - {fileID: 102900000, guid: 7e4f1e67567bc004fa94b97e10bbd7ca, type: 3}
   - {fileID: 102900000, guid: 3f579fd8137625a458a8a01442331148, type: 3}
@@ -1670,6 +1670,21 @@ MonoBehaviour:
   - {fileID: 102900000, guid: c14ffa62803b7aa468e32f6390642c38, type: 3}
   - {fileID: 102900000, guid: f9da6b88a765ba44790fc4be08f2cf8f, type: 3}
   - {fileID: 102900000, guid: 068fada9f60732e4b95f802365fd5d4b, type: 3}
+  sceneNames:
+  - Scene 1
+  - Scene 2
+  - Scene 3
+  - Scene 4
+  - Scene 5
+  - Scene 6
+  - Scene 7
+  - Scene 8
+  - Scene 9
+  - Scene 10
+  - Scene 11
+  - Scene 12
+  - Scene 13
+  - Scene 14
   levelButtonPrefab: {fileID: 2496888614827579057, guid: c99d7abb6f82a4f4f9fd73e629563ac4, type: 3}
   buttonSize: {x: 150, y: 150}
   fontSize: 60

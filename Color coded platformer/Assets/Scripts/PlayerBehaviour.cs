@@ -142,7 +142,7 @@ public class PlayerBehaviour : MonoBehaviour
 
     void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Key") && !holdingKey)
+        if (collision.gameObject.GetComponent<Key>() == currentKey && !holdingKey)
         {
             var key = collision.gameObject.GetComponent<Key>();
             if (currentKey != null && !key.ReadPickedUp()) currentKey = null;
