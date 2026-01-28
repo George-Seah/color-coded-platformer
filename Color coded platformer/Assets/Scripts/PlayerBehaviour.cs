@@ -20,7 +20,7 @@ public class PlayerBehaviour : MonoBehaviour
     [SerializeField] GameObject canvasPrefab;
     
     public PlayerInputActions playerControls;
-    public float gravityScale = 10f, fallingGravityScale = 30f;
+    public readonly float gravityScale = 7f, fallingGravityScale = 9f;
     public string color;
     public bool onLadder, lookingRight;
     

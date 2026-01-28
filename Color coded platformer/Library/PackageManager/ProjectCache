@@ -6063,6 +6063,8 @@ m_ResolvedPackages:
     - 14.0.0
     - 14.0.1
     - 14.0.2
+    - 15.0.0
+    - 15.0.1
     compatible:
     - 10.2.1
     - 10.2.2
@@ -6395,6 +6397,7 @@ m_ResolvedPackages:
     - 12.0.1
     - 13.0.0
     - 13.0.1
+    - 14.0.0
     compatible:
     - 9.1.0
     - 9.1.1
@@ -6608,6 +6611,7 @@ m_ResolvedPackages:
     - 12.0.2
     - 13.0.0
     - 14.0.0
+    - 15.0.0
     compatible:
     - 10.0.7
     - 10.1.0
@@ -6878,6 +6882,7 @@ m_ResolvedPackages:
     - 7.0.0-exp.1
     - 7.0.0
     - 8.0.0-exp.1
+    - 8.0.0
     compatible:
     - 4.1.0
     recommended: 4.1.0
@@ -7008,6 +7013,7 @@ m_ResolvedPackages:
     - 3.0.0
     - 3.0.1
     - 4.0.0
+    - 5.0.0
     compatible:
     - 1.1.10
     recommended: 1.1.10
@@ -8337,6 +8343,7 @@ m_ResolvedPackages:
     - 12.0.2
     - 13.0.0
     - 13.0.1
+    - 14.0.0
     compatible:
     - 9.1.1
     recommended: 9.1.1

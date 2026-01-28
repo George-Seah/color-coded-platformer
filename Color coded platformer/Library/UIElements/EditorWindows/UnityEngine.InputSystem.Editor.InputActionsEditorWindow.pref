@@ -37,6 +37,6 @@ MonoBehaviour:
   - '{}'
   - '{"m_FixedPaneDimension":200.0}'
   - '{"m_FixedPaneDimension":320.0}'
-  - '{"m_ShowAlternatingRowBackgrounds":0,"serializedVirtualizationData":{"scrollOffset":{"x":0.0,"y":0.0},"firstVisibleIndex":0,"contentPadding":0.0,"contentHeight":0.0,"anchoredItemIndex":0,"anchorOffset":0.0},"m_SelectedIds":[895917197],"m_ExpandedItemIds":[624096414,-1751232199]}'
+  - '{"m_ShowAlternatingRowBackgrounds":0,"serializedVirtualizationData":{"scrollOffset":{"x":0.0,"y":0.0},"firstVisibleIndex":0,"contentPadding":0.0,"contentHeight":0.0,"anchoredItemIndex":0,"anchorOffset":0.0},"m_SelectedIds":[1926106976],"m_ExpandedItemIds":[624096414,-1751232199,1926106976,1687142752,895917197,174579619,-1365245703]}'
   - '{"m_ScrollOffset":{"x":0.0,"y":0.0}}'
   - '{"m_Value":0.0,"m_LowValue":0.0,"m_HighValue":0.0}'

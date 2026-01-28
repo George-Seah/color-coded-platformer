@@ -50,7 +50,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d319d5e9b5dbc3f488a5c0bd1a1469ac, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  climbSpeed: 0.25
+  climbSpeed: 10
   normalGravity: 10
   exitGravity: 30
   moveDirection: {x: 0, y: 0}

@@ -64,6 +64,7 @@
 -s="C:\Unity\6000.0.62f1\Editor\Data\NetStandard\EditorExtensions"
 -s="C:\Unity\6000.0.62f1\Editor\Data\NetStandard\Extensions\2.0.0"
 -s="C:\Unity\6000.0.62f1\Editor\Data\NetStandard\ref\2.1.0"
+-s="C:\Unity\6000.0.62f1\Editor\Data\PlaybackEngines\WebGLSupport\Managed"
 -s="C:\Github\color-coded-platformer\Color coded platformer\Library\ScriptAssemblies"
 -s="C:\Github\color-coded-platformer\Color coded platformer\Library\PackageCache\com.unity.burst@1df634d836b8"
 -s="C:\Github\color-coded-platformer\Color coded platformer\Library\PackageCache\com.unity.burst@1df634d836b8\Unity.Burst.CodeGen"
