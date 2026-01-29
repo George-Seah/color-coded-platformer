@@ -8,6 +8,7 @@ public class DeathBarrier : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("Player"))
         {
+            collision.gameObject.GetComponentInParent<PlayerBehaviour>().currentKey?.Drop();
             collision.gameObject.transform.position = respawnPosition;
         }
         if(collision.gameObject.CompareTag("Waddler") || collision.gameObject.CompareTag("Key")){

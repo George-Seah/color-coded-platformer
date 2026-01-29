@@ -74,7 +74,7 @@ void ShootCloud()
             picker.SelectedColor = colorsToShoot[colorIndex];
 
             colorIndex++;
-            if (colorIndex >= colorsToShoot.Count)
+            if (colorIndex % colorsToShoot.Count == 0)
                 colorIndex = 0;
         }
     }

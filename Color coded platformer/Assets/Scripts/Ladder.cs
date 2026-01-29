@@ -19,6 +19,12 @@ public class Ladder : MonoBehaviour
 
     const float JOYSTICK_DEADZONE = 0.25f;
     const float KEYBOARD_THRESHOLD = 0.01f;
+    const float JOYSTICK_ENTER_Y = 0.30f;
+    const float JOYSTICK_EXIT_Y  = 0.15f;
+
+    const float JOYSTICK_EXIT_X  = 0.60f;
+    const float KEYBOARD_EXIT_X  = 0.01f;
+
 
     void Awake()
     {
@@ -44,10 +50,10 @@ public class Ladder : MonoBehaviour
         if (!playerInside || player == null)
             return;
 
-        if (!player.onLadder && HasVerticalIntent())
+        if (!player.onLadder && HasVerticalIntentToEnter())
             EnterLadder();
 
-        if (player.onLadder && ShouldExitLadder())
+        if (player.onLadder && ShouldExitLadder() && !HasVerticalIntentToStay())
             ExitLadder();
     }
 
@@ -147,19 +153,31 @@ public class Ladder : MonoBehaviour
         float threshold = IsJoystick() ? JOYSTICK_DEADZONE : KEYBOARD_THRESHOLD;
         return Mathf.Abs(player.moveDirection.y) > threshold;
     }
+    
+    bool HasVerticalIntentToEnter()
+    {
+        if (!IsJoystick())
+            return Mathf.Abs(player.moveDirection.y) > KEYBOARD_THRESHOLD;
+
+        return Mathf.Abs(player.moveDirection.y) > JOYSTICK_ENTER_Y;
+    }
+    bool HasVerticalIntentToStay()
+    {
+        if (!IsJoystick())
+            return Mathf.Abs(player.moveDirection.y) > KEYBOARD_THRESHOLD;
+
+        return Mathf.Abs(player.moveDirection.y) > JOYSTICK_EXIT_Y;
+    }
 
     bool ShouldExitLadder()
     {
-        if (!IsJoystick())
-            return Mathf.Abs(player.moveDirection.x) > KEYBOARD_THRESHOLD;
-
         float x = Mathf.Abs(player.moveDirection.x);
         float y = Mathf.Abs(player.moveDirection.y);
 
-        // Require:
-        // 1. Strong horizontal push
-        // 2. Almost no vertical intent
-        return x > 0.6f && y < 0.15f;
+        if (!IsJoystick())
+            return x > KEYBOARD_EXIT_X;
+
+        return x > JOYSTICK_EXIT_X && y < JOYSTICK_EXIT_Y;
     }
 
     /* ========================== COLLISIONS ========================== */
