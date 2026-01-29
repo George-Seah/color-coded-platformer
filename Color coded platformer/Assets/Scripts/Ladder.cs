@@ -6,12 +6,6 @@ public class Ladder : MonoBehaviour
     [Header("Settings")]
     [SerializeField] float climbSpeed = 3f;
 
-    [Header("Debug")]
-    Vector2 moveDirection;
-
-    PlayerInputActions controls;
-    InputAction move;
-
     Rigidbody2D rb;
     PlayerBehaviour player;
     Collider2D playerCollider;
@@ -28,7 +22,6 @@ public class Ladder : MonoBehaviour
 
     void Awake()
     {
-        controls = new PlayerInputActions();
         ladderCollider = GetComponent<Collider2D>();
 
         PlatformEffector2D effector = GetComponentInChildren<PlatformEffector2D>();
@@ -41,17 +34,6 @@ public class Ladder : MonoBehaviour
         LadderWaddlerCollisionRegistry.RegisterLadder(ladderCollider);
     }
 
-    void OnEnable()
-    {
-        controls.Player.Enable();
-        move = controls.Player.Move;
-    }
-
-    void OnDisable()
-    {
-        controls.Player.Disable();
-    }
-
     void OnDestroy()
     {
         LadderWaddlerCollisionRegistry.UnregisterLadder(ladderCollider);
@@ -59,8 +41,6 @@ public class Ladder : MonoBehaviour
 
     void Update()
     {
-        moveDirection = move.ReadValue<Vector2>();
-
         if (!playerInside || player == null)
             return;
 
@@ -79,7 +59,7 @@ public class Ladder : MonoBehaviour
         rb.gravityScale = 0f;
 
         // Stay on ladder even when input is zero
-        rb.linearVelocity = new Vector2(0f, moveDirection.y * climbSpeed);
+        rb.linearVelocity = new Vector2(0f, player.moveDirection.y * climbSpeed);
 
         // Lock X to ladder
         rb.position = new Vector2(transform.position.x, rb.position.y);
@@ -158,27 +138,28 @@ public class Ladder : MonoBehaviour
 
     bool IsJoystick()
     {
-        return move.activeControl != null &&
-               move.activeControl.device is Gamepad;
+        return player.move.activeControl != null &&
+               player.move.activeControl.device is Gamepad;
     }
 
     bool HasVerticalIntent()
     {
         float threshold = IsJoystick() ? JOYSTICK_DEADZONE : KEYBOARD_THRESHOLD;
-        return Mathf.Abs(moveDirection.y) > threshold;
+        return Mathf.Abs(player.moveDirection.y) > threshold;
     }
 
     bool ShouldExitLadder()
     {
-        if (IsJoystick())
-        {
-            // Horizontal must dominate
-            return Mathf.Abs(moveDirection.x) > JOYSTICK_DEADZONE &&
-                   Mathf.Abs(moveDirection.x) > Mathf.Abs(moveDirection.y);
-        }
+        if (!IsJoystick())
+            return Mathf.Abs(player.moveDirection.x) > KEYBOARD_THRESHOLD;
 
-        // Keyboard / D-pad
-        return Mathf.Abs(moveDirection.x) > KEYBOARD_THRESHOLD;
+        float x = Mathf.Abs(player.moveDirection.x);
+        float y = Mathf.Abs(player.moveDirection.y);
+
+        // Require:
+        // 1. Strong horizontal push
+        // 2. Almost no vertical intent
+        return x > 0.6f && y < 0.15f;
     }
 
     /* ========================== COLLISIONS ========================== */

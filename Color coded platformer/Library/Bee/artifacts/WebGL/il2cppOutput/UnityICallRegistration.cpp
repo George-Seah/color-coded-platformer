@@ -1570,10 +1570,6 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Collider2D_OverlapPoint_Injected();
 		Register_UnityEngine_Collider2D_OverlapPoint_Injected();
 
-		//System.Boolean UnityEngine.Collider2D::get_isTrigger_Injected(System.IntPtr)
-		void Register_UnityEngine_Collider2D_get_isTrigger_Injected();
-		Register_UnityEngine_Collider2D_get_isTrigger_Injected();
-
 		//System.Int32 UnityEngine.Collider2D::GetShapes_Internal_Injected(System.IntPtr,UnityEngine.PhysicsShapeGroup2D/GroupState&,System.Int32,System.Int32)
 		void Register_UnityEngine_Collider2D_GetShapes_Internal_Injected();
 		Register_UnityEngine_Collider2D_GetShapes_Internal_Injected();
@@ -6129,10 +6125,6 @@ void RegisterAllStrippedInternalCalls()
 		//System.Void UnityEngine.Rigidbody2D::AddTorque_Injected(System.IntPtr,System.Single,UnityEngine.ForceMode2D)
 		void Register_UnityEngine_Rigidbody2D_AddTorque_Injected();
 		Register_UnityEngine_Rigidbody2D_AddTorque_Injected();
-
-		//System.Void UnityEngine.Rigidbody2D::MovePosition_Injected(System.IntPtr,UnityEngine.Vector2&)
-		void Register_UnityEngine_Rigidbody2D_MovePosition_Injected();
-		Register_UnityEngine_Rigidbody2D_MovePosition_Injected();
 
 		//System.Void UnityEngine.Rigidbody2D::get_linearVelocity_Injected(System.IntPtr,UnityEngine.Vector2&)
 		void Register_UnityEngine_Rigidbody2D_get_linearVelocity_Injected();

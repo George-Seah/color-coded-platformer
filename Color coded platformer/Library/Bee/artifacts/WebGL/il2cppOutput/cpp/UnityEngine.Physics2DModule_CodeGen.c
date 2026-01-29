@@ -83,7 +83,6 @@ extern void RaycastHit2D_get_distance_mD0FE1482E2768CF587AFB65488459697EAB64613 
 extern void RaycastHit2D_get_collider_mB56DFCD16B708852EEBDBB490BC8665DBF7487FD (void);
 extern void Rigidbody2D_get_position_m07070C4416DFE2229070F95B349E411AE4869276 (void);
 extern void Rigidbody2D_set_position_m03C92F26F561D48050FBA840754F584AA7F415EF (void);
-extern void Rigidbody2D_MovePosition_m7F24879BB78DA0587168B257C56DCFD248A90895 (void);
 extern void Rigidbody2D_get_linearVelocity_m0130BA2A5A1A680CD9656EEEBC85939D823E3B9F (void);
 extern void Rigidbody2D_set_linearVelocity_mD4C890DE3DF15ECAD0DC61675586C0D1998CC1BB (void);
 extern void Rigidbody2D_set_linearVelocityX_m9FFB582487913EE64D9398F1B929E8503C76CA41 (void);
@@ -103,7 +102,6 @@ extern void Rigidbody2D_AddTorque_m6B732A4BBCC6DFE0A5A8160FAF4DD292C76AC4D2 (voi
 extern void Rigidbody2D__ctor_mFF16B8ADAAE2FFD5FD4FBE3F412FC9E8FBBDBC88 (void);
 extern void Rigidbody2D_get_position_Injected_m345C71ACA4BD5DA89055B02BFE11D60E1842D931 (void);
 extern void Rigidbody2D_set_position_Injected_m868A1BA152CBC79D00486486B4D6C0F7D55A275B (void);
-extern void Rigidbody2D_MovePosition_Injected_mE2D9E53A5464419EA095CD6495EB1E54B516BADD (void);
 extern void Rigidbody2D_get_linearVelocity_Injected_m28A0520BB5EC38F5D77020832B6246A68B499DDE (void);
 extern void Rigidbody2D_set_linearVelocity_Injected_m8F8D75A47EDB778269672D789D2FF1DAFEF22F24 (void);
 extern void Rigidbody2D_set_linearVelocityX_Injected_mCCFEA7FF28637AEEE85E68C3B08CFF3D6CA3DFE0 (void);
@@ -117,7 +115,6 @@ extern void Rigidbody2D_set_interpolation_Injected_m5E23F57DE0437CD1C39E0802419B
 extern void Rigidbody2D_get_localToWorldMatrix_Injected_mA7962F4C56BC54DBE033ECEDA72C65BF7B28DD9D (void);
 extern void Rigidbody2D_AddForce_Internal_Injected_m0F88F3DAD58E7A647F01447ABBAC216D9425715E (void);
 extern void Rigidbody2D_AddTorque_Injected_m2B763851E459A7099D52C689A0ACC152E4EB005A (void);
-extern void Collider2D_get_isTrigger_m982A3441480D505432B26A5B3DF6D0B34342EEE7 (void);
 extern void Collider2D_set_isTrigger_m19D5227BAB5D41F212D515C1E2CA433C2FEF7A48 (void);
 extern void Collider2D_set_usedByEffector_mEF3DE09BBDE852262DAA80F4229CAB6BB42CC8DB (void);
 extern void Collider2D_get_offset_m6DC45B352DDE28C7B08607BFA3BECEC6E5F31914 (void);
@@ -131,7 +128,6 @@ extern void Collider2D_get_bounds_m74F65CE702BA9D9EED05B870325B4FE3B2401B5E (voi
 extern void Collider2D_IsTouching_mEE1EF81028F933A33E4585AF49E85FDE2AEDF7B5 (void);
 extern void Collider2D_OverlapPoint_mF04F862E1CDA270589C82BBD72E71F0B60B6B883 (void);
 extern void Collider2D__ctor_mC4E4C5F6A2093B4902A09B312D1E832F12DE0B4B (void);
-extern void Collider2D_get_isTrigger_Injected_m3CD8A2721506D3844FFC93FA1A13E1380E674895 (void);
 extern void Collider2D_set_isTrigger_Injected_m931DDAAFC9A622C187CA2838845BEEE5F2DC7EEA (void);
 extern void Collider2D_set_usedByEffector_Injected_m61B884EB88C8982D7C28B1B9D96D30BFFCD2CDC4 (void);
 extern void Collider2D_get_offset_Injected_m3F229BF7CD87299502C319B0838625030C2A6E12 (void);
@@ -171,7 +167,7 @@ extern void PlatformEffector2D_set_surfaceArc_mE0F36334C5F0A2C7CCCF8BAFDA8DD022B
 extern void PlatformEffector2D__ctor_mC1BE6B1195E71193CCBD774D231B91A5C975C35D (void);
 extern void PlatformEffector2D_set_useOneWay_Injected_mF9D0F341A96FF53FB8CF904D98E28DC0E137FE5F (void);
 extern void PlatformEffector2D_set_surfaceArc_Injected_m7A76C54520D2D3F3EF96FEC9FDC9F5B20AC70D53 (void);
-static Il2CppMethodPointer s_methodPointers[164] = 
+static Il2CppMethodPointer s_methodPointers[160] = 
 {
 	PhysicsScene2D_ToString_mACA22EF575F7544176360B16D431F2BB1DEBB307,
 	PhysicsScene2D_GetHashCode_mD45B3437D088C66A35AE20066AD632D1D0858B1E,
@@ -249,7 +245,6 @@ static Il2CppMethodPointer s_methodPointers[164] =
 	RaycastHit2D_get_collider_mB56DFCD16B708852EEBDBB490BC8665DBF7487FD,
 	Rigidbody2D_get_position_m07070C4416DFE2229070F95B349E411AE4869276,
 	Rigidbody2D_set_position_m03C92F26F561D48050FBA840754F584AA7F415EF,
-	Rigidbody2D_MovePosition_m7F24879BB78DA0587168B257C56DCFD248A90895,
 	Rigidbody2D_get_linearVelocity_m0130BA2A5A1A680CD9656EEEBC85939D823E3B9F,
 	Rigidbody2D_set_linearVelocity_mD4C890DE3DF15ECAD0DC61675586C0D1998CC1BB,
 	Rigidbody2D_set_linearVelocityX_m9FFB582487913EE64D9398F1B929E8503C76CA41,
@@ -269,7 +264,6 @@ static Il2CppMethodPointer s_methodPointers[164] =
 	Rigidbody2D__ctor_mFF16B8ADAAE2FFD5FD4FBE3F412FC9E8FBBDBC88,
 	Rigidbody2D_get_position_Injected_m345C71ACA4BD5DA89055B02BFE11D60E1842D931,
 	Rigidbody2D_set_position_Injected_m868A1BA152CBC79D00486486B4D6C0F7D55A275B,
-	Rigidbody2D_MovePosition_Injected_mE2D9E53A5464419EA095CD6495EB1E54B516BADD,
 	Rigidbody2D_get_linearVelocity_Injected_m28A0520BB5EC38F5D77020832B6246A68B499DDE,
 	Rigidbody2D_set_linearVelocity_Injected_m8F8D75A47EDB778269672D789D2FF1DAFEF22F24,
 	Rigidbody2D_set_linearVelocityX_Injected_mCCFEA7FF28637AEEE85E68C3B08CFF3D6CA3DFE0,
@@ -283,7 +277,6 @@ static Il2CppMethodPointer s_methodPointers[164] =
 	Rigidbody2D_get_localToWorldMatrix_Injected_mA7962F4C56BC54DBE033ECEDA72C65BF7B28DD9D,
 	Rigidbody2D_AddForce_Internal_Injected_m0F88F3DAD58E7A647F01447ABBAC216D9425715E,
 	Rigidbody2D_AddTorque_Injected_m2B763851E459A7099D52C689A0ACC152E4EB005A,
-	Collider2D_get_isTrigger_m982A3441480D505432B26A5B3DF6D0B34342EEE7,
 	Collider2D_set_isTrigger_m19D5227BAB5D41F212D515C1E2CA433C2FEF7A48,
 	Collider2D_set_usedByEffector_mEF3DE09BBDE852262DAA80F4229CAB6BB42CC8DB,
 	Collider2D_get_offset_m6DC45B352DDE28C7B08607BFA3BECEC6E5F31914,
@@ -297,7 +290,6 @@ static Il2CppMethodPointer s_methodPointers[164] =
 	Collider2D_IsTouching_mEE1EF81028F933A33E4585AF49E85FDE2AEDF7B5,
 	Collider2D_OverlapPoint_mF04F862E1CDA270589C82BBD72E71F0B60B6B883,
 	Collider2D__ctor_mC4E4C5F6A2093B4902A09B312D1E832F12DE0B4B,
-	Collider2D_get_isTrigger_Injected_m3CD8A2721506D3844FFC93FA1A13E1380E674895,
 	Collider2D_set_isTrigger_Injected_m931DDAAFC9A622C187CA2838845BEEE5F2DC7EEA,
 	Collider2D_set_usedByEffector_Injected_m61B884EB88C8982D7C28B1B9D96D30BFFCD2CDC4,
 	Collider2D_get_offset_Injected_m3F229BF7CD87299502C319B0838625030C2A6E12,
@@ -389,7 +381,7 @@ static Il2CppTokenAdjustorThunkPair s_adjustorThunks[24] =
 	{ 0x06000049, RaycastHit2D_get_distance_mD0FE1482E2768CF587AFB65488459697EAB64613_AdjustorThunk },
 	{ 0x0600004A, RaycastHit2D_get_collider_mB56DFCD16B708852EEBDBB490BC8665DBF7487FD_AdjustorThunk },
 };
-static const int32_t s_InvokerIndices[164] = 
+static const int32_t s_InvokerIndices[160] = 
 {
 	14510,
 	14441,
@@ -467,7 +459,6 @@ static const int32_t s_InvokerIndices[164] =
 	14510,
 	14728,
 	11584,
-	11584,
 	14728,
 	11584,
 	11470,
@@ -489,7 +480,6 @@ static const int32_t s_InvokerIndices[164] =
 	20421,
 	20421,
 	20421,
-	20421,
 	20428,
 	22420,
 	20428,
@@ -501,7 +491,6 @@ static const int32_t s_InvokerIndices[164] =
 	20421,
 	18643,
 	18662,
-	14314,
 	11186,
 	11186,
 	14728,
@@ -515,7 +504,6 @@ static const int32_t s_InvokerIndices[164] =
 	8121,
 	8328,
 	14741,
-	21975,
 	20422,
 	20422,
 	20421,
@@ -560,7 +548,7 @@ IL2CPP_EXTERN_C const Il2CppCodeGenModule g_UnityEngine_Physics2DModule_CodeGenM
 const Il2CppCodeGenModule g_UnityEngine_Physics2DModule_CodeGenModule = 
 {
 	"UnityEngine.Physics2DModule.dll",
-	164,
+	160,
 	s_methodPointers,
 	24,
 	s_adjustorThunks,

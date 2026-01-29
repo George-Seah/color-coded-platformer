@@ -24,13 +24,14 @@ public class PlayerBehaviour : MonoBehaviour
     public string color;
     public bool onLadder, lookingRight;
     
-    Vector2 moveDirection;
-    InputAction move, jump, drop, interact, pause;
+    public Vector2 moveDirection { get; private set; }
+    public InputAction move { get; private set; }
+    InputAction jump, drop, interact, pause; 
     Collider2D[] playerColliders;
     
     readonly float waddlerBounceHeld = 1.25f, waddlerBounceUnheld = 0.8f;
     static readonly string[] colorLayers = { "Red", "Blue", "Green" };
-
+    public event System.Action InteractPressed;
     void Awake()
     {
         playerControls = new PlayerInputActions();
@@ -94,6 +95,8 @@ public class PlayerBehaviour : MonoBehaviour
             currentKey.PickUp(transform);
             holdingKey = currentKey != null && currentKey.ReadPickedUp();
         }
+
+        InteractPressed?.Invoke();
     }
 
     void OnDrop(InputAction.CallbackContext ctx)

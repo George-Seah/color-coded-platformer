@@ -345,7 +345,6 @@ UnityEngine.Collider::get_bounds_Injected
 UnityEngine.Collider::set_isTrigger_Injected
 UnityEngine.Collider2D::IsTouching_Injected
 UnityEngine.Collider2D::OverlapPoint_Injected
-UnityEngine.Collider2D::get_isTrigger_Injected
 UnityEngine.Collider2D::GetShapes_Internal_Injected
 UnityEngine.Collider2D::get_shapeCount_Injected
 UnityEngine.Collider2D::get_attachedRigidbody_Injected
@@ -1371,7 +1370,6 @@ UnityEngine.Rigidbody2D::get_linearVelocityY_Injected
 UnityEngine.Rigidbody2D::get_mass_Injected
 UnityEngine.Rigidbody2D::AddForce_Internal_Injected
 UnityEngine.Rigidbody2D::AddTorque_Injected
-UnityEngine.Rigidbody2D::MovePosition_Injected
 UnityEngine.Rigidbody2D::get_linearVelocity_Injected
 UnityEngine.Rigidbody2D::get_localToWorldMatrix_Injected
 UnityEngine.Rigidbody2D::get_position_Injected

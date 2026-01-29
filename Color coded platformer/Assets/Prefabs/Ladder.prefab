@@ -51,9 +51,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   climbSpeed: 10
-  normalGravity: 10
-  exitGravity: 30
-  moveDirection: {x: 0, y: 0}
   colliderForPlayerIgnoreClimbing: {fileID: 0}
 --- !u!114 &4989494071086336378
 MonoBehaviour:

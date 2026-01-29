@@ -1,101 +1,68 @@
 using UnityEngine;
 using UnityEngine.Events;
-using UnityEngine.InputSystem;
 
 public class Lever : MonoBehaviour
 {
     [Header("Lever State")]
-    [SerializeField] private bool activated = false;
+    [SerializeField] bool activated = false;
 
     [Header("Lever Events")]
     public UnityEvent onActivate;
     public UnityEvent onDeactivate;
 
     [Header("Interaction Settings")]
-    [Tooltip("Allow toggling multiple times.")]
     public bool allowMultipleToggles = true;
 
-    // My variables
-    public PlayerInputActions playerControls;
-    private InputAction move;
-    private bool canToggle = true; // Ensures toggling happens only once per press
-    private bool playerWithinLever;
+    PlayerBehaviour player;
+    bool subscribed;
 
-    private void Awake()
+    void OnDisable()
     {
-        playerControls = new PlayerInputActions();
-        if (playerControls == null)
-        {
-            Debug.LogError("PlayerInputActions not initialized!");
-        }
+        Unsubscribe();
     }
 
-    private void OnEnable()
+    void OnTriggerEnter2D(Collider2D collision)
     {
-        playerControls.Player.Enable();
-        move = playerControls.Player.Move;
-        move.Enable();
+        if (!collision.CompareTag("Player")) return;
+
+        player = collision.GetComponent<PlayerBehaviour>();
+        if (player == null) return;
+
+        Subscribe();
     }
 
-    private void OnDisable()
+    void OnTriggerExit2D(Collider2D collision)
     {
-        move.Disable();
-        playerControls.Player.Disable();
+        if (!collision.CompareTag("Player")) return;
+
+        Unsubscribe();
+        player = null;
     }
 
-    private void FixedUpdate()
+    void Subscribe()
     {
-        // Get the vertical axis input (Y direction)
-        float verticalInput = move.ReadValue<Vector2>().y;
-        if(move.enabled && playerWithinLever){
-            // Check if the vertical input is positive and no other button press is being held
-            if (verticalInput > 0 && canToggle)
-            {
-                ToggleLever();
-                canToggle = false; // Prevent further toggles until input is released
-            }
-            else if (verticalInput <= 0)
-            {
-                canToggle = true; // Reset toggle when input is released
-            }
-        }
+        if (subscribed || player == null) return;
+        player.InteractPressed += ToggleLever;
+        subscribed = true;
     }
 
-    public void ToggleLever()
+    void Unsubscribe()
+    {
+        if (!subscribed || player == null) return;
+        player.InteractPressed -= ToggleLever;
+        subscribed = false;
+    }
+
+    void ToggleLever()
     {
         if (!allowMultipleToggles && activated) return;
 
         activated = !activated;
 
-        if (activated)
-        {
-            GetComponent<SpriteRenderer>().flipX = true;
-            onActivate?.Invoke();
-        }
-        else
-        {
-            GetComponent<SpriteRenderer>().flipX = false;
-            onDeactivate?.Invoke();
-        }
-    }
+        var sr = GetComponent<SpriteRenderer>();
+        if (sr) sr.flipX = activated;
 
-    private void OnTriggerEnter2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player")) // Hardcoded "Player" tag check
-        {
-            // Enable move action when the player enters the trigger
-            move.Enable();
-            playerWithinLever = true;
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.CompareTag("Player")) // Hardcoded "Player" tag check
-        {
-            // Disable move action when the player exits the trigger
-            move.Disable();
-            playerWithinLever = false;
-        }
+        if (activated) onActivate?.Invoke();
+        else onDeactivate?.Invoke();
     }
 }

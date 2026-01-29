@@ -21457,20 +21457,17 @@ struct KeyDetector_t8E47AC62847B6CE0502D4AF2F11B0ADE4E17F8A3  : public MonoBehav
 struct Ladder_t80787B68F0CCDF3F94C66C38E602881D6326F841  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
 	float ___climbSpeed;
-	float ___normalGravity;
-	float ___exitGravity;
 	Vector2_t1FD6F485C871E832B347AB2DC8CBA08B739D8DF7 ___moveDirection;
-	PlayerInputActions_t4371BD30BF780546160FC74115946343BB75D694* ___playerControls;
+	PlayerInputActions_t4371BD30BF780546160FC74115946343BB75D694* ___controls;
 	InputAction_t1B550AD2B55AF322AFB53CD28DA64081220D01CD* ___move;
-	Rigidbody2D_tBEBE9523CF4448544085AF46BF7E10AA499F320F* ___playerRB;
-	GameObject_t76FEDD663AB33C991A9C9A23129337651094216F* ___ladderPlatform;
-	PlayerBehaviour_tD52ECFAADFA470DF374AC5192046F683B15A1F59* ___playerBehaviour;
+	Rigidbody2D_tBEBE9523CF4448544085AF46BF7E10AA499F320F* ___rb;
+	PlayerBehaviour_tD52ECFAADFA470DF374AC5192046F683B15A1F59* ___player;
 	Collider2D_t6A17BA7734600EF3F26588E9ED903617D5B8EB52* ___playerCollider;
-	Collider2D_t6A17BA7734600EF3F26588E9ED903617D5B8EB52* ___groundCheckerCollider;
+	Collider2D_t6A17BA7734600EF3F26588E9ED903617D5B8EB52* ___groundChecker;
+	Collider2D_t6A17BA7734600EF3F26588E9ED903617D5B8EB52* ___ladderCollider;
 	Collider2D_t6A17BA7734600EF3F26588E9ED903617D5B8EB52* ___ladderPlatformCollider;
 	Collider2D_t6A17BA7734600EF3F26588E9ED903617D5B8EB52* ___colliderForPlayerIgnoreClimbing;
-	Collider2D_t6A17BA7734600EF3F26588E9ED903617D5B8EB52* ___physicalCollider;
-	bool ___playerInsideTrigger;
+	bool ___playerInside;
 };
 struct Lever_t95EDCA49D4E471632B36CBB691B8701939683419  : public MonoBehaviour_t532A11E69716D348D8AA7F854AFCBFCB8AD17F71
 {
@@ -27297,9 +27294,9 @@ IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable9975[6] =
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable9976[1] = 
 {
 	static_cast<int32_t>(offsetof(KeyDetector_t8E47AC62847B6CE0502D4AF2F11B0ADE4E17F8A3, ___doorColorPicker)),};
-IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable9977[15] = 
+IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable9977[14] = 
 {
-	static_cast<int32_t>(offsetof(Ladder_t80787B68F0CCDF3F94C66C38E602881D6326F841, ___climbSpeed)),static_cast<int32_t>(offsetof(Ladder_t80787B68F0CCDF3F94C66C38E602881D6326F841, ___normalGravity)),static_cast<int32_t>(offsetof(Ladder_t80787B68F0CCDF3F94C66C38E602881D6326F841, ___exitGravity)),static_cast<int32_t>(offsetof(Ladder_t80787B68F0CCDF3F94C66C38E602881D6326F841, ___moveDirection)),static_cast<int32_t>(offsetof(Ladder_t80787B68F0CCDF3F94C66C38E602881D6326F841, ___playerControls)),static_cast<int32_t>(offsetof(Ladder_t80787B68F0CCDF3F94C66C38E602881D6326F841, ___move)),static_cast<int32_t>(offsetof(Ladder_t80787B68F0CCDF3F94C66C38E602881D6326F841, ___playerRB)),static_cast<int32_t>(offsetof(Ladder_t80787B68F0CCDF3F94C66C38E602881D6326F841, ___ladderPlatform)),static_cast<int32_t>(offsetof(Ladder_t80787B68F0CCDF3F94C66C38E602881D6326F841, ___playerBehaviour)),static_cast<int32_t>(offsetof(Ladder_t80787B68F0CCDF3F94C66C38E602881D6326F841, ___playerCollider)),static_cast<int32_t>(offsetof(Ladder_t80787B68F0CCDF3F94C66C38E602881D6326F841, ___groundCheckerCollider)),static_cast<int32_t>(offsetof(Ladder_t80787B68F0CCDF3F94C66C38E602881D6326F841, ___ladderPlatformCollider)),static_cast<int32_t>(offsetof(Ladder_t80787B68F0CCDF3F94C66C38E602881D6326F841, ___colliderForPlayerIgnoreClimbing)),static_cast<int32_t>(offsetof(Ladder_t80787B68F0CCDF3F94C66C38E602881D6326F841, ___physicalCollider)),static_cast<int32_t>(offsetof(Ladder_t80787B68F0CCDF3F94C66C38E602881D6326F841, ___playerInsideTrigger)),};
+	static_cast<int32_t>(offsetof(Ladder_t80787B68F0CCDF3F94C66C38E602881D6326F841, ___climbSpeed)),static_cast<int32_t>(offsetof(Ladder_t80787B68F0CCDF3F94C66C38E602881D6326F841, ___moveDirection)),static_cast<int32_t>(offsetof(Ladder_t80787B68F0CCDF3F94C66C38E602881D6326F841, ___controls)),static_cast<int32_t>(offsetof(Ladder_t80787B68F0CCDF3F94C66C38E602881D6326F841, ___move)),static_cast<int32_t>(offsetof(Ladder_t80787B68F0CCDF3F94C66C38E602881D6326F841, ___rb)),static_cast<int32_t>(offsetof(Ladder_t80787B68F0CCDF3F94C66C38E602881D6326F841, ___player)),static_cast<int32_t>(offsetof(Ladder_t80787B68F0CCDF3F94C66C38E602881D6326F841, ___playerCollider)),static_cast<int32_t>(offsetof(Ladder_t80787B68F0CCDF3F94C66C38E602881D6326F841, ___groundChecker)),static_cast<int32_t>(offsetof(Ladder_t80787B68F0CCDF3F94C66C38E602881D6326F841, ___ladderCollider)),static_cast<int32_t>(offsetof(Ladder_t80787B68F0CCDF3F94C66C38E602881D6326F841, ___ladderPlatformCollider)),static_cast<int32_t>(offsetof(Ladder_t80787B68F0CCDF3F94C66C38E602881D6326F841, ___colliderForPlayerIgnoreClimbing)),static_cast<int32_t>(offsetof(Ladder_t80787B68F0CCDF3F94C66C38E602881D6326F841, ___playerInside)),0,0,};
 IL2CPP_EXTERN_C const int32_t g_FieldOffsetTable9978[8] = 
 {
 	static_cast<int32_t>(offsetof(Lever_t95EDCA49D4E471632B36CBB691B8701939683419, ___activated)),static_cast<int32_t>(offsetof(Lever_t95EDCA49D4E471632B36CBB691B8701939683419, ___onActivate)),static_cast<int32_t>(offsetof(Lever_t95EDCA49D4E471632B36CBB691B8701939683419, ___onDeactivate)),static_cast<int32_t>(offsetof(Lever_t95EDCA49D4E471632B36CBB691B8701939683419, ___allowMultipleToggles)),static_cast<int32_t>(offsetof(Lever_t95EDCA49D4E471632B36CBB691B8701939683419, ___playerControls)),static_cast<int32_t>(offsetof(Lever_t95EDCA49D4E471632B36CBB691B8701939683419, ___move)),static_cast<int32_t>(offsetof(Lever_t95EDCA49D4E471632B36CBB691B8701939683419, ___canToggle)),static_cast<int32_t>(offsetof(Lever_t95EDCA49D4E471632B36CBB691B8701939683419, ___playerWithinLever)),};
