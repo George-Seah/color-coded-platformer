@@ -91,8 +91,16 @@ public class CanvasScript : MonoBehaviour
 
     public void SelectUIComponent(GameObject target)
     {
-        if (!eventSystem) EnsureEventSystemExists();
-        eventSystem.SetSelectedGameObject(target);
+        EnsureEventSystemExists();
+
+        if (eventSystem == null)
+        {
+            Debug.LogError("CanvasScript: No EventSystem available.");
+            return;
+        }
+
+        if (target != null)
+            eventSystem.SetSelectedGameObject(target);
     }
 
     public void PauseGame()
@@ -142,18 +150,24 @@ public class CanvasScript : MonoBehaviour
         SceneManager.LoadScene(sceneName);
     }
 
+    public void ResetAllTrackedStars()
+    {
+        ESave.Instance.ResetAllTrackedStars();
+    }
+
     void EnsureEventSystemExists()
     {
-        if (FindObjectOfType<EventSystem>()) return;
+        eventSystem = FindObjectOfType<EventSystem>();
+        if (eventSystem != null) return;
 
         GameObject es = new GameObject("EventSystem");
         eventSystem = es.AddComponent<EventSystem>();
 
-#if ENABLE_INPUT_SYSTEM && !ENABLE_LEGACY_INPUT_MANAGER
+    #if ENABLE_INPUT_SYSTEM && !ENABLE_LEGACY_INPUT_MANAGER
         es.AddComponent<UnityEngine.InputSystem.UI.InputSystemUIInputModule>();
-#else
+    #else
         es.AddComponent<StandaloneInputModule>();
-#endif
+    #endif
 
         DontDestroyOnLoad(es);
     }

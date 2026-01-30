@@ -8,10 +8,15 @@ public class ESave : MonoBehaviour
 
     // Key under which the tracked star list is saved
     const string STAR_KEYS_SAVE_KEY = "__StarKeysList";
+    public static ESave Instance;
 
     void Awake()
     {
         SaveFileSetup setup = GetComponent<SaveFileSetup>();
+        
+        if(Instance == null) Instance = this;
+        else { Destroy(gameObject); return; }
+
         if (setup == null)
         {
             Debug.LogError("ESave requires a SaveFileSetup component.");

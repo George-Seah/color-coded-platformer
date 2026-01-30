@@ -50,7 +50,10 @@ public class Cloud : MonoBehaviour
                 continue;
             }
 
-            riders[i].linearVelocity += (Vector2)direction.normalized * speed;
+            if(riders[i].GetComponentInParent<PlayerBehaviour>()) 
+                riders[i].linearVelocity += (Vector2)direction.normalized * speed;
+            else 
+                riders[i].MovePosition(riders[i].position + (Vector2)(direction.normalized * speed * Time.fixedDeltaTime));
         }
     }
 
