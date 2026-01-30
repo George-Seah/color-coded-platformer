@@ -120,7 +120,7 @@ MonoBehaviour:
   m_MinSize: {x: 300, y: 100}
   m_MaxSize: {x: 24288, y: 16192}
   vertical: 0
-  controlID: 146
+  controlID: 184
   draggingID: 0
 --- !u!114 &6
 MonoBehaviour:
@@ -158,7 +158,7 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 1
   m_Script: {fileID: 12006, guid: 0000000000000000e000000000000000, type: 0}
-  m_Name: SceneView
+  m_Name: BuildProfileWindow
   m_EditorClassIdentifier: 
   m_Children: []
   m_Position:
@@ -167,16 +167,16 @@ MonoBehaviour:
     y: 0
     width: 783
     height: 509
-  m_MinSize: {x: 201, y: 226}
+  m_MinSize: {x: 726, y: 426}
   m_MaxSize: {x: 4001, y: 4026}
-  m_ActualView: {fileID: 16}
+  m_ActualView: {fileID: 19}
   m_Panes:
   - {fileID: 16}
   - {fileID: 17}
   - {fileID: 18}
   - {fileID: 19}
-  m_Selected: 0
-  m_LastSelected: 1
+  m_Selected: 3
+  m_LastSelected: 0
 --- !u!114 &8
 MonoBehaviour:
   m_ObjectHideFlags: 52
@@ -306,7 +306,7 @@ MonoBehaviour:
   m_MinSize: {x: 100, y: 100}
   m_MaxSize: {x: 8096, y: 16192}
   vertical: 1
-  controlID: 147
+  controlID: 185
   draggingID: 0
 --- !u!114 &13
 MonoBehaviour:
@@ -1056,9 +1056,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 40.246536, y: 4.648288, z: -0.16565284}
+    m_Target: {x: 13.1279125, y: 0.0006981492, z: -0.07311813}
     speed: 2
-    m_Value: {x: 40.246536, y: 4.648288, z: -0.16565284}
+    m_Value: {x: 13.641047, y: -0.08084646, z: -0.064028874}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1108,9 +1108,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 17.167234
+    m_Target: 21.107248
     speed: 2
-    m_Value: 17.167234
+    m_Value: 20.198324
   m_Ortho:
     m_Target: 1
     speed: 2
@@ -1292,7 +1292,7 @@ MonoBehaviour:
     serializedVersion: 2
     x: 0
     y: 79
-    width: 785
+    width: 782
     height: 483
   m_SerializedDataModeController:
     m_DataMode: 0
@@ -1407,24 +1407,24 @@ MonoBehaviour:
     m_OverlaysVisible: 1
   m_SceneHierarchy:
     m_TreeViewState:
-      scrollPos: {x: 0, y: 228}
-      m_SelectedIDs: 2010ffff
-      m_LastClickedID: -61408
-      m_ExpandedIDs: 2010ffff8210ffff1014ffff623affffac3effff1e5bfffff680ffffaa81ffff08fbffff282e0100
+      scrollPos: {x: 0, y: 0}
+      m_SelectedIDs: 
+      m_LastClickedID: 0
+      m_ExpandedIDs: 26d5ffff38d5ffff1cdbffff28ddffffdedeffff42e1ffffdae2ffff76e3ffffa4e6ffff48e9ffff94ebffffcaedffff9cf0ffff9af1ffffd4f2ffff46f4ffff08fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
-        m_Name: Keyboard controls
-        m_OriginalName: Keyboard controls
+        m_Name: 
+        m_OriginalName: 
         m_EditFieldRect:
           serializedVersion: 2
           x: 0
           y: 0
           width: 0
           height: 0
-        m_UserData: -32342
+        m_UserData: 0
         m_IsWaitingForDelay: 0
         m_IsRenaming: 0
-        m_OriginalEventType: 0
+        m_OriginalEventType: 11
         m_IsRenamingFilename: 0
         m_TrimLeadingAndTrailingWhitespace: 0
         m_ClientGUIView: {fileID: 10}
@@ -1482,7 +1482,7 @@ MonoBehaviour:
     m_SkipHidden: 0
     m_SearchArea: 1
     m_Folders:
-    - Assets/Scenes
+    - Assets/Imported Assets/Simple 2D Platformer BE2
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1492,16 +1492,16 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 16
   m_LastFolders:
-  - Assets/Scenes
+  - Assets/Imported Assets/Simple 2D Platformer BE2
   m_LastFoldersGridSize: 16
   m_LastProjectPath: C:\Github\color-coded-platformer\Color coded platformer
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 744}
-    m_SelectedIDs: dec80000
-    m_LastClickedID: 51422
-    m_ExpandedIDs: 00000000a0c60000a2c60000a4c60000a6c60000a8c60000aac60000acc60000aec60000b0c60000b2c60000b4c60000b6c60000b8c60000bac60000bcc60000bec60000c0c60000d4c8000026f6000084f80000562a0100842a0100a62a0100602b01003e2c0100f02c0100e22d010000ca9a3b
+    scrollPos: {x: 0, y: 388}
+    m_SelectedIDs: cec70000
+    m_LastClickedID: 51150
+    m_ExpandedIDs: 00000000bcc70000bec70000c0c70000c2c70000c4c70000c6c70000c8c70000cac70000ccc70000cec70000d0c70000d2c70000d4c70000d6c70000d8c70000dac70000dcc70000dec70000e0c70000e2c7000000ca000000ca9a3b
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1530,7 +1530,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000a0c60000a2c60000a4c60000a6c60000a8c60000aac60000acc60000aec60000b0c60000b2c60000b4c60000b6c60000b8c60000bac60000bcc60000bec60000c0c60000
+    m_ExpandedIDs: 00000000bcc70000bec70000c0c70000c2c70000c4c70000c6c70000c8c70000cac70000ccc70000cec70000d0c70000d2c70000d4c70000d6c70000d8c70000dac70000dcc70000dec70000e0c70000e2c70000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1558,22 +1558,22 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c6230000d2570000e4570000e2570000f2570000ec570000b45a0000365800003c580000f2590000345a0000e65a0000dc5a0000be5a0000c85a0000cc5a00007602000092ad0000c6ad0000d0ad0000a4b2000034dd000034e80000d8bd00009aaf000064cd000082c9000004b000002edf00004ead0000cad3000076b000003eb0000046b600009ab000004eb000000000000042b00000f6c3000054b0000008b8000040b300009cb60000e2ae00008ab0000036e500007ab0000072b00000aab000001ab300009eb0000066b30000d8b000008ab3000092b000008eb000001cb300008cb0000020b3000082b0000008b4000022b300001cce0000bab0000002b40000aece0000acb00000b4ce00000eb40000a6ce0000e0b00000d0b00000ceb0000032b300000adf0000a8b00000e6b200006cb00000b8b00000080400007afb000008b1000056c1000072de00008402000006be000064bd000024810000068b0000cec5000026c70000c0f10000dcc60000c0c500009ecb0000a2c5000010c70000a2cb000004c70000c4cb0000d6c50000e0c500006ac700006cc70000cac5000064c7000066c7000056040000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
-      m_Name: Free Flat Move In_1 Icon
-      m_OriginalName: Free Flat Move In_1 Icon
+      m_Name: 
+      m_OriginalName: 
       m_EditFieldRect:
         serializedVersion: 2
         x: 0
         y: 0
         width: 0
         height: 0
-      m_UserData: 76828
+      m_UserData: 0
       m_IsWaitingForDelay: 0
       m_IsRenaming: 0
-      m_OriginalEventType: 0
+      m_OriginalEventType: 11
       m_IsRenamingFilename: 1
       m_TrimLeadingAndTrailingWhitespace: 0
       m_ClientGUIView: {fileID: 11}

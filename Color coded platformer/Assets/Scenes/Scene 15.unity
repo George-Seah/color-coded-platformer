@@ -885,20 +885,16 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   moveSpeed: 5
-  gravityScale: 10
-  fallingGravityScale: 30
-  buttonTime: 0.2
+  initialJumpForce: 5
+  initialJumpTime: 0.3
   jumpTime: 0
   isGrounded: 0
-  jumpCancelled: 0
-  jumping: 0
-  jumpAmount: 20
-  jumpForce: 0
   holdingKey: 0
+  landedOnWaddler: 0
+  canvasPrefab: {fileID: 0}
   color: 
   onLadder: 0
   lookingRight: 0
-  landedOnWaddler: 0
 --- !u!1 &440463321
 GameObject:
   m_ObjectHideFlags: 3
@@ -1004,12 +1000,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e909ef4dcac331e47b1f8963d0c014e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colorOffset: 0
   changeLayer: 1
   particleColor: {r: 1, g: 1, b: 1, a: 1}
   startSize: 0.2
   startSpeed: 1
   particleSystemScale: 0.5
+  colorOffset: 0
 --- !u!1001 &555003822
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1562,9 +1558,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 44d70cc20219cd84593f67d248eafe36, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_Offset: {x: 0, y: 2.59, z: 0}
-  m_ApplyAfter: 1
-  m_PreserveComposition: 0
+  Offset: {x: 0, y: 2.59, z: 0}
+  ApplyAfter: 1
+  PreserveComposition: 0
 --- !u!114 &1101165365
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1577,12 +1573,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ExcludedPropertiesInInspector:
-  - m_Script
-  m_LockStageInInspector: 
+  Priority:
+    Enabled: 0
+    m_Value: 0
+  OutputChannel: 1
+  StandbyUpdate: 2
   m_StreamingVersion: 20170927
-  m_Priority: 10
-  m_StandbyUpdate: 2
+  m_LegacyPriority: 10
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 348417252}
   m_Lens:
@@ -1592,17 +1589,30 @@ MonoBehaviour:
     FarClipPlane: 1000
     Dutch: 0
     ModeOverride: 0
-    LensShift: {x: 0, y: 0}
     GateFit: 2
-    FocusDistance: 10
     m_SensorSize: {x: 1, y: 1}
-  m_Transitions:
+    LensShift: {x: 0, y: 0}
+    FocusDistance: 10
+    Iso: 200
+    ShutterSpeed: 0.005
+    Aperture: 16
+    BladeCount: 5
+    Curvature: {x: 2, y: 11}
+    BarrelClipping: 0.25
+    Anamorphism: 0
+  BlendHint: 0
+  m_OnCameraLiveEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ExcludedPropertiesInInspector:
+  - m_Script
+  m_LockStageInInspector: 
+  m_LegacyTransitions:
     m_BlendHint: 0
     m_InheritPosition: 0
     m_OnCameraLive:
       m_PersistentCalls:
         m_Calls: []
-  m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 440463322}
 --- !u!4 &1101165366
 Transform:
@@ -1632,16 +1642,20 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72ece51f2901e7445ab60da3685d6b5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ShowDebugText: 0
-  m_ShowCameraFrustum: 1
-  m_IgnoreTimeScale: 0
-  m_WorldUpOverride: {fileID: 0}
-  m_UpdateMethod: 2
-  m_BlendUpdateMethod: 0
-  m_DefaultBlend:
-    m_Style: 7
-    m_Time: 2
-    m_CustomCurve:
+  ShowDebugText: 0
+  ShowCameraFrustum: 1
+  IgnoreTimeScale: 0
+  WorldUpOverride: {fileID: 0}
+  ChannelMask: -1
+  UpdateMethod: 2
+  BlendUpdateMethod: 0
+  LensModeOverride:
+    Enabled: 0
+    DefaultMode: 2
+  DefaultBlend:
+    Style: 7
+    Time: 2
+    CustomCurve:
       serializedVersion: 2
       m_Curve:
       - serializedVersion: 3
@@ -1665,13 +1679,7 @@ MonoBehaviour:
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  m_CustomBlends: {fileID: 0}
-  m_CameraCutEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_CameraActivatedEvent:
-    m_PersistentCalls:
-      m_Calls: []
+  CustomBlends: {fileID: 0}
 --- !u!1 &1185791651
 GameObject:
   m_ObjectHideFlags: 0
@@ -2134,6 +2142,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerBehaviour: {fileID: 0}
+  groundTolerance: 0.2
 --- !u!61 &1456866856
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -2210,19 +2219,17 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerBehaviour: {fileID: 348417257}
-  barTransform: {fileID: 169588174}
-  arrowTransform: {fileID: 1032812012}
-  colorTags:
-  - Default
-  - Green
-  - Blue
-  - Red
-  totalWidth: 200
-  totalHeight: 25
+  regionColors: 00000000010000000200000003000000
   startX: -0.26
   startY: 83.8
   regionWidth: 5
   useXCoordinate: 0
+  barTransform: {fileID: 169588174}
+  arrowTransform: {fileID: 1032812012}
+  totalWidth: 200
+  totalHeight: 25
+  shadowDistance: {x: 3, y: -3}
+  shadowColor: {r: 0, g: 0, b: 0, a: 0.9}
 --- !u!4 &1527689098
 Transform:
   m_ObjectHideFlags: 0
@@ -2255,12 +2262,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e909ef4dcac331e47b1f8963d0c014e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colorOffset: 0
   changeLayer: 1
   particleColor: {r: 1, g: 1, b: 1, a: 1}
   startSize: 0.2
   startSpeed: 1
   particleSystemScale: 0.5
+  colorOffset: 0
 --- !u!1001 &1555314053
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2693,12 +2700,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ExcludedPropertiesInInspector:
-  - m_Script
-  m_LockStageInInspector: 
+  Priority:
+    Enabled: 0
+    m_Value: 0
+  OutputChannel: 1
+  StandbyUpdate: 2
   m_StreamingVersion: 20170927
-  m_Priority: 10
-  m_StandbyUpdate: 2
+  m_LegacyPriority: 10
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 1652344963}
   m_Lens:
@@ -2708,17 +2716,30 @@ MonoBehaviour:
     FarClipPlane: 5000
     Dutch: 0
     ModeOverride: 0
-    LensShift: {x: 0, y: 0}
     GateFit: 2
-    FocusDistance: 10
     m_SensorSize: {x: 1, y: 1}
-  m_Transitions:
+    LensShift: {x: 0, y: 0}
+    FocusDistance: 10
+    Iso: 200
+    ShutterSpeed: 0.005
+    Aperture: 16
+    BladeCount: 5
+    Curvature: {x: 2, y: 11}
+    BarrelClipping: 0.25
+    Anamorphism: 0
+  BlendHint: 0
+  m_OnCameraLiveEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ExcludedPropertiesInInspector:
+  - m_Script
+  m_LockStageInInspector: 
+  m_LegacyTransitions:
     m_BlendHint: 0
     m_InheritPosition: 0
     m_OnCameraLive:
       m_PersistentCalls:
         m_Calls: []
-  m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 1198434147}
 --- !u!1001 &1823034030
 PrefabInstance:
@@ -2823,12 +2844,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e909ef4dcac331e47b1f8963d0c014e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colorOffset: 0
   changeLayer: 1
   particleColor: {r: 1, g: 1, b: 1, a: 1}
   startSize: 0.2
   startSpeed: 1
   particleSystemScale: 0.5
+  colorOffset: 0
 --- !u!114 &1823034034
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -2841,12 +2862,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e909ef4dcac331e47b1f8963d0c014e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colorOffset: 0
   changeLayer: 1
   particleColor: {r: 1, g: 1, b: 1, a: 1}
   startSize: 0.2
   startSpeed: 1
   particleSystemScale: 0.5
+  colorOffset: 0
 --- !u!1001 &1899384447
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2997,12 +3018,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e909ef4dcac331e47b1f8963d0c014e0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  colorOffset: 0
   changeLayer: 1
   particleColor: {r: 1, g: 1, b: 1, a: 1}
   startSize: 0.2
   startSpeed: 1
   particleSystemScale: 0.5
+  colorOffset: 0
 --- !u!1001 &1988043792
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3217,12 +3238,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 45e653bab7fb20e499bda25e1b646fea, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ExcludedPropertiesInInspector:
-  - m_Script
-  m_LockStageInInspector: 
+  Priority:
+    Enabled: 0
+    m_Value: 0
+  OutputChannel: 1
+  StandbyUpdate: 2
   m_StreamingVersion: 20170927
-  m_Priority: 8
-  m_StandbyUpdate: 2
+  m_LegacyPriority: 8
   m_LookAt: {fileID: 0}
   m_Follow: {fileID: 348417252}
   m_Lens:
@@ -3232,17 +3254,30 @@ MonoBehaviour:
     FarClipPlane: 5000
     Dutch: 0
     ModeOverride: 0
-    LensShift: {x: 0, y: 0}
     GateFit: 2
-    FocusDistance: 10
     m_SensorSize: {x: 1, y: 1}
-  m_Transitions:
+    LensShift: {x: 0, y: 0}
+    FocusDistance: 10
+    Iso: 200
+    ShutterSpeed: 0.005
+    Aperture: 16
+    BladeCount: 5
+    Curvature: {x: 2, y: 11}
+    BarrelClipping: 0.25
+    Anamorphism: 0
+  BlendHint: 0
+  m_OnCameraLiveEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ExcludedPropertiesInInspector:
+  - m_Script
+  m_LockStageInInspector: 
+  m_LegacyTransitions:
     m_BlendHint: 0
     m_InheritPosition: 0
     m_OnCameraLive:
       m_PersistentCalls:
         m_Calls: []
-  m_LegacyBlendHint: 0
   m_ComponentOwner: {fileID: 1741184390}
 --- !u!114 &2055256850
 MonoBehaviour:
@@ -3256,28 +3291,26 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 72ece51f2901e7445ab60da3685d6b5f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_ShowDebugText: 0
-  m_ShowCameraFrustum: 1
-  m_IgnoreTimeScale: 0
-  m_WorldUpOverride: {fileID: 0}
-  m_UpdateMethod: 2
-  m_BlendUpdateMethod: 1
-  m_DefaultBlend:
-    m_Style: 1
-    m_Time: 2
-    m_CustomCurve:
+  ShowDebugText: 0
+  ShowCameraFrustum: 1
+  IgnoreTimeScale: 0
+  WorldUpOverride: {fileID: 0}
+  ChannelMask: -1
+  UpdateMethod: 2
+  BlendUpdateMethod: 1
+  LensModeOverride:
+    Enabled: 0
+    DefaultMode: 2
+  DefaultBlend:
+    Style: 1
+    Time: 2
+    CustomCurve:
       serializedVersion: 2
       m_Curve: []
       m_PreInfinity: 2
       m_PostInfinity: 2
       m_RotationOrder: 4
-  m_CustomBlends: {fileID: 0}
-  m_CameraCutEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_CameraActivatedEvent:
-    m_PersistentCalls:
-      m_Calls: []
+  CustomBlends: {fileID: 0}
 --- !u!114 &2055256851
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3409,9 +3442,14 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f453f694addf4275988fac205bc91968, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  m_BoundingShape2D: {fileID: 797693601}
-  m_Damping: 0.5
-  m_MaxWindowSize: -1
+  BoundingShape2D: {fileID: 797693601}
+  Damping: 0.5
+  SlowingDistance: 0
+  OversizeWindow:
+    Enabled: 0
+    MaxWindowSize: 0
+    Padding: 0
+  m_LegacyMaxWindowSize: -2
 --- !u!1001 &2102643980
 PrefabInstance:
   m_ObjectHideFlags: 0

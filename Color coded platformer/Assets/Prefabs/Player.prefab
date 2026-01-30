@@ -78,7 +78,7 @@ BoxCollider2D:
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
-  m_Size: {x: 0.56, y: 0.01}
+  m_Size: {x: 0.53, y: 0.01}
   m_EdgeRadius: 0
 --- !u!114 &7138171142147692733
 MonoBehaviour:
@@ -179,8 +179,6 @@ MonoBehaviour:
   holdingKey: 0
   landedOnWaddler: 0
   canvasPrefab: {fileID: 8820602733911171913, guid: 996650ffe5602d242a38a413270abb9f, type: 3}
-  gravityScale: 7
-  fallingGravityScale: 9
   color: 
   onLadder: 0
   lookingRight: 0

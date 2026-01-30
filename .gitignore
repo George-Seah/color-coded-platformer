@@ -70,3 +70,5 @@ crashlytics-build.properties
 # Temporary auto-generated Android Assets
 /[Aa]ssets/[Ss]treamingAssets/aa.meta
 /[Aa]ssets/[Ss]treamingAssets/aa/*
+Color coded platformer/Library/Bee/artifacts/WebGL/il2cppOutput/build/GameAssembly.a
+Color coded platformer/Library/Bee/artifacts/WebGL/GameAssembly/release_WebGL_wasm/GameAssembly.a

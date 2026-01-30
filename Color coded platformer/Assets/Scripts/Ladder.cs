@@ -47,6 +47,11 @@ public class Ladder : MonoBehaviour
 
     void Update()
     {
+        if (player == null && rb != null)
+            player = rb.GetComponent<PlayerBehaviour>();
+        else if (rb == null && player != null)
+            rb = player.GetComponent<Rigidbody2D>();
+            
         if (!playerInside || player == null)
             return;
 

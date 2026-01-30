@@ -6126,6 +6126,10 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Rigidbody2D_AddTorque_Injected();
 		Register_UnityEngine_Rigidbody2D_AddTorque_Injected();
 
+		//System.Void UnityEngine.Rigidbody2D::MovePosition_Injected(System.IntPtr,UnityEngine.Vector2&)
+		void Register_UnityEngine_Rigidbody2D_MovePosition_Injected();
+		Register_UnityEngine_Rigidbody2D_MovePosition_Injected();
+
 		//System.Void UnityEngine.Rigidbody2D::get_linearVelocity_Injected(System.IntPtr,UnityEngine.Vector2&)
 		void Register_UnityEngine_Rigidbody2D_get_linearVelocity_Injected();
 		Register_UnityEngine_Rigidbody2D_get_linearVelocity_Injected();

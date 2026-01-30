@@ -518,11 +518,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 2818140696545664085, guid: d92f0d3a8ac4e2246b56592b96e28d2b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8
+      value: 7.85
       objectReference: {fileID: 0}
     - target: {fileID: 2818140696545664085, guid: d92f0d3a8ac4e2246b56592b96e28d2b, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -8.16
+      value: -8.24
       objectReference: {fileID: 0}
     - target: {fileID: 2818140696545664085, guid: d92f0d3a8ac4e2246b56592b96e28d2b, type: 3}
       propertyPath: m_LocalPosition.z
@@ -1562,12 +1562,16 @@ PrefabInstance:
       value: 270
       objectReference: {fileID: 0}
     - target: {fileID: 6132835792535108313, guid: ff8bc5c79479f9b41bbc40bcf7b225af, type: 3}
+      propertyPath: ballSpeed
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 6132835792535108313, guid: ff8bc5c79479f9b41bbc40bcf7b225af, type: 3}
       propertyPath: shootTime
       value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 6132835792535108313, guid: ff8bc5c79479f9b41bbc40bcf7b225af, type: 3}
       propertyPath: shootInterval
-      value: 3
+      value: 4.5
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1584,7 +1588,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 3084088302691392630, guid: b043621e5ae8c8741aff80759ac2e8a1, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 1.6
+      value: 3.33
       objectReference: {fileID: 0}
     - target: {fileID: 3084088302691392630, guid: b043621e5ae8c8741aff80759ac2e8a1, type: 3}
       propertyPath: m_LocalPosition.y
