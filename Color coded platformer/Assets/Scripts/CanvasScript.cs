@@ -147,6 +147,7 @@ public class CanvasScript : MonoBehaviour
         }
 
         Time.timeScale = 1f;
+        GameManager.Instance.playerSpawnPoint = Vector2.zero;
         SceneManager.LoadScene(sceneName);
     }
 
