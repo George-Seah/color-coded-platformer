@@ -139,7 +139,7 @@ namespace UnityEngine.Sequences
 
                 // TODO: ttu - 2020-08-10: look for a clean solution
 #if UNITY_EDITOR
-                var guid = UnityEditor.GUID.Generate().ToString();
+                var guid = UnityEngine.GUID.Generate().ToString();
 #else
                 var guid = System.Guid.NewGuid().ToString();
 #endif

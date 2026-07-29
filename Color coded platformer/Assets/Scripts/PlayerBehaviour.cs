@@ -16,7 +16,7 @@ public class PlayerBehaviour : MonoBehaviour
     [SerializeField] bool isGrounded, holdingKey, landedOnWaddler;
     public bool jumpPressed { get; private set; }
     bool jumpConsumed;
-    [SerializeField] public Key currentKey { get; set; }
+    public Key currentKey { get; set; }
     [SerializeField] GameObject canvasPrefab;
     
     public PlayerInputActions playerControls;

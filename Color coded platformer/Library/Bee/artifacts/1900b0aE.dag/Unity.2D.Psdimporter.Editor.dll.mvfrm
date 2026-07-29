@@ -19,6 +19,11 @@ SpriteLibCategory
 SpriteLibraryAsset
 SpriteResolver
 SpriteSkin
+GridBrush
+UnityEditor
+GridBrushEditor
+GridBrushEditorBase
+GridSelection
 AssetModificationProcessor
 
 Sysroot
@@ -114,6 +119,7 @@ MuscleHandle
 ExpressionEvaluator
 UnityEditor
 NumericFieldDraggerUtility
+GUID
 Profiler
 UnityEngine
 PhotoCaptureFileOutputFormat
@@ -163,12 +169,16 @@ RayTracingAccelerationStructure
 RendererList
 RendererUtils
 RendererListStatus
-RayTracingShader
+RayTracingShaderHelpURLAttribute
 PixelPerfectRendering
 U2D
 SpriteBone
 LocalizationAsset
 UnityEditor
+CurrentPlayer
+Unity
+Multiplayer
+Playmode
 SpriteShapeParameters
 UnityEngine
 Experimental
@@ -211,6 +221,6 @@ ProgressBar
 DeltaSpeed
 IValueField<>
 TextValueField<>
-TextValueFieldTraits<,>
 BaseFieldMouseDragger
 FieldMouseDragger<>
+TextValueFieldTraits<,>
