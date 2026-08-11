@@ -475,11 +475,13 @@ m_ResolvedPackages:
     - 2.13.3
     - 2.13.4
     - 2.13.5
+    - 2.13.6
     compatible:
     - 2.12.4
     - 2.13.3
     - 2.13.4
     - 2.13.5
+    - 2.13.6
     recommended: 2.12.4
     deprecated: []
   dependencies: []
@@ -6736,9 +6738,11 @@ m_ResolvedPackages:
     - 5.1.4
     - 5.1.5
     - 5.1.6
+    - 5.1.7
     compatible:
     - 5.1.6
-    recommended: 5.1.6
+    - 5.1.7
+    recommended: 5.1.7
     deprecated: []
   dependencies:
   - name: com.unity.timeline
