@@ -16,7 +16,11 @@ public class PlayerBehaviour : MonoBehaviour
     [SerializeField] bool isGrounded, holdingKey, landedOnWaddler;
     public bool jumpPressed { get; private set; }
     bool jumpConsumed;
+<<<<<<< HEAD
     public Key currentKey { get; set; }
+=======
+    [SerializeField] public Key currentKey { get; set; }
+>>>>>>> f29bbe3e5 (Restarting levels now resets the player spawn and respawn point)
     [SerializeField] GameObject canvasPrefab;
     
     public PlayerInputActions playerControls;
