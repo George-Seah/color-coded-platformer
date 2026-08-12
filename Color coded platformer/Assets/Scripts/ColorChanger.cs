@@ -1,60 +1,67 @@
 using UnityEngine;
-using UnityEngine.Events;
 using System.Collections.Generic;
 
-public class ColorChanger : MonoBehaviour
+public class ColorChanger : MonoBehaviour, ISerializationCallbackReceiver
 {
-    public enum ColorOptions
-    {
-        Red,
-        Green,
-        Blue,
-        White
-    }
+    [UnityEngine.Serialization.FormerlySerializedAs("selectedColor")]
+    [SerializeField, HideInInspector]
+    private int legacySelectedColor; 
 
-    [SerializeField] ColorOptions selectedColor;
-    [SerializeField] Color colorChange;
+    [SerializeField, HideInInspector]
+    private bool hasMigratedColor = false;
+
+    public GameColor targetColor = GameColor.White;
+    private Color colorChange;
 
     [Tooltip("List of tags to detect")]
-    [SerializeField] List<string> tagsToDetect = new List<string>();
+    public List<string> tagsToDetect = new List<string>();
+    
+    [Tooltip("The objects this trigger will change (replaces tags)")]
+    public List<GameObject> targetObjects = new List<GameObject>();
 
-    [SerializeField] ParticleSystem particleSystem;  // Reference to the particle system
-    [SerializeField] Sprite[] sprites;              // Array of sprites to add to the particle system
-    [SerializeField] Material shaderMaterial;       // Material using your shader graph
+    [SerializeField] ParticleSystem colorParticleSystem;  
+    [SerializeField] Sprite[] sprites;              
+    [SerializeField] Material shaderMaterial;       
+
+    public void OnBeforeSerialize() { }
+
+    public void OnAfterDeserialize()
+    {
+        if (!hasMigratedColor)
+        {
+            if (legacySelectedColor == 0) targetColor = GameColor.Red;
+            else if (legacySelectedColor == 1) targetColor = GameColor.Green;
+            else if (legacySelectedColor == 2) targetColor = GameColor.Blue;
+            else if (legacySelectedColor == 3) targetColor = GameColor.White;
+            else targetColor = GameColor.White;
+
+            hasMigratedColor = true;
+        }
+    }
+
     void OnTriggerEnter2D(Collider2D collision)
     {
-        
-        if (tagsToDetect.Contains(collision.tag))
+        if (tagsToDetect.Contains(collision.tag) || targetObjects.Contains(collision.gameObject))
         {
             if (collision.gameObject.layer == LayerMask.NameToLayer("Player"))
             {
-                Debug.Log("Player detected inside ColorChanger.");
                 collision.gameObject.GetComponent<PlayerBehaviour>().ColorChanged(colorChange);
             }
             else
             {
-                switch (selectedColor)
+                if (collision.gameObject.TryGetComponent<BaseColorPicker>(out var picker))
                 {
-                    case ColorOptions.Red:
-                        Debug.Log("Red selected");
-                        collision.gameObject.GetComponent<SpriteRenderer>().color = Color.red;
-                        collision.gameObject.layer = LayerMask.NameToLayer("Red");
-                        break;
-                    case ColorOptions.Blue:
-                        Debug.Log("Blue selected");
-                        collision.gameObject.GetComponent<SpriteRenderer>().color = Color.blue;
-                        collision.gameObject.layer = LayerMask.NameToLayer("Blue");
-                        break;
-                    case ColorOptions.Green:
-                        Debug.Log("Green selected");
-                        collision.gameObject.GetComponent<SpriteRenderer>().color = Color.green;
-                        collision.gameObject.layer = LayerMask.NameToLayer("Green");
-                        break;
-                    case ColorOptions.White:
-                        Debug.Log("White selected");
-                        collision.gameObject.GetComponent<SpriteRenderer>().color = Color.white;
-                        collision.gameObject.layer = LayerMask.NameToLayer("Default");
-                        break;
+                    picker.colorState = targetColor;
+                    picker.ApplyColor();
+                }
+                else
+                {
+                    string layerName = targetColor == GameColor.Default ? "Default" : targetColor.ToString();
+                    collision.gameObject.layer = LayerMask.NameToLayer(layerName);
+                    if (collision.gameObject.TryGetComponent<SpriteRenderer>(out var sr))
+                    {
+                        sr.color = colorChange;
+                    }
                 }
             }
         }
@@ -62,49 +69,47 @@ public class ColorChanger : MonoBehaviour
     
     void Awake()
     {
-        //particleSystem = GetComponent<ParticleSystem>();
-        //shaderMaterial = GetComponent<Renderer>().material;
-        // Set the color based on the selected option
-        switch (selectedColor)
+        colorChange = ColorDictionary.Instance != null ? ColorDictionary.Instance.GetDefaultUnityColor(targetColor) : Color.white;
+
+        if (colorParticleSystem != null)
         {
-            case ColorOptions.Red:
-                colorChange = Color.red;
-                break;
-            case ColorOptions.Green:
-                colorChange = Color.green;
-                break;
-            case ColorOptions.Blue:
-                colorChange = Color.blue;
-                break;
-            case ColorOptions.White:
-                colorChange = Color.white;
-                break;
-        }
-
-        // Configure the particle system's texture sheet animation
-        var textureSheetAnimation = particleSystem.textureSheetAnimation;
-        textureSheetAnimation.mode = ParticleSystemAnimationMode.Sprites;
-
-        // Remove any existing sprites in the particle system
-        textureSheetAnimation.RemoveSprite(0);
-
-        // Add each sprite from the array and ensure the material is applied
-        foreach (var sprite in sprites)
-        {
-            if (sprite != null)
+            var textureSheetAnimation = colorParticleSystem.textureSheetAnimation;
+            textureSheetAnimation.mode = ParticleSystemAnimationMode.Sprites;
+            
+            while (textureSheetAnimation.spriteCount > 0)
             {
-                textureSheetAnimation.AddSprite(sprite); // Add sprite to the particle system
+                textureSheetAnimation.RemoveSprite(0);
             }
-        }
 
-        // Assign the shader material to the particle system's renderer
-        var renderer = particleSystem.GetComponent<ParticleSystemRenderer>();
-        renderer.material = shaderMaterial;
+            foreach (GameObject obj in targetObjects)
+            {
+                if (obj != null && obj.TryGetComponent<SpriteRenderer>(out var sr))
+                {
+                    if (sr.sprite != null) textureSheetAnimation.AddSprite(sr.sprite);
+                }
+            }
 
-        // Optional: Pass the colorChange value to the shader material
-        if (shaderMaterial.HasProperty("_TintColor"))
-        {
-            shaderMaterial.SetColor("_TintColor", colorChange);
+            if (sprites != null)
+            {
+                foreach (var sprite in sprites)
+                {
+                    if (sprite != null)
+                    {
+                        textureSheetAnimation.AddSprite(sprite);
+                    }
+                }
+            }
+
+            if (shaderMaterial != null)
+            {
+                var renderer = colorParticleSystem.GetComponent<ParticleSystemRenderer>();
+                if (renderer != null) renderer.material = shaderMaterial;
+
+                if (shaderMaterial.HasProperty("_TintColor"))
+                {
+                    shaderMaterial.SetColor("_TintColor", colorChange);
+                }
+            }
         }
     }
 }
