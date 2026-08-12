@@ -8,7 +8,7 @@ public class ColorPositionChange : MonoBehaviour
     [SerializeField] bool changeLayer = true;
 
     [Header("Particle Settings")]
-    ParticleSystem particleSystem;
+    ParticleSystem colorParticleSystem;
     [SerializeField] Color particleColor = Color.white;
     [SerializeField] float startSize = 0.2f;
     [SerializeField] float startSpeed = 1f;
@@ -47,12 +47,12 @@ public class ColorPositionChange : MonoBehaviour
         colorOffset = offset;
         particleColor = colorOffset != 0 ? Color.black : Color.white;
 
-        if (particleSystem != null)
+        if (colorParticleSystem != null)
         {
-            var renderer = particleSystem.GetComponent<ParticleSystemRenderer>();
+            var renderer = colorParticleSystem.GetComponent<ParticleSystemRenderer>();
             renderer.material.color = particleColor;
 
-            var main = particleSystem.main;
+            var main = colorParticleSystem.main;
             main.startColor = particleColor;
         }
     }
@@ -110,21 +110,21 @@ public class ColorPositionChange : MonoBehaviour
     // ===============================
     void AddSparkles()
     {
-        particleSystem = GetComponentInChildren<ParticleSystem>();
+        colorParticleSystem = GetComponentInChildren<ParticleSystem>();
 
-        if (particleSystem == null)
+        if (colorParticleSystem == null)
         {
-            particleSystem = new GameObject("Sparkles").AddComponent<ParticleSystem>();
-            particleSystem.transform.SetParent(transform);
-            particleSystem.transform.localPosition = Vector3.zero;
+            colorParticleSystem = new GameObject("Sparkles").AddComponent<ParticleSystem>();
+            colorParticleSystem.transform.SetParent(transform);
+            colorParticleSystem.transform.localPosition = Vector3.zero;
         }
 
-        particleSystem.transform.localScale =
+        colorParticleSystem.transform.localScale =
             new Vector3(particleSystemScale, particleSystemScale, particleSystemScale);
 
-        ParticleSystem.MainModule main = particleSystem.main;
-        ParticleSystem.EmissionModule emission = particleSystem.emission;
-        ParticleSystem.ShapeModule shape = particleSystem.shape;
+        ParticleSystem.MainModule main = colorParticleSystem.main;
+        ParticleSystem.EmissionModule emission = colorParticleSystem.emission;
+        ParticleSystem.ShapeModule shape = colorParticleSystem.shape;
 
         main.startSize = startSize;
         main.startLifetime = 1.0f;
@@ -137,7 +137,7 @@ public class ColorPositionChange : MonoBehaviour
         shape.shapeType = ParticleSystemShapeType.Circle;
         shape.radius = 0.2f;
 
-        ParticleSystemRenderer renderer = particleSystem.GetComponent<ParticleSystemRenderer>();
+        ParticleSystemRenderer renderer = colorParticleSystem.GetComponent<ParticleSystemRenderer>();
         renderer.material = new Material(Shader.Find("Sprites/Default"));
         renderer.material.color = particleColor;
         renderer.sortingLayerName = "Default";

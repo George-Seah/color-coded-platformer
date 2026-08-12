@@ -18,7 +18,7 @@ public class PlayerBehaviour : MonoBehaviour
     private float jumpBufferTime = 0.1f;
     private float jumpBufferCounter;
 
-    [SerializeField] public Key currentKey { get; set; }
+    public Key currentKey { get; set; }
     [SerializeField] GameObject canvasPrefab;
     
     public PlayerInputActions playerControls;
