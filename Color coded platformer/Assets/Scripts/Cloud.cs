@@ -32,4 +32,24 @@ public class Cloud : MonoBehaviour
             collision.transform.SetParent(null);
         }
     }
+    public void SetDirection(
+        Transform cannonTransform,
+        float speedToSet,
+        bool tiltCloud,
+        float customRotation
+    )
+    {
+        speed = speedToSet;
+
+        float angle = cannonTransform.eulerAngles.z + 90f;
+        Vector3 direction = new Vector3(
+            Mathf.Cos(angle * Mathf.Deg2Rad),
+            Mathf.Sin(angle * Mathf.Deg2Rad),
+            0f
+        );
+
+        transform.rotation = tiltCloud
+            ? Quaternion.Euler(0f, 0f, customRotation)
+            : Quaternion.identity;
+    }
 }

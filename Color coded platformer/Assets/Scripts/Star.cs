@@ -27,7 +27,7 @@ public class Star : MonoBehaviour
     void Start()
     {
         if (saveManager == null)
-            saveManager = FindObjectOfType<ESave>();
+            saveManager = Object.FindAnyObjectByType<ESave>();
 
         if (saveManager != null && saveManager.LoadStar(index))
             ApplyCollectedVisuals();
