@@ -9,7 +9,6 @@ public class Ladder : MonoBehaviour
     Rigidbody2D rb;
     PlayerBehaviour player;
     Collider2D playerCollider;
-    Collider2D groundChecker;
     Collider2D ladderCollider;
     Collider2D ladderPlatformCollider;
 
@@ -94,7 +93,7 @@ public class Ladder : MonoBehaviour
 
         rb = player.GetComponent<Rigidbody2D>();
         playerCollider = player.GetComponent<Collider2D>();
-        groundChecker = collision.GetComponentInChildren<GroundCollisionCheck>()?.GetComponent<Collider2D>();
+        // groundChecker removed entirely
 
         playerInside = true;
     }
@@ -192,15 +191,10 @@ public class Ladder : MonoBehaviour
         if (playerCollider && colliderForPlayerIgnoreClimbing)
         {
             Physics2D.IgnoreCollision(playerCollider, colliderForPlayerIgnoreClimbing, ignore);
-            if (groundChecker)
-                Physics2D.IgnoreCollision(groundChecker, colliderForPlayerIgnoreClimbing, ignore);
         }
 
         if (ladderPlatformCollider == null)
             return;
-
-        if (groundChecker)
-            Physics2D.IgnoreCollision(groundChecker, ladderPlatformCollider, ignore);
 
         if (playerCollider)
             Physics2D.IgnoreCollision(playerCollider, ladderPlatformCollider, ignore);
@@ -211,6 +205,5 @@ public class Ladder : MonoBehaviour
         rb = null;
         player = null;
         playerCollider = null;
-        groundChecker = null;
     }
 }

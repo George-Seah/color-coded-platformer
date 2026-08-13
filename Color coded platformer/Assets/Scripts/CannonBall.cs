@@ -9,11 +9,7 @@ public class CannonBall : MonoBehaviour
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
-        //rb.useGravity = false; // Ensure gravity is off
-        rb.linearVelocity = direction.normalized * speed;
-    }
-    void FixedUpdate(){
-        transform.Translate(direction.normalized * speed * Time.deltaTime);
+        rb.linearVelocity = transform.TransformDirection(direction.normalized) * speed;
     }
 
     void OnCollisionEnter2D(Collision2D collision)

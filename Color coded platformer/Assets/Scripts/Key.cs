@@ -75,12 +75,10 @@ public class Key : MonoBehaviour
             if(holderIsLookingRight){
                 transform.localPosition = new Vector3(1f, 0f, 0f);
                 GetComponent<SpriteRenderer>().flipX = true;
-                Debug.Log("Key should be facing right.");
             }
             else{
                 transform.localPosition = new Vector3(-1f, 0f, 0f);
                 GetComponent<SpriteRenderer>().flipX = false;
-                Debug.Log("Key should be facing left.");
             }
             facingRight = holderIsLookingRight;
         }
@@ -91,24 +89,10 @@ public class Key : MonoBehaviour
         //Player steals key from Waddler
         if (collision.gameObject.CompareTag("Player") && transform.parent.gameObject.CompareTag("Waddler"))
         {
-
-            Debug.Log("Key detects player while being held by Waddler.");
             if(canBeStolen && collision.gameObject.GetComponent<PlayerBehaviour>().currentKey == null){
                 transform.parent.gameObject.GetComponent<Waddler>().SetKey(null);
                 collision.gameObject.GetComponent<PlayerBehaviour>().SetKey(gameObject.GetComponent<Key>());
                 SetDirection(collision.gameObject.GetComponent<PlayerBehaviour>().lookingRight);
-                /*
-                if(!collision.gameObject.GetComponent<PlayerBehaviour>().lookingRight){
-                    transform.localPosition = new Vector3(1f, 0f, 0f);
-                    GetComponent<SpriteRenderer>().flipX = true;
-                    Debug.Log("Key should be facing right.");
-                }
-                else{
-                    transform.localPosition = new Vector3(-1f, 0f, 0f);
-                    GetComponent<SpriteRenderer>().flipX = false;
-                    Debug.Log("Key should be facing left.");
-                }*/
-                Debug.Log("Key should be stolen by Player from Waddler.");
                 canBeStolen = false;
                 PickUp(collision.gameObject.transform);
             }
@@ -116,28 +100,12 @@ public class Key : MonoBehaviour
         //Waddler steals key from Player
         else if (collision.gameObject.CompareTag("Waddler") && transform.parent.gameObject.CompareTag("Player"))
         {
-
-            Debug.Log("Key detects Waddler while being held by Player.");
             if(canBeStolen && collision.gameObject.GetComponent<Waddler>().currentKey == null){
                 transform.parent.gameObject.GetComponent<PlayerBehaviour>().SetKey(null);
                 collision.gameObject.GetComponent<Waddler>().SetKey(gameObject.GetComponent<Key>());
                 SetDirection(collision.gameObject.GetComponent<Waddler>().lookingRight);
-                /*
-                if(!collision.gameObject.GetComponent<Waddler>().lookingRight){
-                    transform.localPosition = new Vector3(1f, 0f, 0f);
-                    GetComponent<SpriteRenderer>().flipX = true;
-                    Debug.Log("Key should be facing right.");
-                }
-                else{
-                    transform.localPosition = new Vector3(-1f, 0f, 0f);
-                    GetComponent<SpriteRenderer>().flipX = false;
-                    Debug.Log("Key should be facing left.");
-                }
-                */
-                Debug.Log("Key should be stolen by Waddler from Player.");
                 canBeStolen = false;
                 PickUp(collision.gameObject.transform);
-                //SetDirection(collision.gameObject.GetComponent<Waddler>().);
             }
         }
     }
@@ -175,7 +143,6 @@ public class Key : MonoBehaviour
             if (ladderCollider != null)
             {
                 Physics2D.IgnoreCollision(ladderCollider, GetComponent<Collider2D>());
-                Debug.Log("Ignoring collision with ladder.");
             }
             return; // Skip further processing for ladder collisions
         }
@@ -216,8 +183,6 @@ public class Key : MonoBehaviour
                         transform.localPosition = new Vector3(1f, 0f, 0f);
                         GetComponent<SpriteRenderer>().flipX = false;
                     }
-                    
-                    Debug.Log("Key should be facing right.");
                 }
                 else{
                     if(transform.parent.gameObject.CompareTag("Waddler")){
@@ -228,7 +193,6 @@ public class Key : MonoBehaviour
                         transform.localPosition = new Vector3(1f, 0f, 0f);
                         GetComponent<SpriteRenderer>().flipX = false;
                     }
-                    Debug.Log("Key should be facing left.");
                 }
             }
             /*
