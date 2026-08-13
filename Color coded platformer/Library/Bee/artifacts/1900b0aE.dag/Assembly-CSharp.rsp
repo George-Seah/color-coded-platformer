@@ -522,6 +522,7 @@
 "Assets/Scripts/ColorPicker.cs"
 "Assets/Scripts/ColorPositionChange.cs"
 "Assets/Scripts/Core/BaseColorPicker.cs"
+"Assets/Scripts/Core/ColorState.cs"
 "Assets/Scripts/Core/DoorColorPicker.cs"
 "Assets/Scripts/DeathBarrier.cs"
 "Assets/Scripts/DirectionallySolidPlatform.cs"
