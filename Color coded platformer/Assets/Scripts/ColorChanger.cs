@@ -62,8 +62,6 @@ public class ColorChanger : MonoBehaviour
     
     void Awake()
     {
-        //particleSystem = GetComponent<ParticleSystem>();
-        //shaderMaterial = GetComponent<Renderer>().material;
         // Set the color based on the selected option
         switch (selectedColor)
         {
@@ -81,30 +79,39 @@ public class ColorChanger : MonoBehaviour
                 break;
         }
 
-        // Configure the particle system's texture sheet animation
-        var textureSheetAnimation = particleSystem.textureSheetAnimation;
-        textureSheetAnimation.mode = ParticleSystemAnimationMode.Sprites;
-
-        // Remove any existing sprites in the particle system
-        textureSheetAnimation.RemoveSprite(0);
-
-        // Add each sprite from the array and ensure the material is applied
-        foreach (var sprite in sprites)
+        if (particleSystem != null)
         {
-            if (sprite != null)
+            // Configure the particle system's texture sheet animation
+            var textureSheetAnimation = particleSystem.textureSheetAnimation;
+            textureSheetAnimation.mode = ParticleSystemAnimationMode.Sprites;
+
+            // Remove any existing sprites in the particle system
+            textureSheetAnimation.RemoveSprite(0);
+
+            // Add each sprite from the array and ensure the material is applied
+            if (sprites != null)
             {
-                textureSheetAnimation.AddSprite(sprite); // Add sprite to the particle system
+                foreach (var sprite in sprites)
+                {
+                    if (sprite != null)
+                    {
+                        textureSheetAnimation.AddSprite(sprite); // Add sprite to the particle system
+                    }
+                }
             }
-        }
 
-        // Assign the shader material to the particle system's renderer
-        var renderer = particleSystem.GetComponent<ParticleSystemRenderer>();
-        renderer.material = shaderMaterial;
+            if (shaderMaterial != null)
+            {
+                // Assign the shader material to the particle system's renderer
+                var renderer = particleSystem.GetComponent<ParticleSystemRenderer>();
+                if (renderer != null) renderer.material = shaderMaterial;
 
-        // Optional: Pass the colorChange value to the shader material
-        if (shaderMaterial.HasProperty("_TintColor"))
-        {
-            shaderMaterial.SetColor("_TintColor", colorChange);
+                // Optional: Pass the colorChange value to the shader material
+                if (shaderMaterial.HasProperty("_TintColor"))
+                {
+                    shaderMaterial.SetColor("_TintColor", colorChange);
+                }
+            }
         }
     }
 }

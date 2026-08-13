@@ -80,30 +80,7 @@ public class GroundCollisionCheck : MonoBehaviour
 
     void Update()
     {
-        if (playerBehaviour.gameObject.GetComponent<ColorPositionChange>() != null)
-        {
-            int playerLayer = playerBehaviour.gameObject.layer;
-            int groundCheckLayer = LayerMask.NameToLayer("GroundCollisionCheck");
-            int redLayer = LayerMask.NameToLayer("Red");
-            int blueLayer = LayerMask.NameToLayer("Blue");
-            int greenLayer = LayerMask.NameToLayer("Green");
-
-            bool isRed = playerLayer == redLayer;
-            bool isBlue = playerLayer == blueLayer;
-            bool isGreen = playerLayer == greenLayer;
-
-            // Set collision ignoring based on current player layer
-            Physics2D.IgnoreLayerCollision(groundCheckLayer, redLayer, !isRed && (isBlue || isGreen));
-            Physics2D.IgnoreLayerCollision(groundCheckLayer, blueLayer, !isBlue && (isRed || isGreen));
-            Physics2D.IgnoreLayerCollision(groundCheckLayer, greenLayer, !isGreen && (isRed || isBlue));
-
-            // If none of the colors, enable collision with all
-            if (!isRed && !isBlue && !isGreen)
-            {
-                Physics2D.IgnoreLayerCollision(groundCheckLayer, redLayer, false);
-                Physics2D.IgnoreLayerCollision(groundCheckLayer, blueLayer, false);
-                Physics2D.IgnoreLayerCollision(groundCheckLayer, greenLayer, false);
-            }
-        }
+        // Removed the expensive per-frame Physics2D.IgnoreLayerCollision updates.
+        // We now rely on the globally configured Collision Matrix (PhysicsMatrixSetup.cs).
     }
 }

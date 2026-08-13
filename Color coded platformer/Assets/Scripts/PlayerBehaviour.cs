@@ -8,19 +8,22 @@ public class PlayerBehaviour : MonoBehaviour
     Rigidbody2D rb;
     
     [SerializeField] float moveSpeed = 5f;
-    [SerializeField] float initialJumpForce = 5f;
-    [SerializeField] float initialJumpTime = 0.3f;
-    [SerializeField] float jumpTime;
-    float jumpForce;
+    [SerializeField] float jumpForce = 12f;
     
     [SerializeField] bool isGrounded, holdingKey, landedOnWaddler;
     public bool jumpPressed { get; private set; }
-    bool jumpConsumed;
+    
+    // Coyote Time & Jump Buffering
+    private float coyoteTime = 0.15f;
+    private float coyoteTimeCounter;
+    private float jumpBufferTime = 0.1f;
+    private float jumpBufferCounter;
+
     [SerializeField] public Key currentKey { get; set; }
     [SerializeField] GameObject canvasPrefab;
     
     public PlayerInputActions playerControls;
-    public readonly float gravityScale = 7f, fallingGravityScale = 9f;
+    public readonly float gravityScale = 2f, fallingGravityScale = 5f;
     public string color;
     public bool onLadder, lookingRight;
     
@@ -52,7 +55,7 @@ public class PlayerBehaviour : MonoBehaviour
 
         move.Enable(); jump.Enable(); drop.Enable(); interact.Enable(); pause.Enable();
 
-        pause.performed += ctx => CanvasScript.Instance.PauseGame();
+        pause.performed += OnPause;
         jump.performed += OnJump;
         jump.canceled += OnJumpCanceled;
         drop.performed += OnDrop;
@@ -64,28 +67,34 @@ public class PlayerBehaviour : MonoBehaviour
         move.Disable(); jump.Disable(); drop.Disable(); interact.Disable(); pause.Disable();
         playerControls.Player.Disable();
         
-        pause.performed -= ctx => CanvasScript.Instance.PauseGame();
+        pause.performed -= OnPause;
         jump.performed -= OnJump;
         jump.canceled -= OnJumpCanceled;
         drop.performed -= OnDrop;
         interact.performed -= OnInteract;
     }
 
-    void OnJump(InputAction.CallbackContext ctx) => jumpPressed = true;
+    void OnPause(InputAction.CallbackContext ctx)
+    {
+        if (CanvasScript.Instance != null) CanvasScript.Instance.PauseGame();
+    }
+
+    void OnJump(InputAction.CallbackContext ctx) 
+    {
+        jumpPressed = true;
+        jumpBufferCounter = jumpBufferTime;
+    }
 
     void OnJumpCanceled(InputAction.CallbackContext ctx)
     {
         jumpPressed = false;
-        jumpConsumed = false;
-        jumpForce = 0;
-        jumpTime = 0;
         
-        // Only apply fall physics if actually in the air
-        if (!isGrounded)
+        // Cut jump height dynamically
+        if (rb.linearVelocityY > 0 && !onLadder)
         {
-            rb.gravityScale = fallingGravityScale;
-            if (rb.linearVelocityY > 0) rb.linearVelocityY = 0;
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
         }
+        coyoteTimeCounter = 0;
     }
 
     void OnInteract(InputAction.CallbackContext ctx)
@@ -132,8 +141,10 @@ public class PlayerBehaviour : MonoBehaviour
         
         if (collision.gameObject.CompareTag("Key") && !holdingKey)
         {
-            var key = collision.gameObject.GetComponent<Key>();
-            if (key != null && !key.ReadPickedUp()) currentKey = key;
+            if (collision.gameObject.TryGetComponent<Key>(out var key))
+            {
+                if (!key.ReadPickedUp()) currentKey = key;
+            }
         }
     }
 
@@ -145,41 +156,34 @@ public class PlayerBehaviour : MonoBehaviour
 
     void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.GetComponent<Key>() == currentKey && !holdingKey)
+        if (!holdingKey && collision.gameObject.TryGetComponent<Key>(out var key))
         {
-            var key = collision.gameObject.GetComponent<Key>();
-            if (currentKey != null && !key.ReadPickedUp()) currentKey = null;
+            if (key == currentKey && !key.ReadPickedUp()) currentKey = null;
         }
         if (collision.gameObject.CompareTag("Moving Platform")) isGrounded = false;
     }
 
     public void ColorChanged(Color newColor)
     {
-        foreach (var layer in colorLayers)
-        {
-            Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer(layer), true);
-            Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("GroundCollisionCheck"), LayerMask.NameToLayer(layer), true);
-        }
+        // 1. Change Player Layer
+        string targetLayer = newColor == Color.red ? "Red" : 
+                             newColor == Color.blue ? "Blue" : 
+                             newColor == Color.green ? "Green" : "White";
 
-        string targetLayer = newColor == Color.red ? "Red" : newColor == Color.blue ? "Blue" : 
-                             newColor == Color.green ? "Green" : null;
-
-        if (targetLayer != null)
+        int layerID = LayerMask.NameToLayer(targetLayer);
+        if (layerID != -1)
         {
-            Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer(targetLayer), false);
-            Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("GroundCollisionCheck"), LayerMask.NameToLayer(targetLayer), false);
-            color = targetLayer;
-        }
-        else if (newColor == Color.white)
-        {
-            foreach (var layer in colorLayers)
+            gameObject.layer = layerID;
+            
+            // 2. Change Ground Check Layer so it perfectly inherits the Collision Matrix rules!
+            Transform groundCheck = transform.Find("GroundCollisionCheck");
+            if (groundCheck != null)
             {
-                Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer(layer), false);
-                Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("GroundCollisionCheck"), LayerMask.NameToLayer(layer), false);
+                groundCheck.gameObject.layer = layerID;
             }
-            color = "White";
         }
 
+        // Update tint
         GetComponent<SpriteRenderer>().color = newColor;
 
         if (currentKey != null && color != LayerMask.LayerToName(currentKey.gameObject.layer) 
@@ -194,53 +198,68 @@ public class PlayerBehaviour : MonoBehaviour
     {
         // Movement
         moveDirection = move.ReadValue<Vector2>();
-        if (!onLadder) rb.linearVelocityX = moveDirection.x * moveSpeed;
         
+        // Ladder Override (Kinematic State)
+        if (onLadder)
+        {
+            rb.bodyType = RigidbodyType2D.Kinematic;
+            rb.linearVelocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
+            rb.gravityScale = 0;
+            
+            // Ignore semi-solids while climbing
+            Physics2D.IgnoreLayerCollision(gameObject.layer, LayerMask.NameToLayer("SemiSolid"), true);
+        }
+        else
+        {
+            rb.bodyType = RigidbodyType2D.Dynamic;
+            rb.linearVelocity = new Vector2(moveDirection.x * moveSpeed, rb.linearVelocity.y);
+            Physics2D.IgnoreLayerCollision(gameObject.layer, LayerMask.NameToLayer("SemiSolid"), false);
+        }
+
+        // Coyote Time Update
+        if (isGrounded) coyoteTimeCounter = coyoteTime;
+        else coyoteTimeCounter -= Time.fixedDeltaTime;
+
+        // Jump Buffer Update
+        if (!jumpPressed) jumpBufferCounter -= Time.fixedDeltaTime;
+
+        // Execute Jump
+        if (jumpBufferCounter > 0f && coyoteTimeCounter > 0f && !onLadder)
+        {
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+            jumpBufferCounter = 0f;
+            coyoteTimeCounter = 0f;
+            landedOnWaddler = false;
+        }
+
+        // Waddler bounce initiation
+        if (jumpBufferCounter > 0f && landedOnWaddler && !onLadder)
+        {
+            float multiplier = jumpPressed ? waddlerBounceHeld : waddlerBounceUnheld;
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce * multiplier);
+            jumpBufferCounter = 0f;
+            landedOnWaddler = false;
+        }
+
+        // Dynamic Gravity
+        if (!onLadder)
+        {
+            if (rb.linearVelocityY < 0) rb.gravityScale = fallingGravityScale;
+            else rb.gravityScale = gravityScale;
+        }
+
         // Animation & Facing
         anim.SetFloat("XMovement", moveDirection.x);
         if (moveDirection.x != 0) lookingRight = moveDirection.x > 0;
         transform.rotation = Quaternion.Euler(0, lookingRight ? 0 : 180, 0);
 
         // Key management
-        if (currentKey != null && currentKey.ReadPickedUp() && currentKey.transform.parent.CompareTag("Waddler"))
+        if (currentKey != null && currentKey.ReadPickedUp() && currentKey.transform.parent != null && currentKey.transform.parent.CompareTag("Waddler"))
             currentKey = null;
 
-        // Grounded state
+        // Grounded state animation
         anim.SetBool("grounded", isGrounded);
         if (isGrounded) landedOnWaddler = false;
-
-        // Jump initiation
-        if (jumpPressed && isGrounded && !jumpConsumed)
-        {
-            jumpForce = initialJumpForce;
-            jumpTime = initialJumpTime;
-            jumpConsumed = true;
-        }
-
-        // Waddler bounce initiation
-        if (jumpPressed && landedOnWaddler && !jumpConsumed)
-        {
-            float multiplier = jump.IsPressed() ? waddlerBounceHeld : waddlerBounceUnheld;
-            jumpForce = initialJumpForce * multiplier;
-            jumpTime = initialJumpTime;
-            landedOnWaddler = false;
-            jumpConsumed = true;
-        }
-
-        // Sustained jump (decaying force)
-        if (jumpPressed && jumpTime > 0)
-        {
-            jumpTime -= Time.fixedDeltaTime;
-            jumpForce *= 0.9f;
-            rb.linearVelocityY += jumpForce;
-        }
-        else if (!isGrounded && (jumpTime <= 0 || rb.linearVelocityY <= 0))
-        {
-            rb.gravityScale = fallingGravityScale;
-        }
-
-        // Ladder override
-        if (onLadder) rb.gravityScale = 0;
     }
 
     public void SetIgnoreMovementCollisions(bool ignore)
@@ -280,5 +299,5 @@ public class PlayerBehaviour : MonoBehaviour
     }
 
     public void RespawnPositionAtPosition(Vector2 respawnPosition) => 
-        transform.position = GameObject.Find("Game Manager").GetComponent<GameManager>().playerSpawnPoint;
+        transform.position = respawnPosition;
 }
