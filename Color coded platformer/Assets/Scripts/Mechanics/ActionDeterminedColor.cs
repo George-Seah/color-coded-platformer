@@ -14,11 +14,11 @@ public class ActionDeterminedColor : MonoBehaviour
     {
         if (player.jumpPressed)
         {
-            player.ColorChanged(Color.yellow); 
+            player.ColorChanged(GameColor.Yellow); 
         }
         else if (!player.readGrounded() && GetComponent<Rigidbody2D>().linearVelocityY < 0)
         {
-            player.ColorChanged(Color.blue); 
+            player.ColorChanged(GameColor.Blue); 
         }
     }
 }
