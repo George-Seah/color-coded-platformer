@@ -4,7 +4,6 @@ public class LockedDoor : ColorPicker
 {
     protected override void Awake()
     {
-        // Ensure the Door's primary GameObject stays on Default so it's always physically solid
         changeLayerMask = false;
         gameObject.layer = LayerMask.NameToLayer("Default"); 
 
@@ -13,24 +12,29 @@ public class LockedDoor : ColorPicker
 
     public override void ChangeObjectColor(GameColor color)
     {
-        if (sr == null)
-            sr = GetComponent<SpriteRenderer>();
+        base.ChangeObjectColor(color);
 
-        if (sr)
+        // For the door, we MUST keep the root GameObject layer as 'Default' so no one can phase through it.
+        // We only change the layer of the child Trigger colliders.
+        gameObject.layer = LayerMask.NameToLayer("Default");
+
+        if (color != GameColor.None && color != GameColor.ColorPositionChange)
         {
-            switch (color)
+            string layerName = color == GameColor.Default ? "Default" : color.ToString();
+            int layerID = LayerMask.NameToLayer(layerName);
+            
+            if (layerID != -1) 
             {
-                case GameColor.Red: sr.color = Color.red; break;
-                case GameColor.Blue: sr.color = Color.blue; break;
-                case GameColor.Yellow: sr.color = Color.yellow; break;
-                case GameColor.Green: sr.color = Color.green; break;
-                case GameColor.Orange: sr.color = new Color(1f, 0.5f, 0f); break;
-                case GameColor.Purple: sr.color = new Color(0.5f, 0f, 0.5f); break;
-                case GameColor.Black: sr.color = Color.black; break;
-                case GameColor.White: sr.color = Color.white; break;
-                case GameColor.Default: sr.color = Color.white; break;
-                case GameColor.ColorPositionChange: break;
-                case GameColor.None: break;
+                // Find all colliders in children
+                BoxCollider2D[] childColliders = GetComponentsInChildren<BoxCollider2D>();
+                foreach (var col in childColliders) 
+                {
+                    // If this is the trigger, assign the specific color layer to it
+                    if (col.isTrigger && col.gameObject != this.gameObject) 
+                    {
+                        col.gameObject.layer = layerID;
+                    }
+                }
             }
         }
     }
@@ -51,8 +55,8 @@ public class LockedDoor : ColorPicker
                 collision.transform.parent.gameObject.GetComponent<Waddler>().SetKey(null);
             }
             
-            Destroy(collision.gameObject); // Destroy Key
-            Destroy(gameObject);           // Destroy Door
+            Destroy(collision.gameObject); 
+            Destroy(gameObject);           
         }
     }
 }

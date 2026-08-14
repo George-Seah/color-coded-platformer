@@ -22,36 +22,63 @@ public class ColorPicker : MonoBehaviour
         if (sr == null)
             sr = GetComponent<SpriteRenderer>();
 
-        switch (color)
+        if (sr)
         {
-            case GameColor.Red:
-                if (sr) this.sr.color = Color.red;
-                if(changeLayerMask) gameObject.layer = LayerMask.NameToLayer("Red");
-                break;
-            case GameColor.Green:
-                if (sr) this.sr.color = Color.green;
-                if(changeLayerMask) gameObject.layer = LayerMask.NameToLayer("Green");
-                break;
-            case GameColor.Blue:
-                if (sr) this.sr.color = Color.blue;
-                if(changeLayerMask) gameObject.layer = LayerMask.NameToLayer("Blue");
-                break;
-            default:
-                if (sr) this.sr.color = Color.white;
-                if(changeLayerMask) gameObject.layer = LayerMask.NameToLayer("Default");
-                break;
+            if (ColorDictionary.Instance != null) 
+            {
+                Material mat = ColorDictionary.Instance.GetMaterial(color);
+                if (mat != null) 
+                {
+                    sr.material = mat;
+                }
+                else 
+                {
+                    sr.color = ColorDictionary.Instance.GetColorTint(color);
+                }
+            }
+            else
+            {
+                // Safe fallback if dictionary isn't loaded yet (e.g. Editor OnValidate)
+                sr.color = GetFallbackColor(color);
+            }
+        }
+
+        if(changeLayerMask && color != GameColor.ColorPositionChange && color != GameColor.None)
+        {
+            string layerName = color == GameColor.Default ? "Default" : color.ToString();
+            int layerId = LayerMask.NameToLayer(layerName);
+            if(layerId != -1) gameObject.layer = layerId;
         }
     }
 
-    // Called in editor when inspector changes are made
+    protected Color GetFallbackColor(GameColor color)
+    {
+        switch (color)
+        {
+            case GameColor.Red: return Color.red;
+            case GameColor.Blue: return Color.blue;
+            case GameColor.Yellow: return Color.yellow;
+            case GameColor.Green: return Color.green;
+            case GameColor.Orange: return new Color(1f, 0.5f, 0f);
+            case GameColor.Purple: return new Color(0.5f, 0f, 0.5f);
+            case GameColor.Black: return Color.black;
+            case GameColor.White: return Color.white;
+            default: return Color.white;
+        }
+    }
+
     void OnValidate()
     {
-        ChangeObjectColor(this.selectedColor);
+        UnityEditor.EditorApplication.delayCall += _ApplyColorSafe;
+    }
+
+    private void _ApplyColorSafe()
+    {
+        if (this != null) ChangeObjectColor(this.selectedColor);
     }
 
     protected virtual void Awake()
     {
-        // Optional runtime guarantee
         ChangeObjectColor(this.selectedColor);
     }
 }
