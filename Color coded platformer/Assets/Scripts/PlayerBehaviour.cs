@@ -166,7 +166,7 @@ public class PlayerBehaviour : MonoBehaviour
         }
 
         if (currentKey != null && gameObject.layer != currentKey.gameObject.layer 
-            && currentKey.IsHeld)
+            && currentKey.ReadPickedUp())
         {
             currentKey.Drop();
             currentKey = null;
