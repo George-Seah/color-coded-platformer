@@ -141,16 +141,9 @@ public class PlayerBehaviour : MonoBehaviour
         }
     }
 
-    public void ColorChanged(Color newColor)
+    public void ColorChanged(GameColor newColor)
     {
-        string targetLayer = "White";
-        if (newColor == Color.red) targetLayer = "Red";
-        else if (newColor == Color.blue) targetLayer = "Blue";
-        else if (newColor == Color.yellow) targetLayer = "Yellow";
-        else if (newColor == Color.green) targetLayer = "Green";
-        else if (newColor == new Color(1f, 0.5f, 0f)) targetLayer = "Orange";
-        else if (newColor == new Color(0.5f, 0f, 0.5f)) targetLayer = "Purple";
-        else if (newColor == Color.black) targetLayer = "Black";
+        string targetLayer = newColor == GameColor.Default ? "Default" : newColor.ToString();
 
         int layerID = LayerMask.NameToLayer(targetLayer);
         if (layerID != -1)
@@ -158,10 +151,22 @@ public class PlayerBehaviour : MonoBehaviour
             gameObject.layer = layerID;
         }
 
-        GetComponent<SpriteRenderer>().color = newColor;
+        // SWAP TO DICTIONARY MATERIAL
+        if (ColorDictionary.Instance != null)
+        {
+            Material mat = ColorDictionary.Instance.GetMaterial(newColor);
+            if (mat != null) 
+            {
+                GetComponent<SpriteRenderer>().material = mat;
+            }
+            else 
+            {
+                GetComponent<SpriteRenderer>().color = ColorDictionary.Instance.GetColorTint(newColor);
+            }
+        }
 
-        if (currentKey != null && color != LayerMask.LayerToName(currentKey.gameObject.layer) 
-            && currentKey.ReadPickedUp() && currentKey.GetComponent<SpriteRenderer>().color != Color.white)
+        if (currentKey != null && gameObject.layer != currentKey.gameObject.layer 
+            && currentKey.IsHeld)
         {
             currentKey.Drop();
             currentKey = null;

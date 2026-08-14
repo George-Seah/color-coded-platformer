@@ -45,24 +45,18 @@ public class ColorChanger : MonoBehaviour, ISerializationCallbackReceiver
         {
             if (collision.gameObject.layer == LayerMask.NameToLayer("Player"))
             {
-                collision.gameObject.GetComponent<PlayerBehaviour>().ColorChanged(colorChange);
+                collision.gameObject.GetComponent<PlayerBehaviour>().ColorChanged(targetColor);
             }
             else
             {
-                if (collision.gameObject.TryGetComponent<BaseColorPicker>(out var picker))
+                // Force object to have a BaseColorPicker if it doesn't already, so it perfectly adheres to the Dictionary
+                if (!collision.gameObject.TryGetComponent<BaseColorPicker>(out var picker))
                 {
-                    picker.colorState = targetColor;
-                    picker.ApplyColor();
+                    picker = collision.gameObject.AddComponent<BaseColorPicker>();
                 }
-                else
-                {
-                    string layerName = targetColor == GameColor.Default ? "Default" : targetColor.ToString();
-                    collision.gameObject.layer = LayerMask.NameToLayer(layerName);
-                    if (collision.gameObject.TryGetComponent<SpriteRenderer>(out var sr))
-                    {
-                        sr.color = colorChange;
-                    }
-                }
+                
+                picker.colorState = targetColor;
+                picker.ApplyColor();
             }
         }
     }
