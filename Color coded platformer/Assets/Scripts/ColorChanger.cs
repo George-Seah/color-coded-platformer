@@ -38,6 +38,12 @@ public class ColorChanger : MonoBehaviour, ISerializationCallbackReceiver
             hasMigratedColor = true;
         }
     }
+    //What method occurs when something changes in the inspector, this is used to update the colorChange variable when the targetColor is changed in the inspector
+    void OnValidate()
+    {
+        //colorChange = ColorDictionary.Instance != null ? ColorDictionary.Instance.GetDefaultUnityColor(targetColor) : Color.white;
+        GetComponent<SpriteRenderer>().material = ColorDictionary.Instance != null ? ColorDictionary.Instance.GetMaterial(targetColor) : null;
+    }
 
     void OnTriggerEnter2D(Collider2D collision)
     {

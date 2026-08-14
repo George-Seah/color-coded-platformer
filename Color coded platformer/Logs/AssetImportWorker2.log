@@ -1,11 +1,11 @@
 [Licensing::Module] Trying to connect to existing licensing client channel...
 Built from '6000.4/staging' branch; Version is '6000.4.8f1 (f8b72d3d7343) revision 16299821'; Using compiler version '194234433'; Build Type 'Release'
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Nathan & Co" at "2026-08-13T10:05:16.7311547Z"
 OS: 'Windows 11  (10.0.22631) Core' Language: 'en' Physical Memory: 16233 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Nathan & Co" at "2026-08-14T08:23:43.0795891Z"
 System  architecture: x64
 Process architecture: x64
-Date: 2026-08-13T10:05:16Z
+Date: 2026-08-14T08:23:43Z
 
 COMMAND LINE ARGUMENTS:
 C:\Unity\6000.4.8f1\Editor\Unity.exe
@@ -19,7 +19,7 @@ C:/Github/color-coded-platformer/Color coded platformer
 -logFile
 Logs/AssetImportWorker2.log
 -srvPort
-63713
+60551
 -licensingIpc
 LicenseClient-Nathan & Co
 -force-d3d12
@@ -68,12 +68,12 @@ C:/Github/color-coded-platformer/Color coded platformer
     "memorysetup-job-temp-allocator-block-size=2097152"
     "memorysetup-job-temp-allocator-block-size-background=1048576"
     "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
-Player connection [15088]  Target information:
+Player connection [2556]  Target information:
 
-Player connection [15088]  * "[IP] 192.168.0.233 [Port] 0 [Flags] 2 [Guid] 2740320695 [EditorId] 2740320695 [Version] 1048832 [Id] WindowsEditor(7,SuperFamicom) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [2556]  * "[IP] 192.168.0.233 [Port] 0 [Flags] 2 [Guid] 3827508720 [EditorId] 3827508720 [Version] 1048832 [Id] WindowsEditor(7,SuperFamicom) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [15088] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [15088] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [2556] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [2556] Host joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 7
 Input System module state changed to: Initialized.
 [Physics::Module] Initialized fallback backend.
@@ -86,7 +86,7 @@ Default GameObject BitMask: Default already registered
 [Physics::Module] SDK Version: 4.1.2
 [Physics::Module] Integration Version: 1.0.0
 [Physics::Module] Threading Mode: Multi-Threaded
-Refreshing native plugins compatible for Editor in 30.05 ms, found 11 plugins.
+Refreshing native plugins compatible for Editor in 60.54 ms, found 11 plugins.
 Initialize engine version: 6000.4.8f1 (f8b72d3d7343)
 [Subsystems] Discovering subsystems at path C:/Unity/6000.4.8f1/Editor/Data/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path C:/Github/color-coded-platformer/Color coded platformer/Assets
@@ -104,12 +104,12 @@ Initialize mono
 Mono path[0] = 'C:/Unity/6000.4.8f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Unity/6000.4.8f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Unity/6000.4.8f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56792
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56608
 CodeReloadManager initialized
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Unity/6000.4.8f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002122 seconds.
+Registered in 0.001654 seconds.
 Native extension for WindowsStandalone target not found
 Package Manager log level set to [2]
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
@@ -117,46 +117,46 @@ Package Manager log level set to [2]
 [Package Manager] Cannot connect to Unity Package Manager local server
 ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.436 seconds
-Domain Reload Profiling: 905ms
+- Finished resetting the current domain, in  0.445 seconds
+Domain Reload Profiling: 918ms
 	BeginReloadAssembly (130ms)
-	RebuildCommonClasses (39ms)
-	RebuildNativeTypeToScriptingClass (14ms)
-	initialDomainReloadingComplete (65ms)
-	LoadAllAssembliesAndSetupDomain (220ms)
-		LoadAssemblies (126ms)
-		AnalyzeDomain (211ms)
-			TypeCache.Refresh (210ms)
-				TypeCache.ScanAssembly (196ms)
-	FinalizeReload (437ms)
+	RebuildCommonClasses (38ms)
+	RebuildNativeTypeToScriptingClass (15ms)
+	initialDomainReloadingComplete (64ms)
+	LoadAllAssembliesAndSetupDomain (224ms)
+		LoadAssemblies (127ms)
+		AnalyzeDomain (216ms)
+			TypeCache.Refresh (215ms)
+				TypeCache.ScanAssembly (197ms)
+	FinalizeReload (446ms)
 		SetupLoadedEditorAssemblies (0ms)
-			InitializePlatformSupportModulesInManaged (45ms)
-			BeforeProcessingInitializeOnLoad (90ms)
-			ProcessInitializeOnLoadAttributes (120ms)
-			ProcessInitializeOnLoadMethodAttributes (91ms)
+			InitializePlatformSupportModulesInManaged (46ms)
+			BeforeProcessingInitializeOnLoad (89ms)
+			ProcessInitializeOnLoadAttributes (127ms)
+			ProcessInitializeOnLoadMethodAttributes (99ms)
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 ========================================================================
 Worker process is ready to serve import requests
 Import Worker Mode flag is 0x00
-Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 [Licensing::Client] Error: HandshakeResponse reported an error:
 	ResponseCode: 505
 	ResponseStatus: Unsupported protocol version '1.18.1'.
 [Licensing::Module] Error: Failed to handshake to channel: "LicenseClient-Nathan & Co"
 [Licensing::IpcConnector] LicenseClient-Nathan & Co channel disconnected successfully.
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Nathan & Co-6000.4.8" at "2026-08-13T10:05:18.8932398Z"
-[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 28652, path: "C:/Unity/6000.4.8f1/Editor/Data/Resources/Licensing/Client/Unity.Licensing.Client.exe")
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Nathan & Co-6000.4.8" at "2026-08-14T08:23:45.3510295Z"
+[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 20820, path: "C:/Unity/6000.4.8f1/Editor/Data/Resources/Licensing/Client/Unity.Licensing.Client.exe")
 [Licensing::Module] LicensingClient has failed validation; ignoring
 [Licensing::Client] Handshaking with LicensingClient:
   Version:                 1.18.1+9fbee8e
-  Session Id:              53b0267268fa4ad3936ceecf271b1629
-  Correlation Id:          795af8a0633de12571aa01d8fe1b30de
-  External correlation Id: 691442707598757432
+  Session Id:              eb075cf3e89644e9b483e9d323efdc50
+  Correlation Id:          c3b51ae65cdbb24c62a728b648525428
+  External correlation Id: 9104117475119937704
   Machine Id:              qtyx5DMTmV6sfEVnrxz9aoLU/bw=
-[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-Nathan & Co-6000.4.8" (connect: 0.00s, validation: 0.00s, handshake: 0.01s)
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Nathan & Co-6000.4.8-notifications" at "2026-08-13T10:05:18.9028703Z"
-[Licensing::Module] Licensing Background thread has ended after 2.17s
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-Nathan & Co-6000.4.8" (connect: 0.00s, validation: 0.00s, handshake: 0.02s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Nathan & Co-6000.4.8-notifications" at "2026-08-14T08:23:45.3723483Z"
+[Licensing::Module] Licensing Background thread has ended after 2.29s
+Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 Begin MonoManager ReloadAssembly
 [Licensing::Client] Successfully resolved entitlement details
 [Licensing::Module] License group:
@@ -211,7 +211,7 @@ Assembly UnityEngine.UI.Tests.dll at Library/ScriptAssemblies/UnityEngine.UI.Tes
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
 'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Refreshing native plugins compatible for Editor in 4.90 ms, found 11 plugins.
+Refreshing native plugins compatible for Editor in 13.32 ms, found 11 plugins.
 Native extension for WindowsStandalone target not found
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
@@ -223,348 +223,92 @@ Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInter
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] Unable to send message (not connected to server process).
 [Package Manager] Cannot connect to Unity Package Manager local server
-Refreshing native plugins compatible for Editor in 4.89 ms, found 11 plugins.
+Refreshing native plugins compatible for Editor in 5.07 ms, found 11 plugins.
 ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.897 seconds
-Domain Reload Profiling: 1921ms
-	BeginReloadAssembly (192ms)
-		DisableScriptedObjects (6ms)
-		CreateAndSetChildDomain (27ms)
-	RebuildCommonClasses (44ms)
-	RebuildNativeTypeToScriptingClass (15ms)
-	initialDomainReloadingComplete (74ms)
-	LoadAllAssembliesAndSetupDomain (698ms)
-		LoadAssemblies (432ms)
-		AnalyzeDomain (366ms)
-			TypeCache.Refresh (228ms)
-				TypeCache.ScanAssembly (208ms)
-			BuildScriptInfoCaches (121ms)
-			ResolveRequiredComponents (14ms)
-	FinalizeReload (897ms)
+- Finished resetting the current domain, in  1.016 seconds
+Domain Reload Profiling: 2088ms
+	BeginReloadAssembly (188ms)
+		DisableScriptedObjects (7ms)
+		CreateAndSetChildDomain (28ms)
+	RebuildCommonClasses (41ms)
+	RebuildNativeTypeToScriptingClass (14ms)
+	initialDomainReloadingComplete (159ms)
+	LoadAllAssembliesAndSetupDomain (670ms)
+		LoadAssemblies (406ms)
+		AnalyzeDomain (360ms)
+			TypeCache.Refresh (232ms)
+				TypeCache.ScanAssembly (211ms)
+			BuildScriptInfoCaches (112ms)
+			ResolveRequiredComponents (15ms)
+	FinalizeReload (1017ms)
 		SetupLoadedEditorAssemblies (0ms)
-			BeforeProcessingInitializeOnLoad (186ms)
-			ProcessInitializeOnLoadAttributes (374ms)
-			ProcessInitializeOnLoadMethodAttributes (93ms)
+			BeforeProcessingInitializeOnLoad (183ms)
+			ProcessInitializeOnLoadAttributes (411ms)
+			ProcessInitializeOnLoadMethodAttributes (106ms)
 			AfterProcessingInitializeOnLoad (7ms)
 		AwakeInstancesAfterBackupRestoration (5ms)
 Default GameObject BitMask: Default already registered
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
-Refreshing native plugins compatible for Editor in 5.30 ms, found 11 plugins.
+Refreshing native plugins compatible for Editor in 5.31 ms, found 11 plugins.
 Unloading 29 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 8319 unused Assets / (10.3 MB). Loaded Objects now: 9162.
-Memory consumption went from 182.5 MB to 172.3 MB.
-Total: 11.889200 ms (FindLiveObjects: 0.901700 ms CreateObjectMapping: 1.651800 ms MarkObjects: 4.550000 ms  DeleteObjects: 4.783800 ms)
+Unloading 8321 unused Assets / (10.3 MB). Loaded Objects now: 9165.
+Memory consumption went from 180.9 MB to 170.6 MB.
+Total: 13.114700 ms (FindLiveObjects: 0.990100 ms CreateObjectMapping: 1.491400 ms MarkObjects: 4.979700 ms  DeleteObjects: 5.651500 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 8661.681168 seconds.
-  path: Assets/Materials/Color Dictionary/DarkSolidShader.shadergraph
-  importAddress: Guid(8f1671bc1dc633448b65ae65efc31f9f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Materials/Color Dictionary/DarkSolidShader.shadergraph using Guid(8f1671bc1dc633448b65ae65efc31f9f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '6384307f74e379bd1e6486187b2174ec') in 0.1020333 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=be6eee5f178cf04394d32835440b6b3a DependenciesID=c2ccc3c112a82868addb077d516460b7 StaticDependenciesID=12f72e3198a25c0ced5d9ca09c023c3b 
-Number of updated asset objects reloaded before import = 2Number of asset objects unloaded after import = 2
+  Time since last request: 88951.938034 seconds.
+  path: Assets/Shaders/Color Changer.shadergraph
+  importAddress: Guid(8c198befe3bb0cd42a1c68e50a030345) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Shaders/Color Changer.shadergraph using Guid(8c198befe3bb0cd42a1c68e50a030345) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'ab268eef93c5bbaa269e153fc7314e37') in 0.1041852 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=51575fe6f1b5648378ab328b38eeb6cf DependenciesID=10f0cec42d4f7d66be7bf196dce459c6 StaticDependenciesID=c7bf69136c8783ccf974a0ddfc83f4a0 
+Number of updated asset objects reloaded before import = 1Number of asset objects unloaded after import = 3
 
 ========================================================================
 Received Import Request.
-  Time since last request: 7.244085 seconds.
-  path: Assets/Materials/Color Dictionary/DivideSolidShader.shadergraph
-  importAddress: Guid(975c8cefe99841546b14588233c36890) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Color Dictionary/DivideSolidShader.shadergraph using Guid(975c8cefe99841546b14588233c36890) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '111d53f8ec50ad773632063765b4f6fc') in 0.611393 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=0f035f8770210d88ccb200b34078ff21 DependenciesID=d72ed32e818caf6b313072a576d9aaa4 StaticDependenciesID=a688420463be1fd8ef0ca6cfc978deef 
-Number of updated asset objects reloaded before import = 1Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.128910 seconds.
-  path: Assets/Materials/Color Dictionary/DivideSolidShader.shadergraph
-  importAddress: Guid(975c8cefe99841546b14588233c36890) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Materials/Color Dictionary/DivideSolidShader.shadergraph using Guid(975c8cefe99841546b14588233c36890) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '5ae49afa25edf315263ea2d6d2770ecd') in 0.0113918 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=04f51594ec407e29cf67a3da71afb325 DependenciesID=8c1cb5be0066c074539a502e7a62274e StaticDependenciesID=6c1639f18040a61646423790e6e45452 
+  Time since last request: 13.942595 seconds.
+  path: Assets/Shaders/Blue Color Changer.mat
+  importAddress: Guid(f50cf6a672b6b0e4a8d371e6c24a8b61) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Shaders/Blue Color Changer.mat using Guid(f50cf6a672b6b0e4a8d371e6c24a8b61) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '48f5ff8117607d633f296abc7fb116d7') in 0.0108221 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=1733e2f4438f61a0c8bbd2c70f896c25 DependenciesID=fb965ac41f702cae0f2d3e91b22a9270 StaticDependenciesID=dc27bb6ec53b57de2b22fd71830b3fd2 
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
 
 ========================================================================
 Received Import Request.
-  Time since last request: 8.951994 seconds.
-  path: Assets/Materials/Color Dictionary/SolidPaintShader.shadergraph
-  importAddress: Guid(1ae79816e84fb9845a5d2fdeb21e6a6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Color Dictionary/SolidPaintShader.shadergraph using Guid(1ae79816e84fb9845a5d2fdeb21e6a6e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '9282503aa17bf506fb316b17625b41a8') in 0.1584363 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=448581e5b47cf8a434491268027d7ad8 DependenciesID=4dce25beb9f49aaa1f9064858e8fa374 StaticDependenciesID=7f4e3426637badc586cab5aff1a033ab 
-Number of updated asset objects reloaded before import = 1Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.583121 seconds.
-  path: Assets/Materials/Color Dictionary/SolidPaintShader.shadergraph
-  importAddress: Guid(1ae79816e84fb9845a5d2fdeb21e6a6e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Materials/Color Dictionary/SolidPaintShader.shadergraph using Guid(1ae79816e84fb9845a5d2fdeb21e6a6e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '2339baaee9d1aad3d20ecad6caf82c4c') in 0.0108316 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a530c13e629214487c29d9b6ceca133f DependenciesID=bfbb299f0ac284bd261095ddd19be4a7 StaticDependenciesID=1c83139c2b33eb73e1f1fa0e422487a8 
+  Time since last request: 21.090094 seconds.
+  path: Assets/Shaders/Yellow Color Changer.mat
+  importAddress: Guid(1c3e10db83bc7ac45a30fc93f990d75b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Shaders/Yellow Color Changer.mat using Guid(1c3e10db83bc7ac45a30fc93f990d75b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '77da31e920bfda8cebb58d369ac553c2') in 0.0122895 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=23666f18dfb581938e95cccd1eacb588 DependenciesID=497939ae75e21719956b2acd0924ef6c StaticDependenciesID=9f0763883bd85571deb7378abcc48df9 
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
 
 ========================================================================
 Received Import Request.
-  Time since last request: 21.688293 seconds.
-  path: Assets/Materials/Color Dictionary/SubtractSolidShader.shadergraph
-  importAddress: Guid(3dc47e0e7c6233c4c8a42a2aedf84292) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Color Dictionary/SubtractSolidShader.shadergraph using Guid(3dc47e0e7c6233c4c8a42a2aedf84292) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: 'c4830985af0186a08f9c01feb73ce3c9') in 0.1589859 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d4e68465937a6f4a6a26d42323efc558 DependenciesID=08e7b79adc8e27d73369bbb2802d1a4a StaticDependenciesID=33dc81fe91cd0a687aab385e60392e5e 
-Number of updated asset objects reloaded before import = 1Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.580661 seconds.
-  path: Assets/Materials/Color Dictionary/SubtractSolidShader.shadergraph
-  importAddress: Guid(3dc47e0e7c6233c4c8a42a2aedf84292) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Materials/Color Dictionary/SubtractSolidShader.shadergraph using Guid(3dc47e0e7c6233c4c8a42a2aedf84292) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '5e8063bea509af19479c0bc80842b33b') in 0.0101795 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5777be7a564baa65b89378fd59cfad72 DependenciesID=2c28fc09a45015bad1a15ad91114cfb3 StaticDependenciesID=f7f8dadce8c9799cebdcc1369e90306f 
+  Time since last request: 22.112393 seconds.
+  path: Assets/Shaders/Purple Color Changer.mat
+  importAddress: Guid(f1585a5fb4a3fa2428f8c730b495b210) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Shaders/Purple Color Changer.mat using Guid(f1585a5fb4a3fa2428f8c730b495b210) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '3e659574e7990ccbf2cdc5fa23c22752') in 0.0114846 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=7edf599168b38cffd2b5dabe857d25bc DependenciesID=71fd65542549523aefc806be77866629 StaticDependenciesID=63826c461e770a7480b3be1caf32e902 
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
 
 ========================================================================
 Received Import Request.
-  Time since last request: 64.186226 seconds.
-  path: Assets/Materials/BlueColorChanger.mat
-  importAddress: Guid(1bd73b31d6c33da4cb8b1aa486437ae2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/BlueColorChanger.mat using Guid(1bd73b31d6c33da4cb8b1aa486437ae2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: 'bbb58300e9a026b68a4caad46e930583') in 0.026664 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=861f1312e787d76c886bae287eac21bc DependenciesID=c24f6619900959c06344ba339addc846 StaticDependenciesID=c718e740f80208e615aa8ca947bb9552 
+  Time since last request: 9.597831 seconds.
+  path: Assets/Shaders/Green Color Changer.mat
+  importAddress: Guid(1f915123d45b81e46a26e86dbf7cc2c1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Shaders/Green Color Changer.mat using Guid(1f915123d45b81e46a26e86dbf7cc2c1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'a821bc2806e92fe2ac185c790ce17914') in 0.012644 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=8d276a5df74569392e7c4da07247e6fd DependenciesID=f8284fd534a8ca1062311d57f91c73e4 StaticDependenciesID=df4897a035e5cff76a81c16ecd823ee4 
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
 
 ========================================================================
 Received Import Request.
-  Time since last request: 33.653206 seconds.
-  path: Assets/Materials/Color Dictionary/RedSolidShader.mat
-  importAddress: Guid(1f5dd9d2d256f474186a55efe8626ee3) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Materials/Color Dictionary/RedSolidShader.mat using Guid(1f5dd9d2d256f474186a55efe8626ee3) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '7262b0416b46a1c1079b8389684aa326') in 0.012218 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=61d6fb4133172f3c5a50c8516197c1c0 DependenciesID=6925d86bb7c1466198aadb1566089579 StaticDependenciesID=20d109bca8010e7b5ffdf3c7fe191fa9 
+  Time since last request: 24.441448 seconds.
+  path: Assets/Shaders/White Color Changer.mat
+  importAddress: Guid(aa7d463d3a437a6458b3e80a5bdd29d1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Shaders/White Color Changer.mat using Guid(aa7d463d3a437a6458b3e80a5bdd29d1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '4c59273bc50d6936a2cdca7d9e9aeec6') in 0.0095035 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5b1cc44403eae924c66654c80ff0b264 DependenciesID=817b210593978f2d198e64ec74214469 StaticDependenciesID=789ef8d4626f8da257cc8c88556d444a 
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
 
 ========================================================================
 Received Import Request.
-  Time since last request: 6.863781 seconds.
-  path: Assets/Materials/Color Dictionary/RedSolidShader.mat
-  importAddress: Guid(1f5dd9d2d256f474186a55efe8626ee3) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Materials/Color Dictionary/RedSolidShader.mat using Guid(1f5dd9d2d256f474186a55efe8626ee3) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'dc0a6fb6ad2dcacd3c88f0254f3d678d') in 0.0109782 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b101335b40ef0f631f4f0837f349f8af DependenciesID=17dd8752deaffc239ed47bf93c12a42f StaticDependenciesID=870f46c91a391489ad065281c9b79dc0 
+  Time since last request: 57.005018 seconds.
+  path: Assets/Shaders/Experiment 5.mat
+  importAddress: Guid(671b750675f7ad148afa104e52641f1e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Shaders/Experiment 5.mat using Guid(671b750675f7ad148afa104e52641f1e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '9c9fc4c6ed0a05fdc3983a861d638ac8') in 0.012766 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=8a2a8e1b07785f1200ad57fac3c0a243 DependenciesID=187f1c43ceb217984dcb44db1bcca9f9 StaticDependenciesID=5e77594915ddab961819d762c8cf8919 
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 2.783328 seconds.
-  path: Assets/Materials/Color Dictionary/RedSolidShader.mat
-  importAddress: Guid(1f5dd9d2d256f474186a55efe8626ee3) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Materials/Color Dictionary/RedSolidShader.mat using Guid(1f5dd9d2d256f474186a55efe8626ee3) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'a082f1085260565a3574e2b78478b6b0') in 0.0108669 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5cc47c41b54136d6ab2b4b518ae144e8 DependenciesID=aa60b85a6fb41175000174d2ce0c8d51 StaticDependenciesID=f2d8c257faa13ef8a0b74f074b5aba87 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.072042 seconds.
-  path: Assets/Materials/Color Dictionary/RedSolidShader 1.mat
-  importAddress: Guid(efc51d3c52050654cbd45d9b4efef0e1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Materials/Color Dictionary/RedSolidShader 1.mat using Guid(efc51d3c52050654cbd45d9b4efef0e1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'f7950d10a04706b8f86525345da504f9') in 0.0107556 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b974e54d03bf516058fdcd5c98b968eb DependenciesID=04bcd6d451dd4ea9a1f015e58922953d StaticDependenciesID=18c8526fc6512bbf4e755271739c5642 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 11.017585 seconds.
-  path: Assets/Materials/Color Dictionary/BlueSolidShader.mat
-  importAddress: Guid(efc51d3c52050654cbd45d9b4efef0e1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Materials/Color Dictionary/BlueSolidShader.mat using Guid(efc51d3c52050654cbd45d9b4efef0e1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'f56adb5a5ae341b3b073d65410fcb420') in 0.0117354 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=815d3586278d903342b2519833f0bcec DependenciesID=1fe1eb572f533cd9b95cbe3819e592dc StaticDependenciesID=ae479137bb0d62531873184f01f07917 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 5.580864 seconds.
-  path: Assets/Materials/Color Dictionary/BlueSolidShader.mat
-  importAddress: Guid(efc51d3c52050654cbd45d9b4efef0e1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Materials/Color Dictionary/BlueSolidShader.mat using Guid(efc51d3c52050654cbd45d9b4efef0e1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '62db5aaf1c9bdbe92c8dbdb1de8991a0') in 0.0120153 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=314894676b551bb4d8147ba5e4bbb381 DependenciesID=11f5cbbee4ab992af117ed758d0e01a6 StaticDependenciesID=a3c109eb3645c777eada84d5424f5c03 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 3.210707 seconds.
-  path: Assets/Materials/Color Dictionary/BlueSolidShader 1.mat
-  importAddress: Guid(42e18541b676f014892958e61e37c9fe) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Materials/Color Dictionary/BlueSolidShader 1.mat using Guid(42e18541b676f014892958e61e37c9fe) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '7adcdc687ffe2da8421cff63333023b4') in 0.0116055 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e70210a9eebeec3d4966206bad47d809 DependenciesID=ec5fa0ddb89e054674badf191b7dd041 StaticDependenciesID=6d0cd50ddb7751b68757d7f20b9f19cf 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 12.613789 seconds.
-  path: Assets/Materials/Color Dictionary/DarkSolidShader.shadergraph
-  importAddress: Guid(8f1671bc1dc633448b65ae65efc31f9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Color Dictionary/DarkSolidShader.shadergraph using Guid(8f1671bc1dc633448b65ae65efc31f9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: 'f87cc0fe28e5727877004dfee6d5d112') in 0.1567148 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d196ae192d903e3fffabbf384a022fe0 DependenciesID=63b33fae85f9650434ed4eb88b731f49 StaticDependenciesID=444f206649215861a8e3f372e0d2d8df 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 4.741132 seconds.
-  path: Assets/Materials/Color Dictionary/BlueSolidShader 2.mat
-  importAddress: Guid(f4a6ce525cfabcd4b9ac188f7f1098d7) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Materials/Color Dictionary/BlueSolidShader 2.mat using Guid(f4a6ce525cfabcd4b9ac188f7f1098d7) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'be04f6631c7a0c5420e97ade9776021f') in 0.0116843 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=082942a1b41824c3428ce10dd2696ea2 DependenciesID=d2cd6103e339843bd24bdab686d1db22 StaticDependenciesID=bf3bbd8d7e523274f0cd37823512faf8 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/Materials/Color Dictionary/BlueSolidShader 7.mat
-  importAddress: Guid(7bc99d849065d4a4f83afca2ecb3334f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Materials/Color Dictionary/BlueSolidShader 7.mat using Guid(7bc99d849065d4a4f83afca2ecb3334f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '8c0b6fc8e5549e00bdde57eac6f95cba') in 0.0097527 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c38a5b1f4dc3663d1abe9205d3a08c0f DependenciesID=a746a14e7a37b0f3451b553a7d4a4bcc StaticDependenciesID=f6a5c8270223d80ec2f0a4d48e620c0f 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/Materials/Color Dictionary/BlueSolidShader 5.mat
-  importAddress: Guid(2a001cea116ec8e449822b48a77d2aaa) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Materials/Color Dictionary/BlueSolidShader 5.mat using Guid(2a001cea116ec8e449822b48a77d2aaa) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '9c65b511fdcadd79f616871dfaa184d9') in 0.0116049 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=8d31e1d14d3058cbcebb47ad2481091b DependenciesID=e7d6ff11d4766010f23cfa2f50b05851 StaticDependenciesID=39bf45373c9932cd7d50ce8472119def 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 144.433139 seconds.
-  path: Assets/Materials/Color Dictionary/BlueSolidShader.mat
-  importAddress: Guid(efc51d3c52050654cbd45d9b4efef0e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Color Dictionary/BlueSolidShader.mat using Guid(efc51d3c52050654cbd45d9b4efef0e1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '6eeeda7c7d04485186fab574f336c657') in 0.1963576 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b82195c0b78c7a3bf308b6e8e6f0477f DependenciesID=25a179e12628160a069b50b4a683a4a1 StaticDependenciesID=67866c3cb2c018beb7bc580f3c42fb08 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000028 seconds.
-  path: Assets/TextMesh Pro/Shaders/TMP_SDF-HDRP UNLIT.shadergraph
-  importAddress: Guid(f63d574838ccfb44f84acc05fed0af48) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TextMesh Pro/Shaders/TMP_SDF-HDRP UNLIT.shadergraph using Guid(f63d574838ccfb44f84acc05fed0af48) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '2342fd9819a2e67e4934c46e31844620') in 0.0225855 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=7972c1b0cd8851aa097b4a3e42c76f3c DependenciesID=e42645de7c35c4ebed8dc51f2abd014d StaticDependenciesID=8df66d2227aeb2f4ac7a2c6fad758d07 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000032 seconds.
-  path: Assets/TextMesh Pro/Shaders/TMP_SDF-HDRP LIT.shadergraph
-  importAddress: Guid(ca2ed216f98028c4dae6c5224a952b3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TextMesh Pro/Shaders/TMP_SDF-HDRP LIT.shadergraph using Guid(ca2ed216f98028c4dae6c5224a952b3c) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: 'd1eef2df1729cce68e61efe1af9342e4') in 0.0114989 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=6bc77020f81b2aa1c1dc1d2f2e92b033 DependenciesID=fc79a6f5ef95a03fce3996b43da7693b StaticDependenciesID=de4d45c2200cf8e354ca3b892249b1b0 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Outline.mat
-  importAddress: Guid(79459efec17a4d00a321bdcc27bbc385) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Outline.mat using Guid(79459efec17a4d00a321bdcc27bbc385) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: 'eeca26ff74d9ffaf6d50535c605e9a21') in 0.1165413 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b4c4f3ef44555674326a26bd74f28548 DependenciesID=40c8989e19f3d0390e82f8f23630ff17 StaticDependenciesID=9123a22e1aa95059c556d8a98dd55555 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/TextMesh Pro/Shaders/TMP_SDF-URP Unlit.shadergraph
-  importAddress: Guid(124c112a6e8f1a54e8b0870e881b56d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TextMesh Pro/Shaders/TMP_SDF-URP Unlit.shadergraph using Guid(124c112a6e8f1a54e8b0870e881b56d8) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: 'db38241f84526cd1aeb37eda933d5da0') in 0.6039128 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ee679340704c629156d635bcf93af444 DependenciesID=9118ff60405de8fb96534ee0d2e049eb StaticDependenciesID=ce29a2cedb7d42e2d150d00b39ecc645 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000033 seconds.
-  path: Assets/Shaders/White Experiment.shadergraph
-  importAddress: Guid(5c7ee93114cd2bf4aa233d65befb7682) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Shaders/White Experiment.shadergraph using Guid(5c7ee93114cd2bf4aa233d65befb7682) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '5acfc5255e6a948d89a3cecd73525ef5') in 0.0079457 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=01480608beb6f204ba4ffa34f181993a DependenciesID=abffb5dcee6897d07575e30f8d1be8ed StaticDependenciesID=80147c56505367707e9e009a043d81b4 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000024 seconds.
-  path: Assets/Materials/WhiteColorChanger.mat
-  importAddress: Guid(7029f85f2b3230c47bcff608348c65ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/WhiteColorChanger.mat using Guid(7029f85f2b3230c47bcff608348c65ad) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '1676235e11bde0ad26b05470d53fc01b') in 0.0087158 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=bd32f782896fc4b4a0f4fedb6946379d DependenciesID=4e38a82bf0ce1ad225e0ede2aff249bd StaticDependenciesID=7b1e46a6d403e7f93fc23c4e8878446d 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/Shaders/Green Experiment.shadergraph
-  importAddress: Guid(73cf6d0260d792a4e9ed79a3fd66a905) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Shaders/Green Experiment.shadergraph using Guid(73cf6d0260d792a4e9ed79a3fd66a905) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '68ca8d99b5e69cd83dafc7b867e6dab0') in 0.00902 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d9661d326733287f1a8b1954303e42a7 DependenciesID=a64eafbf5140a0dd3ad2a5e719bc5718 StaticDependenciesID=0b9fd2e1179f1f044bf0bc9dee301f80 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/Shaders/Experiment.shadergraph
-  importAddress: Guid(8c198befe3bb0cd42a1c68e50a030345) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Shaders/Experiment.shadergraph using Guid(8c198befe3bb0cd42a1c68e50a030345) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '6dd499a8a1a22d48afaa358fe02ec91e') in 0.0176112 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b4c1a06b79c6a9e20f509bebb418dd93 DependenciesID=c664085c63ca8af47cce7edad9fd5f1f StaticDependenciesID=58609ded94a716396c769a0ced0ddaab 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000023 seconds.
-  path: Assets/Imported Assets/FastMesh/Materials/Floor 1.mat
-  importAddress: Guid(5a399a37821645240901d0b2234ce276) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Imported Assets/FastMesh/Materials/Floor 1.mat using Guid(5a399a37821645240901d0b2234ce276) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '5a7a098ba338822ccd8bd4df4906f8df') in 1.0942838 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=0070b90f9fb11a74f7db0b2408f12530 DependenciesID=d2ec894c151a7470e361c4bdc85473dd StaticDependenciesID=1726a789f230fb998dc0c508ce442331 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000041 seconds.
-  path: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset
-  importAddress: Guid(2e498d1c8094910479dc3e1b768306a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Fallback.asset using Guid(2e498d1c8094910479dc3e1b768306a4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '217bf49b7d92f29425c612b60bdb353e') in 0.045887 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=791ae50f9037dcf6921aa21a918b3f27 DependenciesID=cb51e1f9f6fb3f367d6267a3dd424a1d StaticDependenciesID=4f99cbc97a82fe69e3e3ff3e65d09a48 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 6
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000036 seconds.
-  path: Assets/Materials/RedColorChanger.mat
-  importAddress: Guid(f32c85d6030b38644bbf34d989be47cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/RedColorChanger.mat using Guid(f32c85d6030b38644bbf34d989be47cc) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: 'd5f7f519638cc921b6650c340674dfa7') in 0.0337377 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=7807961ee3c5a19c42b8e778ba542bc8 DependenciesID=14ecc89418aa9907be76bafd724edcce StaticDependenciesID=0667eed232af7ddadeb7d48a11df9d20 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 5
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000030 seconds.
-  path: Assets/TextMesh Pro/Fonts/LiberationSans.ttf
-  importAddress: Guid(e3265ab4bf004d28a9537516768c1c75) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TextMesh Pro/Fonts/LiberationSans.ttf using Guid(e3265ab4bf004d28a9537516768c1c75) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: 'f56b0ecaf9fa74233c7321aec815f222') in 0.0280138 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=66b7e74c3d1b30061bdcc3359b15930c DependenciesID=02c5669c1521f9efefb47c3af0691629 StaticDependenciesID=0cd6174e0d706b58dc80740eee13d48c 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 4
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000033 seconds.
-  path: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Drop Shadow.mat
-  importAddress: Guid(e73a58f6e2794ae7b1b7e50b7fb811b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF - Drop Shadow.mat using Guid(e73a58f6e2794ae7b1b7e50b7fb811b0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: 'd21d094e2ed31e4ecee711c6eb8ef209') in 0.0836087 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=2fad872f953a655db60dab3d903ada46 DependenciesID=e4d95c9a2ccf2366def3b96d847472a7 StaticDependenciesID=9923535565b3def4c6caf1b24125e118 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000060 seconds.
-  path: Assets/Materials/Color Dictionary/OrangeSolidShader.mat
-  importAddress: Guid(f4a6ce525cfabcd4b9ac188f7f1098d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Color Dictionary/OrangeSolidShader.mat using Guid(f4a6ce525cfabcd4b9ac188f7f1098d7) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '784cb1400bb2dbc2d9122a0b32b82615') in 0.0094134 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=55538027e4d54ffdfd2d8dd304b614d5 DependenciesID=c611c3d26e2ea608a63b20053c393448 StaticDependenciesID=1320aa87dada1580a0b84e91350389a2 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/Materials/Color Dictionary/GreenSolidShader.mat
-  importAddress: Guid(78d270cf42b1c4b42b119f16cf5450b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Color Dictionary/GreenSolidShader.mat using Guid(78d270cf42b1c4b42b119f16cf5450b4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '438762580cc2f575f09dda6c6b128257') in 0.0091953 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=dbcafeb1f8b16fe42ecd39d154aeb5ce DependenciesID=6284e166ad8e4897898d809cf01158c3 StaticDependenciesID=daf8f106ed1ca776faa30d3ba75574ae 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset
-  importAddress: Guid(8f586378b4e144a9851e7b34d9b748ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TextMesh Pro/Resources/Fonts & Materials/LiberationSans SDF.asset using Guid(8f586378b4e144a9851e7b34d9b748ee) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '065b5b472a2098680c057fdcf221322d') in 0.0349371 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b833b26bc747ca78b9b9f9bccb24cf7e DependenciesID=05852838013d1cad4ee441630b305a9b StaticDependenciesID=8adddc1e3d8e2f5fb16b92efcd70a75b 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/Materials/Color Dictionary/YellowSolidShader.mat
-  importAddress: Guid(42e18541b676f014892958e61e37c9fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Color Dictionary/YellowSolidShader.mat using Guid(42e18541b676f014892958e61e37c9fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '25f0eaf665237250324bd396fe692da8') in 0.0082137 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=1211fd11c04185e7a538f0481501124d DependenciesID=99ecd252464f4243320737fe3c6973ae StaticDependenciesID=a1559911632797758e11a635577119c0 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000047 seconds.
-  path: Assets/Materials/Color Dictionary/PurpleSolidShader.mat
-  importAddress: Guid(6b69e2979c47a654fa915c6228f81525) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/Materials/Color Dictionary/PurpleSolidShader.mat using Guid(6b69e2979c47a654fa915c6228f81525) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '594b26f9b9b02d689e77717a21b5a75c') in 0.008672 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=2af46a4b4b83e2ea5ba03d567b6c4dac DependenciesID=7073daf6863178962ae50c6af2666977 StaticDependenciesID=e99d631c7b9f9ec02c100060c6400140 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000027 seconds.
-  path: Assets/TextMesh Pro/Shaders/TMP_SDF-URP Lit.shadergraph
-  importAddress: Guid(a3d800b099a06e0478fb790c5e79057a) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
-Start importing Assets/TextMesh Pro/Shaders/TMP_SDF-URP Lit.shadergraph using Guid(a3d800b099a06e0478fb790c5e79057a) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '46462631666b915651f460dba3ed3399') in 1.6087764 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=0256117bf896a4c3d2a1643704b25998 DependenciesID=dcc4aa5ce0baa59d56875dbbb063aa48 StaticDependenciesID=a1b14c4b530e2786b4ad941b712d97cf 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
 
