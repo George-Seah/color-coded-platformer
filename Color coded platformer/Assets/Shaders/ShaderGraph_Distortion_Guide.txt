@@ -1,0 +1,27 @@
+To create a Translucent "Warp/Glass/Static" Shader Graph:
+
+=== 1. The Bubbly/Magnifying Glass Warp (Translucent) ===
+1. Create a new "Sprite Unlit Shader Graph" (or standard URP Unlit).
+2. Graph Settings (Inspector): Set Surface Type to "Transparent". Set Blend Mode to "Alpha".
+3. In the Blackboard, add two properties:
+   - "Warp Strength" (Float, default 0.1)
+   - "Time Scale" (Float, default 2.0)
+4. The Nodes:
+   - Create a [Time] node. Multiply its 'Time' output by the "Time Scale".
+   - Create a [Voronoi] or [Simple Noise] node. Plug the Time output into its 'Angle Offset' or 'UV' (using a Tiling and Offset node) to make it animate/bubble.
+   - Multiply the Noise output by your "Warp Strength".
+   - Create a [Screen Position] node. Add the Noise output to the Screen Position.
+   - Create a [Scene Color] node (URP MUST have Opaque Texture enabled in Pipeline Asset for this!). 
+   - Plug the warped Screen Position into the UV of the [Scene Color] node.
+5. Plug the Scene Color output into the Base Color of your Fragment node!
+
+=== 2. Black with White TV Static ===
+1. Create a new "Sprite Unlit Shader Graph".
+2. Add Properties: "Static Speed" (Float, default 10) and "Threshold" (Float, default 0.8).
+3. The Nodes:
+   - Take a [Time] node, multiply by "Static Speed".
+   - Plug it into the Offset of a [Tiling And Offset] node.
+   - Plug that into a [Simple Noise] node (Scale: 500 to make it look like TV static).
+   - Pass the Noise output through a [Step] node, using your "Threshold" property as the Edge. (This makes the noise purely Black/White instead of gray).
+   - If you want the static inside the bounds of the original sprite, multiply the Step output by the Alpha of a [Sample Texture 2D] using _MainTex.
+4. Plug this into Base Color!
