@@ -270,15 +270,26 @@ public class PlayerBehaviour : MonoBehaviour
 
     public void SetIgnoreMovementCollisions(bool ignore)
     {
-        foreach (var tag in new[] { "OneWayPlatform", "Cloud" })
-            foreach (var obj in GameObject.FindGameObjectsWithTag(tag))
-                SetCollision(obj, ignore);
+        ApplyIgnoreByTag("OneWayPlatform", ignore);
+        ApplyIgnoreByTag("Cloud", ignore);
     }
 
     public void SetIgnoreOneWayPlatforms(bool ignore)
     {
-        foreach (var obj in GameObject.FindGameObjectsWithTag("OneWayPlatform"))
-            SetCollision(obj, ignore);
+        ApplyIgnoreByTag("OneWayPlatform", ignore);
+    }
+
+    void ApplyIgnoreByTag(string tag, bool ignore)
+    {
+        var all = Object.FindObjectsByType<Collider2D>(FindObjectsInactive.Exclude, FindObjectsSortMode.None);
+        foreach (var col in all)
+        {
+            if (col != null && col.CompareTag(tag))
+            {
+                foreach (var pc in playerColliders)
+                    Physics2D.IgnoreCollision(pc, col, ignore);
+            }
+        }
     }
 
     void SetCollision(GameObject obj, bool ignore)

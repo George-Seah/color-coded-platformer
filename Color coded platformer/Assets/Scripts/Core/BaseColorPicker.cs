@@ -13,7 +13,9 @@ public class BaseColorPicker : MonoBehaviour
 
     protected virtual void OnValidate() 
     {
+#if UNITY_EDITOR
         UnityEditor.EditorApplication.delayCall += _ApplyColorSafe;
+#endif
     }
 
     private void _ApplyColorSafe()

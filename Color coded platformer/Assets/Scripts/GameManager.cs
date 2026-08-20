@@ -15,7 +15,16 @@ public class GameManager : MonoBehaviour
     if (Instance == null)
         Instance = this;
     else
+    {
         Destroy(gameObject);
+        return;
+    }
+
+    if (GameSaveSystem.Instance == null && Object.FindAnyObjectByType<GameSaveSystem>() == null)
+    {
+        var saveGo = new GameObject("GameSaveSystem");
+        saveGo.AddComponent<GameSaveSystem>();
+    }
     }
 
 
@@ -31,14 +40,10 @@ public class GameManager : MonoBehaviour
     void OnSceneLoaded(Scene scene, LoadSceneMode mode)
     {
         Debug.Log($"Scene {scene.name} has fully loaded.");
-        var player = GameObject.Find("Player");
-        if (player != null)
+        var playerBehaviour = Object.FindAnyObjectByType<PlayerBehaviour>();
+        if (playerBehaviour != null)
         {
-            var playerBehaviour = player.GetComponent<PlayerBehaviour>();
-            if (playerBehaviour != null)
-            {
-                playerBehaviour.RespawnPositionAtPosition(playerSpawnPoint);
-            }
+            playerBehaviour.RespawnPositionAtPosition(playerSpawnPoint);
         }
         ResetLayerCollisions();
     }

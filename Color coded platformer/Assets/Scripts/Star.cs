@@ -35,9 +35,12 @@ public class Star : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.CompareTag("Player") && saveManager != null)
+        if (collision.CompareTag("Player"))
         {
-            saveManager.SaveStar(index, true);
+            if (GameSaveSystem.Instance != null)
+                GameSaveSystem.Instance.SaveStar(index, true);
+            else if (saveManager != null)
+                saveManager.SaveStar(index, true);
             ApplyCollectedVisuals();
         }
     }

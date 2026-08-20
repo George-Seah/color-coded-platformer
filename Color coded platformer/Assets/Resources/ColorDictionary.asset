@@ -28,6 +28,9 @@ MonoBehaviour:
   - state: 4
     material: {fileID: -876546973899608171, guid: b5e8ac6628178814fa6f4a32b3c44ba5, type: 3}
     tint: {r: 1, g: 1, b: 1, a: 0}
+  - state: 5
+    material: {fileID: 2100000, guid: f1a2b3c4d5e6456789abcdef01234571, type: 2}
+    tint: {r: 0, g: 0, b: 0, a: 1}
   - state: 6
     material: {fileID: 2100000, guid: 42e18541b676f014892958e61e37c9fe, type: 2}
     tint: {r: 1, g: 1, b: 1, a: 0}

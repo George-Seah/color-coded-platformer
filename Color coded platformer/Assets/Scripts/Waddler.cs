@@ -130,7 +130,8 @@ public class Waddler : MonoBehaviour
             if (collision.gameObject.CompareTag("Player") && collisionAngle != 180)
             {
                 Debug.Log("Waddler triggered scene reload.");
-                GameObject.Find("Game Manager").GetComponent<GameManager>().ReloadScene();
+                if (GameManager.Instance != null)
+                    GameManager.Instance.ReloadScene();
             }
         }
     }
