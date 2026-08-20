@@ -48,13 +48,15 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b57dfd0efd2d7754ba32ccc3fa0aaccf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  selectedColor: 0
-  colorChange: {r: 1, g: 0, b: 0, a: 1}
+  legacySelectedColor: 0
+  hasMigratedColor: 1
+  targetColor: 1
   tagsToDetect:
   - Waddler
   - Ladder
   - Player
-  particleSystem: {fileID: 3543462066335417241}
+  targetObjects: []
+  colorParticleSystem: {fileID: 0}
   sprites:
   - {fileID: -8396187568615977397, guid: 1bd72b325e8706d41b7badad1ebc665d, type: 3}
   - {fileID: -7796920827282412667, guid: bdeb93e7902e1f2449b38f9d8398419e, type: 3}
@@ -63,7 +65,7 @@ MonoBehaviour:
   - {fileID: 2960308106685272936, guid: 0a25cd5ecbfcc1744b2202b6f892b055, type: 3}
   - {fileID: -8237362841850687353, guid: 7818ff8b69c3c4b4fa3ea33285f4f6a1, type: 3}
   - {fileID: -3002450467948520622, guid: 443ba10fbaab3f9468d64b9eece35812, type: 3}
-  shaderMaterial: {fileID: 2100000, guid: e5c2d921f27176f478322b074fc0e2b3, type: 2}
+  shaderMaterial: {fileID: -876546973899608171, guid: 8c198befe3bb0cd42a1c68e50a030345, type: 3}
 --- !u!198 &3543462066335417241
 ParticleSystem:
   m_ObjectHideFlags: 0
@@ -4798,6 +4800,7 @@ ParticleSystem:
     vectorLabel1_3: W
 --- !u!212 &7970660192555385718
 SpriteRenderer:
+  serializedVersion: 2
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -4816,10 +4819,12 @@ SpriteRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: 2100000, guid: f32c85d6030b38644bbf34d989be47cc, type: 2}
+  - {fileID: 2100000, guid: 1f5dd9d2d256f474186a55efe8626ee3, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -4837,11 +4842,13 @@ SpriteRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_Sprite: {fileID: 7482667652216324306, guid: 311925a002f4447b3a28927169b83ea6, type: 3}
-  m_Color: {r: 1, g: 0.7053646, b: 0, a: 1}
+  m_Color: {r: 1, g: 0, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
@@ -4849,7 +4856,6 @@ SpriteRenderer:
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
-  m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!61 &4424504013127910180
 BoxCollider2D:
@@ -4899,7 +4905,7 @@ BoxCollider2D:
   m_EdgeRadius: 0
 --- !u!199 &9190270830397883956
 ParticleSystemRenderer:
-  serializedVersion: 6
+  serializedVersion: 7
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
@@ -4918,6 +4924,8 @@ ParticleSystemRenderer:
   m_RayTracingAccelStructBuildFlagsOverride: 0
   m_RayTracingAccelStructBuildFlags: 1
   m_SmallMeshCulling: 1
+  m_ForceMeshLod: -1
+  m_MeshLodSelectionBias: 0
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
@@ -4939,9 +4947,11 @@ ParticleSystemRenderer:
   m_AutoUVMaxDistance: 0.5
   m_AutoUVMaxAngle: 89
   m_LightmapParameters: {fileID: 0}
+  m_GlobalIlluminationMeshLod: 0
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+  m_MaskInteraction: 0
   m_RenderMode: 0
   m_MeshDistribution: 0
   m_SortMode: 0
@@ -4973,4 +4983,3 @@ ParticleSystemRenderer:
   m_MeshWeighting1: 1
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
-  m_MaskInteraction: 0

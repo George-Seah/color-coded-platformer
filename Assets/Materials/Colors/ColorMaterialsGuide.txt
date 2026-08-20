@@ -1,0 +1,10 @@
+To setup the Color Materials in Unity:
+
+1. Right-click in the Project Window -> Create -> Material. Name it (e.g., "RedMaterial").
+2. Set the Shader for the material:
+   - For standard 2D Sprites, use: "Sprites/Default"
+   - For URP 2D (if you are using 2D Lighting), use: "Universal Render Pipeline/2D/Sprite-Lit-Default"
+3. In the Material Inspector, click the "Tint" or "Base Color" box and set it to the pure color (e.g., Red = RGB 255, 0, 0).
+4. Create materials for all 9 states: Red, Blue, Yellow, Orange, Green, Purple, Black, White.
+5. Leave the "Default" material empty, or create a material with a pure White tint (so the original sprite colors show through perfectly).
+6. Once created, select your "ColorDictionary" ScriptableObject in the Resources folder, add the 9 entries to the List, and drag these new Materials into their respective slots!

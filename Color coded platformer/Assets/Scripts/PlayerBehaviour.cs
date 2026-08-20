@@ -8,19 +8,21 @@ public class PlayerBehaviour : MonoBehaviour
     Rigidbody2D rb;
     
     [SerializeField] float moveSpeed = 5f;
-    [SerializeField] float initialJumpForce = 5f;
-    [SerializeField] float initialJumpTime = 0.3f;
-    [SerializeField] float jumpTime;
-    float jumpForce;
+    [SerializeField] float jumpForce = 12f;
     
     [SerializeField] bool isGrounded, holdingKey, landedOnWaddler;
     public bool jumpPressed { get; private set; }
-    bool jumpConsumed;
+    
+    private float coyoteTime = 0.15f;
+    private float coyoteTimeCounter;
+    private float jumpBufferTime = 0.1f;
+    private float jumpBufferCounter;
+
     public Key currentKey { get; set; }
     [SerializeField] GameObject canvasPrefab;
     
     public PlayerInputActions playerControls;
-    public readonly float gravityScale = 7f, fallingGravityScale = 9f;
+    public readonly float gravityScale = 2f, fallingGravityScale = 5f;
     public string color;
     public bool onLadder, lookingRight;
     
@@ -28,16 +30,18 @@ public class PlayerBehaviour : MonoBehaviour
     public InputAction move { get; private set; }
     InputAction jump, drop, interact, pause; 
     Collider2D[] playerColliders;
+    Collider2D mainCollider;
     
     readonly float waddlerBounceHeld = 1.25f, waddlerBounceUnheld = 0.8f;
-    static readonly string[] colorLayers = { "Red", "Blue", "Green" };
     public event System.Action InteractPressed;
+    
     void Awake()
     {
         playerControls = new PlayerInputActions();
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
         playerColliders = GetComponentsInChildren<Collider2D>();
+        mainCollider = GetComponent<Collider2D>();
         if (CanvasScript.Instance == null) Instantiate(canvasPrefab);
     }
 
@@ -52,7 +56,7 @@ public class PlayerBehaviour : MonoBehaviour
 
         move.Enable(); jump.Enable(); drop.Enable(); interact.Enable(); pause.Enable();
 
-        pause.performed += ctx => CanvasScript.Instance.PauseGame();
+        pause.performed += OnPause;
         jump.performed += OnJump;
         jump.canceled += OnJumpCanceled;
         drop.performed += OnDrop;
@@ -64,28 +68,33 @@ public class PlayerBehaviour : MonoBehaviour
         move.Disable(); jump.Disable(); drop.Disable(); interact.Disable(); pause.Disable();
         playerControls.Player.Disable();
         
-        pause.performed -= ctx => CanvasScript.Instance.PauseGame();
+        pause.performed -= OnPause;
         jump.performed -= OnJump;
         jump.canceled -= OnJumpCanceled;
         drop.performed -= OnDrop;
         interact.performed -= OnInteract;
     }
 
-    void OnJump(InputAction.CallbackContext ctx) => jumpPressed = true;
+    void OnPause(InputAction.CallbackContext ctx)
+    {
+        if (CanvasScript.Instance != null) CanvasScript.Instance.PauseGame();
+    }
+
+    void OnJump(InputAction.CallbackContext ctx) 
+    {
+        jumpPressed = true;
+        jumpBufferCounter = jumpBufferTime;
+    }
 
     void OnJumpCanceled(InputAction.CallbackContext ctx)
     {
         jumpPressed = false;
-        jumpConsumed = false;
-        jumpForce = 0;
-        jumpTime = 0;
         
-        // Only apply fall physics if actually in the air
-        if (!isGrounded)
+        if (rb.linearVelocityY > 0 && !onLadder)
         {
-            rb.gravityScale = fallingGravityScale;
-            if (rb.linearVelocityY > 0) rb.linearVelocityY = 0;
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, rb.linearVelocity.y * 0.5f);
         }
+        coyoteTimeCounter = 0;
     }
 
     void OnInteract(InputAction.CallbackContext ctx)
@@ -107,83 +116,57 @@ public class PlayerBehaviour : MonoBehaviour
         holdingKey = false;
     }
 
-    public void EnteredGround()
-    {
-        if (isGrounded) return;
-        isGrounded = true;
-        rb.gravityScale = gravityScale;
-    }
-
-    public void StayingOnGround()
-    {
-        if (isGrounded) return;
-        isGrounded = true;
-        rb.gravityScale = gravityScale;
-    }
-
-    public void ExitedGround() => isGrounded = false;
+    public void EnteredGround() { }
+    public void StayingOnGround() { }
+    public void ExitedGround() { }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision.gameObject.CompareTag("Moving Platform"))
-        {
-            isGrounded = true;
-        }
-        
         if (collision.gameObject.CompareTag("Key") && !holdingKey)
         {
-            var key = collision.gameObject.GetComponent<Key>();
-            if (key != null && !key.ReadPickedUp()) currentKey = key;
+            if (collision.gameObject.TryGetComponent<Key>(out var key))
+            {
+                if (!key.ReadPickedUp()) currentKey = key;
+            }
         }
     }
 
-    void OnCollisionStay2D(Collision2D collision)
-    {
-        if (collision.gameObject.CompareTag("Moving Platform") && !jumpPressed)
-            isGrounded = true;
-    }
+    void OnCollisionStay2D(Collision2D collision) { }
 
     void OnCollisionExit2D(Collision2D collision)
     {
-        if (collision.gameObject.GetComponent<Key>() == currentKey && !holdingKey)
+        if (!holdingKey && collision.gameObject.TryGetComponent<Key>(out var key))
         {
-            var key = collision.gameObject.GetComponent<Key>();
-            if (currentKey != null && !key.ReadPickedUp()) currentKey = null;
+            if (key == currentKey && !key.ReadPickedUp()) currentKey = null;
         }
-        if (collision.gameObject.CompareTag("Moving Platform")) isGrounded = false;
     }
 
-    public void ColorChanged(Color newColor)
+    public void ColorChanged(GameColor newColor)
     {
-        foreach (var layer in colorLayers)
+        string targetLayer = newColor == GameColor.Default ? "Default" : newColor.ToString();
+
+        int layerID = LayerMask.NameToLayer(targetLayer);
+        if (layerID != -1)
         {
-            Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer(layer), true);
-            Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("GroundCollisionCheck"), LayerMask.NameToLayer(layer), true);
+            gameObject.layer = layerID;
         }
 
-        string targetLayer = newColor == Color.red ? "Red" : newColor == Color.blue ? "Blue" : 
-                             newColor == Color.green ? "Green" : null;
-
-        if (targetLayer != null)
+        // SWAP TO DICTIONARY MATERIAL
+        if (ColorDictionary.Instance != null)
         {
-            Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer(targetLayer), false);
-            Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("GroundCollisionCheck"), LayerMask.NameToLayer(targetLayer), false);
-            color = targetLayer;
-        }
-        else if (newColor == Color.white)
-        {
-            foreach (var layer in colorLayers)
+            Material mat = ColorDictionary.Instance.GetMaterial(newColor);
+            if (mat != null) 
             {
-                Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer(layer), false);
-                Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("GroundCollisionCheck"), LayerMask.NameToLayer(layer), false);
+                GetComponent<SpriteRenderer>().material = mat;
             }
-            color = "White";
+            else 
+            {
+                GetComponent<SpriteRenderer>().color = ColorDictionary.Instance.GetColorTint(newColor);
+            }
         }
 
-        GetComponent<SpriteRenderer>().color = newColor;
-
-        if (currentKey != null && color != LayerMask.LayerToName(currentKey.gameObject.layer) 
-            && currentKey.ReadPickedUp() && currentKey.GetComponent<SpriteRenderer>().color != Color.white)
+        if (currentKey != null && gameObject.layer != currentKey.gameObject.layer 
+            && currentKey.ReadPickedUp())
         {
             currentKey.Drop();
             currentKey = null;
@@ -192,55 +175,97 @@ public class PlayerBehaviour : MonoBehaviour
 
     void FixedUpdate()
     {
-        // Movement
-        moveDirection = move.ReadValue<Vector2>();
-        if (!onLadder) rb.linearVelocityX = moveDirection.x * moveSpeed;
+        CheckGrounded();
         
-        // Animation & Facing
+        moveDirection = move.ReadValue<Vector2>();
+        
+        if (onLadder)
+        {
+            rb.bodyType = RigidbodyType2D.Kinematic;
+            rb.linearVelocity = new Vector2(moveDirection.x * moveSpeed, moveDirection.y * moveSpeed);
+            rb.gravityScale = 0;
+            
+            Physics2D.IgnoreLayerCollision(gameObject.layer, LayerMask.NameToLayer("SemiSolid"), true);
+        }
+        else
+        {
+            rb.bodyType = RigidbodyType2D.Dynamic;
+            rb.linearVelocity = new Vector2(moveDirection.x * moveSpeed, rb.linearVelocity.y);
+            Physics2D.IgnoreLayerCollision(gameObject.layer, LayerMask.NameToLayer("SemiSolid"), false);
+        }
+
+        if (isGrounded) coyoteTimeCounter = coyoteTime;
+        else coyoteTimeCounter -= Time.fixedDeltaTime;
+
+        if (!jumpPressed) jumpBufferCounter -= Time.fixedDeltaTime;
+
+        if (jumpBufferCounter > 0f && coyoteTimeCounter > 0f && !onLadder)
+        {
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce);
+            jumpBufferCounter = 0f;
+            coyoteTimeCounter = 0f;
+            landedOnWaddler = false;
+        }
+
+        if (jumpBufferCounter > 0f && landedOnWaddler && !onLadder)
+        {
+            float multiplier = jumpPressed ? waddlerBounceHeld : waddlerBounceUnheld;
+            rb.linearVelocity = new Vector2(rb.linearVelocity.x, jumpForce * multiplier);
+            jumpBufferCounter = 0f;
+            landedOnWaddler = false;
+        }
+
+        if (!onLadder)
+        {
+            if (rb.linearVelocityY < 0) rb.gravityScale = fallingGravityScale;
+            else rb.gravityScale = gravityScale;
+        }
+
         anim.SetFloat("XMovement", moveDirection.x);
         if (moveDirection.x != 0) lookingRight = moveDirection.x > 0;
         transform.rotation = Quaternion.Euler(0, lookingRight ? 0 : 180, 0);
 
-        // Key management
-        if (currentKey != null && currentKey.ReadPickedUp() && currentKey.transform.parent.CompareTag("Waddler"))
+        if (currentKey != null && currentKey.ReadPickedUp() && currentKey.transform.parent != null && currentKey.transform.parent.CompareTag("Waddler"))
             currentKey = null;
 
-        // Grounded state
         anim.SetBool("grounded", isGrounded);
         if (isGrounded) landedOnWaddler = false;
+    }
 
-        // Jump initiation
-        if (jumpPressed && isGrounded && !jumpConsumed)
+    void CheckGrounded()
+    {
+        if (rb.linearVelocityY > 0.01f || onLadder) 
         {
-            jumpForce = initialJumpForce;
-            jumpTime = initialJumpTime;
-            jumpConsumed = true;
+            isGrounded = false;
+            return;
         }
 
-        // Waddler bounce initiation
-        if (jumpPressed && landedOnWaddler && !jumpConsumed)
-        {
-            float multiplier = jump.IsPressed() ? waddlerBounceHeld : waddlerBounceUnheld;
-            jumpForce = initialJumpForce * multiplier;
-            jumpTime = initialJumpTime;
-            landedOnWaddler = false;
-            jumpConsumed = true;
-        }
+        Vector2 boxCenter = (Vector2)mainCollider.bounds.center + Vector2.down * (mainCollider.bounds.extents.y + 0.05f);
+        Vector2 boxSize = new Vector2(mainCollider.bounds.size.x * 0.9f, 0.1f);
 
-        // Sustained jump (decaying force)
-        if (jumpPressed && jumpTime > 0)
+        int layerMask = Physics2D.GetLayerCollisionMask(gameObject.layer);
+        Collider2D[] hits = Physics2D.OverlapBoxAll(boxCenter, boxSize, 0f, layerMask);
+        
+        bool foundGround = false;
+        foreach (var hit in hits)
         {
-            jumpTime -= Time.fixedDeltaTime;
-            jumpForce *= 0.9f;
-            rb.linearVelocityY += jumpForce;
+            if (hit != mainCollider && !hit.isTrigger) 
+            {
+                foundGround = true;
+                
+                if (hit.CompareTag("Waddler"))
+                {
+                    LandedOnWaddler();
+                    if (hit.GetComponentInChildren<Key>() != null)
+                    {
+                        hit.GetComponentInChildren<Key>().Drop();
+                    }
+                    Destroy(hit.gameObject);
+                }
+                break;
+            }
         }
-        else if (!isGrounded && (jumpTime <= 0 || rb.linearVelocityY <= 0))
-        {
-            rb.gravityScale = fallingGravityScale;
-        }
-
-        // Ladder override
-        if (onLadder) rb.gravityScale = 0;
+        isGrounded = foundGround;
     }
 
     public void SetIgnoreMovementCollisions(bool ignore)
@@ -264,7 +289,7 @@ public class PlayerBehaviour : MonoBehaviour
             Physics2D.IgnoreCollision(pc, col, ignore);
     }
 
-    public bool readJumping() => jumpPressed && jumpTime > 0;
+    public bool readJumping() => jumpPressed && jumpBufferCounter > 0;
     public bool readGrounded() => isGrounded;
     
     public void SetKey(Key key)
@@ -276,9 +301,9 @@ public class PlayerBehaviour : MonoBehaviour
     public void LandedOnWaddler()
     {
         landedOnWaddler = true;
-        jumpTime = initialJumpTime;
+        jumpBufferCounter = jumpBufferTime;
     }
 
     public void RespawnPositionAtPosition(Vector2 respawnPosition) => 
-        transform.position = GameObject.Find("Game Manager").GetComponent<GameManager>().playerSpawnPoint;
+        transform.position = respawnPosition;
 }

@@ -158,7 +158,7 @@ public class CanvasScript : MonoBehaviour
 
     void EnsureEventSystemExists()
     {
-        eventSystem = FindObjectOfType<EventSystem>();
+        eventSystem = Object.FindAnyObjectByType<EventSystem>();
         if (eventSystem != null) return;
 
         GameObject es = new GameObject("EventSystem");

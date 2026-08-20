@@ -63,7 +63,7 @@ public class PositionBasedColorChanger : MonoBehaviour
     void Awake()
     {
         if (!playerBehaviour)
-            playerBehaviour = FindFirstObjectByType<PlayerBehaviour>();
+            playerBehaviour = Object.FindAnyObjectByType<PlayerBehaviour>();
 
         if (Instance == null)
             Instance = this;

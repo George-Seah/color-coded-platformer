@@ -1,0 +1,44 @@
+HOW TO CREATE TV STATIC SHADERS IN UNITY URP SHADER GRAPH
+
+--- TV STATIC TRANSLUCENT (GHOSTLY STATIC) ---
+1. Create a "Sprite Unlit Shader Graph" named `TranslucentStaticShader`.
+2. In the Graph Inspector, change "Surface Type" to "Transparent".
+3. Inside the Graph:
+   - Create a `Time` node.
+   - Multiply `Time` by a `Float` property called `StaticSpeed` (e.g. 50.0).
+   - Create a `Screen Position` node.
+   - Pass the Screen Position and the Speed/Time result into a `Simple Noise` node (Scale = ~500).
+   - *This creates the raw TV static effect.*
+4. Handling the Sprite Shape:
+   - Create a `Texture2D` property named `_MainTex` and pass it into a `Sample Texture 2D` node.
+   - We want the static to only appear where the sprite exists.
+   - Multiply the `Simple Noise` output by the `Alpha (A)` output of the `Sample Texture 2D`.
+5. Handling the Color:
+   - Create a `Color` property (Set it to HDR for a ghostly glow).
+   - Multiply your Color property by the `Simple Noise`.
+   - Plug this into the `Base Color` slot of the Fragment Master Node.
+6. Handling Translucency:
+   - To make it translucent, drag the `Alpha (A)` output of the `Sample Texture 2D` into a `Multiply` node.
+   - Multiply it by a Float property called `Opacity` (e.g. 0.5 for 50% see-through).
+   - Plug the result into the `Alpha` slot of the Fragment Master Node.
+
+--- BLACK TV STATIC (THE VOID EFFECT) ---
+1. Create another "Sprite Unlit Shader Graph" named `BlackStaticShader`.
+2. Leave the "Surface Type" as "Opaque" or "Transparent" depending on if you want it solid.
+3. Generate the exact same `Simple Noise` setup using `Time` and `Screen Position`.
+4. Handling the Black Void:
+   - We want the base of the sprite to be pitch black, with tiny white or colored flecks of static.
+   - Create a `Step` node. Plug your `Simple Noise` into the "In" port.
+   - Set the "Edge" of the `Step` node to a high number (like 0.8). 
+   - *This turns the fuzzy noise into sharp, harsh white specks on a pure black background.*
+5. Masking it to the Sprite:
+   - Grab your `_MainTex` Alpha output.
+   - Multiply the `Step` output by a `Color` property (e.g. White).
+   - Plug the final color into the `Base Color` slot.
+   - Plug the `_MainTex` Alpha straight into the `Alpha` slot of the Master Node to preserve the sprite's silhouette.
+
+--- HOW TO ASSIGN THEM ---
+1. Right click the saved Shader Graphs -> Create -> Material.
+2. Name them `TranslucentStaticMaterial` and `BlackStaticMaterial`.
+3. Open your `ColorDictionary` asset.
+4. If you want the 'Black' GameColor to use the TV Void effect, assign `BlackStaticMaterial` to the Black slot!

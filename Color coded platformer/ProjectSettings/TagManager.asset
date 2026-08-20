@@ -36,13 +36,13 @@ TagManager:
   - Ladder
   - Player
   - OneWayPlatform
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
-  - 
+  - Default
+  - White
+  - Black
+  - Yellow
+  - Orange
+  - Purple
+  - SemiSolid
   - 
   - 
   - 
@@ -59,3 +59,4 @@ TagManager:
     locked: 0
   m_RenderingLayers:
   - Default
+  m_MigratedRenderPipelines: []
