@@ -153,12 +153,15 @@ public class CanvasScript : MonoBehaviour
 
     public void ResetAllTrackedStars()
     {
-        ESave.Instance.ResetAllTrackedStars();
+        if (GameSaveSystem.Instance != null)
+            GameSaveSystem.Instance.ResetAllTrackedStars();
+        else if (ESave.Instance != null)
+            ESave.Instance.ResetAllTrackedStars();
     }
 
     void EnsureEventSystemExists()
     {
-        eventSystem = FindObjectOfType<EventSystem>();
+        eventSystem = Object.FindAnyObjectByType<EventSystem>();
         if (eventSystem != null) return;
 
         GameObject es = new GameObject("EventSystem");

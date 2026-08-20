@@ -1,57 +1,39 @@
 using UnityEngine;
 
-public class ColorPicker : MonoBehaviour
+/// <summary>
+/// Legacy wrapper around BaseColorPicker so existing prefabs keep working.
+/// Prefer attaching BaseColorPicker on new objects.
+/// </summary>
+public class ColorPicker : BaseColorPicker
 {
-    protected SpriteRenderer sr;
-
     [SerializeField] protected GameColor selectedColor = GameColor.Default;
+    [SerializeField] protected bool changeLayerMask = true;
+
     public GameColor SelectedColor
     {
-        get => selectedColor;
+        get => colorState;
         set
         {
+            colorState = value;
             selectedColor = value;
-            ChangeObjectColor(selectedColor);
+            ApplyColor();
         }
     }
 
-    [SerializeField] protected bool changeLayerMask = true;
+    protected override void Awake()
+    {
+        colorState = selectedColor;
+        base.Awake();
+    }
+
+    protected override void OnValidate()
+    {
+        colorState = selectedColor;
+        base.OnValidate();
+    }
 
     public virtual void ChangeObjectColor(GameColor color)
     {
-        if (sr == null)
-            sr = GetComponent<SpriteRenderer>();
-
-        switch (color)
-        {
-            case GameColor.Red:
-                if (sr) this.sr.color = Color.red;
-                if(changeLayerMask) gameObject.layer = LayerMask.NameToLayer("Red");
-                break;
-            case GameColor.Green:
-                if (sr) this.sr.color = Color.green;
-                if(changeLayerMask) gameObject.layer = LayerMask.NameToLayer("Green");
-                break;
-            case GameColor.Blue:
-                if (sr) this.sr.color = Color.blue;
-                if(changeLayerMask) gameObject.layer = LayerMask.NameToLayer("Blue");
-                break;
-            default:
-                if (sr) this.sr.color = Color.white;
-                if(changeLayerMask) gameObject.layer = LayerMask.NameToLayer("Default");
-                break;
-        }
-    }
-
-    // Called in editor when inspector changes are made
-    void OnValidate()
-    {
-        ChangeObjectColor(this.selectedColor);
-    }
-
-    protected virtual void Awake()
-    {
-        // Optional runtime guarantee
-        ChangeObjectColor(this.selectedColor);
+        SelectedColor = color;
     }
 }
