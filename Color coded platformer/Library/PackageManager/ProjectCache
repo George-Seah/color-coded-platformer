@@ -5,16 +5,16 @@ m_ProjectFiles:
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 639209153346701413
-    m_Hash: 827896005
+      ticks: 639221476976808216
+    m_Hash: 2575250988
   m_LockFileStatus:
     m_FilePath: C:/Github/color-coded-platformer/Color coded platformer/Packages/packages-lock.json
     m_PathExists: 1
     m_ContentTrackingEnabled: 1
     m_ModificationDate:
       serializedVersion: 2
-      ticks: 639209153536852188
-    m_Hash: 4080913517
+      ticks: 639221476976818242
+    m_Hash: 3390762554
 m_EmbeddedPackageManifests:
   m_ManifestsStatus: {}
 m_LocalPackages:
@@ -1102,9 +1102,11 @@ m_ResolvedPackages:
     - 2.0.25
     - 2.0.26
     - 2.0.27
+    - 2.0.28
     compatible:
     - 2.0.27
-    recommended: 2.0.27
+    - 2.0.28
+    recommended: 2.0.28
     deprecated: []
   dependencies:
   - name: com.unity.test-framework
@@ -2050,9 +2052,11 @@ m_ResolvedPackages:
     - 1.8.10
     - 1.8.11
     - 1.8.12
+    - 1.8.13
     compatible:
     - 1.8.12
-    recommended: 1.8.12
+    - 1.8.13
+    recommended: 1.8.13
     deprecated: []
   dependencies:
   - name: com.unity.modules.audio
@@ -7025,6 +7029,7 @@ m_ResolvedPackages:
     - 13.0.3
     - 13.0.4
     - 13.0.5
+    - 13.0.6
     - 14.0.0
     - 14.0.1
     - 14.0.2
@@ -7974,6 +7979,7 @@ m_ResolvedPackages:
     - 6.0.0
     - 6.0.1
     - 6.0.2
+    - 6.0.3
     - 7.0.0-exp.1
     - 7.0.0
     - 7.0.1
@@ -8285,6 +8291,7 @@ m_ResolvedPackages:
     - 1.0.1
     - 1.0.2
     - 1.0.3
+    - 1.0.4
     - 2.0.0
     - 2.0.1
     - 2.0.2
@@ -9540,6 +9547,7 @@ m_ResolvedPackages:
     - 12.0.1
     - 12.0.2
     - 12.0.3
+    - 12.0.4
     - 13.0.0
     - 13.0.1
     - 13.0.2
