@@ -6,11 +6,13 @@ public class PlayerBehaviour : MonoBehaviour
 {
     Animator anim;
     Rigidbody2D rb;
-    
+    AudioSource audioSource;
+
     [SerializeField] float moveSpeed = 5f;
     [SerializeField] float initialJumpForce = 5f;
     [SerializeField] float initialJumpTime = 0.3f;
     [SerializeField] float jumpTime;
+    [SerializeField] AudioClip jumpSound;
     float jumpForce;
     
     [SerializeField] bool isGrounded, holdingKey, landedOnWaddler;
@@ -37,6 +39,7 @@ public class PlayerBehaviour : MonoBehaviour
         playerControls = new PlayerInputActions();
         anim = GetComponent<Animator>();
         rb = GetComponent<Rigidbody2D>();
+        audioSource = GetComponent<AudioSource>();
         playerColliders = GetComponentsInChildren<Collider2D>();
         if (CanvasScript.Instance == null) Instantiate(canvasPrefab);
     }
@@ -215,6 +218,8 @@ public class PlayerBehaviour : MonoBehaviour
             jumpForce = initialJumpForce;
             jumpTime = initialJumpTime;
             jumpConsumed = true;
+            audioSource.pitch = Random.Range(0.9f, 1.1f);
+            audioSource.PlayOneShot(jumpSound);
         }
 
         // Waddler bounce initiation
