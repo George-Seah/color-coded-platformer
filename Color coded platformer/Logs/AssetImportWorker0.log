@@ -1,11 +1,11 @@
 [Licensing::Module] Trying to connect to existing licensing client channel...
 Built from '6000.4/staging' branch; Version is '6000.4.8f1 (f8b72d3d7343) revision 16299821'; Using compiler version '194234433'; Build Type 'Release'
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Nathan & Co" at "2026-08-23T17:10:36.6066135Z"
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Nathan & Co" at "2026-08-24T07:28:37.5920587Z"
 OS: 'Windows 11  (10.0.22631) Core' Language: 'en' Physical Memory: 16233 MB
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
 System  architecture: x64
 Process architecture: x64
-Date: 2026-08-23T17:10:36Z
+Date: 2026-08-24T07:28:37Z
 
 COMMAND LINE ARGUMENTS:
 C:\Unity\6000.4.8f1\Editor\Unity.exe
@@ -19,7 +19,7 @@ C:/Github/color-coded-platformer/Color coded platformer
 -logFile
 Logs/AssetImportWorker0.log
 -srvPort
-55088
+51817
 -licensingIpc
 LicenseClient-Nathan & Co
 -force-d3d12
@@ -68,12 +68,12 @@ C:/Github/color-coded-platformer/Color coded platformer
     "memorysetup-job-temp-allocator-block-size=2097152"
     "memorysetup-job-temp-allocator-block-size-background=1048576"
     "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
-Player connection [13520]  Target information:
+Player connection [8616]  Target information:
 
-Player connection [13520]  * "[IP] 192.168.0.233 [Port] 0 [Flags] 2 [Guid] 281895149 [EditorId] 281895149 [Version] 1048832 [Id] WindowsEditor(7,SuperFamicom) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [8616]  * "[IP] 192.168.0.233 [Port] 0 [Flags] 2 [Guid] 3559971660 [EditorId] 3559971660 [Version] 1048832 [Id] WindowsEditor(7,SuperFamicom) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [13520] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [13520] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [8616] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [8616] Host joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 7
 Input System module state changed to: Initialized.
 [Physics::Module] Initialized fallback backend.
@@ -89,7 +89,7 @@ Active build profile path: `Assets/Settings/Build Profiles/Web - Desktop - Devel
 Got setting from build profile YAML, name `Color Space`, value `1`
 Got setting from build profile YAML, name `m_BuildTarget`, value `20`
 Got setting from build profile YAML, name `m_Subtarget`, value `0`
-Refreshing native plugins compatible for Editor in 25.23 ms, found 11 plugins.
+Refreshing native plugins compatible for Editor in 17.34 ms, found 11 plugins.
 Initialize engine version: 6000.4.8f1 (f8b72d3d7343)
 [Subsystems] Discovering subsystems at path C:/Unity/6000.4.8f1/Editor/Data/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path C:/Github/color-coded-platformer/Color coded platformer/Assets
@@ -339,13 +339,13 @@ Initialize mono
 Mono path[0] = 'C:/Unity/6000.4.8f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Unity/6000.4.8f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Unity/6000.4.8f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56892
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56664
 CodeReloadManager initialized
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Unity/6000.4.8f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Unity/6000.4.8f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002784 seconds.
+Registered in 0.002143 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 Package Manager log level set to [2]
@@ -420,23 +420,23 @@ Got setting from build profile YAML, name `Color Space`, value `1`
 Got setting from build profile YAML, name `Color Space`, value `1`
 ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.479 seconds
-Domain Reload Profiling: 1019ms
-	BeginReloadAssembly (126ms)
-	RebuildCommonClasses (46ms)
-	RebuildNativeTypeToScriptingClass (22ms)
-	initialDomainReloadingComplete (76ms)
-	LoadAllAssembliesAndSetupDomain (269ms)
-		LoadAssemblies (122ms)
-		AnalyzeDomain (259ms)
-			TypeCache.Refresh (258ms)
-				TypeCache.ScanAssembly (244ms)
-	FinalizeReload (480ms)
+- Finished resetting the current domain, in  0.388 seconds
+Domain Reload Profiling: 813ms
+	BeginReloadAssembly (115ms)
+	RebuildCommonClasses (37ms)
+	RebuildNativeTypeToScriptingClass (14ms)
+	initialDomainReloadingComplete (59ms)
+	LoadAllAssembliesAndSetupDomain (199ms)
+		LoadAssemblies (112ms)
+		AnalyzeDomain (191ms)
+			TypeCache.Refresh (191ms)
+				TypeCache.ScanAssembly (178ms)
+	FinalizeReload (389ms)
 		SetupLoadedEditorAssemblies (0ms)
-			InitializePlatformSupportModulesInManaged (65ms)
-			BeforeProcessingInitializeOnLoad (102ms)
-			ProcessInitializeOnLoadAttributes (128ms)
-			ProcessInitializeOnLoadMethodAttributes (93ms)
+			InitializePlatformSupportModulesInManaged (47ms)
+			BeforeProcessingInitializeOnLoad (84ms)
+			ProcessInitializeOnLoadAttributes (107ms)
+			ProcessInitializeOnLoadMethodAttributes (77ms)
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 ========================================================================
 Worker process is ready to serve import requests
@@ -451,18 +451,18 @@ Got setting from build profile YAML, name `m_Development`, value `1`
 	ResponseStatus: Unsupported protocol version '1.18.1'.
 [Licensing::Module] Error: Failed to handshake to channel: "LicenseClient-Nathan & Co"
 [Licensing::IpcConnector] LicenseClient-Nathan & Co channel disconnected successfully.
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Nathan & Co-6000.4.8" at "2026-08-23T17:10:39.0805419Z"
-[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 27020, path: "C:/Unity/6000.4.8f1/Editor/Data/Resources/Licensing/Client/Unity.Licensing.Client.exe")
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Nathan & Co-6000.4.8" at "2026-08-24T07:28:39.5047746Z"
+[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 15548, path: "C:/Unity/6000.4.8f1/Editor/Data/Resources/Licensing/Client/Unity.Licensing.Client.exe")
 [Licensing::Module] LicensingClient has failed validation; ignoring
 [Licensing::Client] Handshaking with LicensingClient:
   Version:                 1.18.1+9fbee8e
-  Session Id:              b5c5ce21d8f844dc8e9bc72782c1331d
-  Correlation Id:          9fdee4f18ca52867bf9cac10920fafb6
-  External correlation Id: 1817284576637110025
+  Session Id:              8367458bf9a74b71922ceda45fd57772
+  Correlation Id:          8350b59bc5b8bdbe3ea9f6f1d468e155
+  External correlation Id: 2877683717805537868
   Machine Id:              qtyx5DMTmV6sfEVnrxz9aoLU/bw=
 [Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-Nathan & Co-6000.4.8" (connect: 0.00s, validation: 0.00s, handshake: 0.01s)
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Nathan & Co-6000.4.8-notifications" at "2026-08-23T17:10:39.0945386Z"
-[Licensing::Module] Licensing Background thread has ended after 2.49s
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Nathan & Co-6000.4.8-notifications" at "2026-08-24T07:28:39.5147894Z"
+[Licensing::Module] Licensing Background thread has ended after 1.92s
 [Licensing::Module] Licensing is initialized (took 0.03s).
 [Licensing::Client] Successfully resolved entitlement details
 [Licensing::Module] License group:
@@ -472,67 +472,6 @@ Got setting from build profile YAML, name `m_Development`, value `1`
   Expiration: Unlimited
 Got setting from build profile YAML, name `Color Space`, value `1`
 Got setting from build profile YAML, name `Color Space`, value `1`
-Could not open file C:/Github/color-coded-platformer/Color coded platformer/Library/BuildProfiles/PlatformProfile.4e3c793746204150860bf175a9a41a05.asset for read
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditorInternal.InternalEditorUtility:LoadSerializedFileAndForget (string)
-UnityEditor.Build.Profile.BuildProfileContext:OnEnable ()
-UnityEditorInternal.InternalEditorUtility:LoadSerializedFileAndForget (string)
-UnityEditor.Build.Profile.BuildProfileContext:CreateOrLoad ()
-UnityEditor.Build.Profile.BuildProfileContext:get_instance ()
-UnityEditor.Build.Profile.BuildProfile:OnEnable ()
-UnityEditor.EditorUserBuildSettings:GetActiveBuildProfile ()
-UnityEditor.EditorUserBuildSettings:get_activeBuildProfile ()
-UnityEditor.Build.BuildDefines:GetBuildProfileScriptDefines ()
-
-[C:\build\output\unity\unity\Runtime\File\OpenFileCache.cpp line 61]
-
-Assertion failed on expression: 'res'
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditorInternal.InternalEditorUtility:LoadSerializedFileAndForget (string)
-UnityEditor.Build.Profile.BuildProfileContext:OnEnable ()
-UnityEditorInternal.InternalEditorUtility:LoadSerializedFileAndForget (string)
-UnityEditor.Build.Profile.BuildProfileContext:CreateOrLoad ()
-UnityEditor.Build.Profile.BuildProfileContext:get_instance ()
-UnityEditor.Build.Profile.BuildProfile:OnEnable ()
-UnityEditor.EditorUserBuildSettings:GetActiveBuildProfile ()
-UnityEditor.EditorUserBuildSettings:get_activeBuildProfile ()
-UnityEditor.Build.BuildDefines:GetBuildProfileScriptDefines ()
-
-[C:\build\output\unity\unity\Runtime\Serialize\SerializationCaching\FileCacherRead.cpp line 170]
-
-Unknown error occurred while loading 'Library/BuildProfiles/PlatformProfile.4e3c793746204150860bf175a9a41a05.asset'.
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEditorInternal.InternalEditorUtility:LoadSerializedFileAndForget (string)
-UnityEditor.Build.Profile.BuildProfileContext:OnEnable ()
-UnityEditorInternal.InternalEditorUtility:LoadSerializedFileAndForget (string)
-UnityEditor.Build.Profile.BuildProfileContext:CreateOrLoad ()
-UnityEditor.Build.Profile.BuildProfileContext:get_instance ()
-UnityEditor.Build.Profile.BuildProfile:OnEnable ()
-UnityEditor.EditorUserBuildSettings:GetActiveBuildProfile ()
-UnityEditor.EditorUserBuildSettings:get_activeBuildProfile ()
-UnityEditor.Build.BuildDefines:GetBuildProfileScriptDefines ()
-
-[ line 0]
-
-Failed to load build profile from Library/BuildProfiles/PlatformProfile.4e3c793746204150860bf175a9a41a05.asset.
-UnityEngine.Debug:ExtractStackTraceNoAlloc (byte*,int,string)
-UnityEngine.StackTraceUtility:ExtractStackTrace ()
-UnityEngine.DebugLogHandler:Internal_Log (UnityEngine.LogType,UnityEngine.LogOption,string,UnityEngine.Object)
-UnityEngine.DebugLogHandler:LogFormat (UnityEngine.LogType,UnityEngine.Object,string,object[])
-UnityEngine.Logger:Log (UnityEngine.LogType,object)
-UnityEngine.Debug:LogWarning (object)
-UnityEditor.Build.Profile.BuildProfileContext:OnEnable ()
-UnityEditorInternal.InternalEditorUtility:LoadSerializedFileAndForget (string)
-UnityEditor.Build.Profile.BuildProfileContext:CreateOrLoad ()
-UnityEditor.Build.Profile.BuildProfileContext:get_instance ()
-UnityEditor.Build.Profile.BuildProfile:OnEnable ()
-UnityEditor.EditorUserBuildSettings:GetActiveBuildProfile ()
-UnityEditor.EditorUserBuildSettings:get_activeBuildProfile ()
-UnityEditor.Build.BuildDefines:GetBuildProfileScriptDefines ()
-
 Assembly Assembly-CSharp-Editor-firstpass.dll at Library/ScriptAssemblies/Assembly-CSharp-Editor-firstpass.dll not valid. Loading of assembly skipped.
 Assembly Assembly-CSharp-firstpass.dll at Library/ScriptAssemblies/Assembly-CSharp-firstpass.dll not valid. Loading of assembly skipped.
 Assembly Autodesk.Fbx.BuildTests.dll at Library/ScriptAssemblies/Autodesk.Fbx.BuildTests.dll not valid. Loading of assembly skipped.
@@ -580,7 +519,7 @@ Assembly UnityEngine.UI.Tests.dll at Library/ScriptAssemblies/UnityEngine.UI.Tes
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
 'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Refreshing native plugins compatible for Editor in 4.96 ms, found 11 plugins.
+Refreshing native plugins compatible for Editor in 4.90 ms, found 11 plugins.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
@@ -593,446 +532,277 @@ Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInter
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] Unable to send message (not connected to server process).
 [Package Manager] Cannot connect to Unity Package Manager local server
-Refreshing native plugins compatible for Editor in 5.22 ms, found 11 plugins.
+Refreshing native plugins compatible for Editor in 5.02 ms, found 11 plugins.
 ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  3.763 seconds
-Domain Reload Profiling: 4846ms
-	BeginReloadAssembly (263ms)
-		DisableScriptedObjects (16ms)
-		CreateAndSetChildDomain (36ms)
-	RebuildCommonClasses (37ms)
+- Finished resetting the current domain, in  3.569 seconds
+Domain Reload Profiling: 4570ms
+	BeginReloadAssembly (226ms)
+		DisableScriptedObjects (15ms)
+		CreateAndSetChildDomain (25ms)
+	RebuildCommonClasses (36ms)
 	RebuildNativeTypeToScriptingClass (14ms)
-	initialDomainReloadingComplete (74ms)
-	LoadAllAssembliesAndSetupDomain (694ms)
-		LoadAssemblies (422ms)
-		AnalyzeDomain (362ms)
-			TypeCache.Refresh (240ms)
-				TypeCache.ScanAssembly (218ms)
-			BuildScriptInfoCaches (106ms)
-			ResolveRequiredComponents (14ms)
-	FinalizeReload (3763ms)
+	initialDomainReloadingComplete (71ms)
+	LoadAllAssembliesAndSetupDomain (654ms)
+		LoadAssemblies (381ms)
+		AnalyzeDomain (354ms)
+			TypeCache.Refresh (227ms)
+				TypeCache.ScanAssembly (208ms)
+			BuildScriptInfoCaches (110ms)
+			ResolveRequiredComponents (15ms)
+	FinalizeReload (3570ms)
 		SetupLoadedEditorAssemblies (0ms)
-			InitializePlatformSupportModulesInManaged (3ms)
-			BeforeProcessingInitializeOnLoad (201ms)
-			ProcessInitializeOnLoadAttributes (3069ms)
-			ProcessInitializeOnLoadMethodAttributes (96ms)
+			BeforeProcessingInitializeOnLoad (171ms)
+			ProcessInitializeOnLoadAttributes (2927ms)
+			ProcessInitializeOnLoadMethodAttributes (83ms)
 			AfterProcessingInitializeOnLoad (6ms)
-		AwakeInstancesAfterBackupRestoration (159ms)
-Refreshing native plugins compatible for Editor in 5.90 ms, found 11 plugins.
+		AwakeInstancesAfterBackupRestoration (170ms)
+Refreshing native plugins compatible for Editor in 5.10 ms, found 11 plugins.
 Unloading 29 Unused Serialized files (Serialized files now loaded: 0)
 Unloading 8307 unused Assets / (10.4 MB). Loaded Objects now: 9171.
-Memory consumption went from 184.7 MB to 174.3 MB.
-Total: 13.400300 ms (FindLiveObjects: 1.458100 ms CreateObjectMapping: 1.532300 ms MarkObjects: 5.371800 ms  DeleteObjects: 5.035900 ms)
+Memory consumption went from 190.2 MB to 179.8 MB.
+Total: 12.293600 ms (FindLiveObjects: 1.383900 ms CreateObjectMapping: 1.366000 ms MarkObjects: 4.919300 ms  DeleteObjects: 4.623000 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 352267.074900 seconds.
-  path: Assets/Game Sound Solutions - 8 bits Elements/ramdomize/randomize_4.wav
-  importAddress: Guid(894f272ebb11242af94879907071b1b6) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Game Sound Solutions - 8 bits Elements/ramdomize/randomize_4.wav using Guid(894f272ebb11242af94879907071b1b6) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '0c6f9f73603ee544039ad96e6a5e2860') in 0.0876698 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=cd9ffcb945ea4cc7146672c8cbfc5892 DependenciesID=e1d7d7993fcfaeb8a4ea392c91777a0c StaticDependenciesID=2bff207d2784c0e312d91e6b1254d506 
+  Time since last request: 403748.151607 seconds.
+  path: Assets/Volume profiles/My volume profile.asset
+  importAddress: Guid(c69a409f4dfdcb94c970b1cf43397ba4) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Volume profiles/My volume profile.asset using Guid(c69a409f4dfdcb94c970b1cf43397ba4) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'a813c46730899915eb2bc766e388f7d4') in 0.0734784 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=2e5c277655f4392bdb13716ec6ccbcc8 DependenciesID=c76f8d4cc606863c5313e3cc4f39d29e StaticDependenciesID=4b42d7192ca2636826fb803930cea834 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 10.462318 seconds.
+  path: Assets/Volume profiles/My volume profile.asset
+  importAddress: Guid(c69a409f4dfdcb94c970b1cf43397ba4) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Volume profiles/My volume profile.asset using Guid(c69a409f4dfdcb94c970b1cf43397ba4) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'f7282a4e262653904ac24e28b189a296') in 0.0127938 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=0b0b6dfbfe0c96fdc859058d8d3369eb DependenciesID=4bf797db9ef10f4765543ef129aee585 StaticDependenciesID=df5836b294a6d5a359dbe6da03630dec 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+
+========================================================================
+Received Import Request.
+  Time since last request: 61.673290 seconds.
+  path: Assets/Settings/Ultra_PipelineAsset.asset
+  importAddress: Guid(0d4f79168f3739b49893a73746dd3795) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Settings/Ultra_PipelineAsset.asset using Guid(0d4f79168f3739b49893a73746dd3795) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: 'fa2a8a9ca541446f985c2786d5009fa7') in 0.0157935 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=6fbad217607d9e49525c32a755cde431 DependenciesID=fbc4ee1dd699e0a17633a547a2e97477 StaticDependenciesID=fed4f6634630d6e0ab26cc6b18ae16aa 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 68.803590 seconds.
+  path: Assets/Settings/Ultra_PipelineAsset.asset
+  importAddress: Guid(0d4f79168f3739b49893a73746dd3795) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Settings/Ultra_PipelineAsset.asset using Guid(0d4f79168f3739b49893a73746dd3795) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '9fcd4c705c9510a5fb8143c554b160de') in 0.0007126 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=6fbad217607d9e49525c32a755cde431 DependenciesID=59d205296ddda9bc118147d636cb18a7 StaticDependenciesID=5ff08a6d799f981190017ecf1c3b61f8 
+Number of updated asset objects reloaded before import = 1Number of asset objects unloaded after import = 0
+
+========================================================================
+Received Import Request.
+  Time since last request: 0.926363 seconds.
+  path: Assets/Settings/Ultra_PipelineAsset.asset
+  importAddress: Guid(0d4f79168f3739b49893a73746dd3795) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Settings/Ultra_PipelineAsset.asset using Guid(0d4f79168f3739b49893a73746dd3795) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '1b02089e679275f6546da1d3470865a1') in 0.0640774 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=06ce393f74bea68ccf1975743e4e37ce DependenciesID=e1bd7d6c8548b37b8af942b5c91490b6 StaticDependenciesID=6f3946553bd75cd86f31ab96859cb3d9 
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000026 seconds.
-  path: Assets/Game Sound Solutions - 8 bits Elements/laser shot/laser_shot_5.wav
-  importAddress: Guid(ca78a31a908b1425ba994e3b57fc357f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Game Sound Solutions - 8 bits Elements/laser shot/laser_shot_5.wav using Guid(ca78a31a908b1425ba994e3b57fc357f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '4fb8c2304c73e88bbeefb92a0ef84ce2') in 0.0103585 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c43d7ce307b6fe0eea9aa62a739695fb DependenciesID=8880558b72ed1c981ce3e1c0319c36ff StaticDependenciesID=7f1175122f13337ff0d224f26eafee79 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+  Time since last request: 45.236058 seconds.
+  path: Assets/Prefabs
+  importAddress: Guid(492a3f7efca1c5744820973d7548f67d) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs using Guid(492a3f7efca1c5744820973d7548f67d) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '7f19bafc749797b312cda94daaafdae7') in 0.0006344 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=8eee4c0cf4f0bce1e0735d1dc52f8999 DependenciesID=3d9d20c80769c8a94cba3471e7e0a618 StaticDependenciesID=e95e4676e4f361f36d35087c9230c0bf 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/Game Sound Solutions - 8 bits Elements/powerup/powerup_13.wav
-  importAddress: Guid(62f3641b42e3f4dc9b50143f71c892b3) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Game Sound Solutions - 8 bits Elements/powerup/powerup_13.wav using Guid(62f3641b42e3f4dc9b50143f71c892b3) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'cbc12eb93c87028d11b36a2270f7b4e4') in 0.0102462 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ce0c874eabe2a9e97ac3a45a19cc11dd DependenciesID=edf34312b40ea256282012ce0cb3c3bb StaticDependenciesID=2ac3f3d449445de0ea4bbb38d8fd13d1 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+  Time since last request: 52.310223 seconds.
+  path: Assets/Prefabs/Lever.prefab
+  importAddress: Guid(07415dfbf207f9d41b07dac1993b9793) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Lever.prefab using Guid(07415dfbf207f9d41b07dac1993b9793) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '96c115ced4bd57d3e448bdf2b44ce214') in 0.5205088 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=f678fffaee7a71c8e3e8037b25f754e9 DependenciesID=6630bd970f308b0088372f78cc0b5178 StaticDependenciesID=00493e479efc7594b0e37d9c99516a4f 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/Game Sound Solutions - 8 bits Elements/powerup/powerup_4.wav
-  importAddress: Guid(d728f6de3ab914065b77361018c06cc8) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Game Sound Solutions - 8 bits Elements/powerup/powerup_4.wav using Guid(d728f6de3ab914065b77361018c06cc8) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'c0362c9c00ad533b7e01f8fd76a30a7e') in 0.0101246 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=03ff76a0dcdc4b223472b64a1cf24b49 DependenciesID=f8005c0ed11b13aa7ce15b539ada77b7 StaticDependenciesID=01f88ea60e1a0308b5fa27d46707fbff 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+  Time since last request: 0.000032 seconds.
+  path: Assets/Prefabs/Ground.prefab
+  importAddress: Guid(a0f51a3be7b28ed4f9ce3e92060d62b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Ground.prefab using Guid(a0f51a3be7b28ed4f9ce3e92060d62b9) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '0cb178cc4480ee0c753546b5275be671') in 0.0158506 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a8603629c26237af0b205818c39d018b DependenciesID=6c88498708cffb7892d82a803bd3b044 StaticDependenciesID=1bdddca6cfce1d0c00fe9672db11c6ce 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000029 seconds.
-  path: Assets/Game Sound Solutions - 8 bits Elements/laser shot/laser_shot_2.wav
-  importAddress: Guid(e87f4c339e74f48a7ac8e289c4b26872) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Game Sound Solutions - 8 bits Elements/laser shot/laser_shot_2.wav using Guid(e87f4c339e74f48a7ac8e289c4b26872) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '4543087481c853dad7204f630a74daf9') in 0.0104453 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=729743f30e9bca39a8fb2e772299b987 DependenciesID=e172cde6f2f993a3952124fcfaa17eac StaticDependenciesID=12e2e270a28bb2bd47634bb25e90d493 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+  Time since last request: 0.000035 seconds.
+  path: Assets/Prefabs/Level Button.prefab
+  importAddress: Guid(c99d7abb6f82a4f4f9fd73e629563ac4) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Level Button.prefab using Guid(c99d7abb6f82a4f4f9fd73e629563ac4) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: 'b2f5832b26ceb840a48a3461db83ed7c') in 0.0389818 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e1f5ae3e8d534e33b2145f7ea1cbe040 DependenciesID=db32cfedcc0a0bb42ee53030cd8d5ca2 StaticDependenciesID=efdc94fe3f1c69ecbcd395bbffa96ff2 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 20
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/Game Sound Solutions - 8 bits Elements/powerup/powerup_19.wav
-  importAddress: Guid(e5d5a739dbb4d4f14ac1b79364078d44) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Game Sound Solutions - 8 bits Elements/powerup/powerup_19.wav using Guid(e5d5a739dbb4d4f14ac1b79364078d44) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'd2d265c09c79850eb3973f6d9fcc2f47') in 0.0091268 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=1db47d42d9431729b7f6df539ad0e4ce DependenciesID=b25e3cf9dde997784eca9560993d539e StaticDependenciesID=6320fa6c5d6e1f829cf376e87e9b3594 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+  Time since last request: 0.000033 seconds.
+  path: Assets/Prefabs/Door.prefab
+  importAddress: Guid(df5f8290f396a4245b77a04749627a88) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Door.prefab using Guid(df5f8290f396a4245b77a04749627a88) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: 'c9bd4428f196c5ee9f81341c575686a1') in 0.0222162 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=0332684aadd8f4a3465f08a74d1c169b DependenciesID=ef340b72582edc67f4624afb09d2d2cc StaticDependenciesID=545177dc6ae98eec832b12cdcfe3a813 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/Game Sound Solutions - 8 bits Elements/OTHER SOUND PACK DEMO
-  importAddress: Guid(f9b35267db708344191089d9a35a40f5) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Game Sound Solutions - 8 bits Elements/OTHER SOUND PACK DEMO using Guid(f9b35267db708344191089d9a35a40f5) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '60c934d0b053362c97a498353dd0af12') in 0.0086895 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=380fa3591b290c1a4e9381ed6c158c95 DependenciesID=e60adbe9918ad316d7f521460657501b StaticDependenciesID=375dca93f787f5a6d147d19642f280fe 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+  Time since last request: 0.000035 seconds.
+  path: Assets/Prefabs/Star.prefab
+  importAddress: Guid(b043621e5ae8c8741aff80759ac2e8a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Star.prefab using Guid(b043621e5ae8c8741aff80759ac2e8a1) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '88a1bbe8353f6ac48b43ba3132529e9c') in 0.0324595 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=3144cd72d6a0b1bde6fc9c337e241084 DependenciesID=2d9b5dd177a5ac373fe1ce6fb8231dc4 StaticDependenciesID=a913203997c9c680f09d4b118a3b8788 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/Game Sound Solutions - 8 bits Elements/laser shot/laser_shot_12.wav
-  importAddress: Guid(ee58f1d233faf415f8e5bc31467aab7c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Game Sound Solutions - 8 bits Elements/laser shot/laser_shot_12.wav using Guid(ee58f1d233faf415f8e5bc31467aab7c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '85138fb0d3314e5b24fa3453ca36addf') in 0.0104719 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a6c73082fbbe740df6584d9045ac1bcd DependenciesID=12421b8ff4339ff9f2147dd4269331e5 StaticDependenciesID=f94ae1cc9a3b2d1f128ea5443f674cea 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+  Time since last request: 0.000036 seconds.
+  path: Assets/Prefabs/Striped Ground.prefab
+  importAddress: Guid(dc10d0babb607b04d8df220a184324fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Striped Ground.prefab using Guid(dc10d0babb607b04d8df220a184324fd) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: 'f3fcf103da82b17fd9dfb60e5fc73f0d') in 0.0216092 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=090009971d008fe599bb351c0c0709d3 DependenciesID=088657b6ca321b8b202af540ac1f0d09 StaticDependenciesID=52bc9b36b33499ca52d1ba54f81db7de 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/Game Sound Solutions - 8 bits Elements/OTHER SOUND PACK DEMO/Zombie Voices Demo/super_zombie_eating_1.wav
-  importAddress: Guid(52d263e5f68944379a14034641059a2f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Game Sound Solutions - 8 bits Elements/OTHER SOUND PACK DEMO/Zombie Voices Demo/super_zombie_eating_1.wav using Guid(52d263e5f68944379a14034641059a2f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'df8dcb94decf03b25c610a92cc73062c') in 0.0093876 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d771ca0b3bd56573bd4b128eaa763dd6 DependenciesID=fcfb6180977d07c73b8d0e88b5a14958 StaticDependenciesID=1bfd69d9cd0d68cb59ac6b9b841755ed 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+  Time since last request: 0.000037 seconds.
+  path: Assets/Prefabs/Green Color Changer.prefab
+  importAddress: Guid(46ecbfb529f0d254f9ffc44a0027c283) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Green Color Changer.prefab using Guid(46ecbfb529f0d254f9ffc44a0027c283) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: 'e3c706ce85b5553f186f2384f19d12aa') in 0.03092 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=baabe726b2811f38bc5cec6e45bf5ca9 DependenciesID=d19840f999753c86566ac6a8f88db250 StaticDependenciesID=8d0a03941b66d6705ce0cffbad1f2962 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 27
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/Game Sound Solutions - 8 bits Elements/powerup/powerup_36.wav
-  importAddress: Guid(4e74767d4293f40298b7a8d6fd6cd674) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Game Sound Solutions - 8 bits Elements/powerup/powerup_36.wav using Guid(4e74767d4293f40298b7a8d6fd6cd674) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '24eaebe668fbebd7157510ad0642a1d8') in 0.010988 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=f0c6db309af918929b04b88561d3e0e2 DependenciesID=3cd16a48c1f2df37dd4aff0de8ef2033 StaticDependenciesID=f097f2cba5f4be12e911bde0a2e21f9d 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+  Time since last request: 0.000041 seconds.
+  path: Assets/Prefabs/Object Spawner Cannon.prefab
+  importAddress: Guid(ccd37a0dc1ec1dc4d894a684fda5dbc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Object Spawner Cannon.prefab using Guid(ccd37a0dc1ec1dc4d894a684fda5dbc6) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '25357124acc8f89a51ec2d03c58e3141') in 0.015814 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=16ce83490bc82f27f915ec687fefcb88 DependenciesID=cd59694e2ae6c54f8187b7a4de948ec7 StaticDependenciesID=11506391976584200b82a448e5f87c55 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/Game Sound Solutions - 8 bits Elements/laser shot/laser_shot_10.wa.wav
-  importAddress: Guid(ae6b25d6b43a8434da475db2960eceb5) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Game Sound Solutions - 8 bits Elements/laser shot/laser_shot_10.wa.wav using Guid(ae6b25d6b43a8434da475db2960eceb5) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'a56be28530a08b926e50b13512bb0008') in 0.0098217 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=06e61db83b89d9df5949cd7458ae1a29 DependenciesID=8ba72af5208151e971d09b2f9ab31772 StaticDependenciesID=42344d1ac20123e022eedd99f898f711 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+  Time since last request: 0.000038 seconds.
+  path: Assets/Prefabs/Pressure Pad.prefab
+  importAddress: Guid(71fe8e8d11a55084da1422fb8fd9c6e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Pressure Pad.prefab using Guid(71fe8e8d11a55084da1422fb8fd9c6e3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: 'b3c1f9c53945c9f56b6a53ad22e7499f') in 0.0164193 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=153cfe050ac1a7c354ec72a06a2c1b7f DependenciesID=eb3e1ea86476ecd3fd78fe64aa631003 StaticDependenciesID=7561845914b9bfa65469981a7d01ddae 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/Game Sound Solutions - 8 bits Elements/OTHER SOUND PACK DEMO/Power Laser Guns Demo/LaserGun_37.wav
-  importAddress: Guid(2b809bb53abec454899d2f8bb1fd8e74) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Game Sound Solutions - 8 bits Elements/OTHER SOUND PACK DEMO/Power Laser Guns Demo/LaserGun_37.wav using Guid(2b809bb53abec454899d2f8bb1fd8e74) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '237d5cdcba8af999880997ff81be7f2b') in 0.0100134 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=fc551b4889ad8accddc83a01e9709c97 DependenciesID=90766dd7a23a710a4e40e72688a58121 StaticDependenciesID=82155e78b72dfafee51cd23e2ac0955c 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+  Time since last request: 0.000032 seconds.
+  path: Assets/Prefabs/Respawn Field.prefab
+  importAddress: Guid(a55b6a16202c3874fa67c356c08a34fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Respawn Field.prefab using Guid(a55b6a16202c3874fa67c356c08a34fe) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: 'b4d3e46a77abddec375a884d6dcc7d28') in 0.0025301 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=da359cbcfdb31727b36ec68b19bd4172 DependenciesID=edfba2752160d0dbef5d9bf24cc66a5c StaticDependenciesID=8216bee738720af860098687f2efd29c 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 6
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000012 seconds.
-  path: Assets/Game Sound Solutions - 8 bits Elements/ramdomize/randomize_5.wav
-  importAddress: Guid(93fc9e2ebd7b8485dac10e43aa444b8d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Game Sound Solutions - 8 bits Elements/ramdomize/randomize_5.wav using Guid(93fc9e2ebd7b8485dac10e43aa444b8d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '132334d2cfbd2ab5bd13b1260f2fc741') in 0.01191 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ff1531a5da97d714c2351531565fcc81 DependenciesID=6256cb8d794e99dc2f6f46365a297c3d StaticDependenciesID=a09d089850ca6472593dddbc965af0b5 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/Game Sound Solutions - 8 bits Elements/OTHER SOUND PACK DEMO/Voices Expressions Demo/ComeOn.wav
-  importAddress: Guid(e5848220d652040de87361d68a8df2bf) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Game Sound Solutions - 8 bits Elements/OTHER SOUND PACK DEMO/Voices Expressions Demo/ComeOn.wav using Guid(e5848220d652040de87361d68a8df2bf) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '49db5c2cac8d5e6a84d12ce186099b56') in 0.0128238 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=aa4ba34eb57cf2df474dea032aba82f2 DependenciesID=6a52668b18974ff775780c56cdc10e69 StaticDependenciesID=3cd7264d35a4bdc55cefc7488f28f708 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+  Time since last request: 0.000040 seconds.
+  path: Assets/Prefabs/Ladder.prefab
+  importAddress: Guid(e2fcdd017e7a7284994bd89c42d631b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Ladder.prefab using Guid(e2fcdd017e7a7284994bd89c42d631b2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: 'f5e974a372884eed3c65a7375d46be31') in 0.020503 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=23ae88e389a51f9c6ead77c60b186f2e DependenciesID=457a208099c6e2fc608ca9ac04cf3faf StaticDependenciesID=1b5cf74832455a3c8ffd16be1ada7f21 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 21
 
 ========================================================================
 Received Import Request.
   Time since last request: 0.000023 seconds.
-  path: Assets/Game Sound Solutions - 8 bits Elements/OTHER SOUND PACK DEMO/Match 3 Elements Demo/marble_tic_wood_1.wav
-  importAddress: Guid(0ffb9602471e746c4a188f4ff2b2c39c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Game Sound Solutions - 8 bits Elements/OTHER SOUND PACK DEMO/Match 3 Elements Demo/marble_tic_wood_1.wav using Guid(0ffb9602471e746c4a188f4ff2b2c39c) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '77f9cfac9c7a8bbc8c841c92fb88f873') in 0.0114843 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=54a5bae746cc583fc0ea44ac8a343949 DependenciesID=d33b88eb3b986e9e231b4d49a178e221 StaticDependenciesID=48dabdb5f27bccdb871df427fb1492de 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+  path: Assets/Prefabs/Color Position Change Waddler.prefab
+  importAddress: Guid(6bf539e44a08a534daacf4b8cf55c6d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Color Position Change Waddler.prefab using Guid(6bf539e44a08a534daacf4b8cf55c6d0) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: 'c34e48f17221905a0005c6a7c31453ae') in 0.0122432 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e3fd1747398bc8eb4346ab27a6fe1943 DependenciesID=9afa17327638a1dabdefead5858861e6 StaticDependenciesID=da12731496caebfe08a566b174c09dc9 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 20
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/Game Sound Solutions - 8 bits Elements/powerup/powerup_39.wav
-  importAddress: Guid(e09225279cf0e42feae51e54ed8f2e12) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Game Sound Solutions - 8 bits Elements/powerup/powerup_39.wav using Guid(e09225279cf0e42feae51e54ed8f2e12) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'a89f696563f69eb150789e2d2cf81529') in 0.0107412 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e5ac48eb727f7966ecad8958534fdedf DependenciesID=60cea6d24300d43c31ff2d82c51828bc StaticDependenciesID=9572f9ffbf4b9490f62a0b043c05352d 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+  Time since last request: 0.000028 seconds.
+  path: Assets/Prefabs/DeathBarrier.prefab
+  importAddress: Guid(0697371d7ff443248ad351aa3545cd7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/DeathBarrier.prefab using Guid(0697371d7ff443248ad351aa3545cd7e) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: 'f217dc16d038ef32d0af9d74cd1f78a3') in 0.0154061 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=7a9560cf6a9974ca9de292e18589a36a DependenciesID=92d238fdd6265d642ab9beb23dd4bd21 StaticDependenciesID=9dc2a48ad9578eb8aa65fc87543e53a9 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 9
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/Game Sound Solutions - 8 bits Elements/powerup
-  importAddress: Guid(420eddc342d3405409bbfa09b99c40c3) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Game Sound Solutions - 8 bits Elements/powerup using Guid(420eddc342d3405409bbfa09b99c40c3) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '821ec9c04ca1d13f7cbc2713ae14e41d') in 0.0092097 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=3289edbfd472f261c1b7cd6bd0d33919 DependenciesID=1ca31f187ec2d4f6a4c3651c45e5e734 StaticDependenciesID=ee0ab492c6f77dc6e0913b2ad4388873 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+  Time since last request: 0.000024 seconds.
+  path: Assets/Prefabs/Push Block.prefab
+  importAddress: Guid(0ec0ca746f93c1f41a44a608bfcec40b) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Push Block.prefab using Guid(0ec0ca746f93c1f41a44a608bfcec40b) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '6f8b789c2a136ae8a626aaac4f93d54f') in 0.0173318 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=267d722ced8e4877f0854ef8485fad91 DependenciesID=8c5d6009b9775a07ebb84e749813ee97 StaticDependenciesID=a96a56422c540b345f5bef78ad336339 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 10
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/Game Sound Solutions - 8 bits Elements/powerup/powerup_23.wav
-  importAddress: Guid(7c82b3d1beef04f8cad66e47504a42a3) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Game Sound Solutions - 8 bits Elements/powerup/powerup_23.wav using Guid(7c82b3d1beef04f8cad66e47504a42a3) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'df0ec56be480504c40eece81c7e175cf') in 0.0097096 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b185900e3aa6a8e5a1ced6dfa920017b DependenciesID=527787768514393a841a5dc7f23fac9c StaticDependenciesID=a1daf5e103ec6598d96925ac60f9dcb1 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+  Time since last request: 0.000033 seconds.
+  path: Assets/Prefabs/Directionally Solid Platform.prefab
+  importAddress: Guid(ae29d790e32d3384eb896308e7d71559) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Directionally Solid Platform.prefab using Guid(ae29d790e32d3384eb896308e7d71559) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: 'f6901bf319e19b1efe689396a06c4d7e') in 0.0153459 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c9f47f260acaa789320da3465ce9eedd DependenciesID=a0e46a50aff9c475bd5c140a3a3de4da StaticDependenciesID=c279f0f1c3913e79e14c4b5e402fb768 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 12
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/Game Sound Solutions - 8 bits Elements/powerup/powerup_41.wav
-  importAddress: Guid(c5dff3644d003480281333a68d9e9aee) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Game Sound Solutions - 8 bits Elements/powerup/powerup_41.wav using Guid(c5dff3644d003480281333a68d9e9aee) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'f6e9ec99e05f5f7af0ffd48aea7a672f') in 0.0097218 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=70e27ad09394673768b131b2307729a1 DependenciesID=c115f4ae87ef13cf9accd9b065f0194a StaticDependenciesID=141dbde07b3f2222385b885d01d11df3 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+  Time since last request: 0.000039 seconds.
+  path: Assets/Prefabs/Game Manager.prefab
+  importAddress: Guid(7520555fcb34b6d42b9c29b60656eb28) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Game Manager.prefab using Guid(7520555fcb34b6d42b9c29b60656eb28) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '35bc96c224450d9e5642145d37230cd4') in 0.0023384 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=92b0d59db391b90f5613dd2f51a04069 DependenciesID=b99a74ec06b22b04b69a03bed7fa300c StaticDependenciesID=67ec0cfde4c3e652e7832afab5c3ce29 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 5
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/Game Sound Solutions - 8 bits Elements/powerup/powerup_8.wav
-  importAddress: Guid(395d4038a87dd48a8871eeae233d3233) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Game Sound Solutions - 8 bits Elements/powerup/powerup_8.wav using Guid(395d4038a87dd48a8871eeae233d3233) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'e93ad2f500b22cea0995b6c856b54d72') in 0.0093908 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=0488c8befa08021cf0240401899bec44 DependenciesID=8faf7cd0dd5ecf0be5ade7988f434892 StaticDependenciesID=b526a97eccc6066fbd2af53d3b4a1ce6 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+  Time since last request: 0.000030 seconds.
+  path: Assets/Prefabs/Color Position Change Cloud Variant.prefab
+  importAddress: Guid(cd5ce2a557cf52d41a621d96f4342315) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Color Position Change Cloud Variant.prefab using Guid(cd5ce2a557cf52d41a621d96f4342315) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '2915485ab8f3cdb40cd5b0c6d6da071b') in 0.0189596 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e48056d004547c878a9c73d4b3336e1e DependenciesID=fcc9a1c6b3aead61b5112683b49b6401 StaticDependenciesID=95396075929c7f1e4996ce03549baf89 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 22
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000012 seconds.
-  path: Assets/Game Sound Solutions - 8 bits Elements/beep/beep_8.wav
-  importAddress: Guid(56e18f723ce814873b93dd737aa16aba) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Game Sound Solutions - 8 bits Elements/beep/beep_8.wav using Guid(56e18f723ce814873b93dd737aa16aba) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '2f1f3b541da4c19cd6fb35b405b9c024') in 0.0091599 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=08193669bb0f2a153f0d6ba710451667 DependenciesID=a59badac93477df390db2825c951a3dd StaticDependenciesID=29a9d41123c2e146274d50f6ad5c6682 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+  Time since last request: 0.000058 seconds.
+  path: Assets/Prefabs/Player.prefab
+  importAddress: Guid(dd357eeeac0748d4b85702a096f23b38) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Player.prefab using Guid(dd357eeeac0748d4b85702a096f23b38) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: 'f8e67a8be33398e887ca91537312416b') in 0.052338 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=64c6e300d0b73cd456fceb995c153729 DependenciesID=cd76537d6c8e2f3dbb303dec2b8b607c StaticDependenciesID=ffe297446db1cb025ece263d3671276d 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 189
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000012 seconds.
-  path: Assets/Game Sound Solutions - 8 bits Elements/powerup/powerup_20.wav
-  importAddress: Guid(c8a8adf821ff2474b843341253b01896) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Game Sound Solutions - 8 bits Elements/powerup/powerup_20.wav using Guid(c8a8adf821ff2474b843341253b01896) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'c5275bd861633337f761e2a6f9c2f5d3') in 0.0101803 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=f879e4eeb1d12abb2c69325ebbc7178f DependenciesID=fe2ebb1cc9836ea30d41270c7703e9b1 StaticDependenciesID=7f119644d31611ab6b4ca5db8f6ed634 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+  Time since last request: 2.026883 seconds.
+  path: Assets/Prefabs/Main Global Volume.prefab
+  importAddress: Guid(c554664f18414fb48b846f4126ee4e36) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Main Global Volume.prefab using Guid(c554664f18414fb48b846f4126ee4e36) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '76a73195ac803cff7aa8d5d61b28d474') in 0.0029477 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e9f83d84f153ddfc2d1bac82c9b4342b DependenciesID=1d9c72bbc07b055d2a8e57dcb5c43595 StaticDependenciesID=409ccd17fc2ed72c40de608c40789a4a 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000011 seconds.
-  path: Assets/Game Sound Solutions - 8 bits Elements/powerup/powerup_1.wav
-  importAddress: Guid(d07da7a1e41ad45c79bcaa11ca8109ba) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Game Sound Solutions - 8 bits Elements/powerup/powerup_1.wav using Guid(d07da7a1e41ad45c79bcaa11ca8109ba) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'b605ae700232d7c0865e7cabf9e0e456') in 0.0090815 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=76a95ee6ef7374d60ed8a5fc405a262b DependenciesID=e6519de540b20abc36e76578d2494b7b StaticDependenciesID=4c2cc78fb504d9e0d932cc5c07476e4a 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+  Time since last request: 0.904675 seconds.
+  path: Assets/Prefabs/Main Global Volume.prefab
+  importAddress: Guid(c554664f18414fb48b846f4126ee4e36) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Prefabs/Main Global Volume.prefab using Guid(c554664f18414fb48b846f4126ee4e36) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '88f4a350d95e965f38e06d818270c83e') in 0.0321905 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=54daf7643de9c6487f131577269e6b17 DependenciesID=8b6e7e3e93ae3f0d601a8f6696e663d4 StaticDependenciesID=d7a7bda39cc36ab724d6ba3f7e0082ed 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 13
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/Game Sound Solutions - 8 bits Elements/OTHER SOUND PACK DEMO/Weapons Demo
-  importAddress: Guid(2e65f79452b54d345a4f5895daecd456) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Game Sound Solutions - 8 bits Elements/OTHER SOUND PACK DEMO/Weapons Demo using Guid(2e65f79452b54d345a4f5895daecd456) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'c4e5690e425422c1be01c7e320a6930c') in 0.0107147 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d32890eec051e6dec913b2e8232d82f1 DependenciesID=a52ab5a1f01d16d78749ebb10edc2c6a StaticDependenciesID=db95d7264c439a1274804df25f07877e 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+  Time since last request: 5.840638 seconds.
+  path: Assets/UniversalRenderPipelineGlobalSettings.asset
+  importAddress: Guid(93b439a37f63240aca3dd4e01d978a9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/UniversalRenderPipelineGlobalSettings.asset using Guid(93b439a37f63240aca3dd4e01d978a9f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: 'a9b902da5b2e72fa0e67ebee78e13997') in 0.0009068 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e5daccbb6d6b9d5bf2b6d69e320fa783 DependenciesID=007dbec4fda3353bb6e5d2d291f0f223 StaticDependenciesID=7d26ad5100c7b185cf28f93a8f7a2195 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/Game Sound Solutions - 8 bits Elements/OTHER SOUND PACK DEMO/Blood Demo/Download the Blood SFX.pdf
-  importAddress: Guid(fc59d3a639e2e4156b878c33c5b51c58) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Game Sound Solutions - 8 bits Elements/OTHER SOUND PACK DEMO/Blood Demo/Download the Blood SFX.pdf using Guid(fc59d3a639e2e4156b878c33c5b51c58) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '2062ba3f1ece037e26aadae3f3baa5f3') in 0.0084337 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=a4ba9b57a053fbdb00f1f0cfc3302d8d DependenciesID=f48e8295d19aee5f78cbc4973635b435 StaticDependenciesID=5c3579c9ac7a5e302d75afb97215036b 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+  Time since last request: 13.738900 seconds.
+  path: Assets/Prefabs/Cannon Cloud.prefab
+  importAddress: Guid(b619a6881c15ede40bd437a18c850fc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Cannon Cloud.prefab using Guid(b619a6881c15ede40bd437a18c850fc3) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: 'a1a2a03b39733a5de44d26fc29b97122') in 0.01597 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c9700020472840580c90f62bc4b6ee06 DependenciesID=85e31fd01bcd14c8a2d0df98036ccb66 StaticDependenciesID=45a59e323b71b9b14185dee1fd281bd0 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 12
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/Game Sound Solutions - 8 bits Elements/OTHER SOUND PACK DEMO/Buttons Colletions Demo/comical_5.wav
-  importAddress: Guid(0669ceecb807847e690b09ac64c19776) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Game Sound Solutions - 8 bits Elements/OTHER SOUND PACK DEMO/Buttons Colletions Demo/comical_5.wav using Guid(0669ceecb807847e690b09ac64c19776) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'f93c6943a409f4b9d7cc6b666b3d9369') in 0.0103622 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=2b55b2a7cfa3086f6d48610c257e13ae DependenciesID=7c25d67a1954bf24ecf9a11265b2c06d StaticDependenciesID=07c0a2552a09f3afa75666f8ed41fc22 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+  Time since last request: 0.000024 seconds.
+  path: Assets/Prefabs/Cloud Cannon.prefab
+  importAddress: Guid(f46f2a3b406facd46adb7b4567bb21f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Cloud Cannon.prefab using Guid(f46f2a3b406facd46adb7b4567bb21f2) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '995da579671893ab5e46b594dca0bc30') in 0.0181467 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=560719f731699095045300f4f3ed210f DependenciesID=39cbde5fff4e9809fa852d650a8cc4e2 StaticDependenciesID=c779d32f0056af5f737f65d251f7c74f 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 21
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000011 seconds.
-  path: Assets/Game Sound Solutions - 8 bits Elements/ramdomize/randomize_6.wav
-  importAddress: Guid(384cb549e36c24d7bb05e59eb9346de1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Game Sound Solutions - 8 bits Elements/ramdomize/randomize_6.wav using Guid(384cb549e36c24d7bb05e59eb9346de1) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '6184ef789709a0ffef58360cd72a5e36') in 0.0097054 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d9c74744702a82d0d03c48f046c2a6c3 DependenciesID=bca271cf2453826ebda88efafc64f583 StaticDependenciesID=ae17e27a65e2bf7796315ba0fb21756b 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000012 seconds.
-  path: Assets/Game Sound Solutions - 8 bits Elements/OTHER SOUND PACK DEMO/Voices Expressions Demo/Marvelous.wav
-  importAddress: Guid(e64feb8a3214448979b07f2bf0625e2b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Game Sound Solutions - 8 bits Elements/OTHER SOUND PACK DEMO/Voices Expressions Demo/Marvelous.wav using Guid(e64feb8a3214448979b07f2bf0625e2b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'bf004381a2eb73a3aaa85c05c4b3d1c3') in 0.0110238 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c99dd538d5d41549b78b180317054ad7 DependenciesID=a91f97948d814df9f8f7ae03b4aeaf7d StaticDependenciesID=d328509fee8f07c9f43143b02da9a001 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/Game Sound Solutions - 8 bits Elements/jump/jump_4.wav
-  importAddress: Guid(76f8c00779b924bd1afa3e7a8ca2fa3e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Game Sound Solutions - 8 bits Elements/jump/jump_4.wav using Guid(76f8c00779b924bd1afa3e7a8ca2fa3e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '0581f97678c1ee058f084b2b4a137b32') in 0.0093981 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ffd979cb649528be382c11ed51be7cf7 DependenciesID=d0c863b5a17feecaf7548501abd6c6b0 StaticDependenciesID=8d094cd280c6c996216002cf61a01149 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/Game Sound Solutions - 8 bits Elements/explosion/explosion_6.wav
-  importAddress: Guid(221f5b953d4f149aa8482aa1b7e3d577) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Game Sound Solutions - 8 bits Elements/explosion/explosion_6.wav using Guid(221f5b953d4f149aa8482aa1b7e3d577) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '828ff30885064316dad5f3f8c961b697') in 0.0110448 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=3a0c6c5e1236e6a20b1d3b338acf7767 DependenciesID=db12cbbac501d5f516e2147a8bc190e7 StaticDependenciesID=1dd36914f1a05bf4f651d28cfdac0c6d 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000011 seconds.
-  path: Assets/Game Sound Solutions - 8 bits Elements/beep/beep_1.wav
-  importAddress: Guid(15faccb8f5420432fa284037f4bf1faa) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Game Sound Solutions - 8 bits Elements/beep/beep_1.wav using Guid(15faccb8f5420432fa284037f4bf1faa) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '35f7210cf73fe5d7c56924d9289a67c5') in 0.0101147 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=04ba1c156551a280c1b8339e5a6fda54 DependenciesID=b9b3b5ea5c23b52525ac7899aacb9d6f StaticDependenciesID=b1b51ada962b72ec236707738613f0cd 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000011 seconds.
-  path: Assets/Game Sound Solutions - 8 bits Elements/jump/jump_3.wav
-  importAddress: Guid(149c44654cae64a46b9918bd48a346a0) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Game Sound Solutions - 8 bits Elements/jump/jump_3.wav using Guid(149c44654cae64a46b9918bd48a346a0) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'c622c0e693e6d70b3b637f2766c05854') in 0.0095536 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e351fda153edf2b8e76b52f7351ab68c DependenciesID=6b144880b8791b2d726f78b35ef6f595 StaticDependenciesID=e0b8fa71d16a2701c259f700e740bc2f 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/Game Sound Solutions - 8 bits Elements/explosion/explosion_10.wav
-  importAddress: Guid(b9e28047bdaef4209b56840c71df8dc3) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Game Sound Solutions - 8 bits Elements/explosion/explosion_10.wav using Guid(b9e28047bdaef4209b56840c71df8dc3) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '518bdef57d91bd95f27574515d78abf5') in 0.0122472 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=ba21f7efa4e85d4c580a46f4b82da2ee DependenciesID=b458662975c08930d5c3fb341f1e0e09 StaticDependenciesID=01260b086a6776ecc6b83db3ec2dccca 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/Game Sound Solutions - 8 bits Elements/powerup/powerup_43.wav
-  importAddress: Guid(c46702aad9acc4897835692930d83f56) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Game Sound Solutions - 8 bits Elements/powerup/powerup_43.wav using Guid(c46702aad9acc4897835692930d83f56) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '361377ee1455aa7ca84c4198eb58965c') in 0.0112431 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=83f2b33b17bb553d3ed0aabaa86c7b85 DependenciesID=6f09c57c5618e6a42ab1e8f13f78475e StaticDependenciesID=2fd9d9c5d467d779d8e17540670c5330 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/Game Sound Solutions - 8 bits Elements/ramdomize/randomize_14.wav
-  importAddress: Guid(798eca7d986884dd586f4840272b708b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Game Sound Solutions - 8 bits Elements/ramdomize/randomize_14.wav using Guid(798eca7d986884dd586f4840272b708b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'cc7542f337ff785864ceffc76a347b33') in 0.0094477 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5877e8fb8e2757fbc09d9746855b1e10 DependenciesID=df1c3291ee4a60d9937c4bcd7cc36f46 StaticDependenciesID=30024091509a2ab133387a6166b3d532 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/Game Sound Solutions - 8 bits Elements/explosion/explosion_19.wav
-  importAddress: Guid(9bd500496aefc47b08473f8111803307) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Game Sound Solutions - 8 bits Elements/explosion/explosion_19.wav using Guid(9bd500496aefc47b08473f8111803307) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '0ce07c07d2b075218eb009be5af4e110') in 0.0095098 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=374e37a0460a812d6c059857e95b5745 DependenciesID=7c284c2a9e1ed4a23a6ab2872a1b4059 StaticDependenciesID=640635ae49b53c932f611cc798dacec9 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000012 seconds.
-  path: Assets/Game Sound Solutions - 8 bits Elements/jump/jump_1.wav
-  importAddress: Guid(b50a5de5297164efe8ba6d2b0b4b7d4d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Game Sound Solutions - 8 bits Elements/jump/jump_1.wav using Guid(b50a5de5297164efe8ba6d2b0b4b7d4d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '778a9c6c9884d0fc89772d2d029f5994') in 0.0092032 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d7f6a012fcebc0270c3bea3b7ec3bbc5 DependenciesID=7ed3f5eb17f9fea478b8f7e724e77ea9 StaticDependenciesID=213367d9c7f56d7d8f325742abb800de 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/Game Sound Solutions - 8 bits Elements/OTHER SOUND PACK DEMO/Magic Demo/Magic_27.wav
-  importAddress: Guid(a557a686b92474aeca144b126c1b7c1b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Game Sound Solutions - 8 bits Elements/OTHER SOUND PACK DEMO/Magic Demo/Magic_27.wav using Guid(a557a686b92474aeca144b126c1b7c1b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'c97c746b2f3ab51394596d3b58cf68ee') in 0.0111186 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b11037886453eb0362ac6ced56be7d6d DependenciesID=8ac65550af8997d9cd5271b33167353c StaticDependenciesID=d20ba2decd7e06b905e94b0244236f10 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/Game Sound Solutions - 8 bits Elements/jump/jump_6.wav
-  importAddress: Guid(d4d38de8d2e3f4e6dad05bf45911b20d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Game Sound Solutions - 8 bits Elements/jump/jump_6.wav using Guid(d4d38de8d2e3f4e6dad05bf45911b20d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'c53c0a3b1fbd8d11cfd85dff9c1efdfa') in 0.010733 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=52a94343334302fe5dec218a0c7b4979 DependenciesID=66aeb29c9d9b8b51e9f742142da69e85 StaticDependenciesID=23b7a8985ae086c4d2b164cf65484b2e 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000020 seconds.
-  path: Assets/Game Sound Solutions - 8 bits Elements/OTHER SOUND PACK DEMO/Blood Demo/Blood_Squirt_53.wav
-  importAddress: Guid(74591eb500add417cb2e0b52833f2f51) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Game Sound Solutions - 8 bits Elements/OTHER SOUND PACK DEMO/Blood Demo/Blood_Squirt_53.wav using Guid(74591eb500add417cb2e0b52833f2f51) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'bc38666e17e77fa632a210fb9ad4957b') in 0.0089743 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=248d5def22e8cf241d83bf7fc0e56359 DependenciesID=d5c3a413566979610de1a5924440ad86 StaticDependenciesID=25a9e5d51116421ebbb10c4c6465045b 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000012 seconds.
-  path: Assets/Game Sound Solutions - 8 bits Elements/OTHER SOUND PACK DEMO/Engines of the Future Demo/Future_engine_17_on.wav
-  importAddress: Guid(ae378d38aa6c94a1b9d8cf21d5521c5b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Game Sound Solutions - 8 bits Elements/OTHER SOUND PACK DEMO/Engines of the Future Demo/Future_engine_17_on.wav using Guid(ae378d38aa6c94a1b9d8cf21d5521c5b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'ea658bea091bfa27a195003608c4b61e') in 0.010508 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b98a7319d18032485b6ebfa7d6abdfdc DependenciesID=9c8ae3ce82995eda4bf71edf611ee665 StaticDependenciesID=da1814d634a6b35ceeb47570d6b8e7a3 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000011 seconds.
-  path: Assets/Game Sound Solutions - 8 bits Elements/OTHER SOUND PACK DEMO/Weapons Demo/attack_sword_hit_44.wav
-  importAddress: Guid(7787b31f0b0ef4089b92fefb99bcc082) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Game Sound Solutions - 8 bits Elements/OTHER SOUND PACK DEMO/Weapons Demo/attack_sword_hit_44.wav using Guid(7787b31f0b0ef4089b92fefb99bcc082) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'c92eba76b487b141322713d16857000a') in 0.0106423 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=5b48f26e92c7fe03b01b4481a2c89311 DependenciesID=34a260662f808a3e764a4b896efb1c6c StaticDependenciesID=9dc00cbd96e4a772e37648db168b26b0 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/Game Sound Solutions - 8 bits Elements/OTHER SOUND PACK DEMO/Voices Expressions Demo/Sweet_1.wav
-  importAddress: Guid(a4352fc0dc70b47c0b012b3c9591e296) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Game Sound Solutions - 8 bits Elements/OTHER SOUND PACK DEMO/Voices Expressions Demo/Sweet_1.wav using Guid(a4352fc0dc70b47c0b012b3c9591e296) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '71e3cfd93a5648e7c6770148d2309f85') in 0.0108224 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c0f98217dd8c72955a59aa3e1bb8bb80 DependenciesID=97146673c1c4d5943a3bfb3747f82719 StaticDependenciesID=1671dde286d16a3e3dd16182a0de2126 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/Game Sound Solutions - 8 bits Elements/explosion/explosion_2.wav
-  importAddress: Guid(7a36f3dd55fa646d1bf44ca02fc73842) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Game Sound Solutions - 8 bits Elements/explosion/explosion_2.wav using Guid(7a36f3dd55fa646d1bf44ca02fc73842) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'bef614ee1733c0f0c32db29cb885f3f1') in 0.0102938 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c21fa8a2b33ec2dcc2e2da6e0f35b636 DependenciesID=1f796e6c75c640fd192657c54528a359 StaticDependenciesID=08e10d04142d3ce0095086de1201b5bc 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/Game Sound Solutions - 8 bits Elements/coin/coin_3.wav
-  importAddress: Guid(5671d5483395f4d3abb7d9d0380a5e88) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Game Sound Solutions - 8 bits Elements/coin/coin_3.wav using Guid(5671d5483395f4d3abb7d9d0380a5e88) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '467a741dbeda36dd2fc93d7ba9fb5680') in 0.0088045 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=d04f48f0d732158d643335e823f8b541 DependenciesID=5442292af521d77dd63e32086a13bd02 StaticDependenciesID=255dd9d893f32a89270b57efdf089a3d 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000011 seconds.
-  path: Assets/Game Sound Solutions - 8 bits Elements/OTHER SOUND PACK DEMO/Buttons Colletions Demo/beep_21.wav
-  importAddress: Guid(37841bcb2fedf4257955f6778c63ed2e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Game Sound Solutions - 8 bits Elements/OTHER SOUND PACK DEMO/Buttons Colletions Demo/beep_21.wav using Guid(37841bcb2fedf4257955f6778c63ed2e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '146217f4147f01525d1a31ad395393a7') in 0.0109742 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=754b072f8e4cd6721242c47166ff0f77 DependenciesID=bcba0eacb331e26f3292ed4393d4bd15 StaticDependenciesID=7f8206c62594917fe0a0706f4fbc22d1 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000012 seconds.
-  path: Assets/Game Sound Solutions - 8 bits Elements/laser shot/laser_shot_7.wav
-  importAddress: Guid(eef9040488ecf4af68cca18ca2d416a9) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Game Sound Solutions - 8 bits Elements/laser shot/laser_shot_7.wav using Guid(eef9040488ecf4af68cca18ca2d416a9) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'b27a7487f291ca191caf6daf1905ea55') in 0.012297 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=dd5046071d23e111ee667b7225e1a12c DependenciesID=57a8d5810f9254b07ed2ccd1a8286b09 StaticDependenciesID=7fc93aff3123e0ceb1b42490801f2283 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000012 seconds.
-  path: Assets/Game Sound Solutions - 8 bits Elements/coin
-  importAddress: Guid(4011a20d045ca3a4ea6d9bb04a38916d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Game Sound Solutions - 8 bits Elements/coin using Guid(4011a20d045ca3a4ea6d9bb04a38916d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'b06305c5f1f853c8ee5eb1a09b1dbd40') in 0.0102636 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=fd1bebd374360733b3969d0dacb454d8 DependenciesID=a4f6a0d9ca7e4e8cb6edd75f0d5a7745 StaticDependenciesID=408db0a9f1825acc2c99f077054de2ce 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/Game Sound Solutions - 8 bits Elements/OTHER SOUND PACK DEMO/Fantasy Creatures Demo/cavern_monster_1.wav
-  importAddress: Guid(4a7be57b40aad47879f554791c9e7514) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Game Sound Solutions - 8 bits Elements/OTHER SOUND PACK DEMO/Fantasy Creatures Demo/cavern_monster_1.wav using Guid(4a7be57b40aad47879f554791c9e7514) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '446e611b490c1883b22fb2275eb345c8') in 0.011542 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e1b296e518396d5cfccdd38e7f56d8f4 DependenciesID=0f9b0b162a45287dd00283a37d4ba5ff StaticDependenciesID=ead657d06dbd6d941f21265914af25f1 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/Game Sound Solutions - 8 bits Elements/OTHER SOUND PACK DEMO/Power Laser Guns Demo/LaserGun_7.wav
-  importAddress: Guid(c559826dcfff14955bcb6a65f0ac39c8) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Game Sound Solutions - 8 bits Elements/OTHER SOUND PACK DEMO/Power Laser Guns Demo/LaserGun_7.wav using Guid(c559826dcfff14955bcb6a65f0ac39c8) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '36e78fc84ba9299307d9ec7ae167cfe2') in 0.010478 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=3d9aea68c891123af1635cb80125c6af DependenciesID=85b58e6e362f15217907bfac4d498ad3 StaticDependenciesID=619b9c43153832ed5169a9079d25fff4 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000011 seconds.
-  path: Assets/Game Sound Solutions - 8 bits Elements/OTHER SOUND PACK DEMO/Buttons Colletions Demo/Button_scale_2.wav
-  importAddress: Guid(802c36e50a5b44f1f8a9276178c4b8b7) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Game Sound Solutions - 8 bits Elements/OTHER SOUND PACK DEMO/Buttons Colletions Demo/Button_scale_2.wav using Guid(802c36e50a5b44f1f8a9276178c4b8b7) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '0f85b366d8701cf0cf6dac1b26008b4f') in 0.0097831 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=8fb8b2b3ed242fda0ff098019ace18ca DependenciesID=8e7334f75f3b764c72bb81a46cd65ee3 StaticDependenciesID=df73d7453c0652ec9272ae4ab704bef8 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
+  Time since last request: 0.000031 seconds.
+  path: Assets/Prefabs/Color Position Change Cannonball.prefab
+  importAddress: Guid(56ddf6bf738c66a43aaac40daa31ca1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Prefabs/Color Position Change Cannonball.prefab using Guid(56ddf6bf738c66a43aaac40daa31ca1f) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '10c64b83c7746b8533f0ee0695dac538') in 0.0149947 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=21e248aa3c8f6a1e2f3f88a71b9d01f5 DependenciesID=46a5da164178bd38a5807c6cc784ecc3 StaticDependenciesID=77fe3ecc8a000df041ade4dbae223e52 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 11
 
 Editor requested this worker to shutdown with reason: Scaling down because of idle timeout
 AssetImportWorker is now disconnected from the server
