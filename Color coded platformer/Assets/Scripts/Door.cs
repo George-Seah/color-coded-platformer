@@ -11,6 +11,7 @@ public class Door : MonoBehaviour
 
     bool playerInRange;
     bool used;
+    RectTransform canvasTransform;
 
     PlayerInput playerInput;
     InputAction interact;
@@ -18,10 +19,14 @@ public class Door : MonoBehaviour
     void Awake()
     {
         GetComponent<Collider2D>().isTrigger = true;
+        canvasTransform = GetComponentInChildren<RectTransform>();
+        canvasTransform.gameObject.SetActive(false);
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
+        canvasTransform.gameObject.SetActive(true);
+
         if (used) return;
 
         if (!other.TryGetComponent(out PlayerInput input)) return;
@@ -49,6 +54,7 @@ public class Door : MonoBehaviour
         if (!other.TryGetComponent(out PlayerInput input)) return;
         if (input != playerInput) return;
 
+        canvasTransform.gameObject.SetActive(false);
         Cleanup();
     }
 
@@ -67,5 +73,7 @@ public class Door : MonoBehaviour
         playerInput = null;
         interact = null;
         playerInRange = false;
+        canvasTransform.gameObject.SetActive(false);
+    
     }
 }
