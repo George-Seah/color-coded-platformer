@@ -1,11 +1,11 @@
 [Licensing::Module] Trying to connect to existing licensing client channel...
 Built from '6000.4/staging' branch; Version is '6000.4.8f1 (f8b72d3d7343) revision 16299821'; Using compiler version '194234433'; Build Type 'Release'
 OS: 'Windows 11  (10.0.22631) Core' Language: 'en' Physical Memory: 16233 MB
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Nathan & Co" at "2026-08-25T07:09:51.2037083Z"
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Nathan & Co" at "2026-08-25T07:42:03.7521979Z"
 BatchMode: 1, IsHumanControllingUs: 0, StartBugReporterOnCrash: 0, Is64bit: 1
 System  architecture: x64
 Process architecture: x64
-Date: 2026-08-25T07:09:51Z
+Date: 2026-08-25T07:42:03Z
 
 COMMAND LINE ARGUMENTS:
 C:\Unity\6000.4.8f1\Editor\Unity.exe
@@ -19,7 +19,7 @@ C:/Github/color-coded-platformer/Color coded platformer
 -logFile
 Logs/AssetImportWorker1.log
 -srvPort
-60979
+50698
 -licensingIpc
 LicenseClient-Nathan & Co
 -force-d3d12
@@ -68,12 +68,12 @@ C:/Github/color-coded-platformer/Color coded platformer
     "memorysetup-job-temp-allocator-block-size=2097152"
     "memorysetup-job-temp-allocator-block-size-background=1048576"
     "memorysetup-job-temp-allocator-reduction-small-platforms=262144"
-Player connection [26616]  Target information:
+Player connection [28596]  Target information:
 
-Player connection [26616]  * "[IP] 192.168.0.233 [Port] 0 [Flags] 2 [Guid] 295888186 [EditorId] 295888186 [Version] 1048832 [Id] WindowsEditor(7,SuperFamicom) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
+Player connection [28596]  * "[IP] 192.168.0.233 [Port] 0 [Flags] 2 [Guid] 52220292 [EditorId] 52220292 [Version] 1048832 [Id] WindowsEditor(7,SuperFamicom) [Debug] 1 [PackageName] WindowsEditor [ProjectName] Editor" 
 
-Player connection [26616] Host joined multi-casting on [225.0.0.222:54997]...
-Player connection [26616] Host joined alternative multi-casting on [225.0.0.222:34997]...
+Player connection [28596] Host joined multi-casting on [225.0.0.222:54997]...
+Player connection [28596] Host joined alternative multi-casting on [225.0.0.222:34997]...
 JobSystem: Creating JobQueue using job-worker-count value 7
 Input System module state changed to: Initialized.
 [Physics::Module] Initialized fallback backend.
@@ -85,8 +85,7 @@ Library Redirect Path: Library/
 [Physics::Module] SDK Version: 4.1.2
 [Physics::Module] Integration Version: 1.0.0
 [Physics::Module] Threading Mode: Multi-Threaded
-Refreshing native plugins compatible for Editor in 66.83 ms, found 11 plugins.
-Preloading 1 native plugins for Editor in 3.27 ms.
+Refreshing native plugins compatible for Editor in 17.48 ms, found 11 plugins.
 Initialize engine version: 6000.4.8f1 (f8b72d3d7343)
 [Subsystems] Discovering subsystems at path C:/Unity/6000.4.8f1/Editor/Data/Resources/UnitySubsystems
 [Subsystems] Discovering subsystems at path C:/Github/color-coded-platformer/Color coded platformer/Assets
@@ -104,61 +103,61 @@ Initialize mono
 Mono path[0] = 'C:/Unity/6000.4.8f1/Editor/Data/Managed'
 Mono path[1] = 'C:/Unity/6000.4.8f1/Editor/Data/MonoBleedingEdge/lib/mono/unityjit-win32'
 Mono config path = 'C:/Unity/6000.4.8f1/Editor/Data/MonoBleedingEdge/etc'
-Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56724
+Using monoOptions --debugger-agent=transport=dt_socket,embedding=1,server=y,suspend=n,address=127.0.0.1:56068
 CodeReloadManager initialized
 Begin MonoManager ReloadAssembly
 Registering precompiled unity dll's ...
 Register platform support module: C:/Unity/6000.4.8f1/Editor/Data/PlaybackEngines/WebGLSupport/UnityEditor.WebGL.Extensions.dll
 Register platform support module: C:/Unity/6000.4.8f1/Editor/Data/PlaybackEngines/WindowsStandaloneSupport/UnityEditor.WindowsStandalone.Extensions.dll
-Registered in 0.002466 seconds.
+Registered in 0.002078 seconds.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 Package Manager log level set to [2]
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] Unable to send message (not connected to server process).
 [Package Manager] Cannot connect to Unity Package Manager local server
-[Licensing::Client] Error: HandshakeResponse reported an error:
-	ResponseCode: 505
-	ResponseStatus: Unsupported protocol version '1.18.1'.
-[Licensing::Module] Error: Failed to handshake to channel: "LicenseClient-Nathan & Co"
-[Licensing::IpcConnector] LicenseClient-Nathan & Co channel disconnected successfully.
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Nathan & Co-6000.4.8" at "2026-08-25T07:09:53.9778505Z"
-[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 17796, path: "C:/Unity/6000.4.8f1/Editor/Data/Resources/Licensing/Client/Unity.Licensing.Client.exe")
-[Licensing::Module] LicensingClient has failed validation; ignoring
-[Licensing::Client] Handshaking with LicensingClient:
-  Version:                 1.18.1+9fbee8e
-  Session Id:              baac6dd35b4f46698e20b79990ef0951
-  Correlation Id:          69dbfe8228e492265210782c19c5a196
-  External correlation Id: 6622218504313002314
-  Machine Id:              qtyx5DMTmV6sfEVnrxz9aoLU/bw=
-[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-Nathan & Co-6000.4.8" (connect: 0.00s, validation: 0.00s, handshake: 0.02s)
-[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Nathan & Co-6000.4.8-notifications" at "2026-08-25T07:09:53.9945946Z"
-[Licensing::Module] Licensing Background thread has ended after 2.79s
 ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  0.531 seconds
-Domain Reload Profiling: 1444ms
-	BeginReloadAssembly (261ms)
-	RebuildCommonClasses (55ms)
-	RebuildNativeTypeToScriptingClass (17ms)
-	initialDomainReloadingComplete (160ms)
-	LoadAllAssembliesAndSetupDomain (418ms)
-		LoadAssemblies (347ms)
-		AnalyzeDomain (316ms)
-			TypeCache.Refresh (314ms)
-				TypeCache.ScanAssembly (292ms)
-	FinalizeReload (533ms)
+- Finished resetting the current domain, in  0.437 seconds
+Domain Reload Profiling: 962ms
+	BeginReloadAssembly (144ms)
+	RebuildCommonClasses (45ms)
+	RebuildNativeTypeToScriptingClass (18ms)
+	initialDomainReloadingComplete (68ms)
+	LoadAllAssembliesAndSetupDomain (248ms)
+		LoadAssemblies (140ms)
+		AnalyzeDomain (240ms)
+			TypeCache.Refresh (239ms)
+				TypeCache.ScanAssembly (224ms)
+	FinalizeReload (438ms)
 		SetupLoadedEditorAssemblies (0ms)
-			InitializePlatformSupportModulesInManaged (75ms)
-			BeforeProcessingInitializeOnLoad (129ms)
-			ProcessInitializeOnLoadAttributes (134ms)
-			ProcessInitializeOnLoadMethodAttributes (107ms)
+			InitializePlatformSupportModulesInManaged (50ms)
+			BeforeProcessingInitializeOnLoad (95ms)
+			ProcessInitializeOnLoadAttributes (122ms)
+			ProcessInitializeOnLoadMethodAttributes (86ms)
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 ========================================================================
 Worker process is ready to serve import requests
 Import Worker Mode flag is 0x00
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
+[Licensing::Client] Error: HandshakeResponse reported an error:
+	ResponseCode: 505
+	ResponseStatus: Unsupported protocol version '1.18.1'.
+[Licensing::Module] Error: Failed to handshake to channel: "LicenseClient-Nathan & Co"
+[Licensing::IpcConnector] LicenseClient-Nathan & Co channel disconnected successfully.
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Nathan & Co-6000.4.8" at "2026-08-25T07:42:05.9052025Z"
+[Licensing::Client] Code 10 while verifying Licensing Client signature (process Id: 22752, path: "C:/Unity/6000.4.8f1/Editor/Data/Resources/Licensing/Client/Unity.Licensing.Client.exe")
+[Licensing::Module] LicensingClient has failed validation; ignoring
+[Licensing::Client] Handshaking with LicensingClient:
+  Version:                 1.18.1+9fbee8e
+  Session Id:              4fd996bb5361459fbc4c77f9a8d200b1
+  Correlation Id:          9aca3858847af88fc6447d4c614a73c4
+  External correlation Id: 9050503752577442242
+  Machine Id:              qtyx5DMTmV6sfEVnrxz9aoLU/bw=
+[Licensing::Module] Successfully connected to LicensingClient on channel: "LicenseClient-Nathan & Co-6000.4.8" (connect: 0.00s, validation: 0.00s, handshake: 0.01s)
+[Licensing::IpcConnector] Successfully connected to: "LicenseClient-Nathan & Co-6000.4.8-notifications" at "2026-08-25T07:42:05.9174051Z"
+[Licensing::Module] Licensing Background thread has ended after 2.17s
 Begin MonoManager ReloadAssembly
 [Licensing::Client] Successfully resolved entitlement details
 [Licensing::Module] License group:
@@ -214,7 +213,7 @@ Symbol file LoadedFromMemory is not a mono symbol file
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
 'Packages/com.unity.cinemachine/Editor/Obsolete/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
 'Packages/com.unity.cinemachine/Editor/Editors/CinemachineVirtualCameraBaseEditor.cs' contains partial class of Unity.Object, exactly 1 of the partial classes needs to be in a file with the same filename. This is to know the one that can be referenced from ie. GameObjects
-Refreshing native plugins compatible for Editor in 5.92 ms, found 11 plugins.
+Refreshing native plugins compatible for Editor in 5.02 ms, found 11 plugins.
 Native extension for WindowsStandalone target not found
 Native extension for WebGL target not found
 Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInternals/HDRP-Editor-ref.asmref has no target assembly definition
@@ -227,8 +226,8 @@ Assembly reference Packages/com.unity.cinemachine/Editor/Samples/ExposeHDRPInter
 [Package Manager] Failed to launch server process. Reason: Unity was launched with the -noUpm command-line argument
 [Package Manager] Unable to send message (not connected to server process).
 [Package Manager] Cannot connect to Unity Package Manager local server
-Refreshing native plugins compatible for Editor in 11.77 ms, found 11 plugins.
-System.IO.IOException: Sharing violation on path C:\Github\color-coded-platformer\Color coded platformer\Assembly-CSharp.csproj
+Refreshing native plugins compatible for Editor in 5.22 ms, found 11 plugins.
+System.IO.IOException: Sharing violation on path C:\Github\color-coded-platformer\Color coded platformer\ESave.csproj
   at System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.Boolean anonymous, System.IO.FileOptions options) [0x0019e] in <f713e1c3c5f545ce9b1df47230f4f853>:0 
   at System.IO.FileStream..ctor (System.String path, System.IO.FileMode mode, System.IO.FileAccess access, System.IO.FileShare share, System.Int32 bufferSize, System.IO.FileOptions options) [0x00000] in <f713e1c3c5f545ce9b1df47230f4f853>:0 
   at (wrapper remoting-invoke-with-check) System.IO.FileStream..ctor(string,System.IO.FileMode,System.IO.FileAccess,System.IO.FileShare,int,System.IO.FileOptions)
@@ -254,312 +253,88 @@ UnityEditor.EditorAssemblies:ProcessInitializeOnLoadAttributes (System.Type[])
 
 ScheduleIndexationOnStartup MainProcess:False IndexOnStartup:True
 Mono: successfully reloaded assembly
-- Finished resetting the current domain, in  2.524 seconds
-Domain Reload Profiling: 4245ms
-	BeginReloadAssembly (225ms)
-		DisableScriptedObjects (6ms)
+- Finished resetting the current domain, in  2.569 seconds
+Domain Reload Profiling: 3618ms
+	BeginReloadAssembly (188ms)
+		DisableScriptedObjects (8ms)
 		CreateAndSetChildDomain (27ms)
-	RebuildCommonClasses (53ms)
-	RebuildNativeTypeToScriptingClass (18ms)
-	initialDomainReloadingComplete (225ms)
-	LoadAllAssembliesAndSetupDomain (1198ms)
-		LoadAssemblies (833ms)
-		AnalyzeDomain (499ms)
-			TypeCache.Refresh (326ms)
-				TypeCache.ScanAssembly (301ms)
-			BuildScriptInfoCaches (148ms)
-			ResolveRequiredComponents (22ms)
-	FinalizeReload (2524ms)
+	RebuildCommonClasses (46ms)
+	RebuildNativeTypeToScriptingClass (19ms)
+	initialDomainReloadingComplete (88ms)
+	LoadAllAssembliesAndSetupDomain (708ms)
+		LoadAssemblies (407ms)
+		AnalyzeDomain (394ms)
+			TypeCache.Refresh (263ms)
+				TypeCache.ScanAssembly (237ms)
+			BuildScriptInfoCaches (115ms)
+			ResolveRequiredComponents (14ms)
+	FinalizeReload (2569ms)
 		SetupLoadedEditorAssemblies (0ms)
-			BeforeProcessingInitializeOnLoad (190ms)
-			ProcessInitializeOnLoadAttributes (1938ms)
-			ProcessInitializeOnLoadMethodAttributes (93ms)
-			AfterProcessingInitializeOnLoad (7ms)
+			BeforeProcessingInitializeOnLoad (181ms)
+			ProcessInitializeOnLoadAttributes (2047ms)
+			ProcessInitializeOnLoadMethodAttributes (91ms)
+			AfterProcessingInitializeOnLoad (6ms)
 		AwakeInstancesAfterBackupRestoration (5ms)
 Launched and connected shader compiler UnityShaderCompiler.exe after 0.01 seconds
-Refreshing native plugins compatible for Editor in 5.03 ms, found 11 plugins.
+Refreshing native plugins compatible for Editor in 4.92 ms, found 11 plugins.
 Unloading 29 Unused Serialized files (Serialized files now loaded: 0)
-Unloading 8304 unused Assets / (10.2 MB). Loaded Objects now: 9138.
-Memory consumption went from 184.2 MB to 174.0 MB.
-Total: 14.142000 ms (FindLiveObjects: 1.829700 ms CreateObjectMapping: 1.592100 ms MarkObjects: 5.346000 ms  DeleteObjects: 5.371600 ms)
+Unloading 8304 unused Assets / (10.7 MB). Loaded Objects now: 9138.
+Memory consumption went from 186.0 MB to 175.3 MB.
+Total: 12.708200 ms (FindLiveObjects: 0.996700 ms CreateObjectMapping: 1.559100 ms MarkObjects: 4.940200 ms  DeleteObjects: 5.210400 ms)
 
 ========================================================================
 Received Import Request.
-  Time since last request: 78191.170826 seconds.
-  path: Assets/Imported Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Sturdy Padlock/GOLD/Sprites/Sturdy Padlock - GOLD - 0009.png
-  importAddress: Guid(9cd8f4f13e95b314db6aeae34a00a300) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Imported Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Sturdy Padlock/GOLD/Sprites/Sturdy Padlock - GOLD - 0009.png using Guid(9cd8f4f13e95b314db6aeae34a00a300) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '94a019e5bfa6df16c3c3502e73fc5322') in 0.1386721 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=10ca900f65d928bebd631dcf3fff3030 DependenciesID=34b2fe269eb6839311fbbf65d3145521 StaticDependenciesID=ffe1a054b854fa21596d7e7b97766066 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000025 seconds.
-  path: Assets/Imported Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Triangle Padlock/GREY/Sprites/Triangle Padlock - GREY - 0005.png
-  importAddress: Guid(85a4d759ccf220e4c8e137fa82056b3b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Imported Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Triangle Padlock/GREY/Sprites/Triangle Padlock - GREY - 0005.png using Guid(85a4d759ccf220e4c8e137fa82056b3b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'f819cd9b42a02f28c688ec9c57678ba2') in 0.0197444 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=3b5feafe31d0397bc4986bdfcd7d4d5b DependenciesID=9490f50f14c652dde4bc0232a60bcce4 StaticDependenciesID=c2c776649fbc946542e600c15546db7c 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000011 seconds.
-  path: Assets/Imported Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Triangle Padlock/BRONZE/Sprites/Triangle Padlock - BRONZE - 0005.png
-  importAddress: Guid(0109fc73776e9454d91b8fbaf17076db) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Imported Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Triangle Padlock/BRONZE/Sprites/Triangle Padlock - BRONZE - 0005.png using Guid(0109fc73776e9454d91b8fbaf17076db) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '5b282a071cbdd7057e42c043f5357c48') in 0.0188364 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=4e56027854a3d39fe9ecfb5de5f42b11 DependenciesID=d056c68d8c4b7978c9bd6a950d5e0331 StaticDependenciesID=3c5b7087e494076aaf95791c6346ca34 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/Imported Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Triangle Padlock/BRONZE/Sprites/Triangle Padlock - BRONZE - 0015.png
-  importAddress: Guid(a854668a3eb370a4db6bde49b666876e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Imported Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Triangle Padlock/BRONZE/Sprites/Triangle Padlock - BRONZE - 0015.png using Guid(a854668a3eb370a4db6bde49b666876e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'ef9df605b2f26ae2fb62541bb76eb291') in 0.0189875 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=9a595f45241a61a8a54491e4c5fe5fd7 DependenciesID=d2b8d537e9182b30f97e9e6c5aeb9a78 StaticDependenciesID=aa5b2aff92ea805893e5c69c2f197439 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000012 seconds.
-  path: Assets/Imported Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Small Square Padlock/GOLD/Sprites/Small Square Padlock - GOLD - 0011.png
-  importAddress: Guid(4f2cd65fc3ed0674489dc3257603b291) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Imported Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Small Square Padlock/GOLD/Sprites/Small Square Padlock - GOLD - 0011.png using Guid(4f2cd65fc3ed0674489dc3257603b291) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '20782a63c5483850dac6a089c30231a2') in 0.0184279 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=6a334bea3057a0fda4f8bf8be03f7d01 DependenciesID=2134ec8ab64742accc670cc330754ea7 StaticDependenciesID=54709bfd2df47eb6b3ccd92b6086935b 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/Imported Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Triangle Padlock/BRONZE/Sprites/Triangle Padlock - BRONZE - 0009.png
-  importAddress: Guid(0f0438407a4f5914f9f7c19796cb1b7f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Imported Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Triangle Padlock/BRONZE/Sprites/Triangle Padlock - BRONZE - 0009.png using Guid(0f0438407a4f5914f9f7c19796cb1b7f) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'dcfabce5b11ae656fb6ae44b272f1922') in 0.0203752 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=876d15b84372250e8e30d464bebd17e0 DependenciesID=c3c4dc4cf9eedf741c4f52c8c7564173 StaticDependenciesID=08f2948fd5b353e810941673937a37a7 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000019 seconds.
-  path: Assets/Imported Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Triangle Padlock/BEIGE/Sprites/Triangle Padlock - BEIGE - 0006.png
-  importAddress: Guid(ccc378c791558654aae5b1db65796777) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Imported Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Triangle Padlock/BEIGE/Sprites/Triangle Padlock - BEIGE - 0006.png using Guid(ccc378c791558654aae5b1db65796777) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '484fcf29172e1bbe28c8fb7019b4a665') in 0.019826 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=e8c77733d5fa8ca6b22a197d202fdc2e DependenciesID=0cda1f06fcb59cdf7ce35d5892e8c504 StaticDependenciesID=27881474d9abe161c1fa1280c3706982 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000012 seconds.
-  path: Assets/Imported Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Small Sturdy Padlock/BLACK/Sprites/Small Sturdy Padlock - BLACK - 0002.png
-  importAddress: Guid(2e1616b0e7a180b4195c7f8a7c41fee6) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Imported Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Small Sturdy Padlock/BLACK/Sprites/Small Sturdy Padlock - BLACK - 0002.png using Guid(2e1616b0e7a180b4195c7f8a7c41fee6) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '8dfcc86f1078651c9446eef4cc3ebecc') in 0.0193033 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=9ae563c004b1f6af8641ba0253343d6d DependenciesID=16cb6f28e03e2051ae5defa29d8b10ea StaticDependenciesID=8e601079c93ebcc41688f8dda050a3dc 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/Imported Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Triangle Padlock/GREY/Sprites/Triangle Padlock - GREY - 0001.png
-  importAddress: Guid(4b3381f287d1da347939a6f9f9be268b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Imported Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Triangle Padlock/GREY/Sprites/Triangle Padlock - GREY - 0001.png using Guid(4b3381f287d1da347939a6f9f9be268b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '9258af7b4e4d4fd09e251e7df9240690') in 0.0184691 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=157a8b5f6574858299c8a1e34e6db220 DependenciesID=cfb6756a2a49a0c614e42e45b09aee45 StaticDependenciesID=a10b88927b2f534888e2defe64e7faff 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000015 seconds.
-  path: Assets/Imported Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Small Square Padlock/GREY/Sprites/Small Square Padlock - GREY - 0006.png
-  importAddress: Guid(d1895540f892d1d408c30399dae12b43) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Imported Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Small Square Padlock/GREY/Sprites/Small Square Padlock - GREY - 0006.png using Guid(d1895540f892d1d408c30399dae12b43) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '3d260ad93ee39eef1f50a03144bb46b9') in 0.021638 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=09d1df18857653d3f57c7bd841b226ef DependenciesID=efe8892cb56d136a1409dce579334557 StaticDependenciesID=a441fc5032627d481a2313841deedb50 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/Imported Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Triangle Padlock/BEIGE/Sprites/Triangle Padlock - BEIGE - 0011.png
-  importAddress: Guid(a3a7b03256a34344ab3639ae2b9abac6) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Imported Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Triangle Padlock/BEIGE/Sprites/Triangle Padlock - BEIGE - 0011.png using Guid(a3a7b03256a34344ab3639ae2b9abac6) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'e4a4c02a7956bc31a41fd758e9b4676a') in 0.0206353 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=1a4eb56a20eddac8da82a46e1045d6cc DependenciesID=1f6bb9efa4a006cf0b47c6959d71176a StaticDependenciesID=ba5cff0fb0a97eb76c06ae9ea148ab11 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/Imported Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Triangle Padlock/GOLD/Sprites/Triangle Padlock - GOLD - 0007.png
-  importAddress: Guid(af384754136407c4397948a1dba2e0f9) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Imported Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Triangle Padlock/GOLD/Sprites/Triangle Padlock - GOLD - 0007.png using Guid(af384754136407c4397948a1dba2e0f9) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '50d851b12b157b4369ee7ded22b25310') in 0.0209452 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c033690bdf076aff2432208ea11aa019 DependenciesID=6c51846ae73742b730ba647418c6e8ec StaticDependenciesID=62277d0f273e12b1af3a50475169ed97 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000012 seconds.
-  path: Assets/Imported Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Small Sturdy Padlock/BLACK/Sprites/Small Sturdy Padlock - BLACK - 0005.png
-  importAddress: Guid(e70808ddacea886499ff2e3e49084895) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Imported Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Small Sturdy Padlock/BLACK/Sprites/Small Sturdy Padlock - BLACK - 0005.png using Guid(e70808ddacea886499ff2e3e49084895) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '9b067eddb7c0f3bc28f0b3fe03ee8f89') in 0.0205853 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c4ee9b0e898358ad07d581892e55b8bd DependenciesID=606e7df9d751079a68765b95941c25f2 StaticDependenciesID=a512cf37d3cf7708495ca03e3ee391ca 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/Imported Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Small Round Padlock/GREY/Sprites/Small Round Padlock - GREY - 0002.png
-  importAddress: Guid(79f1d1716751ffe4f9ccf15173081350) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Imported Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Small Round Padlock/GREY/Sprites/Small Round Padlock - GREY - 0002.png using Guid(79f1d1716751ffe4f9ccf15173081350) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '631124f3f602c1b9fabe2431b7dc812c') in 0.0200678 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=313ec3b4bc07eef2f628545e3fd01a44 DependenciesID=4e5eecad1bd6d8496c59d8b0f2a50476 StaticDependenciesID=68752364b5a892bdf33bc9cb2803a8e7 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/Imported Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Triangle Padlock/GOLD/Sprites/Triangle Padlock - GOLD - 0008.png
-  importAddress: Guid(1847508e5a717cd429106dfcf4a85db7) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Imported Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Triangle Padlock/GOLD/Sprites/Triangle Padlock - GOLD - 0008.png using Guid(1847508e5a717cd429106dfcf4a85db7) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'e7620663e49123f74f9cd28a33db2898') in 0.0206137 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=797955cbe6078522587401c196c48f1b DependenciesID=8ebc70f0e286464e69c3cc6a89eb50be StaticDependenciesID=7f3cd90620bb427d032a7728c04513da 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/Imported Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Sturdy Padlock/GREY/Sprites/Sturdy Padlock - GREY - 0005.png
-  importAddress: Guid(fdbb6f90c69bb004db2e10a6b8f1176b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Imported Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Sturdy Padlock/GREY/Sprites/Sturdy Padlock - GREY - 0005.png using Guid(fdbb6f90c69bb004db2e10a6b8f1176b) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '03f545d45f3c5632b70cbe9b918745df') in 0.019037 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=56e8beaf5c41e6c50e25d807a2dc0b90 DependenciesID=24954befed1f890ef10aecd32c67a35a StaticDependenciesID=d46c08d207242cfe3210238a44f2c93e 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/Imported Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Sturdy Padlock/GREY/Sprites/Sturdy Padlock - GREY - 0013.png
-  importAddress: Guid(6ef871902eb88474292488e8c71949de) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Imported Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Sturdy Padlock/GREY/Sprites/Sturdy Padlock - GREY - 0013.png using Guid(6ef871902eb88474292488e8c71949de) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '6fff4a029f41030b022c6635efb8dc10') in 0.0199039 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=bf6ec9a0adb7fbdae42d3a22fa2b68ae DependenciesID=753c531d263c1ee2263ba4c87c593bfb StaticDependenciesID=2c699a403b50628e64708e5cabeaf9b1 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/Imported Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Sturdy Padlock/GREY/Sprites/Sturdy Padlock - GREY - 0011.png
-  importAddress: Guid(952c67f0ddaa14a4197761a95c848b34) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Imported Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Sturdy Padlock/GREY/Sprites/Sturdy Padlock - GREY - 0011.png using Guid(952c67f0ddaa14a4197761a95c848b34) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '5c305872f1023bc025915984e968e937') in 0.0193688 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=63a985a0aea95b9d2de938e44c318d50 DependenciesID=2dc2cf73478b8503ceff49ec74f8140c StaticDependenciesID=8e5aad32cfa37506a7b82d7cf3dc7904 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000016 seconds.
-  path: Assets/Imported Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Small Square Padlock/GOLD/Sprites/Small Square Padlock - GOLD - 0001.png
-  importAddress: Guid(6245d2cb6626de44ca3669ebebfcb51e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Imported Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Small Square Padlock/GOLD/Sprites/Small Square Padlock - GOLD - 0001.png using Guid(6245d2cb6626de44ca3669ebebfcb51e) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'e76fb0db7372200d06875519729bec31') in 0.0209425 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=780b0ba2439e65ff0cb7540ce4ec19d7 DependenciesID=37fb3775c8749f4a67699e87f6395ba4 StaticDependenciesID=149320486d160282fbbdb63a1ac94de8 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000012 seconds.
-  path: Assets/Imported Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Small Square Padlock/BRONZE/Sprites/Small Square Padlock - BRONZE - 0000.png
-  importAddress: Guid(d4077bc0f97ae8946941e3c9cd3ad440) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Imported Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Small Square Padlock/BRONZE/Sprites/Small Square Padlock - BRONZE - 0000.png using Guid(d4077bc0f97ae8946941e3c9cd3ad440) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '8afa749b61efac425817a25e0cabffb3') in 0.021335 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=0c12fd275bf62037ab4449f83be0f50d DependenciesID=d0bf5c1bbd48312efd0cbde035e2f806 StaticDependenciesID=675f8587dc374282df06ccf0ee6cf7ee 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/Imported Assets/Cave Platformer Tileset/Individual PNG files/Tileset/trees-trunk-darkbrown/trees-trunk-darkbrown-67.png
-  importAddress: Guid(29301f65b94d4354b80cf6244d5ae8f4) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Imported Assets/Cave Platformer Tileset/Individual PNG files/Tileset/trees-trunk-darkbrown/trees-trunk-darkbrown-67.png using Guid(29301f65b94d4354b80cf6244d5ae8f4) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '3d01d74965833ce100eaf2ae58aca986') in 0.0218942 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=1cd0e3c139f307b46e62f1a3782f58bb DependenciesID=e8891fd9c5be88be3a80f2b8e7c6694d StaticDependenciesID=e31dc6c23c446be81640bd3a53b52e90 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000017 seconds.
-  path: Assets/Imported Assets/Platform tile pack/ArtWork/Tiles/Tileset_142.asset
-  importAddress: Guid(22c248f56a0513f4da226e34ee02e2c3) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Imported Assets/Platform tile pack/ArtWork/Tiles/Tileset_142.asset using Guid(22c248f56a0513f4da226e34ee02e2c3) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '6d842a9d00ef6b338e755a99ab59172e') in 0.04432 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=8d0a244683b1d470ec61f64a7e4882d6 DependenciesID=ed4a914839e9d7b8e488f74d4a937c22 StaticDependenciesID=8bed7351aa1e09d2d3793cb389465e36 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/Imported Assets/Cave Platformer Tileset/Individual PNG files/Tileset/trees-trunk-dark/trees-trunk-dark-20.png
-  importAddress: Guid(d2bc445f32f233841a6ee7cb8e865a72) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Imported Assets/Cave Platformer Tileset/Individual PNG files/Tileset/trees-trunk-dark/trees-trunk-dark-20.png using Guid(d2bc445f32f233841a6ee7cb8e865a72) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '6dd7d0338b79c2c9a61b850b345fcdfc') in 0.0213537 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=66e7383350f19348be56bec2d4b6095a DependenciesID=a1c9cb9f10dd1f06480cccff4f036e12 StaticDependenciesID=2af5c46f2765e8c43f9857dd48b2af4b 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/Imported Assets/_Heathen Engineering/Assets/UX/Icons/Flat Icons [Free]/Free Flat Media Left Double Icon.png
-  importAddress: Guid(c7a6fe9f3f07bf74a897236d55e0cee6) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Imported Assets/_Heathen Engineering/Assets/UX/Icons/Flat Icons [Free]/Free Flat Media Left Double Icon.png using Guid(c7a6fe9f3f07bf74a897236d55e0cee6) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '1d1415d0feff49b39377a2b904dafa3b') in 0.0205447 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=8ac4387dd0798e01ac1209425f2bf898 DependenciesID=0ccf68ab1460ea4304bf470caee21976 StaticDependenciesID=9033eddc7e39018c6dbde5274c0299c6 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/Imported Assets/Cave Platformer Tileset/Individual PNG files/Tileset/trees-trunk-dark/trees-trunk-dark-4.png
-  importAddress: Guid(3460b88383016ae4d8e69d970f575138) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Imported Assets/Cave Platformer Tileset/Individual PNG files/Tileset/trees-trunk-dark/trees-trunk-dark-4.png using Guid(3460b88383016ae4d8e69d970f575138) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '374c31ff18bdeff663951659ce979c2e') in 0.0223887 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=67d052b6c56a7b5f7a567717fe5826af DependenciesID=a9ccdd690d5e4c58a4a9303cdd2bb3d4 StaticDependenciesID=4bc875fdbd6a1bf3121da79419bc89fd 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000022 seconds.
-  path: Assets/Imported Assets/Cave Platformer Tileset/Individual PNG files/Tileset/trees-trunk-dark/trees-trunk-dark-35.png
-  importAddress: Guid(e1efed91060e618439bdd957a721b9a3) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Imported Assets/Cave Platformer Tileset/Individual PNG files/Tileset/trees-trunk-dark/trees-trunk-dark-35.png using Guid(e1efed91060e618439bdd957a721b9a3) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '8cccc1a2542d68602978b46d97050c85') in 0.0213217 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=b0cd555dc63da81f0246b7b9d8050916 DependenciesID=0961a9c38fb1a8ce3864976062fab170 StaticDependenciesID=2f4e00e8c113ec189b5c96d8374027f5 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/Imported Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Small Round Padlock/GREY/Sprites/Small Round Padlock - GREY - 0011.png
-  importAddress: Guid(498f2466901e5cd49a809148143714fe) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Imported Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Small Round Padlock/GREY/Sprites/Small Round Padlock - GREY - 0011.png using Guid(498f2466901e5cd49a809148143714fe) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '09b6c5073109c51aa58e3d79abf9e956') in 0.0194915 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=3f7ab62d8b10ba8dbe9fa6bd1f7bb95f DependenciesID=239db3a59e7f913af5cdfa24ed6c92b9 StaticDependenciesID=460790634c85572259f0e8eb759f320f 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/Imported Assets/GameInputControllerIconsFree/mouse/mouse-solid/mouse-left.png
-  importAddress: Guid(bffdf8cbd8232a14c9e2eb0ebe93c6c4) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Imported Assets/GameInputControllerIconsFree/mouse/mouse-solid/mouse-left.png using Guid(bffdf8cbd8232a14c9e2eb0ebe93c6c4) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '0744ccebc33421f80651b67128268b26') in 0.0219719 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=c4144bf833ca714e1894c267dd84e545 DependenciesID=726af7ea35cb912a208aa9af26108663 StaticDependenciesID=046b026d8a78d82b2f1b04427e6ac4cb 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
-
-========================================================================
-Received Import Request.
-  Time since last request: 0.000012 seconds.
-  path: Assets/Imported Assets/Game Sound Solutions - 8 bits Elements/OTHER SOUND PACK DEMO/Engines of the Future Demo/Future_engine_7_on.wav
-  importAddress: Guid(fdfe608ad536f4a0790021128d416637) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Imported Assets/Game Sound Solutions - 8 bits Elements/OTHER SOUND PACK DEMO/Engines of the Future Demo/Future_engine_7_on.wav using Guid(fdfe608ad536f4a0790021128d416637) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'aa33b1462fff9f7efa30f9ac5210142b') in 0.019989 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=7f45a657e7750fadb3539444420cc986 DependenciesID=bccceff1b20b340de606fb0a52cac920 StaticDependenciesID=385ccf2f7577d46f5162fd4066c29115 
+  Time since last request: 80121.668987 seconds.
+  path: Assets/Imported Assets/Simple 2D Platformer BE2/Render2D New.asset
+  importAddress: Guid(64dcc7feb53ec874bac471dfe86ce260) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
+Start importing Assets/Imported Assets/Simple 2D Platformer BE2/Render2D New.asset using Guid(64dcc7feb53ec874bac471dfe86ce260) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '7d0989de4cca74f0eb4db9322e493be8') in 0.120148 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=1f4a4834acced12dd109abffd51601a3 DependenciesID=8188539d1af9e99b7e16d198efa39bb8 StaticDependenciesID=2bb258ff0475c257f81c389d1ea6b929 
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/Imported Assets/_Heathen Engineering/Assets/UX/Icons/Flat Icons [Free]/Free Flat Gradient Horizontal (Right) Icon.png
-  importAddress: Guid(153fa9138019fcc44a09720d23956c6d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Imported Assets/_Heathen Engineering/Assets/UX/Icons/Flat Icons [Free]/Free Flat Gradient Horizontal (Right) Icon.png using Guid(153fa9138019fcc44a09720d23956c6d) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '2b08057e79e3d2e0cd5536fa1e76a295') in 0.0221248 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=736be36c73cc0802abd5519309f19f1a DependenciesID=ea6c0d40b44496dcd3c6362de41ce844 StaticDependenciesID=46857309f1d6d8f80c3680d825027f86 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+  Time since last request: 0.000018 seconds.
+  path: Assets/Imported Assets/Simple 2D Platformer BE2/Render2D New.asset
+  importAddress: Guid(64dcc7feb53ec874bac471dfe86ce260) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Imported Assets/Simple 2D Platformer BE2/Render2D New.asset using Guid(64dcc7feb53ec874bac471dfe86ce260) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '9fb8be520ec854b4fd6796999a17893d') in 0.0161705 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=09ba452e57e53ec0360aa4720c4fa629 DependenciesID=39d1735d31ad47f43525493d2175eed4 StaticDependenciesID=600dc7e889494c2dd7c2cc36cb2125f9 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000021 seconds.
-  path: Assets/Imported Assets/Cave Platformer Tileset/Individual PNG files/Tileset/bg_cave_greenish_32x16/bg_cave_greenish_32x16_tile_01.png
-  importAddress: Guid(ffedfdee722313543b31a764a2cf9713) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Imported Assets/Cave Platformer Tileset/Individual PNG files/Tileset/bg_cave_greenish_32x16/bg_cave_greenish_32x16_tile_01.png using Guid(ffedfdee722313543b31a764a2cf9713) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '1e7bbd2f4282736019d9a58dd47d0995') in 0.0228113 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=cdb0ee90d769e911d9f6575f7595618c DependenciesID=cd50b49fd0704d71ad61e82153cc612f StaticDependenciesID=291776006586a2492fa6da72f7eb168b 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+  Time since last request: 4.947105 seconds.
+  path: Packages/com.unity.render-pipelines.universal/Tests/Editor/PostProcessDataTests/PostProcessData BloomPS Different.asset
+  importAddress: Guid(e7b20d8e594294f4380ea14212e1b042) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.render-pipelines.universal/Tests/Editor/PostProcessDataTests/PostProcessData BloomPS Different.asset using Guid(e7b20d8e594294f4380ea14212e1b042) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: 'a762d7c807fa8a38eef5b966634a8c87') in 0.0016262 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=9cc55c6429e9be63190fb2c50de67c3c DependenciesID=8f5062174daf8893bbe4c75946130bc5 StaticDependenciesID=f39da47f4622549f36b06cc98bcff700 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000013 seconds.
-  path: Assets/Imported Assets/GameInputControllerIconsFree/mouse/mouse-solid/mouse-right.png
-  importAddress: Guid(3c477db1ce513e54c828b3ceeb5caf46) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Imported Assets/GameInputControllerIconsFree/mouse/mouse-solid/mouse-right.png using Guid(3c477db1ce513e54c828b3ceeb5caf46) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '26b052e8d154deb913f5361d21c7b2cc') in 0.0199664 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=1e3e7128eca5604fd6e3a82ce3b6c457 DependenciesID=c9e45772d9b4bc180e510ed981e93b49 StaticDependenciesID=33bfcb5d43bf0ea6a2e98ef01df93868 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+  Time since last request: 0.000020 seconds.
+  path: Packages/com.unity.render-pipelines.universal/Tests/Editor/PostProcessDataTests/PostProcessData BloomPS Different 1.asset
+  importAddress: Guid(350a709cf1218764c94f752764b6ab69) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Packages/com.unity.render-pipelines.universal/Tests/Editor/PostProcessDataTests/PostProcessData BloomPS Different 1.asset using Guid(350a709cf1218764c94f752764b6ab69) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '5c4f2f54aeb639974b7f624e8bd81d23') in 0.0011744 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=0431bb24b78f2ad95846bd6e332bbbc6 DependenciesID=fb1da5e577501474a451cdab9439379a StaticDependenciesID=79d7c3036e4c86272473f4edfa4ebe94 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 1
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/Imported Assets/Platform tile pack/ArtWork/Tiles/Tileset_31.asset
-  importAddress: Guid(60ab907952191444ca52c40cc4d436ad) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Imported Assets/Platform tile pack/ArtWork/Tiles/Tileset_31.asset using Guid(60ab907952191444ca52c40cc4d436ad) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '5ec2bcc6e288eb5731fa359222e2b888') in 0.0202572 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=cadbe397bcadb9d51e1f962046881bff DependenciesID=ff0f88d849d2916ebfe2c05a97c98d50 StaticDependenciesID=472c8d9672edec4e4f7cd7b60c3bd666 
+  Time since last request: 29.814709 seconds.
+  path: Assets/Settings/Medium_PipelineAsset.asset
+  importAddress: Guid(227317466faca064990551b4f2bcc7dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Settings/Medium_PipelineAsset.asset using Guid(227317466faca064990551b4f2bcc7dc) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: 'd6eedadc31a9d705cfaf39a0adcf6760') in 0.0016992 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=4a3ab639ec4ec5a1ee3da62ea360b8c0 DependenciesID=acbf8001df2af6572f3317aebc7c6f99 StaticDependenciesID=1fe20a970de70f722b868436da4cf133 
 Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000014 seconds.
-  path: Assets/Imported Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Small Square Padlock/BLACK/Sprites/Small Square Padlock - BLACK - 0008.png
-  importAddress: Guid(457417b151547ac4d870976df04d9ced) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Imported Assets/karsiori/Pixel Art Padlock Pack - Animated/Sprites/Small Square Padlock/BLACK/Sprites/Small Square Padlock - BLACK - 0008.png using Guid(457417b151547ac4d870976df04d9ced) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: 'dd31bde67927ece19ff13a8dcae3dbd6') in 0.0206516 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=2a45293f4fd3f3ab3010ac3ef9ca3d03 DependenciesID=2746a06f7f05ae5b564702b8cf30a04a StaticDependenciesID=19005957db5550d610355780a110e78f 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 3
+  Time since last request: 0.000015 seconds.
+  path: Assets/Settings/Ultra_PipelineAsset.asset
+  importAddress: Guid(0d4f79168f3739b49893a73746dd3795) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Settings/Ultra_PipelineAsset.asset using Guid(0d4f79168f3739b49893a73746dd3795) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '9fcd4c705c9510a5fb8143c554b160de') in 0.0009386 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=6fbad217607d9e49525c32a755cde431 DependenciesID=59d205296ddda9bc118147d636cb18a7 StaticDependenciesID=5ff08a6d799f981190017ecf1c3b61f8 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 0
 
 ========================================================================
 Received Import Request.
-  Time since last request: 0.000012 seconds.
-  path: Assets/Imported Assets/FastMesh/Prefabs/Icon/Icon-mail-volume.prefab
-  importAddress: Guid(c0f749e8ecf16b146a6e5bf5a0873d92) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d)
-Start importing Assets/Imported Assets/FastMesh/Prefabs/Icon/Icon-mail-volume.prefab using Guid(c0f749e8ecf16b146a6e5bf5a0873d92) Importer(2089858483,b0f066a214c2f5e87bad3c948f4d605d) (ScriptedImporter) -> (Import Result ID: '323d2d56b24cb972c20fe163e5df68bc') in 0.0556423 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=9cbed605c259de01c1a90e617dd1bb63 DependenciesID=23cc47ed27d6ac2f364e8b752850a015 StaticDependenciesID=ba964abb757dd64f3df4fc555a390464 
-Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 8
+  Time since last request: 0.000013 seconds.
+  path: Assets/Settings/Very Low_PipelineAsset.asset
+  importAddress: Guid(09204b115b095e946ad0562ed9653083) Importer(815301076,1909f56bfc062723c751e8b465ee728b)
+Start importing Assets/Settings/Very Low_PipelineAsset.asset using Guid(09204b115b095e946ad0562ed9653083) Importer(815301076,1909f56bfc062723c751e8b465ee728b) (PreviewImporter) -> (Import Result ID: '6db02727cabf7dbab0ffcd7750585c71') in 0.0017929 seconds [static and dynamic dependencies]. Details - ImportResultOutputID=197c283460e6be3dd2d2a9118ee92138 DependenciesID=bace482effefd7931cf2954aa9a7f38c StaticDependenciesID=807ab363bf12ccffa9d207548741cf4d 
+Number of updated asset objects reloaded before import = 0Number of asset objects unloaded after import = 2
 
