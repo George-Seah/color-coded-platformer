@@ -1,5 +1,112 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
+--- !u!114 &-9129789431585463397
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fb60a22f311433c4c962b888d1393f88, type: 3}
+  m_Name: PaniniProjection
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.PaniniProjection
+  active: 1
+  distance:
+    m_OverrideState: 1
+    m_Value: 0
+  cropToFit:
+    m_OverrideState: 1
+    m_Value: 1
+--- !u!114 &-8849135929153516374
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: e021b4c809a781e468c2988c016ebbea, type: 3}
+  m_Name: ColorLookup
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.ColorLookup
+  active: 1
+  texture:
+    m_OverrideState: 1
+    m_Value: {fileID: 0}
+    dimension: 1
+  contribution:
+    m_OverrideState: 1
+    m_Value: 0
+--- !u!114 &-7195545979624988815
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c5e1dc532bcb41949b58bc4f2abfbb7e, type: 3}
+  m_Name: LensDistortion
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.LensDistortion
+  active: 1
+  intensity:
+    m_OverrideState: 1
+    m_Value: 0
+  xMultiplier:
+    m_OverrideState: 1
+    m_Value: 1
+  yMultiplier:
+    m_OverrideState: 1
+    m_Value: 1
+  center:
+    m_OverrideState: 1
+    m_Value: {x: 0.5, y: 0.5}
+  scale:
+    m_OverrideState: 1
+    m_Value: 1
+--- !u!114 &-7070309442421322846
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cdfbdbb87d3286943a057f7791b43141, type: 3}
+  m_Name: ChannelMixer
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.ChannelMixer
+  active: 1
+  redOutRedIn:
+    m_OverrideState: 1
+    m_Value: 100
+  redOutGreenIn:
+    m_OverrideState: 1
+    m_Value: 0
+  redOutBlueIn:
+    m_OverrideState: 1
+    m_Value: 0
+  greenOutRedIn:
+    m_OverrideState: 1
+    m_Value: 0
+  greenOutGreenIn:
+    m_OverrideState: 1
+    m_Value: 100
+  greenOutBlueIn:
+    m_OverrideState: 1
+    m_Value: 0
+  blueOutRedIn:
+    m_OverrideState: 1
+    m_Value: 0
+  blueOutGreenIn:
+    m_OverrideState: 1
+    m_Value: 0
+  blueOutBlueIn:
+    m_OverrideState: 1
+    m_Value: 100
 --- !u!114 &-7026206683520391259
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -17,35 +124,85 @@ MonoBehaviour:
     m_OverrideState: 1
     m_Value: 2
   gaussianStart:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 10
   gaussianEnd:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 30
   gaussianMaxRadius:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 1
   highQualitySampling:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0
   focusDistance:
     m_OverrideState: 1
     m_Value: 10
   aperture:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 5.6
   focalLength:
     m_OverrideState: 1
     m_Value: 94
   bladeCount:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 5
   bladeCurvature:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 1
   bladeRotation:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0
+--- !u!114 &-6972552901860359723
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 66f335fb1ffd8684294ad653bf1c7564, type: 3}
+  m_Name: ColorAdjustments
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.ColorAdjustments
+  active: 1
+  postExposure:
+    m_OverrideState: 1
+    m_Value: 0
+  contrast:
+    m_OverrideState: 1
+    m_Value: 0
+  colorFilter:
+    m_OverrideState: 1
+    m_Value: {r: 1, g: 1, b: 1, a: 1}
+  hueShift:
+    m_OverrideState: 1
+    m_Value: 0
+  saturation:
+    m_OverrideState: 1
+    m_Value: 0
+--- !u!114 &-5635101007954912653
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5485954d14dfb9a4c8ead8edb0ded5b1, type: 3}
+  m_Name: LiftGammaGain
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.LiftGammaGain
+  active: 1
+  lift:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: 0}
+  gamma:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: 0}
+  gain:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: 0}
 --- !u!114 &-5292779700205705625
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -60,38 +217,97 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.RenderPipelines.Core.Runtime::UnityEngine.Rendering.ProbeVolumesOptions
   active: 1
   normalBias:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0.05
   viewBias:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0.1
   scaleBiasWithMinProbeDistance:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0
   samplingNoise:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0.1
   animateSamplingNoise:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 1
   leakReductionMode:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 2
   minValidDotProductValue:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0.1
   occlusionOnlyReflectionNormalization:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 1
   intensityMultiplier:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 1
   skyOcclusionIntensityMultiplier:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 1
   worldOffset:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: {x: 0, y: 0, z: 0}
+--- !u!114 &-3804517919242001195
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 221518ef91623a7438a71fef23660601, type: 3}
+  m_Name: WhiteBalance
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.WhiteBalance
+  active: 1
+  temperature:
+    m_OverrideState: 1
+    m_Value: 0
+  tint:
+    m_OverrideState: 1
+    m_Value: 0
+--- !u!114 &-703583359047983508
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 97c23e3b12dc18c42a140437e53d3951, type: 3}
+  m_Name: Tonemapping
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.Tonemapping
+  active: 1
+  mode:
+    m_OverrideState: 1
+    m_Value: 0
+  neutralHDRRangeReductionMode:
+    m_OverrideState: 1
+    m_Value: 2
+  acesPreset:
+    m_OverrideState: 1
+    m_Value: 3
+  hueShiftAmount:
+    m_OverrideState: 1
+    m_Value: 0
+  detectPaperWhite:
+    m_OverrideState: 1
+    m_Value: 0
+  paperWhite:
+    m_OverrideState: 1
+    m_Value: 300
+  detectBrightnessLimits:
+    m_OverrideState: 1
+    m_Value: 1
+  minNits:
+    m_OverrideState: 1
+    m_Value: 0.005
+  maxNits:
+    m_OverrideState: 1
+    m_Value: 1000
 --- !u!114 &11400000
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -112,6 +328,18 @@ MonoBehaviour:
   - {fileID: -7026206683520391259}
   - {fileID: 7551856195440340982}
   - {fileID: 6265272411662144372}
+  - {fileID: -6972552901860359723}
+  - {fileID: -7195545979624988815}
+  - {fileID: 1799283692474169463}
+  - {fileID: -3804517919242001195}
+  - {fileID: 8571567792184892012}
+  - {fileID: 7995089944177973820}
+  - {fileID: -8849135929153516374}
+  - {fileID: -7070309442421322846}
+  - {fileID: 536853370070223161}
+  - {fileID: -9129789431585463397}
+  - {fileID: -5635101007954912653}
+  - {fileID: -703583359047983508}
 --- !u!114 &302591288275963126
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -124,9 +352,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 3eb4b772797da9440885e8bd939e9560, type: 3}
   m_Name: ColorCurves
   m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.ColorCurves
-  active: 0
+  active: 1
   master:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value:
       <length>k__BackingField: 2
       m_Loop: 0
@@ -157,7 +385,7 @@ MonoBehaviour:
         m_PostInfinity: 2
         m_RotationOrder: 4
   red:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value:
       <length>k__BackingField: 2
       m_Loop: 0
@@ -188,7 +416,7 @@ MonoBehaviour:
         m_PostInfinity: 2
         m_RotationOrder: 4
   green:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value:
       <length>k__BackingField: 2
       m_Loop: 0
@@ -219,7 +447,7 @@ MonoBehaviour:
         m_PostInfinity: 2
         m_RotationOrder: 4
   blue:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value:
       <length>k__BackingField: 2
       m_Loop: 0
@@ -250,7 +478,7 @@ MonoBehaviour:
         m_PostInfinity: 2
         m_RotationOrder: 4
   hueVsHue:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value:
       <length>k__BackingField: 0
       m_Loop: 1
@@ -263,7 +491,7 @@ MonoBehaviour:
         m_PostInfinity: 2
         m_RotationOrder: 4
   hueVsSat:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value:
       <length>k__BackingField: 0
       m_Loop: 1
@@ -276,7 +504,7 @@ MonoBehaviour:
         m_PostInfinity: 2
         m_RotationOrder: 4
   satVsSat:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value:
       <length>k__BackingField: 0
       m_Loop: 0
@@ -289,7 +517,7 @@ MonoBehaviour:
         m_PostInfinity: 2
         m_RotationOrder: 4
   lumVsSat:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value:
       <length>k__BackingField: 0
       m_Loop: 0
@@ -301,6 +529,44 @@ MonoBehaviour:
         m_PreInfinity: 2
         m_PostInfinity: 2
         m_RotationOrder: 4
+--- !u!114 &536853370070223161
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 81180773991d8724ab7f2d216912b564, type: 3}
+  m_Name: ChromaticAberration
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.ChromaticAberration
+  active: 1
+  intensity:
+    m_OverrideState: 1
+    m_Value: 0
+--- !u!114 &1799283692474169463
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 70afe9e12c7a7ed47911bb608a23a8ff, type: 3}
+  m_Name: SplitToning
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.SplitToning
+  active: 1
+  shadows:
+    m_OverrideState: 1
+    m_Value: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  highlights:
+    m_OverrideState: 1
+    m_Value: {r: 0.5, g: 0.5, b: 0.5, a: 1}
+  balance:
+    m_OverrideState: 1
+    m_Value: 0
 --- !u!114 &5981547947060361691
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -315,7 +581,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.Bloom
   active: 1
   skipIterations:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 1
   threshold:
     m_OverrideState: 1
@@ -327,29 +593,29 @@ MonoBehaviour:
     m_OverrideState: 1
     m_Value: 0.35
   clamp:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 65472
   tint:
     m_OverrideState: 1
     m_Value: {r: 0, g: 0, b: 0, a: 1}
   highQualityFiltering:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0
   filter:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0
   downscale:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0
   maxIterations:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 6
   dirtTexture:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: {fileID: 0}
     dimension: 1
   dirtIntensity:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: 0
 --- !u!114 &6265272411662144372
 MonoBehaviour:
@@ -365,13 +631,13 @@ MonoBehaviour:
   m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.ShadowsMidtonesHighlights
   active: 1
   shadows:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: {x: 1, y: 1, z: 1, w: 0}
   midtones:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: {x: 1, y: 1, z: 1, w: 0}
   highlights:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: {x: 1, y: 1, z: 1, w: 0}
   shadowsStart:
     m_OverrideState: 1
@@ -402,7 +668,7 @@ MonoBehaviour:
     m_OverrideState: 1
     m_Value: {r: 0, g: 0, b: 0, a: 1}
   center:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: {x: 0.5, y: 0.5}
   intensity:
     m_OverrideState: 1
@@ -436,5 +702,97 @@ MonoBehaviour:
     m_OverrideState: 1
     m_Value: 0.835
   texture:
-    m_OverrideState: 0
+    m_OverrideState: 1
     m_Value: {fileID: 0}
+--- !u!114 &7995089944177973820
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 06437c1ff663d574d9447842ba0a72e4, type: 3}
+  m_Name: ScreenSpaceLensFlare
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.ScreenSpaceLensFlare
+  active: 1
+  intensity:
+    m_OverrideState: 1
+    m_Value: 0
+  tintColor:
+    m_OverrideState: 1
+    m_Value: {r: 1, g: 1, b: 1, a: 1}
+  bloomMip:
+    m_OverrideState: 1
+    m_Value: 1
+  firstFlareIntensity:
+    m_OverrideState: 1
+    m_Value: 1
+  secondaryFlareIntensity:
+    m_OverrideState: 1
+    m_Value: 1
+  warpedFlareIntensity:
+    m_OverrideState: 1
+    m_Value: 1
+  warpedFlareScale:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1}
+  samples:
+    m_OverrideState: 1
+    m_Value: 1
+  sampleDimmer:
+    m_OverrideState: 1
+    m_Value: 0.5
+  vignetteEffect:
+    m_OverrideState: 1
+    m_Value: 1
+  startingPosition:
+    m_OverrideState: 1
+    m_Value: 1.25
+  scale:
+    m_OverrideState: 1
+    m_Value: 1.5
+  streaksIntensity:
+    m_OverrideState: 1
+    m_Value: 0
+  streaksLength:
+    m_OverrideState: 1
+    m_Value: 0.5
+  streaksOrientation:
+    m_OverrideState: 1
+    m_Value: 0
+  streaksThreshold:
+    m_OverrideState: 1
+    m_Value: 0.25
+  resolution:
+    m_OverrideState: 1
+    m_Value: 4
+  chromaticAbberationIntensity:
+    m_OverrideState: 1
+    m_Value: 0.5
+--- !u!114 &8571567792184892012
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ccf1aba9553839d41ae37dd52e9ebcce, type: 3}
+  m_Name: MotionBlur
+  m_EditorClassIdentifier: Unity.RenderPipelines.Universal.Runtime::UnityEngine.Rendering.Universal.MotionBlur
+  active: 1
+  mode:
+    m_OverrideState: 1
+    m_Value: 0
+  quality:
+    m_OverrideState: 1
+    m_Value: 0
+  intensity:
+    m_OverrideState: 1
+    m_Value: 0
+  clamp:
+    m_OverrideState: 1
+    m_Value: 0.05
