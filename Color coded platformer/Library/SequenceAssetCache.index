@@ -11,5 +11,5 @@ MonoBehaviour:
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 17efdaed1bec0e0468d006f8bfed4725, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: 
+  m_EditorClassIdentifier: Unity.Sequences.Editor::UnityEditor.Sequences.SequenceAssetIndexer
   m_Indexes: []
