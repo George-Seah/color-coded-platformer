@@ -3,19 +3,34 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine.SceneManagement;
 using TMPro;
+using UnityEngine.EventSystems;
 
 public class GameManager : MonoBehaviour
 {
     public static GameManager Instance;
+    public static EventSystem eventSystem;
     public Vector2 playerSpawnPoint;
 
     void Awake(){
-    DontDestroyOnLoad(gameObject);
+        DontDestroyOnLoad(gameObject);
 
-    if (Instance == null)
-        Instance = this;
-    else
-        Destroy(gameObject);
+        if (Instance == null)
+            Instance = this;
+        else
+            Destroy(gameObject);
+
+        // Ensure that there is only one instance of the EventSystem in the scene
+        if (eventSystem == null)
+            eventSystem = FindFirstObjectByType<EventSystem>();
+
+        //Find all objects of type EventSystem and destroy any duplicates
+        var eventSystems = FindObjectsByType<EventSystem>();
+
+        foreach (var es in eventSystems)
+        {
+            if (es != eventSystem)
+                Destroy(es.gameObject);
+        }    
     }
 
 

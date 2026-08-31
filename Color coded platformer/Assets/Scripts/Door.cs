@@ -8,10 +8,10 @@ public class Door : MonoBehaviour
     [Header("Scene Transition")]
     [SerializeField] string scene;
     [SerializeField] Vector2 newPlayerPosition;
-
+    [SerializeField] RectTransform canvasTransform;
     bool playerInRange;
     bool used;
-    RectTransform canvasTransform;
+
 
     PlayerInput playerInput;
     InputAction interact;
@@ -19,18 +19,19 @@ public class Door : MonoBehaviour
     void Awake()
     {
         GetComponent<Collider2D>().isTrigger = true;
-        canvasTransform = GetComponentInChildren<RectTransform>();
         canvasTransform.gameObject.SetActive(false);
     }
 
     void OnTriggerEnter2D(Collider2D other)
     {
-        canvasTransform.gameObject.SetActive(true);
+
 
         if (used) return;
 
         if (!other.TryGetComponent(out PlayerInput input)) return;
 
+        canvasTransform.gameObject.SetActive(true);
+        
         playerInput = input;
         interact = playerInput.actions["Interact"];
 

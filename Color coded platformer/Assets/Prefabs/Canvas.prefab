@@ -105,6 +105,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -241,6 +242,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -534,6 +536,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -803,6 +806,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -980,31 +984,44 @@ MonoBehaviour:
       m_Calls: []
   m_text: 'Waddler sprites are from the Simple 2D Platformer BE2 by Goldmetal
 
+
     Cannonball
     sprite is from the 2D Pixel Item Pack by Startled Pixels
 
-    Cannon sprite is
-    from the 2D Destructible Objects pack by RAFMANIX
 
-    Key sprite is from IconsDB
+    Cannon sprite
+    is from the 2D Destructible Objects pack by RAFMANIX
 
-    Push
-    block, door and ladder sprites are from the Platform tile pack by Evolvers
 
-    Lever
-    sprite and Man sprite emmited from color changing blocks are from Free Pixel
-    Space Platform Pack by Aiden Art
+    Key sprite is from
+    IconsDB
 
-    Locked Gate sprite is from Pixel Art Padlock
-    Pack - Animated by karsiori
 
-    Keyboard icons are from Game Input Controller
-    Icons Free pack by Amanz
+    Push block, door and ladder sprites are from the Platform tile
+    pack by Evolvers
 
-    Controller icons are from UX Flat Icons [Free]
-    by Heathen Engineering
 
-    Programming functions and design refined by ChatGPT'
+    Lever sprite and Man sprite emmited from color changing
+    blocks are from Free Pixel Space Platform Pack by Aiden Art
+
+
+    Locked Gate
+    sprite is from Pixel Art Padlock Pack - Animated by karsiori
+
+
+    Keyboard icons
+    are from Game Input Controller Icons Free pack by Amanz
+
+
+    Controller icons
+    are from UX Flat Icons [Free] by Heathen Engineering
+
+
+    Programming functions
+    and design refined by ChatGPT
+
+
+    Player sprite are by my brother'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -1042,6 +1059,7 @@ MonoBehaviour:
   m_VerticalAlignment: 256
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -1469,6 +1487,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -2034,6 +2053,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -2327,6 +2347,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -2620,6 +2641,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -2891,6 +2913,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -3027,6 +3050,7 @@ MonoBehaviour:
   m_VerticalAlignment: 512
   m_textAlignment: 65535
   m_characterSpacing: 0
+  m_characterHorizontalScale: 1
   m_wordSpacing: 0
   m_lineSpacing: 0
   m_lineSpacingMax: 0
@@ -3483,6 +3507,7 @@ Canvas:
   m_OverridePixelPerfect: 0
   m_SortingBucketNormalizedSize: 0
   m_VertexColorAlwaysGammaSpace: 0
+  m_UseReflectionProbes: 0
   m_AdditionalShaderChannelsFlag: 25
   m_UpdateRectTransformForStandalone: 0
   m_SortingLayerID: 0

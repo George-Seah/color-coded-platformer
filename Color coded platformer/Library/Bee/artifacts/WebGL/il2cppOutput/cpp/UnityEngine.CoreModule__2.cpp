@@ -26523,6 +26523,46 @@ IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool EntityId_op_Inequality_m6E0185C52F9593F4
 		return (bool)((((int32_t)L_1) == ((int32_t)0))? 1 : 0);
 	}
 }
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool EntityId_op_LessThan_mD23784EFE9DD21F6FED966EEFA2E94178F9567B4 (EntityId_t982FBD037EAC5CA077B1602A7EA40E3523AA0FC8 ___0_left, EntityId_t982FBD037EAC5CA077B1602A7EA40E3523AA0FC8 ___1_right, const RuntimeMethod* method) 
+{
+	{
+		EntityId_t982FBD037EAC5CA077B1602A7EA40E3523AA0FC8 L_0 = ___0_left;
+		int32_t L_1 = L_0.___m_Data;
+		EntityId_t982FBD037EAC5CA077B1602A7EA40E3523AA0FC8 L_2 = ___1_right;
+		int32_t L_3 = L_2.___m_Data;
+		return (bool)((((int32_t)L_1) < ((int32_t)L_3))? 1 : 0);
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool EntityId_op_GreaterThan_mF11CE1FA21F8E2241E1A43B826BD4D2450D690E4 (EntityId_t982FBD037EAC5CA077B1602A7EA40E3523AA0FC8 ___0_left, EntityId_t982FBD037EAC5CA077B1602A7EA40E3523AA0FC8 ___1_right, const RuntimeMethod* method) 
+{
+	{
+		EntityId_t982FBD037EAC5CA077B1602A7EA40E3523AA0FC8 L_0 = ___0_left;
+		int32_t L_1 = L_0.___m_Data;
+		EntityId_t982FBD037EAC5CA077B1602A7EA40E3523AA0FC8 L_2 = ___1_right;
+		int32_t L_3 = L_2.___m_Data;
+		return (bool)((((int32_t)L_1) > ((int32_t)L_3))? 1 : 0);
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool EntityId_op_LessThanOrEqual_m63AD99FB64032DCFD3115710F92AAD43730EDF35 (EntityId_t982FBD037EAC5CA077B1602A7EA40E3523AA0FC8 ___0_left, EntityId_t982FBD037EAC5CA077B1602A7EA40E3523AA0FC8 ___1_right, const RuntimeMethod* method) 
+{
+	{
+		EntityId_t982FBD037EAC5CA077B1602A7EA40E3523AA0FC8 L_0 = ___0_left;
+		int32_t L_1 = L_0.___m_Data;
+		EntityId_t982FBD037EAC5CA077B1602A7EA40E3523AA0FC8 L_2 = ___1_right;
+		int32_t L_3 = L_2.___m_Data;
+		return (bool)((((int32_t)((((int32_t)L_1) > ((int32_t)L_3))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+	}
+}
+IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR bool EntityId_op_GreaterThanOrEqual_mBB05D7CBAA033B6CB214F4C50EAAB45D31FDA8EA (EntityId_t982FBD037EAC5CA077B1602A7EA40E3523AA0FC8 ___0_left, EntityId_t982FBD037EAC5CA077B1602A7EA40E3523AA0FC8 ___1_right, const RuntimeMethod* method) 
+{
+	{
+		EntityId_t982FBD037EAC5CA077B1602A7EA40E3523AA0FC8 L_0 = ___0_left;
+		int32_t L_1 = L_0.___m_Data;
+		EntityId_t982FBD037EAC5CA077B1602A7EA40E3523AA0FC8 L_2 = ___1_right;
+		int32_t L_3 = L_2.___m_Data;
+		return (bool)((((int32_t)((((int32_t)L_1) < ((int32_t)L_3))? 1 : 0)) == ((int32_t)0))? 1 : 0);
+	}
+}
 IL2CPP_EXTERN_C IL2CPP_METHOD_ATTR int32_t EntityId_GetHashCode_m7B7BE3CC221C5EEAB3D2E64BD632F057E7931410 (EntityId_t982FBD037EAC5CA077B1602A7EA40E3523AA0FC8* __this, const RuntimeMethod* method) 
 {
 	{

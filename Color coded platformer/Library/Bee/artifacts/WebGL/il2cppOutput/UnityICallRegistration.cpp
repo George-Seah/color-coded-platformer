@@ -722,6 +722,10 @@ void RegisterAllStrippedInternalCalls()
 
 	//Start Registrations for type : UnityEngine.Animations.AnimationPlayableOutput
 
+		//System.IntPtr UnityEngine.Animations.AnimationPlayableOutput::InternalGetTarget_Injected(UnityEngine.Playables.PlayableOutputHandle&)
+		void Register_UnityEngine_Animations_AnimationPlayableOutput_InternalGetTarget_Injected();
+		Register_UnityEngine_Animations_AnimationPlayableOutput_InternalGetTarget_Injected();
+
 		//System.Void UnityEngine.Animations.AnimationPlayableOutput::InternalSetTarget_Injected(UnityEngine.Playables.PlayableOutputHandle&,System.IntPtr)
 		void Register_UnityEngine_Animations_AnimationPlayableOutput_InternalSetTarget_Injected();
 		Register_UnityEngine_Animations_AnimationPlayableOutput_InternalSetTarget_Injected();
@@ -876,11 +880,59 @@ void RegisterAllStrippedInternalCalls()
 
 	//End Registrations for type : UnityEngine.AsyncOperation
 
+	//Start Registrations for type : UnityEngine.Audio.AudioClipPlayable
+
+		//System.Boolean UnityEngine.Audio.AudioClipPlayable::InternalCreateAudioClipPlayable_Injected(UnityEngine.Playables.PlayableGraph&,System.IntPtr,System.Boolean,UnityEngine.Playables.PlayableHandle&)
+		void Register_UnityEngine_Audio_AudioClipPlayable_InternalCreateAudioClipPlayable_Injected();
+		Register_UnityEngine_Audio_AudioClipPlayable_InternalCreateAudioClipPlayable_Injected();
+
+		//System.Void UnityEngine.Audio.AudioClipPlayable::SetPauseDelayInternal(UnityEngine.Playables.PlayableHandle&,System.Double)
+		void Register_UnityEngine_Audio_AudioClipPlayable_SetPauseDelayInternal();
+		Register_UnityEngine_Audio_AudioClipPlayable_SetPauseDelayInternal();
+
+		//System.Void UnityEngine.Audio.AudioClipPlayable::SetSpatialBlendInternal(UnityEngine.Playables.PlayableHandle&,System.Single)
+		void Register_UnityEngine_Audio_AudioClipPlayable_SetSpatialBlendInternal();
+		Register_UnityEngine_Audio_AudioClipPlayable_SetSpatialBlendInternal();
+
+		//System.Void UnityEngine.Audio.AudioClipPlayable::SetStartDelayInternal(UnityEngine.Playables.PlayableHandle&,System.Double)
+		void Register_UnityEngine_Audio_AudioClipPlayable_SetStartDelayInternal();
+		Register_UnityEngine_Audio_AudioClipPlayable_SetStartDelayInternal();
+
+		//System.Void UnityEngine.Audio.AudioClipPlayable::SetStereoPanInternal(UnityEngine.Playables.PlayableHandle&,System.Single)
+		void Register_UnityEngine_Audio_AudioClipPlayable_SetStereoPanInternal();
+		Register_UnityEngine_Audio_AudioClipPlayable_SetStereoPanInternal();
+
+		//System.Void UnityEngine.Audio.AudioClipPlayable::SetVolumeInternal(UnityEngine.Playables.PlayableHandle&,System.Single)
+		void Register_UnityEngine_Audio_AudioClipPlayable_SetVolumeInternal();
+		Register_UnityEngine_Audio_AudioClipPlayable_SetVolumeInternal();
+
+	//End Registrations for type : UnityEngine.Audio.AudioClipPlayable
+
+	//Start Registrations for type : UnityEngine.Audio.AudioMixerPlayable
+
+		//System.Boolean UnityEngine.Audio.AudioMixerPlayable::CreateAudioMixerPlayableInternal(UnityEngine.Playables.PlayableGraph&,System.Boolean,UnityEngine.Playables.PlayableHandle&)
+		void Register_UnityEngine_Audio_AudioMixerPlayable_CreateAudioMixerPlayableInternal();
+		Register_UnityEngine_Audio_AudioMixerPlayable_CreateAudioMixerPlayableInternal();
+
+	//End Registrations for type : UnityEngine.Audio.AudioMixerPlayable
+
+	//Start Registrations for type : UnityEngine.Audio.AudioPlayableGraphExtensions
+
+		//System.Boolean UnityEngine.Audio.AudioPlayableGraphExtensions::InternalCreateAudioOutput_Injected(UnityEngine.Playables.PlayableGraph&,UnityEngine.Bindings.ManagedSpanWrapper&,UnityEngine.Playables.PlayableOutputHandle&)
+		void Register_UnityEngine_Audio_AudioPlayableGraphExtensions_InternalCreateAudioOutput_Injected();
+		Register_UnityEngine_Audio_AudioPlayableGraphExtensions_InternalCreateAudioOutput_Injected();
+
+	//End Registrations for type : UnityEngine.Audio.AudioPlayableGraphExtensions
+
 	//Start Registrations for type : UnityEngine.Audio.AudioPlayableOutput
 
 		//System.Void UnityEngine.Audio.AudioPlayableOutput::InternalSetEvaluateOnSeek(UnityEngine.Playables.PlayableOutputHandle&,System.Boolean)
 		void Register_UnityEngine_Audio_AudioPlayableOutput_InternalSetEvaluateOnSeek();
 		Register_UnityEngine_Audio_AudioPlayableOutput_InternalSetEvaluateOnSeek();
+
+		//System.Void UnityEngine.Audio.AudioPlayableOutput::InternalSetTarget_Injected(UnityEngine.Playables.PlayableOutputHandle&,System.IntPtr)
+		void Register_UnityEngine_Audio_AudioPlayableOutput_InternalSetTarget_Injected();
+		Register_UnityEngine_Audio_AudioPlayableOutput_InternalSetTarget_Injected();
 
 	//End Registrations for type : UnityEngine.Audio.AudioPlayableOutput
 
@@ -891,6 +943,22 @@ void RegisterAllStrippedInternalCalls()
 		Register_UnityEngine_Audio_ScriptableProcessorBindings_CheckProcessorExistsInternal_Injected();
 
 	//End Registrations for type : UnityEngine.Audio.ScriptableProcessorBindings
+
+	//Start Registrations for type : UnityEngine.AudioClip
+
+		//System.Int32 UnityEngine.AudioClip::get_frequency_Injected(System.IntPtr)
+		void Register_UnityEngine_AudioClip_get_frequency_Injected();
+		Register_UnityEngine_AudioClip_get_frequency_Injected();
+
+		//System.Int32 UnityEngine.AudioClip::get_samples_Injected(System.IntPtr)
+		void Register_UnityEngine_AudioClip_get_samples_Injected();
+		Register_UnityEngine_AudioClip_get_samples_Injected();
+
+		//System.Single UnityEngine.AudioClip::get_length_Injected(System.IntPtr)
+		void Register_UnityEngine_AudioClip_get_length_Injected();
+		Register_UnityEngine_AudioClip_get_length_Injected();
+
+	//End Registrations for type : UnityEngine.AudioClip
 
 	//Start Registrations for type : UnityEngine.AudioSource
 
@@ -4166,6 +4234,14 @@ void RegisterAllStrippedInternalCalls()
 
 	//Start Registrations for type : UnityEngine.ParticleSystem
 
+		//System.Boolean UnityEngine.ParticleSystem::get_useAutoRandomSeed_Injected(System.IntPtr)
+		void Register_UnityEngine_ParticleSystem_get_useAutoRandomSeed_Injected();
+		Register_UnityEngine_ParticleSystem_get_useAutoRandomSeed_Injected();
+
+		//System.Single UnityEngine.ParticleSystem::get_time_Injected(System.IntPtr)
+		void Register_UnityEngine_ParticleSystem_get_time_Injected();
+		Register_UnityEngine_ParticleSystem_get_time_Injected();
+
 		//System.Void UnityEngine.ParticleSystem::EmitOld_Internal_Injected(System.IntPtr,UnityEngine.ParticleSystem/Particle&)
 		void Register_UnityEngine_ParticleSystem_EmitOld_Internal_Injected();
 		Register_UnityEngine_ParticleSystem_EmitOld_Internal_Injected();
@@ -4178,6 +4254,22 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_ParticleSystem_Emit_Internal_Injected();
 		Register_UnityEngine_ParticleSystem_Emit_Internal_Injected();
 
+		//System.Void UnityEngine.ParticleSystem::Simulate_Injected(System.IntPtr,System.Single,System.Boolean,System.Boolean,System.Boolean)
+		void Register_UnityEngine_ParticleSystem_Simulate_Injected();
+		Register_UnityEngine_ParticleSystem_Simulate_Injected();
+
+		//System.Void UnityEngine.ParticleSystem::Stop_Injected(System.IntPtr,System.Boolean,UnityEngine.ParticleSystemStopBehavior)
+		void Register_UnityEngine_ParticleSystem_Stop_Injected();
+		Register_UnityEngine_ParticleSystem_Stop_Injected();
+
+		//System.Void UnityEngine.ParticleSystem::set_randomSeed_Injected(System.IntPtr,System.UInt32)
+		void Register_UnityEngine_ParticleSystem_set_randomSeed_Injected();
+		Register_UnityEngine_ParticleSystem_set_randomSeed_Injected();
+
+		//System.Void UnityEngine.ParticleSystem::set_useAutoRandomSeed_Injected(System.IntPtr,System.Boolean)
+		void Register_UnityEngine_ParticleSystem_set_useAutoRandomSeed_Injected();
+		Register_UnityEngine_ParticleSystem_set_useAutoRandomSeed_Injected();
+
 	//End Registrations for type : UnityEngine.ParticleSystem
 
 	//Start Registrations for type : UnityEngine.ParticleSystem/EmissionModule
@@ -4189,6 +4281,14 @@ void RegisterAllStrippedInternalCalls()
 	//End Registrations for type : UnityEngine.ParticleSystem/EmissionModule
 
 	//Start Registrations for type : UnityEngine.ParticleSystem/MainModule
+
+		//System.Boolean UnityEngine.ParticleSystem/MainModule::get_loop()
+		void Register_UnityEngine_ParticleSystem_MainModule_get_loop();
+		Register_UnityEngine_ParticleSystem_MainModule_get_loop();
+
+		//System.Single UnityEngine.ParticleSystem/MainModule::get_duration()
+		void Register_UnityEngine_ParticleSystem_MainModule_get_duration();
+		Register_UnityEngine_ParticleSystem_MainModule_get_duration();
 
 		//System.Void UnityEngine.ParticleSystem/MainModule::set_simulationSpace(UnityEngine.ParticleSystemSimulationSpace)
 		void Register_UnityEngine_ParticleSystem_MainModule_set_simulationSpace();
@@ -4223,6 +4323,18 @@ void RegisterAllStrippedInternalCalls()
 		Register_UnityEngine_ParticleSystem_ShapeModule_set_shapeType();
 
 	//End Registrations for type : UnityEngine.ParticleSystem/ShapeModule
+
+	//Start Registrations for type : UnityEngine.ParticleSystem/SubEmittersModule
+
+		//System.Int32 UnityEngine.ParticleSystem/SubEmittersModule::get_subEmittersCount()
+		void Register_UnityEngine_ParticleSystem_SubEmittersModule_get_subEmittersCount();
+		Register_UnityEngine_ParticleSystem_SubEmittersModule_get_subEmittersCount();
+
+		//System.IntPtr UnityEngine.ParticleSystem/SubEmittersModule::GetSubEmitterSystem_Injected(UnityEngine.ParticleSystem/SubEmittersModule&,System.Int32)
+		void Register_UnityEngine_ParticleSystem_SubEmittersModule_GetSubEmitterSystem_Injected();
+		Register_UnityEngine_ParticleSystem_SubEmittersModule_GetSubEmitterSystem_Injected();
+
+	//End Registrations for type : UnityEngine.ParticleSystem/SubEmittersModule
 
 	//Start Registrations for type : UnityEngine.ParticleSystem/TextureSheetAnimationModule
 
@@ -4410,6 +4522,22 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Playables_PlayableDirector_Internal_GetPlayableAsset_Injected();
 		Register_UnityEngine_Playables_PlayableDirector_Internal_GetPlayableAsset_Injected();
 
+		//System.Void UnityEngine.Playables.PlayableDirector::Evaluate_Injected(System.IntPtr)
+		void Register_UnityEngine_Playables_PlayableDirector_Evaluate_Injected();
+		Register_UnityEngine_Playables_PlayableDirector_Evaluate_Injected();
+
+		//System.Void UnityEngine.Playables.PlayableDirector::GetGraphHandle_Injected(System.IntPtr,UnityEngine.Playables.PlayableGraph&)
+		void Register_UnityEngine_Playables_PlayableDirector_GetGraphHandle_Injected();
+		Register_UnityEngine_Playables_PlayableDirector_GetGraphHandle_Injected();
+
+		//System.Void UnityEngine.Playables.PlayableDirector::Pause_Injected(System.IntPtr)
+		void Register_UnityEngine_Playables_PlayableDirector_Pause_Injected();
+		Register_UnityEngine_Playables_PlayableDirector_Pause_Injected();
+
+		//System.Void UnityEngine.Playables.PlayableDirector::PlayOnFrame_Injected(System.IntPtr,UnityEngine.Playables.FrameRate&)
+		void Register_UnityEngine_Playables_PlayableDirector_PlayOnFrame_Injected();
+		Register_UnityEngine_Playables_PlayableDirector_PlayOnFrame_Injected();
+
 		//System.Void UnityEngine.Playables.PlayableDirector::Play_Injected(System.IntPtr)
 		void Register_UnityEngine_Playables_PlayableDirector_Play_Injected();
 		Register_UnityEngine_Playables_PlayableDirector_Play_Injected();
@@ -4426,6 +4554,10 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Playables_PlayableDirector_GetWrapMode_Injected();
 		Register_UnityEngine_Playables_PlayableDirector_GetWrapMode_Injected();
 
+		//UnityEngine.Playables.PlayState UnityEngine.Playables.PlayableDirector::GetPlayState_Injected(System.IntPtr)
+		void Register_UnityEngine_Playables_PlayableDirector_GetPlayState_Injected();
+		Register_UnityEngine_Playables_PlayableDirector_GetPlayState_Injected();
+
 	//End Registrations for type : UnityEngine.Playables.PlayableDirector
 
 	//Start Registrations for type : UnityEngine.Playables.PlayableGraph
@@ -4438,6 +4570,14 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Playables_PlayableGraph_CreateScriptOutputInternal_Injected();
 		Register_UnityEngine_Playables_PlayableGraph_CreateScriptOutputInternal_Injected();
 
+		//System.Boolean UnityEngine.Playables.PlayableGraph::IsMatchFrameRateEnabled()
+		void Register_UnityEngine_Playables_PlayableGraph_IsMatchFrameRateEnabled();
+		Register_UnityEngine_Playables_PlayableGraph_IsMatchFrameRateEnabled();
+
+		//System.Boolean UnityEngine.Playables.PlayableGraph::IsPlaying()
+		void Register_UnityEngine_Playables_PlayableGraph_IsPlaying();
+		Register_UnityEngine_Playables_PlayableGraph_IsPlaying();
+
 		//System.Boolean UnityEngine.Playables.PlayableGraph::IsValid()
 		void Register_UnityEngine_Playables_PlayableGraph_IsValid();
 		Register_UnityEngine_Playables_PlayableGraph_IsValid();
@@ -4446,9 +4586,29 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Playables_PlayableGraph_GetPlayableCount();
 		Register_UnityEngine_Playables_PlayableGraph_GetPlayableCount();
 
+		//System.Int32 UnityEngine.Playables.PlayableGraph::GetRootPlayableCount()
+		void Register_UnityEngine_Playables_PlayableGraph_GetRootPlayableCount();
+		Register_UnityEngine_Playables_PlayableGraph_GetRootPlayableCount();
+
 		//System.Void UnityEngine.Playables.PlayableGraph::CreatePlayableHandle_Injected(UnityEngine.Playables.PlayableGraph&,UnityEngine.Playables.PlayableHandle&)
 		void Register_UnityEngine_Playables_PlayableGraph_CreatePlayableHandle_Injected();
 		Register_UnityEngine_Playables_PlayableGraph_CreatePlayableHandle_Injected();
+
+		//System.Void UnityEngine.Playables.PlayableGraph::Evaluate(System.Single)
+		void Register_UnityEngine_Playables_PlayableGraph_Evaluate();
+		Register_UnityEngine_Playables_PlayableGraph_Evaluate();
+
+		//System.Void UnityEngine.Playables.PlayableGraph::GetFrameRate_Injected(UnityEngine.Playables.PlayableGraph&,UnityEngine.Playables.FrameRate&)
+		void Register_UnityEngine_Playables_PlayableGraph_GetFrameRate_Injected();
+		Register_UnityEngine_Playables_PlayableGraph_GetFrameRate_Injected();
+
+		//System.Void UnityEngine.Playables.PlayableGraph::GetRootPlayableInternal_Injected(UnityEngine.Playables.PlayableGraph&,System.Int32,UnityEngine.Playables.PlayableHandle&)
+		void Register_UnityEngine_Playables_PlayableGraph_GetRootPlayableInternal_Injected();
+		Register_UnityEngine_Playables_PlayableGraph_GetRootPlayableInternal_Injected();
+
+		//System.Void UnityEngine.Playables.PlayableGraph::SynchronizeEvaluation_Injected(UnityEngine.Playables.PlayableGraph&,UnityEngine.Playables.PlayableGraph&)
+		void Register_UnityEngine_Playables_PlayableGraph_SynchronizeEvaluation_Injected();
+		Register_UnityEngine_Playables_PlayableGraph_SynchronizeEvaluation_Injected();
 
 		//UnityEngine.IExposedPropertyTable UnityEngine.Playables.PlayableGraph::GetResolver()
 		void Register_UnityEngine_Playables_PlayableGraph_GetResolver();
@@ -4470,6 +4630,10 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Playables_PlayableHandle_GetDuration();
 		Register_UnityEngine_Playables_PlayableHandle_GetDuration();
 
+		//System.Double UnityEngine.Playables.PlayableHandle::GetPreviousTime()
+		void Register_UnityEngine_Playables_PlayableHandle_GetPreviousTime();
+		Register_UnityEngine_Playables_PlayableHandle_GetPreviousTime();
+
 		//System.Double UnityEngine.Playables.PlayableHandle::GetTime()
 		void Register_UnityEngine_Playables_PlayableHandle_GetTime();
 		Register_UnityEngine_Playables_PlayableHandle_GetTime();
@@ -4490,6 +4654,10 @@ void RegisterAllStrippedInternalCalls()
 		void Register_UnityEngine_Playables_PlayableHandle_GetPlayableType();
 		Register_UnityEngine_Playables_PlayableHandle_GetPlayableType();
 
+		//System.Void UnityEngine.Playables.PlayableHandle::GetGraph_Injected(UnityEngine.Playables.PlayableHandle&,UnityEngine.Playables.PlayableGraph&)
+		void Register_UnityEngine_Playables_PlayableHandle_GetGraph_Injected();
+		Register_UnityEngine_Playables_PlayableHandle_GetGraph_Injected();
+
 		//System.Void UnityEngine.Playables.PlayableHandle::GetInputHandle_Injected(UnityEngine.Playables.PlayableHandle&,System.Int32,UnityEngine.Playables.PlayableHandle&)
 		void Register_UnityEngine_Playables_PlayableHandle_GetInputHandle_Injected();
 		Register_UnityEngine_Playables_PlayableHandle_GetInputHandle_Injected();
@@ -4501,6 +4669,10 @@ void RegisterAllStrippedInternalCalls()
 		//System.Void UnityEngine.Playables.PlayableHandle::Play()
 		void Register_UnityEngine_Playables_PlayableHandle_Play();
 		Register_UnityEngine_Playables_PlayableHandle_Play();
+
+		//System.Void UnityEngine.Playables.PlayableHandle::SetDone(System.Boolean)
+		void Register_UnityEngine_Playables_PlayableHandle_SetDone();
+		Register_UnityEngine_Playables_PlayableHandle_SetDone();
 
 		//System.Void UnityEngine.Playables.PlayableHandle::SetDuration(System.Double)
 		void Register_UnityEngine_Playables_PlayableHandle_SetDuration();
@@ -7713,6 +7885,10 @@ void RegisterAllStrippedInternalCalls()
 		//System.Single UnityEngine.Time::get_fixedUnscaledTime()
 		void Register_UnityEngine_Time_get_fixedUnscaledTime();
 		Register_UnityEngine_Time_get_fixedUnscaledTime();
+
+		//System.Single UnityEngine.Time::get_maximumDeltaTime()
+		void Register_UnityEngine_Time_get_maximumDeltaTime();
+		Register_UnityEngine_Time_get_maximumDeltaTime();
 
 		//System.Single UnityEngine.Time::get_realtimeSinceStartup()
 		void Register_UnityEngine_Time_get_realtimeSinceStartup();

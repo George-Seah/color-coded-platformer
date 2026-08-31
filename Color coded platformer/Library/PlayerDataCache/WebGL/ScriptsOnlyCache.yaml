@@ -1,7 +1,5 @@
 ScriptsOnlyBuild:
   usedScripts:
-    Assembly-CSharp-Editor.dll:
-    - ReadmeEditorBE2
     Assembly-CSharp.dll:
     - Cannon
     - CannonBall
@@ -27,7 +25,6 @@ ScriptsOnlyBuild:
     - PlayerBehaviour
     - PositionBasedColorChanger
     - PressurePad
-    - ReadmeBE2
     - RespawnField
     - Star
     - StripedGround
@@ -69,6 +66,10 @@ ScriptsOnlyBuild:
     - UnityEngine.InputSystem.UI.InputSystemUIInputModule
     Unity.Recorder.Editor.dll:
     - UnityEditor.Recorder.RecorderPreferencesSettings
+    Unity.RenderPipelines.Core.Editor.Shared.dll:
+    - UnityEditor.Rendering.Converter.RenderPipelineConverterManager
+    Unity.RenderPipelines.Core.Editor.dll:
+    - UnityEditor.Rendering.ProbeVolumesOptionsEditor
     Unity.RenderPipelines.Core.Runtime:
     - UnityEngine.Rendering.UI.DebugUIHandlerBitField
     - UnityEngine.Rendering.UI.DebugUIHandlerButton
@@ -111,7 +112,19 @@ ScriptsOnlyBuild:
     - UnityEngine.Rendering.Universal.Light2D
     - UnityEngine.Rendering.Universal.Renderer2DData
     Unity.RenderPipelines.Universal.Editor.dll:
+    - UnityEditor.Rendering.Universal.BloomEditor
+    - UnityEditor.Rendering.Universal.ChannelMixerEditor
+    - UnityEditor.Rendering.Universal.ColorCurvesEditor
+    - UnityEditor.Rendering.Universal.ColorLookupEditor
+    - UnityEditor.Rendering.Universal.DepthOfFieldEditor
+    - UnityEditor.Rendering.Universal.FilmGrainEditor
+    - UnityEditor.Rendering.Universal.LiftGammaGainEditor
+    - UnityEditor.Rendering.Universal.MotionBlurEditor
+    - UnityEditor.Rendering.Universal.ScreenSpaceLensFlareEditor
+    - UnityEditor.Rendering.Universal.ShadowsMidtonesHighlightsEditor
+    - UnityEditor.Rendering.Universal.TonemappingEditor
     - UnityEditor.Rendering.Universal.UniversalProjectSettings
+    - UnityEditor.Rendering.Universal.UniversalRenderPipelineVolumeComponentEditor
     Unity.RenderPipelines.Universal.Runtime.dll:
     - UnityEngine.Rendering.Universal.Bloom
     - UnityEngine.Rendering.Universal.ChannelMixer
@@ -133,7 +146,6 @@ ScriptsOnlyBuild:
     - UnityEngine.Rendering.Universal.UniversalAdditionalCameraData
     - UnityEngine.Rendering.Universal.UniversalRenderPipelineAsset
     - UnityEngine.Rendering.Universal.UniversalRenderPipelineGlobalSettings
-    - UnityEngine.Rendering.Universal.UniversalRendererData
     - UnityEngine.Rendering.Universal.Vignette
     - UnityEngine.Rendering.Universal.WhiteBalance
     Unity.Rider.Editor.dll:
@@ -141,8 +153,6 @@ ScriptsOnlyBuild:
     Unity.Sequences.Editor.dll:
     - UnityEditor.Sequences.SequenceAssetIndexer
     - UnityEditor.Sequences.SequenceIndexer
-    Unity.ShaderGraph.Editor.dll:
-    - UnityEditor.ShaderGraph.ShaderGraphProjectSettings
     Unity.Splines.Editor.dll:
     - UnityEditor.Splines.SelectionContext
     Unity.TextMeshPro:
@@ -156,11 +166,15 @@ ScriptsOnlyBuild:
     - TMPro.TMP_SpriteAsset
     - TMPro.TMP_StyleSheet
     - TMPro.TextMeshProUGUI
+    Unity.Timeline.dll:
+    - UnityEngine.Timeline.TimelineAsset
     UnityEditor.Graphs.dll:
     - UnityEditor.Graphs.AnimationBlendTree.Graph
     - UnityEditor.Graphs.AnimationBlendTree.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.AnyStateNode
     - UnityEditor.Graphs.AnimationStateMachine.Graph
     - UnityEditor.Graphs.AnimationStateMachine.GraphGUI
+    - UnityEditor.Graphs.AnimationStateMachine.StateNode
     - UnityEditor.Graphs.AnimatorControllerTool
     UnityEditor.TestRunner.dll:
     - UnityEditor.TestTools.TestRunner.Api.CallbacksHolder
@@ -277,7 +291,6 @@ ScriptsOnlyBuild:
     - UnityEngine.Rendering.Universal.ScreenSpaceLensFlareResolutionParameter
     - UnityEngine.Rendering.Universal.ScriptableRendererData/DebugShaderResources
     - UnityEngine.Rendering.Universal.ScriptableRendererData/ProbeVolumeResources
-    - UnityEngine.Rendering.Universal.StencilStateData
     - UnityEngine.Rendering.Universal.TemporalAA/Settings
     - UnityEngine.Rendering.Universal.TonemappingModeParameter
     - UnityEngine.Rendering.Universal.URPDefaultVolumeProfileSettings
@@ -784,30 +797,15 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: MovingPlatform
     methodName: changeToDynamic
-  - assembly: Assembly-CSharp
-    fullTypeName: MovingPlatform
-    methodName: ChangeSpeed
   - assembly: UnityEngine.Physics2DModule
     fullTypeName: UnityEngine.Rigidbody2D
     methodName: set_gravityScale
+  - assembly: Assembly-CSharp
+    fullTypeName: MovingPlatform
+    methodName: ChangeSpeed
   - assembly: Assembly-CSharp
     fullTypeName: MovingPlatform
     methodName: Activate
-  - assembly: Assembly-CSharp
-    fullTypeName: MovingPlatform
-    methodName: changeToKinematic
-  - assembly: Assembly-CSharp
-    fullTypeName: MovingPlatform
-    methodName: ChangeSpeed
-  - assembly: Assembly-CSharp
-    fullTypeName: MovingPlatform
-    methodName: changeToDynamic
-  - assembly: UnityEngine.Physics2DModule
-    fullTypeName: UnityEngine.Rigidbody2D
-    methodName: set_gravityScale
-  - assembly: Assembly-CSharp
-    fullTypeName: MovingPlatform
-    methodName: ChangeSpeed
   - assembly: Assembly-CSharp
     fullTypeName: MovingPlatform
     methodName: Activate
@@ -838,6 +836,21 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: MovingPlatform
     methodName: Activate
+  - assembly: Assembly-CSharp
+    fullTypeName: MovingPlatform
+    methodName: changeToKinematic
+  - assembly: Assembly-CSharp
+    fullTypeName: MovingPlatform
+    methodName: ChangeSpeed
+  - assembly: Assembly-CSharp
+    fullTypeName: MovingPlatform
+    methodName: changeToDynamic
+  - assembly: Assembly-CSharp
+    fullTypeName: MovingPlatform
+    methodName: ChangeSpeed
+  - assembly: UnityEngine.Physics2DModule
+    fullTypeName: UnityEngine.Rigidbody2D
+    methodName: set_gravityScale
   - assembly: Assembly-CSharp
     fullTypeName: CanvasScript
     methodName: PauseGame
@@ -918,16 +931,16 @@ ScriptsOnlyBuild:
     methodName: Activate
   - assembly: Assembly-CSharp
     fullTypeName: MovingPlatform
-    methodName: Activate
-  - assembly: Assembly-CSharp
-    fullTypeName: MovingPlatform
-    methodName: Activate
-  - assembly: Assembly-CSharp
-    fullTypeName: MovingPlatform
     methodName: ChangeSpeed
   - assembly: Assembly-CSharp
     fullTypeName: MovingPlatform
     methodName: ChangeSpeed
+  - assembly: Assembly-CSharp
+    fullTypeName: MovingPlatform
+    methodName: Activate
+  - assembly: Assembly-CSharp
+    fullTypeName: MovingPlatform
+    methodName: Activate
   - assembly: Assembly-CSharp
     fullTypeName: MovingPlatform
     methodName: Activate
@@ -1016,21 +1029,6 @@ ScriptsOnlyBuild:
     fullTypeName: CanvasScript
     methodName: SelectUIComponent
   - assembly: Assembly-CSharp
-    fullTypeName: Cannon
-    methodName: Fire
-  - assembly: Assembly-CSharp
-    fullTypeName: MovingPlatform
-    methodName: Activate
-  - assembly: Assembly-CSharp
-    fullTypeName: MovingPlatform
-    methodName: Activate
-  - assembly: Assembly-CSharp
-    fullTypeName: MovingPlatform
-    methodName: ChangeSpeed
-  - assembly: Assembly-CSharp
-    fullTypeName: MovingPlatform
-    methodName: ChangeSpeed
-  - assembly: Assembly-CSharp
     fullTypeName: MovingPlatform
     methodName: Activate
   - assembly: Assembly-CSharp
@@ -1059,7 +1057,10 @@ ScriptsOnlyBuild:
     methodName: Activate
   - assembly: Assembly-CSharp
     fullTypeName: MovingPlatform
-    methodName: Activate
+    methodName: ChangeSpeed
+  - assembly: Assembly-CSharp
+    fullTypeName: MovingPlatform
+    methodName: ChangeSpeed
   - assembly: Assembly-CSharp
     fullTypeName: Cannon
     methodName: Fire
@@ -1075,6 +1076,18 @@ ScriptsOnlyBuild:
   - assembly: Assembly-CSharp
     fullTypeName: MovingPlatform
     methodName: ChangeSpeed
+  - assembly: Assembly-CSharp
+    fullTypeName: MovingPlatform
+    methodName: Activate
+  - assembly: Assembly-CSharp
+    fullTypeName: MovingPlatform
+    methodName: Activate
+  - assembly: Assembly-CSharp
+    fullTypeName: Cannon
+    methodName: Fire
+  - assembly: Assembly-CSharp
+    fullTypeName: MovingPlatform
+    methodName: Activate
   - assembly: Assembly-CSharp
     fullTypeName: MovingPlatform
     methodName: Activate
@@ -5324,7 +5337,7 @@ ScriptsOnlyBuild:
     className: CinemachinePixelPerfect
   - hash:
       serializedVersion: 2
-      Hash: fb6cdf0e1280d5a645f745274ad943c7
+      Hash: 5577975d4e71905c25c70fcd2a6e6419
     assemblyName: Assembly-CSharp
     namespaceName: 
     className: Door
