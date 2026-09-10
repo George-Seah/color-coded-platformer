@@ -329,6 +329,13 @@
             "usedInScenes": []
         },
         {
+            "managedAssemblyName": "Assembly-CSharp.dll",
+            "nativeClass": "",
+            "fullManagedTypeName": "ReadmeBE2",
+            "moduleName": "",
+            "usedInScenes": []
+        },
+        {
             "managedAssemblyName": "",
             "nativeClass": "ResourceManager",
             "fullManagedTypeName": "",
@@ -1947,13 +1954,6 @@
                 "Assets/Scenes/Scene 8.unity",
                 "Assets/Scenes/Scene 9.unity"
             ]
-        },
-        {
-            "managedAssemblyName": "Unity.Timeline.dll",
-            "nativeClass": "",
-            "fullManagedTypeName": "UnityEngine.Timeline.TimelineAsset",
-            "moduleName": "",
-            "usedInScenes": []
         },
         {
             "managedAssemblyName": "UnityEngine.dll",
@@ -4858,13 +4858,8 @@
     ],
     "forceExcludeModules": [
         "AMD",
-        "AR",
-        "ClusterInput",
-        "ClusterRenderer",
         "Hierarchy",
-        "Insights",
-        "NVIDIA",
-        "VirtualTexturing"
+        "NVIDIA"
     ],
     "dynamicModuleDependencies": []
 }
